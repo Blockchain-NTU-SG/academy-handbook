@@ -1,34 +1,11 @@
-/**
- * @see https://theme-plume.vuejs.press/config/navigation/ 查看文档了解配置详情
- *
- * Navbar 配置文件，它在 `.vuepress/plume.config.ts` 中被导入。
- */
-
 import { defineNavbarConfig } from 'vuepress-theme-plume';
 
-export const zhNavbar = defineNavbarConfig([
-  { text: '开始阅读', link: '/zh/' },
-  {
-    text: '参与和支持',
-    link: 'https://github.com/ethpanda-org/Web3-Internship-Handbook/blob/main/CONTRIBUTING.md',
-  },
-  { text: '致谢名单', link: '/zh/acknowledgments/' },
-]);
-
-export const zhTWNavbar = defineNavbarConfig([
-  { text: '首頁', link: '/zh-tw/' },
-  { text: '開始閱讀', link: '/zh-tw/start/' },
-  {
-    text: '參與和支持',
-    link: 'https://github.com/ethpanda-org/Web3-Internship-Handbook/blob/main/CONTRIBUTING.md',
-  },
-  { text: '致謝名單', link: '/zh-tw/acknowledgments/' },
-]);
-
 export const enNavbar = defineNavbarConfig([
-  { text: 'Chinese Version', link: '/zh/' },
+  { text: 'Start Learning', link: '/getting-started/' },
+  { text: 'Foundation', link: '/foundation/' },
+  { text: 'Tracks', link: '/tracks/' },
   {
-    text: 'Join Development',
-    link: 'https://github.com/ethpanda-org/Web3-Internship-Handbook/blob/main/CONTRIBUTING.md',
+    text: 'Contribute',
+    link: 'https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/CONTRIBUTING.md',
   },
 ]);
