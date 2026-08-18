@@ -1,16 +1,23 @@
 :root {
-
-  --my-h1-color: #111;
-  --my-h2-color: #013801;
-  --my-h3-color: #22c55e;
-  --my-h4-color: #018101;
-  --my-h5-color: #006400;
-  --my-h6-color: #111;
+  --academy-ink: #172033;
+  --academy-muted-ink: #475569;
+  --academy-accent: #1f6f5b;
 }
 
-h1 { color: var(--my-h1-color); }
-h2 { color: var(--my-h2-color); }
-h3 { color: var(--my-h3-color); }
-h4 { color: var(--my-h4-color); }
-h5 { color: var(--my-h5-color); }
-h6 { color: var(--my-h6-color); }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--academy-ink);
+}
+
+a {
+  color: var(--academy-accent);
+}
+
+.vp-doc p,
+.vp-doc li {
+  color: var(--academy-muted-ink);
+}

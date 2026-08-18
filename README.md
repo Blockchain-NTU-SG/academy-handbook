@@ -1,161 +1,92 @@
-<div align="center">
+# Blockchain@NTU Academy Handbook
 
-<h1>Web3 实习手册 🚀</h1>
+Open-source handbook and learning materials for Blockchain@NTU Academy.
 
-**为高校学生和 Web3 新人量身打造的第一本 Web3 行业入门读物**
+This repository is both the canonical source of Academy educational material and
+the VuePress website built from that material. The learner-facing handbook is in
+`docs/`; maintainers' templates, source records and reviewer guidance live at the
+repository root.
 
-[![GitHub stars](https://img.shields.io/github/stars/ethpanda-org/Web3-Internship-Handbook?style=social)](https://github.com/ethpanda-org/Web3-Internship-Handbook)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ethpanda-org/Web3-Internship-Handbook/pulls)
+## Academy shape
 
-[在线阅读](https://ethpanda-org.github.io/Web3-Internship-Handbook/) | [开始学习](./docs/zh/README.md) | [官方学习平台](https://web3career.build) | [官方 X](https://x.com/web3careerbuild) | [官方 TG](https://t.me/Web3CareerBuild) | [加入社区](https://t.me/ethpanda)
+Semester 1 follows **Learn → Build → Prove**:
 
-</div>
+- **Week 0 — Entering Web3 safely**
+- **Weeks 1–4 — Foundation**
+  - Week 1: Web3, blockchain, crypto assets and wallets
+  - Week 2: Blockchain architectures, Ethereum and interoperability
+  - Week 3: Smart contracts, tokens and DApps
+  - Week 4: Web3 industry, research and contribution
+- **Weeks 5–8 — Proof of Work sprint** in one of four directions: Developer,
+  Research, Data, or Product & Ecosystem
 
----
+The Education Director's Foundation v1.2 decisions are authoritative. Pages use
+the learning levels **Core**, **Landscape**, and **Further Exploration**. The
+rule is richer content, not heavier assessment. Required activities are testnet
+only and the weekly pace is recommended rather than a deadline.
 
-## 📖 关于本手册
+## Local development
 
-Web3 实习手册是由 [ETHPanda](https://ethpanda.org) 和 [LXDAO](https://lxdao.io) 社区联合发起的开源教育项目，旨在为想要进入 Web3 行业的高校学生和初学者提供系统、安全、实用的学习路径。
+Use Node.js 22 or another version allowed by `package.json`, then run:
 
-### 🎯 我们的目标
+```bash
+npm ci
+npm run docs:dev
+```
 
-- **降低入门门槛**：用通俗易懂的语言解释复杂概念
-- **提供实战指导**：从理论到实践，手把手教学
-- **保障学习安全**：识别常见陷阱，避免新手踩坑
-- **连接真实机会**：对接实习岗位，助力职业发展
+Build the static site with:
 
-### 👥 适合人群
+```bash
+npm run docs:build
+```
 
-- 🎓 **在校大学生**：对区块链感兴趣，想要了解行业机会，并且找到实习
-- 💻 **Web3 新人**：刚刚加入 Web3 行业，想要进一步学习但是没有头绪
-- 🌐 **Web2 转型者**：传统互联网背景，寻求新的发展方向
-- 🚀 **Web3 入职新员工**：作为公司新人的基础知识培训手册
+The default GitHub Pages project URL is configured as:
+`https://blockchain-ntu-sg.github.io/academy-handbook/`.
 
----
+## Repository structure
 
-## 📚 Web3 实习计划 2025 冬季（已结束）
+```text
+docs/                 Learner-facing handbook and VuePress source
+  getting-started/    Week 0 onboarding
+  foundation/         Weeks 1–4 and the Weeks 5–8 sprint framework
+  tracks/             Developer, Research, Data, Product & Ecosystem kits
+templates/            Page and Anchor Mission authoring formats
+reviewers/            Reviewer guidance
+SOURCES.md            Reuse, link and avoid classifications
+UPSTREAM.md           Upstream shell and attribution note
+```
 
-官方平台：<https://web3career.build>（用于报名学习和管理进度）
+There is one Markdown source for each rendered handbook page. Do not create a
+second curriculum copy outside `docs/`.
 
-项目地址（保留查看）：<https://web3career.build/programs/web3-internship-bootcamp-2025-winter>
+## Contribution flow
 
-官方 X：<https://x.com/web3careerbuild>
+Work on a branch, keep curriculum decisions grounded in the source materials,
+preserve page metadata and citations, run `npm run docs:build`, and open a pull
+request. Never commit secrets, learner personal data, or real-money/mainnet
+requirements. See [CONTRIBUTING.md](./CONTRIBUTING.md) and [AGENTS.md](./AGENTS.md).
 
-官方 TG：<https://t.me/Web3CareerBuild>
+## Programme operations
 
----
+The handbook is the canonical home for learning material and Anchor Mission
+instructions. emerging.builders / WCB handles programme operations such as
+applications, cohorts, submissions, review workflow, points, progress and
+leaderboards. WCB may carry a shorter operational copy, but it does not replace
+the canonical handbook page.
 
-## 📚 内容导航
+## Upstream relationship
 
-### 第一部分：入门导读
+This repository began as a fork of the
+[ETHPanda / LXDAO Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook).
+We retain the VuePress + Plume technical shell and relevant attribution, but the
+Academy curriculum and learner-facing navigation are maintained here. Upstream is
+a technical/reference remote only; do not blindly sync it. See [UPSTREAM.md](./UPSTREAM.md)
+and [SOURCES.md](./SOURCES.md) before reusing upstream material.
 
-1. [**区块链基础概念**](./docs/zh/part1/blockchain-basic.md)
+## Licensing note
 
-   - 区块链的本质与运作原理
-   - 公链、私链、联盟链的区别
-   - Web3 vs Web2：范式转变
-
-2. [**以太坊概览**](./docs/zh/part1/overview-of-ethereum.md)
-
-   - 从 PoW 到 PoS：The Merge 详解
-   - Layer 2 扩展方案全景
-   - EVM 生态系统导览
-
-3. [**行业赛道全览**](./docs/zh/part1/industry-knowledge.md)
-
-   - DeFi：重塑金融体系
-   - NFT：数字资产革命
-   - DAO：组织形态创新
-   - 2026 年新兴趋势
-
-4. [**Web3 工作方式**](./docs/zh/part1/remote-work-guide.md)
-   - 必备工具与平台使用
-   - 远程协作最佳实践
-   - 社区文化与行业黑话
-
-### 第二部分：职业发展
-
-1. [**区块链岗位全景图**](./docs/zh/part2/position-introduction.md)
-
-   - 技术岗 vs 非技术岗
-   - 各岗位技能要求
-   - 职业发展路径
-
-2. [**智能合约开发**](./docs/zh/part2/smart-contract-development.md)
-
-   - Solidity 从入门到精通
-   - Dapp 架构设计
-   - 安全审计要点
-
-3. [**社区运营指南**](./docs/zh/part2/community-intern.md)
-
-   - 社区增长策略
-   - 活动策划执行
-   - 数据分析方法
-
-4. [**安全与合规**](./docs/zh/part2/security.md)
-   - 常见安全威胁
-   - 合规要求解读
-
-### 第三部分：前辈经验
-
-- [**Logic**：前端工程师的 Web3 征途](./docs/zh/part3/Logic.md)
-- [**Jason**：从 Web2 到 Web3 的转型之路](./docs/zh/part3/Jason.md)
-- [**Julie**：00 后如何成为社区增长专家](./docs/zh/part3/Julie.md)
-- [**Bruce**：用人方视角：如何成为靠谱的 Web3 实习生](./docs/zh/part3/Bruce.md)
-
-### 第四部分：求职指南
-
-1. [**简历撰写指导**](./docs/zh/part4/write-resume.md)
-2. [**面试通关秘籍**](./docs/zh/part4/interview-preparedness.md)
-3. [**求职平台推荐**](./docs/zh/part4/job-platform.md)
-
-### [第五部分：资源附录](./docs/zh/part5/part5.md)
-
-1. 区块链 / 以太坊术语表
-2. 推荐资料清单（文档、书籍、技术博客、视频课程等）
-3. 常见问题解答（FAQ）
-4. 工具清单与 GitHub 推荐列表
-
----
-
-## 🤝 参与贡献
-
-我们欢迎所有形式的贡献！无论是修正错别字、完善内容，还是分享你的经验，都将帮助更多人。
-
-### 如何贡献
-
-1. Fork 本仓库
-2. 创建你的分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 提交 Pull Request
-
-详细指南请查看 [CONTRIBUTING.md](./CONTRIBUTING.md)
-
----
-
-## 👥 核心贡献者
-
-本项目由 [ETHPanda](https://ethpanda.org) 和 [LXDAO](https://lxdao.io) 社区联合发起，由众多 Web3 行业专家和开发者共同贡献。
-
-[查看完整贡献者名单](./docs/zh/acknowledgments.md)
-
----
-
-## 📮 联系我们
-
-- **GitHub Issues**: [提交问题或建议](https://github.com/ethpanda-org/Web3-Internship-Handbook/issues)
-- **Telegram**: [ETHPanda](https://t.me/ETHPandaOrg) | [LXDAO](https://t.me/lxdao)
-
-## 📄 开源协议
-
-本项目采用 MIT License 开源协议。禁止进行私自打印和售卖。使用 CC BY-NC-SA 4.0 许可协议。
-
----
-
-<div align="center">
-  <p>如果这个项目对你有帮助，请给我们一个 ⭐️ Star！</p>
-  <p>Made with ❤️ by ETHPanda & LXDAO Community</p>
-</div>
+The package metadata retains the upstream MIT signal for site/software
+infrastructure. Educational material has mixed origins and may carry different
+reuse terms. The repository's source classifications and attribution notes are
+the working record; where the upstream evidence is ambiguous, do not make a
+broader legal claim without review.
