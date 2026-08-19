@@ -1,15 +1,37 @@
-## What changed?
+## Objective
 
-<!-- Summarise the Academy handbook or infrastructure change. -->
+<!-- What does this PR improve or solve? -->
 
-## Sources and safety
+## Scope
 
-- [ ] I preserved or updated source/attribution notes.
-- [ ] I did not add secrets, learner personal data, or real-money/mainnet requirements.
-- [ ] I did not make an unapproved curriculum decision.
+<!-- What is included, and what is intentionally not changed? -->
+
+## Changes
+
+<!-- Summarise the meaningful changes. -->
 
 ## Validation
 
-- [ ] `npm ci`
-- [ ] `npm run docs:build`
-- [ ] I inspected the rendered page when layout changed.
+<!-- Build, checks, rendered-page review, link checks, etc. -->
+
+## Evidence
+
+<!-- Screenshots or local-preview notes for visual changes; otherwise N/A. -->
+
+## Risks and Dependencies
+
+<!-- Note meaningful risks, integrations or deployment dependencies; otherwise N/A. -->
+
+## Sources and safety
+
+- [ ] Source / attribution requirements were preserved or updated where relevant.
+- [ ] No secrets, learner personal data, private keys or sensitive values are included.
+- [ ] Required blockchain activities remain testnet-only.
+- [ ] No unapproved curriculum decision was introduced.
+
+## Checklist
+
+- [ ] This PR has one clear logical objective.
+- [ ] I reviewed the diff for unrelated changes.
+- [ ] Relevant documentation was updated where needed.
+- [ ] Validation performed is documented.

@@ -28,4 +28,13 @@
   otherwise.
 - Do not blindly sync `upstream`. Review upstream changes selectively.
 - Run `npm ci` and `npm run docs:build` before proposing a documentation change.
-- Do not push directly to `main`; use a branch and pull request.
+- Use a scoped branch named `type/short-description` and use
+  `type(scope): summary` for commit and pull-request titles.
+- Keep one logical objective per pull request and inspect the final diff for
+  unrelated changes.
+- Record the required validation and rendered-page review where relevant.
+- Squash local iterative commits before pushing when appropriate, and prefer
+  GitHub's Squash and merge when integrating a reviewed pull request into
+  `main` so the shared history remains clean.
+- Do not push directly to `main`, and never merge automatically unless the
+  user explicitly instructs you to do so; use a branch and pull request.

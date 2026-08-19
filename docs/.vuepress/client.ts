@@ -1,4 +1,5 @@
 import { defineClientConfig } from 'vuepress/client'
+import './styles/index.scss'
 // import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
 // import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
