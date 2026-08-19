@@ -381,9 +381,9 @@ body {
 /* Keep the static Week 0-8 journey legible without turning the sidebar into
  * a progress tracker. The labels already carry the sequence; a small weight
  * shift is enough to distinguish them from lesson links. */
-.vp-sidebar-item.level-1 a[href='/academy-handbook/getting-started/'] .text,
-.vp-sidebar-item.level-1 a[href^='/academy-handbook/foundation/week-'] .text,
-.vp-sidebar-item.level-1 a[href='/academy-handbook/foundation/proof-of-work/'] .text {
+.vp-sidebar-item.level-1 a[href$='/getting-started/'] .text,
+.vp-sidebar-item.level-1 a[href*='/foundation/week-'] .text,
+.vp-sidebar-item.level-1 a[href$='/foundation/proof-of-work/'] .text {
   color: var(--academy-text);
   font-weight: 600;
   font-variant-numeric: tabular-nums;

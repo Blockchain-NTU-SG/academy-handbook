@@ -44,6 +44,10 @@ Before pushing, squash local iterative commits when appropriate. After review,
 use GitHub's Squash and merge for changes going into `main` so the shared
 history remains concise.
 
+Pull requests targeting `main` automatically run `npm ci` and
+`npm run docs:build` on Node.js 22 through the documentation build check. This
+check validates the handbook only; it does not deploy Pages.
+
 ## Content workflow
 
 1. Create a branch from the current default branch.
