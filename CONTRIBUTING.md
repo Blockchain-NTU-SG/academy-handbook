@@ -23,6 +23,31 @@ Use Node.js 22 where possible. The production check is:
 npm run docs:build
 ```
 
+## Branches, commits and pull requests
+
+Use a lightweight branch name in the form `type/short-description`, for
+example `feat/academy-theme-refresh`, `docs/week-2-interoperability` or
+`fix/mobile-navigation`. Existing sensible branch names do not need to be
+renamed solely to comply.
+
+Use a concise Conventional-Commit-style title for commits and pull requests:
+`type(scope): summary`. Use lowercase types and scopes. The recommended types
+are `feat`, `fix`, `docs` and `chore`; useful scopes include `theme`,
+`foundation`, `track`, `resources`, `curriculum`, `repo` and `deps`. Keep the
+summary specific, concise and without a trailing period.
+
+Each pull request should have one clear logical objective. Its body should
+explain the Objective, Scope, Changes and Validation. Visual changes should
+include rendered-page or local-preview review notes. Curriculum changes need
+appropriate maintainer review, and source/attribution rules remain unchanged.
+Before pushing, squash local iterative commits when appropriate. After review,
+use GitHub's Squash and merge for changes going into `main` so the shared
+history remains concise.
+
+Pull requests targeting `main` automatically run `npm ci` and
+`npm run docs:build` on Node.js 22 through the documentation build check. This
+check validates the handbook only; it does not deploy Pages.
+
 ## Content workflow
 
 1. Create a branch from the current default branch.

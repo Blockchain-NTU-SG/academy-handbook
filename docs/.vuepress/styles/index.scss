@@ -1,23 +1,527 @@
+/* Blockchain@NTU Academy visual layer.
+ * Keep this file small and token-led so it complements Plume instead of
+ * replacing the theme's layout and components.
+ */
+
 :root {
-  --academy-ink: #172033;
-  --academy-muted-ink: #475569;
-  --academy-accent: #1f6f5b;
+  /* Official anchors */
+  --academy-blue: #37a4e3;
+  --academy-ink: #2b2d39;
+  --academy-cyan: #9aeaf6;
+
+  /* Derived roles */
+  --academy-blue-deep: #176f9f;
+  --academy-blue-hover: #258fc9;
+  --academy-text: #303847;
+  --academy-text-muted: #596575;
+  --academy-border: #dbe5eb;
+  --academy-surface: #f5f9fb;
+  --academy-surface-cyan: #effbfd;
+  --academy-off-white: #fbfcfd;
+  --academy-title-weight: 800;
+  --academy-title-tracking: -0.04em;
+
+  /* Plume semantic colour bridge */
+  --vp-c-brand-1: var(--academy-blue-deep);
+  --vp-c-brand-2: var(--academy-blue);
+  --vp-c-brand-3: #66bce9;
+  --vp-c-brand-soft: rgb(55 164 227 / 14%);
+  --vp-c-text-1: var(--academy-ink);
+  --vp-c-text-2: var(--academy-text);
+  --vp-c-text-3: var(--academy-text-muted);
+  --vp-c-divider: var(--academy-border);
+  --vp-c-border: #cddbe3;
+  --vp-c-bg: #fff;
+  --vp-c-bg-alt: var(--academy-off-white);
+  --vp-c-bg-elv: #fff;
+  --vp-c-bg-soft: var(--academy-surface);
+
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-bg: var(--academy-blue-deep);
+  --vp-button-brand-border: var(--academy-blue-deep);
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: var(--academy-blue-hover);
+  --vp-button-brand-hover-border: var(--academy-blue-hover);
+  --vp-button-alt-text: var(--academy-ink);
+  --vp-button-alt-bg: rgb(255 255 255 / 72%);
+  --vp-button-alt-border: #cbdce5;
+  --vp-button-alt-hover-text: var(--academy-blue-deep);
+  --vp-button-alt-hover-bg: var(--academy-surface-cyan);
+  --vp-button-alt-hover-border: #8acde9;
+  --vp-button-alt-active-text: var(--academy-ink);
+  --vp-button-alt-active-bg: #dff5f9;
+  --vp-button-alt-active-border: var(--academy-blue);
+
+  --vp-nav-bg-color: rgb(255 255 255 / 96%);
+  --vp-nav-screen-bg-color: #fff;
+  --vp-sidebar-bg-color: var(--academy-off-white);
+
+  --vp-code-color: #11678f;
+  --vp-code-bg: rgb(55 164 227 / 9%);
+  --vp-code-block-bg: #252a35;
+  --vp-code-block-color: #e7edf3;
+  --vp-bg-home-hero-name: linear-gradient(
+    112deg,
+    var(--academy-blue-deep) 8%,
+    var(--academy-blue) 56%,
+    #2589b8 100%
+  );
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+::selection {
   color: var(--academy-ink);
+  background: var(--academy-cyan);
 }
 
-a {
-  color: var(--academy-accent);
+body {
+  color: var(--academy-text);
+  text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(55 164 227 / 42%);
+  outline-offset: 3px;
+}
+
+/* Reading rhythm --------------------------------------------------------- */
+
+.vp-doc-title,
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  color: var(--academy-ink);
+  letter-spacing: -0.018em;
+}
+
+.content-container .vp-doc-title.page-title {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.875rem, 2.5vw, 2.375rem);
+  font-weight: var(--academy-title-weight);
+  line-height: 1.12;
+  letter-spacing: var(--academy-title-tracking);
+}
+
+.plume-content.vp-doc h2 {
+  padding-top: 26px;
+  margin-top: 50px;
+  font-size: clamp(1.45rem, 1.8vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  border-top-color: var(--academy-border);
+}
+
+.plume-content.vp-doc h3 {
+  margin-top: 34px;
+  font-size: clamp(1.175rem, 1.4vw, 1.3rem);
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.016em;
+}
+
+.content-container main .vp-doc-meta {
+  padding: 0.75rem 0 0.85rem;
+  margin-bottom: 2.25rem;
+  font-size: 13.5px;
+}
+
+.plume-content.vp-doc > h2:first-of-type {
+  margin-top: 38px;
+}
+
+.vp-doc p,
+.vp-doc li,
+.vp-doc summary {
+  color: var(--academy-text-muted);
 }
 
 .vp-doc p,
 .vp-doc li {
-  color: var(--academy-muted-ink);
+  line-height: 1.72;
+}
+
+.vp-doc strong {
+  color: var(--academy-text);
+}
+
+.vp-doc a {
+  text-decoration-color: rgb(23 111 159 / 42%);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.vp-doc a:hover {
+  text-decoration-color: currentcolor;
+}
+
+.vp-doc blockquote {
+  padding: 14px 18px;
+  color: var(--academy-text-muted);
+  background: var(--academy-surface);
+  border: 0;
+  border-left: 3px solid var(--academy-blue);
+}
+
+.vp-doc blockquote::before {
+  display: none;
+}
+
+.vp-doc table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 24px 0 30px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  border: 1px solid var(--academy-border);
+  border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vp-doc th {
+  color: var(--academy-ink);
+  background: var(--academy-surface);
+}
+
+.vp-doc td,
+.vp-doc th {
+  min-width: 120px;
+  padding: 11px 14px;
+  border-color: var(--academy-border);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: var(--academy-off-white);
+}
+
+.vp-doc :not(pre) > code {
+  font-weight: 600;
+  border: 1px solid rgb(55 164 227 / 14%);
+  border-radius: 5px;
+}
+
+.vp-doc div[class*='language-'] {
+  overflow: hidden;
+  border: 1px solid #39404c;
+  border-radius: 9px;
+  box-shadow: 0 8px 20px rgb(43 45 57 / 8%);
+}
+
+/* Learning hierarchy: use a quiet margin cue rather than boxed sections. */
+.vp-doc h2#learning-objectives,
+.vp-doc h2#core,
+.vp-doc h2#landscape,
+.vp-doc h2#further-exploration {
+  padding-top: 4px;
+  padding-left: 14px;
+  border-top: 0;
+  border-left: 3px solid var(--academy-border);
+}
+
+.vp-doc h2#learning-objectives {
+  border-left-color: var(--academy-cyan);
+}
+
+.vp-doc h2#core {
+  border-left-color: var(--academy-ink);
+}
+
+.vp-doc h2#landscape {
+  border-left-color: var(--academy-blue);
+}
+
+.vp-doc h2#further-exploration {
+  color: #56616e;
+  border-left-color: #aab7c0;
+}
+
+.vp-doc h2#further-exploration + p {
+  color: #6b7683;
+  font-size: 0.95rem;
+}
+
+.vp-doc[class*='_anchor-mission'] blockquote:first-of-type {
+  background: var(--academy-surface-cyan);
+  border-left-color: var(--academy-blue-deep);
+}
+
+.vp-doc input[type='checkbox'] {
+  accent-color: var(--academy-blue-deep);
+}
+
+/* Navigation and progression ------------------------------------------- */
+
+.vp-navbar {
+  border-bottom: 1px solid rgb(219 229 235 / 86%);
+  box-shadow: 0 1px 8px rgb(43 45 57 / 4%);
+  backdrop-filter: blur(12px);
+}
+
+.vp-navbar-title .title {
+  letter-spacing: -0.012em;
+}
+
+.vp-navbar-title .logo {
+  width: 38px;
+  min-width: 38px;
+  height: 38px !important;
+  padding: 2px;
+  overflow: hidden;
+  background: var(--academy-ink);
+  border: 1px solid rgb(154 234 246 / 46%);
+  border-radius: 7px;
+}
+
+.vp-navbar-title .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* The original animated tint-plate remains the homepage atmosphere. */
+.vp-home-hero .hero-name {
+  font-weight: var(--academy-title-weight);
+  letter-spacing: var(--academy-title-tracking);
+}
+
+.vp-home-hero .hero-tagline {
+  margin-top: 16px;
+  color: var(--academy-ink);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.vp-home-hero .hero-text {
+  max-width: 780px;
+  margin: 16px auto 28px;
+  color: rgb(43 45 57 / 74%);
+  font-size: 1.0625rem;
+  font-weight: 450;
+  line-height: 1.6;
+}
+
+.vp-home-hero .vp-button {
+  border-radius: 8px;
+}
+
+/* Homepage: retain the compact three-part structure, with a calmer handoff
+ * from the animated hero to the reading surface. */
+.vp-home .vp-home-features {
+  padding-top: 64px;
+  padding-bottom: 68px;
+  background: linear-gradient(180deg, var(--academy-surface-cyan, #effbfd), #fff 260px);
+}
+
+.vp-home .vp-home-features > .container > .title {
+  margin-bottom: 10px;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.vp-home .vp-home-features > .container > .description {
+  max-width: 680px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  color: var(--academy-text-muted);
+}
+
+.vp-home .vp-home-feature {
+  background: rgb(255 255 255 / 88%);
+  border-color: var(--academy-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgb(43 45 57 / 5%);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.vp-home .vp-home-feature.link:hover {
+  border-color: var(--academy-blue);
+  box-shadow: 0 12px 28px rgb(43 45 57 / 9%);
+  transform: translateY(-2px);
+}
+
+.vp-home .vp-home-feature .title {
+  color: var(--academy-ink);
+  letter-spacing: -0.012em;
+}
+
+.vp-home .vp-home-feature .details {
+  color: var(--academy-text-muted);
+}
+
+.vp-sidebar {
+  border-right: 1px solid var(--academy-border);
+}
+
+.vp-sidebar-item.is-active > .item {
+  background: rgb(55 164 227 / 9%);
+  border-radius: 7px;
+}
+
+.vp-sidebar-item.is-active > .item .text,
+.vp-sidebar-item.has-active > .item .text,
+.outline-link.active,
+.outline-link:hover {
+  color: var(--academy-blue-deep);
+}
+
+.vp-sidebar-item.is-active > .item > .indicator {
+  background: var(--academy-blue);
+}
+
+/* Keep the static Week 0-8 journey legible without turning the sidebar into
+ * a progress tracker. The labels already carry the sequence; a small weight
+ * shift is enough to distinguish them from lesson links. */
+.vp-sidebar-item.level-1 a[href$='/getting-started/'] .text,
+.vp-sidebar-item.level-1 a[href*='/foundation/week-'] .text,
+.vp-sidebar-item.level-1 a[href$='/foundation/proof-of-work/'] .text {
+  color: var(--academy-text);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.vp-sidebar-item.level-2 > .item .text {
+  color: var(--academy-text-muted);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.vp-sidebar-item.level-2.is-active > .item .text {
+  color: var(--academy-blue-deep);
+  font-weight: 600;
+}
+
+/* Reading navigation ---------------------------------------------------- */
+
+.vp-breadcrumb {
+  padding-left: 0;
+  margin-bottom: 1.35rem;
+  border-left: 0;
+}
+
+.vp-breadcrumb ol {
+  row-gap: 6px;
+  font-size: 13px;
+}
+
+.vp-breadcrumb .breadcrumb {
+  font-weight: 600;
+  color: var(--academy-blue-deep);
+}
+
+.vp-breadcrumb .breadcrumb.current {
+  font-weight: 500;
+  color: var(--academy-text-muted);
+}
+
+.vp-doc-aside-outline .outline-title {
+  color: var(--academy-ink);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.vp-doc-aside-outline .outline-link {
+  padding: 5px 8px;
+  margin-left: -8px;
+  overflow: visible;
+  line-height: 1.4;
+  text-overflow: clip;
+  white-space: normal;
+  border-radius: 5px;
+}
+
+.vp-doc-aside-outline .outline-link.active {
+  font-weight: 600;
+  background: rgb(55 164 227 / 7%);
+}
+
+.vp-doc-aside-outline ul.nested {
+  padding-left: 12px;
+  margin: 2px 0 4px 4px;
+  border-left: 1px solid var(--academy-border);
+}
+
+.vp-doc-aside-outline ul.nested .outline-link {
+  color: var(--academy-text-muted);
+  font-size: 13px;
+}
+
+.vp-doc-aside-outline ul.nested .outline-link:hover,
+.vp-doc-aside-outline ul.nested .outline-link.active {
+  color: var(--academy-blue-deep);
+}
+
+.vp-doc-footer .pager-link {
+  border-color: var(--academy-border);
+  border-radius: 9px;
+}
+
+.vp-doc-footer .pager-link:hover {
+  background: rgb(55 164 227 / 6%);
+  border-color: var(--academy-blue);
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .vp-navbar-title .title > span {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .vp-home .vp-home-features {
+    padding: 50px 20px 54px;
+  }
+
+  .vp-home-hero .hero-name {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+    line-height: 1.08;
+  }
+
+  .vp-home-hero .hero-tagline {
+    margin-top: 14px;
+    font-size: clamp(1.35rem, 6vw, 1.65rem);
+  }
+
+  .vp-home-hero .hero-text {
+    margin-top: 14px;
+    font-size: 1rem;
+  }
+
+  .vp-doc table {
+    width: max-content;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .vp-navbar-title .logo {
+    width: 34px;
+    min-width: 34px;
+    height: 34px !important;
+  }
+
+  .vp-navbar-title .title {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

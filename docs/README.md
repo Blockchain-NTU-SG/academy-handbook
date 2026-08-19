@@ -5,10 +5,20 @@ config:
   - type: hero
     full: true
     background: tint-plate
+    tintPlate:
+      r:
+        value: 205
+        offset: 22
+      g:
+        value: 236
+        offset: 12
+      b:
+        value: 246
+        offset: 8
     hero:
       name: Blockchain@NTU Academy
-      text: Learn → Build → Prove
-      tagline: Semester 1 · Foundation → Proof of Work
+      tagline: Learn → Build → Prove
+      text: Open-source handbook for an 8-week journey from Web3 foundations to Proof of Work.
       actions:
         - theme: brand
           text: Start Learning
