@@ -88,6 +88,10 @@ remains the canonical educational source.
 
 ## Stay connected with Blockchain@NTU
 
+Blockchain@NTU is NTU’s student community for blockchain and Web3, bringing
+together students who want to learn, build, and explore the ecosystem through
+education, projects, and events.
+
 Follow the community for updates, events and opportunities to keep learning with
 other builders.
 
