@@ -12,12 +12,12 @@ partnership, sponsorship or endorsement.
 
 ## Open-source foundations
 
-The handbook’s technical and educational starting point was informed by the
-[Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook),
-an open-source project associated with the [ETHPanda](https://ethpanda.org/)
-and [LXDAO](https://lxdao.io/) communities. The original handbook remains an
-important reference for approachable Web3 learning materials and community-led
-contribution.
+The Blockchain@NTU Academy Handbook began from the open-source
+[Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook)
+maintained by the [ETHPanda](https://ethpanda.org/) and [LXDAO](https://lxdao.io/)
+communities. We retain and adapt parts of its VuePress + Plume documentation
+foundation while developing and maintaining our own curriculum, navigation,
+branding and learner experience.
 
 You can explore the original project and its published site here:
 
@@ -33,13 +33,9 @@ describes the relationship and retained attribution in more detail.
 
 ## Academy contributors
 
-The first confirmed contributor listed here is:
-
 <div class="academy-contributor-links">
   <a class="academy-contributor-link" href="https://x.com/wowwwthemaya" target="_blank" rel="noopener" aria-label="Kai Ze on X">
     <img src="/brand/contributors/kai-ze.jpg" alt="Kai Ze" />
     <span>Kai Ze</span>
   </a>
 </div>
-
-No contributor identity is inferred from Git history.
