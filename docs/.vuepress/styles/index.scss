@@ -358,6 +358,135 @@ body {
   color: var(--academy-text-muted);
 }
 
+/* Keep the introduction calm and continuous: the official horizontal lockup
+ * sits directly on the white section without a second visual container. */
+.vp-home .vp-home-text-image {
+  background: #fff;
+}
+
+.vp-home .vp-home-text-image .content-image {
+  width: min(100%, 360px);
+  padding: 0;
+  background: transparent;
+}
+
+.vp-home .vp-home-text-image .content-image .vp-image {
+  width: 100%;
+  max-width: none !important;
+}
+
+@media (min-width: 1200px) {
+  .vp-home .vp-home-text-image .content-image {
+    transform: translateX(-80px);
+  }
+}
+
+.vp-home .vp-home-text-image .content-text .title {
+  color: var(--academy-ink);
+  font-weight: var(--academy-title-weight);
+  letter-spacing: var(--academy-title-tracking);
+}
+
+.vp-home .vp-home-text-image .content-text .description,
+.vp-home .vp-home-text-image .content-text .list p {
+  color: var(--academy-text-muted);
+  line-height: 1.7;
+}
+
+.vp-home .vp-home-custom {
+  padding-top: 20px;
+  padding-bottom: 72px;
+}
+
+.vp-home .vp-home-custom h2:first-of-type {
+  margin-top: 0;
+}
+
+.vp-home .academy-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.vp-home .academy-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: var(--academy-ink);
+  text-decoration: none;
+  background: var(--academy-surface);
+  border: 1px solid var(--academy-border);
+  border-radius: 8px;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.vp-home .academy-social-link:hover {
+  color: var(--academy-blue-deep);
+  text-decoration: none;
+  background: var(--academy-surface-cyan);
+  border-color: var(--academy-blue);
+  transform: translateY(-1px);
+}
+
+.vp-home .academy-social-link .vp-icon {
+  flex: 0 0 auto;
+}
+
+.academy-contributor-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+
+.academy-contributor-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 112px;
+  padding: 12px;
+  color: var(--academy-ink);
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--academy-surface);
+  border: 1px solid var(--academy-border);
+  border-radius: 10px;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.academy-contributor-link:hover {
+  color: var(--academy-blue-deep);
+  text-decoration: none;
+  background: var(--academy-surface-cyan);
+  border-color: var(--academy-blue);
+}
+
+.academy-contributor-link img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.vp-navbar-title .title > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .vp-sidebar {
   border-right: 1px solid var(--academy-border);
 }
@@ -381,9 +510,9 @@ body {
 /* Keep the static Week 0-8 journey legible without turning the sidebar into
  * a progress tracker. The labels already carry the sequence; a small weight
  * shift is enough to distinguish them from lesson links. */
-.vp-sidebar-item.level-1 a[href$='/getting-started/'] .text,
-.vp-sidebar-item.level-1 a[href*='/foundation/week-'] .text,
-.vp-sidebar-item.level-1 a[href$='/foundation/proof-of-work/'] .text {
+.vp-sidebar-item.level-1 > .item > a[href$='/getting-started/'] .text,
+.vp-sidebar-item.level-1 > .item > a[href*='/foundation/week-'] .text,
+.vp-sidebar-item.level-1 > .item > a[href$='/foundation/proof-of-work/'] .text {
   color: var(--academy-text);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
@@ -398,7 +527,7 @@ body {
 
 .vp-sidebar-item.level-2.is-active > .item .text {
   color: var(--academy-blue-deep);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Reading navigation ---------------------------------------------------- */
@@ -478,6 +607,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .vp-navbar-title .title > span {
+    display: none;
+  }
+
   .vp-home .vp-home-features {
     padding: 50px 20px 54px;
   }
@@ -495,6 +628,22 @@ body {
   .vp-home-hero .hero-text {
     margin-top: 14px;
     font-size: 1rem;
+  }
+
+  .vp-home .vp-home-text-image .content-image {
+    width: 100%;
+  }
+
+  .vp-home .vp-home-custom {
+    padding: 16px 20px 56px;
+  }
+
+  .vp-home .academy-social-links {
+    gap: 8px;
+  }
+
+  .vp-home .academy-social-link {
+    flex: 0 0 40px;
   }
 
   .vp-doc table {
