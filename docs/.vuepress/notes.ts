@@ -4,7 +4,7 @@ const academyNote = defineNoteConfig({
   dir: '',
   link: '/',
   sidebar: [
-    { text: 'Blockchain@NTU Academy Handbook', link: '/' },
+    { text: 'Blockchain@NTU Academy', link: '/' },
     {
       text: 'Getting started',
       link: '/getting-started/programme.html',

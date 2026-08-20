@@ -15,7 +15,7 @@ export default defineThemeConfig({
   nextPage: true,
   contributors: false,
   footer: {
-    message: 'Blockchain@NTU Academy Handbook',
+    message: 'Blockchain@NTU Academy',
   },
   transition: {
     page: true,
@@ -25,7 +25,7 @@ export default defineThemeConfig({
   locales: {
     '/': {
       profile: {
-        name: 'Blockchain@NTU Academy Handbook',
+        name: 'Blockchain@NTU Academy',
         description: 'Learn → Build → Prove',
       },
       navbar: enNavbar,

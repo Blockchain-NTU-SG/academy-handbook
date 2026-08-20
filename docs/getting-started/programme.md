@@ -34,3 +34,14 @@ never use real funds for an Academy requirement.
 The handbook contains the canonical learning and Anchor Mission instructions.
 emerging.builders / WCB handles applications, cohort management, submissions,
 review, points, progress and leaderboards.
+
+## Apply
+
+The Academy Handbook is open to everyone, so you can start learning without
+joining a cohort.
+
+The Academy cohort adds an 8-week structure, peer learning, mission review,
+progress tracking and accountability toward a final Proof of Work.
+
+Applications and cohort operations are managed through emerging.builders / WCB.
+The application link will be added here when the next intake opens.
