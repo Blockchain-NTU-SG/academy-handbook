@@ -306,6 +306,8 @@ body {
 }
 
 .vp-home-hero .vp-button {
+  min-width: 192px;
+  justify-content: center;
   border-radius: 8px;
 }
 
@@ -391,6 +393,10 @@ body {
 .vp-home .vp-home-text-image .content-text .list p {
   color: var(--academy-text-muted);
   line-height: 1.7;
+}
+
+.vp-home .vp-home-text-image .content-text .list {
+  list-style: none;
 }
 
 .vp-home .vp-home-custom {

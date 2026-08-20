@@ -16,28 +16,40 @@ config:
         value: 246
         offset: 8
     hero:
-      name: Blockchain@NTU Academy Handbook
+      name: Blockchain@NTU Academy
       tagline: Learn → Build → Prove
-      text: A practical guide from Web3 foundations to hands-on Proof of Work.
+      text: A beginner-friendly Web3 learning programme combining an open handbook with a structured cohort experience.
       actions:
         - theme: brand
+          text: Apply to the Academy
+          link: ./getting-started/programme.md#apply
+        - theme: alt
           text: Start Learning
           link: ./getting-started/programme.md
-        - theme: alt
-          text: View the curriculum
-          link: ./getting-started/
   - type: image-text
-    title: What is the Academy Handbook?
+    title: How the Academy works
     image:
       src: /brand/blockchain-ntu-logo-horizontal-light.png
       alt: Blockchain@NTU
     description: >-
-      A curated learning companion for Blockchain@NTU Academy, designed to
-      help beginners build a coherent mental model of Web3 before choosing a
-      direction.
+      Blockchain@NTU Academy combines a public learning handbook with a
+      structured cohort experience.
     list:
-      - It brings together trusted primary sources, Academy explanations, examples and hands-on missions, so learners spend less time figuring out what to learn next.
-      - The goal is not to cover everything. It is to help learners understand enough to reason independently, build something small and prove what they learned.
+      - Anyone can use the Handbook at their own pace. Cohort members follow the same learning path with a weekly rhythm, missions, peer learning, feedback and review through the programme platform.
+  - type: features
+    title: Why join the cohort?
+    description: >-
+      The cohort adds the structure, feedback, peers and accountability to turn
+      open learning into Proof of Work.
+    features:
+      - title: Learn with structure
+        details: Follow a clear weekly rhythm instead of figuring out what to study next.
+      - title: Get feedback
+        details: Submit missions, receive review, and improve your work instead of learning in isolation.
+      - title: Build with others
+        details: Learn alongside other NTU students and take part in the Blockchain@NTU community.
+      - title: Leave with Proof of Work
+        details: Turn what you learn into a small, reviewable output you can continue developing.
   - type: features
     title: A clear path through Web3
     description: >-
@@ -63,12 +75,12 @@ config:
         link: ./tracks/
         linkText: Explore the tracks
   - type: custom
-title: Blockchain@NTU Academy Handbook
+title: Blockchain@NTU Academy
 ---
 
 ## How to use this handbook
 
-Use the learning hierarchy to decide how deeply to engage with each page:
+Use the Handbook's learning hierarchy to decide how deeply to engage with each page:
 
 - **Core** is the primary material you should understand.
 - **Landscape** gives you the wider mental map and vocabulary to recognise.
@@ -82,9 +94,9 @@ Use the learning hierarchy to decide how deeply to engage with each page:
 3. Follow the [Foundation](./foundation/) from Week 1 through Week 4.
 4. Choose a direction and complete the [Proof of Work sprint](./foundation/proof-of-work/).
 
-The full learning and Anchor Mission instructions live here. emerging.builders /
-WCB may provide operational submission and review workflows, but this handbook
-remains the canonical educational source.
+The Handbook contains the full learning material and Anchor Mission
+instructions. Cohort operations such as application, progress, submission and
+review are handled through the Academy programme platform.
 
 ## Stay connected with Blockchain@NTU
 

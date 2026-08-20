@@ -6,14 +6,14 @@ export default defineUserConfig({
   // GitHub Pages project site: https://blockchain-ntu-sg.github.io/academy-handbook/
   base: '/academy-handbook/',
   lang: 'en-US',
-  title: 'Blockchain@NTU Academy Handbook',
-  description: 'Open-source handbook and learning materials for Blockchain@NTU Academy.',
+  title: 'Blockchain@NTU Academy',
+  description: 'A beginner-friendly Web3 learning programme built around an open handbook, structured learning and Proof of Work.',
 
   locales: {
     '/': {
-      title: 'Blockchain@NTU Academy Handbook',
+      title: 'Blockchain@NTU Academy',
       lang: 'en-US',
-      description: 'Learn → Build → Prove with the Blockchain@NTU Academy Handbook.',
+      description: 'A beginner-friendly Web3 learning programme built around an open handbook, structured learning and Proof of Work.',
     },
   },
 

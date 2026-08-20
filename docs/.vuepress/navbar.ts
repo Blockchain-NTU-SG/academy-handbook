@@ -1,7 +1,7 @@
 import { defineNavbarConfig } from 'vuepress-theme-plume';
 
 export const enNavbar = defineNavbarConfig([
-  { text: 'Start Learning', link: '/getting-started/' },
+  { text: 'Start Learning', link: '/getting-started/programme.html' },
   { text: 'Foundation', link: '/foundation/' },
   { text: 'Tracks', link: '/tracks/' },
   {
