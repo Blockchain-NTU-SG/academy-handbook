@@ -17,6 +17,11 @@ export default defineUserConfig({
     },
   },
 
+  // docs/curriculum/ is the Education Director's drafting area. Pages there are
+  // authored and reviewed before being migrated into the canonical handbook
+  // paths, so they are deliberately excluded from the built site.
+  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules', '!curriculum'],
+
   bundler: viteBundler(),
   shouldPrefetch: false,
 
@@ -50,6 +55,12 @@ export default defineUserConfig({
       collapse: true,
       mermaid: true,
       flowchart: true,
+      // Layout containers used by the Academy curriculum pages to break up
+      // long-form explanation. ::: steps, ::: card and ::: tabs are always
+      // available in Plume; timeline, field and plot are opt-in.
+      timeline: true,
+      field: true,
+      plot: true,
       image: {
         figure: true,
       },
