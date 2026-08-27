@@ -680,3 +680,83 @@ body {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Curriculum screenshot slots.
+ * Placeholder frames for handbook screenshots that still need capturing.
+ * Built only from Plume's --vp-c-* tokens so they follow light/dark
+ * automatically. Replace the inner .academy-shot-pending with an <img> when
+ * the real capture is available; the figure and caption stay as they are.
+ */
+.academy-shot {
+  margin: 1.5rem 0;
+}
+
+.academy-shot .academy-shot-pending {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2.25rem 1.25rem;
+  text-align: center;
+  border: 1px dashed var(--vp-c-border, #d0d7de);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft, #f6f8fa);
+}
+
+.academy-shot .academy-shot-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3, #8b949e);
+}
+
+.academy-shot .academy-shot-what {
+  max-width: 46ch;
+  font-size: 0.95rem;
+  color: var(--vp-c-text-2, #57606a);
+}
+
+.academy-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--vp-c-border, #d0d7de);
+  border-radius: 10px;
+}
+
+.academy-shot figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-2, #57606a);
+  text-align: center;
+}
+
+/* Plume tab-navigation contrast fix.
+ * The Academy palette rebinds --vp-c-text-1/2 to dark ink for body copy, but
+ * Plume paints the tab bar with a dark background. The two combined leave dark
+ * text on a dark bar (~1.05:1 contrast, effectively invisible). Set the tab
+ * label colours explicitly so they stay readable regardless of the palette
+ * bridge above.
+ */
+.vp-tabs-nav .vp-tab-nav {
+  color: rgb(235 238 245 / 72%);
+}
+
+.vp-tabs-nav .vp-tab-nav:hover,
+.vp-tabs-nav .vp-tab-nav:focus-visible {
+  color: rgb(255 255 255 / 92%);
+}
+
+.vp-tabs-nav .vp-tab-nav.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Iconify marks inside tab labels inherit the label colour. */
+.vp-tabs-nav .vp-tab-nav svg {
+  color: inherit;
+  vertical-align: -0.15em;
+}
