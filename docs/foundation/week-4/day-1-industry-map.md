@@ -170,11 +170,11 @@ a technical costume, and blockchain does not solve it.
 
 @tab NFTs and ownership
 
-**Problem:** digital items could not be owned distinctly or moved between
-platforms.
+**Problem:** digital items are usually controlled inside the platform that
+issued them, which makes independent ownership and portability difficult.
 
-**Why blockchain matters:** unique, transferable ownership records anyone can
-verify.
+**Why blockchain matters:** it can provide an independently verifiable ownership
+record that can be referenced across applications.
 
 **Examples:** ENS, event ticketing, in-game items
 

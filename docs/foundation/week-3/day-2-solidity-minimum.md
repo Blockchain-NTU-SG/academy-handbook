@@ -77,7 +77,7 @@ know it is real.
 
 ### Taken apart
 
-::: tabs
+:::: tabs
 @tab The header
 
 ```solidity
@@ -179,7 +179,7 @@ on-chain regardless.** Anyone can read a `private` variable's storage directly.
 
 Never put a secret in a contract. There is no such thing.
 :::
-:::
+::::
 
 ### The ABI
 

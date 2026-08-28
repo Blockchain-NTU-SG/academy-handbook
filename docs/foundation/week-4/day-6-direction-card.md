@@ -47,12 +47,12 @@ is designed to stop that.
 Starting points, not restrictions. You may combine them — what is judged is the
 quality of the Proof of Work, not category discipline.
 
-::: tabs
+:::: tabs
 @tab Developer
 
 **You build something that runs.**
 
-| | |
+| Field | Details |
 |---|---|
 | Output | Working code, deployed or runnable, with a README |
 | Core skills | Solidity, a frontend or script, testnet deployment |
@@ -74,10 +74,10 @@ capped supply and a page that displays holders"** is.
 
 **You investigate something and write it up.**
 
-| | |
+| Field | Details |
 |---|---|
 | Output | A written analysis with evidence and sources |
-| Core skills | Source hierarchy, on-chain verification, clear writing |
+| Core skills | Source selection, evidence checking, clear writing |
 | Tools | Docs, GitHub, Etherscan, Dune, DefiLlama, L2BEAT, Messari |
 | Good fit if | [Part 3](./day-3-research-tool-map.md) was the page you enjoyed most |
 
@@ -96,7 +96,7 @@ oracle risk, with evidence"** is.
 
 **You find something in on-chain data and show it.**
 
-| | |
+| Field | Details |
 |---|---|
 | Output | A dashboard, notebook or dataset, with an explanation of what it shows |
 | Core skills | SQL, chain data structure, honest charting |
@@ -118,7 +118,7 @@ pile of charts. Start from something you genuinely want to know.
 
 **You examine how something works as a product, or contribute to an ecosystem.**
 
-| | |
+| Field | Details |
 |---|---|
 | Output | A teardown, proposal, contribution, or documented community work |
 | Core skills | User-journey thinking, clear writing, judgement about trade-offs |
@@ -136,7 +136,7 @@ pile of charts. Start from something you genuinely want to know.
 one wallet onboarding flow and document exactly where each got stuck"** is — and
 it would be genuinely useful.
 :::
-:::
+::::
 
 ### Choosing
 
@@ -216,7 +216,7 @@ The same interest, scoped three ways. Only one finishes.
 | Version | Verdict |
 |---|---|
 | "Research stablecoins" | **Not a project.** No question, no output, no end |
-| "Build a stablecoin, analyse the whole market, and write a report on regulation" | **Three projects**, none finishable. The "and" test catches it |
+| "Build a stablecoin, analyse the whole market, and write a report on regulation" | **Three projects**, none finishable. It contains three independent deliverables |
 | "Compare how USDC and USDT differ in what a holder has to trust — reserves, freezing, chain deployment — with on-chain evidence for each claim" | **One project.** Clear question, defined scope, checkable output |
 
 The third version, as a Direction Card:

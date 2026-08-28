@@ -199,8 +199,10 @@ output only. Sepolia first."
 against a threshold. Print.
 
 **Explain first.** *"Explain the Uniswap V3 Swap event and what its fields
-mean."* Read it. Cross-check against
-[the docs](./day-3-research-tool-map.md) — primary source, not the model.
+mean."* Read it. Cross-check the event definition against
+[Uniswap's official documentation](https://docs.uniswap.org/).
+[Part 3](./day-3-research-tool-map.md) explains why primary-source checking
+matters.
 
 **Build one piece.** Just the RPC connection. **Run it.** It works.
 

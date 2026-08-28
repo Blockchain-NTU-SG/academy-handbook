@@ -249,9 +249,9 @@ Nothing is installed. Remix runs entirely in a browser tab.
    contract.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Etherscan transaction Logs tab showing the MessageChanged event with its indexed address.">
+     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Etherscan transaction Logs tab showing the MessageChanged event, either decoded or as raw topics and data.">
        <span class="academy-shot-label">Screenshot 7</span>
-       <span class="academy-shot-what">The Etherscan <strong>Logs</strong> tab showing the emitted <code>MessageChanged</code> event and its indexed visitor address.</span>
+       <span class="academy-shot-what">The Etherscan <strong>Logs</strong> tab showing the emitted event, either decoded as <code>MessageChanged</code> or represented by raw topics and data.</span>
      </div>
      <figcaption>This is what an event looks like from outside. Applications read exactly this.</figcaption>
    </figure>

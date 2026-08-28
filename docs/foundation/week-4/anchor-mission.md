@@ -116,7 +116,7 @@ expensive to fix later.
 
 **Part B standard**
 
-| | |
+| Field | What good looks like |
 |---|---|
 | 1–2 | Correct category and entity type. Getting *protocol vs company* right matters — that is [Part 2](./day-2-who-is-who.md)'s core point |
 | 3 | Own words, not marketing copy |

@@ -33,10 +33,10 @@ said a token is a contract's ledger. Now you have written a contract, so that
 sentence means something concrete.
 
 ::: important The question this page answers
-**Why can any wallet display any token, and any exchange list it, without
-anyone coordinating?**
+**Why can wallets, explorers and DApps interact with many different tokens
+without learning a completely new interface each time?**
 
-Because they all follow the same **standards**.
+Because token standards give them a common **interface**.
 :::
 
 ## Learning objectives
@@ -92,7 +92,7 @@ the industry.
 
 ### The three standards
 
-::: tabs
+:::: tabs
 @tab ERC-20 — fungible
 
 **Every unit is interchangeable.** Your 1 USDC is identical to anyone's 1 USDC.
@@ -155,7 +155,7 @@ Designed for games: one contract holding 10,000 identical health potions
 transaction instead of twenty.
 
 More efficient, more complex. You are unlikely to need it in Foundation.
-:::
+::::
 
 ### From standards to applications
 

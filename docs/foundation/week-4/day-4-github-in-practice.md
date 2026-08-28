@@ -62,7 +62,7 @@ You will read your own history in Week 8 when writing up your Proof of Work.
 Write for that person.
 :::
 
-### The README is the deliverable
+### The README is the front door to the deliverable
 
 Most people spend weeks building and ten minutes on the README. Reviewers,
 employers and collaborators read the README and often nothing else.
@@ -83,11 +83,14 @@ What it actually does today — not what you plan.
 
 ## How to view, reproduce or use it
 
-Where can someone see the output, reproduce it, or try it?
+Explain how someone can access, reproduce, run, or inspect the work. For code,
+include setup/run steps. For research, data, or product work, explain how to
+view or reproduce the output.
 
-## How to run it
+## How to run it (if applicable)
 
-Numbered steps someone else can follow on a clean machine.
+For code or another runnable component, give numbered steps someone else can
+follow on a clean machine. Remove this section when it does not apply.
 
 ## What I learned
 
@@ -109,9 +112,9 @@ Two sections carry disproportionate weight.
 either dishonest or unexamined. Naming yours is the strongest signal in the
 document.
 
-**How to run it** is where most fail. Steps that work on your machine because of
-something you set up months ago and forgot are not steps. Test them somewhere
-clean.
+**Access and reproduction steps** are where most fail. Instructions that work on
+your machine because of something you set up months ago and forgot are not
+reproducible instructions. Test them somewhere clean.
 
 ### Licences
 

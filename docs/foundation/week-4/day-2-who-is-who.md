@@ -91,7 +91,7 @@ but that is a different dependency from the contracts themselves.
 
 Recognition level. The goal is to place a name, not memorise a directory.
 
-::: tabs
+:::: tabs
 @tab Networks
 
 | | What it is |
@@ -136,7 +136,7 @@ thing from a deployed contract.
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari</strong></span> | Structured research — company |
 | <span class="academy-brand-label"><Icon name="simple-icons:openzeppelin" /><strong>OpenZeppelin</strong></span> | Security and standard contract libraries — company |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/etherscan.svg" alt="" aria-hidden="true" /><strong>Etherscan</strong></span> | Explorer — company |
-:::
+::::
 
 ### Governance — what it coordinates
 
@@ -189,9 +189,9 @@ The genuine trade-off:
 
 | Possibility | Risk |
 |---|---|
-| Portable reputation you own, not a platform | Your entire financial history is public |
+| Portable reputation you own, not a platform | Activity made from the same address can be linked together |
 | Credentials that follow you between applications | Public activity can remain visible and is not controlled by one platform |
-| No platform can delete your identity | Correlation can undo pseudonymity |
+| On-chain records are not controlled by one platform | Correlation can undo pseudonymity |
 
 ::: tip Practical implication
 Using separate wallets for separate purposes is a **privacy** measure as well as

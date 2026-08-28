@@ -37,7 +37,7 @@ to investigate something you have never heard of and reach a defensible view.
 :::
 
 [Week 0 Part 3](../../getting-started/tools.md) introduced the tools. This is the
-**workflow** — which source answers which kind of question, and in what order.
+**workflow** — which source fits which question, and how to cross-check.
 
 ## Learning objectives
 
@@ -85,7 +85,7 @@ The practical version. Match the question type, not the tool's popularity.
 | Is anyone actually using it? | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Follower counts |
 | How does it compare to peers? | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari</strong></span> | A comparison the project made |
 | What was decided, and by whom? | Governance forum, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/snapshot.png" alt="" aria-hidden="true" /><strong>Snapshot</strong></span> | A summary tweet |
-| What is happening right now? | X, Discord | — this is the one place it wins |
+| What is happening right now? | <span class="academy-brand-label"><Icon name="simple-icons:x" /><strong>X</strong></span>, <span class="academy-brand-label"><Icon name="simple-icons:discord" /><strong>Discord</strong></span> | — this is the one place it wins |
 
 ::: tip The single most useful habit
 When someone makes a claim about a protocol, ask yourself: **which row of that
@@ -97,7 +97,7 @@ people who have not opened it.
 
 ### What each source type can and cannot tell you
 
-::: tabs
+:::: tabs
 @tab Primary sources
 
 **Docs, GitHub, governance forums, the protocol's own writing.**
@@ -168,7 +168,7 @@ is being dismissed rather than answered.
 [Week 0 Part 2](../../getting-started/glossary.md) flagged this. They are disclaimers,
 not evidence.
 :::
-:::
+::::
 
 ### When have you done enough?
 
