@@ -1,5 +1,14 @@
 # Week 0 — Entering Web3 safely
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="56" height="56" class="academy-week-mark" role="img" aria-labelledby="t0 d0">
+  <title id="t0">Shield with a keyhole</title><desc id="d0">A shield containing a keyhole, representing entering Web3 safely.</desc>
+  <g fill="none" stroke="#37a4e3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 5 L55 13 V31 C55 44 45 54 32 59 C19 54 9 44 9 31 V13 Z" fill="#9aeaf6"/>
+    <circle cx="32" cy="27" r="5.5" fill="none"/>
+    <path d="M32 32.5 L34.5 44 H29.5 Z" fill="none"/>
+  </g>
+</svg>
+
 <Badge type="info" text="5 parts" /> <Badge type="tip" text="No points" /> <Badge type="warning" text="No mission" />
 
 Week 0 is setup and orientation. It gives you a safe vocabulary and a tool map

@@ -870,3 +870,119 @@ body {
   color: inherit;
   vertical-align: -0.15em;
 }
+
+/* Curriculum illustrations.
+ * The generated artwork uses a light palette with large near-white fills, so
+ * the figure keeps a pale surface in BOTH themes. Without it the illustrations
+ * read as bright shapes floating in a dark page. The surface is what changes
+ * per theme, not the artwork.
+ */
+.academy-figure {
+  max-width: 760px;
+  margin: 1.75rem auto 2rem;
+}
+
+.academy-figure .academy-figure-surface {
+  padding: 1.25rem 1rem;
+  background: #fbfdfe;
+  border: 1px solid var(--academy-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgb(43 45 57 / 7%);
+}
+
+.academy-figure img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* The theme wraps markdown images in its own <figure> and prints the alt text
+ * as a visible caption. Keep the alt for screen readers, hide the duplicate. */
+.academy-figure .academy-figure-surface figcaption {
+  display: none;
+}
+
+.academy-figure .academy-figure-caption {
+  max-width: 60ch;
+  margin: 0.65rem auto 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--academy-text-muted);
+  text-align: center;
+}
+
+.academy-figure .academy-figure-caption strong {
+  color: var(--vp-c-text-1);
+}
+
+/* Week identity marks on the week index pages. */
+.academy-week-mark {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 0 0 0.75rem;
+}
+
+/* ── Dark theme ────────────────────────────────────────────────────────────
+ * The Academy layer above binds the Plume --vp-c-* tokens to light values on
+ * :root, which overrides the theme's own dark palette. The theme toggle
+ * therefore had no effect on Academy colours. These are the dark counterparts,
+ * scoped to Plume's [data-theme="dark"] so the toggle works in both
+ * directions.
+ *
+ * Blue is lifted (#4fb3ec, #7fd0f4) because #176f9f is too dark to read on a
+ * dark surface — the same problem that made the tab labels invisible.
+ */
+[data-theme="dark"] {
+  --academy-blue: #4fb3ec;
+  --academy-ink: #e8ecf2;
+  --academy-cyan: #9aeaf6;
+
+  --academy-blue-deep: #7fd0f4;
+  --academy-blue-hover: #a5dffa;
+  --academy-text: #c6cedb;
+  --academy-text-muted: #8e9aab;
+  --academy-border: #2b3442;
+  --academy-surface: #1c222b;
+  --academy-surface-cyan: #16232b;
+  --academy-off-white: #16181d;
+
+  --vp-c-brand-1: var(--academy-blue-deep);
+  --vp-c-brand-2: var(--academy-blue);
+  --vp-c-brand-3: #3f9fd6;
+  --vp-c-brand-soft: rgb(79 179 236 / 18%);
+  --vp-c-text-1: var(--academy-ink);
+  --vp-c-text-2: var(--academy-text);
+  --vp-c-text-3: var(--academy-text-muted);
+  --vp-c-divider: var(--academy-border);
+  --vp-c-border: #313b4a;
+  --vp-c-bg: #14161a;
+  --vp-c-bg-alt: var(--academy-off-white);
+  --vp-c-bg-elv: #1a1d23;
+  --vp-c-bg-soft: var(--academy-surface);
+
+  --vp-button-brand-text: #0f1216;
+  --vp-button-brand-bg: var(--academy-blue-deep);
+  --vp-button-brand-border: var(--academy-blue-deep);
+  --vp-button-brand-hover-text: #0f1216;
+  --vp-button-brand-hover-bg: var(--academy-blue-hover);
+  --vp-button-brand-hover-border: var(--academy-blue-hover);
+  --vp-button-alt-text: var(--academy-ink);
+  --vp-button-alt-bg: rgb(255 255 255 / 6%);
+  --vp-button-alt-border: #37414f;
+  --vp-button-alt-hover-text: var(--academy-blue-deep);
+  --vp-button-alt-hover-bg: rgb(79 179 236 / 12%);
+  --vp-button-alt-hover-border: var(--academy-blue);
+  --vp-button-alt-active-text: var(--academy-ink);
+  --vp-button-alt-active-bg: rgb(79 179 236 / 18%);
+  --vp-button-alt-active-border: var(--academy-blue);
+
+  --vp-nav-bg-color: rgb(20 22 26 / 96%);
+  --vp-nav-screen-bg-color: #14161a;
+  --vp-sidebar-bg-color: var(--academy-off-white);
+
+  --vp-code-color: #7fd0f4;
+  --vp-code-bg: rgb(79 179 236 / 12%);
+}

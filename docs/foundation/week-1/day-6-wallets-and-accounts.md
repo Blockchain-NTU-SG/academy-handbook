@@ -61,14 +61,14 @@ everything. Nothing was transferred. You just regained the ability to sign.
 They derive from one another **in one direction only**. That directionality is
 the entire security model.
 
-```mermaid
-flowchart TD
-  R["<b>Recovery phrase</b><br/>12 or 24 words<br/><i>never share</i>"]
-  P["<b>Private key</b><br/>a secret number<br/><i>never share</i>"]
-  U["<b>Public key</b><br/>derived from private<br/><i>safe to reveal</i>"]
-  A["<b>Address</b><br/>0x742d…f44e<br/><i>share freely</i>"]
-  R -->|generates| P -->|derives| U -->|shortens to| A
-```
+<div class="academy-figure">
+  <div class="academy-figure-surface">
+
+![A recovery phrase generates a private key, which derives a public key, which shortens to an address. The reverse direction is marked as impossible.](/illustrations/w1-key-derivation.png)
+
+  </div>
+  <p class="academy-figure-caption">Left to right: <strong>recovery phrase → private key → public key → address.</strong> The crossed arrow is the point — you cannot work backwards.</p>
+</div>
 
 | | What it is |
 |---|---|

@@ -1,5 +1,15 @@
 # Week 1 — Web3, blockchain, crypto assets and wallets
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="56" height="56" class="academy-week-mark" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Three linked blocks</title><desc id="d1">Three blocks joined in a chain, representing the blockchain.</desc>
+  <g fill="none" stroke="#37a4e3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="25" width="13" height="15" rx="3.5" fill="#9aeaf6"/>
+    <rect x="25.5" y="25" width="13" height="15" rx="3.5" fill="#9aeaf6"/>
+    <rect x="47" y="25" width="13" height="15" rx="3.5" fill="#9aeaf6"/>
+    <path d="M17 32.5 H25.5 M38.5 32.5 H47"/>
+  </g>
+</svg>
+
 <Badge type="info" text="8 parts" /> <Badge type="tip" text="100 points" /> <Badge type="warning" text="Testnet only" />
 
 > **Core question — why does Web3 exist, and how do blockchain assets and
