@@ -107,7 +107,13 @@ A **hash function** takes any input and produces a fixed-length fingerprint.
 
 ```text
 "blockchain"   →  ef7797e13d3a75526946a3bcf00daec9fc9c9c4d51ddc7cc5df888f74dd434d1
-"blockchain."  →  6f3f88bb4a4a4a1e0f2e1e0b0e6e2c2f4f1b3d3e5c7a9b1d3f5a7c9e1b3d5f7a
+"blockchain."  →  62cbcc24a6f9c60fdb8f32183cf3a10ab4b28d66aa8167043027a81d51a0b392
+```
+
+These are real SHA-256 values. You can check them yourself — on macOS or Linux:
+
+```bash
+printf '%s' 'blockchain' | shasum -a 256
 ```
 
 Three properties are all you need:
@@ -163,7 +169,7 @@ operator.
 
 - **Full node** — verifies everything and holds recent state. What most people run
 - **Archive node** — keeps every historical state. Storage-heavy; used by explorers
-- **Light client** — verifies block headers without the full chain. What phone wallets lean on
+- **Light client** — verifies block headers without holding the full chain. One way to check the chain without running a full node
 - **Mempool** — the waiting room of submitted-but-not-yet-included transactions
 - **Genesis block** — block zero, the start of the chain
 - **Fork** — when the chain temporarily splits, or when the rules themselves change

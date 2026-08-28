@@ -197,7 +197,7 @@ of USDC.
 Everything USDC "does" happens when an EOA calls this contract.
 :::
 
-::: important Now connect it to Week 1 Part 4
+::: important Now connect it to Week 1 Part 5
 This is the concrete reason a token differs structurally from a coin.
 
 - **ETH** is tracked by the protocol itself. Its balance is a field on your account

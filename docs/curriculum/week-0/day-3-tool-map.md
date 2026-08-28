@@ -60,18 +60,26 @@ and what each is for.
 Do not memorise this. Recognise it. **Bold** tools are ones you will personally
 use.
 
-| When you need to… | Reach for | We use it in |
+| Tool | What do I open it for? | We use it in |
 |---|---|---|
-| Hold keys and sign transactions | **MetaMask**, Phantom, Rabby | Week 1 |
-| Check what a transaction or contract actually did | **Etherscan**, Solscan | Weeks 1–3 |
-| Find out what a protocol says it does | **Official docs**, GitHub | Week 4 |
-| See how a change gets decided | Governance forums, Snapshot | Week 4 |
-| Ask a custom question of on-chain behaviour | **Dune** | Week 4 |
-| Compare protocols or chains at a glance | **DefiLlama**, L2BEAT | Weeks 2, 4 |
-| Read structured professional research | Messari Research | Week 4 |
-| Follow what is happening right now | X, official Discord / Telegram | Week 4 |
-| Show your work | **GitHub** | Weeks 0, 4–8 |
-| Write and deploy a smart contract | **Remix** | Week 3 |
+| <Icon name="logos:metamask-icon" /> **MetaMask** | Create a wallet, sign and send transactions | Week 1 |
+| **Etherscan** | Check what actually happened on Ethereum | Weeks 1–3 |
+| Solscan | The same, for Solana | Landscape |
+| <Icon name="simple-icons:github" /> **GitHub** | Read a protocol's code, and store your Proof of Work | Weeks 0, 4–8 |
+| **Remix** | Write and deploy a simple smart contract | Week 3 |
+| **DefiLlama** | Compare protocols and chains by size | Weeks 2, 4 |
+| **Dune** | Explore on-chain data and dashboards | Week 4 |
+| L2BEAT | Understand Layer 2 security and trust assumptions | Weeks 2, 4 |
+| Messari Research | Read structured professional research | Week 4 |
+| Snapshot, governance forums | See how a change gets decided | Week 4 |
+| <Icon name="simple-icons:x" /> X, Discord, Telegram | Find out what is happening right now | Week 4 |
+
+::: important The teaching idea is one arrow
+> **Question → Tool**
+
+You are not memorising a directory. You are building the reflex of knowing which
+tab to open when you have a specific question.
+:::
 
 ### The one idea that makes the map make sense
 
@@ -106,9 +114,9 @@ Week 1 covers this properly.
 
 | Wallet | Chains | Note |
 |---|---|---|
-| **MetaMask** | Ethereum and EVM chains | The default for this programme |
-| Phantom | Solana, plus others | The Solana equivalent |
-| Rabby | Ethereum and EVM chains | Shows more clearly what you are about to sign |
+| <Icon name="logos:metamask-icon" /> **MetaMask** | Ethereum and EVM chains | The default for this programme |
+| <Icon name="token-branded:phantom" /> Phantom | Solana, plus others | The Solana equivalent |
+| <Icon name="token-branded:rabby" /> Rabby | Ethereum and EVM chains | Shows more clearly what you are about to sign |
 
 You will install MetaMask in Week 1, **not today** — and it will be a fresh
 wallet holding testnet assets only.

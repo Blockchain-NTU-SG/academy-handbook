@@ -38,60 +38,40 @@ for what, is how you evaluate any of them.
 1. **Read your own transaction**
 
    Open your Week 1 transaction on [Sepolia Etherscan](https://sepolia.etherscan.io)
-   and report:
+   and report six fields: **From**, **To**, **Network**, **Status**,
+   **Gas Used**, **Transaction Fee**.
 
-   | Field | What to give |
-   |---|---|
-   | Sender | The From address |
-   | Receiver | The To address |
-   | Network | Which one, and one sentence on how the explorer tells you |
-   | Gas used | And the **transaction fee** you actually paid |
-   | Status | Success or failed |
+   Then, in **1–2 sentences**: what does gas measure?
 
-   Then, in **2 to 3 sentences**: your transaction used a specific amount of
-   gas. Explain what that number represents, and why a smart contract
-   interaction would have used more.
+2. **Compare Ethereum with one other chain**
 
-2. **Compare Ethereum with one other blockchain**
+   Choose **one** of: Bitcoin, Solana, a Cosmos chain, or Avalanche. Compare it
+   with Ethereum on **exactly three** dimensions, as a short table:
 
-   Choose **one** of: Bitcoin, Solana, a Cosmos chain, or Avalanche.
-
-   Compare it with Ethereum on **exactly three** of these dimensions:
-
-   > decentralisation · finality · throughput · validator requirements ·
+   > finality · throughput · validator requirements · decentralisation ·
    > execution model · ecosystem
 
-   A short table is fine and encouraged. Then, in **3 to 4 sentences**:
+   Then, in **3–4 sentences**: what did your chosen chain gain, and what
+   trade-off did it accept?
 
-   > **What did your chosen chain deliberately give up, and what did it get in
-   > return?**
+3. **Why do bridges exist?**
 
-3. **One question on bridges**
-
-   In **2 to 4 sentences**:
-
-   > Why would a bridge be needed if the same user wants to move value between
-   > two independent blockchain networks?
-
-   Your own words. Do not restate the mechanism step by step — explain *why the
-   problem exists at all*.
+   In **2–3 sentences**: why can one blockchain not automatically know what
+   happened on another blockchain?
 :::
 
 ::: warning Item 2 asks for a trade-off, not a winner
 "Chain X is better than Ethereum" is not an answer to that question.
 :::
 
-::: tip Uploads and length
-**Optional uploads:** up to eight images or PDFs. A screenshot of your
-transaction is welcome, not required.
-
-**Expected length:** roughly 400–600 words including the table. This mission is
-deliberately short.
+::: tip Expected length
+**Roughly 250–350 words including the table.** No new on-chain activity, no
+essay. Optional: up to eight image or PDF uploads.
 :::
 
 ## Submission checklist
 
-- [ ] All five transaction fields in item 1 are reported
+- [ ] All six transaction fields in item 1 are reported
 - [ ] I explained what my gas number represents, in my own words
 - [ ] I named which blockchain I chose for item 2
 - [ ] I compared it with Ethereum on **three** dimensions
@@ -106,7 +86,7 @@ not whether they picked the comparison you would have.
 
 | Item | Standard |
 |---|---|
-| **1** | All five fields, matching a real Sepolia transaction from that member. The gas explanation should convey that gas measures *computational work*, and that a contract call does more work than a plain transfer. Any wording carrying that idea is fine |
+| **1** | All six fields, matching a real Sepolia transaction from that member. The gas explanation should convey that gas measures *computational work*, and that a contract call does more work than a plain transfer. Any wording carrying that idea is fine |
 | **2** | Three genuine dimensions, with a stated trade-off in **both** directions |
 | **3** | Reaches the actual reason: **blockchains cannot see each other**. Each network only knows its own state, so there is no native way for one to observe or verify what happened on another. A bridge is external infrastructure that watches both |
 

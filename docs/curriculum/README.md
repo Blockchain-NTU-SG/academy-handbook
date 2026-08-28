@@ -28,7 +28,7 @@ part, and — from Week 1 onward — an `anchor-mission.md`.
 | Week | Folder | Parts | Anchor Mission | Status |
 |---|---|---|---|---|
 | 0 | [`week-0/`](./week-0/) | 5 | None (no points) | **drafted** |
-| 1 | [`week-1/`](./week-1/) | 7 | 100 points | **drafted** |
+| 1 | [`week-1/`](./week-1/) | 8 | 100 points | **drafted** |
 | 2 | [`week-2/`](./week-2/) | 6 | 100 points | **drafted** |
 | 3 | `week-3/` | 5 | 100 points | not started |
 | 4 | `week-4/` | 6–7 | 100 points | not started |
@@ -39,10 +39,11 @@ part, and — from Week 1 onward — an `anchor-mission.md`.
 These were approved by the Education Director and depart from, or resolve
 ambiguity in, the v1.2 page skeleton:
 
-1. **Week 1 is 7 parts, not 6.** The v1.2 §7 keep-list placed blocks,
-   transactions, nodes, cryptography intuition, consensus intuition and
-   PoW vs PoS on a single page. Consensus and PoW vs PoS were split onto their
-   own part so no page exceeds the weight of Week 1 Part 1.
+1. **Week 1 is 8 parts, not 6.** Two splits. The v1.2 §7 keep-list placed
+   blocks, transactions, nodes, cryptography intuition, consensus intuition and
+   PoW vs PoS on one page — consensus and PoW/PoS moved to Part 3. A new Part 4
+   then covers network incentives (v1.2 revision brief §5.11–5.12), because
+   folding it into Part 3 would have made Part 3 the heaviest page in the week.
 2. **Week 2 Parts 3/4/5 boundary is fixed.** Part 3 covers why EVM, Ethereum as
    a state machine, and EOA vs contract. Part 4 covers the transaction
    lifecycle, gas, RPC, read vs write, and events/logs at recognition level.
@@ -70,7 +71,7 @@ Applied inconsistently, none of it works.
 | Chain and tool identity | `<Icon name="simple-icons:…" />` |
 
 Diagrams are **Mermaid**. The trust-and-risk stack is a hand-authored inline SVG
-that recurs across Week 1 Part 4, Week 1 Part 7 and Week 2 Part 6 as the
+that recurs across Week 1 Part 5, Week 1 Part 8 and Week 2 Part 6 as the
 Foundation's running motif.
 
 `::: tabs` and `::: steps` containing other containers must use **four colons**
@@ -82,7 +83,8 @@ Pages awaiting a real screenshot carry a `<figure class="academy-shot">` with a
 `.academy-shot-pending` placeholder, styled in
 [`docs/.vuepress/styles/index.scss`](../.vuepress/styles/index.scss). Replace the
 inner placeholder `<div>` with an `<img>`; the figure and caption stay as they
-are. Three are outstanding — Week 0 Parts 1 and 4, and Week 1 Part 6.
+are. Fifteen are outstanding — Week 0 Parts 1 and 4, and 13 across the Week 1
+Part 7 walkthrough.
 
 ## Authoring rules
 
@@ -96,30 +98,31 @@ are. Three are outstanding — Week 0 Parts 1 and 4, and Week 1 Part 6.
   classified against [`SOURCES.md`](../../SOURCES.md).
 - Prefer a diagram or table over three paragraphs. Mermaid renders natively.
 
-## Blocking risk — testnet end-of-life
+## Maintainer check — testnet and faucets
 
-> **Sepolia has a scheduled end-of-life of approximately 30 September 2026.**
+Every hands-on activity depends on an Ethereum application-development testnet:
+Week 1 Part 7, the Week 1 Anchor Mission, and Week 3's deployment work.
 
-Every hands-on activity in this programme runs on Sepolia: Week 1 Part 6, the
-Week 1 Anchor Mission, and all of Week 3's Remix and deployment work. A
-successor Ethereum application testnet is expected to launch and run in parallel
-during a grace period, and Hoodi — the Holesky replacement — is aimed at
-validator and staking testing rather than application development, so it is not
-a drop-in substitute.
+**Before each cohort:**
 
-**Action required before the next cohort:** confirm the current recommended
-Ethereum application testnet and, if it has changed, update these together as a
-single change, since they share the dependency:
+1. Verify the currently recommended Ethereum application-development testnet.
+2. Retest every faucet link in `week-1/day-7-your-first-transaction.md`.
+3. If the recommended testnet has changed, update these **together** — they
+   share the dependency:
+   - `week-1/day-6-wallets-and-accounts.md` (mainnet vs testnet section)
+   - `week-1/day-7-your-first-transaction.md` (the walkthrough and Chain ID)
+   - `week-1/anchor-mission.md` (evidence items and reviewer notes)
+   - Week 3 deployment instructions, once written
 
-- `week-1/day-5-wallets-and-accounts.md` (mainnet vs testnet section)
-- `week-1/day-6-your-first-transaction.md` (the entire walkthrough)
-- `week-1/anchor-mission.md` (submission items and reviewer notes)
-- all of Week 3 when drafted
+Testnet plans and faucet eligibility rules both change. **Do not hard-code a
+retirement date into learner-facing pages** — check the current position
+instead. Sepolia stays the default while it remains the recommended
+application-development testnet.
 
-Faucet availability is a second, smaller risk. The Alchemy Sepolia faucet
-requires a small Ethereum Mainnet balance to qualify, which most Academy
-learners will not have — the Google Cloud faucet is listed first in Week 1
-Part 6 for that reason. Re-test every faucet before each cohort.
+Faucet note: the Alchemy Sepolia faucet requires an Ethereum Mainnet balance to
+qualify, which most Academy learners will not have. Google Cloud is listed first
+for that reason, with Coinbase CDP as backup and the ethereum.org directory as
+the fallback.
 
 ## Open items carried from the v1.2 analysis
 
@@ -130,12 +133,18 @@ These are unresolved and are tracked here so they are not lost:
   Three sources are labelled **Reuse** on the strength of it.
 - Moledao's Web3 Internship Handbook (v1.2 §29) is not yet classified in
   `SOURCES.md`. It should be added as **Link**, reference only.
+- The SMU Blockchain "Lesson 1 — Blockchain Basics" deck was used as a
+  **coverage reference only**. No text or image from it has been reproduced, and
+  no permission has been sought. Do not reuse its visuals without permission and
+  a `SOURCES.md` entry.
+- web3intern.xyz is cleared for reuse per the revision brief, but is not yet
+  recorded in `SOURCES.md`. Add it before adapting any of its visuals.
 - The Semester 1 Materials Plan and Semester 1 Resource List are referenced by
   `docs/resources/README.md` and v1.2 §33 but do not exist in this repository.
 - Track kits gate the Week 4 Anchor Mission and the Week 5 Define page. A
   learner cannot scope a four-week Proof of Work against an empty page.
 - Three screenshot slots need images captured by a human — Week 0 Parts 1 and 4,
-  and Week 1 Part 6. See **Screenshot slots** above.
-- Forward links in `week-1/day-7-the-user-journey.md` point at `../week-3/` and
+  and Week 1 Part 7. See **Screenshot slots** above.
+- Forward links in `week-1/day-8-the-user-journey.md` point at `../week-3/` and
   `../week-4/`, which do not exist in this folder yet. They resolve once those
   weeks are drafted, and resolve to the canonical paths after migration.

@@ -49,7 +49,7 @@ signature they did not read, or a message from someone pretending to be helpful.
 ```mermaid
 flowchart TD
   A["<b>What can I lose?</b><br/>keys · funds · identity · accounts and devices"]
-  A --> B["<b>How do I lose it?</b><br/>seed leak · phishing · malicious signature<br/>fake DApp · malware · wrong address or network<br/>unlimited approvals · social engineering"]
+  A --> B["<b>How do I lose it?</b><br/>seed leak · phishing · malicious signature<br/>fake DApp · malware · wrong address or network<br/>unlimited approvals · signature permissions · social engineering"]
   B --> C["<b>How do I defend?</b><br/>verify URLs · never share keys · read before signing<br/>testnet for Academy work · separate wallets<br/>2FA · review approvals"]
 ```
 
@@ -233,17 +233,29 @@ confirm.
 
 Nothing moves when you sign. No funds leave. Nothing appears to happen.
 
-You have granted a contract permission to move **all your USDC, at any point in
-the future**. If that contract is malicious, your balance is gone in the next
-block. If it is honest but compromised in six months, your balance is gone
-then — and you will have forgotten this moment entirely.
+You have granted permission to move **all your USDC, at any point in the
+future**. If that contract is malicious, your balance is gone in the next block.
+If it is honest but compromised in six months, your balance is gone then — and
+you will have forgotten this moment entirely.
+
+Permissions like this arrive two ways, and **both matter**:
+
+| | What it looks like |
+|---|---|
+| **On-chain approval** | A transaction. Costs gas. Sets an allowance on-chain |
+| **Signature-based permission** | Often no gas at all. Someone else submits it later |
+
+The second one can feel harmless precisely because it costs nothing.
 :::
 
 ::: important Request B is the more dangerous one, and it looks like nothing happened
 That is the entire lesson of this page.
 
+**"No gas" does not mean "safe."** Cost is not the signal. What you are
+authorising is the signal.
+
 **The defence:** set a spending cap instead of unlimited where the wallet allows
-it, and revoke approvals you no longer use.
+it, and revoke permissions you no longer use.
 :::
 
 ::: details Further exploration — optional, not assessed

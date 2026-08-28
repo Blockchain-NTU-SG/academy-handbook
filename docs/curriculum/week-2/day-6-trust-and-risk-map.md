@@ -25,7 +25,7 @@ sources:
 This is the shortest page in Week 2 and the one the rest of the Foundation leans
 on hardest.
 
-Week 1 Part 4 sorted assets by what could go wrong with each. Week 1 Part 7
+Week 1 Part 5 sorted assets by what could go wrong with each. Week 1 Part 8
 traced how the list of things you trust changes at every step. Parts 3 to 5 this
 week showed the machinery underneath. **Today turns all of that into one
 question you can ask about anything, forever.**

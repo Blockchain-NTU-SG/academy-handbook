@@ -115,16 +115,24 @@ So every transaction is signed, but **not everything you sign is a transaction.*
 
 | You sign | What happens now | What can happen later |
 |---|---|---|
-| Login to a site | Nothing on-chain | Nothing. Harmless |
+| Login to a site ("prove you own this address") | Nothing on-chain | Normally nothing |
 | A transaction to send 0.05 ETH | 0.05 ETH moves | Nothing further. Bounded |
-| **A token approval** | **Nothing visible** | That contract can move your tokens, **at any future time** |
+| **An on-chain approval** — an `approve()` transaction | Costs gas; sets an allowance on-chain | That contract can move your tokens **at any future time** |
+| **A signature-based permission** | **Nothing visible, often no gas** | Someone else can submit it later to create the same permission |
 
-::: danger The third row shows nothing happening
-No funds leave. No confirmation appears. And you have just granted a standing
+The last two rows do the same job by different routes. One is a transaction you
+pay for; the other is a signature that may cost nothing at all. **Both can hand
+over standing access to your tokens.**
+
+::: danger The dangerous rows are the ones where nothing appears to happen
+No funds leave. No confirmation appears. And you may have granted a standing
 permission that outlives the moment entirely.
 
-This is the mechanism behind a large share of wallet drains. "It's just a
-signature, not a transaction" is **false comfort**.
+This is the mechanism behind a large share of wallet drains.
+
+**"It's just a signature, not a transaction" is false comfort. So is "it didn't
+cost any gas."** A wallet request can be dangerous even when nothing moves
+immediately.
 :::
 
 **The habit, starting now:** before approving anything, read *which network,
@@ -168,7 +176,7 @@ a reason.
 
 ## Guided walkthrough
 
-Preparation only. You install the wallet in [Part 6](./day-6-your-first-transaction.md).
+Preparation only. You install the wallet in [Part 7](./day-7-your-first-transaction.md).
 
 ::: steps
 1. **Decide where your recovery phrase will live**

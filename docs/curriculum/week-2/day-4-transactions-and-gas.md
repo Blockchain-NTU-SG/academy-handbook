@@ -66,7 +66,7 @@ verification, now applied to contract code as well as transfers.
 
 | Term | What it is |
 |---|---|
-| **Gas used** | Units of computation actually consumed. A plain ETH transfer is always 21,000 |
+| **Gas used** | Units of computation actually consumed. A plain ETH transfer has traditionally used 21,000 under the current fee schedule |
 | **Gas limit** | The maximum you authorise. Protects you from a runaway contract |
 | **Base fee** | Set by the protocol, rises and falls with demand. **Burned** |
 | **Priority fee** | Your tip to the proposer for including you sooner |
@@ -135,10 +135,21 @@ Nothing is broadcast, nothing changes, so nobody else needs to care.
 
 **Writes cost** because they change state for everyone.
 
-::: tip Watch a DApp with this in mind and it becomes legible
-Loading a page and seeing your balances, prices and positions — all reads, all
-free, all instant. **The moment something asks you to confirm in your wallet,
-that is a write.**
+::: warning A wallet pop-up is not automatically a transaction
+Loading a page and seeing your balances, prices and positions — those are reads,
+and they happen silently.
+
+But when your wallet **does** open, stop and read what it is asking for. It may
+be an on-chain transaction, or it may be an off-chain signature. Both matter.
+
+| | On-chain transaction | Off-chain signature |
+|---|---|---|
+| Sent to the blockchain | Yes | No — at least not by you, not yet |
+| Changes state immediately | Usually | No |
+| Costs gas | Yes | Often nothing |
+| Can still grant permission | Yes | **Yes** — someone else may submit it later |
+
+**"No gas" does not automatically mean "safe."**
 :::
 
 ::: details A subtle point that pays off in Week 3
@@ -196,10 +207,14 @@ The same swap, with every read and write labelled.
 | 8 | Contract emits `Swap` and `Transfer` events | — | In 7 | — |
 | 9 | Interface updates from those events | Read | Free | No |
 
-::: important Nine steps. Two cost anything, and both asked you to sign.
-That is the shape of nearly every DApp interaction, and it tells you exactly
-where the risk is: everything free and instant is harmless, and **the two moments
-your wallet interrupts you are the two that matter.**
+::: important Nine steps. Two cost gas, and both interrupted you.
+That is the shape of nearly every DApp interaction. The reads are free because
+they do not change state — but note carefully that **"free" is about gas, not
+about safety**.
+
+A signature request can cost nothing and still authorise something that matters.
+The rule is not *"free is harmless"*; it is **every time your wallet opens, read
+what it is asking before you approve.**
 :::
 
 Note also that step 4 is [Week 0 Part 4](../week-0/day-4-safety.md)'s approval in

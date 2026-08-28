@@ -74,10 +74,14 @@ Thousands of L2 transactions compress into one L1 posting, so the L1 cost is
 shared across all of them. **That is where the cost reduction comes from** — not
 from cutting corners on verification, but from amortising it.
 
-::: important The property that makes an L2 an L2
-**You can withdraw to Ethereum without anyone's permission.** Even if every L2
-operator vanishes or turns against you, the data on Ethereum is enough to
-reconstruct your balance and get your funds out.
+::: important What a mature rollup is designed to do
+**A mature rollup is designed so you do not have to trust one operator forever.**
+Enough data goes to Ethereum that, in principle, your balance can be
+reconstructed and withdrawn even if the operators turn against you.
+
+**But "designed to" is doing real work in that sentence.** Real networks differ
+in maturity, upgrade controls, data availability and withdrawal mechanisms. Some
+networks marketed as L2s do not yet provide that guarantee in practice.
 :::
 
 Two families:
@@ -105,19 +109,17 @@ EVM-compatible — and is structurally quite different.
 | If operators turn malicious | You can still exit via L1 | **Your funds depend on them** |
 | Data posted to L1 | Yes | No |
 
-::: warning "Built on Ethereum" is used loosely by marketing
-The question worth asking is precise:
+::: warning Do not ask only "Is this an L2?"
+Ask: **what do I still have to trust?**
 
-**If everyone running this network turned against me, could I still get my funds
-out?**
-
-L2: yes, eventually, via Ethereum. Sidechain: no.
+That question stays accurate as the ecosystem changes, and it separates networks
+that genuinely inherit Ethereum's security from ones that only say they do.
+[L2BEAT](https://l2beat.com/) answers it network by network, including which
+self-described L2s do not yet fully qualify.
 :::
 
 Not a criticism — sidechains are a legitimate design and often perform better.
-[L2BEAT](https://l2beat.com/) exists to answer exactly this question network by
-network, and is unusually honest about which self-described L2s do not yet fully
-qualify.
+The point is that the label alone does not tell you what you are trusting.
 
 ### Bridges
 
@@ -136,7 +138,7 @@ flowchart LR
 ```
 
 Nothing physically crosses. The original is immobilised on one side and a
-representation created on the other — Week 1 Part 4's wrapped assets, with the
+representation created on the other — Week 1 Part 5's wrapped assets, with the
 mechanism now visible.
 
 @tab Message bridges
@@ -225,7 +227,7 @@ valuable.
 | Fee for a swap | Dollars | Cents |
 | Confirmation | ~13 min to finality | Seconds |
 | Who orders transactions | Thousands of validators | **A sequencer, currently operated by Coinbase** |
-| If that operator fails | N/A | You can still exit via Ethereum |
+| If that operator fails | N/A | Exit via Ethereum is the designed escape route — check the network's actual maturity |
 | Security ultimately from | Itself | **Ethereum** |
 
 Base is cheap **because it batches work and posts the result to Ethereum.** Not
