@@ -1,6 +1,6 @@
 ---
 week: 1
-day: 6
+day: 7
 title: "Your first transaction"
 status: drafting
 owner: "Director of Education"
@@ -21,19 +21,25 @@ sources:
   - name: "Google Cloud Web3 — Ethereum Sepolia faucet"
     url: "https://cloud.google.com/application/web3/faucet/ethereum/sepolia"
     label: "Link"
+  - name: "Coinbase Developer Platform Faucet"
+    url: "https://portal.cdp.coinbase.com/products/faucet"
+    label: "Link"
+  - name: "Uniswap"
+    url: "https://app.uniswap.org/"
+    label: "Link"
 ---
 
-# Week 1 · Part 6 — Your first transaction
+# Week 1 · Part 7 — Your first transaction
 
 ::: danger Testnet only
 Everything on this page uses free test assets with no monetary value. **Never
 use real funds for an Academy activity.**
 :::
 
-Six parts of theory. Today you use it.
+Seven parts of theory. Today you use it.
 
 ```mermaid
-flowchart LR
+flowchart TD
   A["<b>1</b><br/>Install<br/>MetaMask"] --> B["<b>2</b><br/>Switch to<br/>Sepolia"]
   B --> C["<b>3</b><br/>Get test ETH<br/>from a faucet"]
   C --> D["<b>4</b><br/>Send a<br/>transaction"]
@@ -59,9 +65,10 @@ Work carefully and keep what you produce — the address, the hash, and the link
 
 ### Gas, briefly
 
-You pay a fee for every transaction, called **gas**. Two reasons: it compensates
-whoever does the work, and it stops anyone flooding the network with junk for
-free.
+Every on-chain transaction consumes **gas**, which measures the work the
+network performs. You pay a **transaction fee** based on how much gas the
+transaction uses and the current gas price. This both compensates whoever does
+the work and makes it costly to flood the network with junk.
 
 | Term | Meaning |
 |---|---|
@@ -454,4 +461,6 @@ retirement date into learner-facing pages; check the current position instead.
 - [ethereum.org — Block explorers](https://ethereum.org/developers/docs/data-and-analytics/block-explorers/) — Reuse (CC BY 4.0), adapted
 - [MetaMask — Support](https://support.metamask.io/) — Link, referenced only
 - [Google Cloud Web3 — Ethereum Sepolia faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) — Link, referenced only
+- [Coinbase Developer Platform Faucet](https://portal.cdp.coinbase.com/products/faucet) — Link, referenced only
+- [Uniswap](https://app.uniswap.org/) — Link, referenced only
 :::

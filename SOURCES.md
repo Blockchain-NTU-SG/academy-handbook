@@ -18,7 +18,8 @@ Upstream materials used in this curriculum, and what we may do with each.
 | [OpenZeppelin Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) | MIT | Week 3, Developer |
 | [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) | MIT | Developer |
 | [SpeedRunEthereum challenges](https://github.com/scaffold-eth/se-2-challenges) | MIT | Developer |
-| [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) | Permission granted (LXDAO) | Weeks 0, 4, Product |
+| [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) | Permission granted (LXDAO) | Weeks 0, 1, 4, Product; selected blockchain-basics visuals |
+| [web3intern.xyz](https://web3intern.xyz/) | Permission granted for reuse/adaptation | Selected visual and information-architecture references |
 | [MyFirstNFT](https://nft.myfirstweb3.xyz/) | Permission granted (LXDAO) | Weeks 1, 3 |
 | [MyFirstLayer2](https://layer2.myfirstweb3.xyz/) | Permission granted (LXDAO) | Week 2, Product |
 
@@ -33,6 +34,12 @@ Avalanche docs · L2BEAT · evm.codes · Solidity docs · Solidity by Example ·
 Ethernaut · SWC Registry · CryptoZombies · Cyfrin Updraft · Ethereum Magicians ·
 Choose a License · GitHub Skills · BuildAnything · Microsoft Learn · Dune · The
 Graph · Foundry Book · Berkeley DeFi MOOC · ethresear.ch · Solodit
+
+The Week 1 hands-on pages also link to the [Coinbase Developer Platform
+Faucet](https://portal.cdp.coinbase.com/products/faucet) and
+[Uniswap](https://app.uniswap.org/) as reference tools. [Moledao's Web3
+Internship Program](https://moledao.io/intern/) is reference-only and is not
+reused as handbook content.
 
 Full mapping is in the Semester 1 Resource List maintained by the Education
 Director.
@@ -52,6 +59,10 @@ as further reading avoids that.
 **Watch the code/content split.** Both ethereum.org and GitHub Docs license their
 site code under MIT and their written content under CC BY 4.0. A repository badge
 showing MIT refers to the code, not the articles.
+
+The SMU Blockchain "Lesson 1 — Blockchain Basics" deck was used as a coverage
+reference only. No text or image from it is reused here, and no permission is
+claimed.
 
 ## Academy attribution rule
 

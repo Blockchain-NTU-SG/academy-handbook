@@ -205,8 +205,8 @@ where that never happened, so they build an alternative chain from block 499.
 |---|---|---|
 | What they need | To outpace the entire honest network | A very large share of all staked ETH |
 | Why it fails | The real chain extends the whole time; they fall behind immediately | Finalising a competing chain requires provable misbehaviour |
-| What it costs them | More hardware than everyone combined, running continuously | Billions in stake, exposed to **slashing** |
-| Outcome | Wasted spend, nothing gained | Spent billions to steal from one merchant, lost the billions |
+| What it costs them | More hardware than everyone combined, running continuously | A very large amount of stake exposed to **slashing** |
+| Outcome | Wasted spend, nothing gained | The attack becomes economically costly, with provable dishonesty exposing that stake to slashing |
 
 ::: important The defence is the same shape in both cases
 The attack is not impossible — it is **not worth it**. That is what blockchain

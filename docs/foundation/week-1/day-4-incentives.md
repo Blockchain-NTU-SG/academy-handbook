@@ -169,13 +169,13 @@ and pay a small fee. On Ethereum mainnet, that fee splits:
 
 | Portion | Goes to | Why |
 |---|---|---|
-| **Base fee** | **Nobody** — destroyed | Prices congestion. Burning it means no one profits from making the network busy |
+| **Base fee** | **Nobody** — destroyed | Prices congestion. Burning it means the block proposer does not directly receive the base fee |
 | **Priority fee** | The block proposer | Your tip for being included sooner |
 
 That first row is worth a moment. The base fee is set by demand and then
-**burned**, specifically so that whoever picks transactions has no incentive to
-manufacture congestion. The fee you pay for the network being busy does not
-enrich the person choosing what goes in the block.
+**burned**, specifically so that whoever picks transactions has less incentive
+to manipulate the congestion price for their own benefit. The block proposer
+does not directly receive the base fee.
 
 ::: tip This is what "incentive design" means in practice
 Not slogans about decentralisation — a concrete decision that removes a specific

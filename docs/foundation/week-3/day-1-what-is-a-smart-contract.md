@@ -8,6 +8,6 @@ reading_time: ''
 sources: []
 ---
 
-# Week 3 · Day 1 — What a smart contract actually is
+# Week 3 · Part 1 — What a smart contract actually is
 
 > **Status: stub.** This page is migrated from the Education Director's Foundation v1.2 source and is awaiting its completed lesson.

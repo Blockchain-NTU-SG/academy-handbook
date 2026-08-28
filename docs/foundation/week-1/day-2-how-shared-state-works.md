@@ -18,6 +18,9 @@ sources:
   - name: "ethereum.org — Intro to Ethereum"
     url: "https://ethereum.org/developers/docs/intro-to-ethereum/"
     label: "Reuse"
+  - name: "Web3 Internship Handbook — blockchain basics visuals"
+    url: "https://github.com/ethpanda-org/Web3-Internship-Handbook"
+    label: "Reuse"
 ---
 
 # Week 1 · Part 2 — How shared state works
@@ -65,7 +68,7 @@ grant permissions.
 | **Value** | How much of the native asset to move, if any |
 | **Data** | What to run, for a contract call. Empty for a plain transfer |
 | **Nonce** | A counter, so the same transaction can't be replayed |
-| **Fee fields** | What you'll pay for the work — Part 6, and Week 2 |
+| **Fee fields** | What you'll pay for the work — Part 7, and Week 2 |
 | **Signature** | Cryptographic proof the sender authorised this |
 
 ::: important That last field carries the whole security model
@@ -82,6 +85,11 @@ independently. **Nobody takes anyone's word for it.**
 
 Transactions are gathered into **blocks** — a batch, plus a header, added as a
 unit. Two reasons, and the second is the interesting one:
+
+<figure class="academy-reference-visual academy-reference-visual--narrow">
+  <img src="/learning/blockchain-block-structure.jpg" alt="An illustrated blockchain block containing a previous hash, a random number, transactions and a resulting hash." />
+  <figcaption>Visual adapted from the Web3 Internship Handbook's blockchain basics materials.</figcaption>
+</figure>
 
 | | Why |
 |---|---|
@@ -138,7 +146,7 @@ everything after it**, publicly and instantly.
 
 ::: details Two related terms, at recognition level
 A **digital signature** uses related maths to prove a message came from the
-holder of a specific key without revealing that key. Part 5 returns to this.
+holder of a specific key without revealing that key. Part 6 returns to this.
 
 A **Merkle tree** hashes transactions together in pairs so a whole block reduces
 to one fingerprint — and so you can prove one transaction is in a block without
@@ -216,4 +224,5 @@ sounds: **you don't have to trust anyone, because you can check.**
 - [ethereum.org — Transactions](https://ethereum.org/developers/docs/transactions/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Nodes and clients](https://ethereum.org/developers/docs/nodes-and-clients/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Intro to Ethereum](https://ethereum.org/developers/docs/intro-to-ethereum/) — Reuse (CC BY 4.0), adapted
+- [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) — Reuse (permission granted, LXDAO); block-structure visual adapted from its blockchain basics materials
 :::

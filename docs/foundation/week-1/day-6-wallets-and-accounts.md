@@ -1,6 +1,6 @@
 ---
 week: 1
-day: 5
+day: 6
 title: "Wallets, accounts and keys"
 status: drafting
 owner: "Director of Education"
@@ -20,14 +20,14 @@ sources:
     label: "Link"
 ---
 
-# Week 1 · Part 5 — Wallets, accounts and keys
+# Week 1 · Part 6 — Wallets, accounts and keys
 
 Everything so far has been about the network. This is about **you** — how a
 person holds a position in a system with no accounts department, no password
 reset, and no way to prove who you are to anyone.
 
 ::: warning Almost every avoidable loss in this space traces back to one of the four things on this page
-Read [Week 0 Part 4](../week-0/day-4-safety.md) first if you have not.
+Read [Week 0 Part 4](../../getting-started/safety.md) first if you have not.
 :::
 
 ## Learning objectives
@@ -62,7 +62,7 @@ They derive from one another **in one direction only**. That directionality is
 the entire security model.
 
 ```mermaid
-flowchart LR
+flowchart TD
   R["<b>Recovery phrase</b><br/>12 or 24 words<br/><i>never share</i>"]
   P["<b>Private key</b><br/>a secret number<br/><i>never share</i>"]
   U["<b>Public key</b><br/>derived from private<br/><i>safe to reveal</i>"]
@@ -104,11 +104,11 @@ Ethereum has two account types, central in Weeks 2 and 3:
 
 ::: important The distinction that costs people the most money
 **Signing** is local and free. Your wallet applies your private key to some
-data. Nothing touches the network, no gas is paid, nothing appears on any
+data. Nothing touches the network, no transaction fee is paid, nothing appears on any
 explorer.
 
-**Sending** is broadcasting a *signed transaction*, where it costs gas and
-changes state.
+**Sending** is broadcasting a *signed transaction*, where the transaction
+consumes gas, a transaction fee is paid, and state can change.
 
 So every transaction is signed, but **not everything you sign is a transaction.**
 :::

@@ -8,6 +8,6 @@ reading_time: ''
 sources: []
 ---
 
-# Week 4 · Day 3 — Which tool answers which question
+# Week 4 · Part 3 — Which tool answers which question
 
 > **Status: stub.** This page is migrated from the Education Director's Foundation v1.2 source and is awaiting its completed lesson.

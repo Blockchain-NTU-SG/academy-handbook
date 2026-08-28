@@ -17,10 +17,8 @@ export default defineUserConfig({
     },
   },
 
-  // docs/curriculum/ is the Education Director's drafting area. Pages there are
-  // authored and reviewed before being migrated into the canonical handbook
-  // paths, so they are deliberately excluded from the built site.
-  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules', '!curriculum'],
+  // Canonical learner-facing content lives under getting-started and foundation.
+  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules'],
 
   bundler: viteBundler(),
   shouldPrefetch: false,

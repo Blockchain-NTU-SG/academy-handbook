@@ -2,7 +2,7 @@
 track: product-ecosystem
 status: stub
 owner: ''
-title: README
+title: "Product & Ecosystem track kit"
 ---
 
 # Product & Ecosystem track kit

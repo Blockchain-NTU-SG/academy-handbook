@@ -8,6 +8,6 @@ reading_time: ''
 sources: []
 ---
 
-# Week 4 · Day 5 — AI-native building
+# Week 4 · Part 5 — AI-native building
 
 > **Status: stub.** This page is migrated from the Education Director's Foundation v1.2 source and is awaiting its completed lesson.

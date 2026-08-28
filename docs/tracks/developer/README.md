@@ -2,7 +2,7 @@
 track: developer
 status: stub
 owner: ''
-title: README
+title: Developer track kit
 ---
 
 # Developer track kit
