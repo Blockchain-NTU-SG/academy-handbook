@@ -67,7 +67,7 @@ you have tomorrow.
 <figure class="academy-shot">
 <svg viewBox="0 0 640 316" width="100%" role="img" aria-labelledby="trustmap-title trustmap-desc" style="max-width:640px;margin:0 auto;display:block;overflow:visible">
   <title id="trustmap-title">The trust and risk map</title>
-  <desc id="trustmap-desc">Seven common Web3 actions, each shown with the trust assumptions it carries. Holding BTC carries two; using a lending protocol carries four. The list never gets shorter as you move down.</desc>
+  <desc id="trustmap-desc">Seven common Web3 actions, each shown with the trust assumptions it carries. Holding BTC carries two; using a lending protocol carries four. The assumptions change as you move down the map.</desc>
 
   <text font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em" fill="currentColor" fill-opacity="0.6" x="150" y="22" text-anchor="end">WHAT YOU DO</text>
   <text font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em" fill="currentColor" fill-opacity="0.6" x="162" y="22">WHAT YOU ARE TRUSTING</text>
@@ -113,7 +113,7 @@ you have tomorrow.
     <g transform="translate(390,272)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Sequencer</text></g>
   </g>
 </svg>
-<figcaption>Blue = networks · violet = code · amber = companies · green = you · red = external inputs. Read it top to bottom: <strong>the list never shortens.</strong></figcaption>
+<figcaption>Blue = networks · violet = code · amber = companies · green = you · red = external inputs. Read it top to bottom: <strong>the assumptions change at each handover.</strong></figcaption>
 </figure>
 
 ### Reading the map
@@ -125,7 +125,7 @@ you have tomorrow.
 | **Use a CEX** | Collapses to one thing. You are not really trusting the blockchain at all — you are trusting a company's balance sheet |
 | **Use a DEX** | Replaces the company with code. No custody, no permission — and now several sets of contracts must be correct, including a token's you did not write |
 | **Lending protocol** | Adds an **oracle**, and this is the row worth dwelling on |
-| **Use a bridge** | The longest, and the reason bridges are the most exploited category in the industry |
+| **Use a bridge** | Adds a historically important source of exploit risk: the bridge mechanism between two chains |
 
 ::: warning Why the oracle row matters most
 The protocol needs a price to decide whether to liquidate. [Part 3](./day-3-why-ethereum-and-evm.md)
@@ -186,11 +186,11 @@ Ethereum. An entirely ordinary thing to do. Here is the full stack.
 
 | Layer | Trusting | If it fails |
 |---|---|---|
-| Ethereum | The L1 | Total — but this has never failed |
+| Ethereum | The L1 | Total loss of the dependent position if the L1 fails |
 | The bridge | Its attestation mechanism | **Total loss** |
 | The L2 | Its proof system, its sequencer today | Delay, or censorship |
 | USDC contract | The code | Total loss of that token |
-| Circle | Reserves, redemption, no freeze | Depegging, or a frozen address |
+| Circle | Reserves, redemption, and token-level controls | Depegging, or a frozen address |
 | Lending contracts | The code | Total loss of the deposit |
 | The oracle | Honest, timely prices | **Wrongful liquidation** |
 | Liquidation model | Sound economic design | Bad debt, partial loss |
@@ -206,8 +206,8 @@ Now the two questions that matter:
 | Which is most likely to **actually get them**? | **Their own keys.** By a wide margin |
 
 ::: important The most sophisticated row is not the one that gets most people
-More value is lost to lost keys, phishing and careless approvals than to every
-protocol exploit combined.
+Lost keys, phishing and careless approvals are common sources of loss alongside
+protocol exploits.
 
 Which brings the week back to [Week 0 Part 4](../../getting-started/safety.md).
 **The basics are the basics because they are what actually happens.**

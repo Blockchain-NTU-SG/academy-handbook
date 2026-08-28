@@ -228,6 +228,13 @@ body {
 /* Mermaid's default green/purple theme is visually out of place beside the
  * Academy blue/cyan system. Keep diagrams calm and legible across all lesson
  * pages, including nodes rendered through foreignObject. */
+.vp-doc .mermaid-content {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
 .vp-doc .mermaid-content svg.flowchart .node rect,
 .vp-doc .mermaid-content svg.flowchart .node polygon,
 .vp-doc .mermaid-content svg.flowchart .node circle,
@@ -274,10 +281,18 @@ body {
 }
 
 .vp-doc .mermaid-content svg.flowchart .flowchart-link,
-.vp-doc .mermaid-content svg.flowchart .edgePath path,
-.vp-doc .mermaid-content svg.flowchart marker path {
+.vp-doc .mermaid-content svg.flowchart .edgePath path {
   stroke: var(--academy-blue-deep) !important;
+  fill: none !important;
+}
+
+/* Mermaid markers are filled arrowheads, not outlined shapes. Keeping the
+ * marker stroke off prevents short connectors and bidirectional edges from
+ * becoming visually heavier than the nodes they connect. */
+.vp-doc .mermaid-content svg.flowchart marker path {
   fill: var(--academy-blue-deep) !important;
+  stroke: none !important;
+  stroke-width: 0 !important;
 }
 
 /* Keep connectors subordinate to the labels. Mermaid's default marker stroke
@@ -287,8 +302,31 @@ body {
   stroke-width: 1.35px !important;
 }
 
-.vp-doc .mermaid-content svg.flowchart marker path {
-  stroke-width: 1px !important;
+/* Named tools, chains and assets use the same small, optical icon box in
+ * tables, tabs and inline references. Local image marks and Iconify spans
+ * share the convention so a missing or wide logo cannot move the label. */
+.vp-doc .academy-brand-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  min-height: 1.35rem;
+  line-height: 1.35;
+  vertical-align: middle;
+}
+
+.vp-doc .academy-brand-icon,
+.vp-doc .academy-brand-label > .vp-icon {
+  display: inline-block;
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 1.15rem;
+  margin: 0;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.vp-doc table .academy-brand-label {
+  white-space: nowrap;
 }
 
 /* Learning hierarchy: use a quiet margin cue rather than boxed sections. */
@@ -863,6 +901,14 @@ body {
 .vp-tabs-nav .vp-tab-nav.active {
   color: #fff;
   font-weight: 600;
+}
+
+/* The tab labels may contain <strong> from the chain-name markup. Keep that
+ * nested text on the same readable colour as the button instead of allowing
+ * the body-copy strong rule to turn it dark on the ink bar. */
+.vp-tabs-nav .vp-tab-nav .academy-brand-label,
+.vp-tabs-nav .vp-tab-nav .academy-brand-label strong {
+  color: inherit;
 }
 
 /* Iconify marks inside tab labels inherit the label colour. */

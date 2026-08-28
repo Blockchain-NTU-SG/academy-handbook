@@ -36,7 +36,7 @@ Everything on this page uses free test assets with no monetary value. **Never
 use real funds for an Academy activity.**
 :::
 
-Seven parts of theory. Today you use it.
+Six parts of theory. Today you use it.
 
 ```mermaid
 flowchart TD
@@ -140,7 +140,11 @@ guessing — wallet interfaces change, and the group will know.
    any website or "support" chat
 
    Anyone who obtains these words controls this wallet permanently, from
-   anywhere. **Blockchain@NTU will never ask you for it.**
+   anywhere. **Blockchain@NTU will never ask you for it.** The normal exception
+   is when **you deliberately restore or import your wallet into wallet software
+   that you installed from a verified official source**. Never enter it because
+   someone sent you a link, DMed you, or told you to “verify”, “sync” or “unlock”
+   your wallet.
 
    Practise storing it properly **now**, while the stakes are zero.
    :::
@@ -301,7 +305,7 @@ guessing — wallet interfaces change, and the group will know.
    :::
 
    Choose **Confirm**. *The status should move from Pending to Confirmed within
-   about 15 seconds.*
+   usually within seconds on Sepolia, but it can take longer.*
 
    <figure class="academy-shot">
      <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: MetaMask activity list showing the transaction confirmed, with the transaction hash visible">

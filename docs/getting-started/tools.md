@@ -62,20 +62,20 @@ use.
 
 | Tool | What do I open it for? | We use it in |
 |---|---|---|
-| <Icon name="logos:metamask-icon" /> **MetaMask** | Create a wallet, sign and send transactions | Week 1 |
-| <Icon name="mdi:database-search-outline" /> **Etherscan** | Check what actually happened on Ethereum | Weeks 1–3 |
-| <Icon name="mdi:database-search-outline" /> **Solscan** | The same, for Solana | Landscape |
-| <Icon name="simple-icons:github" /> **GitHub** | Read a protocol's code, and store your Proof of Work | Weeks 0, 4–8 |
-| <Icon name="logos:remix-icon" /> **Remix** | Write and deploy a simple smart contract | Week 3 |
-| <Icon name="mdi:chart-box-outline" /> **DefiLlama** | Compare protocols and chains by size | Weeks 2, 4 |
-| <Icon name="mdi:chart-line" /> **Dune** | Explore on-chain data and dashboards | Week 4 |
-| <Icon name="mdi:shield-check" /> **L2BEAT** | Understand Layer 2 security and trust assumptions | Weeks 2, 4 |
-| <Icon name="mdi:book-open-variant" /> **Messari Research** | Read structured professional research | Week 4 |
-| <Icon name="mdi:vote-outline" /> **Snapshot** | See how a change gets decided | Week 4 |
-| <Icon name="mdi:forum-outline" /> **Governance forums** | Read proposals before anyone votes | Week 4 |
-| <Icon name="simple-icons:x" /> **X** | Find out what is happening right now | Week 4 |
-| <Icon name="simple-icons:discord" /> **Discord** | Find community discussion and support | Week 4 |
-| <Icon name="simple-icons:telegram" /> **Telegram** | Find community announcements and discussion | Week 4 |
+| <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Create a wallet, sign and send transactions | Week 1 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/etherscan.svg" alt="" aria-hidden="true" /><strong>Etherscan</strong></span> | Check what actually happened on Ethereum | Weeks 1–3 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/solscan.png" alt="" aria-hidden="true" /><strong>Solscan</strong></span> | The same, for Solana | Landscape |
+| <span class="academy-brand-label"><Icon name="simple-icons:github" /><strong>GitHub</strong></span> | Read a protocol's code, and store your Proof of Work | Weeks 0, 4–8 |
+| <span class="academy-brand-label"><Icon name="logos:remix-icon" /><strong>Remix</strong></span> | Write and deploy a simple smart contract | Week 3 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span> | Compare protocols and chains by size | Weeks 2, 4 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Explore on-chain data and dashboards | Week 4 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/l2beat.png" alt="" aria-hidden="true" /><strong>L2BEAT</strong></span> | Understand Layer 2 security and trust assumptions | Weeks 2, 4 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari Research</strong></span> | Read structured professional research | Week 4 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/snapshot.png" alt="" aria-hidden="true" /><strong>Snapshot</strong></span> | See how a change gets decided | Week 4 |
+| **Governance forums** | Read proposals before anyone votes | Week 4 |
+| <span class="academy-brand-label"><Icon name="simple-icons:x" /><strong>X</strong></span> | Find out what is happening right now | Week 4 |
+| <span class="academy-brand-label"><Icon name="simple-icons:discord" /><strong>Discord</strong></span> | Find community discussion and support | Week 4 |
+| <span class="academy-brand-label"><Icon name="simple-icons:telegram" /><strong>Telegram</strong></span> | Find community announcements and discussion | Week 4 |
 
 ::: important The teaching idea is one arrow
 > **Question → Tool**
@@ -117,9 +117,9 @@ Week 1 covers this properly.
 
 | Wallet | Chains | Note |
 |---|---|---|
-| <Icon name="logos:metamask-icon" /> **MetaMask** | Ethereum and EVM chains | The default for this programme |
-| <Icon name="token-branded:phantom" /> Phantom | Solana, plus others | The Solana equivalent |
-| <Icon name="token-branded:rabby" /> Rabby | Ethereum and EVM chains | Shows more clearly what you are about to sign |
+| <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Ethereum and EVM chains | The default for this programme |
+| <span class="academy-brand-label"><Icon name="token-branded:phantom" /><strong>Phantom</strong></span> | Solana, plus others | The Solana equivalent |
+| <span class="academy-brand-label"><Icon name="token-branded:rabby" /><strong>Rabby</strong></span> | Ethereum and EVM chains | Shows more clearly what you are about to sign |
 
 You will install MetaMask in Week 1, **not today** — and it will be a fresh
 wallet holding testnet assets only.
@@ -153,8 +153,8 @@ anything else:
 
 | Site | Answers |
 |---|---|
-| <Icon name="mdi:chart-box-outline" /> **[DefiLlama](https://defillama.com/)** | Value deposited across protocols and chains |
-| <Icon name="mdi:shield-check" /> **[L2BEAT](https://l2beat.com/)** | Ethereum Layer 2s, with an unusually honest treatment of each one's risks and trust assumptions |
+| <a href="https://defillama.com/"><span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span></a> | Value deposited across protocols and chains |
+| <a href="https://l2beat.com/"><span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/l2beat.png" alt="" aria-hidden="true" /><strong>L2BEAT</strong></span></a> | Ethereum Layer 2s, with an unusually honest treatment of each one's risks and trust assumptions |
 
 ::: warning Aggregators are interpretations
 Someone chose what counts as "value locked" and what does not. Useful for
@@ -168,14 +168,14 @@ Recognise these; you will not use them before Week 4.
 
 | Tool | What it's for |
 |---|---|
-| <Icon name="mdi:chart-line" /> **Dune** | Write SQL against blockchain data and publish charts |
-| <Icon name="mdi:book-open-variant" /> **Messari Research** | Structured, professional sector and protocol research |
-| <Icon name="mdi:vote-outline" /> **Snapshot** | Off-chain governance voting, used by most DAOs |
-| <Icon name="mdi:forum-outline" /> **Governance forums** | Where proposals get argued before anyone votes. Often the most informative thing about a protocol |
-| <Icon name="mdi:graph-outline" /> **The Graph** | Indexes chain data so applications can query it |
-| <Icon name="simple-icons:openzeppelin" /> **OpenZeppelin** | Audited standard contract libraries, used almost everywhere |
-| <Icon name="simple-icons:alchemy" /> **Alchemy** / <Icon name="mdi:server-network" /> Infura | Infrastructure providers running nodes so applications don't have to |
-| <Icon name="mdi:hammer-wrench" /> **Foundry / Hardhat** | Professional developer toolkits. Not needed in Foundation |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Write SQL against blockchain data and publish charts |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari Research</strong></span> | Structured, professional sector and protocol research |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/snapshot.png" alt="" aria-hidden="true" /><strong>Snapshot</strong></span> | Off-chain governance voting, used by many DAOs |
+| **Governance forums** | Where proposals get argued before anyone votes. Often the most informative thing about a protocol |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/the-graph.png" alt="" aria-hidden="true" /><strong>The Graph</strong></span> | Indexes chain data so applications can query it |
+| <span class="academy-brand-label"><Icon name="simple-icons:openzeppelin" /><strong>OpenZeppelin</strong></span> | Audited standard contract libraries, used almost everywhere |
+| <span class="academy-brand-label"><Icon name="simple-icons:alchemy" /><strong>Alchemy</strong></span> / <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/infura.svg" alt="" aria-hidden="true" /><strong>Infura</strong></span> | Infrastructure providers running nodes so applications don't have to |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/foundry.png" alt="" aria-hidden="true" /><strong>Foundry</strong></span> / <span class="academy-brand-label"><Icon name="logos:hardhat" /><strong>Hardhat</strong></span> | Professional developer toolkits. Not needed in Foundation |
 
 ## Worked example
 

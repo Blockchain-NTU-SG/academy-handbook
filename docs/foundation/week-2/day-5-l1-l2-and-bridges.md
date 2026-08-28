@@ -9,6 +9,9 @@ sources:
   - name: "ethereum.org — Layer 2"
     url: "https://ethereum.org/layer-2/"
     label: "Reuse"
+  - name: "ethereum.org — Layer 2 rollup visual"
+    url: "https://ethereum.org/layer-2/learn/"
+    label: "Reuse"
   - name: "ethereum.org — Scaling"
     url: "https://ethereum.org/developers/docs/scaling/"
     label: "Reuse"
@@ -26,11 +29,13 @@ sources:
 # Week 2 · Part 5 — L1, L2, sidechains and bridges
 
 [Part 2](./day-2-comparing-blockchains.md) left Ethereum with an unresolved
-problem: roughly 15–30 transactions per second, and a deliberate refusal to fix
-that by raising base-layer capacity.
+scaling challenge. Ethereum historically kept L1 capacity conservative so that
+validation remained accessible, while scaling heavily through Layer 2s. Today it
+is scaling both: gradually increasing L1 capacity while continuing to expand L2
+capacity.
 
-This is how it gets fixed instead. And once there are many networks, a second
-problem appears immediately: **they cannot see each other.**
+This is how the scaling trade-off is managed. And once there are many networks,
+a second problem appears: **they cannot see each other.**
 
 ## Learning objectives
 
@@ -61,14 +66,10 @@ not fees, not branding.
 The core idea: **do the work elsewhere, but post enough to Ethereum that
 Ethereum remains the referee.**
 
-```mermaid
-flowchart TD
-  U["Users transact on the L2<br/><i>fast · cheap</i>"]
-  B["Transactions are batched"]
-  E["Batch posted to <b>Ethereum</b><br/><i>data + proof or challenge window</i>"]
-  S["Ethereum is the final authority<br/><i>designed escape path; maturity varies</i>"]
-  U --> B --> E --> S
-```
+<figure class="academy-reference-visual">
+  <img src="/learning/ethereum-org/layer-2-rollup.png" alt="Diagram showing users making many Layer 2 transactions, a rollup bundling them, and Ethereum receiving the resulting data and blocks." />
+  <figcaption>Rollups process transactions separately and post data or proofs back to Ethereum. Source: <a href="https://ethereum.org/layer-2/learn/">ethereum.org</a>, CC BY 4.0.</figcaption>
+</figure>
 
 Thousands of L2 transactions compress into one L1 posting, so the L1 cost is
 shared across all of them. **That is where the cost reduction comes from** — not
@@ -151,9 +152,9 @@ More general, and the foundation of cross-chain applications.
 
 ### Bridge risk
 
-::: danger Bridges have lost more value to exploits than any other category of infrastructure
-Hundreds of millions of dollars, repeatedly. The structural reason is not bad
-luck.
+::: danger Bridges have historically been a major source of large crypto exploits
+Hundreds of millions of dollars have been lost in repeated incidents. The
+structural reason is not bad luck.
 :::
 
 | Why | |
@@ -193,8 +194,9 @@ flowchart TD
   I --> F
 ```
 
-**Most of a DApp is ordinary web software.** Only the contracts are on-chain, and
-they are usually a small fraction of the code.
+**Most of a DApp is ordinary web software.** The smart contracts and blockchain
+state are on-chain. Much of the frontend, RPC, indexing and user-interface
+infrastructure remains off-chain.
 
 ::: warning A consequence people learn the hard way
 The frontend can be compromised while the contracts remain perfectly sound. A
@@ -225,22 +227,24 @@ valuable.
 | | Ethereum L1 | Base (L2) |
 |---|---|---|
 | Fee for a swap | Dollars | Cents |
-| Confirmation | ~13 min to finality | Seconds |
+| Confirmation | Explicit finality: roughly minutes | Seconds |
 | Who orders transactions | Thousands of validators | **A sequencer, currently operated by Coinbase** |
 | If that operator fails | N/A | Exit via Ethereum is the designed escape route — check the network's actual maturity |
 | Security ultimately from | Itself | **Ethereum** |
 
-Base is cheap **because it batches work and posts the result to Ethereum.** Not
-cheaper by being less secure in the long run — cheaper by sharing Ethereum's
-security across many transactions.
+Base is cheap **because it batches work and posts the result to Ethereum.**
+Rollups aim to share Ethereum's settlement and security while accepting
+additional L2-specific assumptions, such as sequencers, upgrade controls and
+withdrawal maturity.
 
 What you accept is a centralised sequencer today, which can in principle censor
 or reorder, and a withdrawal path that is not instant.
 
 ::: important Both choices are correct, for different jobs
-For a $20 swap, the L2 is obviously right. For settling $50 million between
-institutions, paying Ethereum's fee to avoid depending on any single operator is
-also obviously right.
+For a small everyday transaction, an L2 will often be the practical choice
+because fees matter. For very high-value settlement, some users may prefer
+paying more for direct L1 settlement — but the right choice depends on the
+application's requirements.
 
 That sentence is Week 2 in miniature — and [Part 6](./day-6-trust-and-risk-map.md)
 turns it into a tool you can point at anything.
@@ -258,6 +262,7 @@ turns it into a tool you can point at anything.
 - [ethereum.org — Scaling](https://ethereum.org/developers/docs/scaling/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Bridges](https://ethereum.org/developers/docs/bridges/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Dapps](https://ethereum.org/dapps/) — Reuse (CC BY 4.0), adapted
+- [ethereum.org — Layer 2 rollup visual](https://ethereum.org/layer-2/learn/) — Reuse (CC BY 4.0), local copy at `/learning/ethereum-org/layer-2-rollup.png`
 - [L2BEAT](https://l2beat.com/) — Link, referenced only
 
 *Named networks are illustrative examples, not recommendations.*

@@ -22,7 +22,7 @@ sources:
 
 # Week 1 · Part 8 — How it all connects: one user journey
 
-You have seven parts of pieces. This is where they become a picture.
+You now have seven pieces. This is where they become one picture.
 
 ::: important This page is a preview, not a lesson
 Roughly half the steps below are taught in Weeks 2 and 3. Each is marked and
@@ -100,7 +100,9 @@ Read the trust column downward and notice the shape.
 | DEX | Wallet + several sets of contracts |
 | DeFi protocol | All of the above + oracle + economic design |
 
-**The list never gets shorter.** It gets *different*, and usually longer.
+**Trust assumptions change as you move through the stack.** They can increase,
+decrease or shift depending on the path. In this example, each extra component
+adds another assumption.
 
 Moving to self-custody did not remove trust — it moved it onto you, and onto the
 software you interact with. Each additional protocol adds assumptions rather than

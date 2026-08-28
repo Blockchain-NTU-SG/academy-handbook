@@ -59,7 +59,8 @@ blocks is a genuine coordination problem.
 
 ::: important The shared goal
 You cannot stop someone *proposing* dishonest history. So instead you make
-**attacking the network cost more than it could ever earn.**
+**attacks extremely expensive, so honest participation is usually the
+economically rational choice.**
 
 Both mechanisms below do that — but they do it in genuinely different ways, and
 the difference is worth keeping straight.
@@ -87,7 +88,7 @@ times per second, until you get lucky. This is **mining**.
 |---|---|
 | The scarce resource | Electricity and specialised hardware |
 | How you attack it | Control most of the network's computing power |
-| What it costs | More hardware than everyone else combined |
+| What it costs | Control enough effective hashpower for long enough to outpace the honest chain |
 | What cheating costs | The electricity and hardware were spent, and the network rejected your block anyway |
 
 The security argument is economic: attacking Bitcoin means out-spending the
@@ -203,9 +204,9 @@ where that never happened, so they build an alternative chain from block 499.
 
 | | Proof of Work | Proof of Stake |
 |---|---|---|
-| What they need | To outpace the entire honest network | A very large share of all staked ETH |
+| What they need | To control enough effective hashpower for long enough to outpace the honest chain | A very large share of all staked ETH |
 | Why it fails | The real chain extends the whole time; they fall behind immediately | Finalising a competing chain requires provable misbehaviour |
-| What it costs them | More hardware than everyone combined, running continuously | A very large amount of stake exposed to **slashing** |
+| What it costs them | Control enough effective hashpower for long enough to outpace the honest chain | A very large amount of stake exposed to **slashing** |
 | Outcome | Wasted spend, nothing gained | The attack becomes economically costly, with provable dishonesty exposing that stake to slashing |
 
 ::: important The defence is the same shape in both cases
