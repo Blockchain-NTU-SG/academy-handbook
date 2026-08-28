@@ -46,7 +46,7 @@ A table is fine. One line each unless noted.
    Or honestly: where it does not. [Part 1](./day-1-industry-map.md)'s question —
    if you removed the blockchain, what breaks?
 
-5. **Proposed four-week Proof of Work** — one sentence, **no "and"**
+5. **Proposed four-week Proof of Work** — one sentence with one core deliverable
 
 6. **Tools** you expect to use
 
@@ -92,7 +92,7 @@ Optional: up to eight image or PDF uploads.
 ## Submission checklist
 
 - [ ] All ten Direction Card fields are answered
-- [ ] My Proof of Work sentence contains no "and"
+- [ ] My Proof of Work sentence describes one core deliverable
 - [ ] My definition of done is something another person could check
 - [ ] All five Mini Project Map questions are answered
 - [ ] My primary source in B4 is a real link I actually opened
@@ -110,7 +110,7 @@ expensive to fix later.
 |---|---|
 | 1 | A named direction. Combining two is fine if the project genuinely spans them |
 | 4 | Engages with whether blockchain is load-bearing. **"It's decentralised" is not an answer.** Honestly saying "the chain matters less than I first thought" is a strong answer |
-| 5 | **One sentence, no "and".** This is the scope check — enforce it |
+| 5 | **One clear deliverable.** If several independent projects are bundled together, ask the member to choose one |
 | 9 | A real risk. "Not enough time" is weak; "I might drift into comparing rather than analysing" is real |
 | 10 | **Checkable by a third party.** This is the field that matters most |
 
@@ -123,7 +123,7 @@ expensive to fix later.
 | 4 | A **genuine primary source** — official docs, GitHub, governance forum. **A news article or an X thread is not a primary source** |
 | 5 | A sensible data or research source, with a specific reason |
 
-**Send it back if:** the PoW sentence contains "and" or describes several
+**Send it back if:** the PoW proposal clearly contains several independent
 projects; the definition of done is unverifiable ("a good dashboard"); B4 cites
 a secondary source as primary; Part B is copied from the project's own
 description; or fields are left blank.
@@ -151,9 +151,9 @@ The three most common rejections at Week 4:
 
 | What happened | The fix |
 |---|---|
-| The Proof of Work sentence has an "and" in it | Pick the half you most want to do. The other half is your "next steps" in Week 8 |
-| The definition of done is not checkable | Add a number and a format. "Three charts and 300 words" beats "a good analysis" |
-| B4 cites a news article or a thread as a primary source | Primary means the project's **own** docs, code or governance. [Part 3](./day-3-research-tool-map.md) has the hierarchy |
+| The Proof of Work sentence describes several independent projects | Choose the one you most want to do. The others can become Week 8 next steps |
+| The definition of done is not checkable | Say what will exist, what question it answers, and how someone can tell it is complete |
+| B4 cites a news article or a thread as a primary source | Primary means the project's **own** docs, code or governance. [Part 3](./day-3-research-tool-map.md) has the five-source model |
 
 If you are stuck on choosing a direction rather than writing the card, describe
 your idea in the Telegram group. Saying it out loud is the fastest way to find

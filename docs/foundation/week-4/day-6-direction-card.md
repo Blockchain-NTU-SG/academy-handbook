@@ -140,31 +140,30 @@ it would be genuinely useful.
 
 ### Choosing
 
-::: tip Do not choose by prestige
-Developer is not the "serious" one. Research and Data work is what most Web3
-firms actually hire for, and good Product people are rarer than good engineers.
-
-**Choose by what you want to spend four weeks doing.** Motivation is the main
-predictor of finishing.
+::: tip Choose by the work, not by prestige
+None of the four directions is a higher tier. Choose the kind of work you want
+to spend four weeks doing and the evidence you want to produce.
 :::
 
 Three questions that usually settle it:
 
 1. **Which Foundation page did you enjoy most?** That is a real signal.
-2. **What do you want to be able to show in December?**
+2. **What do you want to be able to show at the end of the sprint?**
 3. **What will you still want to work on in week 7**, when it stops being novel?
 
 ### Scoping so you can actually finish
 
-Beginners overestimate what fits in four weeks by roughly a factor of five.
+Beginners often overestimate what fits in four weeks.
 
 ::: important The scoping test
-Say your project in one sentence with no "and".
+Say your project in one sentence with one core question or deliverable.
+Supporting pieces are fine when they serve that same output.
 
-- "A dashboard showing stablecoin flows on Base **and** a comparison to Arbitrum **and** a written report" → three projects
-- "A dashboard showing stablecoin flows on Base" → one project
+- "Build a token, analyse stablecoin regulation, **and** create a trading dashboard" → three independent projects
+- "Build a small dashboard **and** add a short explanation of what the chart shows" → one deliverable with a supporting explanation
 
-**If you cannot say it without "and", cut until you can.**
+Avoid joining multiple independent projects under one broad sentence; keep one
+core question or deliverable.
 :::
 
 The four-week shape:
@@ -176,7 +175,8 @@ The four-week shape:
 | **7 · Review & improve** | Peer review, validate assumptions, document limits |
 | **8 · Ship** | Final output, README, demo, AI disclosure, next steps |
 
-Notice V0 is due in week 6. **You have about two weeks of building**, not four.
+Notice V0 is due in week 6. Build something reviewable early, then use the
+remaining time for review, improvement and shipping.
 
 ### Definition of done
 

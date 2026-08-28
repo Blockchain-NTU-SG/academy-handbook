@@ -243,8 +243,10 @@ Nothing is installed. Remix runs entirely in a browser tab.
    You will see the contract, its creation transaction, and every call anyone has
    made to it — including yours.
 
-   Open your `setMessage` transaction and find the **Logs** tab. Your
-   `MessageChanged` event is there, with your address indexed against it.
+   Open your `setMessage` transaction and find the **Logs** tab. The Logs tab may
+   show the `MessageChanged` event by name, or lower-level log data if Etherscan
+   does not decode it for you. Either view is the event record from outside the
+   contract.
 
    <figure class="academy-shot">
      <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Etherscan transaction Logs tab showing the MessageChanged event with its indexed address.">
@@ -282,9 +284,9 @@ group. Someone will have seen it.
 ::: details Optional — verify your source on Etherscan
 Not required for the mission, and genuinely worth doing.
 
-Etherscan's **Verify and Publish** flow takes your source and checks it matches
-the deployed bytecode. Once verified, anyone gets a working **Read/Write
-Contract** interface — and your contract stops being a black box.
+Etherscan's **Verify and Publish** flow checks that your submitted source matches
+the deployed bytecode. Once verified, Etherscan can show human-readable source
+and a convenient **Read/Write** interface for the functions it can identify.
 
 This is what [Part 1](./day-1-what-is-a-smart-contract.md) meant by verified
 source, and what [Week 0 Part 3](../../getting-started/tools.md) meant about

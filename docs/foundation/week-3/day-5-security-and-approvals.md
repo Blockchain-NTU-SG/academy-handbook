@@ -73,20 +73,23 @@ A contract cannot reach into your wallet. It has no key. So the only way it can
 ever move your tokens is if **you** first write permission into the token's own
 storage.
 
-The design is sound. The danger is entirely in the `amount`.
+The design makes the spender and amount explicit. The risk depends on which
+contract receives permission, how much it can spend, and whether that contract
+remains trustworthy.
 :::
 
 ### Unlimited approvals
 
-Most interfaces default to an effectively unlimited allowance, so you only pay
-gas for it once.
+Some interfaces request a very large or effectively unlimited allowance, so you
+only pay gas for the approval once. Interfaces increasingly offer spending caps
+instead.
 
 ```text
 approve(0x9c8a…, 115792089237316195423570985008687907853269984665640564039457584007913129639935)
 ```
 
-That number is the largest a `uint256` can hold. In practice: **everything you
-will ever own of this token, for as long as the allowance stands.**
+That number is the largest a `uint256` can hold. In practice: **it could cover
+future holdings of this token for as long as the allowance stands.**
 
 ::: danger An old approval is a live liability
 The allowance does not expire. It survives you forgetting about the site, the
@@ -106,7 +109,8 @@ anything at all**. You granted the permission years ago.
 
 ### Approvals versus signatures
 
-Two ways to hand over the same permission, and one of them is free.
+Two ways to hand over the same permission; one may not require gas at the moment
+you sign.
 
 | | On-chain approval | Signature-based permission |
 |---|---|---|
@@ -117,8 +121,10 @@ Two ways to hand over the same permission, and one of them is free.
 | Grants real permission | Yes | **Yes** |
 
 ::: danger "No gas" is not "no risk"
-A signature-based permission can create the same standing access as an approval,
-without appearing anywhere on-chain when you sign it.
+A signature-based permission can create the same standing access as an approval
+without appearing anywhere on-chain when you sign it. It may be submitted later
+by someone else. A signature is not automatically dangerous: inspect what
+permission it authorises, who can submit it, and how long it lasts.
 
 This is why [Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) says: **when
 your wallet opens, read what it is asking.** Cost is not the signal. What you are
@@ -160,7 +166,7 @@ It is meaningfully better than no audit. It is not a warranty.
 - **Upgradeable proxies** — the code behind an address can be replaced. A trust assumption, not a detail
 - **Rug pull** — a team removing value or abandoning a project
 - **Front-running / MEV** — your pending transaction is public before it executes
-- **SWC Registry** — a catalogue of known weakness classes
+- **SWC Registry** — a historical catalogue of known weakness classes; it is no longer actively maintained, so use current security resources too
 
 ## A short checklist
 
@@ -206,12 +212,9 @@ And notice the asymmetry: **the attacker needed one careless approval; the user
 needed to be careful every time.** That is why this is a habit rather than
 knowledge — you cannot look it up in the moment.
 
-::: tip You are now in a small minority
-Most people using DeFi could not explain what `approve()` writes or why an
-allowance persists. You can.
-
-That is genuinely most of practical Web3 security, and you got it from deploying
-one twenty-line contract.
+::: tip Keep this model handy
+You now have a concrete model for reading token permissions: identify the spender,
+the amount, the submission path and how long the permission lasts.
 :::
 
 ::: details Further exploration — optional, not assessed

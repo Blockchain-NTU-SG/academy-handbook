@@ -50,10 +50,10 @@ same thing.
 
 ```mermaid
 flowchart TD
-  E["<b>Ethereum</b><br/>the <i>network</i><br/>nobody owns it"]
+  E["<b>Ethereum</b><br/>the <i>network</i><br/>no single company owns or operates the whole network"]
   ETH["<b>ETH</b><br/>the <i>native asset</i><br/>pays gas, secures the chain"]
   EF["<b>Ethereum Foundation</b><br/>a <i>non-profit</i><br/>funds research — does not control the chain"]
-  UP["<b>Uniswap Protocol</b><br/><i>contracts</i> on the network<br/>runs with or without anyone"]
+  UP["<b>Uniswap Protocol</b><br/><i>contracts</i> on the network<br/>can continue independently of its interface"]
   UL["<b>Uniswap Labs</b><br/>a <i>company</i><br/>builds software, employs people"]
   UNI["<b>UNI</b><br/>a <i>governance token</i><br/>votes on protocol changes"]
   G["<b>Governance</b><br/>a <i>mechanism</i><br/>how change gets coordinated"]
@@ -67,23 +67,24 @@ flowchart TD
 
 | Thing | Category | Who controls it | If it disappeared |
 |---|---|---|---|
-| Ethereum | **Network** | Nobody | Everything stops |
+| Ethereum | **Network** | No single operator | If the network stopped, applications using it would stop |
 | ETH | **Native asset** | Nobody | No way to pay gas |
 | Ethereum Foundation | **Non-profit** | A board | Ethereum keeps running |
-| Uniswap Protocol | **Protocol** — contracts | Nobody, once deployed | Those pools stop |
+| Uniswap Protocol | **Protocol** — contracts | Depends on deployed permissions and upgrade controls | Relevant pools or features may stop |
 | Uniswap Labs | **Company** | Its owners | **The protocol keeps running** |
 | UNI | **Token** | Its holders | Governance loses its mechanism |
 | Governance | **Mechanism** | Token holders, procedurally | Changes stop being coordinated |
 
 ::: important The row that surprises people
-**Uniswap Labs could shut down tomorrow and the Uniswap Protocol would keep
-working.** The contracts are deployed. Nobody can switch them off.
+**The core deployed Uniswap contracts can continue to exist and be called even if
+the company behind the main interface disappears**, although interfaces,
+governance and other dependencies still matter.
 
 That is not a slogan — it is the concrete, checkable difference between a company
 and a protocol, and it is the clearest thing "decentralised" actually buys.
 
-The company runs the *website*. Losing it makes the protocol harder to use, not
-non-existent.
+The company runs the *website*. Losing it can make the protocol harder to use,
+but that is a different dependency from the contracts themselves.
 :::
 
 ### Who is who
@@ -95,20 +96,20 @@ Recognition level. The goal is to place a name, not memorise a directory.
 
 | | What it is |
 |---|---|
-| <Icon name="simple-icons:ethereum" /> **Ethereum** | The largest smart-contract network |
-| <Icon name="simple-icons:solana" /> **Solana** | High-throughput L1 |
-| **Base** | Ethereum L2, built by Coinbase |
-| **Arbitrum** | Ethereum L2, optimistic rollup |
+| <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span> | The largest smart-contract network |
+| <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span> | High-throughput L1 |
+| <span class="academy-brand-label"><Icon name="token-branded:base" /><strong>Base</strong></span> | Ethereum L2, built by Coinbase |
+| <span class="academy-brand-label"><Icon name="token-branded:arbitrum" /><strong>Arbitrum</strong></span> | Ethereum L2, optimistic rollup |
 
 @tab Companies
 
 | | Category |
 |---|---|
-| **Coinbase, Binance, OKX** | Centralised exchanges — custodial |
-| **Circle** | Issuer of USDC |
-| **Tether** | Issuer of USDT |
-| **Uniswap Labs, Aave Labs** | Development companies behind protocols |
-| **Alchemy, Infura** | Infrastructure providers |
+| <span class="academy-brand-label"><Icon name="simple-icons:coinbase" /><strong>Coinbase</strong></span>, <span class="academy-brand-label"><Icon name="simple-icons:binance" /><strong>Binance</strong></span>, <span class="academy-brand-label"><Icon name="simple-icons:okx" /><strong>OKX</strong></span> | Centralised exchanges — custodial |
+| <span class="academy-brand-label"><Icon name="simple-icons:circle" /><strong>Circle</strong></span> | Issuer of USDC |
+| <span class="academy-brand-label"><Icon name="simple-icons:tether" /><strong>Tether</strong></span> | Issuer of USDT |
+| <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap Labs</strong></span>, Aave Labs | Development companies behind protocols |
+| <span class="academy-brand-label"><Icon name="simple-icons:alchemy" /><strong>Alchemy</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/infura.svg" alt="" aria-hidden="true" /><strong>Infura</strong></span> | Infrastructure providers |
 
 ::: tip Notice the pattern
 Every row here is **a company with employees, investors and a jurisdiction.**
@@ -120,21 +121,21 @@ thing from a deployed contract.
 
 | | What it does |
 |---|---|
-| **Uniswap** | Decentralised exchange |
-| **Aave** | Lending market |
-| **Chainlink** | Oracle network |
+| <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap</strong></span> | Decentralised exchange |
+| <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave</strong></span> | Lending market |
+| <span class="academy-brand-label"><Icon name="simple-icons:chainlink" /><strong>Chainlink</strong></span> | Oracle network |
 | **LayerZero, Wormhole, Across** | Cross-chain messaging and bridging |
 
 @tab Tools and research
 
 | | What it is |
 |---|---|
-| **Dune** | On-chain data, SQL dashboards — company |
-| **DefiLlama** | TVL and protocol comparison |
-| **L2BEAT** | L2 risk and maturity analysis |
-| **Messari** | Structured research — company |
-| **OpenZeppelin** | Security and standard contract libraries — company |
-| **Etherscan** | Explorer — company |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | On-chain data, SQL dashboards — company |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span> | TVL and protocol comparison |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/l2beat.png" alt="" aria-hidden="true" /><strong>L2BEAT</strong></span> | L2 risk and maturity analysis |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari</strong></span> | Structured research — company |
+| <span class="academy-brand-label"><Icon name="simple-icons:openzeppelin" /><strong>OpenZeppelin</strong></span> | Security and standard contract libraries — company |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/etherscan.svg" alt="" aria-hidden="true" /><strong>Etherscan</strong></span> | Explorer — company |
 :::
 
 ### Governance — what it coordinates
@@ -149,8 +150,8 @@ thing from a deployed contract.
 That is enough for Foundation. Governance is the answer to *"the contracts are
 immutable — so how does anything ever change?"*
 
-Usually: a proposal is discussed on a forum, an off-chain vote is taken on
-Snapshot, and if it passes, an on-chain transaction executes it.
+One common pattern is a proposal discussed on a forum, an off-chain vote taken
+on Snapshot, and an on-chain transaction executing it if it passes.
 
 ::: warning What a governance token is not
 Holding one is **not ownership of a company**, not a share, and not a claim on
@@ -169,14 +170,13 @@ One more short idea, and it applies to you personally now that you have an
 address.
 
 Your wallet address is a **persistent public identity**. Assets, activity,
-contract interactions and credentials all accumulate against it, permanently and
-visibly — [Week 1 Part 7](../week-1/day-7-your-first-transaction.md) had you look
-at exactly this.
+contract interactions and credentials can accumulate against it, creating a
+public trail — [Week 1 Part 7](../week-1/day-7-your-first-transaction.md) had you
+look at exactly this.
 
 ::: danger Pseudonymity is not anonymity
-An address is not your name. But it is a **stable identifier with a complete,
-permanent, public history** — and that history can often be linked back to a
-person.
+An address is not your name. But it is a **stable identifier with a public
+history** — and repeated activity can often be linked back to a person.
 
 Withdraw from a KYC'd exchange to your address, and that exchange can connect
 the two. Reuse one address across a forum post, an ENS name and a donation, and
@@ -190,7 +190,7 @@ The genuine trade-off:
 | Possibility | Risk |
 |---|---|
 | Portable reputation you own, not a platform | Your entire financial history is public |
-| Credentials that follow you between applications | Permanent, and cannot be deleted |
+| Credentials that follow you between applications | Public activity can remain visible and is not controlled by one platform |
 | No platform can delete your identity | Correlation can undo pseudonymity |
 
 ::: tip Practical implication
@@ -199,8 +199,9 @@ a security one. [Week 0 Part 4](../../getting-started/safety.md) recommended it 
 safety; this is the second reason.
 :::
 
-DID and SBT — formal decentralised identity standards — are Further Exploration,
-not compulsory Foundation.
+DID is a W3C standard; SBT is a design concept used by some projects, not a
+universal formal standard. Both are Further Exploration, not compulsory
+Foundation.
 
 ## Landscape
 
@@ -208,10 +209,10 @@ not compulsory Foundation.
 - **Labs / Core contributor** — the company that builds a protocol's software
 - **Protocol vs interface** — the contracts, versus the website in front of them. Often different owners
 - **Multisig / Safe** — how treasuries actually hold funds
-- **Snapshot** — off-chain voting, used by most DAOs
+- **Snapshot** — off-chain voting, used by some DAOs
 - **Delegation** — assigning your voting power to someone who participates
 - **ENS** — human-readable names mapped to addresses, and a public identity in itself
-- **DID / SBT** — formal identity standards. Further Exploration
+- **DID / SBT** — decentralised identity concepts. Further Exploration
 
 ## Worked example
 

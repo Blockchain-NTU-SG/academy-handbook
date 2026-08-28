@@ -58,20 +58,26 @@ function balanceOf(address owner) external view returns (uint256);
 function transfer(address to, uint256 amount) external returns (bool);
 function approve(address spender, uint256 amount) external returns (bool);
 function transferFrom(address from, address to, uint256 amount) external returns (bool);
+function allowance(address owner, address spender) external view returns (uint256);
 function totalSupply() external view returns (uint256);
 ```
 
 Plus two events, `Transfer` and `Approval`.
 
-That is it. Any contract implementing those is an ERC-20 token.
+A contract that implements the required interface is intended to be ERC-20-compatible.
+
+Before `transferFrom` can work, the token contract's allowance table must contain
+a permission written by `approve`:
+
+`approve` → `allowance(owner, spender)` → `transferFrom`
 
 ::: tip Why this matters more than it looks
 MetaMask does not know your token exists. It does not need to. It calls
 `balanceOf(yourAddress)` and displays whatever comes back.
 
-**Every wallet, exchange, explorer and DApp works with every token, forever,
-with no coordination between any of them.** That is what a standard buys you,
-and it is the reason the Ethereum ecosystem grew the way it did.
+Wallets, exchanges, explorers and DApps can integrate tokens through the same
+interface without coordinating a new set of function names for each token. That
+is what a standard buys you, and it is one reason the Ethereum ecosystem grew.
 :::
 
 ::: details Where standards come from
@@ -97,8 +103,8 @@ State is essentially one table:
 mapping(address => uint256) balances;
 ```
 
-**What is built on it:** stablecoins (USDC, USDT), governance tokens (UNI,
-AAVE), staking and reward tokens, and effectively all of DeFi.
+**What is built on it:** stablecoins (<span class="academy-brand-label"><Icon name="token-branded:usdc" /><strong>USDC</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:usdt" /><strong>USDT</strong></span>), governance tokens (UNI,
+AAVE), staking and reward tokens, and much of DeFi.
 
 ::: warning Decimals confuse everyone once
 ERC-20 has no fractions. Balances are whole numbers, and a `decimals` value says
@@ -163,12 +169,12 @@ Now connect each standard to what people actually build.
 
 Three application shapes are worth recognising:
 
-**DEX — a smart-contract exchange.** Rather than an order book at a company, a
-contract holds pooled assets and swaps between them by a formula. No account, no
-custody, no permission. You approve it to spend a token, you call it, it swaps.
+**DEX — a smart-contract exchange.** For example, <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap</strong></span> uses pooled assets rather than an order book at a company, and swaps
+between them by a formula. Users do not first deposit into the DEX as they would
+with a custodial exchange; they approve the token contract and call the DEX,
+subject to the protocol's design.
 
-**Lending protocol — smart-contract borrowing.** Deposit collateral, borrow
-against it. If collateral falls too far in value, anyone can trigger a
+**Lending protocol — smart-contract borrowing.** A protocol such as <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave</strong></span> lets users deposit collateral and borrow against it. If collateral falls too far in value, anyone can trigger a
 liquidation — remember from [Part 1](./day-1-what-is-a-smart-contract.md) that
 the contract cannot act alone, so a bot does it and takes a fee.
 
@@ -209,7 +215,7 @@ map. That is enough for Foundation.
 
 Read a real token's storage without reading its code.
 
-Open the USDC contract on Etherscan — `0xA0b8…eB48`, the address from
+Open the <span class="academy-brand-label"><Icon name="token-branded:usdc" /><strong>USDC</strong></span> contract on Etherscan — `0xA0b8…eB48`, the address from
 [Week 2 Part 3](../week-2/day-3-why-ethereum-and-evm.md) — and open **Read
 Contract**.
 
@@ -225,9 +231,9 @@ Contract**.
 Anyone can deploy a contract that returns `"USD Coin"` and `"USDC"`. It costs a
 few cents and takes five minutes — you now have the skills to do it yourself.
 
-**The only thing that identifies a real token is its contract address.** This is
-exactly how fake-token scams work: same name, same symbol, same logo, different
-address.
+**For a token on a particular network, its practical identity is the network
+plus its contract address.** Names, symbols and logos can be copied: fake-token
+scams use the same name, symbol or logo at a different address.
 
 Always verify the address against the issuer's official documentation. Never
 trust a token because a website or a message told you its name.

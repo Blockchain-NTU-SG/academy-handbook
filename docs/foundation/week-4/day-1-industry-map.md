@@ -21,6 +21,15 @@ sources:
   - name: "DefiLlama"
     url: "https://defillama.com/"
     label: "Link"
+  - name: "Singapore Web3 Landscape — Onchain State Singapore"
+    url: "https://www.onchainstate.sg/industry-map"
+    label: "Link"
+  - name: "Binance Research — Industry Map (March 2025)"
+    url: "https://public.bnbstatic.com/static/files/research/industry-map-mar25.pdf"
+    label: "Link"
+  - name: "Artemis / Stablecoin.fyi — Stablecoin Market Landscape"
+    url: "https://www.stablecoin.fyi/market-map"
+    label: "Link"
 ---
 
 # Week 4 · Part 1 — The Web3 industry map
@@ -39,7 +48,7 @@ Recognition. Not expertise.
 ## Learning objectives
 
 - Name the major Web3 sectors and what problem each addresses
-- Explain how blockchain is load-bearing in a sector — or admit when it is not
+- Explain whether blockchain is **load-bearing** in a sector — if removed, would the core product stop working or meaningfully change?
 - Give at least one representative example per sector you care about
 - State a real limitation for any sector you name
 
@@ -60,7 +69,31 @@ If you can only recite what a sector claims, you cannot evaluate anything in it 
 and the Week 4 mission asks you to evaluate something.
 :::
 
-### The sectors
+### Want to see the industry at a glance?
+
+No single map captures Web3 perfectly. Categories overlap, companies move
+between sectors, and maps become outdated. Use them for orientation, not as a
+definitive taxonomy.
+
+1. **[Singapore Web3 Landscape — Onchain State Singapore](https://www.onchainstate.sg/industry-map)**
+
+   Start here. It is a quick one-page view of the Web3 companies and projects
+   around Singapore, and the easiest map to understand at a glance. Open it at
+   full size.
+
+2. **[Binance Research — Industry Map, March 2025](https://public.bnbstatic.com/static/files/research/industry-map-mar25.pdf)**
+
+   Want the detailed global version? This is a much deeper map with many
+   sectors, sub-sectors and projects. It is an optional deep dive.
+
+3. **[Artemis / Stablecoin.fyi — Stablecoin Market Landscape](https://www.stablecoin.fyi/market-map)**
+
+   A sector can become an industry map of its own. Stablecoins expand into
+   issuers, blockchains, payments, on/off ramps, infrastructure, analytics and
+   financial services.
+
+**An industry map is a snapshot, not a fixed taxonomy. And every box on the map
+can become another map of its own.**
 
 ::: tabs
 @tab Infrastructure
@@ -93,11 +126,11 @@ people to approve things they cannot evaluate — [Week 3 Part 5](../week-3/day-
 
 @tab Stablecoins and payments
 
-**Problem:** volatile assets are poor money. Cross-border payments are slow and
-expensive.
+**Problem:** cross-border payments can involve several intermediaries, fees and
+settlement delays.
 
-**Why blockchain matters:** near-instant global settlement without correspondent
-banking.
+**Why blockchain matters:** it can enable fast global settlement without the
+same correspondent-banking path.
 
 **Examples:** Circle (USDC), Tether (USDT)
 
@@ -107,11 +140,12 @@ This is the clearest case where Web3 redistributes trust rather than removing it
 
 @tab DeFi
 
-**Problem:** financial services require intermediaries who gatekeep, charge and
-can exclude.
+**Problem:** traditional financial services usually rely on institutions to hold
+assets, match transactions or enforce rules.
 
-**Why blockchain matters:** contracts enforce terms without a company, and
-anyone can access them permissionlessly.
+**Why blockchain matters:** contracts can enforce terms without a company, and
+many protocols are designed for permissionless access, subject to their
+interfaces and other controls.
 
 **Examples:** Uniswap (DEX), Aave (lending)
 
@@ -157,8 +191,8 @@ anywhere.
 
 **Examples:** on-chain games, consumer social applications
 
-**Limitation:** the honest one. **Most blockchain games have been poor games.**
-Financialising play tends to attract speculators rather than players, and
+**Limitation:** many early blockchain games struggled to attract players beyond
+financial incentives. Financialising play can attract speculators rather than players, and
 "play-to-earn" economies have repeatedly collapsed.
 
 @tab DAOs and governance
@@ -170,8 +204,8 @@ rather than trust.
 
 **Examples:** protocol governance, grant programmes
 
-**Limitation:** **voter turnout is usually very low** and token-weighted voting
-concentrates power in large holders. Legal status is unresolved in most
+**Limitation:** governance participation can be low, and token-weighted voting
+can concentrate influence in large holders. Legal status is unresolved in many
 jurisdictions.
 
 @tab Oracles and cross-chain
@@ -183,14 +217,14 @@ contracts can only act on what is already on their chain.
 
 **Examples:** Chainlink; LayerZero, Wormhole, Across
 
-**Limitation:** both are **concentrated points of failure**. Bridges remain the
-most exploited category in the industry — [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md).
+**Limitation:** both can create **concentrated points of failure**. Bridges have
+historically been a major source of large crypto exploits — [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md).
 
 @tab Data, ZK, DePIN, AI
 
-**On-chain data** — Dune, DefiLlama, Nansen. Everything is public but unusable
-raw. *Limitation:* dashboards embed someone's definitions; "TVL" is a choice, not
-a fact.
+**On-chain data** — Dune, DefiLlama, Nansen. Raw on-chain data is public but hard
+to use directly. *Limitation:* dashboards embed someone's definitions; "TVL" is
+a choice, not a fact.
 
 **ZK and privacy** — proving something is true without revealing it. Used for
 scaling and privacy. *Limitation:* hard to build, hard to audit, and privacy
@@ -199,15 +233,18 @@ tools attract regulatory attention.
 **DePIN** — token incentives to bootstrap physical networks. *Limitation:* the
 hard part is real-world operations, and demand rarely arrives with supply.
 
-**AI × Web3** — the newest and least settled. *Limitation:* a great deal of it is
-narrative. Ask what the blockchain is load-bearing for; often the answer is
-"nothing".
+**AI × Web3** — an emerging and unsettled area. *Limitation:* a great deal of it
+is narrative. Ask what the blockchain is load-bearing for; sometimes the answer
+is "nothing".
 :::
 
 ### The question to carry into every sector
 
 ::: important Where is the blockchain actually load-bearing?
 For each sector, ask: **if you removed the blockchain, what specifically breaks?**
+
+Here, **load-bearing** means: if you removed the blockchain, would the core
+product stop working or meaningfully change?
 
 - Stablecoin payments — settlement without correspondent banks. **Real.**
 - A DEX — custody-free trading with no company. **Real.**
@@ -260,6 +297,9 @@ its off-chain verification — so *that* is what you investigate, and
 - [ethereum.org — DAOs](https://ethereum.org/dao/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Oracles](https://ethereum.org/developers/docs/oracles/) — Reuse (CC BY 4.0), adapted
 - [DefiLlama](https://defillama.com/) — Link, referenced only
+- [Singapore Web3 Landscape — Onchain State Singapore](https://www.onchainstate.sg/industry-map) — Link, referenced only
+- [Binance Research — Industry Map (March 2025)](https://public.bnbstatic.com/static/files/research/industry-map-mar25.pdf) — Link, referenced only
+- [Artemis / Stablecoin.fyi — Stablecoin Market Landscape](https://www.stablecoin.fyi/market-map) — Link, referenced only
 
 *Named organisations and protocols are illustrative examples chosen for
 recognisability, not recommendations or endorsements.*

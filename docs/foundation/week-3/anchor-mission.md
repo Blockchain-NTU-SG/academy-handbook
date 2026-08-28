@@ -66,8 +66,8 @@ Remix is welcome, not required.
 Any real limitation counts. Some honest examples from this exact contract:
 
 - anyone can call `setMessage` — there is no permission check
-- the message is public forever and cannot be deleted
-- there is no way to fix a bug once deployed
+- the current message can be overwritten, while the transactions that changed it remain part of the chain's history
+- this version has no upgrade mechanism, so fixing a bug would mean deploying a new version
 - storing long text costs more gas than you would expect
 
 You are not expected to find a clever exploit. You are expected to notice that

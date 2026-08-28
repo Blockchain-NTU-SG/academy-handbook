@@ -16,8 +16,9 @@ sources:
 
 # Week 4 · Part 5 — AI-native building
 
-You will use AI to build your Proof of Work. That is expected, allowed, and how
-most software now gets written.
+You will use AI to build your Proof of Work. AI-assisted building is increasingly
+common, and it is explicitly allowed in the Academy. The responsibility for
+checking the result remains yours.
 
 ::: important The Academy's principle
 > **AI-native building, not blind AI generation.**
@@ -70,7 +71,7 @@ which makes wrong answers *read* exactly like right ones.
 
 | Good at | Unreliable at |
 |---|---|
-| Explaining unfamiliar code | Anything after its training cutoff |
+| Explaining unfamiliar code | Current facts without a live, trustworthy source |
 | Boilerplate and scaffolding | Current addresses, APIs, prices, versions |
 | Translating between languages | Whether a library is still maintained |
 | Suggesting what to test | Security-critical logic |
@@ -80,10 +81,11 @@ which makes wrong answers *read* exactly like right ones.
 **AI will confidently produce a plausible contract address, API endpoint,
 package name or configuration value that does not exist or is wrong.**
 
-It reads exactly like the correct answer. In this field, that means real losses —
-a wrong address is not a bug, it is unrecoverable funds.
+It reads exactly like the correct answer. In this field, a wrong address can send
+funds to the wrong place and may be irreversible.
 
-**Verify every address, endpoint and version against a primary source.**
+**Verify every address, endpoint and version against a primary source.** Current
+facts need a live, trustworthy source; do not rely on a model's assumed cutoff.
 [Part 3](./day-3-research-tool-map.md) is that skill.
 :::
 
@@ -105,8 +107,7 @@ draws this line, and it is a good one.
 
 For most code, the standard is *"can you explain what it does?"*
 
-For **security-critical logic, you are expected to have inspected and tested it
-yourself**:
+For **security-critical logic, do not use generated code blindly**:
 
 | Category | Why |
 |---|---|
@@ -114,12 +115,19 @@ yourself**:
 | Signatures and approvals | Can grant standing permission — [Week 3 Part 5](../week-3/day-5-security-and-approvals.md) |
 | Transactions | Irreversible |
 | Contract state changes | Irreversible |
-| Network and address configuration | Wrong network or address loses funds |
+| Network and address configuration | A wrong network or address can send funds to the wrong place and may be irreversible |
 | Anything touching secrets | Committed keys are compromised keys |
 
 ::: important A simple rule
-**If getting it wrong costs money or leaks a key, read every line and test it on
-testnet.**
+**If code can move funds, grant permissions, use secrets, or choose a network or
+contract address, do not use it blindly.**
+
+1. Understand what that small section is supposed to do.
+2. Verify addresses and configuration against primary sources.
+3. Test it on testnet.
+4. Ask a reviewer or mentor when you cannot explain it.
+
+Use established libraries instead of asking a beginner to audit cryptography.
 
 Everything else, explain-and-move-on is fine.
 :::
@@ -199,7 +207,7 @@ mean."* Read it. Cross-check against
 **Next piece.** Fetch one event. **Run it.** It fails — wrong address. You catch
 it because you only changed one thing.
 
-**Verify the address** against Uniswap's official documentation. Fix. Run.
+**Verify the address** against [Uniswap's official documentation](https://docs.uniswap.org/). Fix. Run.
 Works. **Commit.**
 
 Continue: decode, threshold, output. Each one built, run, committed.

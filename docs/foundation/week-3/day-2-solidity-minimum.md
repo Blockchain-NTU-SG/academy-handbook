@@ -157,8 +157,9 @@ function getMessage() external view returns (string memory) {
 }
 ```
 
-A **read** function. **`view`** promises it does not change state — which is why
-calling it is free and instant, exactly as
+A **read** function. **`view`** promises it does not change state — so a normal
+read through Remix or a wallet does not create an on-chain transaction or pay a
+transaction fee. It may still depend on a node response, as
 [Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) described.
 
 @tab Visibility
@@ -168,7 +169,7 @@ Who is allowed to call a function.
 | Keyword | Callable by |
 |---|---|
 | `public` | Anyone, inside or outside |
-| `external` | Only from outside the contract |
+| `external` | Designed to be called from outside the contract |
 | `internal` | Only this contract and ones inheriting it |
 | `private` | Only this contract |
 
@@ -194,9 +195,10 @@ talk to your contract. Your wallet, a website, Etherscan — they all need the A
 to turn "call `setMessage` with this text" into the bytes a transaction carries.
 
 ::: tip This is why "verified source code" matters
-Publishing your source on Etherscan lets it generate the ABI and give everyone a
-working **Read/Write Contract** interface. An unverified contract is a black box
-that only its authors know how to call properly.
+Publishing verified source lets Etherscan show human-readable code and a
+convenient **Read/Write Contract** interface matched against the deployed
+bytecode. Without verified source, the bytecode is still public, but the
+original human-readable code and interface are harder to inspect.
 :::
 
 ### What you can safely skip for now
@@ -238,7 +240,7 @@ contract Vault {
     }
 
     function drain() external {
-        payable(owner).transfer(address(this).balance);
+        payable(msg.sender).transfer(address(this).balance);
     }
 }
 ```
@@ -254,9 +256,9 @@ contract Vault {
 **2. Anyone.** `drain()` is `external` with **no permission check at all**. There
 is no `require(msg.sender == owner)`. The name says "owner", the code does not.
 
-**3.** Anyone can call `drain()` and send the entire balance to `owner`. Worse,
-depositors can never withdraw — there is no withdraw function, so their funds are
-permanently stuck, and `deposits` records balances the contract will never honour.
+**3.** Anyone can call `drain()` and send the entire balance to the caller.
+Worse, depositors cannot withdraw — there is no withdraw function, so their
+funds are stuck and `deposits` records balances the contract will never honour.
 
 ::: important Two lessons in one twenty-line contract
 **A variable called `owner` does not create a permission.** Only a check does.

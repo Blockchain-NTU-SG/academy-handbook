@@ -23,9 +23,13 @@ sources:
 an account made of code. That is accurate and it is not yet useful.
 
 ::: important The plain-English version
-**A smart contract is a program that lives at an address on the blockchain.
-Anyone can call it, everyone can read it, and once deployed it runs exactly as
-written — including when that is not what anyone wanted.**
+**A smart contract is a program deployed at an address on the blockchain.
+People and applications interact with the functions it exposes, and the
+network executes the same rules for each call.**
+
+Some functions may be open to everyone, while others use permission checks.
+Some contracts are immutable; others include admin or governance controls that
+can change parts of their behaviour.
 :::
 
 The name is misleading twice over: it is not a legal contract, and it is not
@@ -42,15 +46,15 @@ especially smart. It is a small program with unusual properties.
 
 ### What makes it unusual
 
-An ordinary program runs on a computer someone controls. A smart contract runs on
-every node at once, and nobody controls it.
+An ordinary program runs on a computer someone controls. A smart contract is
+executed by the network's nodes according to its deployed code and rules.
 
 | | Ordinary program | Smart contract |
 |---|---|---|
 | Runs on | A server someone owns | Every node, identically |
-| Who can change it | The owner, any time | **Usually nobody, ever** |
-| Who can read the code | Whoever is given it | **Anyone**, if verified |
-| Who can call it | Whoever is allowed | **Anyone** |
+| Who can change it | The owner, any time | It may be immutable, or changeable through an admin or upgrade mechanism |
+| Who can read the code | Whoever is given it | Deployed bytecode is public; human-readable source is easiest to inspect when verified |
+| Who can call it | Whoever is allowed | Functions may be open or restricted by their rules |
 | If it has a bug | Patch and redeploy | It keeps running the bug |
 
 That fourth row is the one people underestimate. **A deployed contract is
@@ -59,8 +63,9 @@ function you left callable, in any order, at any time, including in ways you
 never imagined.
 
 ::: warning "Code is law" cuts both ways
-The same immutability that stops someone rewriting your balance also stops
-anyone fixing a mistake. There is no support line, no rollback, and no
+When deployed code cannot be changed, the same immutability that stops someone
+rewriting your balance also stops anyone fixing a mistake. There is no support
+line, no rollback, and no
 "obviously that wasn't the intent."
 
 This is why [Part 5](./day-5-security-and-approvals.md) exists, and why real
@@ -80,17 +85,10 @@ Almost every contract you will ever read is made of these.
   <p class="academy-figure-caption"><strong>State</strong> it remembers, <strong>functions</strong> it can run, <strong>events</strong> it announces outward. Note the arrow: nothing happens until something calls in from outside.</p>
 </div>
 
-```mermaid
-flowchart TD
-  C["<b>A contract at 0xABC…</b>"]
-  C --> S["<b>State</b><br/><i>data it remembers</i><br/>balances · owner · settings"]
-  C --> F["<b>Functions</b><br/><i>what it can do</i><br/>read · write"]
-  C --> E["<b>Events</b><br/><i>what it announces</i><br/>for the outside world"]
-```
-
-**State** is what the contract remembers between calls. It is stored on-chain, it
-costs gas to change, and it persists forever. A token contract's state is mostly
-one big table of who owns how much.
+**State** is what the contract remembers between calls. It is stored on-chain,
+and changing it costs gas. Updates become part of the chain's history, even when
+the current value changes. A token contract's state is mostly one big table of
+who owns how much.
 
 **Functions** are what the contract can do. They split exactly the way
 [Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) described:
@@ -103,21 +101,21 @@ one big table of who owns how much.
 | Example | "What is my balance?" | "Send 10 tokens to Ben" |
 
 **Events** are announcements. The contract cannot read them; applications
-outside can. Every token transfer in your wallet's history came from an event,
-not from anyone inspecting contract storage.
+outside can. Standard ERC-20 token transfers are typically surfaced through
+`Transfer` events that wallets and explorers index.
 
 ### A contract cannot act alone
 
 Worth repeating from [Week 2 Part 3](../week-2/day-3-why-ethereum-and-evm.md),
 because it explains so much:
 
-::: important Nothing happens until someone calls it
+::: important Nothing happens until something calls it
 A contract has no key, cannot sign, cannot run on a timer, and cannot see the
-internet. It is **dormant until an externally owned account sends a transaction**.
+internet. It does not wake up by itself.
 
 When a protocol appears to act automatically — a loan liquidated the moment
 collateral drops — something off-chain is watching and sending that transaction.
-Usually a bot, paid a fee for doing it.
+Often a bot or service is paid a fee for doing it.
 :::
 
 ### What contracts are good at, and bad at
@@ -156,8 +154,8 @@ for everyone.
 
 | Vending machine | Smart contract |
 |---|---|
-| Owner can restock, fix, or unplug it | Usually nobody can change it, ever |
-| Only the person standing there uses it | Anyone on earth, simultaneously |
+| Owner can restock, fix, or unplug it | Its deployed rules may be immutable, or may include upgrade controls |
+| Only the person standing there uses it | Anyone who can reach an open function can call it |
 | Jam it and you lose a dollar | A flaw can drain everything at once |
 | Physical presence limits abuse | **The attacker can be a program, calling a million times** |
 

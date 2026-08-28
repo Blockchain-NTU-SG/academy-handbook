@@ -1031,4 +1031,39 @@ body {
 
   --vp-code-color: #7fd0f4;
   --vp-code-bg: rgb(79 179 236 / 12%);
+
+  --vp-home-hero-name-color: var(--academy-blue-deep);
+}
+
+/* A few Academy surfaces intentionally use light fallbacks in the light
+ * theme. Rebind those surfaces here so appearance switching does not leave
+ * white panels or dark hero copy on a dark background. */
+[data-theme="dark"] .vp-navbar {
+  border-bottom-color: rgb(154 234 246 / 18%);
+  box-shadow: 0 1px 8px rgb(0 0 0 / 18%);
+}
+
+[data-theme="dark"] .vp-home-hero .hero-text {
+  color: rgb(232 236 242 / 78%);
+}
+
+[data-theme="dark"] .vp-home .vp-home-features {
+  background: linear-gradient(180deg, var(--academy-surface-cyan), var(--vp-c-bg) 260px);
+}
+
+[data-theme="dark"] .vp-home .vp-home-feature {
+  background: rgb(28 34 43 / 90%);
+}
+
+[data-theme="dark"] .vp-home .vp-home-text-image {
+  background: var(--vp-c-bg);
+}
+
+[data-theme="dark"] .vp-doc h2#further-exploration {
+  color: var(--academy-text-muted);
+  border-left-color: var(--academy-border);
+}
+
+[data-theme="dark"] .vp-doc h2#further-exploration + p {
+  color: var(--academy-text-muted);
 }

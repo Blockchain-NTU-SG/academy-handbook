@@ -27,11 +27,10 @@ You made an account and pushed one commit in
 knowledge you need for Weeks 5–8, where your Proof of Work lives on GitHub.
 
 ::: important GitHub is not only for developers
-Researchers publish analyses. Data people publish notebooks and queries. Product
-people publish specifications and teardowns.
-
-**In this industry, GitHub is where you demonstrate you did the work** —
-whichever direction you choose.
+**For the Academy, GitHub is the default home for your Proof of Work.**
+Developers can store code there; researchers can publish analysis; data learners
+can publish queries or notebooks; Product learners can publish a teardown or
+documented proposal.
 :::
 
 ## Learning objectives
@@ -49,11 +48,11 @@ whichever direction you choose.
 |---|---|---|
 | **Repository** | A project folder with full history | One per project |
 | **Commit** | One saved change, with a message | Every meaningful step |
-| **Branch** | A parallel line of work | Anything you might abandon |
+| **Branch** | A separate line of work used to make changes without immediately changing the main version | Developing a feature or fix without changing the main line |
 | **Pull request** | A proposed change, opened for review | Contributing, or reviewing your own work |
 | **Issue** | A tracked task, bug or question | Planning, and inviting help |
 | **Fork** | Your own copy of someone else's repo | Contributing to a project you cannot push to |
-| **README** | The front page | **Always.** This is the part people read |
+| **README** | The front page | The first page people usually read |
 
 ::: tip Commit messages are documentation
 `fix stuff` tells a future reader nothing. `fix: handle empty response from
@@ -81,6 +80,10 @@ Two or three sentences. What is broken or missing?
 ## What this does
 
 What it actually does today — not what you plan.
+
+## How to view, reproduce or use it
+
+Where can someone see the output, reproduce it, or try it?
 
 ## How to run it
 
@@ -119,7 +122,7 @@ modify or distribute it. Most people assume the opposite.
 
 | Licence | Roughly |
 |---|---|
-| **MIT** | Do anything, keep the notice. The Web3 default |
+| **MIT** | A common permissive software licence; reuse is allowed if the notice is kept |
 | **Apache 2.0** | Like MIT, plus explicit patent terms |
 | **GPL-3.0** | Derivatives must also be GPL |
 | **CC BY 4.0** | For writing and documentation, not code |
@@ -170,9 +173,9 @@ saying so, is just how software gets built.
 ::: danger Never commit secrets
 Private keys, API keys, `.env` files, recovery phrases.
 
-**Git history is permanent.** Deleting a file in a later commit does not remove
-it — it remains in history, and on any clone anyone made. Assume anything ever
-committed to a public repo is public forever.
+Deleting a secret in a later commit does not make it safe. Copies may already
+exist in earlier history or clones. Assume anything committed to a public repo
+is public.
 
 If it happens: rotate the key immediately. Treat it as compromised, because it is.
 :::
