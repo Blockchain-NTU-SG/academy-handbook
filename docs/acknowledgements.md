@@ -31,7 +31,7 @@ handbook content and learner experience. The repository’s
 [UPSTREAM.md](https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/UPSTREAM.md)
 describes the relationship and retained attribution in more detail.
 
-## Academy contributors
+## Contributors
 
 <div class="academy-contributor-links">
   <a class="academy-contributor-link" href="https://www.linkedin.com/in/kai-ze-chin-310426300/" target="_blank" rel="noopener" aria-label="Kai Ze on LinkedIn">

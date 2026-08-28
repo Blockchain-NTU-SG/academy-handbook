@@ -139,8 +139,10 @@ cannot.
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/weth.png" alt="" aria-hidden="true" /><strong>WETH</strong></span> | ETH | ETH is native, so it doesn't follow the token standard contracts expect |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/wbtc.png" alt="" aria-hidden="true" /><strong>WBTC</strong></span> | BTC | Bitcoin can't run Ethereum contracts |
 
-WETH is mechanically simple — deposit ETH, receive WETH, redeem any time. The
-contract holds the ETH and nothing else needs trusting.
+**WETH is mechanically simple: deposit ETH into the contract, receive WETH, and
+redeem it through the same contract.** Unlike custodial wrapped assets, there is
+no external custodian holding the underlying ETH; the main dependency is the
+contract itself.
 
 **WBTC is a different animal.** Real BTC sits on Bitcoin, held by a custodian,
 while a token on Ethereum represents it. That token is worth a bitcoin only as

@@ -71,9 +71,9 @@ Ethereum remains the referee.**
   <figcaption>Rollups process transactions separately and post data or proofs back to Ethereum. Source: <a href="https://ethereum.org/layer-2/learn/">ethereum.org</a>, CC BY 4.0.</figcaption>
 </figure>
 
-Thousands of L2 transactions compress into one L1 posting, so the L1 cost is
-shared across all of them. **That is where the cost reduction comes from** — not
-from cutting corners on verification, but from amortising it.
+**Many L2 transactions can be batched into L1 postings, so the L1 cost is shared
+across them.** That is where the cost reduction comes from — not from cutting
+corners on verification, but from amortising it.
 
 ::: important What a mature rollup is designed to do
 **A mature rollup is designed so you do not have to trust one operator forever.**
@@ -199,9 +199,10 @@ state are on-chain. Much of the frontend, RPC, indexing and user-interface
 infrastructure remains off-chain.
 
 ::: warning A consequence people learn the hard way
-The frontend can be compromised while the contracts remain perfectly sound. A
-hijacked website serving malicious transaction requests is a well-established
-attack, and the contracts are entirely innocent.
+The frontend can be compromised while the contracts remain sound. A hijacked
+website serving malicious transaction requests is a well-established attack; the
+contracts may simply be executing as written while the frontend misleads the
+user.
 
 This is why Week 0 insisted on **bookmarks over search results** — and why
 hardware wallets showing you the actual transaction on their own screen are
@@ -226,7 +227,7 @@ valuable.
 
 | | Ethereum L1 | Base (L2) |
 |---|---|---|
-| Fee for a swap | Dollars | Cents |
+| Fee for a swap | Typically higher | Typically lower |
 | Confirmation | Explicit finality: roughly minutes | Seconds |
 | Who orders transactions | Thousands of validators | **A sequencer, currently operated by Coinbase** |
 | If that operator fails | N/A | Exit via Ethereum is the designed escape route — check the network's actual maturity |

@@ -50,7 +50,7 @@ and what each is for.
 
 - Name the right category of tool for a given question, without being told
 - Explain what a block explorer shows you and why that matters
-- Distinguish a primary source from an aggregator
+- Distinguish direct chain records from derived analytics
 - Recognise the tools this programme will actually put in your hands
 
 ## Core
@@ -86,19 +86,19 @@ tab to open when you have a specific question.
 
 ### The one idea that makes the map make sense
 
-Everything above sorts into three kinds of source. Knowing which kind you are
+Everything above fits into five kinds of source. Knowing which kind you are
 looking at is more useful than knowing any individual tool.
 
-```mermaid
-flowchart TD
-  Q["A question about<br/>an unfamiliar project"]
-  Q --> P["<b>Primary</b><br/>docs · GitHub · governance forum<br/><i>what the project says and does</i>"]
-  Q --> E["<b>Evidence</b><br/>Etherscan · Dune<br/><i>what the chain actually records</i>"]
-  Q --> S["<b>Secondary</b><br/>DefiLlama · L2BEAT · Messari · X<br/><i>what others compiled or claimed</i>"]
-  P --> C["<b>Cross-check</b><br/>before concluding"]
-  E --> C
-  S --> C
-```
+| Source type | Examples | What it helps answer |
+|---|---|---|
+| **Primary sources** | Project docs, GitHub, governance forums | What a project says, specifies or proposes |
+| **Direct chain records** | Etherscan, other block explorers, raw transactions and state | What actually happened on-chain |
+| **Derived analytics** | Dune, DefiLlama, dashboards and aggregators | Useful interpretations built from raw data |
+| **Independent research** | L2BEAT, Messari, audits and reports | Third-party interpretation and risk analysis |
+| **Current discussion** | X, Discord, Telegram, news and community discussion | Discovery and context, not final proof |
+
+Different sources answer different questions. Use the source that fits the
+question, then cross-check before concluding.
 
 ::: warning The practical rule
 **Use social media for discovery, not as the final evidence for an important
@@ -146,17 +146,16 @@ program nobody outside the team can inspect. You will use this in Week 3.
 
 Solana's equivalent is [Solscan](https://solscan.io/).
 
-@tab Aggregators
+@tab Derived analytics
 
-Two sites answer "how big is this thing, compared to that thing" faster than
-anything else:
+These sites turn on-chain data into useful comparisons and dashboards:
 
 | Site | Answers |
 |---|---|
 | <a href="https://defillama.com/"><span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span></a> | Value deposited across protocols and chains |
-| <a href="https://l2beat.com/"><span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/l2beat.png" alt="" aria-hidden="true" /><strong>L2BEAT</strong></span></a> | Ethereum Layer 2s, with an unusually honest treatment of each one's risks and trust assumptions |
+| <a href="https://dune.com/"><span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span></a> | Query on-chain data and publish dashboards |
 
-::: warning Aggregators are interpretations
+::: warning Derived analytics are interpretations
 Someone chose what counts as "value locked" and what does not. Useful for
 comparison, not for settling a disputed claim.
 :::
@@ -192,7 +191,8 @@ Watch which tab opens at each step.
 | 5. What are people saying? | X, Discord | Current narrative, complaints | Anything verified |
 
 ::: important Notice the ordering
-Steps 1–2 are primary. Steps 3–4 are evidence. Step 5 is discovery.
+Step 1 uses a primary source. Step 2 uses independent research. Steps 3–4 use
+derived analytics. Step 5 is current discussion.
 
 A beginner starts at step 5 and stops there, because it is the loudest and
 easiest. This workflow starts with what can be **checked** and uses social media

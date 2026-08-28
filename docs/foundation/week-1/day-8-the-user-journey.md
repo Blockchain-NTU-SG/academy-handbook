@@ -79,12 +79,11 @@ point of the page.
 | **Bridge** | Moving value between networks. Chains cannot natively see each other | Source chain + destination chain + **the bridge mechanism** → [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md) |
 | **DEX** | Swapping assets through contracts, from your own wallet, no account | Your wallet + the DEX contracts + each token's contract → Week 3 |
 | **DeFi protocol** | Depositing into a lending market or pool — finance by programs, not institutions | All the above + this protocol's contracts + its **oracle** + its economic design → Week 3 |
-| **Explorer / Dune** | Every step above is publicly recorded and verifiable afterwards | Nothing new → [Part 7](./day-7-your-first-transaction.md), Week 4 |
+| **Explorer / Dune** | On-chain activity can be checked directly or explored through derived dashboards | The explorer's record; Dune's indexing and definitions if you use its dashboard → [Part 7](./day-7-your-first-transaction.md), Week 4 |
 
 ::: warning Bridges deserve early attention
-Bridges have historically been among the most frequently and expensively
-exploited components in the entire industry — worth knowing even before you know
-how they work.
+Bridges have historically been a major source of large crypto exploits — worth
+understanding even before you know how they work.
 :::
 
 ### The thing to actually take from this

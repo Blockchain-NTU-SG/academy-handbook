@@ -202,7 +202,7 @@ Now the two questions that matter:
 
 | Question | Answer |
 |---|---|
-| Which is **weakest**? | Almost certainly the bridge, on the historical record — with the oracle close behind, because oracle failures produce losses while every contract behaves exactly as written |
+| Which is **weakest**? | Almost certainly the bridge, on the historical record — with the oracle close behind, because oracle failures can produce losses even when the contract behaves as written |
 | Which is most likely to **actually get them**? | **Their own keys.** By a wide margin |
 
 ::: important The most sophisticated row is not the one that gets most people

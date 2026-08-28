@@ -45,8 +45,10 @@ subject to the relevant owner's brand and usage terms.
 | WETH | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | Week 1 Part 5 |
 | WBTC | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599) | Week 1 Part 5 |
 
-**Permission record:** the LXDAO permission covering the Handbook and the MyFirst
-projects must be stored somewhere the committee can access. Link it here.
+**Permission record:** LXDAO reuse permission covering the Handbook and the
+MyFirst projects has been confirmed and should be retained in the committee's
+internal archive. Do not remove the “Permission granted” classification without
+checking that record.
 
 ## Link
 

@@ -67,8 +67,8 @@ Work carefully and keep what you produce — the address, the hash, and the link
 
 Every on-chain transaction consumes **gas**, which measures the work the
 network performs. You pay a **transaction fee** based on how much gas the
-transaction uses and the current gas price. This both compensates whoever does
-the work and makes it costly to flood the network with junk.
+transaction uses and the current gas price. **Fees price scarce blockspace and
+make spam costly. Part 4 explains how Ethereum splits and burns those fees.**
 
 | Term | Meaning |
 |---|---|
@@ -259,9 +259,9 @@ guessing — wallet interfaces change, and the group will know.
 
    ::: danger Never pay for testnet ETH
    It is worthless by definition, so anyone selling it is running a scam. There
-   is **no way to move assets between testnet and mainnet**, and anyone offering
-   that is also running a scam. Never connect a wallet holding real assets to a
-   faucet.
+   is **no way to convert or bridge Sepolia ETH into real mainnet ETH**. Anyone
+   claiming they can turn your test ETH into real ETH is scamming you. Never
+   connect a wallet holding real assets to a faucet.
    :::
 
 6. **Send a test transaction**
@@ -304,8 +304,8 @@ guessing — wallet interfaces change, and the group will know.
    Practise it here, on testnet, where getting it wrong is free.
    :::
 
-   Choose **Confirm**. *The status should move from Pending to Confirmed within
-   usually within seconds on Sepolia, but it can take longer.*
+   Choose **Confirm**. *The status usually confirms within seconds on Sepolia,
+   but it can take longer.*
 
    <figure class="academy-shot">
      <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: MetaMask activity list showing the transaction confirmed, with the transaction hash visible">
@@ -423,7 +423,8 @@ Read it back in plain English:
 
 > Address `0x3f7a…c214` sent 0.001 test ETH to itself. It was included in block
 > 4,782,109, and 37 blocks have followed — so it is settled. It used exactly
-> 21,000 gas, the fixed cost of a plain transfer. Nonce 0 means this was the
+> 21,000 gas, the traditional gas cost of a plain ETH transfer under the current
+> fee schedule. Nonce 0 means this was the
 > first transaction this address ever made.
 
 Now connect it to the theory:
