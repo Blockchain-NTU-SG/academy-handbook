@@ -46,9 +46,8 @@ flowchart TD
   D --> E["<b>5</b><br/>Find it on<br/>Etherscan"]
 ```
 
-By the end you will have sent a transaction and found it on a public block
-explorer, where it will sit permanently, readable by anyone, without you having
-an account anywhere.
+By the end you will have sent a transaction, seen it recorded on the chain, and
+found that public record through a block explorer.
 
 ::: important This is also your Anchor Mission evidence
 Work carefully and keep what you produce — the address, the hash, and the link.
@@ -336,7 +335,8 @@ guessing — wallet interfaces change, and the group will know.
      <figcaption>Every field here is something you now understand.</figcaption>
    </figure>
 
-   Your transaction appears — permanently, publicly, with no account required.
+   The explorer shows the transaction's public record from the chain. No account
+   is required.
 ::::
 
 ::: tip One small exploration task
@@ -422,9 +422,9 @@ Nonce:             0
 Read it back in plain English:
 
 > Address `0x3f7a…c214` sent 0.001 test ETH to itself. It was included in block
-> 4,782,109, and 37 blocks have followed — so it is settled. It used exactly
-> 21,000 gas, the traditional gas cost of a plain ETH transfer under the current
-> fee schedule. Nonce 0 means this was the
+> 4,782,109, and 37 blocks have followed — so it now has many
+> confirmations. It used exactly 21,000 gas, the traditional gas cost of a plain
+> ETH transfer under the current fee schedule. Nonce 0 means this was the
 > first transaction this address ever made.
 
 Now connect it to the theory:

@@ -141,8 +141,9 @@ On [Etherscan](https://etherscan.io/) you can check:
 - the **verified source code** of a contract, if its developers published it
 - which tokens an address holds
 
-That third one is the quiet one. A contract with unverified source code is a
-program nobody outside the team can inspect. You will use this in Week 3.
+That third one is the quiet one. **Without verified source code, outsiders can
+see the deployed bytecode but cannot easily inspect the original human-readable
+code.** You will use this in Week 3.
 
 Solana's equivalent is [Solscan](https://solscan.io/).
 
