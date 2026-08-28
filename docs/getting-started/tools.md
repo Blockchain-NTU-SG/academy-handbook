@@ -50,7 +50,7 @@ and what each is for.
 
 - Name the right category of tool for a given question, without being told
 - Explain what a block explorer shows you and why that matters
-- Distinguish a primary source from an aggregator
+- Distinguish direct chain records from derived analytics
 - Recognise the tools this programme will actually put in your hands
 
 ## Core
@@ -62,20 +62,20 @@ use.
 
 | Tool | What do I open it for? | We use it in |
 |---|---|---|
-| <Icon name="logos:metamask-icon" /> **MetaMask** | Create a wallet, sign and send transactions | Week 1 |
-| <Icon name="mdi:database-search-outline" /> **Etherscan** | Check what actually happened on Ethereum | Weeks 1–3 |
-| <Icon name="mdi:database-search-outline" /> **Solscan** | The same, for Solana | Landscape |
-| <Icon name="simple-icons:github" /> **GitHub** | Read a protocol's code, and store your Proof of Work | Weeks 0, 4–8 |
-| <Icon name="logos:remix-icon" /> **Remix** | Write and deploy a simple smart contract | Week 3 |
-| <Icon name="mdi:chart-box-outline" /> **DefiLlama** | Compare protocols and chains by size | Weeks 2, 4 |
-| <Icon name="mdi:chart-line" /> **Dune** | Explore on-chain data and dashboards | Week 4 |
-| <Icon name="mdi:shield-check" /> **L2BEAT** | Understand Layer 2 security and trust assumptions | Weeks 2, 4 |
-| <Icon name="mdi:book-open-variant" /> **Messari Research** | Read structured professional research | Week 4 |
-| <Icon name="mdi:vote-outline" /> **Snapshot** | See how a change gets decided | Week 4 |
-| <Icon name="mdi:forum-outline" /> **Governance forums** | Read proposals before anyone votes | Week 4 |
-| <Icon name="simple-icons:x" /> **X** | Find out what is happening right now | Week 4 |
-| <Icon name="simple-icons:discord" /> **Discord** | Find community discussion and support | Week 4 |
-| <Icon name="simple-icons:telegram" /> **Telegram** | Find community announcements and discussion | Week 4 |
+| <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Create a wallet, sign and send transactions | Week 1 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/etherscan.svg" alt="" aria-hidden="true" /><strong>Etherscan</strong></span> | Check what actually happened on Ethereum | Weeks 1–3 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/solscan.png" alt="" aria-hidden="true" /><strong>Solscan</strong></span> | The same, for Solana | Landscape |
+| <span class="academy-brand-label"><Icon name="simple-icons:github" /><strong>GitHub</strong></span> | Read a protocol's code, and store your Proof of Work | Weeks 0, 4–8 |
+| <span class="academy-brand-label"><Icon name="logos:remix-icon" /><strong>Remix</strong></span> | Write and deploy a simple smart contract | Week 3 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span> | Compare protocols and chains by size | Weeks 2, 4 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Explore on-chain data and dashboards | Week 4 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/l2beat.png" alt="" aria-hidden="true" /><strong>L2BEAT</strong></span> | Understand Layer 2 security and trust assumptions | Weeks 2, 4 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari Research</strong></span> | Read structured professional research | Week 4 |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/snapshot.png" alt="" aria-hidden="true" /><strong>Snapshot</strong></span> | See how a change gets decided | Week 4 |
+| **Governance forums** | Read proposals before anyone votes | Week 4 |
+| <span class="academy-brand-label"><Icon name="simple-icons:x" /><strong>X</strong></span> | Find out what is happening right now | Week 4 |
+| <span class="academy-brand-label"><Icon name="simple-icons:discord" /><strong>Discord</strong></span> | Find community discussion and support | Week 4 |
+| <span class="academy-brand-label"><Icon name="simple-icons:telegram" /><strong>Telegram</strong></span> | Find community announcements and discussion | Week 4 |
 
 ::: important The teaching idea is one arrow
 > **Question → Tool**
@@ -86,19 +86,19 @@ tab to open when you have a specific question.
 
 ### The one idea that makes the map make sense
 
-Everything above sorts into three kinds of source. Knowing which kind you are
+Everything above fits into five kinds of source. Knowing which kind you are
 looking at is more useful than knowing any individual tool.
 
-```mermaid
-flowchart TD
-  Q["A question about<br/>an unfamiliar project"]
-  Q --> P["<b>Primary</b><br/>docs · GitHub · governance forum<br/><i>what the project says and does</i>"]
-  Q --> E["<b>Evidence</b><br/>Etherscan · Dune<br/><i>what the chain actually records</i>"]
-  Q --> S["<b>Secondary</b><br/>DefiLlama · L2BEAT · Messari · X<br/><i>what others compiled or claimed</i>"]
-  P --> C["<b>Cross-check</b><br/>before concluding"]
-  E --> C
-  S --> C
-```
+| Source type | Examples | What it helps answer |
+|---|---|---|
+| **Primary sources** | Project docs, GitHub, governance forums | What a project says, specifies or proposes |
+| **Direct chain records** | Etherscan, other block explorers, raw transactions and state | What actually happened on-chain |
+| **Derived analytics** | Dune, DefiLlama, dashboards and aggregators | Useful interpretations built from raw data |
+| **Independent research** | L2BEAT, Messari, audits and reports | Third-party interpretation and risk analysis |
+| **Current discussion** | X, Discord, Telegram, news and community discussion | Discovery and context, not final proof |
+
+Different sources answer different questions. Use the source that fits the
+question, then cross-check before concluding.
 
 ::: warning The practical rule
 **Use social media for discovery, not as the final evidence for an important
@@ -117,9 +117,9 @@ Week 1 covers this properly.
 
 | Wallet | Chains | Note |
 |---|---|---|
-| <Icon name="logos:metamask-icon" /> **MetaMask** | Ethereum and EVM chains | The default for this programme |
-| <Icon name="token-branded:phantom" /> Phantom | Solana, plus others | The Solana equivalent |
-| <Icon name="token-branded:rabby" /> Rabby | Ethereum and EVM chains | Shows more clearly what you are about to sign |
+| <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Ethereum and EVM chains | The default for this programme |
+| <span class="academy-brand-label"><Icon name="token-branded:phantom" /><strong>Phantom</strong></span> | Solana, plus others | The Solana equivalent |
+| <span class="academy-brand-label"><Icon name="token-branded:rabby" /><strong>Rabby</strong></span> | Ethereum and EVM chains | Shows more clearly what you are about to sign |
 
 You will install MetaMask in Week 1, **not today** — and it will be a fresh
 wallet holding testnet assets only.
@@ -141,22 +141,22 @@ On [Etherscan](https://etherscan.io/) you can check:
 - the **verified source code** of a contract, if its developers published it
 - which tokens an address holds
 
-That third one is the quiet one. A contract with unverified source code is a
-program nobody outside the team can inspect. You will use this in Week 3.
+That third one is the quiet one. **Without verified source code, outsiders can
+see the deployed bytecode but cannot easily inspect the original human-readable
+code.** You will use this in Week 3.
 
 Solana's equivalent is [Solscan](https://solscan.io/).
 
-@tab Aggregators
+@tab Derived analytics
 
-Two sites answer "how big is this thing, compared to that thing" faster than
-anything else:
+These sites turn on-chain data into useful comparisons and dashboards:
 
 | Site | Answers |
 |---|---|
-| <Icon name="mdi:chart-box-outline" /> **[DefiLlama](https://defillama.com/)** | Value deposited across protocols and chains |
-| <Icon name="mdi:shield-check" /> **[L2BEAT](https://l2beat.com/)** | Ethereum Layer 2s, with an unusually honest treatment of each one's risks and trust assumptions |
+| <a href="https://defillama.com/"><span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span></a> | Value deposited across protocols and chains |
+| <a href="https://dune.com/"><span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span></a> | Query on-chain data and publish dashboards |
 
-::: warning Aggregators are interpretations
+::: warning Derived analytics are interpretations
 Someone chose what counts as "value locked" and what does not. Useful for
 comparison, not for settling a disputed claim.
 :::
@@ -168,14 +168,14 @@ Recognise these; you will not use them before Week 4.
 
 | Tool | What it's for |
 |---|---|
-| <Icon name="mdi:chart-line" /> **Dune** | Write SQL against blockchain data and publish charts |
-| <Icon name="mdi:book-open-variant" /> **Messari Research** | Structured, professional sector and protocol research |
-| <Icon name="mdi:vote-outline" /> **Snapshot** | Off-chain governance voting, used by most DAOs |
-| <Icon name="mdi:forum-outline" /> **Governance forums** | Where proposals get argued before anyone votes. Often the most informative thing about a protocol |
-| <Icon name="mdi:graph-outline" /> **The Graph** | Indexes chain data so applications can query it |
-| <Icon name="simple-icons:openzeppelin" /> **OpenZeppelin** | Audited standard contract libraries, used almost everywhere |
-| <Icon name="simple-icons:alchemy" /> **Alchemy** / <Icon name="mdi:server-network" /> Infura | Infrastructure providers running nodes so applications don't have to |
-| <Icon name="mdi:hammer-wrench" /> **Foundry / Hardhat** | Professional developer toolkits. Not needed in Foundation |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Write SQL against blockchain data and publish charts |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari Research</strong></span> | Structured, professional sector and protocol research |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/snapshot.png" alt="" aria-hidden="true" /><strong>Snapshot</strong></span> | Off-chain governance voting, used by many DAOs |
+| **Governance forums** | Where proposals get argued before anyone votes. Often the most informative thing about a protocol |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/the-graph.png" alt="" aria-hidden="true" /><strong>The Graph</strong></span> | Indexes chain data so applications can query it |
+| <span class="academy-brand-label"><Icon name="simple-icons:openzeppelin" /><strong>OpenZeppelin</strong></span> | Audited standard contract libraries, used almost everywhere |
+| <span class="academy-brand-label"><Icon name="simple-icons:alchemy" /><strong>Alchemy</strong></span> / <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/infura.svg" alt="" aria-hidden="true" /><strong>Infura</strong></span> | Infrastructure providers running nodes so applications don't have to |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/foundry.png" alt="" aria-hidden="true" /><strong>Foundry</strong></span> / <span class="academy-brand-label"><Icon name="logos:hardhat" /><strong>Hardhat</strong></span> | Professional developer toolkits. Not needed in Foundation |
 
 ## Worked example
 
@@ -192,7 +192,8 @@ Watch which tab opens at each step.
 | 5. What are people saying? | X, Discord | Current narrative, complaints | Anything verified |
 
 ::: important Notice the ordering
-Steps 1–2 are primary. Steps 3–4 are evidence. Step 5 is discovery.
+Step 1 uses a primary source. Step 2 uses independent research. Steps 3–4 use
+derived analytics. Step 5 is current discussion.
 
 A beginner starts at step 5 and stops there, because it is the loudest and
 easiest. This workflow starts with what can be **checked** and uses social media

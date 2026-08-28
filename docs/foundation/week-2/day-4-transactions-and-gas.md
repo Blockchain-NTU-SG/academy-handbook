@@ -87,8 +87,9 @@ out of gas, reverts, and **you still pay**.
 ::: warning Two things beginners find unfair — worth understanding rather than resenting
 **Failed transactions still cost gas**, because nodes really did the computation.
 
-**You pay for complexity, not value.** Moving $10,000 costs exactly the same as
-moving $1, because the work is identical.
+**For the same transaction type, fees depend on computational work rather than
+the dollar value being moved.** Sending more ETH does not inherently cost more
+gas than sending less ETH.
 :::
 
 ### RPC — how your wallet reaches the chain
@@ -168,9 +169,9 @@ alongside the state change. Two facts explain why they exist:
 - Contracts **cannot read** logs — logs are for the outside world only
 
 So events are a contract's way of **announcing what it did**, for applications
-watching from outside. Every token transfer you have seen listed in a wallet or
-on an explorer came from a `Transfer` event, not from anyone reading contract
-storage.
+watching from outside. Standard ERC-20 token transfers are typically surfaced
+through `Transfer` events, which wallets and explorers index, rather than by
+anyone reading contract storage directly.
 
 Without events, an application showing your transaction history would have to
 re-execute the entire chain. With them, it subscribes to a filtered feed.

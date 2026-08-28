@@ -160,8 +160,8 @@ and including whoever wrote the software.
 ::: warning Notice the trade in both directions
 **Harder:** no help if Ann sent it to the wrong address.
 
-**Easier:** Ben needs no permission from anyone to receive it, and no third
-party can freeze it.
+**Easier:** Ben needs no permission from anyone to receive it, and no central
+ledger operator can simply reverse a valid native-asset transfer.
 :::
 
 ::: details Further exploration — optional, not assessed

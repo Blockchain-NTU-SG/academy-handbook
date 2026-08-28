@@ -36,7 +36,7 @@ Everything on this page uses free test assets with no monetary value. **Never
 use real funds for an Academy activity.**
 :::
 
-Seven parts of theory. Today you use it.
+Six parts of theory. Today you use it.
 
 ```mermaid
 flowchart TD
@@ -46,9 +46,8 @@ flowchart TD
   D --> E["<b>5</b><br/>Find it on<br/>Etherscan"]
 ```
 
-By the end you will have sent a transaction and found it on a public block
-explorer, where it will sit permanently, readable by anyone, without you having
-an account anywhere.
+By the end you will have sent a transaction, seen it recorded on the chain, and
+found that public record through a block explorer.
 
 ::: important This is also your Anchor Mission evidence
 Work carefully and keep what you produce — the address, the hash, and the link.
@@ -67,8 +66,8 @@ Work carefully and keep what you produce — the address, the hash, and the link
 
 Every on-chain transaction consumes **gas**, which measures the work the
 network performs. You pay a **transaction fee** based on how much gas the
-transaction uses and the current gas price. This both compensates whoever does
-the work and makes it costly to flood the network with junk.
+transaction uses and the current gas price. **Fees price scarce blockspace and
+make spam costly. Part 4 explains how Ethereum splits and burns those fees.**
 
 | Term | Meaning |
 |---|---|
@@ -140,7 +139,11 @@ guessing — wallet interfaces change, and the group will know.
    any website or "support" chat
 
    Anyone who obtains these words controls this wallet permanently, from
-   anywhere. **Blockchain@NTU will never ask you for it.**
+   anywhere. **Blockchain@NTU will never ask you for it.** The normal exception
+   is when **you deliberately restore or import your wallet into wallet software
+   that you installed from a verified official source**. Never enter it because
+   someone sent you a link, DMed you, or told you to “verify”, “sync” or “unlock”
+   your wallet.
 
    Practise storing it properly **now**, while the stakes are zero.
    :::
@@ -255,9 +258,9 @@ guessing — wallet interfaces change, and the group will know.
 
    ::: danger Never pay for testnet ETH
    It is worthless by definition, so anyone selling it is running a scam. There
-   is **no way to move assets between testnet and mainnet**, and anyone offering
-   that is also running a scam. Never connect a wallet holding real assets to a
-   faucet.
+   is **no way to convert or bridge Sepolia ETH into real mainnet ETH**. Anyone
+   claiming they can turn your test ETH into real ETH is scamming you. Never
+   connect a wallet holding real assets to a faucet.
    :::
 
 6. **Send a test transaction**
@@ -300,8 +303,8 @@ guessing — wallet interfaces change, and the group will know.
    Practise it here, on testnet, where getting it wrong is free.
    :::
 
-   Choose **Confirm**. *The status should move from Pending to Confirmed within
-   about 15 seconds.*
+   Choose **Confirm**. *The status usually confirms within seconds on Sepolia,
+   but it can take longer.*
 
    <figure class="academy-shot">
      <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: MetaMask activity list showing the transaction confirmed, with the transaction hash visible">
@@ -332,7 +335,8 @@ guessing — wallet interfaces change, and the group will know.
      <figcaption>Every field here is something you now understand.</figcaption>
    </figure>
 
-   Your transaction appears — permanently, publicly, with no account required.
+   The explorer shows the transaction's public record from the chain. No account
+   is required.
 ::::
 
 ::: tip One small exploration task
@@ -418,8 +422,9 @@ Nonce:             0
 Read it back in plain English:
 
 > Address `0x3f7a…c214` sent 0.001 test ETH to itself. It was included in block
-> 4,782,109, and 37 blocks have followed — so it is settled. It used exactly
-> 21,000 gas, the fixed cost of a plain transfer. Nonce 0 means this was the
+> 4,782,109, and 37 blocks have followed — so it now has many
+> confirmations. It used exactly 21,000 gas, the traditional gas cost of a plain
+> ETH transfer under the current fee schedule. Nonce 0 means this was the
 > first transaction this address ever made.
 
 Now connect it to the theory:

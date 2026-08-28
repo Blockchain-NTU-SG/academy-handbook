@@ -18,6 +18,9 @@ sources:
   - name: "Revoke.cash"
     url: "https://revoke.cash/"
     label: "Link"
+  - name: "MyFirstNFT — wallet security visuals"
+    url: "https://nft.myfirstweb3.xyz/"
+    label: "Reuse"
 ---
 
 # Week 0 · Part 4 — Staying safe: what you can lose and how
@@ -82,12 +85,15 @@ It leaks in unremarkable ways: typed into a fake "wallet validation" page, saved
 in a screenshot or cloud note, pasted into a chat, or entered into a "support
 tool".
 
-::: danger No exceptions exist, and that is the whole point
-**No legitimate website, app, wallet, or person ever needs your seed phrase.**
-Not to help you, not to verify you, not to fix a stuck transaction.
+::: danger No one should ask for your recovery phrase
+**No website, DApp, support agent, reviewer or other person should ever ask for
+your recovery phrase.** Not to help you, not to verify you, not to fix a stuck
+transaction.
 
-The belief that there might be one exception is what the entire attack depends
-on.
+The normal exception is when **you deliberately restore or import your wallet
+into wallet software that you installed from a verified official source.**
+Never enter it because someone sent you a link, DMed you, or told you to
+“verify”, “sync” or “unlock” your wallet.
 :::
 
 @tab Phishing and fake DApps
@@ -95,6 +101,11 @@ on.
 A near-perfect copy of a real site, reached through a sponsored search result, a
 Discord link, a reply to a support post, or a lookalike domain. The site works
 exactly as expected until the moment you approve something.
+
+<figure class="academy-reference-visual academy-reference-visual--narrow">
+  <img src="/learning/myfirstnft/fishing-websites.png" alt="A simple comparison of similar-looking website addresses, showing how small domain differences can reveal a phishing site." />
+  <figcaption>Check the domain carefully: small spelling changes can point to a phishing site. Source: <a href="https://nft.myfirstweb3.xyz/">MyFirstNFT</a> / LXDAO.</figcaption>
+</figure>
 
 **Fake contracts** are the same idea one layer down: an application that looks
 real but whose contract does something other than advertised. Verified source
@@ -121,8 +132,10 @@ still live. Old approvals are a standing liability.
 **Malware.** Clipboard hijackers that swap a copied address for the attacker's.
 Fake wallet extensions in browser stores. Cracked software.
 
-**Wrong address or network.** Send to a mistyped address and it is gone. Send an
-asset over the wrong network and recovery ranges from difficult to impossible.
+**Wrong address or network.** Send to a mistyped address and it is gone. Sending
+on the wrong network can make assets hard to find or require recovery steps.
+Some mistakes are recoverable when the same address exists on another EVM
+network; others can result in permanent loss.
 
 @tab Social engineering
 

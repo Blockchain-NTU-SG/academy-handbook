@@ -21,6 +21,9 @@ sources:
   - name: "Avalanche documentation"
     url: "https://build.avax.network/docs"
     label: "Link"
+  - name: "Avalanche L1s documentation"
+    url: "https://build.avax.network/docs/avalanche-l1s"
+    label: "Link"
 ---
 
 # Week 2 · Part 2 — Comparing blockchains and their trade-offs
@@ -73,7 +76,7 @@ you were not looking.
 | **Decentralisation** | How many independent participants, how spread out? |
 | **Finality** | How long until a transaction is genuinely settled? |
 | **Throughput** | How many transactions per second? |
-| **Validator requirements** | What does it cost to be one? |
+| **Security participation** | What does it take to help secure the network? |
 | **Execution model** | What can the chain compute, and how? |
 | **Ecosystem** | What already exists — tools, users, applications? |
 | **Design trade-off** | What was deliberately given up, and for what? |
@@ -92,7 +95,7 @@ not to quote numbers.
 :::
 
 ::: tabs
-@tab <Icon name="token-branded:bitcoin" /> Bitcoin
+@tab <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span>
 
 **Maximum conservatism.**
 
@@ -101,15 +104,15 @@ not to quote numbers.
 | Consensus | Proof of Work |
 | Finality | Probabilistic; ~1 hour for high confidence |
 | Throughput | Very low — a handful per second |
-| Validator requirements | Mining hardware and cheap electricity |
+| Security participation | Mining: specialised hardware + electricity |
 | Execution | Deliberately limited scripting. Not general-purpose |
 | **Trade-off** | Gave up nearly everything for security, simplicity and predictability |
 
 Bitcoin's limitations are not failures to fix. They are the design. Less
-functionality means less to attack and less to argue about. It has done one job
-without interruption since 2009.
+functionality means less to attack and less to argue about. It has kept a
+deliberately narrow and conservative design since 2009.
 
-@tab <Icon name="token-branded:ethereum" /> Ethereum
+@tab <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span>
 
 **Programmability first.**
 
@@ -117,15 +120,16 @@ without interruption since 2009.
 |---|---|
 | Consensus | Proof of Stake |
 | Finality | Explicit, ~13 minutes |
-| Throughput | Low at the base layer — roughly 15–30 per second |
-| Validator requirements | 32 ETH, or a pool. Consumer hardware |
+| Throughput | Lower at the base layer than high-throughput chains; capacity is increasing |
+| Security participation | Solo validator: 32 ETH + suitable hardware. Pools let smaller holders participate economically without running their own validator |
 | Execution | The EVM. General-purpose smart contracts |
 | **Trade-off** | Accepted low base-layer throughput to keep validation cheap enough for ordinary hardware — then scaled via Layer 2 |
 
-Ethereum's answer to "it's slow" is not to raise base-layer capacity. It is to
-keep the base layer verifiable by anyone and push volume to Layer 2.
+Ethereum historically kept L1 capacity conservative so that validating the chain
+remained accessible, while scaling heavily through Layer 2s. Today it is scaling
+both: gradually increasing L1 capacity while continuing to expand L2 capacity.
 
-@tab <Icon name="token-branded:solana" /> Solana
+@tab <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span>
 
 **Performance first.**
 
@@ -134,7 +138,7 @@ keep the base layer verifiable by anyone and push volume to Layer 2.
 | Consensus | Proof of Stake, with a verifiable clock ordering transactions |
 | Finality | Fast — seconds |
 | Throughput | High — thousands per second |
-| Validator requirements | **Substantial** — high-spec hardware and bandwidth |
+| Security participation | **Substantial** — comparatively high-spec hardware, bandwidth and stake/economic resources |
 | Execution | Parallel: non-conflicting transactions run simultaneously |
 | **Trade-off** | Accepted higher validator costs, and historically some stability incidents, for speed and very low fees |
 
@@ -142,50 +146,54 @@ Solana genuinely delivers the performance. The honest accounting is that it
 costs real money to run a validator, which concentrates who can — and the
 network has had outages that Ethereum and Bitcoin have not.
 
-@tab <Icon name="token-branded:cosmos" /> Cosmos
+@tab <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span>
 
 **Many chains, not one.**
 
 | | |
 |---|---|
 | Consensus | CometBFT — Byzantine Fault Tolerant Proof of Stake |
-| Finality | **Instant** — one block, no waiting |
+| Finality | **Deterministic** once a block is committed |
 | Throughput | High per chain |
-| Validator requirements | Set by each chain, typically a fixed modest set |
+| Security participation | Depends on the chain's validator set or shared-security model |
 | Execution | Each chain builds its own; connected via IBC |
-| **Trade-off** | Gave up shared security — each chain secures itself — for sovereignty and instant finality |
+| **Trade-off** | Many chains choose sovereignty and their own validator set; some use shared-security models instead |
 
-Cosmos rejects the premise that everyone should share one chain. The cost is
-that a new chain starts with its own small validator set and must bootstrap its
-own security.
+Cosmos rejects the premise that everyone should share one chain. Many Cosmos
+chains run their own validator sets, trading shared security for sovereignty.
+Some can also use shared-security models such as Interchain Security.
 
-@tab <Icon name="token-branded:avalanche" /> Avalanche
+@tab <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span>
 
-**Subnets and configurability.**
+**Avalanche L1s (formerly Subnets) and configurability.**
+
+An **Avalanche L1** is a sovereign, application-specific network with its own
+validator configuration. These networks were formerly commonly called
+Subnets.
 
 | | |
 |---|---|
 | Consensus | Avalanche consensus — repeated randomised sampling |
 | Finality | Fast — around a second |
 | Throughput | High |
-| Validator requirements | A stake requirement; consumer-grade hardware |
-| Execution | Multiple chains; EVM-compatible option; custom subnets |
+| Security participation | Depends on the particular Avalanche L1's validator configuration |
+| Execution | Multiple chains; EVM-compatible option; configurable Avalanche L1s |
 | **Trade-off** | Optimised for configurable, application-specific networks over one shared environment |
 :::
 
 ### Side by side
 
-| | <Icon name="token-branded:bitcoin" /> Bitcoin | <Icon name="token-branded:ethereum" /> Ethereum | <Icon name="token-branded:solana" /> Solana | <Icon name="token-branded:cosmos" /> Cosmos | <Icon name="token-branded:avalanche" /> Avalanche |
+| | <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span> |
 |---|---|---|---|---|---|
 | Decentralisation | Very high | Very high | Moderate | Varies | High |
-| Finality | ~1 hour | ~13 min | Seconds | Instant | ~1 second |
+| Finality | Probabilistic; confidence grows | Explicit; roughly minutes | Seconds | Deterministic after commit | Fast; depends on configuration |
 | Throughput | Very low | Low (base) | High | High | High |
-| Validator cost | Hardware + power | 32 ETH | High-spec hardware | Varies | Stake + modest |
+| Security participation | Mining hardware + power | Solo: 32 ETH + hardware; pools are economic participation | Higher-spec hardware + stake | Per-chain or shared-security model | Per-L1 validator configuration |
 | Execution | Limited | EVM | Parallel | Per chain | Configurable |
 
 ::: tip Read the columns downward, not the rows across
-Nobody chose "moderate decentralisation" as a goal. Solana chose speed, and
-that is what it cost.
+The point is not that anyone set out to choose "moderate decentralisation".
+Solana's emphasis on speed makes the validator trade-off especially visible.
 :::
 
 ## Landscape
@@ -194,7 +202,7 @@ that is what it cost.
 - **BFT consensus** — the family behind instant finality
 - **Parallel execution** — running non-conflicting transactions simultaneously
 - **IBC** — the Cosmos standard for chain-to-chain messaging
-- **Subnet / appchain** — a network dedicated to one application. Part 5
+- **Avalanche L1 / appchain** — a network dedicated to one application. Avalanche L1s were formerly commonly called Subnets. Part 5
 - **EVM-compatible** — runs Ethereum contracts largely unmodified
 - **Shared vs sovereign security** — inheriting security, or providing your own
 - **Client diversity** — how many independent software implementations exist. A real and underrated decentralisation measure

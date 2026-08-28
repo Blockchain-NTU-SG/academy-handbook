@@ -18,6 +18,9 @@ sources:
   - name: "MetaMask — Support"
     url: "https://support.metamask.io/"
     label: "Link"
+  - name: "MyFirstNFT — wallet security visuals"
+    url: "https://nft.myfirstweb3.xyz/"
+    label: "Reuse"
 ---
 
 # Week 1 · Part 6 — Wallets, accounts and keys
@@ -74,14 +77,17 @@ the entire security model.
 |---|---|
 | **Private key** | A very large secret number. Whoever knows it can sign as you, permanently. Not *like* a password — a password is checked by a server that can reset it. There is no server here |
 | **Public key** | Derived from the private key by one-way maths. Anyone can verify your signatures; nobody can work backwards. That impossibility *is* the security |
-| **Address** | A shortened public key, and what you share. As safe to hand out as an email address |
+| **Address** | Derived from the public key by hashing it and representing the result as 20 bytes. This is what you share |
 | **Recovery phrase** | 12 or 24 ordinary words that regenerate the private key — and every key in the wallet |
 
 ::: danger The recovery phrase is strictly more powerful than any single key
 Anyone holding it holds **every account in that wallet, forever, from anywhere**.
 
-No legitimate site, app, wallet, support agent or Academy organiser will ever
-ask for it. There is no situation where a real one needs it.
+No website, DApp, support agent, reviewer or Academy organiser should ever ask
+for it. The normal exception is when **you deliberately restore or import your
+wallet into wallet software that you installed from a verified official source**.
+Never enter it because someone sent you a link, DMed you, or told you to
+“verify”, “sync” or “unlock” your wallet.
 :::
 
 ### Account, wallet, address
@@ -158,9 +164,10 @@ something and costs nothing.
 and Sepolia; your balances are completely separate. There is **no bridge from
 testnet to mainnet**, and anyone offering one is running a scam.
 
-**Sending over the wrong network usually loses the assets.** Always check which
-network your wallet is on. It is the first line of every transaction screen for
-a reason.
+**Sending on the wrong network can make assets hard to find or require recovery
+steps.** Some mistakes are recoverable when the same address exists on another
+EVM network; others can result in permanent loss. Always check which network
+your wallet is on. It is the first line of every transaction screen for a reason.
 :::
 
 ## Landscape
@@ -173,6 +180,11 @@ a reason.
 - **ENS** — human-readable names like `alice.eth` mapped to addresses
 - **Derivation path** — the standard by which one recovery phrase generates many keys
 - **Nonce** — a per-account counter preventing replayed transactions
+
+<figure class="academy-reference-visual academy-reference-visual--narrow">
+  <img src="/learning/myfirstnft/hot-cold-wallets.png" alt="A diagram comparing hot wallets, which can perform many online operations, with a cold wallet kept offline to reduce exposure." />
+  <figcaption>Hot wallets are convenient for frequent use; cold wallets reduce online exposure. Source: <a href="https://nft.myfirstweb3.xyz/">MyFirstNFT</a> / LXDAO.</figcaption>
+</figure>
 
 ## Guided walkthrough
 

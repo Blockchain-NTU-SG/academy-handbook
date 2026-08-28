@@ -48,7 +48,7 @@ for what, is how you evaluate any of them.
    Choose **one** of: Bitcoin, Solana, a Cosmos chain, or Avalanche. Compare it
    with Ethereum on **exactly three** dimensions, as a short table:
 
-   > finality · throughput · validator requirements · decentralisation ·
+   > finality · throughput · security participation · decentralisation ·
    > execution model · ecosystem
 
    Then, in **3–4 sentences**: what did your chosen chain gain, and what

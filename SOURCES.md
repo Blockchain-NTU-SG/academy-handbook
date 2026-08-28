@@ -13,6 +13,7 @@ Upstream materials used in this curriculum, and what we may do with each.
 | Source | Licence / basis | Used in |
 |---|---|---|
 | [ethereum.org](https://ethereum.org) | CC BY 4.0 (non-code content, per Terms of Use) | Weeks 1–4, Data, Product |
+| [ethereum.org — Layer 2 visual](https://ethereum.org/layer-2/learn/) | CC BY 4.0 (educational image, local copy retained with attribution) | Week 2 Part 5 (`layer-2-rollup.png`) |
 | [GitHub Docs](https://docs.github.com) | CC BY 4.0 (content folders) | Weeks 0, 4 |
 | [EIPs](https://eips.ethereum.org/) | CC0 — public domain | Weeks 2, 3 |
 | [OpenZeppelin Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) | MIT | Week 3, Developer |
@@ -20,11 +21,34 @@ Upstream materials used in this curriculum, and what we may do with each.
 | [SpeedRunEthereum challenges](https://github.com/scaffold-eth/se-2-challenges) | MIT | Developer |
 | [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) | Permission granted (LXDAO) | Weeks 0, 1, 4, Product; selected blockchain-basics visuals |
 | [web3intern.xyz](https://web3intern.xyz/) | Permission granted for reuse/adaptation | Selected visual and information-architecture references |
-| [MyFirstNFT](https://nft.myfirstweb3.xyz/) | Permission granted (LXDAO) | Weeks 1, 3 |
+| [MyFirstNFT](https://nft.myfirstweb3.xyz/) | Permission granted (LXDAO) | Week 0 Part 4 phishing visual; Week 1 Part 6 hot/cold wallet visual; Weeks 1, 3 |
 | [MyFirstLayer2](https://layer2.myfirstweb3.xyz/) | Permission granted (LXDAO) | Week 2, Product |
 
-**Permission record:** the LXDAO permission covering the Handbook and the MyFirst
-projects must be stored somewhere the committee can access. Link it here.
+## Local identification assets
+
+These local marks are used only to help learners recognise named tools, services
+and assets. They are not presented as Academy-owned artwork; each mark remains
+subject to the relevant owner's brand and usage terms.
+
+| Asset | Source / basis | Used in |
+|---|---|---|
+| Etherscan | [Etherscan Brand Assets](https://etherscan.io/brandassets) | Week 0 Tool Map |
+| Solscan | [Solscan Integration Guideline](https://docs.solscan.io/integration/solscan-integration-guideline) | Week 0 Tool Map |
+| DefiLlama | [Official GitHub organisation profile](https://github.com/DefiLlama) | Week 0 Tool Map |
+| Dune | [Official GitHub organisation profile](https://github.com/duneanalytics); [Brand Hub](https://dune.com/brand) | Week 0 Tool Map |
+| L2BEAT | [Official GitHub organisation profile](https://github.com/l2beat) | Week 0 Tool Map |
+| Messari | [Official GitHub organisation profile](https://github.com/messari) | Week 0 Tool Map |
+| Snapshot | [Official GitHub organisation profile](https://github.com/snapshot-labs) | Week 0 Tool Map |
+| The Graph | [Official GitHub organisation profile](https://github.com/graphprotocol) | Week 0 Tool Map |
+| Infura | [Infura Press Kit](https://www.infura.io/presskit) | Week 0 Tool Map |
+| Foundry | [Official Foundry GitHub organisation](https://github.com/foundry-rs) | Week 0 Tool Map |
+| WETH | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | Week 1 Part 5 |
+| WBTC | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599) | Week 1 Part 5 |
+
+**Permission record:** LXDAO reuse permission covering the Handbook and the
+MyFirst projects has been confirmed and should be retained in the committee's
+internal archive. Do not remove the “Permission granted” classification without
+checking that record.
 
 ## Link
 

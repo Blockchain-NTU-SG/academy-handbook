@@ -85,9 +85,9 @@ protocol itself.
 
 | Asset | Chain | Note |
 |---|---|---|
-| <Icon name="token-branded:bitcoin" /> **BTC** | Bitcoin | Deliberately limited. Designed to be money and little else |
-| <Icon name="token-branded:ethereum" /> **ETH** | Ethereum | Pays transaction fees, and is staked to secure the network |
-| <Icon name="token-branded:solana" /> **SOL** | Solana | Same roles on Solana |
+| <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>BTC</strong></span> | Bitcoin | Deliberately limited. Designed to be money and little else |
+| <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>ETH</strong></span> | Ethereum | Pays transaction fees, and is staked to secure the network |
+| <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>SOL</strong></span> | Solana | Same roles on Solana |
 
 No issuer. Nobody can freeze your BTC or reverse your ETH transfer — and nobody
 can help you if you lose your keys.
@@ -98,8 +98,8 @@ Tokens designed to hold a steady value, almost always one US dollar.
 
 | Asset | Issuer | Model |
 |---|---|---|
-| <Icon name="token-branded:usdc" /> **USDC** | Circle | Cash and short-term US treasuries, with public attestations |
-| <Icon name="token-branded:usdt" /> **USDT** | Tether | Backed by reserves; the largest by volume |
+| <span class="academy-brand-label"><Icon name="token-branded:usdc" /><strong>USDC</strong></span> | Circle | Cash and short-term US treasuries, with public attestations |
+| <span class="academy-brand-label"><Icon name="token-branded:usdt" /><strong>USDT</strong></span> | Tether | Backed by reserves; the largest by volume |
 
 **Why they matter.** Native assets move in price, which makes them awkward as
 money — nobody wants to be paid in something worth 20% less by Friday.
@@ -121,8 +121,8 @@ changes.
 
 | Asset | Protocol | Roughly |
 |---|---|---|
-| <Icon name="token-branded:uni" /> **UNI** | Uniswap | Governance over the Uniswap protocol |
-| <Icon name="token-branded:aave" /> **AAVE** | Aave | Governance, and a role in the safety module |
+| <span class="academy-brand-label"><Icon name="token-branded:uni" /><strong>UNI</strong></span> | Uniswap | Governance over the Uniswap protocol |
+| <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>AAVE</strong></span> | Aave | Governance, and a role in the safety module |
 
 What a governance token actually entitles you to varies enormously, and is often
 less than the marketing implies. Week 4 covers this properly. For now: holding
@@ -136,11 +136,13 @@ cannot.
 
 | Asset | Represents | Why it exists |
 |---|---|---|
-| **WETH** | ETH | ETH is native, so it doesn't follow the token standard contracts expect |
-| <Icon name="token-branded:wbtc" /> **WBTC** | BTC | Bitcoin can't run Ethereum contracts |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/weth.png" alt="" aria-hidden="true" /><strong>WETH</strong></span> | ETH | ETH is native, so it doesn't follow the token standard contracts expect |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/wbtc.png" alt="" aria-hidden="true" /><strong>WBTC</strong></span> | BTC | Bitcoin can't run Ethereum contracts |
 
-WETH is mechanically simple — deposit ETH, receive WETH, redeem any time. The
-contract holds the ETH and nothing else needs trusting.
+**WETH is mechanically simple: deposit ETH into the contract, receive WETH, and
+redeem it through the same contract.** Unlike custodial wrapped assets, there is
+no external custodian holding the underlying ETH; the main dependency is the
+contract itself.
 
 **WBTC is a different animal.** Real BTC sits on Bitcoin, held by a custodian,
 while a token on Ethereum represents it. That token is worth a bitcoin only as

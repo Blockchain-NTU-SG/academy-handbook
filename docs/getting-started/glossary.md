@@ -143,8 +143,10 @@ Words you will hear early but do not need yet.
 | **ZK** | Zero-knowledge cryptography, for privacy and scaling | Week 4 |
 
 ::: danger Seed phrase — the one entry that matters today
-**Never share it.** Not with support, not with an organiser, not with anyone.
-[Part 4](./safety.md) explains why there is no exception to this.
+**Never share it with another person or enter it because someone told you to.**
+The normal exception is when **you deliberately restore or import your wallet
+into wallet software that you installed from a verified official source**.
+[Part 4](./safety.md) explains the rule in more detail.
 :::
 
 ## Worked example
