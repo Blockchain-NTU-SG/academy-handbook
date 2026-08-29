@@ -398,10 +398,10 @@ you feel about it, because it applies to everything you do on-chain.
 
 ## Landscape
 
-- **Pending / dropped / replaced** — a transaction can wait, be discarded, or be superseded by one with a higher fee
-- **Speed up / cancel** — resubmitting with a higher fee and the same nonce
-- **Nonce ordering** — transactions from one address execute in strict nonce order, so a stuck low nonce blocks everything behind it
-- **Wei / gwei / ether** — units. 1 ether = 10⁹ gwei = 10¹⁸ wei
+- **Pending / dropped / replaced** — a transaction can wait, be discarded, or be superseded by one with a higher fee. Until it is included, it has not changed the chain's state
+- **Speed up / cancel** — resubmitting with a higher fee and the same nonce. This can replace a pending request, but cannot undo a confirmed transaction
+- **Nonce ordering** — transactions from one address execute in strict nonce order, so a stuck low nonce blocks everything behind it until it is included or replaced
+- **Wei / gwei / ether** — units. 1 ether = 10⁹ gwei = 10¹⁸ wei; recognising the units helps you read wallet and explorer fee fields
 - **Failed transactions still cost gas** — the work was done even though the outcome reverted
 
 ## Worked example

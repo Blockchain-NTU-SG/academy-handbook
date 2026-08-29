@@ -74,6 +74,13 @@ Start with three familiar shapes:
 These are not complete verdicts. They are handles for seeing why the additional
 Cosmos and Avalanche examples make different choices too.
 
+### How closely to read them
+
+Read **Bitcoin, Ethereum and Solana** as the main contrasting shapes. **Cosmos
+and Avalanche** broaden the design space by showing other ways to organise
+chains and security. You are not expected to memorise chain specifications;
+use the comparisons to practise asking better questions.
+
 ### The central tension
 
 Most of what follows reduces to one pressure.
@@ -127,7 +134,7 @@ not to quote numbers.
 
 **Maximum conservatism.**
 
-| | |
+| Aspect | Details |
 |---|---|
 | Consensus | Proof of Work |
 | Finality | Probabilistic; ~1 hour for high confidence |
@@ -144,7 +151,7 @@ deliberately narrow and conservative design since 2009.
 
 **Programmability first.**
 
-| | |
+| Aspect | Details |
 |---|---|
 | Consensus | Proof of Stake |
 | Finality | Explicit, ~13 minutes |
@@ -161,7 +168,7 @@ both: gradually increasing L1 capacity while continuing to expand L2 capacity.
 
 **Performance first.**
 
-| | |
+| Aspect | Details |
 |---|---|
 | Consensus | Proof of Stake, with a verifiable clock ordering transactions |
 | Finality | Fast — seconds |
@@ -178,7 +185,7 @@ network has had outages that Ethereum and Bitcoin have not.
 
 **Many chains, not one.**
 
-| | |
+| Aspect | Details |
 |---|---|
 | Consensus | CometBFT — Byzantine Fault Tolerant Proof of Stake |
 | Finality | **Deterministic** once a block is committed |
@@ -199,7 +206,7 @@ An **Avalanche L1** is a sovereign, application-specific network with its own
 validator configuration. These networks were formerly commonly called
 Subnets.
 
-| | |
+| Aspect | Details |
 |---|---|
 | Consensus | Avalanche consensus — repeated randomised sampling |
 | Finality | Fast — around a second |
@@ -211,7 +218,7 @@ Subnets.
 
 ### Side by side
 
-| | <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span> |
+| Dimension | <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span> |
 |---|---|---|---|---|---|
 | Decentralisation | Very high | Very high | Moderate | Varies | High |
 | Finality | Probabilistic; confidence grows | Explicit; roughly minutes | Seconds | Deterministic after commit | Fast; depends on configuration |
@@ -226,14 +233,14 @@ Solana's emphasis on speed makes the validator trade-off especially visible.
 
 ## Landscape
 
-- **Blockchain trilemma** — a framing, not a proof
-- **BFT consensus** — the family behind instant finality
-- **Parallel execution** — running non-conflicting transactions simultaneously
-- **IBC** — the Cosmos standard for chain-to-chain messaging
-- **Avalanche L1 / appchain** — a network dedicated to one application. Avalanche L1s were formerly commonly called Subnets. Part 5
-- **EVM-compatible** — runs Ethereum contracts largely unmodified
-- **Shared vs sovereign security** — inheriting security, or providing your own
-- **Client diversity** — how many independent software implementations exist. A real and underrated decentralisation measure
+- **Blockchain trilemma** — a framing about pressure among decentralisation, security and scalability, not a proof. It helps you ask what a fast or open design is giving up
+- **BFT consensus** — a family of agreement mechanisms that can provide fast, explicit finality when enough participants follow the rules. It is not one single protocol
+- **Parallel execution** — running non-conflicting transactions simultaneously. It can increase throughput when the chain can identify which transactions are independent
+- **IBC** — the Cosmos standard for chain-to-chain messaging. It lets connected chains exchange messages, but each connection still has assumptions to check
+- **Avalanche L1 / appchain** — a network dedicated to one application. Avalanche L1s were formerly commonly called Subnets; the separate network can be configured for that application's needs. Part 5
+- **EVM-compatible** — runs Ethereum contracts largely unmodified. Compatibility makes tools easier to reuse, but small differences can still matter
+- **Shared vs sovereign security** — inheriting security from another network, or providing your own validator security. Sovereignty gives control but makes the chain responsible for its own security budget
+- **Client diversity** — how many independent software implementations exist. More diversity can reduce the risk that one client bug affects the whole network
 
 ## Worked example
 

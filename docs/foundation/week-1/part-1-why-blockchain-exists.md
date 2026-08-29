@@ -129,10 +129,10 @@ repeating what they heard.
 You'll hear these words in the same breath as blockchain. You don't need to be
 able to build any of them — just place them on the map.
 
-- **Bitcoin** — the first working example of this idea, built for payments only
-- **Ethereum** — the same idea, but the shared record can also run programs
-- **Consensus** — the agreement mechanism above. Part 3
-- **Crypto assets** — what gets tracked on these records. Part 5
+- **Bitcoin** — the first working example of this idea, built mainly for payments and deliberately narrow in scope
+- **Ethereum** — a shared record that can also run programs, trading more flexibility for more complexity
+- **Consensus** — the agreement mechanism that decides which valid history the network follows. Part 3
+- **Crypto assets** — values tracked by a blockchain, with different rights and risks depending on the asset. Part 5
 
 ## Worked example
 

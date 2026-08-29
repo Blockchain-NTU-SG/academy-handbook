@@ -83,9 +83,9 @@ Engineers describe this before → instruction → after pattern as a **state
 machine**. In the formal shorthand, it looks like this:
 
 ```mermaid
-flowchart LR
+flowchart TD
   S1["<b>State N</b><br/>message = Hello<br/>visitCount = 0"]
-  T["<b>Transaction</b><br/>setMessage(\"GM\")"]
+  T["<b>Transaction</b><br/>change message to GM"]
   S2["<b>State N+1</b><br/>message = GM<br/>visitCount = 1"]
   S1 --> T --> S2
 ```
@@ -130,7 +130,7 @@ Ethereum has addresses that can authorise actions with a key, and addresses that
 contain program code. Engineers call the first kind an **EOA** and the second a
 **contract account**.
 
-| | **EOA** (Externally Owned Account) | **Contract account** |
+| Account type | **EOA** (Externally Owned Account) | **Contract account** |
 |---|---|---|
 | Controlled by | A private key | Its own code |
 | Has a recovery phrase | Yes | **No** |
@@ -154,8 +154,8 @@ contract can then call other contracts inside that transaction, but it cannot
 start the chain of execution on a schedule or by watching the outside world.
 :::
 
-Contracts *can* call other contracts — but only inside a chain of calls that some
-EOA started.
+Contracts *can* call other contracts, but only as part of execution that has
+already been triggered.
 
 ```mermaid
 flowchart TD
@@ -178,14 +178,14 @@ prevents a whole family of misunderstandings about what DeFi actually is.
 
 ## Landscape
 
-- **EVM-compatible / EVM-equivalent** — runs Ethereum contracts with minor differences, or none
-- **Bytecode** — what Solidity compiles to and what the EVM actually runs
-- **opcode** — one EVM instruction, each with a fixed gas cost. See [evm.codes](https://www.evm.codes/)
-- **Solidity** — the dominant contract language. Week 3
-- **Vyper** — an alternative, deliberately more restricted
-- **World state** — the complete set of all accounts and their data
-- **Account abstraction** — letting accounts be programmable, softening the EOA/contract split
-- **Precompiles** — cryptographic operations built into the EVM for efficiency
+- **EVM-compatible / EVM-equivalent** — runs Ethereum contracts with minor differences, or none. The closer the match, the more existing tools and code can be reused
+- **Bytecode** — what Solidity compiles to and what the EVM actually runs. People can see deployed bytecode even when the original source is not verified
+- **Opcode** — one EVM instruction, each with a gas cost. Looking at opcodes helps explain what the machine is actually doing; see [evm.codes](https://www.evm.codes/)
+- **Solidity** — the dominant contract language. Week 3 uses it to show how a small contract behaves
+- **Vyper** — an alternative contract language, deliberately more restricted. A smaller language can make some behaviour easier to inspect, but it has a different ecosystem
+- **World state** — the complete set of all accounts and their data. A transaction changes this shared state when execution succeeds
+- **Account abstraction** — letting accounts be programmable, softening the simple EOA/contract split. It can support features such as different authorisation or recovery flows; this is Landscape-level nuance
+- **Precompiles** — cryptographic operations built into the EVM for efficiency. Contracts call them instead of implementing the same expensive operation in ordinary bytecode
 
 ## Worked example
 
@@ -220,7 +220,8 @@ Note **0 transactions sent** — as expected, since contracts cannot initiate
 anything. But it has code, storage, and it is the ledger for billions of dollars
 of USDC.
 
-Everything USDC "does" happens when an EOA calls this contract.
+USDC-related actions happen as part of execution that an account or another
+contract has already triggered.
 :::
 
 ::: important Now connect it to Week 1 Part 5
@@ -229,8 +230,10 @@ This is the concrete reason a token differs structurally from a coin.
 - **ETH** is tracked by the protocol itself. Its balance is a field on your account
 - **USDC** is tracked by contract B's storage. Your USDC balance is a row in one program's table
 
-If contract B has a bug, USDC balances can be affected. **No bug in any contract
-can affect your ETH balance**, because ETH does not live in a contract.
+If contract B has a bug, USDC balances can be affected. Your native ETH balance
+is tracked by Ethereum itself, not by the USDC contract. A bug in that token
+contract can therefore change what it records about USDC, but it cannot rewrite
+Ethereum's native ETH ledger in the same way.
 
 That is not a difference in branding. It is a difference in what has to be true
 for you to still own the thing tomorrow — exactly what

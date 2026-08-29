@@ -69,7 +69,7 @@ expensive.** Every incentive below exists to serve that one sentence.
 Bitcoin miners spend real money on hardware and electricity. The miner who
 successfully produces a block receives:
 
-| | |
+| Income source | Explanation |
 |---|---|
 | **Block subsidy** | Newly issued BTC, created by the protocol |
 | **Transaction fees** | Paid by the people whose transactions are in that block |
@@ -148,7 +148,7 @@ and because businesses need reliable access to chain data.
 
 ### Side by side
 
-| | Bitcoin | Ethereum |
+| Dimension | Bitcoin | Ethereum |
 |---|---|---|
 | Security model | Proof of Work | Proof of Stake |
 | Who secures it | Miners | Validators |
@@ -168,13 +168,13 @@ Neither design is "better". They are answers to different questions.
 
 ## Landscape
 
-- **Block reward** — subsidy plus fees, paid to whoever produced the block
-- **Halving** — Bitcoin's roughly four-yearly subsidy reduction
-- **Base fee / priority fee** — the burned portion and the tip, introduced by EIP-1559 ([Week 2 Part 4](../week-2/part-4-transactions-and-gas.md))
-- **Staking pool** — pooling ETH to validate without holding 32 ETH alone
-- **Liquid staking** — a tradable token representing staked ETH
-- **Issuance vs burn** — new supply created versus supply destroyed
-- **MEV** — additional value block producers can capture by ordering transactions. Real, significant, and Further Exploration
+- **Block reward** — subsidy plus fees, paid to whoever produces the block. It is the direct economic reason to compete for block production
+- **Halving** — Bitcoin's roughly four-yearly subsidy reduction. It slows new issuance but does not guarantee a price increase
+- **Base fee / priority fee** — the burned portion and the tip, introduced by EIP-1559 ([Week 2 Part 4](../week-2/part-4-transactions-and-gas.md)). They go to different places, so the proposer does not receive the whole fee
+- **Staking pool** — pooling ETH so people can participate economically without holding 32 ETH or operating a validator alone. The pool adds operator and service risk
+- **Liquid staking** — a tradable token representing staked ETH. It may be used elsewhere, but it can trade away from the underlying value
+- **Issuance vs burn** — new supply created versus supply destroyed. Comparing them helps explain whether supply is growing or shrinking at a given time
+- **MEV** — additional value block producers or searchers can capture by ordering transactions. It can affect users' execution, so it is Further Exploration
 
 ## Worked example
 

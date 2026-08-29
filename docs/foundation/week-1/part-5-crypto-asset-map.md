@@ -62,7 +62,7 @@ ETH balances are part of Ethereum's state, at the same level as the chain itself
 **Tokens** are created by smart contracts. A token contract is a program holding
 a table of who owns how much. USDC on Ethereum is one contract's ledger.
 
-| | Native asset (ETH) | Token (USDC) |
+| Aspect | Native asset (ETH) | Token (USDC) |
 |---|---|---|
 | Exists because | The protocol says so | A contract says so |
 | Can be frozen by an issuer | No | **Yes**, if the contract allows it |
@@ -172,7 +172,7 @@ hosts that file disappears, the token remains and the picture does not.
 
 Cutting across all five categories: **who holds the keys?**
 
-| | Custodial | Self-custodial |
+| Aspect | Custodial | Self-custodial |
 |---|---|---|
 | Who holds the keys | An exchange or company | You |
 | What you have | An account balance and a claim | The asset itself |
@@ -196,12 +196,12 @@ both options are legitimate for different purposes.
 
 ## Landscape
 
-- **Meme coins** — value resting entirely on attention and community
-- **RWA** — real-world assets like treasuries or property represented on-chain
-- **LSTs** — liquid staking tokens, representing staked assets while staying tradable
-- **Algorithmic stablecoins** — stability by mechanism rather than reserves. Poor track record; Terra/UST's 2022 collapse is the case study
-- **ERC-20 / ERC-721 / ERC-1155** — the standards making tokens interoperable. Week 3
-- **Token supply terms** — circulating, total and fully diluted supply frequently differ dramatically
+- **Meme coins** — tokens whose demand is driven largely by attention and community. When attention leaves, liquidity and price can fall quickly
+- **RWA** — real-world assets like treasuries or property represented on-chain. The token cannot remove the legal and custody arrangements around the underlying asset
+- **LSTs** — liquid staking tokens, representing staked assets while staying tradable. Their value also depends on the staking system and redemption path
+- **Algorithmic stablecoins** — tokens aiming for stability through rules or incentives rather than straightforward reserves. A broken design can lose its peg, as Terra/UST did in 2022
+- **ERC-20 / ERC-721 / ERC-1155** — standards that give applications common token interfaces. They improve interoperability, but do not make every token safe or liquid. Week 3
+- **Token supply terms** — circulating, total and fully diluted supply measure different things. Comparing the wrong one can make a project's scale or future dilution look misleading
 
 ## Worked example
 

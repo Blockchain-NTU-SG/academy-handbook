@@ -94,7 +94,7 @@ Recognition level. The goal is to place a name, not memorise a directory.
 :::: tabs
 @tab Networks
 
-| | What it is |
+| Network | What it is |
 |---|---|
 | <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span> | The largest smart-contract network |
 | <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span> | High-throughput L1 |
@@ -103,7 +103,7 @@ Recognition level. The goal is to place a name, not memorise a directory.
 
 @tab Companies
 
-| | Category |
+| Organisation type | Category |
 |---|---|
 | <span class="academy-brand-label"><Icon name="simple-icons:coinbase" /><strong>Coinbase</strong></span>, <span class="academy-brand-label"><Icon name="simple-icons:binance" /><strong>Binance</strong></span>, <span class="academy-brand-label"><Icon name="simple-icons:okx" /><strong>OKX</strong></span> | Centralised exchanges — custodial |
 | <span class="academy-brand-label"><Icon name="simple-icons:circle" /><strong>Circle</strong></span> | Issuer of USDC |
@@ -119,7 +119,7 @@ thing from a deployed contract.
 
 @tab Protocols
 
-| | What it does |
+| Protocol / product | What it does |
 |---|---|
 | <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap</strong></span> | Decentralised exchange |
 | <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave</strong></span> | Lending market |
@@ -128,7 +128,7 @@ thing from a deployed contract.
 
 @tab Tools and research
 
-| | What it is |
+| Tool / research | What it is |
 |---|---|
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | On-chain data, SQL dashboards — company |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span> | TVL and protocol comparison |
@@ -205,14 +205,14 @@ Foundation.
 
 ## Landscape
 
-- **Foundation** — non-profit funding ecosystem work. Does not control a network
-- **Labs / Core contributor** — the company that builds a protocol's software
-- **Protocol vs interface** — the contracts, versus the website in front of them. Often different owners
-- **Multisig / Safe** — how treasuries actually hold funds
-- **Snapshot** — off-chain voting, used by some DAOs
-- **Delegation** — assigning your voting power to someone who participates
-- **ENS** — human-readable names mapped to addresses, and a public identity in itself
-- **DID / SBT** — decentralised identity concepts. Further Exploration
+- **Foundation** — a non-profit that funds ecosystem work. It may support a network without controlling its rules or validators
+- **Labs / Core contributor** — a company or group that builds a protocol's software. It may influence development without owning the protocol
+- **Protocol vs interface** — the contracts, versus the website in front of them. They often have different owners, so a website can change while the contracts remain
+- **Multisig / Safe** — a wallet requiring several signers, commonly used by treasuries. Losing enough signers can block a treasury action
+- **Snapshot** — off-chain voting used by some DAOs. It records governance preference but does not itself execute a contract change
+- **Delegation** — assigning your voting power to someone who participates. You gain a representative, but rely on that person's choices
+- **ENS** — human-readable names mapped to addresses. They make identity easier to read, while the address and its public activity remain the underlying record
+- **DID / SBT** — decentralised identity concepts. A DID can represent an identifier and an SBT a non-transferable token; neither automatically proves a person's real-world identity. Further Exploration
 
 ## Worked example
 

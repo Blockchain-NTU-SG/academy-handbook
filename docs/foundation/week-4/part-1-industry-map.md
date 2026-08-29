@@ -256,12 +256,12 @@ Week 2 Part 1 asked this about private chains. It generalises to entire sectors.
 
 ## Landscape
 
-- **TVL** — total value locked. The headline sector metric, and a contested definition
-- **Protocol revenue vs incentives** — is a project earning, or paying users to show up?
-- **Modular vs monolithic** — whether execution, settlement and data availability are separated
-- **Account abstraction** — making wallets programmable, aimed squarely at the wallets limitation
-- **Restaking** — reusing staked ETH to secure other services. New, and adds correlated risk
-- **Intents / chain abstraction** — hiding chain choice from users entirely
+- **TVL** — total value locked. It estimates deposits in a protocol, but definitions and double-counting can change the headline number
+- **Protocol revenue vs incentives** — asks whether a project earns from usage or pays users to show up. High activity is not automatically sustainable revenue
+- **Modular vs monolithic** — whether execution, settlement and data availability are separated or handled together. The split can improve specialisation while adding coordination dependencies
+- **Account abstraction** — making wallets programmable, aimed at limitations such as recovery and transaction sponsorship. The wallet code becomes another security surface
+- **Restaking** — reusing staked ETH to secure other services. It can extend security to new systems, but one failure may affect several services at once
+- **Intents / chain abstraction** — hiding chain choice from users. This simplifies the experience while moving execution decisions into an application or solver system
 
 ## Worked example
 

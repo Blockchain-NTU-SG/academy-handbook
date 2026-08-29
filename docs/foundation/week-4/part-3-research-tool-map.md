@@ -186,13 +186,13 @@ supporting evidence.
 
 ## Landscape
 
-- **Dune dashboards** — mostly community-built. Check the query before trusting the chart
-- **TVL definitions** — differ by site; double-counting is common
-- **Token unlock schedules** — future supply hitting the market. Frequently omitted
-- **Nansen, Arkham** — wallet labelling and entity attribution
-- **Etherscan Token Approvals** — audit your own permissions
-- **Governance forums** — often the most honest writing about a protocol's problems
-- **Audit reports** — usually public. Read the findings, not just the fact of an audit
+- **Dune dashboards** — mostly community-built. Check the query before trusting the chart, because a different definition can change the result
+- **TVL definitions** — differ by site, and double-counting is common. The same deposits can look different across dashboards
+- **Token unlock schedules** — future supply becoming eligible to enter the market. A large unlock can create selling pressure, but eligibility is not the same as an actual sale
+- **Nansen, Arkham** — tools for wallet labelling and entity attribution. Labels are useful clues, not proof that an address belongs to a person or company
+- **Etherscan Token Approvals** — a way to audit your own permissions. Revoking an allowance reduces one exposure but does not undo past transfers
+- **Governance forums** — often the most honest writing about a protocol's problems. Read the objections as well as the proposal
+- **Audit reports** — usually public reviews of a defined scope. Read the findings and unresolved issues, not just the fact that an audit happened
 
 ## Worked example
 

@@ -117,13 +117,13 @@ you can apply to anything.
 
 ## Landscape
 
-- **On-ramp / off-ramp** — converting between fiat and crypto in either direction
-- **Layer 2** — a network built on a base chain for cheaper, faster transactions (Week 2)
-- **Wrapped asset** — a token representing an asset from elsewhere ([Part 5](./part-5-crypto-asset-map.md))
-- **Slippage** — the gap between the price you expected on a swap and the one you got
-- **Liquidity pool** — pooled assets a DEX trades against (Week 3)
-- **Oracle** — a service supplying external data to contracts (Week 3)
-- **Yield** — return from lending or providing liquidity. Always compensation for a risk; the question is which one
+- **On-ramp / off-ramp** — converting between fiat and crypto in either direction. The service handling the conversion adds its own fees, limits and custody risk
+- **Layer 2** — a network built on a base chain for cheaper, faster transactions (Week 2). It adds another system and therefore another set of trust assumptions
+- **Wrapped asset** — a token representing an asset from elsewhere ([Part 5](./part-5-crypto-asset-map.md)). Its value depends on the mechanism that links it to the underlying asset
+- **Slippage** — the gap between the price you expected on a swap and the one you got. Thin liquidity or a large trade can make the gap wider
+- **Liquidity pool** — pooled assets a DEX trades against (Week 3). More liquidity usually makes larger trades easier to execute without moving the price as much
+- **Oracle** — a service supplying external data to contracts (Week 3). If the data is wrong or manipulated, the contract can make a wrong decision
+- **Yield** — return from lending or providing liquidity. It is compensation for a risk; the useful question is which risk pays it
 
 ## Worked example
 

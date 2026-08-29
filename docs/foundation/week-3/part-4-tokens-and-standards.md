@@ -218,14 +218,14 @@ map. That is enough for Foundation.
 
 ## Landscape
 
-- **EIP / ERC** — improvement proposals, and the application-level ones that define interfaces
-- **`approve` / `transferFrom`** — the two-step pattern letting a contract move your tokens. [Part 5](./part-5-security-and-approvals.md)
-- **`tokenURI` / metadata** — where an NFT's name and image actually live
-- **IPFS** — content-addressed storage, often used for NFT metadata
-- **Mint / burn** — creating and destroying units
-- **ERC-4626** — a standard for yield-bearing vaults
-- **Token allowlists** — why an exchange listing is a business decision, not a technical one
-- **Rebasing tokens** — tokens whose balances change without transfers. They break naive integrations
+- **EIP / ERC** — improvement proposals, and the application-level ones that define interfaces. A shared interface helps tools recognise a token without deciding whether it is trustworthy
+- **`approve` / `transferFrom`** — the two-step pattern letting a contract move your tokens after you grant permission. [Part 5](./part-5-security-and-approvals.md)
+- **`tokenURI` / metadata** — where an NFT's name and image information actually live. The token record and the media it points to are not the same thing
+- **IPFS** — content-addressed storage, often used for NFT metadata. A content address helps detect changed content, but does not guarantee the file stays available
+- **Mint / burn** — creating and destroying units. A contract's rules decide who can do this and what it means for supply
+- **ERC-4626** — a standard for yield-bearing vaults. Applications can integrate a vault through common functions, while the vault's strategy still carries risk
+- **Token allowlists** — a project or exchange's chosen set of supported tokens. This is why an exchange listing is a business decision, not a technical one
+- **Rebasing tokens** — tokens whose balances change without ordinary transfers. Integrations that assume balances only change through transfers can display or account for them incorrectly
 
 ## Worked example
 

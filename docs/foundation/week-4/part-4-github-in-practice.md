@@ -187,13 +187,13 @@ saying so, is just how software gets built.
 
 ## Landscape
 
-- **`.gitignore`** — files git should never track. Keep secrets out of history
-- **GitHub Actions** — automation on push or PR. This handbook uses it to check every PR builds
-- **GitHub Pages** — free static hosting. Useful for a project site
-- **Releases and tags** — marking a version
-- **Gist** — a single-file snippet, for sharing something small
-- **Stars, forks, watchers** — weak popularity signals. Commit history says more
-- **CODEOWNERS** — who must review changes to which files
+- **`.gitignore`** — files Git should not track, such as local secrets or build output. It helps prevent accidental commits, but does not remove a secret already in history
+- **GitHub Actions** — automation on a push or pull request. This handbook uses it to check that every PR builds before review
+- **GitHub Pages** — free static hosting for a project site. A published page is useful evidence, but it does not replace the repository's source
+- **Releases and tags** — labels marking a version. They help someone return to the exact state behind a result
+- **Gist** — a single-file snippet for sharing something small. It is useful for a short example, not a substitute for a maintained project repository
+- **Stars, forks, watchers** — weak popularity signals. They show attention or reuse; commit history and working output say more about the work
+- **CODEOWNERS** — a file saying who must review changes to which paths. It guides review, but does not make the code correct
 
 ::: danger Never commit secrets
 Private keys, API keys, `.env` files, recovery phrases.

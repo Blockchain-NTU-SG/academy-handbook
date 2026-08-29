@@ -132,7 +132,7 @@ provider.
 
 Three consequences worth knowing:
 
-| | |
+| Trust consideration | What it means |
 |---|---|
 | **You are trusting that provider** | To report state honestly and relay your transactions. They cannot forge your signature or steal funds — but they can show you wrong data or drop your transaction |
 | **They can see your requests** | Including which addresses you ask about, and from what IP |
@@ -150,7 +150,7 @@ Start with the human action:
 
 The formal distinction is:
 
-| | **Read** (call) | **Write** (transaction) |
+| Request type | **Read** (call) | **Write** (transaction) |
 |---|---|---|
 | Changes state | No | Yes |
 | Costs gas | **No** | Yes |
@@ -170,7 +170,7 @@ and they happen silently.
 But when your wallet **does** open, stop and read what it is asking for. It may
 be an on-chain transaction, or it may be an off-chain signature. Both matter.
 
-| | On-chain transaction | Off-chain signature |
+| Permission form | On-chain transaction | Off-chain signature |
 |---|---|---|
 | Sent to the blockchain | Yes | No — at least not by you, not yet |
 | Changes state immediately | Usually | No |
@@ -210,14 +210,14 @@ makes a contract's functions and events readable.
 
 ## Landscape
 
-- **EIP-1559** — the 2021 change introducing the burned base fee and predictable pricing
-- **gwei** — 10⁻⁹ ETH, the unit gas prices are quoted in
-- **Nonce** — the per-account counter. Transactions execute in strict nonce order
-- **Mempool** — the public waiting room
-- **Speed up / cancel** — resubmitting with the same nonce and a higher fee
-- **Revert** — execution failing and state changes being undone. Gas is still consumed
-- **Node providers** — Infura, Alchemy, QuickNode and others
-- **MEV** — value extracted by choosing transaction order, made possible by the public mempool
+- **EIP-1559** — the 2021 change that introduced a base fee which is burned and a separate priority fee. It made fee estimation more predictable, not fixed
+- **gwei** — 10⁻⁹ ETH, the unit gas prices are quoted in. A gas price in gwei is multiplied by gas used to determine the fee
+- **Nonce** — the per-account counter that makes transactions unique and orders them. A stuck lower nonce can hold up later transactions
+- **Mempool** — the public waiting room for transactions a node has received but not included. Seeing a transaction there does not mean it has succeeded
+- **Speed up / cancel** — resubmitting with the same nonce and a higher fee. It replaces or competes with the earlier request; it does not undo a confirmed transaction
+- **Revert** — execution failing and state changes being undone. Gas used before the failure is still consumed
+- **Node providers** — Infura, Alchemy, QuickNode and others that give applications access to nodes. Their availability and data handling add an infrastructure dependency
+- **MEV** — value extracted by choosing transaction order, made possible by the public mempool. The ordering can change users' execution or the price they receive
 
 ## Worked example
 

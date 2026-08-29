@@ -58,7 +58,7 @@ are starting points, not restrictions.
 
 Each Foundation week has a handful of short pages and **one Anchor Mission**.
 
-| | |
+| Item | Details |
 |---|---|
 | Anchor Missions | One per week, Weeks 1–8 |
 | Points | 100 per Foundation mission, 400 for the sprint, **800 total** |
@@ -107,7 +107,7 @@ feedback, points and progress.
 
 The handbook and the platform have a clean division of labour:
 
-| | Handbook | Platform |
+| Area | Handbook | Platform |
 |---|---|---|
 | Learning material | ✅ canonical | short operational copy |
 | Anchor Mission instructions | ✅ canonical | short operational copy |
@@ -156,13 +156,13 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
 
 | Term | What it is |
 |---|---|
-| **Repository ("repo")** | A project folder with its full history |
-| **Commit** | One saved change, with a message explaining what and why |
-| **README** | The front page of a repository, written in Markdown |
-| **Markdown** | Plain text with light formatting marks — this handbook is written in it |
-| **Issue** | A tracked task, bug or question |
-| **Pull request** | A proposed change, opened for review before it is merged |
-| **Fork** | Your own copy of somebody else's repository |
+| **Repository ("repo")** | A project folder with its full history. It gives collaborators one place to read, change and review the work |
+| **Commit** | One saved change, with a message explaining what and why. Commits let you inspect how the project reached its current state |
+| **README** | The front page of a repository, written in Markdown. It tells a new reader what the project is and how to use it |
+| **Markdown** | Plain text with light formatting marks — this handbook is written in it. GitHub turns those marks into readable pages |
+| **Issue** | A tracked task, bug or question. It keeps context and discussion attached to the work |
+| **Pull request** | A proposed change, opened for review before it is merged. Reviewers can discuss and test it in one place |
+| **Fork** | Your own copy of somebody else's repository. It lets you experiment or propose changes without directly changing the original |
 
 ## Guided walkthrough
 

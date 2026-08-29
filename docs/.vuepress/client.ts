@@ -1,5 +1,6 @@
 import { defineClientConfig } from 'vuepress/client'
 import './styles/index.scss'
+import AcademyLayout from './theme/AcademyLayout.vue'
 // import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 // import NpmBadge from 'vuepress-theme-plume/features/NpmBadge.vue'
 // import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
@@ -10,6 +11,9 @@ import './styles/index.scss'
 // import './theme/styles/custom.css'
 
 export default defineClientConfig({
+  layouts: {
+    Layout: AcademyLayout,
+  },
   enhance({ app, router }) {
     const baseScrollBehavior = router.options.scrollBehavior
     const getAnchorOffset = () => {

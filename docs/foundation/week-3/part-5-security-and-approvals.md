@@ -112,7 +112,7 @@ anything at all**. You granted the permission years ago.
 Two ways to hand over the same permission; one may not require gas at the moment
 you sign.
 
-| | On-chain approval | Signature-based permission |
+| Permission form | On-chain approval | Signature-based permission |
 |---|---|---|
 | What it is | An `approve()` **transaction** | A signed **message** |
 | Costs gas | Yes | **Often nothing** |
@@ -159,14 +159,14 @@ It is meaningfully better than no audit. It is not a warranty.
 
 ## Landscape
 
-- **Reentrancy** — a called contract calls back before the first finishes. The 2016 DAO hack; still found today
-- **Access control bugs** — a missing `require`, exactly like the `Vault` in [Part 2](./part-2-solidity-minimum.md)
-- **Integer issues** — largely fixed by Solidity 0.8's built-in overflow checks
-- **Price manipulation** — moving a thin market to fool a contract reading it
-- **Upgradeable proxies** — the code behind an address can be replaced. A trust assumption, not a detail
-- **Rug pull** — a team removing value or abandoning a project
-- **Front-running / MEV** — your pending transaction is public before it executes
-- **SWC Registry** — a historical catalogue of known weakness classes; it is no longer actively maintained, so use current security resources too
+- **Reentrancy** — a called contract calls back before the first finishes. If state is updated too late, an attacker may repeat an action such as a withdrawal; the 2016 DAO hack is a famous example
+- **Access control bugs** — a missing `require` or permission check, exactly like the `Vault` in [Part 2](./part-2-solidity-minimum.md). An unauthorised caller may change settings or take funds
+- **Integer issues** — mistakes in arithmetic such as values wrapping unexpectedly. Solidity 0.8 adds built-in overflow checks, but unsafe logic can still cause losses
+- **Price manipulation** — moving a thin market to fool a contract reading it. A lending or trading protocol may then value collateral or trades incorrectly
+- **Upgradeable proxies** — the code behind an address can be replaced. An upgrade can fix a bug, but the upgrade controller remains a trust assumption
+- **Rug pull** — a team removing value, changing the rules or abandoning a project. Users may be unable to recover what they put in
+- **Front-running / MEV** — your pending transaction is public before it executes. Another participant may trade or reorder around it and worsen your result
+- **SWC Registry** — a historical catalogue of known weakness classes. It is no longer actively maintained, so use current security resources too
 
 ## A short checklist
 

@@ -183,12 +183,12 @@ missing something — either we made an error, or the instruction is not from us
 
 ## Landscape
 
-- **Hardware wallet** — a device keeping keys offline. The standard for meaningful value; not needed for testnet work
-- **Multisig** — a wallet requiring several signers
-- **Smart contract audit** — a paid security review. Reduces risk; audited protocols still get exploited
-- **Blind signing** — approving a request your wallet cannot decode. Avoid
-- **Address poisoning** — an attacker sends dust from an address resembling one you use, hoping you copy it from your history later
-- **Rug pull** — a project's own team removing value or abandoning it
+- **Hardware wallet** — a device keeping keys offline. It reduces online exposure, but safe setup and backups still matter; it is not needed for testnet work
+- **Multisig** — a wallet requiring several signers. It reduces reliance on one key, but losing enough signers can block an action
+- **Smart contract audit** — a paid security review of a defined scope. It can find issues, but audited protocols still get exploited
+- **Blind signing** — approving a request your wallet cannot explain clearly. You may authorise a dangerous action without recognising it
+- **Address poisoning** — an attacker sends dust from an address resembling one you use, hoping you copy it from your history later and send funds to the wrong address
+- **Rug pull** — a project's own team removing value, changing the rules or abandoning it. Users may be left with tokens they cannot use or sell
 
 ## Guided walkthrough
 
@@ -256,7 +256,7 @@ you will have forgotten this moment entirely.
 
 Permissions like this arrive two ways, and **both matter**:
 
-| | What it looks like |
+| Permission type | What it looks like |
 |---|---|
 | **On-chain approval** | A transaction. Costs gas. Sets an allowance on-chain |
 | **Signature-based permission** | Often no gas at all. Someone else submits it later |

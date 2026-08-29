@@ -72,7 +72,7 @@ Anyone can read, transact, and run a node. No gatekeeper.
 
 **Examples:** Bitcoin, Ethereum, Solana
 
-| | |
+| Aspect | Details |
 |---|---|
 | **Gains** | Censorship resistance, no operator to trust, anyone can verify anything, global from day one |
 | **Costs** | Slower, more expensive, everything visible, and nobody can fix a mistake |
@@ -83,7 +83,7 @@ Anyone can read, transact, and run a node. No gatekeeper.
 One organisation controls who participates and what is visible. Often a single
 company across its own departments or subsidiaries.
 
-| | |
+| Aspect | Details |
 |---|---|
 | **Gains** | Fast, cheap, private, compliant with data rules, errors can be corrected |
 | **Costs** | You are trusting the operator — the thing public chains exist to avoid |
@@ -106,7 +106,7 @@ but participation is by membership.
 
 **Examples:** trade finance networks, interbank settlement, supply chain consortia
 
-| | |
+| Aspect | Details |
 |---|---|
 | **Gains** | No single operator, known and accountable participants, good performance, privacy where needed |
 | **Costs** | Governance is genuinely hard — members must agree on rules, upgrades and admissions — and it is only as decentralised as its membership |
@@ -120,7 +120,7 @@ of the industry's non-crypto employment sits.
 
 Every design decision on this page is one of five dials.
 
-| | Public / permissionless | Consortium | Private |
+| Dimension | Public / permissionless | Consortium | Private |
 |---|---|---|---|
 | **Openness** | Anyone | Members only | One organisation |
 | **Control** | Nobody | Shared among members | One organisation |
@@ -156,12 +156,12 @@ the honest answer was the top left.
 
 ## Landscape
 
-- **Hyperledger Fabric** — a widely used permissioned framework, with private channels between subsets of members
-- **Enterprise Ethereum** — EVM-compatible deployments run under permissioned conditions
-- **Sidechain** — a separate chain connected to a main one, often with its own smaller validator set. [Part 5](./part-5-l1-l2-and-bridges.md)
-- **Validator set** — the group permitted to produce blocks. Open on public chains, a membership list on permissioned ones
-- **Node operator agreement** — the contractual layer consortium chains need and public chains do not
-- **Hybrid designs** — private execution with periodic commitments anchored to a public chain
+- **Hyperledger Fabric** — a widely used permissioned framework, with private channels between subsets of members. It can limit who sees or writes particular records
+- **Enterprise Ethereum** — EVM-compatible deployments run under permissioned conditions. Familiar Ethereum tools can be used, but access is controlled by an organisation or consortium
+- **Sidechain** — a separate chain connected to a main one, often with its own smaller validator set ([Part 5](./part-5-l1-l2-and-bridges.md)). Its connection to the main chain does not automatically give it the same security
+- **Validator set** — the group permitted to produce or confirm blocks. On a public chain participation is open under the rules; on a permissioned chain membership is controlled
+- **Node operator agreement** — the contractual layer a consortium chain needs to define who runs nodes and what happens when someone fails. Public networks use protocol rules instead
+- **Hybrid designs** — private execution with periodic commitments anchored to a public chain. This can keep business data private while making a checkpoint publicly verifiable
 
 ## Worked example
 

@@ -183,12 +183,12 @@ Week 3.
 
 ## Landscape
 
-- **Hallucination** — confidently generating something false. The core risk here
-- **Knowledge freshness** — model answers may be stale unless grounded in current, reliable sources or live tools
-- **Prompt injection** — instructions hidden in content the model reads. Relevant if your project ingests external data
-- **Code assistants** — Copilot, Cursor, Claude Code and similar
-- **Agentic workflows** — AI running multi-step tasks. Powerful, and it compounds unverified errors
-- **AI × Web3** — the sector from [Part 1](./part-1-industry-map.md). A lot of narrative; ask what the chain is load-bearing for
+- **Hallucination** — confidently generating something false. The output can look plausible, so tests and source checks matter
+- **Knowledge freshness** — model answers may be stale unless grounded in current, reliable sources or live tools. This matters for addresses, APIs, versions and protocol facts
+- **Prompt injection** — instructions hidden in content the model reads. If your project ingests external data, hostile text may try to redirect the assistant
+- **Code assistants** — Copilot, Cursor, Claude Code and similar tools. They can explain or generate code, but you still own the testing and verification
+- **Agentic workflows** — AI running multi-step tasks. They can save time, but an early unverified error can be repeated through every later step
+- **AI × Web3** — the sector from [Part 1](./part-1-industry-map.md). The useful question is what the chain is load-bearing for, not whether a project simply mentions AI
 
 ## Worked example
 

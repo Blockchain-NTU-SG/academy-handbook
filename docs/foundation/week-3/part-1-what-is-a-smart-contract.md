@@ -49,7 +49,7 @@ especially smart. It is a small program with unusual properties.
 An ordinary program runs on a computer someone controls. A smart contract is
 executed by the network's nodes according to its deployed code and rules.
 
-| | Ordinary program | Smart contract |
+| Dimension | Ordinary program | Smart contract |
 |---|---|---|
 | Runs on | A server someone owns | Every node, identically |
 | Who can change it | The owner, any time | It may be immutable, or changeable through an admin or upgrade mechanism |
@@ -93,7 +93,7 @@ who owns how much.
 **Functions** are what the contract can do. They split exactly the way
 [Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) described:
 
-| | Read | Write |
+| Request type | Read | Write |
 |---|---|---|
 | Changes state | No | Yes |
 | Costs gas | No | Yes |
@@ -149,13 +149,13 @@ do something in the right column.
 
 ## Landscape
 
-- **Deployment** — the transaction that puts a contract's code on-chain and gives it an address
-- **Constructor** — code that runs once at deployment, then never again
-- **ABI** — the description of how to call a contract's functions. [Part 2](./part-2-solidity-minimum.md)
-- **Verified source** — publishing the source so anyone can check it matches the deployed bytecode
-- **Immutable vs upgradeable** — some contracts can be replaced behind a proxy. That is a trust assumption, not a technicality
-- **Composability** — contracts calling contracts. Web3's greatest strength and how failures spread
-- **Reentrancy** — a classic bug class where a called contract calls back before the first finishes. [Part 5](./part-5-security-and-approvals.md)
+- **Deployment** — the transaction that puts a contract's code on-chain and gives it an address. That address is where later calls find the program
+- **Constructor** — code that runs once at deployment, then never again. It sets the contract's starting values
+- **ABI** — the description of how to call a contract's functions. Applications use it to turn a human action into the right request; see [Part 2](./part-2-solidity-minimum.md)
+- **Verified source** — publishing the source so anyone can check it matches the deployed bytecode. This makes the intended code easier to inspect, not automatically safe
+- **Immutable vs upgradeable** — some contracts can be replaced behind a proxy. An upgrade can fix bugs, but also gives the upgrade controller continuing power
+- **Composability** — contracts calling contracts. It lets applications combine building blocks, but connected failures can spread
+- **Reentrancy** — a classic bug class where a called contract calls back before the first finishes. If state is updated too late, an attacker may repeat an action before the balance is corrected; see [Part 5](./part-5-security-and-approvals.md)
 
 ## Worked example
 

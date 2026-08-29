@@ -54,7 +54,7 @@ reason this problem went unsolved for decades.
 
 ### Validity is not agreement
 
-| | Question | Settled by |
+| Question type | Question | Settled by |
 |---|---|---|
 | **Validity** | Does this block follow the rules? | Every node checks alone — Part 2 |
 | **Consensus** | Of several valid options, which counts? | The agreement mechanism — this page |
@@ -75,7 +75,7 @@ economically rational choice.**
 Both mechanisms below do that — but they do it in genuinely different ways, and
 the difference is worth keeping straight.
 
-| | Proof of Work | Proof of Stake |
+| Dimension | Proof of Work | Proof of Stake |
 |---|---|---|
 | Where security comes from | Block production is **expensive to perform** — real hardware and electricity | Validators put **assets at risk** that can be taken away |
 | What an attacker spends | Enormous real-world computing resources, continuously | Enormous capital, locked as stake |
@@ -96,7 +96,7 @@ contents, produces an output below a target. There is no shortcut — Part 2's
 "you cannot work backwards from a hash" guarantees it. You guess, trillions of
 times per second, until you get lucky. This is **mining**.
 
-| | |
+| Aspect | Details |
 |---|---|
 | The scarce resource | Electricity and specialised hardware |
 | How you attack it | Control most of the network's computing power |
@@ -120,7 +120,7 @@ Instead of burning electricity, participants **lock up the network's own asset**
 as collateral. On Ethereum, 32 ETH makes you a validator. Validators are chosen
 to propose and attest to blocks roughly in proportion to what they have staked.
 
-| | |
+| Aspect | Details |
 |---|---|
 | The scarce resource | The staked asset itself |
 | How you attack it | Control a large share of everything staked |
@@ -139,7 +139,7 @@ why some argue pooling reintroduces concentration.
 
 ### Side by side
 
-| | Proof of Work | Proof of Stake |
+| Dimension | Proof of Work | Proof of Stake |
 |---|---|---|
 | Scarce resource | Computing power | Staked capital |
 | Energy use | Very high | Roughly 99.9% lower |
@@ -200,14 +200,14 @@ maps it properly.
 
 ## Landscape
 
-- **51% attack** — controlling a majority of the securing resource. Real for small chains, wildly impractical for Bitcoin or Ethereum
-- **Slashing** — destroying part of a validator's stake for provable misbehaviour
-- **Validator / miner** — validators participate in Proof of Stake; miners produce blocks in Proof of Work. They are different roles
-- **Staking pool** — pooling assets to stake without needing 32 ETH alone
-- **Liquid staking** — a tradable token representing staked assets
-- **Byzantine Fault Tolerance (BFT)** — mechanisms giving fast, explicit finality. Week 2 meets one in Cosmos
-- **Nakamoto consensus** — the name for Bitcoin's longest-chain approach
-- **MEV** — value extractable by choosing transaction order. Real and consequential; deliberately Further Exploration
+- **51% attack** — controlling enough consensus power to influence which valid history is extended. Depending on the design, this can censor or reorder transactions, attempt a reorganisation or double-spend, and disrupt normal agreement; it does not reveal private keys or forge other people's signatures
+- **Slashing** — destroying part of a validator's stake for provable misbehaviour. It makes some attacks costly, but only applies where the Proof of Stake design supports it
+- **Validator / miner** — validators participate in Proof of Stake; miners produce blocks in Proof of Work. They secure networks in different ways and carry different costs
+- **Staking pool** — pooling assets so people can participate economically without running a validator or holding 32 ETH alone. The pool adds its own operator and smart-contract risks
+- **Liquid staking** — a tradable token representing staked assets. It can keep capital usable, but its price and redemption depend on the issuing system
+- **Byzantine Fault Tolerance (BFT)** — a family of mechanisms that can reach fast, explicit agreement when enough participants follow the protocol. Week 2 meets one in Cosmos
+- **Nakamoto consensus** — Bitcoin's longest-chain approach, where confidence grows as more work builds on a block. A transaction is not instantly final in the same way as a BFT decision
+- **MEV** — value available from choosing transaction order. Searchers and block producers may compete for it, which can change execution outcomes; it is Further Exploration
 
 ## Worked example
 
@@ -216,7 +216,7 @@ Someone wants to spend the same 10 ETH twice: pay a merchant, then erase it.
 They send 10 ETH to the merchant. It lands in block 500. They now need a history
 where that never happened, so they build an alternative chain from block 499.
 
-| | Proof of Work | Proof of Stake |
+| Dimension | Proof of Work | Proof of Stake |
 |---|---|---|
 | What they need | To control enough effective hashpower for long enough to outpace the honest chain | A very large share of all staked ETH |
 | Why it fails | The honest chain keeps extending; the attacker must sustain enough hashpower to outpace it | Finalising a competing chain requires provable misbehaviour |

@@ -108,7 +108,7 @@ The names sound technical, but the first difference is simple. An optimistic
 rollup assumes a batch is valid unless someone successfully challenges it. A ZK
 rollup supplies a cryptographic proof that the batch follows the rules.
 
-| | **Optimistic rollups** | **ZK rollups** |
+| Dimension | **Optimistic rollups** | **ZK rollups** |
 |---|---|---|
 | Assumption | Batches are valid unless challenged | Validity is proven mathematically |
 | Challenge window | ~7 days | None needed |
@@ -125,7 +125,7 @@ For Foundation, know that one approach **waits and watches**, the other
 A sidechain looks similar from the user's seat — cheaper, faster,
 EVM-compatible — and is structurally quite different.
 
-| | **Layer 2** | **Sidechain** |
+| Dimension | **Layer 2** | **Sidechain** |
 |---|---|---|
 | Security from | Ethereum | Its own validators |
 | If operators turn malicious | Designed to allow exit via L1; maturity varies | **Your funds depend on them** |
@@ -232,21 +232,21 @@ valuable.
 
 ## Landscape
 
-- **Rollup** — the general term for L2s posting compressed data to an L1
-- **Fraud proof / validity proof** — the challenge mechanism, or the cryptographic proof
-- **Sequencer** — the party ordering L2 transactions. Usually centralised today, which is an openly acknowledged limitation
-- **Data availability** — the guarantee that the data needed to exit is genuinely published
-- **Canonical vs third-party bridge** — the official bridge for a network, or an independent one
-- **IBC** — Cosmos's native chain-to-chain messaging standard
-- **Cross-chain protocols** — LayerZero, Wormhole, Across and others. Week 4
-- **Chain abstraction / intents** — hiding chain choice from users entirely
+- **Rollup** — an L2 design that processes transactions away from the base chain and posts data or proofs back to it. The goal is to share settlement with L1 while reducing the work and cost per transaction
+- **Fraud proof / validity proof** — a way to challenge a claimed result, or a cryptographic proof that the result follows the rules. The two approaches create different timing and trust assumptions
+- **Sequencer** — the service ordering L2 transactions before batches are posted to L1. A centralised sequencer can delay or censor transactions, but that does not automatically mean it can steal user funds
+- **Data availability** — confidence that the data needed to check the batch or exit is genuinely published. Without it, proving what happened becomes harder
+- **Canonical vs third-party bridge** — the bridge promoted by a network, or an independent bridge. Each has its own contracts and trust assumptions
+- **IBC** — Cosmos's native chain-to-chain messaging standard. It carries verified messages between connected chains rather than making the chains one shared ledger
+- **Cross-chain protocols** — LayerZero, Wormhole, Across and others. They coordinate messages or assets across chains, adding another verification layer; see Week 4
+- **Chain abstraction / intents** — hiding chain choice from users entirely. This can simplify the experience while moving decisions and trust into the application or solver system
 
 ## Worked example
 
 > **"Base fees are cents and Ethereum's are dollars. Why would anyone use
 > Ethereum?"**
 
-| | Ethereum L1 | Base (L2) |
+| Aspect | Ethereum L1 | Base (L2) |
 |---|---|---|
 | Fee for a swap | Typically higher | Typically lower |
 | Confirmation | Explicit finality: roughly minutes | Seconds |

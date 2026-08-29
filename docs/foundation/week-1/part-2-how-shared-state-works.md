@@ -65,6 +65,10 @@ That signed request is a **transaction**: an instruction to change state. A
 payment is one kind of transaction. Others deploy programs, call functions, or
 grant permissions.
 
+For now, focus on four ideas: **who authorised the request, where it is going,
+what value it carries, and the signature**. Data, nonce and fee fields will make
+more sense later as you work with contracts and transaction fees.
+
 | Field | What it is |
 |---|---|
 | **From** | The address requesting the change |
@@ -95,7 +99,7 @@ unit. Two reasons, and the second is the interesting one:
   <figcaption>A block groups transactions with metadata such as a previous hash and a resulting hash.</figcaption>
 </figure>
 
-| | Why |
+| Reason | Why |
 |---|---|
 | **Efficiency** | Agreeing once on a batch of hundreds beats agreeing hundreds of times |
 | **Ordering** | Order determines outcome. If an address holds 1 ETH and two transactions each try to spend it, which succeeds depends entirely on which comes first |
@@ -189,13 +193,13 @@ network follow? **Part 3 answers that question with consensus.**
 
 ## Landscape
 
-- **Full node** — verifies everything and holds recent state. What most people run
-- **Archive node** — keeps every historical state. Storage-heavy; used by explorers
-- **Light client** — verifies block headers without holding the full chain. One way to check the chain without running a full node
-- **Mempool** — the waiting room of submitted-but-not-yet-included transactions
-- **Genesis block** — block zero, the start of the chain
-- **Fork** — when the chain temporarily splits, or when the rules themselves change
-- **Merkle tree** — the hash structure summarising a block's transactions
+- **Full node** — verifies blocks and transactions itself and keeps the current state. It lets an operator check the chain without relying on a block producer
+- **Archive node** — keeps historical states as well as the current one. It uses much more storage and helps explorers answer old-state questions
+- **Light client** — checks block headers and selected proofs without holding the full chain. It is easier to run, but depends on the proofs and data it receives
+- **Mempool** — the waiting room of submitted-but-not-yet-included transactions. Pending transactions can be visible before a block producer chooses their order
+- **Genesis block** — block zero, the start of the chain. It gives participants a common reference for that network's history
+- **Fork** — when a chain temporarily splits, or when its rules change. During a split, different participants may briefly see different histories
+- **Merkle tree** — a hash structure summarising a block's transactions. It can prove that one transaction is included without sending the whole block
 
 ## Worked example
 

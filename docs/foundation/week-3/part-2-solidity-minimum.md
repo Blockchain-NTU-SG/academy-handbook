@@ -75,6 +75,10 @@ That is the behaviour to understand first. The words and symbols are the
 programming language used to express it. Solidity calls the stored text a
 `string`, and calls the action that changes it a function.
 
+The full version below uses `calldata` and `external`, which are more specific
+Solidity choices. You can ignore that distinction for now: the behaviour is
+unchanged — it still takes text and changes the message.
+
 ### One contract, fully explained
 
 Here is the complete, working `Guestbook` you will deploy tomorrow. It adds a
@@ -108,6 +112,9 @@ contract Guestbook {
     }
 }
 ```
+
+`constructor()` runs once when the contract is deployed, setting its first
+message.
 
 Read it once more now that you know its basic behaviour. The rest of this page
 names the important pieces one at a time.
@@ -256,14 +263,14 @@ You will meet `require` and `onlyOwner` when you read a real token in
 
 ## Landscape
 
-- **OpenZeppelin** — audited standard implementations. Real projects inherit from these rather than writing tokens from scratch
-- **`require` / `revert`** — reject a call and undo everything, refunding unused gas
-- **`onlyOwner`** — the most common permission pattern, and a trust assumption worth noticing
-- **Reentrancy guard** — protection against a called contract calling back mid-execution
-- **`payable` / `receive`** — how a contract accepts ETH
-- **Storage vs memory vs calldata** — where data lives during a call. Affects gas
-- **`mapping`** — a lookup table such as address → balance; Week 3 Part 4 uses one for token balances
-- **Foundry / Hardhat** — professional toolkits. Not needed for Foundation
+- **OpenZeppelin** — reviewed standard implementations. Real projects reuse these rather than writing tokens from scratch; reuse reduces repeated mistakes but is not a guarantee
+- **`require` / `revert`** — reject a call and undo its state changes. The transaction can still consume gas for work done before the rejection
+- **`onlyOwner`** — a common permission pattern that lets one address call selected functions. That owner becomes an important trust assumption
+- **Reentrancy guard** — protection against a called contract calling back mid-execution. It helps stop repeated actions before state is updated
+- **`payable` / `receive`** — how a contract accepts ETH. If the contract has no safe way to handle incoming ETH, a transfer can fail
+- **Storage vs memory vs calldata** — places data can be held during a call. The choice affects cost and how long the data remains available
+- **`mapping`** — a lookup table such as address → balance; Week 3 Part 4 uses one for token balances. It lets a contract find a value by key
+- **Foundry / Hardhat** — professional toolkits for testing, compiling and deploying. They help developers repeat checks, but are not needed for Foundation
 
 ## Worked example
 

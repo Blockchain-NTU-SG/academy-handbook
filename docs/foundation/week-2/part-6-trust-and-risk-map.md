@@ -170,14 +170,14 @@ you accepted**.
 
 ## Landscape
 
-- **Counterparty risk** — the chance the other party fails to perform. Extreme in the CEX row
-- **Smart contract risk** — bugs or exploitable logic. Audits reduce it; audited protocols still get exploited
-- **Oracle risk** — bad or manipulated external data
-- **Custodial risk** — someone else holding your assets
-- **Systemic risk** — one failure cascading, because protocols build on one another
-- **Composability** — protocols plugging into each other freely. Web3's greatest strength and the mechanism by which failures spread
-- **Governance risk** — the rules being changed by whoever controls governance
-- **Key management risk** — you, losing your keys. **The most common loss of all**
+- **Counterparty risk** — the chance the other party fails to perform. In the CEX row, an exchange can delay withdrawals or fail while holding the assets
+- **Smart contract risk** — bugs or exploitable logic. Audits reduce risk but do not guarantee safety; a bug can change balances or block withdrawals
+- **Oracle risk** — bad or manipulated external data. A contract that trusts the wrong price can lend, liquidate or pay out incorrectly
+- **Custodial risk** — someone else holding your assets. You gain support and convenience, but depend on that custodian's controls and solvency
+- **Systemic risk** — one failure cascading because protocols build on one another. A broken collateral asset can make other applications fail too
+- **Composability** — protocols plugging into each other freely. This makes new applications possible, but one failure can spread through connected contracts
+- **Governance risk** — the rules being changed by whoever controls governance. A vote or admin key may change permissions, fees or upgrade code
+- **Key management risk** — you losing your keys. **The most common loss of all**, because there may be no separate support desk that can restore access
 
 ## Worked example
 

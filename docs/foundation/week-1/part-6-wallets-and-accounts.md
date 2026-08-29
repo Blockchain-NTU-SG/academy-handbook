@@ -73,7 +73,7 @@ the entire security model.
   <p class="academy-figure-caption">Left to right: <strong>recovery phrase → private key → public key → address.</strong> The crossed arrow is the point — you cannot work backwards.</p>
 </div>
 
-| | What it is |
+| Account component | What it is |
 |---|---|
 | **Private key** | A very large secret number. Whoever knows it can sign as you, permanently. Not *like* a password — a password is checked by a server that can reset it. There is no server here |
 | **Public key** | Derived from the private key by one-way maths. Anyone can verify your signatures; nobody can work backwards. That impossibility *is* the security |
@@ -147,7 +147,7 @@ tell you plainly, reject it and find out why.
 
 ### Mainnet and testnet
 
-| | Mainnet | Testnet (Sepolia) |
+| Aspect | Mainnet | Testnet (Sepolia) |
 |---|---|---|
 | Assets worth | Real money | **Nothing** |
 | Where you get funds | Buy them | Free, from a faucet |
@@ -172,14 +172,14 @@ your wallet is on. It is the first line of every transaction screen for a reason
 
 ## Landscape
 
-- **Hardware wallet** — keys on a dedicated offline device. The standard for meaningful value; unnecessary for testnet work
-- **Hot vs cold wallet** — connected to the internet, or not
-- **Multisig** — requires several signatures to act
-- **Smart contract wallet** — an account controlled by code, allowing recovery options and spending limits
-- **Account abstraction** — making accounts programmable. Further Exploration
-- **ENS** — human-readable names like `alice.eth` mapped to addresses
-- **Derivation path** — the standard by which one recovery phrase generates many keys
-- **Nonce** — a per-account counter preventing replayed transactions
+- **Hardware wallet** — keys on a dedicated offline device. It reduces online exposure, but setup and backups still matter; it is unnecessary for testnet work
+- **Hot vs cold wallet** — connected to the internet, or not. Hot wallets are convenient; cold storage reduces online exposure and slows down everyday use
+- **Multisig** — requires several signatures to act. It reduces reliance on one key, but losing enough signers can block an action
+- **Smart contract wallet** — an account controlled by code, allowing recovery options and spending limits. The code becomes an additional trust and security surface
+- **Account abstraction** — making accounts programmable, which can soften the simple EOA/contract split. It is Further Exploration
+- **ENS** — human-readable names like `alice.eth` mapped to addresses. A name is easier to read, but still needs checking before a transfer
+- **Derivation path** — the standard by which one recovery phrase generates many keys. Using a different path can make an existing wallet appear empty
+- **Nonce** — a per-account counter that makes each transaction unique and fixes its order. Reusing an old nonce prevents a signed transaction from simply being replayed
 
 <figure class="academy-reference-visual academy-reference-visual--narrow">
   <img src="/learning/myfirstnft/hot-cold-wallets.png" alt="A diagram comparing hot wallets, which can perform many online operations, with a cold wallet kept offline to reduce exposure." />

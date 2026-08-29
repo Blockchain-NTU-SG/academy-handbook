@@ -196,10 +196,10 @@ Write it so **someone else** could look at your output and say yes or no.
 
 ## Landscape
 
-- **Scope creep** — the main cause of unfinished sprints. Your definition of done is the defence
-- **V0** — the first version that does the thing badly. Ship it in week 6
-- **Peer review** — week 7. Someone else will find what you cannot see
-- **Proof of Work** — the point of the sprint. Something real you can show someone
+- **Scope creep** — adding work after the goal is already clear. It makes a sprint harder to finish, so a definition of done is the defence
+- **V0** — the first version that does the thing badly but visibly. It gives you something to test and improve in week 6
+- **Peer review** — having someone else inspect the work. A fresh reader can find assumptions or failures you did not notice in week 7
+- **Proof of Work** — evidence that the project exists and works at the promised level. It gives a reviewer something real to inspect
 
 ::: tip Track kits
 The Developer, Research, Data and Product & Ecosystem kits will add deeper

@@ -122,7 +122,7 @@ toward unregulated venues with fewer protections.
 
 The genuine trade-off is worth naming:
 
-| | Regulated intermediary | Self-custody |
+| Aspect | Regulated intermediary | Self-custody |
 |---|---|---|
 | Recourse and support | Yes | None |
 | Someone accountable | Yes | You |
