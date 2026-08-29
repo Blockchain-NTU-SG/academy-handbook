@@ -4,7 +4,7 @@ day: 8
 title: "How it all connects: one user journey"
 status: drafting
 owner: "Director of Education"
-reading_time: "12 min"
+reading_time: "15 min"
 sources:
   - name: "ethereum.org — Stablecoins"
     url: "https://ethereum.org/stablecoins/"

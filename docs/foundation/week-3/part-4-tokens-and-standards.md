@@ -4,7 +4,7 @@ day: 4
 title: "Tokens, standards and real applications"
 status: drafting
 owner: "Director of Education"
-reading_time: "16 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — ERC-20 token standard"
     url: "https://ethereum.org/developers/docs/standards/tokens/erc-20/"

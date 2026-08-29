@@ -4,7 +4,7 @@ day: 3
 title: "Why we start with Ethereum and the EVM"
 status: drafting
 owner: "Director of Education"
-reading_time: "15 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Intro to Ethereum"
     url: "https://ethereum.org/developers/docs/intro-to-ethereum/"

@@ -4,7 +4,7 @@ day: 2
 title: "Comparing blockchains and their trade-offs"
 status: drafting
 owner: "Director of Education"
-reading_time: "16 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Consensus mechanisms"
     url: "https://ethereum.org/developers/docs/consensus-mechanisms/"

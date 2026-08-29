@@ -4,7 +4,7 @@ day: 2
 title: "How shared state works"
 status: drafting
 owner: "Director of Education"
-reading_time: "15 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Blocks"
     url: "https://ethereum.org/developers/docs/blocks/"

@@ -4,7 +4,7 @@ day: 1
 title: "Public, private and consortium chains"
 status: drafting
 owner: "Director of Education"
-reading_time: "12 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Enterprise Ethereum"
     url: "https://ethereum.org/enterprise/"

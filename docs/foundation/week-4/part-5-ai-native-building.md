@@ -4,7 +4,7 @@ day: 5
 title: "AI-native building"
 status: drafting
 owner: "Director of Education"
-reading_time: "13 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Smart contract security"
     url: "https://ethereum.org/developers/docs/smart-contracts/security/"

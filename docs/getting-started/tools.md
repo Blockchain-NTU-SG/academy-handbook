@@ -4,7 +4,7 @@ day: 3
 title: "The Web3 tool map"
 status: drafting
 owner: "Director of Education"
-reading_time: "12 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Wallets"
     url: "https://ethereum.org/wallets/"

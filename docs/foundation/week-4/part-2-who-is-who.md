@@ -4,7 +4,7 @@ day: 2
 title: "Who is who, and what kind of thing is it"
 status: drafting
 owner: "Director of Education"
-reading_time: "16 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Ethereum Foundation"
     url: "https://ethereum.org/foundation/"

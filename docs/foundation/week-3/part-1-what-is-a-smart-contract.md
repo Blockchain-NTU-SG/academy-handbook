@@ -4,7 +4,7 @@ day: 1
 title: "What a smart contract actually is"
 status: drafting
 owner: "Director of Education"
-reading_time: "14 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Introduction to smart contracts"
     url: "https://ethereum.org/developers/docs/smart-contracts/"

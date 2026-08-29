@@ -4,7 +4,7 @@ day: 6
 title: "The trust and risk map"
 status: drafting
 owner: "Director of Education"
-reading_time: "13 min"
+reading_time: "15 min"
 sources:
   - name: "ethereum.org — Security"
     url: "https://ethereum.org/security/"

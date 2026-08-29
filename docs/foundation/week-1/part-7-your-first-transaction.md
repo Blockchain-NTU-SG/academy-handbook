@@ -4,7 +4,7 @@ day: 7
 title: "Your first transaction"
 status: drafting
 owner: "Director of Education"
-reading_time: "30 min hands-on"
+reading_time: "45 min hands-on"
 sources:
   - name: "ethereum.org — Networks"
     url: "https://ethereum.org/developers/docs/networks/"

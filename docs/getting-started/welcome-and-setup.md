@@ -4,7 +4,7 @@ day: 1
 title: "Welcome, GitHub and the platform"
 status: drafting
 owner: "Director of Education"
-reading_time: "18 min"
+reading_time: "30 min hands-on"
 sources:
   - name: "GitHub Docs — Creating an account"
     url: "https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github"

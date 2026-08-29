@@ -4,7 +4,7 @@ day: 6
 title: "Choosing your direction"
 status: drafting
 owner: "Director of Education"
-reading_time: "20 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Developer resources"
     url: "https://ethereum.org/developers/"

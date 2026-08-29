@@ -4,7 +4,7 @@ day: 3
 title: "Remix lab: deploy your first contract"
 status: drafting
 owner: "Director of Education"
-reading_time: "45 min hands-on"
+reading_time: "60 min hands-on"
 sources:
   - name: "Remix IDE"
     url: "https://remix.ethereum.org/"

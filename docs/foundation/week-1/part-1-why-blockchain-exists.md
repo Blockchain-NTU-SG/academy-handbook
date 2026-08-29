@@ -4,7 +4,7 @@ day: 1
 title: "Why blockchain exists"
 status: review
 owner: "Director of Education"
-reading_time: "12 min"
+reading_time: "15 min"
 sources:
   - name: "ethereum.org — Web3"
     url: "https://ethereum.org/web3/"

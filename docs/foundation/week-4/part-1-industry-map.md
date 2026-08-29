@@ -4,7 +4,7 @@ day: 1
 title: "The Web3 industry map"
 status: drafting
 owner: "Director of Education"
-reading_time: "16 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Decentralized finance (DeFi)"
     url: "https://ethereum.org/defi/"

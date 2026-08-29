@@ -4,7 +4,7 @@ day: 4
 title: "Transactions, state, gas and RPC"
 status: drafting
 owner: "Director of Education"
-reading_time: "16 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Transactions"
     url: "https://ethereum.org/developers/docs/transactions/"

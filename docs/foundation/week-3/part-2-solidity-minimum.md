@@ -4,7 +4,7 @@ day: 2
 title: "The minimum Solidity you need"
 status: drafting
 owner: "Director of Education"
-reading_time: "18 min"
+reading_time: "25 min"
 sources:
   - name: "Solidity documentation"
     url: "https://docs.soliditylang.org/"

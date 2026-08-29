@@ -4,7 +4,7 @@ day: 3
 title: "Which tool answers which question"
 status: drafting
 owner: "Director of Education"
-reading_time: "15 min"
+reading_time: "25 min"
 sources:
   - name: "Messari Research"
     url: "https://messari.io/research"

@@ -20,12 +20,12 @@ out.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [The Web3 industry map](./part-1-industry-map.md) | 16 min |
-| 2 | [Who is who, and what kind of thing is it](./part-2-who-is-who.md) | 16 min |
-| 3 | [Which tool answers which question](./part-3-research-tool-map.md) | 15 min |
-| 4 | [GitHub in practice](./part-4-github-in-practice.md) | 14 min |
-| 5 | [AI-native building](./part-5-ai-native-building.md) | 13 min |
-| 6 | [Choosing your direction](./part-6-direction-card.md) | 20 min |
+| 1 | [The Web3 industry map](./part-1-industry-map.md) | 25 min |
+| 2 | [Who is who, and what kind of thing is it](./part-2-who-is-who.md) | 25 min |
+| 3 | [Which tool answers which question](./part-3-research-tool-map.md) | 25 min |
+| 4 | [GitHub in practice](./part-4-github-in-practice.md) | 20 min |
+| 5 | [AI-native building](./part-5-ai-native-building.md) | 20 min |
+| 6 | [Choosing your direction](./part-6-direction-card.md) | 25 min |
 
 **Anchor Mission:** [Week 4 mission](./anchor-mission.md) · 100 points
 

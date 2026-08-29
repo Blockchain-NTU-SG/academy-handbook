@@ -4,7 +4,7 @@ day: 4
 title: "Why anyone runs the network"
 status: drafting
 owner: "Director of Education"
-reading_time: "13 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Proof of stake rewards and penalties"
     url: "https://ethereum.org/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/"

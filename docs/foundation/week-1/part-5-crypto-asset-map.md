@@ -4,7 +4,7 @@ day: 5
 title: "What crypto assets actually are"
 status: drafting
 owner: "Director of Education"
-reading_time: "15 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Stablecoins"
     url: "https://ethereum.org/stablecoins/"

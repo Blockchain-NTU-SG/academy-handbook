@@ -4,7 +4,7 @@ day: 4
 title: "Staying safe: what you can lose and how"
 status: drafting
 owner: "Director of Education"
-reading_time: "16 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Security"
     url: "https://ethereum.org/security/"

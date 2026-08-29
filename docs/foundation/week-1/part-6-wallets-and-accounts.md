@@ -4,7 +4,7 @@ day: 6
 title: "Wallets, accounts and keys"
 status: drafting
 owner: "Director of Education"
-reading_time: "16 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Ethereum accounts"
     url: "https://ethereum.org/developers/docs/accounts/"

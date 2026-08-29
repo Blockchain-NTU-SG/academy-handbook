@@ -4,7 +4,7 @@ day: 4
 title: "GitHub in practice"
 status: drafting
 owner: "Director of Education"
-reading_time: "14 min"
+reading_time: "20 min"
 sources:
   - name: "GitHub Docs — About repositories"
     url: "https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories"

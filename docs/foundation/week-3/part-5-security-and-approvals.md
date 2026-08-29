@@ -4,7 +4,7 @@ day: 5
 title: "Security, approvals and permissions"
 status: drafting
 owner: "Director of Education"
-reading_time: "14 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Smart contract security"
     url: "https://ethereum.org/developers/docs/smart-contracts/security/"

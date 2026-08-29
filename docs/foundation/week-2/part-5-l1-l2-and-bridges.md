@@ -4,7 +4,7 @@ day: 5
 title: "L1, L2, sidechains and bridges"
 status: drafting
 owner: "Director of Education"
-reading_time: "17 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Layer 2"
     url: "https://ethereum.org/layer-2/"
