@@ -78,14 +78,15 @@ which makes wrong answers *read* exactly like right ones.
 | Rubber-ducking a design | Knowing what it does not know |
 
 ::: danger The specific failure mode that matters here
-**AI will confidently produce a plausible contract address, API endpoint,
+**AI can confidently produce a plausible contract address, API endpoint,
 package name or configuration value that does not exist or is wrong.**
 
 It reads exactly like the correct answer. In this field, a wrong address can send
 funds to the wrong place and may be irreversible.
 
 **Verify every address, endpoint and version against a primary source.** Current
-facts need a live, trustworthy source; do not rely on a model's assumed cutoff.
+facts need a live, trustworthy source; do not rely on a model's assumed knowledge
+alone.
 [Part 3](./part-3-research-tool-map.md) is that skill.
 :::
 
@@ -183,7 +184,7 @@ Week 3.
 ## Landscape
 
 - **Hallucination** — confidently generating something false. The core risk here
-- **Training cutoff** — anything newer than the model's data may be wrong or invented
+- **Knowledge freshness** — model answers may be stale unless grounded in current, reliable sources or live tools
 - **Prompt injection** — instructions hidden in content the model reads. Relevant if your project ingests external data
 - **Code assistants** — Copilot, Cursor, Claude Code and similar
 - **Agentic workflows** — AI running multi-step tasks. Powerful, and it compounds unverified errors

@@ -47,7 +47,7 @@ produced.
 
 - Read a short Solidity contract and say what it does
 - Identify state variables, functions, events and visibility
-- Explain what `view` means and why it is free
+- Explain what `view` means and why a normal read does not charge a transaction fee
 - Explain what an ABI is and why applications need one
 
 ## Core
@@ -126,7 +126,7 @@ persisting between calls.
 | `mapping(address => uint256)` | A lookup table — this is how token balances are stored |
 
 **`public`** does something genuinely useful: Solidity automatically creates a
-free read function for it. Declaring `message` public means anyone can call
+read function for it. Declaring `message` public means anyone can call
 `message()` and get the value, without you writing that function.
 
 @tab Events

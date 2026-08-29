@@ -8,6 +8,9 @@ export default defineUserConfig({
   lang: 'en-US',
   title: 'Blockchain@NTU Academy',
   description: 'A beginner-friendly Web3 learning programme built around an open handbook, structured learning and Proof of Work.',
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/academy-handbook/favicon.png' }],
+  ],
 
   locales: {
     '/': {

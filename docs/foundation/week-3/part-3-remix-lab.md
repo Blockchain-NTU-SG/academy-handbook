@@ -31,7 +31,8 @@ Academy exercise to mainnet**, and never connect a wallet holding real funds.
 :::
 
 Today you put a program on a blockchain. It will have its own address, anyone
-will be able to call it, and it will still be there long after this cohort ends.
+can call it, and it remains publicly queryable while the testnet and its history
+are maintained.
 
 ::: tip Use AI as a tutor, not an autopilot
 During the walkthrough, it is fine to paste a compiler error into an AI
@@ -138,8 +139,9 @@ Nothing is installed. Remix runs entirely in a browser tab.
    compiler version matches your `pragma` — 0.8.20 or later — then press
    **Compile Guestbook.sol**.
 
-   *You should get a green tick on the compiler icon.* Warnings are usually fine;
-   **errors are not** and must be fixed before you can deploy.
+   *You should get a green tick on the compiler icon.* Warnings do not normally
+   block compilation, but read them before deploying; **errors are not** and must
+   be fixed before you can deploy.
 
    <figure class="academy-shot">
      <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Remix Solidity Compiler tab showing a successful compile with a green check.">
@@ -192,8 +194,8 @@ Nothing is installed. Remix runs entirely in a browser tab.
      <figcaption>Compare this fee to your Week 1 transfer. That difference is the lesson.</figcaption>
    </figure>
 
-   *After a few seconds the Remix terminal shows a green tick, and your contract
-   appears under **Deployed Contracts** at the bottom left.*
+   *After the transaction confirms, the Remix terminal shows a green tick, and
+   your contract appears under **Deployed Contracts** at the bottom left.*
 
    **Copy the contract address.** You need it for the mission.
 
@@ -202,23 +204,23 @@ Nothing is installed. Remix runs entirely in a browser tab.
        <span class="academy-shot-label">Screenshot 5</span>
        <span class="academy-shot-what">The <strong>Deployed Contracts</strong> panel with the contract address and its copy button highlighted.</span>
      </div>
-     <figcaption>This address is now a permanent, public thing you made.</figcaption>
+     <figcaption>This address is a public deployment recorded on the testnet while its history is maintained.</figcaption>
    </figure>
 
 6. **Call a read function**
 
    Expand your deployed contract. You will see buttons for each function.
 
-   The **blue** buttons are reads. Press **`message`**.
+   The read button is blue in the current Remix interface. Press **`message`**.
 
-   *The answer appears immediately, underneath the button. No wallet pop-up. No
-   fee.* That is `view` doing exactly what [Part 2](./part-2-solidity-minimum.md)
+   *The answer appears immediately, underneath the button. No wallet pop-up and
+   no transaction fee.* That is `view` doing exactly what [Part 2](./part-2-solidity-minimum.md)
    said it would.
 
 7. **Call a write function**
 
-   The **orange** button is the write. In the field next to **`setMessage`**,
-   type a new message and press it.
+   The **orange** button is the write function in the current Remix interface. In
+   the field next to **`setMessage`**, type a new message and press it.
 
    Your wallet opens again. Confirm.
 
@@ -232,7 +234,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
        <span class="academy-shot-label">Screenshot 6</span>
        <span class="academy-shot-what">The expanded contract with the blue read buttons and orange write button labelled, and a returned value visible.</span>
      </div>
-     <figcaption>Blue is free and instant. Orange costs gas and needs a signature.</figcaption>
+     <figcaption>Read calls do not send a transaction. State-changing calls require a signed transaction and gas.</figcaption>
    </figure>
 
    ::: important You just felt the read/write distinction

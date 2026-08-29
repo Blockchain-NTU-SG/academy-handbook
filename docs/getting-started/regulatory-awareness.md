@@ -1,7 +1,7 @@
 ---
 week: 0
 day: 5
-title: "Regulatory awareness: a global primer"
+title: "Regulatory awareness: Singapore and global orientation"
 status: drafting
 owner: "Director of Education"
 reading_time: "10 min"
@@ -30,9 +30,12 @@ sources:
   - name: "U.S. Treasury — GENIUS Act"
     url: "https://home.treasury.gov/news/press-releases/sb0197"
     label: "Link"
+  - name: "U.S. Treasury — GENIUS Act implementation proposal (2026)"
+    url: "https://home.treasury.gov/news/press-releases/sb0605"
+    label: "Link"
 ---
 
-# Week 0 · Part 5 — Regulatory awareness: a global primer
+# Week 0 · Part 5 — Regulatory awareness: Singapore and global orientation
 
 [Part 4](./safety.md) was about losing things to attackers. This is the
 other way people get hurt: assuming that because something is legal and
@@ -166,7 +169,7 @@ framework helps answer:
 | **SEC (United States)** | Whether a crypto asset or transaction may fall within US federal securities laws; the answer depends on its structure and the activity involved |
 | **CFTC (United States)** | Oversight of certain commodity derivatives and anti-fraud or manipulation concerns in relevant digital-asset markets; it is not a blanket regulator for every crypto activity |
 | **MiCA (European Union)** | A harmonised framework for issuing crypto-assets and providing related services that are not covered by other EU financial-services laws |
-| **GENIUS Act (United States)** | A federal framework for payment stablecoins, including issuer, reserve and compliance expectations; it does not describe every crypto asset |
+| **GENIUS Act (United States)** | A federal framework for payment stablecoins, including issuer, reserve and compliance requirements. Implementation rules and effective dates are being phased in; check current Treasury guidance. It does not regulate every crypto asset |
 
 These frameworks are orientation points, not a legal checklist. Check the
 current regulator or legislative source for the jurisdiction, asset and activity
@@ -193,7 +196,7 @@ one framework as universal.
 ## Where the Academy sits
 
 ::: tip Stated plainly, so there is no ambiguity
-- Academy activities are **educational** and **testnet-first**. Testnet assets have no monetary value, so no required activity here involves a regulated financial activity.
+- Required Academy activities are designed as **educational, testnet-only exercises** and do not involve handling real customer assets or offering real financial services.
 - Academy content is **not financial advice** and **not legal advice**.
 - We do not endorse any token, protocol, exchange or project. Named examples throughout the handbook are **illustrative** — chosen because they are recognisable, not because they are recommended.
 - If you go on to do something real — issuing a token, holding others' assets, taking money from users — that is the point to get actual professional advice. This handbook is not it.
@@ -232,12 +235,15 @@ Including instead of this page, if the two ever disagree.
 - [CFTC — Digital Assets](https://www.cftc.gov/LearnandProtect/digitalassets/index.htm)
 - [European Commission — Crypto-assets (MiCA)](https://finance.ec.europa.eu/digital-finance/crypto-assets_en)
 - [U.S. Treasury — Statement on enactment of the GENIUS Act](https://home.treasury.gov/news/press-releases/sb0197)
+- [U.S. Treasury — GENIUS Act implementation proposal (2026)](https://home.treasury.gov/news/press-releases/sb0605)
 :::
 
 ::: warning Maintainer note
 Regulatory pages date faster than any other content in this handbook. Re-check
 these links and the summary above at the start of each cohort, and treat the MAS
 site as authoritative over this page.
+
+Last reviewed: August 2026
 :::
 
 ::: details Sources and attribution
@@ -251,6 +257,7 @@ All MAS references are **Link**, referenced only:
 - [CFTC — Digital Assets](https://www.cftc.gov/LearnandProtect/digitalassets/index.htm) — Link, referenced only
 - [European Commission — Crypto-assets (MiCA)](https://finance.ec.europa.eu/digital-finance/crypto-assets_en) — Link, referenced only
 - [U.S. Treasury — Statement on enactment of the GENIUS Act](https://home.treasury.gov/news/press-releases/sb0197) — Link, referenced only
+- [U.S. Treasury — GENIUS Act implementation proposal (2026)](https://home.treasury.gov/news/press-releases/sb0605) — Link, referenced only
 
 *This page is educational. It is not legal or financial advice.*
 :::
