@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 360" role="img" aria-labelledby="title desc">
+  <title id="title">A reviewable GitHub workflow</title>
+  <desc id="desc">Six steps from creating a branch to merging a reviewed change: branch, test, review, document, open a pull request, and merge.</desc>
+  <rect width="1500" height="360" fill="#fbfdfe"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#2b2d39">
+    <g transform="translate(70 66)">
+      <rect width="190" height="150" rx="16" fill="#e8f7fd" stroke="#37a4e3" stroke-width="3"/>
+      <text x="24" y="43" font-size="22" font-weight="700">1</text>
+      <text x="95" y="78" font-size="23" font-weight="700" text-anchor="middle">Create a branch</text>
+      <text x="95" y="112" font-size="18" fill="#53627a" text-anchor="middle">keep main stable</text>
+    </g>
+    <path d="M280 141 H314 l-13 -10 m13 10 -13 10" fill="none" stroke="#7091e6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(330 66)">
+      <rect width="190" height="150" rx="16" fill="#eef2fa" stroke="#7091e6" stroke-width="3"/>
+      <text x="24" y="43" font-size="22" font-weight="700">2</text>
+      <text x="95" y="78" font-size="23" font-weight="700" text-anchor="middle">Test locally</text>
+      <text x="95" y="112" font-size="18" fill="#53627a" text-anchor="middle">check the change</text>
+    </g>
+    <path d="M540 141 H574 l-13 -10 m13 10 -13 10" fill="none" stroke="#7091e6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(590 66)">
+      <rect width="190" height="150" rx="16" fill="#f0f2f5" stroke="#8697c4" stroke-width="3"/>
+      <text x="24" y="43" font-size="22" font-weight="700">3</text>
+      <text x="95" y="78" font-size="23" font-weight="700" text-anchor="middle">Review changes</text>
+      <text x="95" y="112" font-size="18" fill="#53627a" text-anchor="middle">read the diff</text>
+    </g>
+    <path d="M800 141 H834 l-13 -10 m13 10 -13 10" fill="none" stroke="#7091e6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(850 66)">
+      <rect width="190" height="150" rx="16" fill="#e8f7fd" stroke="#37a4e3" stroke-width="3"/>
+      <text x="24" y="43" font-size="22" font-weight="700">4</text>
+      <text x="95" y="78" font-size="23" font-weight="700" text-anchor="middle">Document it</text>
+      <text x="95" y="112" font-size="18" fill="#53627a" text-anchor="middle">explain the work</text>
+    </g>
+    <path d="M1060 141 H1094 l-13 -10 m13 10 -13 10" fill="none" stroke="#7091e6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(1110 66)">
+      <rect width="190" height="150" rx="16" fill="#eef2fa" stroke="#7091e6" stroke-width="3"/>
+      <text x="24" y="43" font-size="22" font-weight="700">5</text>
+      <text x="95" y="78" font-size="23" font-weight="700" text-anchor="middle">Open a PR</text>
+      <text x="95" y="112" font-size="18" fill="#53627a" text-anchor="middle">invite feedback</text>
+    </g>
+    <path d="M1320 141 H1354 l-13 -10 m13 10 -13 10" fill="none" stroke="#7091e6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(1370 66)">
+      <rect width="90" height="150" rx="16" fill="#2b2d39" stroke="#7091e6" stroke-width="3"/>
+      <text x="45" y="43" font-size="22" font-weight="700" fill="#9aeaf6" text-anchor="middle">6</text>
+      <text x="45" y="82" font-size="21" font-weight="700" fill="#fff" text-anchor="middle">Merge</text>
+      <text x="45" y="112" font-size="17" fill="#adbbda" text-anchor="middle">after</text>
+      <text x="45" y="134" font-size="17" fill="#adbbda" text-anchor="middle">review</text>
+    </g>
+  </g>
+</svg>

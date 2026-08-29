@@ -15,6 +15,9 @@ sources:
   - name: "ethereum.org — Nodes and clients"
     url: "https://ethereum.org/developers/docs/nodes-and-clients/"
     label: "Reuse"
+  - name: "Web3 Internship Handbook — chain access models visual"
+    url: "https://web3intern.xyz/zh/blockchain-basic/"
+    label: "Reuse"
 ---
 
 # Week 2 · Part 1 — Public, private and consortium chains
@@ -56,6 +59,11 @@ permissioned. A consortium chain might publish some data publicly while
 restricting who validates.
 
 ### The three models
+
+<figure class="academy-reference-visual">
+  <img src="/learning/web3intern/chain-access-models.svg" alt="Three blockchain access models: public, consortium and private, arranged from open participation to restricted participation." />
+  <figcaption>Public, consortium and private chains make different choices about who can participate and who can see the record.</figcaption>
+</figure>
 
 :::: tabs
 @tab Public
@@ -150,7 +158,7 @@ the honest answer was the top left.
 
 - **Hyperledger Fabric** — a widely used permissioned framework, with private channels between subsets of members
 - **Enterprise Ethereum** — EVM-compatible deployments run under permissioned conditions
-- **Sidechain** — a separate chain connected to a main one, often with its own smaller validator set. [Part 5](./day-5-l1-l2-and-bridges.md)
+- **Sidechain** — a separate chain connected to a main one, often with its own smaller validator set. [Part 5](./part-5-l1-l2-and-bridges.md)
 - **Validator set** — the group permitted to produce blocks. Open on public chains, a membership list on permissioned ones
 - **Node operator agreement** — the contractual layer consortium chains need and public chains do not
 - **Hybrid designs** — private execution with periodic commitments anchored to a public chain
@@ -187,4 +195,5 @@ revolutionise shipping."
 - [ethereum.org — Enterprise Ethereum](https://ethereum.org/enterprise/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Networks](https://ethereum.org/developers/docs/networks/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Nodes and clients](https://ethereum.org/developers/docs/nodes-and-clients/) — Reuse (CC BY 4.0), adapted
+- [Web3 Internship Handbook](https://web3intern.xyz/zh/blockchain-basic/) — Reuse (permission granted); public, consortium and private chain visual adapted with permission
 :::

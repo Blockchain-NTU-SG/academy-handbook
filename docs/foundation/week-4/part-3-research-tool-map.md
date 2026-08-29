@@ -216,7 +216,7 @@ Two claims. Both checkable in about ten minutes.
 3. **What can go wrong?**
 
    Docs and GitHub — is it audited, and by whom? Which oracle does it use? Who
-   can upgrade the contracts? [Week 3 Part 5](../week-3/day-5-security-and-approvals.md)
+   can upgrade the contracts? [Week 3 Part 5](../week-3/part-5-security-and-approvals.md)
    gave you the vocabulary for all three.
 
 4. **Who controls it?**
@@ -231,7 +231,7 @@ Two claims. Both checkable in about ten minutes.
 :::
 
 ::: important On "completely safe"
-[Week 2 Part 6](../week-2/day-6-trust-and-risk-map.md) already answered this.
+[Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md) already answered this.
 Nothing with contracts, an oracle and an upgrade key is "completely safe" — the
 useful question is **what has to hold, and who has to behave.**
 

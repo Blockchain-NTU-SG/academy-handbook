@@ -28,7 +28,7 @@ sources:
 
 # Week 2 · Part 5 — L1, L2, sidechains and bridges
 
-[Part 2](./day-2-comparing-blockchains.md) left Ethereum with an unresolved
+[Part 2](./part-2-comparing-blockchains.md) left Ethereum with an unresolved
 scaling challenge. Ethereum historically kept L1 capacity conservative so that
 validation remained accessible, while scaling heavily through Layer 2s. Today it
 is scaling both: gradually increasing L1 capacity while continuing to expand L2
@@ -68,7 +68,7 @@ Ethereum remains the referee.**
 
 <figure class="academy-reference-visual">
   <img src="/learning/ethereum-org/layer-2-rollup.png" alt="Diagram showing users making many Layer 2 transactions, a rollup bundling them, and Ethereum receiving the resulting data and blocks." />
-  <figcaption>Rollups process transactions separately and post data or proofs back to Ethereum. Source: <a href="https://ethereum.org/layer-2/learn/">ethereum.org</a>, CC BY 4.0.</figcaption>
+  <figcaption>Rollups process transactions separately and post data or proofs back to Ethereum.</figcaption>
 </figure>
 
 **Many L2 transactions can be batched into L1 postings, so the L1 cost is shared
@@ -247,7 +247,7 @@ because fees matter. For very high-value settlement, some users may prefer
 paying more for direct L1 settlement — but the right choice depends on the
 application's requirements.
 
-That sentence is Week 2 in miniature — and [Part 6](./day-6-trust-and-risk-map.md)
+That sentence is Week 2 in miniature — and [Part 6](./part-6-trust-and-risk-map.md)
 turns it into a tool you can point at anything.
 :::
 

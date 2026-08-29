@@ -156,6 +156,11 @@ each unit is individually distinct.**
 Uses go well beyond profile pictures: event tickets, in-game items, domain names
 like ENS, credentials, ownership records.
 
+<figure class="academy-reference-visual">
+  <img src="/learning/web3intern/cryptopunks.jpg" alt="A strip of CryptoPunks pixel-art characters, an early example of a tokenised digital collection." />
+  <figcaption>CryptoPunks is an early example of a tokenised collection: the image can be copied, while the token contract records which address holds a particular item.</figcaption>
+</figure>
+
 ::: warning The most common NFT misconception
 **The image is usually not on the blockchain.** Storing images on-chain is
 prohibitively expensive, so the token typically holds a *link*. If whatever
@@ -216,7 +221,7 @@ bankruptcy costs you the asset. The USDC is the only one where an issuer could
 freeze you. The NFT is the only one that can silently become a broken link.
 
 ::: important This is the actual skill
-Being able to build this table for anything you hold. [Week 2 Part 6](../week-2/day-6-trust-and-risk-map.md)
+Being able to build this table for anything you hold. [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md)
 generalises it into a tool you can point at anything.
 :::
 
@@ -232,6 +237,7 @@ generalises it into a tool you can point at anything.
 - [ethereum.org — ERC-20 token standard](https://ethereum.org/developers/docs/standards/tokens/erc-20/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — NFTs](https://ethereum.org/nft/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — What is ether](https://ethereum.org/eth/) — Reuse (CC BY 4.0), adapted
+- [Web3 Internship Handbook](https://web3intern.xyz/zh/blockchain-basic/) — Reuse (permission granted); CryptoPunks visual adapted with permission
 
 *Named assets are illustrative examples chosen for recognisability, not
 recommendations. Nothing here is financial advice.*

@@ -18,6 +18,9 @@ sources:
   - name: "Choose a License"
     url: "https://choosealicense.com/"
     label: "Link"
+  - name: "Web3 Internship Handbook — GitHub workflow visual"
+    url: "https://web3intern.xyz/zh/smart-contract-development/"
+    label: "Reuse"
 ---
 
 # Week 4 · Part 4 — GitHub in practice
@@ -61,6 +64,11 @@ faucet API` tells them what changed and why.
 You will read your own history in Week 8 when writing up your Proof of Work.
 Write for that person.
 :::
+
+<figure class="academy-reference-visual">
+  <img src="/learning/web3intern/github-review-workflow.svg" alt="A six-step GitHub workflow from creating a branch to testing, reviewing, documenting, opening a pull request and merging." />
+  <figcaption>A simple review workflow turns work into something others can inspect and improve.</figcaption>
+</figure>
 
 ### The README is the front door to the deliverable
 
@@ -116,6 +124,20 @@ document.
 your machine because of something you set up months ago and forgot are not
 reproducible instructions. Test them somewhere clean.
 
+::: tip A direction-neutral delivery check
+Before you share a repository, a reviewer should be able to answer four simple
+questions:
+
+- What is this, and what problem or question does it address?
+- How can someone view, reproduce, run, or inspect the output?
+- What evidence shows what you did or found?
+- What are the limits, sources, and any important AI assistance?
+
+The evidence can look different across the four directions: code output, a
+research argument, a dataset or query, or a product walkthrough. The standard
+is still the same — make the work understandable and checkable.
+:::
+
 ### Licences
 
 ::: warning No licence means "all rights reserved"
@@ -150,7 +172,7 @@ is being straightforward about it.
 | Adapted someone's code | Credit them and link the source |
 | Followed a tutorial | Say so. Nobody minds |
 | Forked and modified | GitHub shows this automatically. Explain what you changed |
-| Used AI substantially | Say what it produced — see [Part 5](./day-5-ai-native-building.md) |
+| Used AI substantially | Say what it produced — see [Part 5](./part-5-ai-native-building.md) |
 
 ::: important The Academy's position
 **Using AI, tutorials and other people's code is expected, not penalised.**
@@ -245,4 +267,5 @@ Week 8 will ask you to ship the second version — start building the habits now
 - [GitHub Docs — About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) — Reuse (CC BY 4.0), adapted
 - [GitHub Docs — About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) — Reuse (CC BY 4.0), adapted
 - [Choose a License](https://choosealicense.com/) — Link, referenced only
+- [Web3 Internship Handbook](https://web3intern.xyz/zh/smart-contract-development/) — Reuse (permission granted); GitHub workflow visual adapted with permission
 :::

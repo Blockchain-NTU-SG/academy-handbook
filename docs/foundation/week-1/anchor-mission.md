@@ -33,7 +33,7 @@ it — because everything in Weeks 2 through 8 assumes that connection is in pla
 
 ## What to submit
 
-Complete [Part 7](./day-7-your-first-transaction.md) first.
+Complete [Part 7](./part-7-your-first-transaction.md) first.
 
 ### Evidence — three items
 
@@ -123,7 +123,7 @@ The three most common rejections at Week 1:
 |---|---|
 | The link points to mainnet instead of Sepolia | Re-check the network in your wallet and resend |
 | Q1 restates the explorer instead of explaining the process | Describe what *happened*, in order, not what the fields say |
-| Q3 answers "how do we know it was valid" instead of "why do we need agreement at all" | [Part 3](./day-3-consensus.md), first section |
+| Q3 answers "how do we know it was valid" instead of "why do we need agreement at all" | [Part 3](./part-3-consensus.md), first section |
 
 All three are quick fixes. If you are stuck on the transaction itself rather
 than the writing — a faucet not working is the usual culprit — ask in the

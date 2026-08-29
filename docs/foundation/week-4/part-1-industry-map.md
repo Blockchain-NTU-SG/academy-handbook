@@ -109,7 +109,7 @@ it — RPC providers, indexers, data availability, developer tooling.
 **Limitation:** convenience recentralises. When most applications read the chain
 through two providers, an outage at one takes down a large slice of "the
 decentralised web" — which is exactly what
-[Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) warned about.
+[Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) warned about.
 
 @tab Wallets
 
@@ -122,7 +122,7 @@ usable. Wallets are the entire user-facing surface.
 **Examples:** MetaMask, Phantom, Rabby, Safe
 
 **Limitation:** the security burden sits with the user, and interfaces still ask
-people to approve things they cannot evaluate — [Week 3 Part 5](../week-3/day-5-security-and-approvals.md).
+people to approve things they cannot evaluate — [Week 3 Part 5](../week-3/part-5-security-and-approvals.md).
 
 @tab Stablecoins and payments
 
@@ -135,7 +135,7 @@ same correspondent-banking path.
 **Examples:** Circle (USDC), Tether (USDT)
 
 **Limitation:** the largest stablecoins are **centralised claims on an issuer**.
-Reserves, redemption and freezing are all trust assumptions — [Week 1 Part 5](../week-1/day-5-crypto-asset-map.md).
+Reserves, redemption and freezing are all trust assumptions — [Week 1 Part 5](../week-1/part-5-crypto-asset-map.md).
 This is the clearest case where Web3 redistributes trust rather than removing it.
 
 @tab DeFi
@@ -178,7 +178,7 @@ record that can be referenced across applications.
 
 **Examples:** ENS, event ticketing, in-game items
 
-**Limitation:** the token usually points at a link — [Week 3 Part 4](../week-3/day-4-tokens-and-standards.md).
+**Limitation:** the token usually points at a link — [Week 3 Part 4](../week-3/part-4-tokens-and-standards.md).
 And the 2021 collectibles boom left the sector's reputation well behind its more
 durable uses.
 
@@ -210,7 +210,7 @@ jurisdictions.
 
 @tab Oracles and cross-chain
 
-**Problem:** contracts cannot see outside their own chain — [Week 2 Part 3](../week-2/day-3-why-ethereum-and-evm.md).
+**Problem:** contracts cannot see outside their own chain — [Week 2 Part 3](../week-2/part-3-why-ethereum-and-evm.md).
 
 **Why blockchain matters:** without external data and cross-chain messaging,
 contracts can only act on what is already on their chain.
@@ -218,7 +218,7 @@ contracts can only act on what is already on their chain.
 **Examples:** Chainlink; LayerZero, Wormhole, Across
 
 **Limitation:** both can create **concentrated points of failure**. Bridges have
-historically been a major source of large crypto exploits — [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md).
+historically been a major source of large crypto exploits — [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md).
 
 @tab Data, ZK, DePIN, AI
 
@@ -276,13 +276,13 @@ credits."** You have never heard of it. Place it in ninety seconds.
 | Limitation? | **The credit's quality is an off-chain fact.** Tokenising a worthless credit produces a worthless token, verifiably |
 
 ::: important That last row is the whole skill
-[Week 1 Part 3](../week-1/day-3-consensus.md) said it in a single line:
+[Week 1 Part 3](../week-1/part-3-consensus.md) said it in a single line:
 **blockchains secure the ledger, not reality.**
 
 The chain can prove a credit was issued, transferred and retired exactly once.
 It cannot prove a tree was planted. Any project in this sector lives or dies on
 its off-chain verification — so *that* is what you investigate, and
-[Part 3](./day-3-research-tool-map.md) shows you how.
+[Part 3](./part-3-research-tool-map.md) shows you how.
 :::
 
 ::: details Further exploration — optional, not assessed

@@ -138,7 +138,7 @@ why some argue pooling reintroduces concentration.
 They make different trade-offs — a theme [Week 2](../week-2/) makes central.
 
 And both raise the same obvious question: *if nobody is being paid a salary, why
-does anyone do this work at all?* That is [Part 4](./day-4-incentives.md).
+does anyone do this work at all?* That is [Part 4](./part-4-incentives.md).
 :::
 
 ### Why "wait for confirmations"
@@ -181,7 +181,7 @@ statement was recorded, when, and by whom. It says nothing about the diamond.
 **Blockchains secure the ledger, not reality.**
 :::
 
-Week 3's oracles are the partial answer to this, and [Week 2 Part 6](../week-2/day-6-trust-and-risk-map.md)
+Week 3's oracles are the partial answer to this, and [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md)
 maps it properly.
 
 ## Landscape

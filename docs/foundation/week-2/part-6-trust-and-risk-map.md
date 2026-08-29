@@ -128,7 +128,7 @@ you have tomorrow.
 | **Use a bridge** | Adds a historically important source of exploit risk: the bridge mechanism between two chains |
 
 ::: warning Why the oracle row matters most
-The protocol needs a price to decide whether to liquidate. [Part 3](./day-3-why-ethereum-and-evm.md)
+The protocol needs a price to decide whether to liquidate. [Part 3](./part-3-why-ethereum-and-evm.md)
 explained that contracts cannot see outside the chain, so a price must be *put*
 on-chain by someone.
 

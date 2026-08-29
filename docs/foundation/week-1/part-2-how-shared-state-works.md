@@ -18,18 +18,18 @@ sources:
   - name: "ethereum.org — Intro to Ethereum"
     url: "https://ethereum.org/developers/docs/intro-to-ethereum/"
     label: "Reuse"
-  - name: "Web3 Internship Handbook — blockchain basics visuals"
-    url: "https://github.com/ethpanda-org/Web3-Internship-Handbook"
+  - name: "Web3 Internship Handbook — block to blockchain visual"
+    url: "https://web3intern.xyz/zh/blockchain-basic/"
     label: "Reuse"
 ---
 
 # Week 1 · Part 2 — How shared state works
 
-[Part 1](./day-1-why-blockchain-exists.md) ended with a claim: many independent
+[Part 1](./part-1-why-blockchain-exists.md) ended with a claim: many independent
 computers can maintain one shared record without any of them being in charge.
 That is easy to say and not at all obvious how to build.
 
-Today is the machinery. [Part 3](./day-3-consensus.md) answers the remaining
+Today is the machinery. [Part 3](./part-3-consensus.md) answers the remaining
 question — *who decides what gets added next* — but none of that makes sense
 until you know what is being added.
 
@@ -88,7 +88,7 @@ unit. Two reasons, and the second is the interesting one:
 
 <figure class="academy-reference-visual academy-reference-visual--narrow">
   <img src="/learning/blockchain-block-structure.jpg" alt="An illustrated blockchain block containing a previous hash, a random number, transactions and a resulting hash." />
-  <figcaption>Visual adapted from the Web3 Internship Handbook's blockchain basics materials.</figcaption>
+  <figcaption>A block groups transactions with metadata such as a previous hash and a resulting hash.</figcaption>
 </figure>
 
 | | Why |
@@ -96,14 +96,10 @@ unit. Two reasons, and the second is the interesting one:
 | **Efficiency** | Agreeing once on a batch of hundreds beats agreeing hundreds of times |
 | **Ordering** | Order determines outcome. If an address holds 1 ETH and two transactions each try to spend it, which succeeds depends entirely on which comes first |
 
-<div class="academy-figure">
-  <div class="academy-figure-surface">
-
-![Three stages: a single block containing data and a reference to the previous block; two blocks joined by a link; several blocks joined in a continuous chain.](/illustrations/w1-block-to-blockchain.png)
-
-  </div>
-  <p class="academy-figure-caption"><strong>Left:</strong> one block — data, plus a reference to the block before it. <strong>Middle:</strong> two joined. <strong>Right:</strong> a chain.</p>
-</div>
+<figure class="academy-reference-visual">
+  <img src="/learning/web3intern/blockchain-progression.jpg" alt="An illustrated progression from one block, to linked blocks, to a longer blockchain." />
+  <figcaption>One block becomes a chain when each new block refers to the block before it.</figcaption>
+</figure>
 
 Ethereum produces a block roughly every 12 seconds. Bitcoin, roughly every 10
 minutes. Week 2 covers why they differ.
@@ -232,5 +228,5 @@ sounds: **you don't have to trust anyone, because you can check.**
 - [ethereum.org — Transactions](https://ethereum.org/developers/docs/transactions/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Nodes and clients](https://ethereum.org/developers/docs/nodes-and-clients/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Intro to Ethereum](https://ethereum.org/developers/docs/intro-to-ethereum/) — Reuse (CC BY 4.0), adapted
-- [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) — Reuse (permission granted, LXDAO); block-structure visual adapted from its blockchain basics materials
+- [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) — Reuse (permission granted, LXDAO); block-structure and block-to-blockchain visuals adapted from its blockchain basics materials
 :::

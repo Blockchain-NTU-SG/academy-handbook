@@ -361,7 +361,7 @@ Once the basic transaction works, you can see what a wallet is actually *for*.
 
 Watch what your wallet asks you for. You will likely meet an **approval** before
 the swap itself — the exact pattern
-[Part 6](./day-6-wallets-and-accounts.md) warned about, now in front of you on a
+[Part 6](./part-6-wallets-and-accounts.md) warned about, now in front of you on a
 network where mistakes cost nothing.
 
 The point:
@@ -385,7 +385,7 @@ Every field is something you now understand.
 | **Nonce** | Your account's counter |
 
 *You should be able to point at each field and say what it means.* If any is
-unclear, that is the signal to reread [Part 2](./day-2-how-shared-state-works.md).
+unclear, that is the signal to reread [Part 2](./part-2-how-shared-state-works.md).
 
 ::: important Notice what just happened
 You looked up a financial transaction on a public website, with no login, no
@@ -431,10 +431,10 @@ Now connect it to the theory:
 
 | What you see | Which part explains it |
 |---|---|
-| **You signed it** with your private key, so the network accepted it as authorised | [Part 6](./day-6-wallets-and-accounts.md) |
-| **Every node independently verified** the signature, balance and nonce | [Part 2](./day-2-how-shared-state-works.md) |
-| **Consensus** put it in one agreed position in one agreed history | [Part 3](./day-3-consensus.md) |
-| **The ETH** is a native asset, which is why it could pay its own fee | [Part 5](./day-5-crypto-asset-map.md) |
+| **You signed it** with your private key, so the network accepted it as authorised | [Part 6](./part-6-wallets-and-accounts.md) |
+| **Every node independently verified** the signature, balance and nonce | [Part 2](./part-2-how-shared-state-works.md) |
+| **Consensus** put it in one agreed position in one agreed history | [Part 3](./part-3-consensus.md) |
+| **The ETH** is a native asset, which is why it could pay its own fee | [Part 5](./part-5-crypto-asset-map.md) |
 
 ::: important That is Week 1 in a single transaction
 The [Anchor Mission](./anchor-mission.md) asks you to explain exactly this, in
@@ -452,7 +452,7 @@ Verify the currently recommended Ethereum application-development testnet, and
 retest every faucet link on this page.
 
 If Ethereum's recommended testnet changes, update this page,
-[Part 6](./day-6-wallets-and-accounts.md), the
+[Part 6](./part-6-wallets-and-accounts.md), the
 [Week 1 Anchor Mission](./anchor-mission.md) and the Week 3 deployment
 instructions **together** — they share this dependency.
 

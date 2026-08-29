@@ -34,7 +34,7 @@ Before Week 3, using a blockchain meant trusting the network and your own keys.
 
 **From the moment you touch a contract, you are also trusting code you did not
 write, cannot change, and probably have not read.** That is a new row in your
-[trust map](../week-2/day-6-trust-and-risk-map.md), and it is the biggest one
+[trust map](../week-2/part-6-trust-and-risk-map.md), and it is the biggest one
 most people ever add.
 :::
 
@@ -126,7 +126,7 @@ without appearing anywhere on-chain when you sign it. It may be submitted later
 by someone else. A signature is not automatically dangerous: inspect what
 permission it authorises, who can submit it, and how long it lasts.
 
-This is why [Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) says: **when
+This is why [Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) says: **when
 your wallet opens, read what it is asking.** Cost is not the signal. What you are
 authorising is the signal.
 :::
@@ -160,7 +160,7 @@ It is meaningfully better than no audit. It is not a warranty.
 ## Landscape
 
 - **Reentrancy** — a called contract calls back before the first finishes. The 2016 DAO hack; still found today
-- **Access control bugs** — a missing `require`, exactly like the `Vault` in [Part 2](./day-2-solidity-minimum.md)
+- **Access control bugs** — a missing `require`, exactly like the `Vault` in [Part 2](./part-2-solidity-minimum.md)
 - **Integer issues** — largely fixed by Solidity 0.8's built-in overflow checks
 - **Price manipulation** — moving a thin market to fool a contract reading it
 - **Upgradeable proxies** — the code behind an address can be replaced. A trust assumption, not a detail

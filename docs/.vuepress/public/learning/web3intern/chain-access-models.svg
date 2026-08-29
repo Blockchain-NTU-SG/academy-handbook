@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 460" role="img" aria-labelledby="title desc">
+  <title id="title">Public, consortium and private chains</title>
+  <desc id="desc">Three blockchain access models arranged from open participation to restricted participation.</desc>
+  <rect width="1600" height="460" fill="#fbfdfe"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#2b2d39" text-anchor="middle">
+    <g transform="translate(210 42)">
+      <rect width="330" height="170" rx="18" fill="#e8f7fd" stroke="#37a4e3" stroke-width="3"/>
+      <text x="165" y="52" font-size="34" font-weight="750">Public chain</text>
+      <text x="165" y="91" font-size="22">Open participation</text>
+      <text x="165" y="125" font-size="20" fill="#53627a">Anyone can read and verify</text>
+      <text x="165" y="153" font-size="20" fill="#53627a">the shared record.</text>
+    </g>
+    <g transform="translate(635 42)">
+      <rect width="330" height="170" rx="18" fill="#eef2fa" stroke="#7091e6" stroke-width="3"/>
+      <text x="165" y="52" font-size="34" font-weight="750">Consortium chain</text>
+      <text x="165" y="91" font-size="22">Member-operated</text>
+      <text x="165" y="125" font-size="20" fill="#53627a">Known organisations share</text>
+      <text x="165" y="153" font-size="20" fill="#53627a">responsibility.</text>
+    </g>
+    <g transform="translate(1060 42)">
+      <rect width="330" height="170" rx="18" fill="#f0f2f5" stroke="#8697c4" stroke-width="3"/>
+      <text x="165" y="52" font-size="34" font-weight="750">Private chain</text>
+      <text x="165" y="91" font-size="22">Restricted participation</text>
+      <text x="165" y="125" font-size="20" fill="#53627a">One organisation controls</text>
+      <text x="165" y="153" font-size="20" fill="#53627a">access and operation.</text>
+    </g>
+    <path d="M160 300 H1440" fill="none" stroke="#7091e6" stroke-width="5" stroke-linecap="round"/>
+    <path d="M160 300 l28 -16 v32 z M1440 300 l-28 -16 v32 z" fill="#7091e6"/>
+    <text x="160" y="356" font-size="24" font-weight="700">more open</text>
+    <text x="1440" y="356" font-size="24" font-weight="700">more restricted</text>
+    <text x="800" y="418" font-size="22" fill="#53627a">Access, control and efficiency are design trade-offs.</text>
+  </g>
+</svg>

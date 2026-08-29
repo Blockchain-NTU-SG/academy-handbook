@@ -27,8 +27,20 @@ The goal is **enough Solidity to read a simple contract and deploy one** — not
 to make you a developer. If you have never written code, you can still complete
 this week. Everything you need is on this page.
 
-If you already program, this will feel slow. [Part 3](./day-3-remix-lab.md) is
+If you already program, this will feel slow. [Part 3](./part-3-remix-lab.md) is
 where it gets hands-on.
+
+AI assistance is explicitly allowed. You are not expected to write the
+`Guestbook` contract from scratch. You may use ChatGPT, Claude, Copilot or
+another coding assistant to explain unfamiliar Solidity, explain a line or
+structure, troubleshoot a Remix/compiler error, modify the provided example, or
+answer "what does this code do?"
+
+The standard is not **"Did you type the code yourself?"** It is: **Can you
+explain what you deployed?** By the end of the week, you should be able to point
+to the major parts of this small contract, describe what changes on-chain when
+you interact with it, and recognise when you do not understand something AI
+produced.
 :::
 
 ## Learning objectives
@@ -160,7 +172,7 @@ function getMessage() external view returns (string memory) {
 A **read** function. **`view`** promises it does not change state — so a normal
 read through Remix or a wallet does not create an on-chain transaction or pay a
 transaction fee. It may still depend on a node response, as
-[Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) described.
+[Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) described.
 
 @tab Visibility
 
@@ -212,7 +224,7 @@ Real contracts contain more than this. You do not need it this week:
 - **Libraries, interfaces, structs, enums**
 
 You will meet `require` and `onlyOwner` when you read a real token in
-[Part 4](./day-4-tokens-and-standards.md). That is soon enough.
+[Part 4](./part-4-tokens-and-standards.md). That is soon enough.
 
 ## Landscape
 

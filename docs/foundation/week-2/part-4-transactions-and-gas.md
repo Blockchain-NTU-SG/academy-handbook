@@ -25,7 +25,7 @@ sources:
 
 # Week 2 · Part 4 — Transactions, state, gas and RPC
 
-[Part 3](./day-3-why-ethereum-and-evm.md) established that Ethereum is a state
+[Part 3](./part-3-why-ethereum-and-evm.md) established that Ethereum is a state
 machine and transactions are the only way to change it. Today is how that
 actually runs — plus the piece nobody explains to beginners: **how your wallet
 talks to the blockchain at all.**

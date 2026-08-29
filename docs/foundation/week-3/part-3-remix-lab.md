@@ -18,6 +18,9 @@ sources:
   - name: "Sepolia Etherscan"
     url: "https://sepolia.etherscan.io/"
     label: "Link"
+  - name: "Web3 Internship Handbook — Remix workspace visual"
+    url: "https://web3intern.xyz/zh/smart-contract-development/"
+    label: "Reuse"
 ---
 
 # Week 3 · Part 3 — Remix lab: deploy your first contract
@@ -29,6 +32,14 @@ Academy exercise to mainnet**, and never connect a wallet holding real funds.
 
 Today you put a program on a blockchain. It will have its own address, anyone
 will be able to call it, and it will still be there long after this cohort ends.
+
+::: tip Use AI as a tutor, not an autopilot
+During the walkthrough, it is fine to paste a compiler error into an AI
+assistant, ask what one line does, compare the expected state before and after a
+transaction, or ask for help when Remix's wording differs. Keep the provided
+`Guestbook` as the canonical path: AI supports the loop of understanding,
+testing and inspecting; it does not replace understanding.
+:::
 
 ```mermaid
 flowchart LR
@@ -51,7 +62,7 @@ transaction hash. You will need all three.
 ## Before you start
 
 ::: warning You need three things
-1. **Your Academy wallet** from [Week 1 Part 7](../week-1/day-7-your-first-transaction.md), on the test network
+1. **Your Academy wallet** from [Week 1 Part 7](../week-1/part-7-your-first-transaction.md), on the test network
 2. **Test ETH** in it — deploying costs more gas than a transfer, so top up from a faucet if your balance is low
 3. **A desktop browser.** Remix does not work well on mobile
 :::
@@ -76,11 +87,8 @@ Nothing is installed. Remix runs entirely in a browser tab.
    workspace with some sample contracts already in it.*
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Remix IDE on first load showing the file explorer, editor and the plugin icon column.">
-       <span class="academy-shot-label">Screenshot 1</span>
-       <span class="academy-shot-what">Remix on first load, with the file explorer, editor pane and left icon column labelled.</span>
-     </div>
-     <figcaption>Three areas to know: files, editor, plugins.</figcaption>
+     <img src="/learning/web3intern/remix-workspace.png" alt="A Remix browser workspace showing the file explorer, editor and plugin panels." />
+     <figcaption>Three areas to know: files, editor, plugins. This is an illustrative reference view; Remix's current interface may differ.</figcaption>
    </figure>
 
 2. **Create the contract file**
@@ -88,7 +96,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    In the file explorer, open the `contracts` folder and create a new file called
    **`Guestbook.sol`**.
 
-   Paste in the contract from [Part 2](./day-2-solidity-minimum.md):
+   Paste in the contract from [Part 2](./part-2-solidity-minimum.md):
 
    ```solidity
    // SPDX-License-Identifier: MIT
@@ -169,9 +177,9 @@ Nothing is installed. Remix runs entirely in a browser tab.
    With `Guestbook` selected in the contract dropdown, press **Deploy**.
 
    Your wallet opens a confirmation. **This is a transaction like any other** —
-   read it the way [Week 1 Part 7](../week-1/day-7-your-first-transaction.md)
+   read it the way [Week 1 Part 7](../week-1/part-7-your-first-transaction.md)
    taught you. Notice the fee is noticeably higher than a plain transfer: you are
-   storing a program on-chain, and [Week 2 Part 4](../week-2/day-4-transactions-and-gas.md)
+   storing a program on-chain, and [Week 2 Part 4](../week-2/part-4-transactions-and-gas.md)
    said complexity costs more. Here is that, in practice.
 
    Confirm.
@@ -204,7 +212,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    The **blue** buttons are reads. Press **`message`**.
 
    *The answer appears immediately, underneath the button. No wallet pop-up. No
-   fee.* That is `view` doing exactly what [Part 2](./day-2-solidity-minimum.md)
+   fee.* That is `view` doing exactly what [Part 2](./part-2-solidity-minimum.md)
    said it would.
 
 7. **Call a write function**
@@ -288,7 +296,7 @@ Etherscan's **Verify and Publish** flow checks that your submitted source matche
 the deployed bytecode. Once verified, Etherscan can show human-readable source
 and a convenient **Read/Write** interface for the functions it can identify.
 
-This is what [Part 1](./day-1-what-is-a-smart-contract.md) meant by verified
+This is what [Part 1](./part-1-what-is-a-smart-contract.md) meant by verified
 source, and what [Week 0 Part 3](../../getting-started/tools.md) meant about
 explorers showing you code.
 :::
@@ -299,12 +307,12 @@ What actually happened, in the vocabulary of the last two weeks:
 
 | Step | What happened | Where it was covered |
 |---|---|---|
-| Compile | Solidity became EVM bytecode plus an ABI | [Part 2](./day-2-solidity-minimum.md) |
-| Deploy | A transaction with no recipient, carrying code as data | [Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) |
-| Address assigned | The network derived an address for the new contract account | [Week 2 Part 3](../week-2/day-3-why-ethereum-and-evm.md) |
-| Read `message` | One node answered from its own state copy. Free | [Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) |
-| Write `setMessage` | Signed, broadcast, verified by every node, included in a block | [Week 1 Part 2](../week-1/day-2-how-shared-state-works.md) |
-| Event emitted | An announcement written to the log for outside applications | [Part 2](./day-2-solidity-minimum.md) |
+| Compile | Solidity became EVM bytecode plus an ABI | [Part 2](./part-2-solidity-minimum.md) |
+| Deploy | A transaction with no recipient, carrying code as data | [Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) |
+| Address assigned | The network derived an address for the new contract account | [Week 2 Part 3](../week-2/part-3-why-ethereum-and-evm.md) |
+| Read `message` | One node answered from its own state copy. Free | [Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) |
+| Write `setMessage` | Signed, broadcast, verified by every node, included in a block | [Week 1 Part 2](../week-1/part-2-how-shared-state-works.md) |
+| Event emitted | An announcement written to the log for outside applications | [Part 2](./part-2-solidity-minimum.md) |
 
 ::: important Notice what nobody did
 No one approved your deployment. No one reviewed your code. There was no
@@ -312,7 +320,7 @@ registration, no account, no permission.
 
 You published a program to a public network because you had a key and some test
 ETH. **That is the whole thing** — and it is exactly why
-[Part 5](./day-5-security-and-approvals.md) exists.
+[Part 5](./part-5-security-and-approvals.md) exists.
 :::
 
 ::: details Further exploration — optional, not assessed
@@ -326,4 +334,5 @@ ETH. **That is the whole thing** — and it is exactly why
 - [Remix documentation](https://remix-ide.readthedocs.io/) — Link, referenced only
 - [ethereum.org — Deploy a smart contract](https://ethereum.org/developers/docs/smart-contracts/deploying/) — Reuse (CC BY 4.0), adapted
 - [Sepolia Etherscan](https://sepolia.etherscan.io/) — Link, referenced only
+- [Web3 Internship Handbook](https://web3intern.xyz/zh/smart-contract-development/) — Reuse (permission granted); Remix workspace visual adapted with permission
 :::

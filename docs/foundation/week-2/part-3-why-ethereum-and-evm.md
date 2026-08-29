@@ -22,7 +22,7 @@ sources:
 
 # Week 2 · Part 3 — Why we start with Ethereum and the EVM
 
-[Part 2](./day-2-comparing-blockchains.md) showed five chains making five
+[Part 2](./part-2-comparing-blockchains.md) showed five chains making five
 different choices and deliberately did not crown a winner. So it is fair to ask
 why the rest of this programme is built on Ethereum.
 
@@ -208,7 +208,7 @@ can affect your ETH balance**, because ETH does not live in a contract.
 
 That is not a difference in branding. It is a difference in what has to be true
 for you to still own the thing tomorrow — exactly what
-[Part 6](./day-6-trust-and-risk-map.md) turns into a reusable tool.
+[Part 6](./part-6-trust-and-risk-map.md) turns into a reusable tool.
 :::
 
 ::: details Further exploration — optional, not assessed

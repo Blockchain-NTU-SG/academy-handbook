@@ -19,7 +19,7 @@ sources:
 
 # Week 3 · Part 1 — What a smart contract actually is
 
-[Week 2 Part 3](../week-2/day-3-why-ethereum-and-evm.md) told you a contract is
+[Week 2 Part 3](../week-2/part-3-why-ethereum-and-evm.md) told you a contract is
 an account made of code. That is accurate and it is not yet useful.
 
 ::: important The plain-English version
@@ -68,7 +68,7 @@ rewriting your balance also stops anyone fixing a mistake. There is no support
 line, no rollback, and no
 "obviously that wasn't the intent."
 
-This is why [Part 5](./day-5-security-and-approvals.md) exists, and why real
+This is why [Part 5](./part-5-security-and-approvals.md) exists, and why real
 deployments get audited.
 :::
 
@@ -91,7 +91,7 @@ the current value changes. A token contract's state is mostly one big table of
 who owns how much.
 
 **Functions** are what the contract can do. They split exactly the way
-[Week 2 Part 4](../week-2/day-4-transactions-and-gas.md) described:
+[Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) described:
 
 | | Read | Write |
 |---|---|---|
@@ -106,7 +106,7 @@ outside can. Standard ERC-20 token transfers are typically surfaced through
 
 ### A contract cannot act alone
 
-Worth repeating from [Week 2 Part 3](../week-2/day-3-why-ethereum-and-evm.md),
+Worth repeating from [Week 2 Part 3](../week-2/part-3-why-ethereum-and-evm.md),
 because it explains so much:
 
 ::: important Nothing happens until something calls it
@@ -117,6 +117,22 @@ When a protocol appears to act automatically — a loan liquidated the moment
 collateral drops — something off-chain is watching and sending that transaction.
 Often a bot or service is paid a fee for doing it.
 :::
+
+### How a DApp uses a contract
+
+Most DApps connect an ordinary interface to a contract through an RPC node.
+The path depends on what you are doing:
+
+| Action | Typical path | What happens |
+|---|---|---|
+| Read | Interface → RPC node → contract | The application requests current state; no wallet signature is needed |
+| Write | Interface → wallet → RPC node → transaction → contract | Your wallet signs a state-changing transaction, which the network executes |
+
+Contracts can also emit **events** after a write. An off-chain indexer may read
+those events and format them into the history or activity view you see in the
+interface. The full architecture appears in
+[Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md); the important idea here is
+that the contract is the on-chain rule-set, not the whole application.
 
 ### What contracts are good at, and bad at
 
@@ -135,11 +151,11 @@ do something in the right column.
 
 - **Deployment** — the transaction that puts a contract's code on-chain and gives it an address
 - **Constructor** — code that runs once at deployment, then never again
-- **ABI** — the description of how to call a contract's functions. [Part 2](./day-2-solidity-minimum.md)
+- **ABI** — the description of how to call a contract's functions. [Part 2](./part-2-solidity-minimum.md)
 - **Verified source** — publishing the source so anyone can check it matches the deployed bytecode
 - **Immutable vs upgradeable** — some contracts can be replaced behind a proxy. That is a trust assumption, not a technicality
 - **Composability** — contracts calling contracts. Web3's greatest strength and how failures spread
-- **Reentrancy** — a classic bug class where a called contract calls back before the first finishes. [Part 5](./day-5-security-and-approvals.md)
+- **Reentrancy** — a classic bug class where a called contract calls back before the first finishes. [Part 5](./part-5-security-and-approvals.md)
 
 ## Worked example
 

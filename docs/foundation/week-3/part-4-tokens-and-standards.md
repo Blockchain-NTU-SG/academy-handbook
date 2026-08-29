@@ -28,7 +28,7 @@ sources:
 You deployed a contract that remembers a message. Change what it remembers to
 *"who owns how much"* and you have built a token.
 
-That is genuinely the whole idea. [Week 1 Part 5](../week-1/day-5-crypto-asset-map.md)
+That is genuinely the whole idea. [Week 1 Part 5](../week-1/part-5-crypto-asset-map.md)
 said a token is a contract's ledger. Now you have written a contract, so that
 sentence means something concrete.
 
@@ -130,7 +130,7 @@ mapping(uint256 => address) owners;   // token id -> owner
 in-game items, credentials, and records of ownership for real-world assets.
 
 ::: warning The image is usually not on-chain
-[Week 1 Part 5](../week-1/day-5-crypto-asset-map.md) flagged this. Now you can
+[Week 1 Part 5](../week-1/part-5-crypto-asset-map.md) flagged this. Now you can
 see exactly why: storing an image in contract state would cost a fortune in gas.
 
 So ERC-721 stores a `tokenURI` — **a link**. If whatever hosts that file goes
@@ -175,18 +175,18 @@ with a custodial exchange; they approve the token contract and call the DEX,
 subject to the protocol's design.
 
 **Lending protocol — smart-contract borrowing.** A protocol such as <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave</strong></span> lets users deposit collateral and borrow against it. If collateral falls too far in value, anyone can trigger a
-liquidation — remember from [Part 1](./day-1-what-is-a-smart-contract.md) that
+liquidation — remember from [Part 1](./part-1-what-is-a-smart-contract.md) that
 the contract cannot act alone, so a bot does it and takes a fee.
 
 **Oracle — outside data brought in.** A lending protocol needs a price. [Week 2
-Part 3](../week-2/day-3-why-ethereum-and-evm.md) explained why a contract cannot
+Part 3](../week-2/part-3-why-ethereum-and-evm.md) explained why a contract cannot
 fetch one: it must be deterministic, so it cannot read the internet.
 
 ::: important So a price has to be *put on-chain by a transaction* first
 That is what an oracle is: a service that writes external data on-chain so
 contracts can read it, with every node seeing the identical value.
 
-And it is why [Week 2 Part 6](../week-2/day-6-trust-and-risk-map.md) put the
+And it is why [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md) put the
 oracle in its own row. **The contract can be flawless and the input still
 wrong.**
 :::
@@ -203,7 +203,7 @@ map. That is enough for Foundation.
 ## Landscape
 
 - **EIP / ERC** — improvement proposals, and the application-level ones that define interfaces
-- **`approve` / `transferFrom`** — the two-step pattern letting a contract move your tokens. [Part 5](./day-5-security-and-approvals.md)
+- **`approve` / `transferFrom`** — the two-step pattern letting a contract move your tokens. [Part 5](./part-5-security-and-approvals.md)
 - **`tokenURI` / metadata** — where an NFT's name and image actually live
 - **IPFS** — content-addressed storage, often used for NFT metadata
 - **Mint / burn** — creating and destroying units
@@ -216,7 +216,7 @@ map. That is enough for Foundation.
 Read a real token's storage without reading its code.
 
 Open the <span class="academy-brand-label"><Icon name="token-branded:usdc" /><strong>USDC</strong></span> contract on Etherscan — `0xA0b8…eB48`, the address from
-[Week 2 Part 3](../week-2/day-3-why-ethereum-and-evm.md) — and open **Read
+[Week 2 Part 3](../week-2/part-3-why-ethereum-and-evm.md) — and open **Read
 Contract**.
 
 | Call | What comes back | What it tells you |
@@ -244,7 +244,7 @@ source — and you will find it is not a simple ERC-20. It has pause functions a
 a blocklist.
 
 That is not a criticism. It is the concrete form of the trust assumption
-[Week 1 Part 5](../week-1/day-5-crypto-asset-map.md) described: a regulated
+[Week 1 Part 5](../week-1/part-5-crypto-asset-map.md) described: a regulated
 issuer can freeze addresses. **You can now go and read the code that does it**,
 which is a genuinely different position from being told about it.
 

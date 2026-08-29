@@ -22,7 +22,7 @@ sources:
 
 # Week 4 · Part 2 — Who is who, and what kind of thing is it
 
-[Part 1](./day-1-industry-map.md) sorted the industry by sector. This sorts it by
+[Part 1](./part-1-industry-map.md) sorted the industry by sector. This sorts it by
 **kind of thing** — and that distinction causes more confused conversations than
 almost anything else in Web3.
 
@@ -158,7 +158,7 @@ Holding one is **not ownership of a company**, not a share, and not a claim on
 revenue unless the protocol specifically grants one.
 
 And governance has real problems, named honestly in
-[Part 1](./day-1-industry-map.md): turnout is often very low, and token-weighted
+[Part 1](./part-1-industry-map.md): turnout is often very low, and token-weighted
 voting concentrates influence in the largest holders.
 
 Detailed DAO mechanism design belongs in Semester 2.
@@ -171,7 +171,7 @@ address.
 
 Your wallet address is a **persistent public identity**. Assets, activity,
 contract interactions and credentials can accumulate against it, creating a
-public trail — [Week 1 Part 7](../week-1/day-7-your-first-transaction.md) had you
+public trail — [Week 1 Part 7](../week-1/part-7-your-first-transaction.md) had you
 look at exactly this.
 
 ::: danger Pseudonymity is not anonymity
@@ -231,7 +231,7 @@ Take it apart by category.
 Base is a **network**; Coinbase is a **company**; the sequencer is a **role**.
 Conflating them produces a claim that sounds damning and is imprecise.
 
-The accurate version, using [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md):
+The accurate version, using [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md):
 
 > "Base's sequencer is currently operated by Coinbase, which means it could in
 > principle censor or reorder transactions. Whether users can exit to Ethereum
@@ -244,7 +244,7 @@ The first version is a vibe. The second is checkable, and it points at where to
 check.
 
 **Being precise about categories is what turns an opinion into an analysis** —
-and it is what [Part 3](./day-3-research-tool-map.md) and the Week 4 mission ask
+and it is what [Part 3](./part-3-research-tool-map.md) and the Week 4 mission ask
 you to do.
 :::
 

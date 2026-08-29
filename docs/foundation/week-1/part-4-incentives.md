@@ -21,11 +21,17 @@ sources:
   - name: "Bitcoin whitepaper"
     url: "https://bitcoin.org/bitcoin.pdf"
     label: "Link"
+  - name: "Web3 Internship Handbook — node rewards visual"
+    url: "https://web3intern.xyz/zh/blockchain-basic/"
+    label: "Reuse"
+  - name: "Web3 Internship Handbook — Bitcoin monetary properties visual"
+    url: "https://web3intern.xyz/zh/blockchain-basic/"
+    label: "Reuse"
 ---
 
 # Week 1 · Part 4 — Why anyone runs the network
 
-[Part 3](./day-3-consensus.md) explained *how* the network agrees. It left a
+[Part 3](./part-3-consensus.md) explained *how* the network agrees. It left a
 question that every beginner asks and most explanations skip:
 
 ::: important If no company is paying people to run the network, why would anyone keep doing it?
@@ -68,6 +74,11 @@ successfully produces a block receives:
 | **Block subsidy** | Newly issued BTC, created by the protocol |
 | **Transaction fees** | Paid by the people whose transactions are in that block |
 
+<figure class="academy-reference-visual academy-reference-visual--narrow">
+  <img src="/learning/web3intern/network-rewards.jpg" alt="A simple network of connected participants with Bitcoin reward symbols, illustrating why miners are economically motivated to do the work of securing a Proof of Work chain." />
+  <figcaption>Miners spend resources to do the work of securing a Proof of Work chain, so the protocol gives successful block production an economic reward.</figcaption>
+</figure>
+
 The subsidy is not constant. Roughly every four years it is cut in half, in an
 event called the **halving**. Fewer new BTC are created per block over time, and
 total supply approaches a fixed limit of 21 million.
@@ -81,6 +92,11 @@ determined by market demand, not by the issuance schedule. You will hear
 "halving therefore number go up" stated as if it were arithmetic. It is not, and
 recognising that is part of understanding this properly.
 :::
+
+<figure class="academy-reference-visual academy-reference-visual--narrow">
+  <img src="/learning/web3intern/bitcoin-monetary-properties.jpg" alt="An illustration showing Bitcoin exchanged with another Bitcoin, money and a physical good, introducing its use as a transferable digital asset and a form of money." />
+  <figcaption>Bitcoin is designed to be transferable between holders and to have a limited supply, which are part of why people discuss it as digital money. That design does not guarantee a stable price.</figcaption>
+</figure>
 
 Over the long run, as the subsidy shrinks, transaction fees are expected to make
 up more of what miners earn. Whether that is enough to secure the network in
@@ -127,7 +143,7 @@ installed".
 :::
 
 People run full nodes anyway: to verify rather than trust, to avoid depending on
-someone else's RPC provider ([Week 2 Part 4](../week-2/day-4-transactions-and-gas.md)),
+someone else's RPC provider ([Week 2 Part 4](../week-2/part-4-transactions-and-gas.md)),
 and because businesses need reliable access to chain data.
 
 ### Side by side
@@ -154,7 +170,7 @@ Neither design is "better". They are answers to different questions.
 
 - **Block reward** — subsidy plus fees, paid to whoever produced the block
 - **Halving** — Bitcoin's roughly four-yearly subsidy reduction
-- **Base fee / priority fee** — the burned portion and the tip, introduced by EIP-1559 ([Week 2 Part 4](../week-2/day-4-transactions-and-gas.md))
+- **Base fee / priority fee** — the burned portion and the tip, introduced by EIP-1559 ([Week 2 Part 4](../week-2/part-4-transactions-and-gas.md))
 - **Staking pool** — pooling ETH to validate without holding 32 ETH alone
 - **Liquid staking** — a tradable token representing staked ETH
 - **Issuance vs burn** — new supply created versus supply destroyed
@@ -164,7 +180,7 @@ Neither design is "better". They are answers to different questions.
 
 Where does the fee on your Week 1 transaction actually go?
 
-You will send a Sepolia transaction in [Part 7](./day-7-your-first-transaction.md)
+You will send a Sepolia transaction in [Part 7](./part-7-your-first-transaction.md)
 and pay a small fee. On Ethereum mainnet, that fee splits:
 
 | Portion | Goes to | Why |
@@ -197,6 +213,7 @@ do?**
 - [ethereum.org — Gas and fees](https://ethereum.org/developers/docs/gas/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Nodes and clients](https://ethereum.org/developers/docs/nodes-and-clients/) — Reuse (CC BY 4.0), adapted
 - [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf) — Link, referenced only
+- [Web3 Internship Handbook](https://web3intern.xyz/zh/blockchain-basic/) — Reuse (permission granted); node-reward and Bitcoin monetary-properties visuals adapted from its blockchain basics materials
 
 *Named assets are illustrative. Nothing here is financial advice, and nothing
 here is a claim about future prices.*

@@ -86,7 +86,7 @@ funds to the wrong place and may be irreversible.
 
 **Verify every address, endpoint and version against a primary source.** Current
 facts need a live, trustworthy source; do not rely on a model's assumed cutoff.
-[Part 3](./day-3-research-tool-map.md) is that skill.
+[Part 3](./part-3-research-tool-map.md) is that skill.
 :::
 
 ::: warning This handbook is an example
@@ -112,7 +112,7 @@ For **security-critical logic, do not use generated code blindly**:
 | Category | Why |
 |---|---|
 | Wallet interactions | Can move funds |
-| Signatures and approvals | Can grant standing permission — [Week 3 Part 5](../week-3/day-5-security-and-approvals.md) |
+| Signatures and approvals | Can grant standing permission — [Week 3 Part 5](../week-3/part-5-security-and-approvals.md) |
 | Transactions | Irreversible |
 | Contract state changes | Irreversible |
 | Network and address configuration | A wrong network or address can send funds to the wrong place and may be irreversible |
@@ -159,6 +159,27 @@ Neither does hiding it — reviewers ask you to explain your own submission, and
 or not AI was involved.
 :::
 
+::: tip Want to try vibe coding for real?
+If you want a guided first build rather than starting from a blank editor,
+[BuildAnything's Freshman track](https://buildanything.so/tracks/freshman) takes
+complete beginners from an idea to a working decentralised app using AI as a
+coding partner. It is a low-friction way to experience the full
+idea → prompt → build → test → deploy loop.
+
+It can support different directions: prototype a contract or app for Developer,
+turn a product idea into a demo for Product & Ecosystem, build a dashboard or
+simple interface for Data, or turn research into an interactive tool for
+Research.
+
+**A note on Monad:** BuildAnything uses Monad as its example blockchain. Monad
+is EVM-compatible, so the Solidity, wallet and smart-contract concepts you
+learned in the Academy still carry over. You do not need to learn Monad first;
+the track introduces it along the way.
+
+This is optional practice, not an Academy requirement or a replacement for
+Week 3.
+:::
+
 ## Landscape
 
 - **Hallucination** — confidently generating something false. The core risk here
@@ -166,7 +187,7 @@ or not AI was involved.
 - **Prompt injection** — instructions hidden in content the model reads. Relevant if your project ingests external data
 - **Code assistants** — Copilot, Cursor, Claude Code and similar
 - **Agentic workflows** — AI running multi-step tasks. Powerful, and it compounds unverified errors
-- **AI × Web3** — the sector from [Part 1](./day-1-industry-map.md). A lot of narrative; ask what the chain is load-bearing for
+- **AI × Web3** — the sector from [Part 1](./part-1-industry-map.md). A lot of narrative; ask what the chain is load-bearing for
 
 ## Worked example
 
@@ -201,7 +222,7 @@ against a threshold. Print.
 **Explain first.** *"Explain the Uniswap V3 Swap event and what its fields
 mean."* Read it. Cross-check the event definition against
 [Uniswap's official documentation](https://docs.uniswap.org/).
-[Part 3](./day-3-research-tool-map.md) explains why primary-source checking
+[Part 3](./part-3-research-tool-map.md) explains why primary-source checking
 matters.
 
 **Build one piece.** Just the RPC connection. **Run it.** It works.

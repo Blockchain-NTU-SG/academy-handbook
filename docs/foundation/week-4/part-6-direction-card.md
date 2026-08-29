@@ -57,7 +57,7 @@ quality of the Proof of Work, not category discipline.
 | Output | Working code, deployed or runnable, with a README |
 | Core skills | Solidity, a frontend or script, testnet deployment |
 | Tools | Remix, GitHub, a wallet, an explorer, optionally Foundry or Hardhat |
-| Good fit if | You enjoyed [Week 3 Part 3](../week-3/day-3-remix-lab.md) and want more |
+| Good fit if | You enjoyed [Week 3 Part 3](../week-3/part-3-remix-lab.md) and want more |
 
 **Realistic four-week projects:**
 
@@ -79,7 +79,7 @@ capped supply and a page that displays holders"** is.
 | Output | A written analysis with evidence and sources |
 | Core skills | Source selection, evidence checking, clear writing |
 | Tools | Docs, GitHub, Etherscan, Dune, DefiLlama, L2BEAT, Messari |
-| Good fit if | [Part 3](./day-3-research-tool-map.md) was the page you enjoyed most |
+| Good fit if | [Part 3](./part-3-research-tool-map.md) was the page you enjoyed most |
 
 **Realistic four-week projects:**
 

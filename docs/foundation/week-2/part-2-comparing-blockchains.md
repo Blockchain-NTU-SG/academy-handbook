@@ -63,7 +63,7 @@ You will hear this framed as the **blockchain trilemma** — decentralisation,
 security, scalability, pick two.
 
 ::: tip Treat the trilemma as a rule of thumb, not a law
-Enormous engineering effort goes into softening it, and [Part 5](./day-5-l1-l2-and-bridges.md)
+Enormous engineering effort goes into softening it, and [Part 5](./part-5-l1-l2-and-bridges.md)
 covers the most successful attempt so far. But the pressure is real, and a chain
 claiming to have escaped it entirely has usually just moved the cost somewhere
 you were not looking.

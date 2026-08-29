@@ -75,11 +75,11 @@ point of the page.
 | **Fiat → exchange** | Money moves from a bank into an exchange account. A normal regulated relationship: KYC, an account, a company holding your funds | The exchange, **entirely**. You have a claim, not an asset |
 | **Exchange → USDC** | Fiat converted to a stablecoin. Dollar value that moves at blockchain speed | The exchange, **plus Circle** — the issuer holding reserves. A new assumption, quietly added |
 | **Exchange → wallet** | Withdrawn to an address you control. Custody moves from a company to a person | **You control custody.** The exchange no longer controls the wallet, but token-level controls may still exist — for example, a stablecoin issuer may be able to freeze its token |
-| **Wallet → chain** | Assets sit on Ethereum, or on **Base**, a Layer 2 built on top for lower fees | The network, and the L2's operators → [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md) |
-| **Bridge** | Moving value between networks. Chains cannot natively see each other | Source chain + destination chain + **the bridge mechanism** → [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md) |
+| **Wallet → chain** | Assets sit on Ethereum, or on **Base**, a Layer 2 built on top for lower fees | The network, and the L2's operators → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
+| **Bridge** | Moving value between networks. Chains cannot natively see each other | Source chain + destination chain + **the bridge mechanism** → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
 | **DEX** | Swapping assets through contracts, from your own wallet, no account | Your wallet + the DEX contracts + each token's contract → Week 3 |
 | **DeFi protocol** | Depositing into a lending market or pool — finance by programs, not institutions | All the above + this protocol's contracts + its **oracle** + its economic design → Week 3 |
-| **Explorer / Dune** | On-chain activity can be checked directly or explored through derived dashboards | The explorer's record; Dune's indexing and definitions if you use its dashboard → [Part 7](./day-7-your-first-transaction.md), Week 4 |
+| **Explorer / Dune** | On-chain activity can be checked directly or explored through derived dashboards | The explorer's record; Dune's indexing and definitions if you use its dashboard → [Part 7](./part-7-your-first-transaction.md), Week 4 |
 
 ::: warning Bridges deserve early attention
 Bridges have historically been a major source of large crypto exploits — worth
@@ -111,7 +111,7 @@ removing them.
 **Web3 does not eliminate trust. It changes and redistributes trust
 assumptions.**
 
-[Week 2 Part 6](../week-2/day-6-trust-and-risk-map.md) turns this into a tool
+[Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md) turns this into a tool
 you can apply to anything.
 :::
 
@@ -119,7 +119,7 @@ you can apply to anything.
 
 - **On-ramp / off-ramp** — converting between fiat and crypto in either direction
 - **Layer 2** — a network built on a base chain for cheaper, faster transactions (Week 2)
-- **Wrapped asset** — a token representing an asset from elsewhere ([Part 5](./day-5-crypto-asset-map.md))
+- **Wrapped asset** — a token representing an asset from elsewhere ([Part 5](./part-5-crypto-asset-map.md))
 - **Slippage** — the gap between the price you expected on a swap and the one you got
 - **Liquidity pool** — pooled assets a DEX trades against (Week 3)
 - **Oracle** — a service supplying external data to contracts (Week 3)

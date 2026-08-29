@@ -24,12 +24,12 @@ from here on.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [Public, private and consortium chains](./day-1-access-models.md) | 12 min |
-| 2 | [Comparing blockchains and their trade-offs](./day-2-comparing-blockchains.md) | 16 min |
-| 3 | [Why we start with Ethereum and the EVM](./day-3-why-ethereum-and-evm.md) | 15 min |
-| 4 | [Transactions, state, gas and RPC](./day-4-transactions-and-gas.md) | 16 min |
-| 5 | [L1, L2, sidechains and bridges](./day-5-l1-l2-and-bridges.md) | 17 min |
-| 6 | [The trust and risk map](./day-6-trust-and-risk-map.md) | 13 min |
+| 1 | [Public, private and consortium chains](./part-1-access-models.md) | 12 min |
+| 2 | [Comparing blockchains and their trade-offs](./part-2-comparing-blockchains.md) | 16 min |
+| 3 | [Why we start with Ethereum and the EVM](./part-3-why-ethereum-and-evm.md) | 15 min |
+| 4 | [Transactions, state, gas and RPC](./part-4-transactions-and-gas.md) | 16 min |
+| 5 | [L1, L2, sidechains and bridges](./part-5-l1-l2-and-bridges.md) | 17 min |
+| 6 | [The trust and risk map](./part-6-trust-and-risk-map.md) | 13 min |
 
 **Anchor Mission:** [Week 2 mission](./anchor-mission.md) · 100 points
 

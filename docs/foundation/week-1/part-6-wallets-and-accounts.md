@@ -47,7 +47,7 @@ Read [Week 0 Part 4](../../getting-started/safety.md) first if you have not.
 The name is genuinely misleading, and the misunderstanding it causes is not
 harmless.
 
-Your assets are entries in the blockchain's state — [Part 2](./day-2-how-shared-state-works.md).
+Your assets are entries in the blockchain's state — [Part 2](./part-2-how-shared-state-works.md).
 They are not in an app on your phone. Delete your wallet software and your
 assets are entirely unaffected.
 
@@ -183,12 +183,12 @@ your wallet is on. It is the first line of every transaction screen for a reason
 
 <figure class="academy-reference-visual academy-reference-visual--narrow">
   <img src="/learning/myfirstnft/hot-cold-wallets.png" alt="A diagram comparing hot wallets, which can perform many online operations, with a cold wallet kept offline to reduce exposure." />
-  <figcaption>Hot wallets are convenient for frequent use; cold wallets reduce online exposure. Source: <a href="https://nft.myfirstweb3.xyz/">MyFirstNFT</a> / LXDAO.</figcaption>
+  <figcaption>Hot wallets are convenient for frequent use; cold wallets reduce online exposure.</figcaption>
 </figure>
 
 ## Guided walkthrough
 
-Preparation only. You install the wallet in [Part 7](./day-7-your-first-transaction.md).
+Preparation only. You install the wallet in [Part 7](./part-7-your-first-transaction.md).
 
 ::: steps
 1. **Decide where your recovery phrase will live**
@@ -237,7 +237,7 @@ request — and not because somebody told her to.
 Same request, same reflex, real USDC. The same script runs.
 
 The money is gone in one block. No support line exists, because there is no
-operator — which is the whole point of [Part 1](./day-1-why-blockchain-exists.md).
+operator — which is the whole point of [Part 1](./part-1-why-blockchain-exists.md).
 :::
 
 ::: important Same decision, same mechanism, permanently different outcome
@@ -256,5 +256,6 @@ wrong somewhere it does not matter.
 - [ethereum.org — Ethereum accounts](https://ethereum.org/developers/docs/accounts/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Wallets](https://ethereum.org/wallets/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Networks](https://ethereum.org/developers/docs/networks/) — Reuse (CC BY 4.0), adapted
+- [MyFirstNFT](https://nft.myfirstweb3.xyz/) — Reuse (permission granted, LXDAO); hot/cold wallet visual
 - [MetaMask — Support](https://support.metamask.io/) — Link, referenced only
 :::

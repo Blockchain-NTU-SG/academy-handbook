@@ -20,12 +20,12 @@ out.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [The Web3 industry map](./day-1-industry-map.md) | 16 min |
-| 2 | [Who is who, and what kind of thing is it](./day-2-who-is-who.md) | 16 min |
-| 3 | [Which tool answers which question](./day-3-research-tool-map.md) | 15 min |
-| 4 | [GitHub in practice](./day-4-github-in-practice.md) | 14 min |
-| 5 | [AI-native building](./day-5-ai-native-building.md) | 13 min |
-| 6 | [Choosing your direction](./day-6-direction-card.md) | 20 min |
+| 1 | [The Web3 industry map](./part-1-industry-map.md) | 16 min |
+| 2 | [Who is who, and what kind of thing is it](./part-2-who-is-who.md) | 16 min |
+| 3 | [Which tool answers which question](./part-3-research-tool-map.md) | 15 min |
+| 4 | [GitHub in practice](./part-4-github-in-practice.md) | 14 min |
+| 5 | [AI-native building](./part-5-ai-native-building.md) | 13 min |
+| 6 | [Choosing your direction](./part-6-direction-card.md) | 20 min |
 
 **Anchor Mission:** [Week 4 mission](./anchor-mission.md) · 100 points
 
@@ -54,7 +54,7 @@ solve — without knowing anything specific about it.
 and the mission are where you choose yours and scope something real.
 
 ::: important The most transferable page in the handbook
-[Part 3](./day-3-research-tool-map.md) teaches which source answers which kind of
+[Part 3](./part-3-research-tool-map.md) teaches which source answers which kind of
 question. Every fact in this handbook will age. That skill will not.
 :::
 
@@ -63,7 +63,7 @@ The Foundation v1.2 notes ask for two short additions with no obvious home:
 **governance as coordination** (§23) and **identity and ownership intuition**
 (§24).
 
-Both are folded into [Part 2](./day-2-who-is-who.md) rather than given their own
+Both are folded into [Part 2](./part-2-who-is-who.md) rather than given their own
 pages, because v1.2 asks for "only a short mental model" and "only a short
 explanation" in each case. Part 2 already distinguishes networks, tokens,
 protocols, companies and DAOs, so governance and on-chain identity sit naturally

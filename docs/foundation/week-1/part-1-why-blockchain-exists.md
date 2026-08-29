@@ -79,7 +79,7 @@ in charge.
 
 <figure class="academy-reference-visual">
   <img src="/learning/blockchain-distributed-network.jpg" alt="A distributed network of connected nodes, illustrating how many computers can maintain a shared record together." />
-  <figcaption>Visual adapted from the Web3 Internship Handbook's blockchain basics materials.</figcaption>
+  <figcaption>A blockchain network can have many independent nodes. Each keeps a copy of the same history and checks new blocks against the rules, so the network does not rely on one central operator.</figcaption>
 </figure>
 
 ```mermaid
@@ -99,7 +99,7 @@ Three things make it work:
 | **Rules everyone checks** | A change is only valid if it follows the rules, and every participant verifies this independently |
 | **Agreement mechanism** | A way to settle what gets added next, even when participants don't trust each other |
 
-That third element is **consensus**, and it's [Part 3](./day-3-consensus.md).
+That third element is **consensus**, and it's [Part 3](./part-3-consensus.md).
 
 ### What it costs
 
