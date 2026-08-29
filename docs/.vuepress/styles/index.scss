@@ -208,6 +208,125 @@ body {
   border: 1px solid #39404c;
   border-radius: 9px;
   box-shadow: 0 8px 20px rgb(43 45 57 / 8%);
+  background: var(--vp-code-block-bg);
+}
+
+/* Shiki emits the light theme's dark text even though the Academy code surface
+ * is intentionally dark. Keep plain-text blocks and unstyled code lines
+ * readable without changing the syntax theme contract. */
+.vp-doc div[class*='language-'] .shiki,
+.vp-doc div[class*='language-'] .shiki code,
+.vp-doc div[class*='language-'] .shiki .line,
+.vp-doc div[class*='language-'] .shiki .line > span {
+  color: var(--vp-code-block-color) !important;
+}
+
+.vp-doc div[class*='language-'] .shiki code {
+  background: transparent !important;
+}
+
+/* Mermaid's default green/purple theme is visually out of place beside the
+ * Academy blue/cyan system. Keep diagrams calm and legible across all lesson
+ * pages, including nodes rendered through foreignObject. */
+.vp-doc .mermaid-content {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vp-doc .mermaid-content svg.flowchart .node rect,
+.vp-doc .mermaid-content svg.flowchart .node polygon,
+.vp-doc .mermaid-content svg.flowchart .node circle,
+.vp-doc .mermaid-content svg.flowchart .node ellipse,
+.vp-doc .mermaid-content svg.flowchart .cluster rect {
+  fill: var(--academy-surface-cyan) !important;
+  stroke: var(--academy-blue) !important;
+}
+
+.vp-doc .mermaid-content svg.flowchart .nodeLabel,
+.vp-doc .mermaid-content svg.flowchart .nodeLabel p,
+.vp-doc .mermaid-content svg.flowchart .label text,
+.vp-doc .mermaid-content svg.flowchart .label {
+  color: var(--academy-ink) !important;
+  fill: var(--academy-ink) !important;
+}
+
+/* Mermaid sizes foreignObject labels with its own line-height calculation.
+ * Plume's paragraph rhythm is looser, so inherit it here and the final line
+ * of a node can be clipped inside the generated label box. */
+.vp-doc .mermaid-content svg.flowchart foreignObject .nodeLabel p {
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.vp-doc .mermaid-content svg.flowchart foreignObject {
+  overflow: visible;
+}
+
+.vp-doc .mermaid-content svg.flowchart .edgeLabel .labelBkg {
+  background: var(--academy-surface-cyan) !important;
+  border-radius: 4px;
+}
+
+.vp-doc .mermaid-content svg.flowchart .edgeLabel {
+  background: transparent !important;
+}
+
+.vp-doc .mermaid-content svg.flowchart .edgeLabel p {
+  margin: 0 !important;
+  background: transparent !important;
+  color: var(--academy-blue-deep) !important;
+  line-height: 1.5 !important;
+}
+
+.vp-doc .mermaid-content svg.flowchart .flowchart-link,
+.vp-doc .mermaid-content svg.flowchart .edgePath path {
+  stroke: var(--academy-blue-deep) !important;
+  fill: none !important;
+}
+
+/* Mermaid markers are filled arrowheads, not outlined shapes. Keeping the
+ * marker stroke off prevents short connectors and bidirectional edges from
+ * becoming visually heavier than the nodes they connect. */
+.vp-doc .mermaid-content svg.flowchart marker path {
+  fill: var(--academy-blue-deep) !important;
+  stroke: none !important;
+  stroke-width: 0 !important;
+}
+
+/* Keep connectors subordinate to the labels. Mermaid's default marker stroke
+ * is visually heavy against the small lesson diagrams. */
+.vp-doc .mermaid-content svg.flowchart .flowchart-link,
+.vp-doc .mermaid-content svg.flowchart .edgePath path {
+  stroke-width: 1.35px !important;
+}
+
+/* Named tools, chains and assets use the same small, optical icon box in
+ * tables, tabs and inline references. Local image marks and Iconify spans
+ * share the convention so a missing or wide logo cannot move the label. */
+.vp-doc .academy-brand-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  min-height: 1.35rem;
+  line-height: 1.35;
+  vertical-align: middle;
+}
+
+.vp-doc .academy-brand-icon,
+.vp-doc .academy-brand-label > .vp-icon {
+  display: inline-block;
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 1.15rem;
+  margin: 0;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.vp-doc table .academy-brand-label {
+  white-space: nowrap;
 }
 
 /* Learning hierarchy: use a quiet margin cue rather than boxed sections. */
@@ -734,6 +853,35 @@ body {
   text-align: center;
 }
 
+/* Reused educational visuals should support the reading flow, not behave like
+ * full-bleed marketing artwork. */
+.academy-reference-visual {
+  max-width: 760px;
+  margin: 1.75rem auto 2rem;
+  text-align: center;
+}
+
+.academy-reference-visual--narrow {
+  max-width: 520px;
+}
+
+.academy-reference-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--academy-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgb(43 45 57 / 7%);
+}
+
+.academy-reference-visual figcaption {
+  max-width: 60ch;
+  margin: 0.65rem auto 0;
+  color: var(--academy-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 /* Plume tab-navigation contrast fix.
  * The Academy palette rebinds --vp-c-text-1/2 to dark ink for body copy, but
  * Plume paints the tab bar with a dark background. The two combined leave dark
@@ -753,6 +901,14 @@ body {
 .vp-tabs-nav .vp-tab-nav.active {
   color: #fff;
   font-weight: 600;
+}
+
+/* The tab labels may contain <strong> from the chain-name markup. Keep that
+ * nested text on the same readable colour as the button instead of allowing
+ * the body-copy strong rule to turn it dark on the ink bar. */
+.vp-tabs-nav .vp-tab-nav .academy-brand-label,
+.vp-tabs-nav .vp-tab-nav .academy-brand-label strong {
+  color: inherit;
 }
 
 /* Iconify marks inside tab labels inherit the label colour. */

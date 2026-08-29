@@ -1,6 +1,6 @@
 ---
 week: 1
-day: 7
+day: 8
 title: "How it all connects: one user journey"
 status: drafting
 owner: "Director of Education"
@@ -20,9 +20,9 @@ sources:
     label: "Reuse"
 ---
 
-# Week 1 · Part 7 — How it all connects: one user journey
+# Week 1 · Part 8 — How it all connects: one user journey
 
-You have six parts of pieces. This is where they become a picture.
+You now have seven pieces. This is where they become one picture.
 
 ::: important This page is a preview, not a lesson
 Roughly half the steps below are taught in Weeks 2 and 3. Each is marked and
@@ -52,14 +52,14 @@ either. It is here to show how the pieces fit — nothing more.
 ```mermaid
 flowchart TD
   F["<b>Fiat</b><br/>money in a bank"]
-  C["<b>Centralised exchange</b><br/>✅ Part 4"]
-  U["<b>USDC</b><br/>stablecoin · ✅ Part 4"]
-  W["<b>Self-custody wallet</b><br/>✅ Part 5"]
+  C["<b>Centralised exchange</b><br/>✅ Part 5"]
+  U["<b>USDC</b><br/>stablecoin · ✅ Part 5"]
+  W["<b>Self-custody wallet</b><br/>✅ Part 6"]
   E["<b>Ethereum / Base</b><br/>L1 and L2 · → Week 2"]
   B["<b>Bridge</b><br/>→ Week 2"]
   D["<b>DEX</b><br/>→ Week 3"]
   P["<b>DeFi protocol</b><br/>→ Week 3"]
-  X["<b>Explorer / Dune</b><br/>✅ Part 6 · → Week 4"]
+  X["<b>Explorer / Dune</b><br/>✅ Part 7 · → Week 4"]
   F --> C --> U --> W --> E --> B --> D --> P --> X
 ```
 
@@ -74,17 +74,16 @@ point of the page.
 |---|---|---|
 | **Fiat → exchange** | Money moves from a bank into an exchange account. A normal regulated relationship: KYC, an account, a company holding your funds | The exchange, **entirely**. You have a claim, not an asset |
 | **Exchange → USDC** | Fiat converted to a stablecoin. Dollar value that moves at blockchain speed | The exchange, **plus Circle** — the issuer holding reserves. A new assumption, quietly added |
-| **Exchange → wallet** | Withdrawn to an address you control. Custody moves from a company to a person | **Yourself.** No support line, no reset, no reversal — and nobody who can freeze you |
+| **Exchange → wallet** | Withdrawn to an address you control. Custody moves from a company to a person | **You control custody.** The exchange no longer controls the wallet, but token-level controls may still exist — for example, a stablecoin issuer may be able to freeze its token |
 | **Wallet → chain** | Assets sit on Ethereum, or on **Base**, a Layer 2 built on top for lower fees | The network, and the L2's operators → [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md) |
 | **Bridge** | Moving value between networks. Chains cannot natively see each other | Source chain + destination chain + **the bridge mechanism** → [Week 2 Part 5](../week-2/day-5-l1-l2-and-bridges.md) |
 | **DEX** | Swapping assets through contracts, from your own wallet, no account | Your wallet + the DEX contracts + each token's contract → Week 3 |
 | **DeFi protocol** | Depositing into a lending market or pool — finance by programs, not institutions | All the above + this protocol's contracts + its **oracle** + its economic design → Week 3 |
-| **Explorer / Dune** | Every step above is publicly recorded and verifiable afterwards | Nothing new → [Part 6](./day-6-your-first-transaction.md), Week 4 |
+| **Explorer / Dune** | On-chain activity can be checked directly or explored through derived dashboards | The explorer's record; Dune's indexing and definitions if you use its dashboard → [Part 7](./day-7-your-first-transaction.md), Week 4 |
 
 ::: warning Bridges deserve early attention
-Bridges have historically been among the most frequently and expensively
-exploited components in the entire industry — worth knowing even before you know
-how they work.
+Bridges have historically been a major source of large crypto exploits — worth
+understanding even before you know how they work.
 :::
 
 ### The thing to actually take from this
@@ -100,7 +99,9 @@ Read the trust column downward and notice the shape.
 | DEX | Wallet + several sets of contracts |
 | DeFi protocol | All of the above + oracle + economic design |
 
-**The list never gets shorter.** It gets *different*, and usually longer.
+**Trust assumptions change as you move through the stack.** They can increase,
+decrease or shift depending on the path. In this example, each extra component
+adds another assumption.
 
 Moving to self-custody did not remove trust — it moved it onto you, and onto the
 software you interact with. Each additional protocol adds assumptions rather than
@@ -118,7 +119,7 @@ you can apply to anything.
 
 - **On-ramp / off-ramp** — converting between fiat and crypto in either direction
 - **Layer 2** — a network built on a base chain for cheaper, faster transactions (Week 2)
-- **Wrapped asset** — a token representing an asset from elsewhere ([Part 4](./day-4-crypto-asset-map.md))
+- **Wrapped asset** — a token representing an asset from elsewhere ([Part 5](./day-5-crypto-asset-map.md))
 - **Slippage** — the gap between the price you expected on a swap and the one you got
 - **Liquidity pool** — pooled assets a DEX trades against (Week 3)
 - **Oracle** — a service supplying external data to contracts (Week 3)
@@ -134,13 +135,13 @@ heard stablecoins are faster.
 | They do | They gain | They take on |
 |---|---|---|
 | Buy USDC on a licensed exchange | A dollar value that moves in minutes, not days | Exchange custody; issuer reserves |
-| Withdraw to their own wallet | Nobody can freeze or delay it | Full responsibility for keys |
+| Withdraw to their own wallet | They control custody; token-level issuer controls may remain | Full responsibility for keys |
 | Send to the recipient's address | Settlement in seconds, at a fee measured in cents | Wrong address means it is gone. No reversal |
 | Recipient converts to local currency | Done | Their local exchange, their local rules |
 
 Faster and cheaper than four correspondent banks. Also: no error correction
 anywhere in the chain, several new counterparties, and two jurisdictions'
-regulations — [Week 0 Part 5](../week-0/day-5-regulatory-awareness.md).
+regulations — [Week 0 Part 5](../../getting-started/regulatory-awareness.md).
 
 ::: important Whether that trade is worth making depends entirely on the situation
 Noticing that it **is a trade** — rather than a straightforward upgrade — is

@@ -4,7 +4,7 @@ day: 1
 title: "Why blockchain exists"
 status: review
 owner: "Director of Education"
-reading_time: "15 min"
+reading_time: "12 min"
 sources:
   - name: "ethereum.org — Web3"
     url: "https://ethereum.org/web3/"
@@ -18,19 +18,25 @@ sources:
   - name: "Bitcoin whitepaper"
     url: "https://bitcoin.org/bitcoin.pdf"
     label: "Link"
+  - name: "Web3 Internship Handbook — blockchain basics visuals"
+    url: "https://github.com/ethpanda-org/Web3-Internship-Handbook"
+    label: "Reuse"
 ---
 
-# Week 1 · Day 1 — Why blockchain exists
+# Week 1 · Part 1 — Why blockchain exists
 
 ## Why this matters
+
+Week 0 gave you vocabulary and a tool map. This week turns them into a working
+model, and it starts with the question everything else depends on.
 
 Most people meet blockchain through prices, tokens and hype, which is a bad
 introduction because it skips the actual problem the technology was built to
 solve. If you don't understand that problem, everything afterwards — wallets,
 gas, contracts — is arbitrary rules to memorise.
 
-Today is the only day with no software to install. It's the day that makes the
-rest of the programme make sense.
+This is the only part of the week with no software to install. It's the one that
+makes the rest of the programme make sense.
 
 ## Learning objectives
 
@@ -71,6 +77,20 @@ A blockchain is a shared record that many independent computers maintain
 together, with rules that let them agree on what is true without any of them being
 in charge.
 
+<figure class="academy-reference-visual">
+  <img src="/learning/blockchain-distributed-network.jpg" alt="A distributed network of connected nodes, illustrating how many computers can maintain a shared record together." />
+  <figcaption>Visual adapted from the Web3 Internship Handbook's blockchain basics materials.</figcaption>
+</figure>
+
+```mermaid
+flowchart LR
+  U1["You"] --> B1["<b>The bank</b><br/><i>owns the ledger</i>"]
+  U2["Them"] --> B1
+  B1 --> L1["One record<br/><i>with an operator</i>"]
+  N1["Node"] <--> N2["Node"] <--> N3["Node"]
+  N2 --> L2["<b>One agreed record</b><br/><i>nobody owns it</i>"]
+```
+
 Three things make it work:
 
 | Element | What it does |
@@ -79,21 +99,26 @@ Three things make it work:
 | **Rules everyone checks** | A change is only valid if it follows the rules, and every participant verifies this independently |
 | **Agreement mechanism** | A way to settle what gets added next, even when participants don't trust each other |
 
-That third element is **consensus**, and it's Day 2.
+That third element is **consensus**, and it's [Part 3](./day-3-consensus.md).
 
 ### What it costs
 
-This is where most introductions stop, and it's the part worth being honest about.
+::: important This is where most introductions stop, and it's the part worth being honest about
+:::
 
 Removing the operator is expensive. Thousands of computers redoing the same work
 is slower and costlier than one company running one database. Nobody can reverse a
 mistake for you. Nobody can restore your access if you lose your keys.
 
-So the useful question is never "should this be on a blockchain?" — it's **is the
-operator actually a problem here?**
+So the useful question is never "should this be on a blockchain?" — it's:
 
-- Your university's exam records? The operator is fine. NTU is trusted, accountable, and reversing an error is a feature.
-- Sending money to someone in another country through four intermediaries who each take a fee and a day? The operator is more of a problem.
+::: important Is the operator actually a problem here?
+:::
+
+| Case | Verdict |
+|---|---|
+| Your university's exam records | **The operator is fine.** NTU is trusted, accountable, and reversing an error is a feature |
+| Sending money abroad through four intermediaries who each take a fee and a day | **The operator is more of a problem** |
 
 You'll meet plenty of projects that got this question wrong. Being able to ask it
 is most of what separates someone who understands this space from someone
@@ -106,37 +131,48 @@ able to build any of them — just place them on the map.
 
 - **Bitcoin** — the first working example of this idea, built for payments only
 - **Ethereum** — the same idea, but the shared record can also run programs
-- **Consensus** — the agreement mechanism above. Tomorrow's topic
-- **Crypto assets** — what gets tracked on these records. Day 3
+- **Consensus** — the agreement mechanism above. Part 3
+- **Crypto assets** — what gets tracked on these records. Part 5
 
 ## Worked example
 
 Two people agree Ann pays Ben $50.
 
-**With an operator.** Ann's bank reduces her balance, increases Ben's, and records
-it. If the bank goes down, nothing happens. If it makes an error, it can fix it.
-Both trust the bank.
+::: tabs
+@tab With an operator
 
-**Without one.** Ann announces to a network that she's sending 50 to Ben, signed
-with a key only she holds. Participants check she has 50 and hasn't already spent
-it. They agree to add it to the shared record. It's now permanent, visible to
-anyone, and reversible by no one — including Ann, and including whoever wrote the
-software.
+Ann's bank reduces her balance, increases Ben's, and records it.
 
-Notice what got harder: no help if Ann sent it to the wrong address. And what got
-easier: Ben needs no permission from anyone to receive it, and no third party can
-freeze it.
+- If the bank goes down, nothing happens
+- If it makes an error, it can fix it
+- Both parties trust the bank
 
-## Further exploration
+@tab Without one
 
-Optional depth. No points, not assessed.
+Ann announces to a network that she's sending 50 to Ben, signed with a key only
+she holds. Participants check she has 50 and hasn't already spent it. They agree
+to add it to the shared record.
 
-- [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf) — the original 2008 proposal. Nine pages. Section 1 alone is worth reading, and states the double-spend problem more plainly than most modern explanations.
-- [ethereum.org — Web3](https://ethereum.org/web3/) — how the same idea extends beyond payments.
+It's now permanent, visible to anyone, and reversible by no one — including Ann,
+and including whoever wrote the software.
+:::
 
-## Sources and attribution
+::: warning Notice the trade in both directions
+**Harder:** no help if Ann sent it to the wrong address.
 
+**Easier:** Ben needs no permission from anyone to receive it, and no central
+ledger operator can simply reverse a valid native-asset transfer.
+:::
+
+::: details Further exploration — optional, not assessed
+- [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf) — the original 2008 proposal. Nine pages. Section 1 alone is worth reading, and states the double-spend problem more plainly than most modern explanations
+- [ethereum.org — Web3](https://ethereum.org/web3/) — how the same idea extends beyond payments
+:::
+
+::: details Sources and attribution
 - [ethereum.org — Web3](https://ethereum.org/web3/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — What is Ethereum](https://ethereum.org/what-is-ethereum/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Intro to Ethereum](https://ethereum.org/developers/docs/intro-to-ethereum/) — Reuse (CC BY 4.0), adapted
 - [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf) — Link, referenced only
+- [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) — Reuse (permission granted, LXDAO); distributed-network visual adapted from its blockchain basics materials
+:::

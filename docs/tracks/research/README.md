@@ -2,7 +2,7 @@
 track: research
 status: stub
 owner: ''
-title: README
+title: Research track kit
 ---
 
 # Research track kit

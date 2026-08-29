@@ -1,6 +1,6 @@
 ---
 week: 1
-day: 4
+day: 5
 title: "What crypto assets actually are"
 status: drafting
 owner: "Director of Education"
@@ -20,7 +20,7 @@ sources:
     label: "Reuse"
 ---
 
-# Week 1 · Part 4 — What crypto assets actually are
+# Week 1 · Part 5 — What crypto assets actually are
 
 You know how state changes and how the network agrees on it. This is what is
 being tracked.
@@ -67,11 +67,12 @@ a table of who owns how much. USDC on Ethereum is one contract's ledger.
 | Exists because | The protocol says so | A contract says so |
 | Can be frozen by an issuer | No | **Yes**, if the contract allows it |
 | Can be lost to a contract bug | No | **Yes** |
-| Pays gas | **Yes** | No — you need ETH as well |
+| Pays the transaction fee | **Yes** | No — you need ETH to pay the fee as well |
 
 ::: warning Every beginner hits this once
 **Holding only USDC on Ethereum means you cannot move it.** Moving it requires
-calling a contract, calling a contract requires gas, and gas is paid in ETH.
+calling a contract, calling a contract requires gas, and the resulting
+transaction fee is paid in ETH.
 :::
 
 ### The five categories
@@ -84,9 +85,9 @@ protocol itself.
 
 | Asset | Chain | Note |
 |---|---|---|
-| **BTC** | Bitcoin | Deliberately limited. Designed to be money and little else |
-| **ETH** | Ethereum | Pays gas, and is staked to secure the network |
-| **SOL** | Solana | Same roles on Solana |
+| <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>BTC</strong></span> | Bitcoin | Deliberately limited. Designed to be money and little else |
+| <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>ETH</strong></span> | Ethereum | Pays transaction fees, and is staked to secure the network |
+| <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>SOL</strong></span> | Solana | Same roles on Solana |
 
 No issuer. Nobody can freeze your BTC or reverse your ETH transfer — and nobody
 can help you if you lose your keys.
@@ -97,8 +98,8 @@ Tokens designed to hold a steady value, almost always one US dollar.
 
 | Asset | Issuer | Model |
 |---|---|---|
-| **USDC** | Circle | Cash and short-term US treasuries, with public attestations |
-| **USDT** | Tether | Backed by reserves; the largest by volume |
+| <span class="academy-brand-label"><Icon name="token-branded:usdc" /><strong>USDC</strong></span> | Circle | Cash and short-term US treasuries, with public attestations |
+| <span class="academy-brand-label"><Icon name="token-branded:usdt" /><strong>USDT</strong></span> | Tether | Backed by reserves; the largest by volume |
 
 **Why they matter.** Native assets move in price, which makes them awkward as
 money — nobody wants to be paid in something worth 20% less by Friday.
@@ -120,8 +121,8 @@ changes.
 
 | Asset | Protocol | Roughly |
 |---|---|---|
-| **UNI** | Uniswap | Governance over the Uniswap protocol |
-| **AAVE** | Aave | Governance, and a role in the safety module |
+| <span class="academy-brand-label"><Icon name="token-branded:uni" /><strong>UNI</strong></span> | Uniswap | Governance over the Uniswap protocol |
+| <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>AAVE</strong></span> | Aave | Governance, and a role in the safety module |
 
 What a governance token actually entitles you to varies enormously, and is often
 less than the marketing implies. Week 4 covers this properly. For now: holding
@@ -135,11 +136,13 @@ cannot.
 
 | Asset | Represents | Why it exists |
 |---|---|---|
-| **WETH** | ETH | ETH is native, so it doesn't follow the token standard contracts expect |
-| **WBTC** | BTC | Bitcoin can't run Ethereum contracts |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/weth.png" alt="" aria-hidden="true" /><strong>WETH</strong></span> | ETH | ETH is native, so it doesn't follow the token standard contracts expect |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/wbtc.png" alt="" aria-hidden="true" /><strong>WBTC</strong></span> | BTC | Bitcoin can't run Ethereum contracts |
 
-WETH is mechanically simple — deposit ETH, receive WETH, redeem any time. The
-contract holds the ETH and nothing else needs trusting.
+**WETH is mechanically simple: deposit ETH into the contract, receive WETH, and
+redeem it through the same contract.** Unlike custodial wrapped assets, there is
+no external custodian holding the underlying ETH; the main dependency is the
+contract itself.
 
 **WBTC is a different animal.** Real BTC sits on Bitcoin, held by a custodian,
 while a token on Ethereum represents it. That token is worth a bitcoin only as
@@ -170,16 +173,18 @@ Cutting across all five categories: **who holds the keys?**
 | What you have | An account balance and a claim | The asset itself |
 | Lost password | Recoverable via support | **Nothing can be done** |
 | Company fails | You are a creditor | Unaffected |
-| Can be frozen | Yes | No |
+| Token-level controls | The platform may freeze its account | An issuer may still freeze its token |
 
 Buy ETH on an exchange and leave it there, and you do not have ETH. You have a
 claim against a company that has ETH. Usually equivalent. In the cases where
 they diverge — and there is a long history of exchange failures where they
-diverged badly — the difference is everything.
+diverged badly — the difference is everything. Self-custody removes the
+platform's custody control, but it does not remove token-level controls built
+into an asset such as a stablecoin.
 
 ::: tip "Not your keys, not your coins"
 This is not advice to move everything to self-custody. Self-custody transfers
-the entire security burden to you, and [Week 0 Part 4](../week-0/day-4-safety.md)
+the entire security burden to you, and [Week 0 Part 4](../../getting-started/safety.md)
 explains how much burden that is. It is a statement about what you *own* — and
 both options are legitimate for different purposes.
 :::

@@ -1,6 +1,6 @@
 ---
 week: 1
-day: 5
+day: 6
 title: "Wallets, accounts and keys"
 status: drafting
 owner: "Director of Education"
@@ -18,16 +18,19 @@ sources:
   - name: "MetaMask — Support"
     url: "https://support.metamask.io/"
     label: "Link"
+  - name: "MyFirstNFT — wallet security visuals"
+    url: "https://nft.myfirstweb3.xyz/"
+    label: "Reuse"
 ---
 
-# Week 1 · Part 5 — Wallets, accounts and keys
+# Week 1 · Part 6 — Wallets, accounts and keys
 
 Everything so far has been about the network. This is about **you** — how a
 person holds a position in a system with no accounts department, no password
 reset, and no way to prove who you are to anyone.
 
 ::: warning Almost every avoidable loss in this space traces back to one of the four things on this page
-Read [Week 0 Part 4](../week-0/day-4-safety.md) first if you have not.
+Read [Week 0 Part 4](../../getting-started/safety.md) first if you have not.
 :::
 
 ## Learning objectives
@@ -62,26 +65,29 @@ They derive from one another **in one direction only**. That directionality is
 the entire security model.
 
 ```mermaid
-flowchart LR
+flowchart TD
   R["<b>Recovery phrase</b><br/>12 or 24 words<br/><i>never share</i>"]
   P["<b>Private key</b><br/>a secret number<br/><i>never share</i>"]
   U["<b>Public key</b><br/>derived from private<br/><i>safe to reveal</i>"]
   A["<b>Address</b><br/>0x742d…f44e<br/><i>share freely</i>"]
-  R -->|generates| P -->|derives| U -->|shortens to| A
+  R -->|generates| P -->|derives| U -->|derives| A
 ```
 
 | | What it is |
 |---|---|
 | **Private key** | A very large secret number. Whoever knows it can sign as you, permanently. Not *like* a password — a password is checked by a server that can reset it. There is no server here |
 | **Public key** | Derived from the private key by one-way maths. Anyone can verify your signatures; nobody can work backwards. That impossibility *is* the security |
-| **Address** | A shortened public key, and what you share. As safe to hand out as an email address |
+| **Address** | Derived from the public key by hashing it and representing the result as 20 bytes. This is what you share |
 | **Recovery phrase** | 12 or 24 ordinary words that regenerate the private key — and every key in the wallet |
 
 ::: danger The recovery phrase is strictly more powerful than any single key
 Anyone holding it holds **every account in that wallet, forever, from anywhere**.
 
-No legitimate site, app, wallet, support agent or Academy organiser will ever
-ask for it. There is no situation where a real one needs it.
+No website, DApp, support agent, reviewer or Academy organiser should ever ask
+for it. The normal exception is when **you deliberately restore or import your
+wallet into wallet software that you installed from a verified official source**.
+Never enter it because someone sent you a link, DMed you, or told you to
+“verify”, “sync” or “unlock” your wallet.
 :::
 
 ### Account, wallet, address
@@ -104,27 +110,35 @@ Ethereum has two account types, central in Weeks 2 and 3:
 
 ::: important The distinction that costs people the most money
 **Signing** is local and free. Your wallet applies your private key to some
-data. Nothing touches the network, no gas is paid, nothing appears on any
+data. Nothing touches the network, no transaction fee is paid, nothing appears on any
 explorer.
 
-**Sending** is broadcasting a *signed transaction*, where it costs gas and
-changes state.
+**Sending** is broadcasting a *signed transaction*, where the transaction
+consumes gas, a transaction fee is paid, and state can change.
 
 So every transaction is signed, but **not everything you sign is a transaction.**
 :::
 
 | You sign | What happens now | What can happen later |
 |---|---|---|
-| Login to a site | Nothing on-chain | Nothing. Harmless |
+| Login to a site ("prove you own this address") | Nothing on-chain | Normally nothing |
 | A transaction to send 0.05 ETH | 0.05 ETH moves | Nothing further. Bounded |
-| **A token approval** | **Nothing visible** | That contract can move your tokens, **at any future time** |
+| **An on-chain approval** — an `approve()` transaction | Costs gas; sets an allowance on-chain | That contract can move your tokens **at any future time** |
+| **A signature-based permission** | **Nothing visible, often no gas** | Someone else can submit it later to create the same permission |
 
-::: danger The third row shows nothing happening
-No funds leave. No confirmation appears. And you have just granted a standing
+The last two rows do the same job by different routes. One is a transaction you
+pay for; the other is a signature that may cost nothing at all. **Both can hand
+over standing access to your tokens.**
+
+::: danger The dangerous rows are the ones where nothing appears to happen
+No funds leave. No confirmation appears. And you may have granted a standing
 permission that outlives the moment entirely.
 
-This is the mechanism behind a large share of wallet drains. "It's just a
-signature, not a transaction" is **false comfort**.
+This is the mechanism behind a large share of wallet drains.
+
+**"It's just a signature, not a transaction" is false comfort. So is "it didn't
+cost any gas."** A wallet request can be dangerous even when nothing moves
+immediately.
 :::
 
 **The habit, starting now:** before approving anything, read *which network,
@@ -150,9 +164,10 @@ something and costs nothing.
 and Sepolia; your balances are completely separate. There is **no bridge from
 testnet to mainnet**, and anyone offering one is running a scam.
 
-**Sending over the wrong network usually loses the assets.** Always check which
-network your wallet is on. It is the first line of every transaction screen for
-a reason.
+**Sending on the wrong network can make assets hard to find or require recovery
+steps.** Some mistakes are recoverable when the same address exists on another
+EVM network; others can result in permanent loss. Always check which network
+your wallet is on. It is the first line of every transaction screen for a reason.
 :::
 
 ## Landscape
@@ -166,9 +181,14 @@ a reason.
 - **Derivation path** — the standard by which one recovery phrase generates many keys
 - **Nonce** — a per-account counter preventing replayed transactions
 
+<figure class="academy-reference-visual academy-reference-visual--narrow">
+  <img src="/learning/myfirstnft/hot-cold-wallets.png" alt="A diagram comparing hot wallets, which can perform many online operations, with a cold wallet kept offline to reduce exposure." />
+  <figcaption>Hot wallets are convenient for frequent use; cold wallets reduce online exposure. Source: <a href="https://nft.myfirstweb3.xyz/">MyFirstNFT</a> / LXDAO.</figcaption>
+</figure>
+
 ## Guided walkthrough
 
-Preparation only. You install the wallet in [Part 6](./day-6-your-first-transaction.md).
+Preparation only. You install the wallet in [Part 7](./day-7-your-first-transaction.md).
 
 ::: steps
 1. **Decide where your recovery phrase will live**

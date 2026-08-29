@@ -57,12 +57,19 @@ reason this problem went unsolved for decades.
 An invalid block is rejected by everyone automatically. Two *valid* competing
 blocks is a genuine coordination problem.
 
-::: important The core trick, used by every mechanism worth studying
+::: important The shared goal
 You cannot stop someone *proposing* dishonest history. So instead you make
-proposing blocks **require something scarce and expensive**, and make being
-caught dishonest **destroy that thing**.
+**attacks extremely expensive, so honest participation is usually the
+economically rational choice.**
 
-Everything else is implementation detail.
+Both mechanisms below do that — but they do it in genuinely different ways, and
+the difference is worth keeping straight.
+
+| | Proof of Work | Proof of Stake |
+|---|---|---|
+| Where security comes from | Block production is **expensive to perform** — real hardware and electricity | Validators put **assets at risk** that can be taken away |
+| What an attacker spends | Enormous real-world computing resources, continuously | Enormous capital, locked as stake |
+| What failure costs them | Ongoing hashpower costs; PoW has no slashing | Provable dishonesty can have their stake **slashed** |
 :::
 
 ### The two mechanisms
@@ -81,12 +88,12 @@ times per second, until you get lucky. This is **mining**.
 |---|---|
 | The scarce resource | Electricity and specialised hardware |
 | How you attack it | Control most of the network's computing power |
-| What it costs | More hardware than everyone else combined |
-| Punishment for cheating | You spent real money and the network rejected your block |
+| What it costs | Control enough effective hashpower for long enough to outpace the honest chain |
+| What cheating costs | **PoW has no slashing.** An attacker must continuously spend on hashpower, whether the attack succeeds or fails |
 
-The security argument is economic: attacking Bitcoin means out-spending the
-entire global mining industry to attack the system your hardware's value depends
-on.
+The security argument is economic: attacking Bitcoin means sustaining enough
+hashpower to outpace the honest chain for long enough to attack the system your
+hardware's value depends on.
 
 **The honest criticism:** all that electricity produces no other output. Not a
 bug — the expenditure *is* the security — but it is real energy for one purpose.
@@ -104,7 +111,7 @@ to propose and attest to blocks roughly in proportion to what they have staked.
 | The scarce resource | The staked asset itself |
 | How you attack it | Control a large share of everything staked |
 | What it costs | Acquiring an enormous quantity of the asset |
-| Punishment for cheating | Your stake is **slashed** — burned |
+| What cheating costs | Provable misbehaviour can have your stake **slashed** — taken and destroyed |
 
 The elegance: an attacker must buy huge amounts of the asset, then use it to
 attack the network that asset derives its value from. Success devalues the very
@@ -122,13 +129,16 @@ why some argue pooling reintroduces concentration.
 |---|---|---|
 | Scarce resource | Computing power | Staked capital |
 | Energy use | Very high | Roughly 99.9% lower |
-| Barrier to entry | Hardware, cheap electricity | 32 ETH, or a pool |
-| Cost of cheating | Wasted electricity | Slashed stake |
+| Barrier to entry | Hardware, cheap electricity | Solo validator: 32 ETH + suitable hardware; pools allow economic participation without running a validator |
+| Cost of cheating | Ongoing hashpower and electricity costs; no slashing | Slashed stake |
 | Finality | Probabilistic — confidence grows | Explicit — ~13 minutes |
 | Used by | Bitcoin | Ethereum, most modern chains |
 
 ::: tip Neither is simply better
 They make different trade-offs — a theme [Week 2](../week-2/) makes central.
+
+And both raise the same obvious question: *if nobody is being paid a salary, why
+does anyone do this work at all?* That is [Part 4](./day-4-incentives.md).
 :::
 
 ### Why "wait for confirmations"
@@ -143,9 +153,17 @@ impossible. This is **probabilistic finality**: never mathematically certain,
 rapidly certain enough.
 
 Ethereum's Proof of Stake adds explicit finality. After roughly 13 minutes a
-block is **finalised**, and reversing it would require an attacker to accept
-having a third of all staked ETH destroyed. Not "very unlikely" — economically
-suicidal.
+block is **finalised**. Ethereum needs a supermajority of validator stake to
+finalise blocks, so a large attacker can disrupt finality — but producing two
+conflicting finalised histories requires provable dishonest behaviour, which
+exposes an enormous amount of stake to slashing.
+
+For Foundation, the idea to hold is simply:
+
+> **Ethereum makes attacks expensive because validators have real value at
+> risk.**
+
+The exact thresholds are Further Exploration.
 
 ::: tip This is why exchanges make you wait after a deposit
 They are not being awkward. They are waiting for the reversal cost to exceed
@@ -170,7 +188,7 @@ maps it properly.
 
 - **51% attack** — controlling a majority of the securing resource. Real for small chains, wildly impractical for Bitcoin or Ethereum
 - **Slashing** — destroying part of a validator's stake for provable misbehaviour
-- **Validator / miner** — the PoS and PoW names for a block producer
+- **Validator / miner** — validators participate in Proof of Stake; miners produce blocks in Proof of Work. They are different roles
 - **Staking pool** — pooling assets to stake without needing 32 ETH alone
 - **Liquid staking** — a tradable token representing staked assets
 - **Byzantine Fault Tolerance (BFT)** — mechanisms giving fast, explicit finality. Week 2 meets one in Cosmos
@@ -186,14 +204,15 @@ where that never happened, so they build an alternative chain from block 499.
 
 | | Proof of Work | Proof of Stake |
 |---|---|---|
-| What they need | To outpace the entire honest network | A third of all staked ETH |
-| Why it fails | The real chain extends the whole time; they fall behind immediately | Finalising a competing chain is provable misbehaviour |
-| What it costs them | More hardware than everyone combined, running continuously | Billions in stake, **slashed and burned** |
-| Outcome | Wasted spend, nothing gained | Spent billions to steal from one merchant, lost the billions |
+| What they need | To control enough effective hashpower for long enough to outpace the honest chain | A very large share of all staked ETH |
+| Why it fails | The honest chain keeps extending; the attacker must sustain enough hashpower to outpace it | Finalising a competing chain requires provable misbehaviour |
+| What it costs them | Control enough effective hashpower for long enough to outpace the honest chain | A very large amount of stake exposed to **slashing** |
+| Outcome | The attacker must sustain costly hashpower; success is expensive and not guaranteed | The attack becomes economically costly, with provable dishonesty exposing that stake to slashing |
 
 ::: important The defence is the same shape in both cases
-The attack is not impossible — it is **not worth it**. That is what blockchain
-security actually is: not mathematical impossibility, but economic absurdity.
+The design aims to make attacks **economically unattractive or prohibitively
+expensive**. That is what blockchain security actually is: a deterrent built
+from costs and incentives, not a claim that attacks cannot happen.
 :::
 
 ::: warning Which is why scale matters

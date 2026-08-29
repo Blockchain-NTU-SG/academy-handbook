@@ -31,11 +31,15 @@ handbook content and learner experience. The repository’s
 [UPSTREAM.md](https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/UPSTREAM.md)
 describes the relationship and retained attribution in more detail.
 
-## Academy contributors
+## Contributors
 
 <div class="academy-contributor-links">
-  <a class="academy-contributor-link" href="https://x.com/wowwwthemaya" target="_blank" rel="noopener" aria-label="Kai Ze on X">
+  <a class="academy-contributor-link" href="https://www.linkedin.com/in/kai-ze-chin-310426300/" target="_blank" rel="noopener" aria-label="Kai Ze on LinkedIn">
     <img src="/brand/contributors/kai-ze.jpg" alt="Kai Ze" />
     <span>Kai Ze</span>
+  </a>
+  <a class="academy-contributor-link" href="https://www.linkedin.com/in/thetpine/" target="_blank" rel="noopener" aria-label="Thet Pine on LinkedIn">
+    <img src="/brand/contributors/thet-pine.png" alt="Thet Pine" />
+    <span>Thet Pine</span>
   </a>
 </div>

@@ -8,6 +8,6 @@ reading_time: ''
 sources: []
 ---
 
-# Week 3 · Day 3 — Remix lab: deploy your first contract
+# Week 3 · Part 3 — Remix lab: deploy your first contract
 
 > **Status: stub.** This page is migrated from the Education Director's Foundation v1.2 source and is awaiting its completed lesson.

@@ -8,6 +8,6 @@ reading_time: ''
 sources: []
 ---
 
-# Week 3 · Day 5 — Security, approvals and permissions
+# Week 3 · Part 5 — Security, approvals and permissions
 
 > **Status: stub.** This page is migrated from the Education Director's Foundation v1.2 source and is awaiting its completed lesson.
