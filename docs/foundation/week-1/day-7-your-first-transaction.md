@@ -258,7 +258,7 @@ guessing — wallet interfaces change, and the group will know.
 
    ::: danger Never pay for testnet ETH
    It is worthless by definition, so anyone selling it is running a scam. There
-   **Sepolia ETH cannot be converted or bridged into real mainnet ETH.** Anyone
+   is **no way to convert or bridge Sepolia ETH into real mainnet ETH**. Anyone
    claiming they can turn your test ETH into real ETH is scamming you. Never
    connect a wallet holding real assets to a faucet.
    :::
