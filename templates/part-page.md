@@ -1,6 +1,6 @@
 ---
 week: 0
-day: 0
+day: 0  # Part number; key retained for compatibility
 title: ""
 status: stub          # stub | drafting | review | done
 owner: ""             # who is writing this
@@ -11,14 +11,14 @@ sources:              # every upstream source used, with its label
     label: ""         # Reuse | Link
 ---
 
-# Week N · Day N — Title
+# Week N · Part N — Title
 
 ## Why this matters
 
 Two or three sentences. What this unlocks, or what goes wrong without it. Written for
 someone who has never opened a code editor. No jargon that hasn't been introduced yet.
 
-Open by connecting to the previous day. The Foundation should read as one continuous
+Open by connecting to the previous Part. The Foundation should read as one continuous
 story, not five separate modules.
 
 ## Learning objectives
@@ -37,7 +37,7 @@ explain, send, deploy, compare — not "understand" or "be aware of".
 Must understand. The main body — our own explanation, reorganised from the
 sources listed in the frontmatter, not a list of links.
 
-Any term used here is either defined here or was defined in an earlier day.
+Any term used here is either defined here or was defined in an earlier Part.
 Prefer a diagram or table over three paragraphs of prose.
 
 ## Landscape
@@ -49,7 +49,7 @@ Keep these short — a few lines each. Nothing here is assessable.
 
 ## Guided walkthrough
 
-The hands-on part, where the day has one. Numbered steps, each one a single action.
+The hands-on part, where the Part has one. Numbered steps, each one a single action.
 
 1. Step
 2. Step

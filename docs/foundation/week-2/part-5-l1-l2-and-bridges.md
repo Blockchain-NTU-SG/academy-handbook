@@ -233,7 +233,7 @@ valuable.
 ## Landscape
 
 - **Rollup** — an L2 that processes transactions away from the base chain and sends data or proofs back to it. Ethereum can check or settle the result while many users share the L1 cost
-- **Fraud proof / validity proof** — two ways an L2 can support its claim: one lets someone challenge a bad result, while the other provides a mathematical proof that the result follows the rules
+- **Fraud proof / validity proof** — two ways an L2 can show Ethereum why a result should be accepted. One lets a bad result be challenged; the other provides a mathematical proof that the result follows the rules
 - **Sequencer** — the service that decides the order of many L2 transactions before a batch is posted to L1. A centralised sequencer can delay or censor transactions, but that does not automatically mean it can steal user funds
 - **Data availability** — keeping the transaction details needed to check what happened or recover a position accessible. If the data disappears, checking the L2 history becomes much harder
 - **Canonical vs third-party bridge** — a bridge promoted by the network, or one run independently. Neither label removes the need to check its contracts and verification process

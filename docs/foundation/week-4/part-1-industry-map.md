@@ -104,7 +104,7 @@ own nodes.
 **Why blockchain matters:** it *is* the chain, plus everything needed to build on
 it — RPC providers, indexers, data availability, developer tooling.
 
-**Examples:** Alchemy, Infura, The Graph
+**Examples:** <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/alchemy.svg" alt="" aria-hidden="true" /><strong>Alchemy</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/infura.svg" alt="" aria-hidden="true" /><strong>Infura</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/the-graph.png" alt="" aria-hidden="true" /><strong>The Graph</strong></span>
 
 **Limitation:** convenience recentralises. When most applications read the chain
 through two providers, an outage at one takes down a large slice of "the
@@ -119,7 +119,7 @@ understanding cryptography.
 **Why blockchain matters:** self-custody is only possible if key management is
 usable. Wallets are the entire user-facing surface.
 
-**Examples:** MetaMask, Phantom, Rabby, Safe
+**Examples:** <span class="academy-brand-label"><Icon name="token-branded:metamask" /><strong>MetaMask</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:phantom" /><strong>Phantom</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:rabby" /><strong>Rabby</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:safe" /><strong>Safe</strong></span>
 
 **Limitation:** the security burden sits with the user, and interfaces still ask
 people to approve things they cannot evaluate — [Week 3 Part 5](../week-3/part-5-security-and-approvals.md).
@@ -132,7 +132,7 @@ settlement delays.
 **Why blockchain matters:** it can enable fast global settlement without the
 same correspondent-banking path.
 
-**Examples:** Circle (USDC), Tether (USDT)
+**Examples:** <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/circle.svg" alt="" aria-hidden="true" /><strong>Circle (USDC)</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/tether.svg" alt="" aria-hidden="true" /><strong>Tether (USDT)</strong></span>
 
 **Limitation:** the largest stablecoins are **centralised claims on an issuer**.
 Reserves, redemption and freezing are all trust assumptions — [Week 1 Part 5](../week-1/part-5-crypto-asset-map.md).
@@ -147,7 +147,7 @@ assets, match transactions or enforce rules.
 many protocols are designed for permissionless access, subject to their
 interfaces and other controls.
 
-**Examples:** Uniswap (DEX), Aave (lending)
+**Examples:** <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap (DEX)</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave (lending)</strong></span>
 
 **Limitation:** composability spreads failure, oracles can be manipulated, and
 much of the yield historically came from token emissions rather than genuine
@@ -162,7 +162,7 @@ in limited hours.
 **Why blockchain matters:** on-chain representation allows 24/7 settlement and
 programmability.
 
-**Examples:** tokenised treasuries and money-market funds
+**Examples:** <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/buidl.png" alt="" aria-hidden="true" /><strong>BUIDL</strong></span> (BlackRock's tokenised fund), tokenised treasuries and money-market funds
 
 **Limitation:** **the token is a claim, not the asset.** A tokenised bond depends
 entirely on the legal entity holding the real one. That is a legal question wearing
@@ -176,7 +176,7 @@ issued them, which makes independent ownership and portability difficult.
 **Why blockchain matters:** it can provide an independently verifiable ownership
 record that can be referenced across applications.
 
-**Examples:** ENS, event ticketing, in-game items
+**Examples:** <span class="academy-brand-label"><Icon name="token-branded:ens" /><strong>ENS</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/opensea.svg" alt="" aria-hidden="true" /><strong>OpenSea</strong></span>, event ticketing, in-game items
 
 **Limitation:** the token usually points at a link — [Week 3 Part 4](../week-3/part-4-tokens-and-standards.md).
 And the 2021 collectibles boom left the sector's reputation well behind its more
@@ -189,7 +189,7 @@ anywhere.
 
 **Why blockchain matters:** items can persist beyond one publisher.
 
-**Examples:** on-chain games, consumer social applications
+**Examples:** <span class="academy-brand-label"><Icon name="token-branded:axs" /><strong>Axie Infinity</strong></span>, on-chain games, consumer social applications
 
 **Limitation:** many early blockchain games struggled to attract players beyond
 financial incentives. Financialising play can attract speculators rather than players, and
@@ -202,7 +202,7 @@ financial incentives. Financialising play can attract speculators rather than pl
 **Why blockchain matters:** treasuries and voting can be enforced by contracts
 rather than trust.
 
-**Examples:** protocol governance, grant programmes
+**Examples:** <span class="academy-brand-label"><Icon name="token-branded:mkr" /><strong>MakerDAO</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/arbitrum.png" alt="" aria-hidden="true" /><strong>Arbitrum DAO</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:uni" /><strong>Uniswap governance</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/lxdao.svg" alt="" aria-hidden="true" /><strong>LXDAO</strong></span>, grant programmes
 
 **Limitation:** governance participation can be low, and token-weighted voting
 can concentrate influence in large holders. Legal status is unresolved in many
@@ -215,25 +215,25 @@ jurisdictions.
 **Why blockchain matters:** without external data and cross-chain messaging,
 contracts can only act on what is already on their chain.
 
-**Examples:** Chainlink; LayerZero, Wormhole, Across
+**Examples:** <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/chainlink.svg" alt="" aria-hidden="true" /><strong>Chainlink</strong></span>; <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/layerzero.png" alt="" aria-hidden="true" /><strong>LayerZero</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/wormhole.png" alt="" aria-hidden="true" /><strong>Wormhole</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/across.svg" alt="" aria-hidden="true" /><strong>Across</strong></span>
 
 **Limitation:** both can create **concentrated points of failure**. Bridges have
 historically been a major source of large crypto exploits — [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md).
 
 @tab Data, ZK, DePIN, AI
 
-**On-chain data** — Dune, DefiLlama, Nansen. Raw on-chain data is public but hard
+**On-chain data** — <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/nansen.png" alt="" aria-hidden="true" /><strong>Nansen</strong></span>. Raw on-chain data is public but hard
 to use directly. *Limitation:* dashboards embed someone's definitions; "TVL" is
 a choice, not a fact.
 
-**ZK and privacy** — proving something is true without revealing it. Used for
+**ZK and privacy** — <span class="academy-brand-label"><Icon name="token-branded:starknet" /><strong>Starknet</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:zksync" /><strong>zkSync</strong></span> and <span class="academy-brand-label"><Icon name="token-branded:scroll" /><strong>Scroll</strong></span> are examples of networks using zero-knowledge proofs. The underlying idea is proving something is true without revealing it. Used for
 scaling and privacy. *Limitation:* hard to build, hard to audit, and privacy
 tools attract regulatory attention.
 
-**DePIN** — token incentives to bootstrap physical networks. *Limitation:* the
+**DePIN** — <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/helium.svg" alt="" aria-hidden="true" /><strong>Helium</strong></span> and <span class="academy-brand-label"><Icon name="token-branded:filecoin" /><strong>Filecoin</strong></span> use token incentives to bootstrap physical or storage networks. *Limitation:* the
 hard part is real-world operations, and demand rarely arrives with supply.
 
-**AI × Web3** — an emerging and unsettled area. *Limitation:* a great deal of it
+**AI × Web3** — <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/0g.png" alt="" aria-hidden="true" /><strong>0G</strong></span> and <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/sentient.png" alt="" aria-hidden="true" /><strong>Sentient</strong></span> illustrate an emerging and unsettled area. *Limitation:* a great deal of it
 is narrative. Ask what the blockchain is load-bearing for; sometimes the answer
 is "nothing".
 :::

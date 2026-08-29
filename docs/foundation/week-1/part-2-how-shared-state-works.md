@@ -199,7 +199,7 @@ network follow? **Part 3 answers that question with consensus.**
 - **Mempool** — the waiting room of submitted-but-not-yet-included transactions. Pending transactions can be visible before a block producer chooses their order
 - **Genesis block** — block zero, the start of the chain. It gives participants a common reference for that network's history
 - **Fork** — when a chain temporarily splits, or when its rules change. During a split, different participants may briefly see different histories
-- **Merkle tree** — a compact fingerprint of a block's transactions. It can prove that one transaction is included without sending the whole block
+- **Merkle tree** — a way of combining many transaction hashes into one summary hash. That summary lets you prove a transaction was included without sending every transaction in the block
 
 ## Worked example
 

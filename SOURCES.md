@@ -42,6 +42,16 @@ subject to the relevant owner's brand and usage terms.
 | The Graph | [Official GitHub organisation profile](https://github.com/graphprotocol) | Week 0 Tool Map |
 | Infura | [Infura Press Kit](https://www.infura.io/presskit) | Week 0 Tool Map |
 | Foundry | [Official Foundry GitHub organisation](https://github.com/foundry-rs) | Week 0 Tool Map |
+| Alchemy, Circle, Tether, OpenSea, Chainlink, Helium | [Simple Icons](https://simpleicons.org/) | Week 4 Part 1; identification only |
+| BUIDL | [Crypto.com token page](https://crypto.com/us/price/blackrock-usd-institutional-digital-liquidity-fund-cdc) | Week 4 Part 1; identification only |
+| Arbitrum | [Official Arbitrum GitHub organisation](https://github.com/Arbitrum) | Week 4 Part 1; identification only |
+| LXDAO | [LXDAO Web3Logo repository](https://github.com/lxdao-official/web3logo-website) | Week 4 Part 1; identification only |
+| LayerZero | [Official LayerZero Labs GitHub organisation](https://github.com/LayerZero-Labs) | Week 4 Part 1; identification only |
+| Wormhole | [Official Wormhole Foundation GitHub organisation](https://github.com/wormhole-foundation) | Week 4 Part 1; identification only |
+| Across | [Official Across website](https://across.to/) | Week 4 Part 1; identification only |
+| Nansen | [Nansen Brand Assets](https://nansen.ai/brand) | Week 4 Part 1; identification only |
+| 0G | [Official 0G website](https://0g.ai/) | Week 4 Part 1; identification only |
+| Sentient | [Official Sentient Foundation website](https://sentient.foundation/) | Week 4 Part 1; identification only |
 | WETH | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | Week 1 Part 5 |
 | WBTC | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599) | Week 1 Part 5 |
 

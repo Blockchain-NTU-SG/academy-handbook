@@ -4,8 +4,8 @@ import { enNotes } from './notes';
 
 export default defineThemeConfig({
   appearance: true,
-  logo: '/brand/blockchain-ntu-logo-dark.png',
-  logoDark: '/brand/blockchain-ntu-logo-dark.png',
+  logo: '/favicon.png',
+  logoDark: '/favicon.png',
   social: [
     {
       icon: 'github',

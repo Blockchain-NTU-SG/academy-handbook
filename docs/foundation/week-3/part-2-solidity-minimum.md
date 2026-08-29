@@ -268,7 +268,7 @@ You will meet `require` and `onlyOwner` when you read a real token in
 - **`onlyOwner`** — a common permission pattern that lets one address call selected functions. That owner becomes an important trust assumption
 - **Reentrancy guard** — a safety check that stops a called contract from coming back in before the first action finishes. It helps prevent repeated withdrawals before the balance is updated
 - **`payable` / `receive`** — how a contract accepts ETH. If the contract has no safe way to handle incoming ETH, a transfer can fail
-- **Storage vs memory vs calldata** — three places Solidity can keep data while a function runs. They differ in cost and how long the data remains available; Foundation only needs the names
+- **Storage vs memory vs calldata** — three places Solidity can work with data. `storage` persists as contract state, `memory` is temporary while code runs, and `calldata` is read-only input to a call. Foundation only needs to recognise the names
 - **`mapping`** — a lookup table such as address → balance; Week 3 Part 4 uses one for token balances. It lets a contract find a value by key
 - **Foundry / Hardhat** — professional toolkits for testing, compiling and deploying. They help developers repeat checks, but are not needed for Foundation
 

@@ -125,7 +125,7 @@ to propose and attest to blocks roughly in proportion to what they have staked.
 | The scarce resource | The staked asset itself |
 | How you attack it | Control a large share of everything staked |
 | What it costs | Acquiring an enormous quantity of the asset |
-| What cheating costs | Provable misbehaviour can have your stake **slashed** — taken and destroyed |
+| What cheating costs | Provable misbehaviour can cause part of your stake to be **slashed or lost** |
 
 The elegance: an attacker must buy huge amounts of the asset, then use it to
 attack the network that asset derives its value from. Success devalues the very
@@ -205,7 +205,7 @@ maps it properly.
 - **Validator / miner** — validators participate in Proof of Stake; miners produce blocks in Proof of Work. They secure networks in different ways and carry different costs
 - **Staking pool** — pooling assets so people can participate economically without running a validator or holding 32 ETH alone. The pool adds its own operator and smart-contract risks
 - **Liquid staking** — a tradable token representing staked assets. It can keep capital usable, but its price and redemption depend on the issuing system
-- **Byzantine Fault Tolerance (BFT)** — ways for a known group of validators to reach a clear decision quickly, even if some fail or behave badly. Week 2 meets one in Cosmos
+- **Byzantine Fault Tolerance (BFT)** — ways for a set of validators to reach a clear decision quickly, even if some fail or behave badly. Week 2 meets one in Cosmos
 - **Nakamoto consensus** — Bitcoin's way of choosing the chain with the most accumulated work. More work makes the history harder to replace, so confidence grows over time rather than becoming final in one clear decision
 - **MEV** — profit that can come from seeing pending transactions and choosing their order. For a normal user, this can mean another trader moves first and the user gets a worse price; it is Further Exploration
 

@@ -134,7 +134,7 @@ You cannot look up a stranger's bank transfer. You *can* look up any transaction
 that has ever happened on Ethereum.
 :::
 
-On [Etherscan](https://etherscan.io/) you can check:
+On <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/etherscan.svg" alt="" aria-hidden="true" /><a href="https://etherscan.io/">Etherscan</a></span> you can check:
 
 - whether a transaction succeeded or failed, and what it cost
 - everything an address has ever done
@@ -145,7 +145,7 @@ That third one is the quiet one. **Without verified source code, outsiders can
 see the deployed bytecode but cannot easily inspect the original human-readable
 code.** You will use this in Week 3.
 
-Solana's equivalent is [Solscan](https://solscan.io/).
+Solana's equivalent is <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/solscan.png" alt="" aria-hidden="true" /><a href="https://solscan.io/">Solscan</a></span>.
 
 @tab Derived analytics
 
