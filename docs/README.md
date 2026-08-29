@@ -4,21 +4,44 @@ externalLinkIcon: false
 config:
   - type: hero
     full: true
-    background: tint-plate
-    tintPlate:
-      r:
-        value: 205
-        offset: 22
-      g:
-        value: 236
-        offset: 12
-      b:
-        value: 246
-        offset: 8
+    effect: hyper-speed
+    effectConfig:
+      distortion: turbulentDistortion
+      length: 400
+      roadWidth: 10
+      islandWidth: 2
+      lanesPerRoad: 3
+      fov: 90
+      fovSpeedUp: 150
+      speedUp: 2
+      carLightsFade: 0.4
+      totalSideLightSticks: 20
+      lightPairsPerRoadWay: 40
+      shoulderLinesWidthPercentage: 0.05
+      brokenLinesWidthPercentage: 0.1
+      brokenLinesLengthPercentage: 0.5
+      lightStickWidth: [0.12, 0.5]
+      lightStickHeight: [1.3, 1.7]
+      movingAwaySpeed: [60, 80]
+      movingCloserSpeed: [-120, -160]
+      carLightsLength: [12, 80]
+      carLightsRadius: [0.05, 0.14]
+      carWidthPercentage: [0.3, 0.5]
+      carShiftX: [-0.8, 0.8]
+      carFloorSeparation: [0, 5]
+      colors:
+        roadColor: 0x080a0f
+        islandColor: 0x0b0e14
+        background: 0x020305
+        shoulderLines: 0x202b3d
+        brokenLines: 0x1a2433
+        leftCars: [0x3d52a0, 0x7091e6, 0x8697c4]
+        rightCars: [0x7091e6, 0xadbbda, 0x5f76b7]
+        sticks: 0x7091e6
     hero:
       name: Blockchain@NTU Academy
       tagline: Learn → Build → Prove
-      text: A beginner-friendly Web3 learning programme combining an open handbook with a structured cohort experience.
+      text: From zero Web3 knowledge to your first Proof of Work.
       actions:
         - theme: brand
           text: Apply to the Academy

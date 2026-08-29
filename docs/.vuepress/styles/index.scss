@@ -73,6 +73,11 @@
   background: var(--academy-cyan);
 }
 
+[data-theme="dark"] ::selection {
+  color: #17212b;
+  background: var(--academy-cyan);
+}
+
 body {
   color: var(--academy-text);
   text-rendering: optimizeLegibility;
@@ -400,7 +405,7 @@ body {
   object-fit: contain;
 }
 
-/* The original animated tint-plate remains the homepage atmosphere. */
+/* Homepage hero typography. */
 .vp-home-hero .hero-name {
   font-weight: var(--academy-title-weight);
   letter-spacing: var(--academy-title-tracking);
@@ -428,6 +433,61 @@ body {
   min-width: 192px;
   justify-content: center;
   border-radius: 8px;
+}
+
+/* Keep the secondary CTA legible when Hyper-speed light trails pass behind it,
+ * especially on narrow screens where the road occupies the content area. */
+[data-theme="dark"] .vp-home-hero.hyper-speed .vp-button.alt {
+  color: #f3f7fa;
+  background: rgb(20 22 26 / 88%);
+  border-color: rgb(232 236 242 / 32%);
+}
+
+[data-theme="dark"] .vp-home-hero.hyper-speed .vp-button.alt:hover,
+[data-theme="dark"] .vp-home-hero.hyper-speed .vp-button.alt:focus-visible {
+  color: #fff;
+  background: rgb(37 46 59 / 94%);
+  border-color: var(--academy-blue);
+}
+
+/* Native Plume Hyper-speed renders a dark, opaque road scene. A restrained
+ * inversion gives the same geometry a daylight / architectural treatment in
+ * light mode without modifying the renderer. */
+.vp-home-hero.hyper-speed {
+  background:
+    radial-gradient(circle at 50% 55%, rgb(112 145 230 / 8%), transparent 48%),
+    #020305;
+}
+
+.vp-home-hero.hyper-speed .home-hero-hyperspeed {
+  opacity: 0.92;
+}
+
+.vp-home-hero.hyper-speed .hero-tagline {
+  color: #f3f7fa;
+}
+
+.vp-home-hero.hyper-speed .hero-text {
+  color: rgb(232 236 242 / 80%);
+}
+
+[data-theme="light"] .vp-home-hero.hyper-speed {
+  background:
+    radial-gradient(circle at 50% 55%, rgb(112 145 230 / 10%), transparent 48%),
+    #f7f9fc;
+}
+
+[data-theme="light"] .vp-home-hero.hyper-speed .home-hero-hyperspeed {
+  filter: invert(1) hue-rotate(180deg) saturate(0.52);
+  opacity: 0.68;
+}
+
+[data-theme="light"] .vp-home-hero.hyper-speed .hero-tagline {
+  color: var(--academy-ink);
+}
+
+[data-theme="light"] .vp-home-hero.hyper-speed .hero-text {
+  color: rgb(43 45 57 / 76%);
 }
 
 /* Homepage: retain the compact three-part structure, with a calmer handoff
