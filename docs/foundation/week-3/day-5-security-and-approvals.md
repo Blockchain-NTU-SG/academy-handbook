@@ -193,10 +193,10 @@ A concrete drain, step by step. Nothing here is exotic.
 | 1 | A "token airdrop" link arrives by DM | Reaching a DApp through a message |
 | 2 | The site is a convincing clone | URL not checked against a bookmark |
 | 3 | It asks to connect the wallet | Harmless on its own |
-| 4 | It requests an **unlimited approval** for a token | The actual mistake |
-| 5 | Wallet shows the request. It looks routine | Not read. **Nothing appeared to happen** |
-| 6 | Nothing visible occurs. The user assumes it failed | The absence of feedback *is* the attack |
-| 7 | Minutes or months later, `transferFrom` drains the balance | Permission was granted in step 5 |
+| 4 | It requests an **unlimited approval** for a token | The dangerous request |
+| 5 | The user confirms it without checking the spender and amount — the actual mistake | The request is not read closely |
+| 6 | The transaction confirms, but the balance stays unchanged. The user assumes nothing important happened and underestimates the permission they granted | No tokens moved, so the standing permission is missed |
+| 7 | Minutes or months later, `transferFrom` drains the balance | Permission became effective when the approval transaction confirmed in step 6 |
 
 ::: important Where this was actually preventable
 Step 2 and step 5.

@@ -67,7 +67,7 @@ the entire security model.
 <div class="academy-figure">
   <div class="academy-figure-surface">
 
-![A recovery phrase generates a private key, which derives a public key, which shortens to an address. The reverse direction is marked as impossible.](/illustrations/w1-key-derivation.png)
+![A recovery phrase generates a private key; a private key derives a public key; an Ethereum address is derived from the public key through hashing and represented as 20 bytes. The reverse direction is marked as impossible.](/illustrations/w1-key-derivation.png)
 
   </div>
   <p class="academy-figure-caption">Left to right: <strong>recovery phrase → private key → public key → address.</strong> The crossed arrow is the point — you cannot work backwards.</p>

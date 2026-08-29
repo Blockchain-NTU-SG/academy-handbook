@@ -91,14 +91,14 @@ code quality**, and not whether they extended the contract.
 | Item | Standard |
 |---|---|
 | 1–3 | All three open on the **test network**. The contract address matches the deployment transaction's created contract, and the write transaction targets that same address |
-| 4 | Source matches what is deployed, at least in substance |
+| 4 | Source is included and is consistent with the submitted Guestbook and demonstrated behaviour. Exact source-to-bytecode verification is only expected if the learner verified the contract on Etherscan |
 | 5 | Correctly identifies which is read, which is write, and names an event. A `public` state variable counts as a read function — that is correct, and worth acknowledging if they spot it |
 | 6a | Names the actual state — the message, and ideally the visitor and count |
 | 6b | Describes the state change **and** that it costs gas or needs a signature |
 | 6c | **Any genuine limitation.** Missing access control, immutability, public data, gas cost. Accept anything real |
 
 **Send it back if:** any link is broken, points to mainnet, or the addresses do
-not correspond; the source is clearly not what was deployed; question 5 confuses
+not correspond; the submitted source clearly does not correspond to the demonstrated contract; question 5 confuses
 read and write; or 6b describes the write without any sense that state changed.
 
 **Do not send it back for:** using the Part 3 contract unmodified, an unpolished

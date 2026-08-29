@@ -66,15 +66,6 @@ not fees, not branding.
 The core idea: **do the work elsewhere, but post enough to Ethereum that
 Ethereum remains the referee.**
 
-<div class="academy-figure">
-  <div class="academy-figure-surface">
-
-![Three Layer 2 platforms sit above a single wide Layer 1 foundation, each connected down to it by supports. Most activity happens on the upper platforms.](/illustrations/w2-l1-l2-layers.png)
-
-  </div>
-  <p class="academy-figure-caption">The wide slab is <strong>Layer 1</strong>. The platforms above are <strong>Layer 2s</strong> — most activity happens up there, but every one is anchored down to the same foundation.</p>
-</div>
-
 <figure class="academy-reference-visual">
   <img src="/learning/ethereum-org/layer-2-rollup.png" alt="Diagram showing users making many Layer 2 transactions, a rollup bundling them, and Ethereum receiving the resulting data and blocks." />
   <figcaption>Rollups process transactions separately and post data or proofs back to Ethereum. Source: <a href="https://ethereum.org/layer-2/learn/">ethereum.org</a>, CC BY 4.0.</figcaption>
