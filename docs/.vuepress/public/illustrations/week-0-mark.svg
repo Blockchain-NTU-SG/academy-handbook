@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t d">
+  <title id="t">Shield with a keyhole</title><desc id="d">A shield containing a keyhole, representing entering Web3 safely.</desc>
+  <g fill="none" stroke="#37a4e3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 5 L55 13 V31 C55 44 45 54 32 59 C19 54 9 44 9 31 V13 Z" fill="#9aeaf6"/>
+    <circle cx="32" cy="27" r="5.5" fill="none"/>
+    <path d="M32 32.5 L34.5 44 H29.5 Z" fill="none"/>
+  </g>
+</svg>

@@ -77,7 +77,7 @@ transaction fee is paid in ETH.
 
 ### The five categories
 
-::: tabs
+:::: tabs
 @tab Native
 
 The chain's own asset. Pays fees, secures the network, understood by the
@@ -161,7 +161,7 @@ like ENS, credentials, ownership records.
 prohibitively expensive, so the token typically holds a *link*. If whatever
 hosts that file disappears, the token remains and the picture does not.
 :::
-:::
+::::
 
 ### Custodial versus self-custodial
 

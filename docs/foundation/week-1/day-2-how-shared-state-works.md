@@ -96,15 +96,14 @@ unit. Two reasons, and the second is the interesting one:
 | **Efficiency** | Agreeing once on a batch of hundreds beats agreeing hundreds of times |
 | **Ordering** | Order determines outcome. If an address holds 1 ETH and two transactions each try to spend it, which succeeds depends entirely on which comes first |
 
-Each block references the one before it, which is what makes it a chain:
+<div class="academy-figure">
+  <div class="academy-figure-surface">
 
-```mermaid
-flowchart LR
-  B1["<b>Block 100</b><br/>hash: 0x7a3f…<br/>prev: 0x91c2…"]
-  B2["<b>Block 101</b><br/>hash: 0x2e8b…<br/>prev: <b>0x7a3f…</b>"]
-  B3["<b>Block 102</b><br/>hash: 0xd45a…<br/>prev: <b>0x2e8b…</b>"]
-  B1 --> B2 --> B3
-```
+![Three stages: a single block containing data and a reference to the previous block; two blocks joined by a link; several blocks joined in a continuous chain.](/illustrations/w1-block-to-blockchain.png)
+
+  </div>
+  <p class="academy-figure-caption"><strong>Left:</strong> one block — data, plus a reference to the block before it. <strong>Middle:</strong> two joined. <strong>Right:</strong> a chain.</p>
+</div>
 
 Ethereum produces a block roughly every 12 seconds. Bitcoin, roughly every 10
 minutes. Week 2 covers why they differ.
@@ -143,6 +142,15 @@ present, on every copy held by every participant worldwide.
 Not because the data is locked, but because **altering anything invalidates
 everything after it**, publicly and instantly.
 :::
+
+<div class="academy-figure">
+  <div class="academy-figure-surface">
+
+![Five chained blocks. The third has been altered, and every block and link after it is broken as a result.](/illustrations/w1-tamper-cascade.png)
+
+  </div>
+  <p class="academy-figure-caption">Alter the third block and its hash changes — so every link after it breaks. The damage runs forward, publicly, on every copy.</p>
+</div>
 
 ::: details Two related terms, at recognition level
 A **digital signature** uses related maths to prove a message came from the

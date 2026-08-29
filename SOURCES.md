@@ -57,7 +57,9 @@ Sepolia Etherscan · MIT OpenCourseWare (both courses) · Solana, CometBFT and
 Avalanche docs · L2BEAT · evm.codes · Solidity docs · Solidity by Example · Remix ·
 Ethernaut · SWC Registry · CryptoZombies · Cyfrin Updraft · Ethereum Magicians ·
 Choose a License · GitHub Skills · BuildAnything · Microsoft Learn · Dune · The
-Graph · Foundry Book · Berkeley DeFi MOOC · ethresear.ch · Solodit
+Graph · Foundry Book · Berkeley DeFi MOOC · ethresear.ch · Solodit · The Onchain
+State Singapore Web3 Landscape · Binance Research Industry Map (March 2025) ·
+Artemis / Stablecoin.fyi Stablecoin Market Landscape
 
 The Week 1 hands-on pages also link to the [Coinbase Developer Platform
 Faucet](https://portal.cdp.coinbase.com/products/faucet) and

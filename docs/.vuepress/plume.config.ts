@@ -3,8 +3,9 @@ import { enNavbar } from './navbar';
 import { enNotes } from './notes';
 
 export default defineThemeConfig({
-  appearance: false,
+  appearance: true,
   logo: '/brand/blockchain-ntu-logo-dark.png',
+  logoDark: '/brand/blockchain-ntu-logo-dark.png',
   social: [
     {
       icon: 'github',

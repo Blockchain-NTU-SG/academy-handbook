@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t d">
+  <title id="t">A compass rose</title><desc id="d">A four-pointed compass, representing choosing a direction.</desc>
+  <g fill="none" stroke="#37a4e3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 4 L39 25 L60 32 L39 39 L32 60 L25 39 L4 32 L25 25 Z" fill="#9aeaf6"/>
+    <circle cx="32" cy="32" r="4" fill="none"/>
+  </g>
+</svg>

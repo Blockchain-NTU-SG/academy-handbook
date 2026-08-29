@@ -1,5 +1,14 @@
 # Week 2 — Blockchain architectures, Ethereum and interoperability
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="56" height="56" class="academy-week-mark" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Three stacked layers</title><desc id="d2">Three platforms stacked in decreasing width, representing layered blockchain architecture.</desc>
+  <g fill="none" stroke="#37a4e3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="43" width="52" height="11" rx="3.5" fill="#9aeaf6"/>
+    <rect x="14" y="28" width="36" height="11" rx="3.5" fill="none"/>
+    <rect x="22" y="13" width="20" height="11" rx="3.5" fill="none"/>
+  </g>
+</svg>
+
 <Badge type="info" text="6 parts" /> <Badge type="tip" text="100 points" /> <Badge type="warning" text="No wallet work" />
 
 > **Core question — why are there many different blockchains, and how do they
