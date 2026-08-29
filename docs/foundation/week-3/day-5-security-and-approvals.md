@@ -194,8 +194,8 @@ A concrete drain, step by step. Nothing here is exotic.
 | 2 | The site is a convincing clone | URL not checked against a bookmark |
 | 3 | It asks to connect the wallet | Harmless on its own |
 | 4 | It requests an **unlimited approval** for a token | The actual mistake |
-| 5 | Wallet shows the request. It looks routine | Not read. **Nothing appeared to happen** |
-| 6 | Nothing visible occurs. The user assumes it failed | The absence of feedback *is* the attack |
+| 5 | Wallet shows an approval transaction. It looks routine, and no tokens move immediately | The request is not read closely |
+| 6 | The transaction confirms, but the balance stays unchanged. The user assumes nothing important happened and underestimates the permission they granted | No tokens moved, so the standing permission is missed |
 | 7 | Minutes or months later, `transferFrom` drains the balance | Permission was granted in step 5 |
 
 ::: important Where this was actually preventable
