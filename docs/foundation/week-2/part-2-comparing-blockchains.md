@@ -49,6 +49,31 @@ engineering.
 
 ## Core
 
+### Start with four questions
+
+Before comparing detailed specifications, use four simple questions:
+
+1. How fast and affordable is it for the thing we want to do?
+2. Who can realistically help secure or validate it?
+3. What can developers build on it?
+4. What did the design give up to get those benefits?
+
+These questions provide a first lens. The seven dimensions below make the lens
+more complete without turning it into a memorisation exercise.
+
+### Three useful starting shapes
+
+Start with three familiar shapes:
+
+- **Bitcoin:** conservative and narrow, prioritising security and predictability.
+- **Ethereum:** programmable, with a broad ecosystem and a strong focus on
+  decentralisation; it scales through both its base layer and Layer 2s.
+- **Solana:** high performance, with higher hardware requirements and different
+  trade-offs.
+
+These are not complete verdicts. They are handles for seeing why the additional
+Cosmos and Avalanche examples make different choices too.
+
 ### The central tension
 
 Most of what follows reduces to one pressure.
@@ -70,6 +95,9 @@ you were not looking.
 :::
 
 ### The seven dimensions
+
+You are not expected to memorise the specifications. Use the dimensions to ask
+better questions and explain what a chain gains and gives up.
 
 | Dimension | The question |
 |---|---|

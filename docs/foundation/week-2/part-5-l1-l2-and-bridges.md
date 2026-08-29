@@ -46,7 +46,24 @@ a second problem appears: **they cannot see each other.**
 
 ## Core
 
+### First-pass model
+
+Start with the job before the labels. If Ethereum's base layer is busy, another
+network can do some of the processing elsewhere and still use Ethereum as the
+place that checks or settles the result.
+
+For Foundation, keep this first-pass model:
+
+- **L1:** the base settlement and security layer.
+- **L2:** processes many transactions elsewhere and reports or proves enough
+  back to an L1.
+- **Sidechain:** another chain with its own security.
+- **Bridge:** a mechanism for convincing one chain that something happened on
+  another chain.
+
 ### The vocabulary
+
+The formal vocabulary for this model is:
 
 | Term | What it is |
 |---|---|
@@ -87,6 +104,10 @@ networks marketed as L2s do not yet provide that guarantee in practice.
 
 Two families:
 
+The names sound technical, but the first difference is simple. An optimistic
+rollup assumes a batch is valid unless someone successfully challenges it. A ZK
+rollup supplies a cryptographic proof that the batch follows the rules.
+
 | | **Optimistic rollups** | **ZK rollups** |
 |---|---|---|
 | Assumption | Batches are valid unless challenged | Validity is proven mathematically |
@@ -96,7 +117,7 @@ Two families:
 
 ::: tip How ZK proofs work is Further Exploration
 For Foundation, know that one approach **waits and watches**, the other
-**proves** — and that this determines how long withdrawals take.
+**proves** — and that this affects how long withdrawals take.
 :::
 
 ### Sidechains are a different thing

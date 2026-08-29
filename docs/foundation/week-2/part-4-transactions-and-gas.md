@@ -39,7 +39,14 @@ talks to the blockchain at all.**
 
 ## Core
 
-### The lifecycle
+### What happens after you press Confirm?
+
+When you press **Confirm**, the transaction does not jump straight from your
+wallet onto the chain. The wallet prepares and signs a request, sends it to a
+node, waits for inclusion, and then the network executes it and updates the
+shared state.
+
+The technical names for that journey are:
 
 ```mermaid
 flowchart TD
@@ -63,6 +70,16 @@ is the root of MEV — Further Exploration, but the reason it exists is right he
 verification, now applied to contract code as well as transfers.
 
 ### Gas
+
+Before looking at individual fee fields, keep one plain-English model in mind:
+**gas measures how much computational work Ethereum has to perform.** A
+transaction fee is roughly:
+
+```text
+work done × price of that work
+```
+
+The fields below describe the work, its limit and its price:
 
 | Term | What it is |
 |---|---|
@@ -94,10 +111,13 @@ gas than sending less ETH.
 
 ### RPC — how your wallet reaches the chain
 
+How does MetaMask show your balance or send your transaction if it does not keep
+a full copy of Ethereum? It asks a **node** to do that work for it.
+
 ::: important The thing nobody tells beginners
-**Your wallet is not connected to Ethereum.** It has no copy of the chain and no
-direct link to the network. It sends requests to a **node**, over an interface
-called **JSON-RPC**, and that node does the actual talking.
+Your wallet sends requests to a node through an interface called **JSON-RPC**.
+That node does the actual talking to the network. Your wallet is a convenient
+window onto Ethereum, not the chain itself.
 :::
 
 ```mermaid
@@ -122,6 +142,13 @@ You can run your own node and remove this dependency. Almost nobody does — wor
 knowing this is a convenience trade, not how the system has to work.
 
 ### Reading versus writing
+
+Start with the human action:
+
+- **“Show my USDC balance”** is a read.
+- **“Send USDC”** is a write.
+
+The formal distinction is:
 
 | | **Read** (call) | **Write** (transaction) |
 |---|---|---|

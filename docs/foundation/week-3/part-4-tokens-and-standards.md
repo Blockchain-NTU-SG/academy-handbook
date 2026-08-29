@@ -48,6 +48,22 @@ Because token standards give them a common **interface**.
 
 ## Core
 
+### Start with the actions people need
+
+Before looking at a Solidity interface, translate the standard into ordinary
+questions:
+
+| Human question | ERC-20 function |
+|---|---|
+| How many tokens does Kai have? | `balanceOf` |
+| Send 10 tokens | `transfer` |
+| Let this DApp spend up to 10 | `approve` |
+| Spend tokens previously approved | `transferFrom` |
+| How much is still approved? | `allowance` |
+
+The functions are simply shared names for these actions. The formal interface
+comes next.
+
 ### A standard is an agreed set of function names
 
 There is nothing magic about ERC-20. It is a list of functions every fungible

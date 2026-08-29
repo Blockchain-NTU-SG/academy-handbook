@@ -52,9 +52,34 @@ produced.
 
 ## Core
 
+### Start with behaviour, not syntax
+
+Before reading the full contract, look at the smallest version of the idea:
+
+```solidity
+contract Guestbook {
+    string public message = "Hello";
+
+    function setMessage(string memory newMessage) public {
+        message = newMessage;
+    }
+}
+```
+
+Ask two questions:
+
+- **What does this program remember?** A message.
+- **What can someone do?** Call `setMessage` to change that message.
+
+That is the behaviour to understand first. The words and symbols are the
+programming language used to express it. Solidity calls the stored text a
+`string`, and calls the action that changes it a function.
+
 ### One contract, fully explained
 
-Here is a complete, working contract. Twenty lines. We will take it apart.
+Here is the complete, working `Guestbook` you will deploy tomorrow. It adds a
+visitor, a count and an event so that you can see what a real small contract
+remembers and announces.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -84,29 +109,13 @@ contract Guestbook {
 }
 ```
 
-That is the contract you will deploy tomorrow. Read it once more now that you
-know it is real.
+Read it once more now that you know its basic behaviour. The rest of this page
+names the important pieces one at a time.
 
 ### Taken apart
 
 :::: tabs
-@tab The header
-
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
-```
-
-**`SPDX-License-Identifier`** declares the licence. The compiler warns if it is
-missing. `MIT` is a permissive open-source licence — the same one the Academy
-handbook's tooling uses.
-
-**`pragma solidity ^0.8.20`** says which compiler versions this code accepts.
-The `^` means "0.8.20 or any later 0.8.x". Version matters more here than in
-most languages, because compiler behaviour has changed in ways that affect
-safety.
-
-@tab State
+@tab State — what the contract remembers
 
 ```solidity
 string public message;
@@ -123,27 +132,10 @@ persisting between calls.
 | `address` | A `0x` address, 20 bytes |
 | `uint256` | A whole number, zero or positive |
 | `bool` | True or false |
-| `mapping(address => uint256)` | A lookup table — this is how token balances are stored |
 
 **`public`** does something genuinely useful: Solidity automatically creates a
 read function for it. Declaring `message` public means anyone can call
 `message()` and get the value, without you writing that function.
-
-@tab Events
-
-```solidity
-event MessageChanged(address indexed visitor, string newMessage);
-```
-
-An **event** is an announcement written to the transaction log. The contract
-cannot read it back — it exists for applications watching from outside.
-
-**`indexed`** makes a field searchable. Applications can ask "every
-`MessageChanged` where visitor was `0xABC…`" cheaply. You get up to three indexed
-fields.
-
-Events are emitted with `emit`, and they are far cheaper than storing the same
-data in state.
 
 @tab Functions
 
@@ -174,6 +166,23 @@ read through Remix or a wallet does not create an on-chain transaction or pay a
 transaction fee. It may still depend on a node response, as
 [Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) described.
 
+@tab Events — what the contract announces
+
+```solidity
+event MessageChanged(address indexed visitor, string newMessage);
+```
+
+When `setMessage` changes the message, the contract announces what happened in
+the transaction log. This announcement is an **event**. Applications watching
+from outside can use it, but the contract cannot read it back.
+
+**`indexed`** makes a field searchable. Applications can ask "every
+`MessageChanged` where visitor was `0xABC…`" cheaply. You get up to three indexed
+fields.
+
+Events are emitted with `emit`, and they are far cheaper than storing the same
+data in state.
+
 @tab Visibility
 
 Who is allowed to call a function.
@@ -191,11 +200,30 @@ on-chain regardless.** Anyone can read a `private` variable's storage directly.
 
 Never put a secret in a contract. There is no such thing.
 :::
+
+@tab The header — version and licence
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+```
+
+**`SPDX-License-Identifier`** declares the licence. The compiler warns if it is
+missing. `MIT` is a permissive open-source licence — the same one the Academy
+handbook's tooling uses.
+
+**`pragma solidity ^0.8.20`** says which compiler versions this code accepts.
+The `^` means "0.8.20 or any later 0.8.x". Version matters because compiler
+behaviour can change in ways that affect safety.
 ::::
 
 ### The ABI
 
-When Solidity compiles, it produces two things:
+After deployment, two different audiences need different information. The EVM
+needs the program itself; a wallet or website needs to know which functions it
+can call and what inputs to provide.
+
+When Solidity compiles, it produces two useful outputs:
 
 | Output | What it is |
 |---|---|
@@ -234,6 +262,7 @@ You will meet `require` and `onlyOwner` when you read a real token in
 - **Reentrancy guard** — protection against a called contract calling back mid-execution
 - **`payable` / `receive`** — how a contract accepts ETH
 - **Storage vs memory vs calldata** — where data lives during a call. Affects gas
+- **`mapping`** — a lookup table such as address → balance; Week 3 Part 4 uses one for token balances
 - **Foundry / Hardhat** — professional toolkits. Not needed for Foundation
 
 ## Worked example

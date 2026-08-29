@@ -53,47 +53,66 @@ good, and the tooling is free.
 None of this makes Ethereum technically superior. It makes it the best place to
 build a foundation you can carry elsewhere — a different and more useful claim.
 
-### Ethereum is a state machine
+### Ethereum is a shared record and shared computer
 
-::: important The most important sentence on this page
-**Ethereum is a single shared computer whose state everyone agrees on, and
-transactions are the only way to change it.**
-:::
+Suppose a small contract currently stores:
 
-Week 1 Part 2 introduced state as "who owns what". Ethereum extends it
-considerably: every account balance, every contract's stored data, and every
-contract's code.
+```text
+message = "Hello"
+visitCount = 0
+```
+
+You send `setMessage("GM")`. After the transaction runs, it might store:
+
+```text
+message = "GM"
+visitCount = 1
+```
+
+Ethereum can be pictured as two things working together:
+
+| Part of the picture | What it does |
+|---|---|
+| **Shared record** | Remembers ETH balances, contract data, and token ownership |
+| **Shared computer** | Follows program rules that determine how the record may change |
+
+A transaction asks the shared computer to make a change to the shared record.
+Every node follows the same rules and should reach the same result.
+
+Engineers describe this before → instruction → after pattern as a **state
+machine**. In the formal shorthand, it looks like this:
 
 ```mermaid
-flowchart TD
-  S1["<b>State N</b><br/>all balances<br/>all contract storage"]
-  T["<b>Block of<br/>transactions</b>"]
-  S2["<b>State N+1</b><br/>updated balances<br/>updated storage"]
+flowchart LR
+  S1["<b>State N</b><br/>message = Hello<br/>visitCount = 0"]
+  T["<b>Transaction</b><br/>setMessage(\"GM\")"]
+  S2["<b>State N+1</b><br/>message = GM<br/>visitCount = 1"]
   S1 --> T --> S2
 ```
 
-Apply a block to the current state and you get exactly one new state. Every node
-computes it independently and they all arrive at the same answer, because the
-rules are **deterministic** — the same input always produces the same output, on
-every machine, everywhere.
+Apply the same transaction to the same starting state and the result should be
+the same. That requirement matters because thousands of computers are executing
+the same transaction. They cannot each produce a different answer.
 
-That determinism is not a detail. It is why thousands of independent computers
-agree without communicating about the result. It is also why smart contracts
-cannot do certain ordinary things:
+The rule that makes this possible is **determinism**: the same input produces the
+same output on every machine.
 
-::: warning No random numbers. No reading a web page. No checking the time from an outside source.
-Any of those would let two nodes compute different results, and consensus would
-collapse.
+It also explains why smart contracts cannot freely use ordinary outside data:
 
-**This is where oracles come from** (Week 3). If a contract needs outside data,
-that data has to be *put on-chain by a transaction* first, so every node sees the
-identical value. There is no other way.
+::: warning The same input must be available to every node
+If one node read a different web page, random value or outside clock, it could
+calculate a different result and the network would no longer agree.
+
+When a contract needs outside data, that data is put on-chain by a transaction so
+every node can see the same value. A service that supplies this data is called an
+**oracle** (Week 3).
 :::
 
 ### The EVM
 
-The **Ethereum Virtual Machine** is the part of each node that executes contract
-code. You do not need its internals. Three properties matter:
+The program code needs a place to run. Each Ethereum node has an execution
+environment for that job: the **Ethereum Virtual Machine**, or **EVM**. You do
+not need its internals yet. Three properties matter:
 
 | Property | Consequence |
 |---|---|
@@ -106,6 +125,10 @@ arbitrary programs on your computer without them running forever? **You charge
 per step and stop when the money runs out.**
 
 ### Two kinds of account
+
+Ethereum has addresses that can authorise actions with a key, and addresses that
+contain program code. Engineers call the first kind an **EOA** and the second a
+**contract account**.
 
 | | **EOA** (Externally Owned Account) | **Contract account** |
 |---|---|---|
@@ -122,10 +145,13 @@ fundamentally different things.
 ### The rule that surprises everyone
 
 ::: important A contract cannot do anything on its own
-**Every action on Ethereum begins with an EOA signing a transaction.**
+**Smart contracts do not wake up and run by themselves. Something has to trigger
+their execution.**
 
-A contract has no key, so it cannot sign. It cannot wake up on a schedule, poll
-for changes, or react to the outside world. It is entirely dormant until called.
+A contract has no private key of its own, so it cannot sign a transaction. In the
+common Foundation model, a wallet-controlled account starts the call. The
+contract can then call other contracts inside that transaction, but it cannot
+start the chain of execution on a schedule or by watching the outside world.
 :::
 
 Contracts *can* call other contracts — but only inside a chain of calls that some

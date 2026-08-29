@@ -57,8 +57,12 @@ can verify. **Only one thing changes state: a transaction.**
 
 ### Transactions
 
-A transaction is a **signed instruction to change state**. Not a payment,
-exactly — payments are one kind. Others deploy programs, call functions, or
+Imagine the shared record says Alice has 1 ETH and Ben has 0 ETH. Alice's wallet
+asks to send Ben 0.1 ETH. If the request is accepted, the next snapshot says
+Alice has 0.9 ETH and Ben has 0.1 ETH.
+
+That signed request is a **transaction**: an instruction to change state. A
+payment is one kind of transaction. Others deploy programs, call functions, or
 grant permissions.
 
 | Field | What it is |
@@ -134,9 +138,11 @@ stored the *old* hash as its "previous" field — so block 101 no longer matches
 Fix block 101 and its own hash changes, breaking block 102. And so on, to the
 present, on every copy held by every participant worldwide.
 
-::: important This is why blockchains are described as immutable
-Not because the data is locked, but because **altering anything invalidates
-everything after it**, publicly and instantly.
+::: important What hashes do — and do not do
+Hashes make tampering obvious: altering anything invalidates the links after it,
+publicly and quickly. They do not, by themselves, decide which history the
+network should accept. **Consensus makes a rewritten history difficult to get
+accepted.**
 :::
 
 <div class="academy-figure">
@@ -177,6 +183,10 @@ independently redoing identical work is the opposite of efficient. **That
 redundancy is the product** — it is what you are buying when you remove the
 operator.
 
+At this point we can detect when a chain of blocks was altered. But imagine two
+different histories that are each internally valid. Which one should the
+network follow? **Part 3 answers that question with consensus.**
+
 ## Landscape
 
 - **Full node** — verifies everything and holds recent state. What most people run
@@ -189,7 +199,7 @@ operator.
 
 ## Worked example
 
-Follow one transaction from your screen to permanence.
+Follow one transaction from your screen to a public blockchain record.
 
 | Step | What happens | Who's involved |
 |---|---|---|
@@ -213,8 +223,9 @@ nothing.
 The block was rejected everywhere simultaneously because everyone verified
 independently.
 
-That is what "trustless" actually means, and it is much less mystical than it
-sounds: **you don't have to trust anyone, because you can check.**
+In everyday language, this is what people mean by **trustless**: you do not have
+to rely on one authority's promise, because participants can check the rules for
+themselves.
 :::
 
 ::: details Further exploration — optional, not assessed

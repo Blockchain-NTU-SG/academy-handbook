@@ -24,6 +24,11 @@ sources:
 
 Part 2 left one question open, and it is the hard one.
 
+Imagine two computers propose the next block at nearly the same time. Each block
+may follow all the rules, but the network still needs one shared history. The
+first question is whether a block is allowed; the second is which allowed block
+the network follows.
+
 ```mermaid
 flowchart TD
   P["Two <b>valid</b> blocks appear<br/>at the same moment"]
@@ -57,6 +62,11 @@ reason this problem went unsolved for decades.
 An invalid block is rejected by everyone automatically. Two *valid* competing
 blocks is a genuine coordination problem.
 
+For Foundation, keep this first-pass model:
+
+- **Validity:** Is this allowed by the rules?
+- **Consensus:** Which valid history do we follow?
+
 ::: important The shared goal
 You cannot stop someone *proposing* dishonest history. So instead you make
 **attacks extremely expensive, so honest participation is usually the
@@ -77,7 +87,9 @@ the difference is worth keeping straight.
 ::: tabs
 @tab Proof of Work
 
-Bitcoin's mechanism, and Ethereum's until 2022.
+Bitcoin's mechanism, and Ethereum's until 2022. The first idea to hold is
+simple: controlling block production requires enormous computing resources and
+ongoing real-world spending. That cost is the security mechanism.
 
 To propose a block you must find a number that, hashed with the block's
 contents, produces an output below a target. There is no shortcut — Part 2's
@@ -100,7 +112,9 @@ bug — the expenditure *is* the security — but it is real energy for one purp
 
 @tab Proof of Stake
 
-Ethereum's mechanism since 2022.
+Ethereum's mechanism since 2022. The first idea to hold is also simple:
+participants put valuable stake at risk, so dishonest behaviour can become
+costly. The stake is the security mechanism.
 
 Instead of burning electricity, participants **lock up the network's own asset**
 as collateral. On Ethereum, 32 ETH makes you a validator. Validators are chosen
