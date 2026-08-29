@@ -178,7 +178,7 @@ Hundreds of millions of dollars have been lost in repeated incidents. The
 structural reason is not bad luck.
 :::
 
-| Why | |
+| Point | Why it matters |
 |---|---|
 | **1** | A bridge holds a large pool of locked assets — an unusually concentrated target |
 | **2** | Something must attest that the lock really happened. **That attestation is the weak point.** Forge it and unlimited wrapped assets can be minted with nothing backing them |
@@ -232,14 +232,14 @@ valuable.
 
 ## Landscape
 
-- **Rollup** — an L2 design that processes transactions away from the base chain and posts data or proofs back to it. The goal is to share settlement with L1 while reducing the work and cost per transaction
-- **Fraud proof / validity proof** — a way to challenge a claimed result, or a cryptographic proof that the result follows the rules. The two approaches create different timing and trust assumptions
-- **Sequencer** — the service ordering L2 transactions before batches are posted to L1. A centralised sequencer can delay or censor transactions, but that does not automatically mean it can steal user funds
-- **Data availability** — confidence that the data needed to check the batch or exit is genuinely published. Without it, proving what happened becomes harder
-- **Canonical vs third-party bridge** — the bridge promoted by a network, or an independent bridge. Each has its own contracts and trust assumptions
-- **IBC** — Cosmos's native chain-to-chain messaging standard. It carries verified messages between connected chains rather than making the chains one shared ledger
-- **Cross-chain protocols** — LayerZero, Wormhole, Across and others. They coordinate messages or assets across chains, adding another verification layer; see Week 4
-- **Chain abstraction / intents** — hiding chain choice from users entirely. This can simplify the experience while moving decisions and trust into the application or solver system
+- **Rollup** — an L2 that processes transactions away from the base chain and sends data or proofs back to it. Ethereum can check or settle the result while many users share the L1 cost
+- **Fraud proof / validity proof** — two ways an L2 can support its claim: one lets someone challenge a bad result, while the other provides a mathematical proof that the result follows the rules
+- **Sequencer** — the service that decides the order of many L2 transactions before a batch is posted to L1. A centralised sequencer can delay or censor transactions, but that does not automatically mean it can steal user funds
+- **Data availability** — keeping the transaction details needed to check what happened or recover a position accessible. If the data disappears, checking the L2 history becomes much harder
+- **Canonical vs third-party bridge** — a bridge promoted by the network, or one run independently. Neither label removes the need to check its contracts and verification process
+- **IBC** — Cosmos's native messaging standard for connected chains. It lets them send verified messages without turning them into one shared ledger
+- **Cross-chain protocols** — services such as LayerZero, Wormhole and Across that carry messages or assets between chains. They add another system that must be checked; see Week 4
+- **Chain abstraction / intents** — a user describes the result they want, such as a swap, without choosing every chain step. The application or another service chooses the route, which is simpler but adds a new dependency
 
 ## Worked example
 

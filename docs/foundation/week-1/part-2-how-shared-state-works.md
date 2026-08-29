@@ -193,13 +193,13 @@ network follow? **Part 3 answers that question with consensus.**
 
 ## Landscape
 
-- **Full node** — verifies blocks and transactions itself and keeps the current state. It lets an operator check the chain without relying on a block producer
-- **Archive node** — keeps historical states as well as the current one. It uses much more storage and helps explorers answer old-state questions
-- **Light client** — checks block headers and selected proofs without holding the full chain. It is easier to run, but depends on the proofs and data it receives
+- **Full node** — a computer that checks blocks and transactions itself and keeps the current state. It lets an operator check the chain without relying on the computer that produces blocks
+- **Archive node** — a full node that also keeps older versions of the chain's state. It uses much more storage and helps explorers answer questions about the past
+- **Light client** — checks selected information and proofs instead of storing the whole chain. It is easier to run, but depends more on the information it receives
 - **Mempool** — the waiting room of submitted-but-not-yet-included transactions. Pending transactions can be visible before a block producer chooses their order
 - **Genesis block** — block zero, the start of the chain. It gives participants a common reference for that network's history
 - **Fork** — when a chain temporarily splits, or when its rules change. During a split, different participants may briefly see different histories
-- **Merkle tree** — a hash structure summarising a block's transactions. It can prove that one transaction is included without sending the whole block
+- **Merkle tree** — a compact fingerprint of a block's transactions. It can prove that one transaction is included without sending the whole block
 
 ## Worked example
 

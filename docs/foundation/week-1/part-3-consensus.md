@@ -200,14 +200,14 @@ maps it properly.
 
 ## Landscape
 
-- **51% attack** — controlling enough consensus power to influence which valid history is extended. Depending on the design, this can censor or reorder transactions, attempt a reorganisation or double-spend, and disrupt normal agreement; it does not reveal private keys or forge other people's signatures
-- **Slashing** — destroying part of a validator's stake for provable misbehaviour. It makes some attacks costly, but only applies where the Proof of Stake design supports it
+- **51% attack** — an attacker gains enough control over how new blocks are chosen to heavily influence the chain. Depending on the design, they may block transactions, reorder them, or try to reverse one of their own recent payments so they spend the same funds twice. The exact threshold and effects depend on the consensus design; this does not reveal private keys or let them simply take coins from someone else's wallet
+- **Slashing** — taking away part of a validator's staked assets when the protocol can prove serious rule-breaking. It makes some attacks costly, but only exists in some Proof of Stake designs
 - **Validator / miner** — validators participate in Proof of Stake; miners produce blocks in Proof of Work. They secure networks in different ways and carry different costs
 - **Staking pool** — pooling assets so people can participate economically without running a validator or holding 32 ETH alone. The pool adds its own operator and smart-contract risks
 - **Liquid staking** — a tradable token representing staked assets. It can keep capital usable, but its price and redemption depend on the issuing system
-- **Byzantine Fault Tolerance (BFT)** — a family of mechanisms that can reach fast, explicit agreement when enough participants follow the protocol. Week 2 meets one in Cosmos
-- **Nakamoto consensus** — Bitcoin's longest-chain approach, where confidence grows as more work builds on a block. A transaction is not instantly final in the same way as a BFT decision
-- **MEV** — value available from choosing transaction order. Searchers and block producers may compete for it, which can change execution outcomes; it is Further Exploration
+- **Byzantine Fault Tolerance (BFT)** — ways for a known group of validators to reach a clear decision quickly, even if some fail or behave badly. Week 2 meets one in Cosmos
+- **Nakamoto consensus** — Bitcoin's way of choosing the chain with the most accumulated work. More work makes the history harder to replace, so confidence grows over time rather than becoming final in one clear decision
+- **MEV** — profit that can come from seeing pending transactions and choosing their order. For a normal user, this can mean another trader moves first and the user gets a worse price; it is Further Exploration
 
 ## Worked example
 

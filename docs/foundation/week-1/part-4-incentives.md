@@ -174,7 +174,7 @@ Neither design is "better". They are answers to different questions.
 - **Staking pool** — pooling ETH so people can participate economically without holding 32 ETH or operating a validator alone. The pool adds operator and service risk
 - **Liquid staking** — a tradable token representing staked ETH. It may be used elsewhere, but it can trade away from the underlying value
 - **Issuance vs burn** — new supply created versus supply destroyed. Comparing them helps explain whether supply is growing or shrinking at a given time
-- **MEV** — additional value block producers or searchers can capture by ordering transactions. It can affect users' execution, so it is Further Exploration
+- **MEV** — profit that can come from choosing transaction order. Someone else may move before your trade and worsen the price you receive; it is Further Exploration
 
 ## Worked example
 

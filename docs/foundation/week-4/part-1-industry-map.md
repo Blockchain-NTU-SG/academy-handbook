@@ -258,10 +258,10 @@ Week 2 Part 1 asked this about private chains. It generalises to entire sectors.
 
 - **TVL** — total value locked. It estimates deposits in a protocol, but definitions and double-counting can change the headline number
 - **Protocol revenue vs incentives** — asks whether a project earns from usage or pays users to show up. High activity is not automatically sustainable revenue
-- **Modular vs monolithic** — whether execution, settlement and data availability are separated or handled together. The split can improve specialisation while adding coordination dependencies
-- **Account abstraction** — making wallets programmable, aimed at limitations such as recovery and transaction sponsorship. The wallet code becomes another security surface
-- **Restaking** — reusing staked ETH to secure other services. It can extend security to new systems, but one failure may affect several services at once
-- **Intents / chain abstraction** — hiding chain choice from users. This simplifies the experience while moving execution decisions into an application or solver system
+- **Modular vs monolithic** — whether one blockchain tries to do every job itself, or different networks specialise in different jobs. Specialisation can improve performance, but the pieces now have to work together correctly
+- **Account abstraction** — making wallets follow programmable rules, such as recovery or paying fees for a user. The wallet code becomes another security surface
+- **Restaking** — using ETH that is already staked to also help secure another service. The same capital can support several systems, so one failure may affect more than one
+- **Intents / chain abstraction** — a user describes the result they want without choosing every blockchain step. An application or another service chooses the route, which simplifies the experience but adds a new dependency
 
 ## Worked example
 

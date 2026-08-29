@@ -178,14 +178,14 @@ prevents a whole family of misunderstandings about what DeFi actually is.
 
 ## Landscape
 
-- **EVM-compatible / EVM-equivalent** — runs Ethereum contracts with minor differences, or none. The closer the match, the more existing tools and code can be reused
-- **Bytecode** — what Solidity compiles to and what the EVM actually runs. People can see deployed bytecode even when the original source is not verified
-- **Opcode** — one EVM instruction, each with a gas cost. Looking at opcodes helps explain what the machine is actually doing; see [evm.codes](https://www.evm.codes/)
+- **EVM-compatible / EVM-equivalent** — a network that can run Ethereum-style contracts with some differences, or almost none. The closer the match, the more existing tools and code can be reused
+- **Bytecode** — the lower-level instructions produced when Solidity is compiled. This is what the EVM runs, and people can see deployed bytecode even when the original source is not verified
+- **Opcode** — one small instruction inside bytecode. Each has a gas cost; looking at opcodes can show what the machine is doing. See [evm.codes](https://www.evm.codes/)
 - **Solidity** — the dominant contract language. Week 3 uses it to show how a small contract behaves
 - **Vyper** — an alternative contract language, deliberately more restricted. A smaller language can make some behaviour easier to inspect, but it has a different ecosystem
-- **World state** — the complete set of all accounts and their data. A transaction changes this shared state when execution succeeds
+- **World state** — everything Ethereum remembers about its accounts and data. A successful transaction changes this shared record
 - **Account abstraction** — letting accounts be programmable, softening the simple EOA/contract split. It can support features such as different authorisation or recovery flows; this is Landscape-level nuance
-- **Precompiles** — cryptographic operations built into the EVM for efficiency. Contracts call them instead of implementing the same expensive operation in ordinary bytecode
+- **Precompiles** — built-in shortcuts for common cryptographic work. Contracts can use them instead of implementing the same expensive operation in ordinary bytecode
 
 ## Worked example
 

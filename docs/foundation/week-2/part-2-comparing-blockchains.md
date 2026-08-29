@@ -233,14 +233,14 @@ Solana's emphasis on speed makes the validator trade-off especially visible.
 
 ## Landscape
 
-- **Blockchain trilemma** — a framing about pressure among decentralisation, security and scalability, not a proof. It helps you ask what a fast or open design is giving up
-- **BFT consensus** — a family of agreement mechanisms that can provide fast, explicit finality when enough participants follow the rules. It is not one single protocol
-- **Parallel execution** — running non-conflicting transactions simultaneously. It can increase throughput when the chain can identify which transactions are independent
-- **IBC** — the Cosmos standard for chain-to-chain messaging. It lets connected chains exchange messages, but each connection still has assumptions to check
+- **Blockchain trilemma** — a reminder that decentralisation, security and scalability pull in different directions. A chain that improves one may accept a trade-off in another; it is a question, not a proof
+- **BFT consensus** — ways for a known group of validators to reach a clear decision quickly, even if some fail or behave badly. It is a family of approaches, not one single protocol
+- **Parallel execution** — running independent transactions at the same time. It can process more transactions, but the chain must first know that the transactions do not conflict
+- **IBC** — a Cosmos messaging standard that lets connected chains send verified messages. It does not make them one ledger, and each connection still has assumptions to check
 - **Avalanche L1 / appchain** — a network dedicated to one application. Avalanche L1s were formerly commonly called Subnets; the separate network can be configured for that application's needs. Part 5
-- **EVM-compatible** — runs Ethereum contracts largely unmodified. Compatibility makes tools easier to reuse, but small differences can still matter
-- **Shared vs sovereign security** — inheriting security from another network, or providing your own validator security. Sovereignty gives control but makes the chain responsible for its own security budget
-- **Client diversity** — how many independent software implementations exist. More diversity can reduce the risk that one client bug affects the whole network
+- **EVM-compatible** — a network that can run Ethereum-style contracts. Close compatibility lets tools and code be reused, but differences can still matter
+- **Shared vs sovereign security** — whether a chain borrows security from another network or runs its own security. Borrowing reduces the chain's own burden; sovereignty gives control but leaves the chain responsible for its security budget
+- **Client diversity** — having more than one independent software implementation of a network. It can reduce the chance that one software bug affects everyone
 
 ## Worked example
 

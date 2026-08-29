@@ -25,14 +25,13 @@ const isAcademyPart = computed(() =>
 </script>
 
 <template>
-  <div :class="{ 'academy-page-layout': isAcademyPart }">
-    <PlumeLayout>
-      <template #doc-meta-bottom>
-        <div v-if="isAcademyPart" class="academy-reading-time" role="status">
-          <span class="vpi-clock" aria-hidden="true" />
-          <span>{{ canonicalTime }}</span>
-        </div>
-      </template>
-    </PlumeLayout>
-  </div>
+  <PlumeLayout v-if="isAcademyPart" class="academy-page-layout">
+    <template #doc-meta-bottom>
+      <div class="academy-reading-time" role="status">
+        <span class="vpi-clock" aria-hidden="true" />
+        <span>{{ canonicalTime }}</span>
+      </div>
+    </template>
+  </PlumeLayout>
+  <PlumeLayout v-else />
 </template>

@@ -206,7 +206,7 @@ guessing — wallet interfaces change, and the group will know.
    </figure>
 
    ::: important Four things beginners mix up
-   | | What it is | Safe to share? |
+   | Item | What it is | Safe to share? |
    |---|---|---|
    | **Wallet address** | Your identity on the chain, `0x` + 40 chars | **Yes** |
    | **Transaction hash** | The ID of one transaction, `0x` + 64 chars | **Yes** |
@@ -223,7 +223,7 @@ guessing — wallet interfaces change, and the group will know.
 
    Try these in order:
 
-   | | Faucet | Note |
+   | Priority | Faucet | Note |
    |---|---|---|
    | **First** | [Google Cloud Web3 faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) | Needs a Google account |
    | **Backup** | [Coinbase Developer Platform faucet](https://portal.cdp.coinbase.com/products/faucet) | Needs a free CDP account |

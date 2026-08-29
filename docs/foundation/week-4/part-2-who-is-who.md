@@ -212,7 +212,7 @@ Foundation.
 - **Snapshot** — off-chain voting used by some DAOs. It records governance preference but does not itself execute a contract change
 - **Delegation** — assigning your voting power to someone who participates. You gain a representative, but rely on that person's choices
 - **ENS** — human-readable names mapped to addresses. They make identity easier to read, while the address and its public activity remain the underlying record
-- **DID / SBT** — decentralised identity concepts. A DID can represent an identifier and an SBT a non-transferable token; neither automatically proves a person's real-world identity. Further Exploration
+- **DID / SBT** — identity concepts used by some projects. A DID can represent an identifier, while an SBT is a non-transferable token used for something such as a credential; neither by itself proves a person's real-world identity. Further Exploration
 
 ## Worked example
 

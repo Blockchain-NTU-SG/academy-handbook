@@ -218,14 +218,14 @@ map. That is enough for Foundation.
 
 ## Landscape
 
-- **EIP / ERC** — improvement proposals, and the application-level ones that define interfaces. A shared interface helps tools recognise a token without deciding whether it is trustworthy
+- **EIP / ERC** — public improvement proposals; ERCs are the application-level proposals that define common interfaces. A shared interface helps tools recognise a token without deciding whether it is trustworthy
 - **`approve` / `transferFrom`** — the two-step pattern letting a contract move your tokens after you grant permission. [Part 5](./part-5-security-and-approvals.md)
-- **`tokenURI` / metadata** — where an NFT's name and image information actually live. The token record and the media it points to are not the same thing
-- **IPFS** — content-addressed storage, often used for NFT metadata. A content address helps detect changed content, but does not guarantee the file stays available
+- **`tokenURI` / metadata** — the token's record often points to name and image details stored elsewhere. The token and the media it points to are not the same thing
+- **IPFS** — a way to refer to content by a fingerprint of its contents, often used for NFT metadata. Changed content gets a different reference, but the file is not guaranteed to stay available
 - **Mint / burn** — creating and destroying units. A contract's rules decide who can do this and what it means for supply
-- **ERC-4626** — a standard for yield-bearing vaults. Applications can integrate a vault through common functions, while the vault's strategy still carries risk
+- **ERC-4626** — a standard for tokenised vaults that put deposits into a strategy. Common functions make them easier for applications to use, but the strategy still carries risk
 - **Token allowlists** — a project or exchange's chosen set of supported tokens. This is why an exchange listing is a business decision, not a technical one
-- **Rebasing tokens** — tokens whose balances change without ordinary transfers. Integrations that assume balances only change through transfers can display or account for them incorrectly
+- **Rebasing tokens** — tokens whose displayed balances can change without an ordinary transfer. Integrations that assume balances only change through transfers can display or account for them incorrectly
 
 ## Worked example
 

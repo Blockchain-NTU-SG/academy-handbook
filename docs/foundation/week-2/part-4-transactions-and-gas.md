@@ -217,7 +217,7 @@ makes a contract's functions and events readable.
 - **Speed up / cancel** — resubmitting with the same nonce and a higher fee. It replaces or competes with the earlier request; it does not undo a confirmed transaction
 - **Revert** — execution failing and state changes being undone. Gas used before the failure is still consumed
 - **Node providers** — Infura, Alchemy, QuickNode and others that give applications access to nodes. Their availability and data handling add an infrastructure dependency
-- **MEV** — value extracted by choosing transaction order, made possible by the public mempool. The ordering can change users' execution or the price they receive
+- **MEV** — profit that can come from seeing pending transactions and choosing their order. Another trader may move first and change the execution or price a user receives
 
 ## Worked example
 
