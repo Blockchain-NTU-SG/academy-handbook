@@ -67,7 +67,7 @@ exhaustive dependency graph; real systems can add more dependencies.
 <figure class="academy-shot">
 <svg viewBox="0 0 640 316" width="100%" role="img" aria-labelledby="trustmap-title trustmap-desc" style="max-width:640px;margin:0 auto;display:block;overflow:visible">
   <title id="trustmap-title">The trust and risk map</title>
-  <desc id="trustmap-desc">Seven common Web3 actions, each shown with the trust assumptions it carries. Holding BTC carries two; using a lending protocol carries four. The assumptions change as you move down the map.</desc>
+  <desc id="trustmap-desc">Seven common Web3 actions, each shown with the trust assumptions it carries. Holding BTC carries two; holding USDC adds your keys, its token contract and its issuer. The assumptions change as you move down the map.</desc>
 
   <text font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em" fill="currentColor" fill-opacity="0.6" x="150" y="22" text-anchor="end">WHAT YOU DO</text>
   <text font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em" fill="currentColor" fill-opacity="0.6" x="162" y="22">WHAT YOU ARE TRUSTING</text>
@@ -80,8 +80,9 @@ exhaustive dependency graph; real systems can add more dependencies.
   <g>
     <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="99" text-anchor="end">Hold USDC</text>
     <g transform="translate(162,82)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Network</text></g>
-    <g transform="translate(276,82)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Token contract</text></g>
-    <g transform="translate(390,82)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Issuer</text></g>
+    <g transform="translate(276,82)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Your keys</text></g>
+    <g transform="translate(390,82)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Token contract</text></g>
+    <g transform="translate(504,82)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Issuer</text></g>
   </g>
   <g>
     <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="137" text-anchor="end">Use a CEX</text>

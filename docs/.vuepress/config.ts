@@ -1,6 +1,18 @@
 import { viteBundler } from '@vuepress/bundler-vite';
 import { defineUserConfig } from 'vuepress';
 import { plumeTheme } from 'vuepress-theme-plume';
+import { academySearchTabsPlugin } from './academy-search-tabs';
+
+const academySearch = {
+  provider: 'local',
+  miniSearch: {
+    // The stock Plume result view stores only headings. Academy results also
+    // need the section text so learners can see why a result matched.
+    options: {
+      storeFields: ['title', 'titles', 'text'],
+    },
+  },
+} as any;
 
 export default defineUserConfig({
   // GitHub Pages project site: https://blockchain-ntu-sg.github.io/academy-handbook/
@@ -25,6 +37,7 @@ export default defineUserConfig({
 
   bundler: viteBundler(),
   shouldPrefetch: false,
+  plugins: [academySearchTabsPlugin()],
 
   theme: plumeTheme({
     docsRepo: 'https://github.com/Blockchain-NTU-SG/academy-handbook',
@@ -42,7 +55,7 @@ export default defineUserConfig({
     blog: false,
     article: '/article/',
     cache: 'filesystem',
-    search: { provider: 'local' },
+    search: academySearch,
     codeHighlighter: {
       lineNumbers: false,
     },

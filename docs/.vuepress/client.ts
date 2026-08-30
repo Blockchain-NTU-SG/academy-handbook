@@ -1,12 +1,17 @@
 import { defineClientConfig } from 'vuepress/client'
 import './styles/index.scss'
 import AcademyLayout from './theme/AcademyLayout.vue'
+import AcademySearchBox from './theme/AcademySearchBox.vue'
 
 export default defineClientConfig({
   layouts: {
     Layout: AcademyLayout,
   },
-  enhance({ router }) {
+  enhance({ app, router }) {
+    // Plume's local index already searches body text. This local result view
+    // exposes the matched section text instead of showing headings only.
+    app.component('SearchBox', AcademySearchBox)
+
     const baseScrollBehavior = router.options.scrollBehavior
     const getAnchorOffset = () => {
       const navbar = document.querySelector<HTMLElement>('.vp-navbar')

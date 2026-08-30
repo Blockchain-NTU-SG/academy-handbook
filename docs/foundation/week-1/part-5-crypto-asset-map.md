@@ -193,7 +193,7 @@ Cutting across the categories above: **who holds the keys?**
 | Who holds the keys | An exchange or company | You |
 | What you have | An account balance and a claim | The asset itself |
 | Lost password | Recoverable via support | **Nothing can be done** |
-| Company fails | You are a creditor | Unaffected |
+| Custodian / exchange fails | You depend on that custodian and may become a creditor | Not directly exposed to that custodian; issuer/token risks may still remain |
 | Token-level controls | The platform may freeze its account | An issuer may still freeze its token |
 
 If you buy ETH on an exchange and leave it there, you do not directly control

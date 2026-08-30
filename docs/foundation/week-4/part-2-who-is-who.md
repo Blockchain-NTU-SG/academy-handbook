@@ -40,7 +40,7 @@ interchangeable: they can change, fail or be controlled in different ways.
 
 ## Learning objectives
 
-- Distinguish a network, token, protocol, company, foundation, interface and DAO/governance process
+- Distinguish a network, native asset, token, protocol, company, foundation, interface and DAO/governance process
 - Place a named thing into its category and sector
 - Explain what governance coordinates, and what it does not
 - Explain why an address can become part of on-chain identity without being a person's complete identity
@@ -99,7 +99,8 @@ of organisations.
 - **Protocol** — rules and contracts that provide a service on a network, such as exchanging or lending assets. The protocol is not automatically the same thing as the website in front of it.
 - **Company / Labs** — a legal organisation with people, owners and a jurisdiction. It may build software around a protocol without owning the protocol itself.
 - **Foundation** — often a nonprofit that funds or supports ecosystem work. Supporting a network does not automatically mean controlling its rules or validators.
-- **Token** — an on-chain asset. A token may coordinate voting, ownership or incentives, but it is not automatically company equity.
+- **Native asset** — an asset built into a network's protocol, such as ETH on Ethereum. It does not need a token contract to exist.
+- **Token** — an asset whose balances and rules are implemented by a smart contract on a network. A token may coordinate voting, ownership or incentives, but it is not automatically company equity.
 - **Interface** — the website or app a person uses to interact with a protocol. An interface can change or disappear while the underlying contracts remain available, if the contracts and required services are still available.
 - **DAO / governance** — a way for a community or defined group of participants to coordinate decisions. DAOs do not all use the same voting rules, legal structure or execution process.
 
@@ -180,7 +181,8 @@ Different types of things answer different practical questions:
 | What rules run on-chain? | The protocol's deployed contracts |
 | Who can change those rules? | The controls or decision process that can change them |
 | Who is accountable as an organisation? | A company, foundation or other legal entity |
-| What asset am I holding? | The token, identified by its network and contract address |
+| What native asset am I holding? | The network, such as ETH on Ethereum |
+| What token am I holding? | The token's network + contract address |
 
 This is why "decentralised" is not a complete answer. A protocol may have
 decentralised contracts but a company-run interface, a concentrated upgrade

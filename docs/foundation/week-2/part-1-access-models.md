@@ -80,7 +80,7 @@ Anyone can read, transact, and run a node. No gatekeeper.
 
 | Aspect | Details |
 |---|---|
-| **Gains** | Censorship resistance, no operator to trust, anyone can verify anything, global from day one |
+| **Gains** | Censorship resistance, no single trusted operator, independent verification, global from day one |
 | **Costs** | Can be slower or more expensive; activity is typically public; mistakes may be difficult to reverse or correct |
 | **Use when** | Participants do not trust one another and no acceptable operator exists |
 
@@ -153,7 +153,7 @@ flowchart TD
   B -->|No| DB["<b>Use a database.</b><br/>This is fine and normal"]
   B -->|Yes| PR["<b>Private chain</b><br/>shared infrastructure,<br/>trusted operator"]
   A -->|"No, but they<br/>know each other"| CO["<b>Consortium chain</b><br/>known parties,<br/>no single operator"]
-  A -->|"No, and they are<br/>strangers worldwide"| PU["<b>Public chain</b><br/>trust nobody,<br/>verify everything"]
+  A -->|"No, and they are<br/>strangers worldwide"| PU["<b>Public chain</b><br/>no single trusted operator,<br/>independently verifiable"]
 ```
 
 ::: tip Being willing to say "this should be a database" is a mark of competence

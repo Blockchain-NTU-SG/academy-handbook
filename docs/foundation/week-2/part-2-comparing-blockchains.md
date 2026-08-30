@@ -137,7 +137,7 @@ not to quote numbers.
 | Aspect | Details |
 |---|---|
 | Consensus | Proof of Work |
-| Finality | Probabilistic; ~1 hour for high confidence |
+| Finality | Probabilistic; roughly an hour is commonly used for high confidence |
 | Throughput | Very low — a handful per second |
 | Security participation | Mining: specialised hardware + electricity |
 | Execution | Deliberately limited scripting. Not general-purpose |
@@ -262,7 +262,7 @@ The candidates, honestly:
 
 | Candidate | Verdict |
 |---|---|
-| Bitcoin | **No.** Hour-scale finality, no native stablecoin support |
+| Bitcoin | **No.** Roughly an hour is commonly used for high confidence, and Bitcoin has no native stablecoin support |
 | Ethereum L1 | **No for this target.** Fees are usually too high, and the application would need to decide whether its stronger finality delay is acceptable |
 | Solana | **Plausible.** Fast, cheap, strong stablecoin usage. Weigh the outage history |
 | An Ethereum L2 | **Plausible.** Cheap and fast, with Ethereum behind it |

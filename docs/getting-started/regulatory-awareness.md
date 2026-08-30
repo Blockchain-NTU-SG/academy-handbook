@@ -246,9 +246,8 @@ Including instead of this page, if the two ever disagree.
 :::
 
 ::: warning Regulatory information changes
-Regulatory pages date faster than most other content in this handbook. Check the
-linked official sources and the summary above at the start of each cohort; the
-MAS site is authoritative for the Singapore section.
+Regulatory information changes quickly. Check the linked official sources for
+the current position; the MAS site is authoritative for the Singapore section.
 
 Last reviewed: August 2026
 :::
