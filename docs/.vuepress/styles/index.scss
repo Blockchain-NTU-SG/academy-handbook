@@ -207,6 +207,12 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.vp-doc code.academy-wallet-example {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .vp-doc th {
   color: var(--academy-ink);
   background: var(--academy-surface);

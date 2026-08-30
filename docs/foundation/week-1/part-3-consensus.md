@@ -112,9 +112,10 @@ computing work.** A miner proposes a block, and the network checks whether the
 work and the block follow the rules.
 
 To propose a block you must find a number that, hashed with the block's
-contents, produces an output below a target. There is no shortcut — Part 2's
-"you cannot work backwards from a hash" guarantees it. You guess, trillions of
-times per second, until you get lucky. This is **mining**.
+contents, produces an output below a target. **There is no known practical
+shortcut. Miners keep trying different inputs until one produces a hash below
+the target.** You guess, trillions of times per second, until you get lucky.
+This is **mining**.
 
 | Aspect | Details |
 |---|---|
@@ -182,10 +183,11 @@ Under Proof of Work, two miners occasionally find a block at nearly the same
 moment. Briefly, two valid chains exist. The rule: **follow the chain with the
 most accumulated work.**
 
-So a transaction one block deep has one confirmation. Six blocks deep, undoing
-it means redoing six blocks faster than the entire network — practically
-impossible. This is **probabilistic finality**: never mathematically certain,
-but rapidly certain enough for many practical decisions.
+So a transaction one block deep has one confirmation. **Six blocks deep, an
+attacker would need to build a competing history that catches up with and
+overtakes the honest chain. Each additional block adds more work to overcome,
+so confidence grows.** This is **probabilistic finality**: never mathematically
+certain, but rapidly certain enough for many practical decisions.
 
 Ethereum's Proof of Stake adds explicit finality. After roughly 13 minutes a
 block is **finalised**. Ethereum needs a supermajority of validator stake to

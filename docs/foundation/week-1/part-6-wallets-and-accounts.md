@@ -75,21 +75,23 @@ the entire security model.
 
 ### What these actually look like
 
-The names are abstract, so here are deliberately incomplete examples of their
-usual shape:
+The names are abstract, so here are complete documentation-only examples of
+their usual forms. The examples below illustrate each format independently;
+they are not one connected wallet.
+
+::: warning Illustrative examples only
+The values below were generated for this lesson. They are not taken from a real
+user's wallet, are not intended to correspond to one another, and should never
+be imported, funded, reused, or treated as real wallet credentials. Never share
+a real recovery phrase or private key.
+:::
 
 | Thing | What it roughly looks like | Length / form | Share it? |
 |---|---|---|---|
-| Recovery phrase | `orbit … maple … canyon` | Commonly 12 or 24 words | **Never** |
-| Private key | `0x8f2a…91c4` | 32 bytes / 64 hex characters | **Never** |
-| Public key | `0x04a1…7bd2` | A much longer hexadecimal value | Public, but users rarely need to share it |
-| Address | `0x742d…f44e` | 20 bytes / 40 hex characters after `0x` | Yes — this is the normal public identifier |
-
-::: warning These examples are deliberately incomplete
-Never paste a real recovery phrase or private key into documentation, chat,
-screenshots or code. The shortened examples above cannot be used to access an
-account.
-:::
+| Recovery / seed phrase | <code class="academy-wallet-example">harbor velvet cactus meadow orbit lantern pebble maple canyon silver tulip ember</code> | 12-word mnemonic-style example | **No — never** |
+| Private key | <code class="academy-wallet-example">0x8f2a91c4e7b35d6081fa246bc39e5a72d4c0187ef6b9a35142cd780ae59316bf</code> | 32 bytes = 64 hexadecimal characters, with an optional `0x` prefix | **No — never** |
+| Public key | <code class="academy-wallet-example">0x04a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef7bd2c4e6f80123456789abcdef0123456789abcdef0123456789abcdef0123456</code> | Uncompressed-style example: `0x04` + 128 hexadecimal characters | Yes — public information |
+| Public address | <code class="academy-wallet-example">0x742d35Cc6634C0532925a3b844Bc454e4438f44e</code> | 20 bytes = 40 hexadecimal characters after `0x` | Yes — this is the normal public identifier |
 
 | Account component | What it is |
 |---|---|
