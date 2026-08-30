@@ -227,9 +227,10 @@ nothing.
 The block was rejected everywhere simultaneously because everyone verified
 independently.
 
-In everyday language, this is what people mean by **trustless**: you do not have
-to rely on one authority's promise, because participants can check the rules for
-themselves.
+In everyday language, this is why people sometimes use the word **trustless**:
+you do not have to rely on one authority's promise, because participants can
+check the rules for themselves. It does not mean that the system has no trust
+assumptions.
 :::
 
 ::: details Further exploration — optional, not assessed

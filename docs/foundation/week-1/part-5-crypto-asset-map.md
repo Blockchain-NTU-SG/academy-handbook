@@ -192,7 +192,7 @@ Cutting across the categories above: **who holds the keys?**
 |---|---|---|
 | Who holds the keys | An exchange or company | You |
 | What you have | An account balance and a claim | The asset itself |
-| Lost password | Recoverable via support | **Nothing can be done** |
+| Lose access / forget local wallet password | Account/support recovery may help | A recovery phrase or valid key backup can restore access; without a valid backup, no support desk can restore it |
 | Custodian / exchange fails | You depend on that custodian and may become a creditor | Not directly exposed to that custodian; issuer/token risks may still remain |
 | Token-level controls | The platform may freeze its account | An issuer may still freeze its token |
 

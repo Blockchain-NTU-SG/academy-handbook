@@ -15,7 +15,7 @@ export default defineClientConfig({
     const baseScrollBehavior = router.options.scrollBehavior
     const getAnchorOffset = () => {
       const navbar = document.querySelector<HTMLElement>('.vp-navbar')
-      return (navbar?.getBoundingClientRect().bottom ?? 64) + 24
+      return (navbar?.getBoundingClientRect().bottom ?? 64) + 12
     }
 
     router.options.scrollBehavior = async (to, from, savedPosition) => {

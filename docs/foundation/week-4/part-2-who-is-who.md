@@ -59,7 +59,7 @@ people exchange tokens. Now add the type question:
 | Uniswap Protocol | DeFi | Protocol — rules implemented by contracts on a network |
 | Uniswap Labs | DeFi | Company — a team and legal organisation that builds software |
 | Uniswap interface | DeFi | Interface — the website or app people use to interact with the protocol |
-| UNI | DeFi | Token — an on-chain asset with governance and ecosystem roles |
+| UNI | DeFi | Token — a contract-defined on-chain asset with governance and ecosystem roles |
 | Governance | DeFi | Process — how some participants coordinate certain changes |
 
 The sector did not change. The named thing did.
@@ -201,8 +201,9 @@ have upgrade controls, adjustable parameters or treasuries that can change.
 ### Proposals are not deployed changes
 
 Protocols need a way to make a possible change inspectable and discussable.
-Ethereum calls its technical proposals **EIPs** — Ethereum Improvement
-Proposals. You met EIPs/ERCs as standards documents in [Week 3 Part 4](../week-3/part-4-tokens-and-standards.md);
+Ethereum calls its technical proposals **[EIPs — Ethereum Improvement
+Proposals](https://eips.ethereum.org/)**. You met EIPs/ERCs as standards
+documents in [Week 3 Part 4](../week-3/part-4-tokens-and-standards.md);
 here the useful idea is the process:
 
 `idea → proposal/specification → discussion/review → decision/adoption → implementation`

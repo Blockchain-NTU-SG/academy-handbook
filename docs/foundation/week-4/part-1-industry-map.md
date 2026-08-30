@@ -182,14 +182,18 @@ record that can be referenced across applications.
 And the 2021 collectibles boom left the sector's reputation well behind its more
 durable uses.
 
-@tab Gaming and consumer
+@tab Gaming & consumer DApps
 
-**Problem:** players invest years in items they do not own and cannot take
-anywhere.
+**Problem:** games and consumer apps usually keep accounts, items and progress
+inside one platform. Players may invest years in digital items they cannot take
+to another application.
 
-**Why blockchain matters:** items can persist beyond one publisher.
+**Why blockchain matters:** some **DApps** use on-chain records so ownership or
+other state can persist beyond one publisher and be referenced by other
+applications. DApp means a decentralised application; it is an application
+style, not a separate industry sector.
 
-**Examples:** <span class="academy-brand-label"><Icon name="token-branded:axs" /><strong>Axie Infinity</strong></span>, on-chain games, consumer social applications
+**Examples:** <span class="academy-brand-label"><Icon name="token-branded:axs" /><strong>Axie Infinity</strong></span> and other on-chain games. **GameFi** is a common label for blockchain games where tokens, tradable items or financial mechanics are central; not every blockchain game is GameFi. Consumer social applications are another possible use.
 
 **Limitation:** many early blockchain games struggled to attract players beyond
 financial incentives. Financialising play can attract speculators rather than players, and

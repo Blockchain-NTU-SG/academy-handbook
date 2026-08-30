@@ -73,6 +73,24 @@ the entire security model.
   <p class="academy-figure-caption">Left to right: <strong>recovery phrase → private key → public key → address.</strong> The crossed arrow is the point — you cannot work backwards.</p>
 </div>
 
+### What these actually look like
+
+The names are abstract, so here are deliberately incomplete examples of their
+usual shape:
+
+| Thing | What it roughly looks like | Length / form | Share it? |
+|---|---|---|---|
+| Recovery phrase | `orbit … maple … canyon` | Commonly 12 or 24 words | **Never** |
+| Private key | `0x8f2a…91c4` | 32 bytes / 64 hex characters | **Never** |
+| Public key | `0x04a1…7bd2` | A much longer hexadecimal value | Public, but users rarely need to share it |
+| Address | `0x742d…f44e` | 20 bytes / 40 hex characters after `0x` | Yes — this is the normal public identifier |
+
+::: warning These examples are deliberately incomplete
+Never paste a real recovery phrase or private key into documentation, chat,
+screenshots or code. The shortened examples above cannot be used to access an
+account.
+:::
+
 | Account component | What it is |
 |---|---|
 | **Private key** | A very large secret number. Whoever knows it can sign as you, permanently. Not *like* a password — a password is checked by a server that can reset it. There is no server here |

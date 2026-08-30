@@ -19,7 +19,8 @@ type SearchOptions = {
  * Plume intentionally removes <template> blocks while extracting searchable
  * text. Tabs use those blocks for their learner-facing content, so extend the
  * already-generated local index with the same section text while retaining it
- * as one result per heading.
+ * as one result per heading. This adapter targets the current Plume local-search
+ * structure; after a Plume upgrade, rerun the contextual-search regression suite.
  */
 export function academySearchTabsPlugin(): Plugin {
   return {

@@ -68,10 +68,11 @@ const locale = computed(() => props.locales[routeLocale.value] ?? props.locales[
 })
 
 const el = shallowRef<HTMLElement>()
+const searchTrigger = ref<HTMLButtonElement>()
 const searchInput = ref<HTMLInputElement>()
 const resultsEl = shallowRef<HTMLElement>()
 const showSearch = ref(false)
-const { activate } = useFocusTrap(el, { immediate: false })
+const { activate, deactivate } = useFocusTrap(el, { immediate: false })
 
 const searchIndex = computedAsync(async () => {
   const loader = searchIndexData.value[routeLocale.value]
@@ -173,6 +174,9 @@ function isEditingContent(event: KeyboardEvent) {
 }
 
 onKeyStroke('ArrowUp', (event) => {
+  if (!showSearch.value)
+    return
+
   event.preventDefault()
   selectedIndex.value = selectedIndex.value <= 0 ? results.value.length - 1 : selectedIndex.value - 1
   disableMouseOver.value = true
@@ -180,6 +184,9 @@ onKeyStroke('ArrowUp', (event) => {
 })
 
 onKeyStroke('ArrowDown', (event) => {
+  if (!showSearch.value)
+    return
+
   event.preventDefault()
   selectedIndex.value = selectedIndex.value >= results.value.length - 1 ? 0 : selectedIndex.value + 1
   disableMouseOver.value = true
@@ -187,6 +194,9 @@ onKeyStroke('ArrowDown', (event) => {
 })
 
 onKeyStroke('Enter', (event) => {
+  if (!showSearch.value)
+    return
+
   if (event.isComposing || (event.target instanceof HTMLButtonElement && event.target.type !== 'submit'))
     return
 
@@ -239,7 +249,9 @@ function resetSearch() {
 }
 
 function closeSearch() {
+  deactivate()
   showSearch.value = false
+  nextTick(() => searchTrigger.value?.focus())
 }
 
 function selectedClick(event: MouseEvent) {
@@ -322,20 +334,7 @@ function snippetText(result: AcademySearchResult) {
   const terms = resultTerms(query)
   const lower = source.toLocaleLowerCase()
   const exact = query ? lower.indexOf(query.toLocaleLowerCase()) : -1
-  let matchIndex = exact
-
-  if (matchIndex < 0) {
-    matchIndex = terms
-      .map(term => {
-        const direct = lower.indexOf(term.toLocaleLowerCase())
-        if (direct >= 0)
-          return direct
-        const match = source.match(new RegExp(termPattern(term), 'iu'))
-        return match?.index ?? -1
-      })
-      .filter(index => index >= 0)
-      .sort((a, b) => a - b)[0] ?? -1
-  }
+  const matchIndex = exact >= 0 ? exact : findClosestMatchIndex(source, terms)
 
   if (source.length <= 190)
     return source
@@ -358,6 +357,36 @@ function snippetText(result: AcademySearchResult) {
   return `${start > 0 ? '…' : ''}${source.slice(start, end).trim()}${end < source.length ? '…' : ''}`
 }
 
+function findClosestMatchIndex(source: string, terms: string[]) {
+  const matches = terms.flatMap(term => {
+    const pattern = new RegExp(termPattern(term), 'giu')
+    return [...source.matchAll(pattern)]
+      .map(match => ({ term, index: match.index ?? -1 }))
+      .filter(match => match.index >= 0)
+  })
+
+  if (!matches.length)
+    return -1
+
+  return matches
+    .map(candidate => {
+      const distances = terms.map(term => {
+        const positions = matches
+          .filter(match => match.term === term)
+          .map(match => Math.abs(match.index - candidate.index))
+        return positions.length ? Math.min(...positions) : Number.POSITIVE_INFINITY
+      })
+      const covered = distances.filter(Number.isFinite)
+      return {
+        index: candidate.index,
+        covered: covered.length,
+        span: covered.length ? Math.max(...covered) : Number.POSITIVE_INFINITY,
+        total: covered.reduce((sum, distance) => sum + distance, 0),
+      }
+    })
+    .sort((a, b) => b.covered - a.covered || a.span - b.span || a.total - b.total)[0].index
+}
+
 function titleHtml(value: string, result: AcademySearchResult) {
   return highlightHtml(value, resultTerms(filterText.value))
 }
@@ -373,7 +402,7 @@ function resultAriaLabel(result: AcademySearchResult) {
 
 <template>
   <div class="academy-search-wrapper">
-    <button type="button" class="academy-search-trigger" :aria-label="locale.placeholder" @click="openSearch">
+    <button ref="searchTrigger" type="button" class="academy-search-trigger" :aria-label="locale.placeholder" @click="openSearch">
       <svg class="academy-search-trigger-icon" viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="11" cy="11" r="8" />
         <path d="m21 21-4.35-4.35" />

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useData } from 'vuepress/client'
-import PlumeLayout from '../../../node_modules/vuepress-theme-plume/lib/client/layouts/Layout.vue'
+import { Layout as PlumeLayout } from 'vuepress-theme-plume/client'
 
 const { frontmatter } = useData()
 
@@ -35,3 +35,10 @@ const isAcademyPart = computed(() =>
   </PlumeLayout>
   <PlumeLayout v-else />
 </template>
+
+<style>
+/* Academy Part pages provide their own editorial estimate from frontmatter. */
+body:has(.academy-reading-time) .vp-doc-meta .reading-time {
+  display: none;
+}
+</style>

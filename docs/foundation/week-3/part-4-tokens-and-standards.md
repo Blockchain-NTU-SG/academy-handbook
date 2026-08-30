@@ -178,24 +178,44 @@ More efficient, more complex. You are unlikely to need it in Foundation.
 
 ### From standards to applications
 
-Now connect each standard to what people actually build.
+Standards are shared interfaces, not complete applications. Start with the
+human outcome, then ask which standard supplies the common token behaviour and
+what the application adds on top.
 
-| Standard | Enables | Because |
-|---|---|---|
-| **ERC-20** | Stablecoins, DEXs, lending, governance | Interchangeable units can be pooled, priced and lent |
-| **ERC-721** | Digital ownership, ENS, tickets, credentials | Distinct units can represent one specific thing |
-| **ERC-1155** | Game inventories, mixed collections | One contract, many types, batch operations |
+| Application | Standards it commonly interacts with | What the standard provides | What the application adds |
+|---|---|---|---|
+| DEX | ERC-20 | Common balances, transfers and approvals | Pools, pricing, swap rules and routing |
+| Lending protocol | ERC-20; some vault-like systems use ERC-4626 | Transferable assets and, for vaults, a common deposit/share interface | Collateral rules, interest, borrowing and liquidation |
+| NFT marketplace | ERC-721 / ERC-1155 | Distinct ownership, transfers and approvals | Listings, pricing and marketplace logic |
+| Game or inventory app | ERC-1155 | Many token types and batch operations in one interface | Game rules and inventory behaviour |
+| Oracle | Not one of these token standards | A separate data-feed interface can expose outside data such as prices | Data publication and any aggregation or trust model |
 
-Three application shapes are worth recognising:
+**ERC-20** is the common shape for interchangeable units such as stablecoins;
+**ERC-721** represents distinct items; and **ERC-1155** can represent many item
+types, including batch operations. An oracle solves a different problem: it
+brings information such as a price on-chain for contracts to read. It is not a
+token standard.
+
+These application shapes are worth recognising:
 
 **DEX — a smart-contract exchange.** For example, <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap</strong></span> uses pooled assets rather than an order book at a company, and swaps
 between them by a formula. Users do not first deposit into the DEX as they would
-with a custodial exchange; they approve the token contract and call the DEX,
-subject to the protocol's design.
+with a custodial exchange. The usual flow is:
 
-**Lending protocol — smart-contract borrowing.** A protocol such as <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave</strong></span> lets users deposit collateral and borrow against it. If collateral falls too far in value, anyone can trigger a
+```text
+User has an ERC-20 token
+  → approves the DEX or router for an amount
+  → calls the DEX
+  → the contracts apply their pool and swap logic
+```
+
+The standard provides the common token actions; it does not define the DEX's
+pool pricing, fees or routing.
+
+**Lending protocol — smart-contract borrowing.** A protocol such as <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave</strong></span> lets users deposit ERC-20 collateral and borrow against it. If collateral falls too far in value, the protocol's own rules handle interest and liquidation; anyone can trigger a
 liquidation — remember from [Part 1](./part-1-what-is-a-smart-contract.md) that
-the contract cannot act alone, so a bot does it and takes a fee.
+the contract cannot act alone, so a bot does it and takes a fee. ERC-20 does not
+define the collateral ratio, interest rate or liquidation rule.
 
 **Oracle — outside data brought in.** A lending protocol needs a price. [Week 2
 Part 3](../week-2/part-3-why-ethereum-and-evm.md) explained why a contract cannot

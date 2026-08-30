@@ -29,6 +29,25 @@ may follow all the rules, but the network still needs one shared history. The
 first question is whether a block is allowed; the second is which allowed block
 the network follows.
 
+::: important First-pass model
+Follow the story in this order:
+
+```text
+Block proposed
+  ↓
+Does it follow the rules? → validity check
+  ↓
+If valid histories compete, which one does the network follow?
+  ↓
+Consensus helps the network converge on one history
+  ↓
+Confirmations and finality increase confidence in that history
+```
+
+Consensus does not make an invalid block valid. It helps the network choose
+between histories that already pass the rules.
+:::
+
 ```mermaid
 flowchart TD
   P["Two <b>valid</b> blocks appear<br/>at the same moment"]
@@ -88,8 +107,9 @@ the difference is worth keeping straight.
 @tab Proof of Work
 
 Bitcoin's mechanism, and Ethereum's until 2022. The first idea to hold is
-simple: controlling block production requires enormous computing resources and
-ongoing real-world spending. That cost is the security mechanism.
+simple: **Proof of Work makes block production costly by requiring real
+computing work.** A miner proposes a block, and the network checks whether the
+work and the block follow the rules.
 
 To propose a block you must find a number that, hashed with the block's
 contents, produces an output below a target. There is no shortcut — Part 2's
@@ -113,8 +133,9 @@ bug — the expenditure *is* the security — but it is real energy for one purp
 @tab Proof of Stake
 
 Ethereum's mechanism since 2022. The first idea to hold is also simple:
-participants put valuable stake at risk, so dishonest behaviour can become
-costly. The stake is the security mechanism.
+**Proof of Stake makes validators put valuable assets at risk.** Validators
+propose and attest to blocks, and the network uses those messages to decide
+which history to follow and, under the protocol's conditions, to finalise it.
 
 Instead of burning electricity, participants **lock up the network's own asset**
 as collateral. On Ethereum, 32 ETH makes you a validator. Validators are chosen
@@ -161,10 +182,10 @@ Under Proof of Work, two miners occasionally find a block at nearly the same
 moment. Briefly, two valid chains exist. The rule: **follow the chain with the
 most accumulated work.**
 
-So a transaction one block deep is *probably* settled. Six blocks deep, undoing
+So a transaction one block deep has one confirmation. Six blocks deep, undoing
 it means redoing six blocks faster than the entire network — practically
 impossible. This is **probabilistic finality**: never mathematically certain,
-rapidly certain enough.
+but rapidly certain enough for many practical decisions.
 
 Ethereum's Proof of Stake adds explicit finality. After roughly 13 minutes a
 block is **finalised**. Ethereum needs a supermajority of validator stake to
