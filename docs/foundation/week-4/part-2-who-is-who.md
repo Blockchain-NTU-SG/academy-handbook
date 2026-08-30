@@ -108,7 +108,7 @@ Recognition level. The goal is to place a name, not memorise a directory.
 | <span class="academy-brand-label"><Icon name="simple-icons:coinbase" /><strong>Coinbase</strong></span>, <span class="academy-brand-label"><Icon name="simple-icons:binance" /><strong>Binance</strong></span>, <span class="academy-brand-label"><Icon name="simple-icons:okx" /><strong>OKX</strong></span> | Centralised exchanges — custodial |
 | <span class="academy-brand-label"><Icon name="simple-icons:circle" /><strong>Circle</strong></span> | Issuer of USDC |
 | <span class="academy-brand-label"><Icon name="simple-icons:tether" /><strong>Tether</strong></span> | Issuer of USDT |
-| <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap Labs</strong></span>, Aave Labs | Development companies behind protocols |
+| <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap Labs</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/aave.svg" alt="" aria-hidden="true" /><strong>Aave Labs</strong></span> | Development companies behind protocols |
 | <span class="academy-brand-label"><Icon name="simple-icons:alchemy" /><strong>Alchemy</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/infura.svg" alt="" aria-hidden="true" /><strong>Infura</strong></span> | Infrastructure providers |
 
 ::: tip Notice the pattern
@@ -122,9 +122,9 @@ thing from a deployed contract.
 | Protocol / product | What it does |
 |---|---|
 | <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap</strong></span> | Decentralised exchange |
-| <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave</strong></span> | Lending market |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/aave.svg" alt="" aria-hidden="true" /><strong>Aave</strong></span> | Lending market |
 | <span class="academy-brand-label"><Icon name="simple-icons:chainlink" /><strong>Chainlink</strong></span> | Oracle network |
-| **LayerZero, Wormhole, Across** | Cross-chain messaging and bridging |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/layerzero.png" alt="" aria-hidden="true" /><strong>LayerZero</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/wormhole.png" alt="" aria-hidden="true" /><strong>Wormhole</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/across.svg" alt="" aria-hidden="true" /><strong>Across</strong></span> | Cross-chain messaging and bridging |
 
 @tab Tools and research
 
