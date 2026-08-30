@@ -94,7 +94,7 @@ Never enter it because someone sent you a link, DMed you, or told you to
 
 | Term | Precisely |
 |---|---|
-| **Address** | One identity on the chain — `0x` followed by 40 hex characters |
+| **Address** | A public identifier for an on-chain account — `0x` followed by 40 hex characters |
 | **Account** | The address plus its on-chain state: balance, nonce, and code if it's a contract |
 | **Wallet** | The *software* managing your keys and signing on your behalf |
 

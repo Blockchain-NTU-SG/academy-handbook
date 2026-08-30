@@ -222,20 +222,56 @@ historically been a major source of large crypto exploits — [Week 2 Part 5](..
 
 @tab Data, ZK, DePIN, AI
 
-**On-chain data** — <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/nansen.png" alt="" aria-hidden="true" /><strong>Nansen</strong></span>. Raw on-chain data is public but hard
-to use directly. *Limitation:* dashboards embed someone's definitions; "TVL" is
-a choice, not a fact.
+**On-chain data**
 
-**ZK and privacy** — <span class="academy-brand-label"><Icon name="token-branded:starknet" /><strong>Starknet</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:zksync" /><strong>zkSync</strong></span> and <span class="academy-brand-label"><Icon name="token-branded:scroll" /><strong>Scroll</strong></span> are examples of networks using zero-knowledge proofs. The underlying idea is proving something is true without revealing it. Used for
-scaling and privacy. *Limitation:* hard to build, hard to audit, and privacy
-tools attract regulatory attention.
+**Problem:** Raw on-chain data is public but hard to use directly.
 
-**DePIN** — <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/helium.svg" alt="" aria-hidden="true" /><strong>Helium</strong></span> and <span class="academy-brand-label"><Icon name="token-branded:filecoin" /><strong>Filecoin</strong></span> use token incentives to bootstrap physical or storage networks. *Limitation:* the
-hard part is real-world operations, and demand rarely arrives with supply.
+**Why blockchain matters:** The records are open for people and applications to
+inspect, while dashboards make them easier to explore.
 
-**AI × Web3** — <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/0g.png" alt="" aria-hidden="true" /><strong>0G</strong></span> and <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/sentient.png" alt="" aria-hidden="true" /><strong>Sentient</strong></span> illustrate an emerging and unsettled area. *Limitation:* a great deal of it
-is narrative. Ask what the blockchain is load-bearing for; sometimes the answer
-is "nothing".
+**Examples:** <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/nansen.png" alt="" aria-hidden="true" /><strong>Nansen</strong></span>.
+
+**Limitation:** Dashboards embed someone's definitions; "TVL" is a choice, not
+a fact.
+
+**ZK and privacy**
+
+**Problem:** Some applications need to prove something without revealing all
+the underlying information.
+
+**Why blockchain matters:** Zero-knowledge proofs can prove that something is
+true without revealing the information used to prove it.
+
+**Examples:** <span class="academy-brand-label"><Icon name="token-branded:starknet" /><strong>Starknet</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:zksync" /><strong>zkSync</strong></span> and <span class="academy-brand-label"><Icon name="token-branded:scroll" /><strong>Scroll</strong></span> use zero-knowledge proofs for scaling or privacy.
+
+**Limitation:** These systems can be hard to build and audit, and privacy tools
+can attract regulatory attention.
+
+**DePIN**
+
+**Problem:** Physical or storage networks are expensive to bootstrap and need
+people to provide real-world resources.
+
+**Why blockchain matters:** Token incentives can help attract contributors to
+those networks.
+
+**Examples:** <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/helium.svg" alt="" aria-hidden="true" /><strong>Helium</strong></span> and <span class="academy-brand-label"><Icon name="token-branded:filecoin" /><strong>Filecoin</strong></span>.
+
+**Limitation:** Real-world operations remain the hard part, and demand may not
+arrive as quickly as supply.
+
+**AI × Web3**
+
+**Problem:** AI projects may need ways to coordinate data, compute or
+contributors, but "AI × Web3" covers an emerging and unsettled area.
+
+**Why blockchain matters:** In some designs, a blockchain can help record
+ownership or incentives. Ask what it is actually load-bearing for.
+
+**Examples:** <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/0g.png" alt="" aria-hidden="true" /><strong>0G</strong></span> and <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/sentient.png" alt="" aria-hidden="true" /><strong>Sentient</strong></span>.
+
+**Limitation:** A great deal of the category is narrative; sometimes the answer
+to the load-bearing question is "nothing".
 :::
 
 ### The question to carry into every sector

@@ -51,14 +51,20 @@ People collapse these into a single spectrum, and it causes real confusion.
 
 | Question | Axis |
 |---|---|
-| **Who can read it?** | Public ↔ Private |
-| **Who can participate in maintaining it?** | Permissionless ↔ Permissioned |
+| **Who can see, use or access the system?** | Open ↔ Restricted |
+| **Who can help operate, validate or maintain it?** | Permissionless ↔ Permissioned |
 
 Ethereum is public and permissionless. A bank's internal chain is private and
 permissioned. A consortium chain might publish some data publicly while
 restricting who validates.
 
+**Public**, **private** and **consortium** are useful shorthand for common
+combinations of these choices, not a second set of axes. Real systems can mix
+open and restricted access in more nuanced ways.
+
 ### The three models
+
+These three models are practical combinations of the two questions above.
 
 <figure class="academy-reference-visual">
   <img src="/learning/web3intern/chain-access-models.svg" alt="Three blockchain access models: public, consortium and private, arranged from open participation to restricted participation." />
@@ -125,13 +131,14 @@ Every design decision on this page is one of five dials.
 | **Openness** | Anyone | Members only | One organisation |
 | **Control** | Nobody | Shared among members | One organisation |
 | **Privacy** | Everything visible | Selective | Full |
-| **Decentralisation** | High | Moderate | Low |
+| **Operator participation** | Open under protocol rules | Members only | One organisation |
 | **Efficiency** | Low | High | Highest |
 
 ::: important Read across any row
 **Openness and decentralisation trade directly against efficiency and privacy.**
-There is no configuration that maximises all five. Anyone claiming otherwise is
-selling something.
+The operator-participation row is a rough description of the architecture, not
+an objective score. There is no configuration that maximises all five. Anyone
+claiming otherwise is selling something.
 :::
 
 This is Week 1 Part 1's insight — removing the operator has a cost —

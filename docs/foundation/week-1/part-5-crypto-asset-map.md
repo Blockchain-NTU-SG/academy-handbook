@@ -28,17 +28,23 @@ being tracked.
 ```mermaid
 flowchart TD
   A["<b>Crypto assets</b>"]
-  A --> N["<b>Native assets</b><br/>BTC · ETH · SOL<br/><i>built into the chain</i>"]
-  A --> T["<b>Tokens</b><br/><i>created by contracts</i>"]
-  T --> S["<b>Stablecoins</b><br/>USDC · USDT"]
-  T --> G["<b>Governance</b><br/>UNI · AAVE"]
-  T --> W["<b>Wrapped</b><br/>WETH · WBTC"]
-  T --> F["<b>Non-fungible</b><br/>NFTs"]
+  A --> Q1["<b>1 · How does it exist?</b>"]
+  Q1 --> N["<b>Native asset</b><br/>BTC · ETH · SOL<br/><i>built into the chain</i>"]
+  Q1 --> T["<b>Token</b><br/><i>created by a contract</i>"]
+  T --> Q2["<b>2 · What role or shape?</b>"]
+  Q2 --> S["<b>Stablecoin</b><br/>USDC · USDT"]
+  Q2 --> G["<b>Governance</b><br/>UNI · AAVE"]
+  Q2 --> W["<b>Wrapped asset</b><br/>WETH · WBTC"]
+  Q2 --> F["<b>Non-fungible</b><br/>NFTs"]
+  A --> Q3["<b>3 · Who controls the keys?</b>"]
+  Q3 --> C["Custodial"]
+  Q3 --> SC["Self-custodial"]
 ```
 
 Beginners file all of this under "crypto" and assume the differences are
-branding. They are not. These are five different kinds of thing, with **five
-different things that can go wrong**.
+branding. They are not — but they are also not five mutually exclusive buckets.
+One asset can answer several questions at once: USDC is a token, a stablecoin,
+an ERC-20 and fungible, and it can be held custodially or self-custodially.
 
 ::: important The distinction everything hangs on
 **A coin is part of the blockchain itself. A token is a program running on top
@@ -48,7 +54,7 @@ of it.**
 ## Learning objectives
 
 - Distinguish a coin from a token, and explain why the distinction is structural
-- Place any asset you meet into one of five categories
+- Classify an asset by how it exists, its common token role or shape, and who controls the keys
 - Explain why a stablecoin carries risks a native asset does not
 - Explain the difference between custodial and self-custodial holdings
 
@@ -75,7 +81,17 @@ calling a contract, calling a contract requires gas, and the resulting
 transaction fee is paid in ETH.
 :::
 
-### The five categories
+### Three questions to ask about any asset
+
+Ask these questions in order:
+
+1. **How does it exist?** Is it a native asset built into the chain, or a token created by a contract?
+2. **If it is a token, what role or shape does it have?** Stablecoin, governance token, wrapped asset and NFT are common examples, not one exhaustive taxonomy.
+3. **Who controls the keys?** Custodial and self-custodial describe who can authorise activity; this axis cuts across the others.
+
+These labels can overlap. WETH is a token, a wrapped asset, an ERC-20 and a
+fungible asset. The point is to describe the asset accurately rather than force
+it into one bucket.
 
 :::: tabs
 @tab Native
@@ -170,7 +186,7 @@ hosts that file disappears, the token remains and the picture does not.
 
 ### Custodial versus self-custodial
 
-Cutting across all five categories: **who holds the keys?**
+Cutting across the categories above: **who holds the keys?**
 
 | Aspect | Custodial | Self-custodial |
 |---|---|---|

@@ -220,21 +220,23 @@ Subnets.
 
 | Dimension | <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span> |
 |---|---|---|---|---|---|
-| Decentralisation | Very high | Very high | Moderate | Varies | High |
+| Operator participation | Open under protocol rules | Broad participation is the goal; hardware, stake and client/operator spread still matter | Higher-spec hardware and stake can narrow participation | Depends on each chain and security model | Depends on each Avalanche L1 configuration |
 | Finality | Probabilistic; confidence grows | Explicit; roughly minutes | Seconds | Deterministic after commit | Fast; depends on configuration |
 | Throughput | Very low | Low (base) | High | High | High |
 | Security participation | Mining hardware + power | Solo: 32 ETH + hardware; pools are economic participation | Higher-spec hardware + stake | Per-chain or shared-security model | Per-L1 validator configuration |
 | Execution | Limited | EVM | Parallel | Per chain | Configurable |
 
 ::: tip Read the columns downward, not the rows across
-The point is not that anyone set out to choose "moderate decentralisation".
-Solana's emphasis on speed makes the validator trade-off especially visible.
+These are rough qualitative descriptions of particular dimensions, not one
+objective decentralisation score. The point is not that anyone set out to
+choose "moderate decentralisation". Solana's emphasis on speed makes the
+validator trade-off especially visible.
 :::
 
 ## Landscape
 
 - **Blockchain trilemma** — a reminder that decentralisation, security and scalability pull in different directions. A chain that improves one may accept a trade-off in another; it is a question, not a proof
-- **BFT consensus** — ways for a known group of validators to reach a clear decision quickly, even if some fail or behave badly. It is a family of approaches, not one single protocol
+- **BFT consensus** — ways for a set of validators to reach a clear decision quickly, even if some fail or behave badly. It is a family of approaches, not one single protocol
 - **Parallel execution** — running independent transactions at the same time. It can process more transactions, but the chain must first know that the transactions do not conflict
 - **IBC** — a Cosmos messaging standard that lets connected chains send verified messages. It does not make them one ledger, and each connection still has assumptions to check
 - **Avalanche L1 / appchain** — a network dedicated to one application. Avalanche L1s were formerly commonly called Subnets; the separate network can be configured for that application's needs. Part 5

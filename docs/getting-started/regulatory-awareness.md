@@ -161,8 +161,15 @@ and *for what activity*.
 
 ### A global regulatory map
 
-You do not need to memorise every rule. Start by knowing which question each
-framework helps answer:
+For Foundation, recognise the names rather than memorising four regulatory
+regimes. A useful way to read any new rule is:
+
+**activity → jurisdiction → regulator or official source**
+
+Ask what is being done, where it is being done, and which current official source
+explains the relevant obligations.
+
+Start by knowing which question each framework helps answer:
 
 | Framework | What it helps you understand |
 |---|---|

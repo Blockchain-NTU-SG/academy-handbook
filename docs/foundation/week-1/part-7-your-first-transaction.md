@@ -208,7 +208,7 @@ guessing — wallet interfaces change, and the group will know.
    ::: important Four things beginners mix up
    | Item | What it is | Safe to share? |
    |---|---|---|
-   | **Wallet address** | Your identity on the chain, `0x` + 40 chars | **Yes** |
+   | **Wallet address** | The public identifier for this account, `0x` + 40 chars | **Yes** |
    | **Transaction hash** | The ID of one transaction, `0x` + 64 chars | **Yes** |
    | **Contract address** | A program's address on the chain | **Yes** |
    | **Private key / recovery phrase** | What controls your wallet | **Never** |

@@ -26,9 +26,9 @@ sources:
 # Week 2 · Part 4 — Transactions, state, gas and RPC
 
 [Part 3](./part-3-why-ethereum-and-evm.md) established that Ethereum is a state
-machine and transactions are the only way to change it. Today is how that
-actually runs — plus the piece nobody explains to beginners: **how your wallet
-talks to the blockchain at all.**
+machine and transactions are the way on-chain state changes. Before following
+one transaction, start with the doorway: **how does your wallet reach the
+blockchain at all?**
 
 ## Learning objectives
 
@@ -39,12 +39,44 @@ talks to the blockchain at all.**
 
 ## Core
 
+### RPC — how your wallet reaches the chain
+
+MetaMask does not keep a full copy of Ethereum. So how does it show your
+balance or send a transaction? It asks a **node** to do that work for it.
+
+::: important The doorway to the network
+Your wallet sends requests to a node through an interface called **JSON-RPC**.
+That node does the actual talking to the network. Your wallet is a convenient
+window onto Ethereum, not the chain itself.
+:::
+
+```mermaid
+flowchart TD
+  W["<b>Your wallet</b><br/>MetaMask"] <-->|JSON-RPC| N["<b>A node</b><br/>Infura · Alchemy<br/>or your own"]
+  N <--> B["<b>The network</b>"]
+```
+
+An **RPC endpoint** is just a URL that accepts these requests. MetaMask ships
+with defaults, which is why it works immediately — you are quietly relying on a
+provider.
+
+Three consequences are worth knowing:
+
+| Trust consideration | What it means |
+|---|---|
+| **You are trusting that provider** | To report state honestly and relay your transactions. They cannot forge your signature or steal funds — but they can show you wrong data or drop your transaction |
+| **They can see your requests** | Including which addresses you ask about, and from what IP |
+| **When wallets "go down", it is usually the RPC provider** | The chain is fine; your window onto it is not |
+
+You can run your own node and remove this dependency. Almost nobody does — worth
+knowing this is a convenience trade, not how the system has to work.
+
 ### What happens after you press Confirm?
 
 When you press **Confirm**, the transaction does not jump straight from your
-wallet onto the chain. The wallet prepares and signs a request, sends it to a
-node, waits for inclusion, and then the network executes it and updates the
-shared state.
+wallet onto the chain. The wallet prepares and signs a request, sends it through
+RPC to a node, waits for inclusion, and then the network executes it and updates
+the shared state.
 
 The technical names for that journey are:
 
@@ -108,38 +140,6 @@ out of gas, reverts, and **you still pay**.
 the dollar value being moved.** Sending more ETH does not inherently cost more
 gas than sending less ETH.
 :::
-
-### RPC — how your wallet reaches the chain
-
-How does MetaMask show your balance or send your transaction if it does not keep
-a full copy of Ethereum? It asks a **node** to do that work for it.
-
-::: important The thing nobody tells beginners
-Your wallet sends requests to a node through an interface called **JSON-RPC**.
-That node does the actual talking to the network. Your wallet is a convenient
-window onto Ethereum, not the chain itself.
-:::
-
-```mermaid
-flowchart TD
-  W["<b>Your wallet</b><br/>MetaMask"] <-->|JSON-RPC| N["<b>A node</b><br/>Infura · Alchemy<br/>or your own"]
-  N <--> B["<b>The network</b>"]
-```
-
-An **RPC endpoint** is just a URL that accepts these requests. MetaMask ships
-with defaults, which is why it works immediately — you are quietly relying on a
-provider.
-
-Three consequences worth knowing:
-
-| Trust consideration | What it means |
-|---|---|
-| **You are trusting that provider** | To report state honestly and relay your transactions. They cannot forge your signature or steal funds — but they can show you wrong data or drop your transaction |
-| **They can see your requests** | Including which addresses you ask about, and from what IP |
-| **When wallets "go down", it is usually the RPC provider** | The chain is fine; your window onto it is not |
-
-You can run your own node and remove this dependency. Almost nobody does — worth
-knowing this is a convenience trade, not how the system has to work.
 
 ### Reading versus writing
 

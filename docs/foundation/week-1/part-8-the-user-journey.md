@@ -40,7 +40,7 @@ either. It is here to show how the pieces fit — nothing more.
 
 ## Learning objectives
 
-- Trace one path from a bank account to an on-chain position and name each step
+- Trace one possible path from a bank account to an on-chain position and name each step
 - Identify which steps you already understand and which are still ahead
 - Explain, at each handover, what changes about who you are trusting
 - Point to the week that covers each step you have not met yet
@@ -49,6 +49,10 @@ either. It is here to show how the pieces fit — nothing more.
 
 ### The journey
 
+This is one deliberately complex example, not the sequence every Web3 user
+follows. A bridge appears only when value needs to move between networks, and an
+explorer or dashboard is for observing activity rather than receiving assets.
+
 ```mermaid
 flowchart TD
   F["<b>Fiat</b><br/>money in a bank"]
@@ -56,30 +60,36 @@ flowchart TD
   U["<b>USDC</b><br/>stablecoin · ✅ Part 5"]
   W["<b>Self-custody wallet</b><br/>✅ Part 6"]
   E["<b>Ethereum / Base</b><br/>L1 and L2 · → Week 2"]
-  B["<b>Bridge</b><br/>→ Week 2"]
-  D["<b>DEX</b><br/>→ Week 3"]
-  P["<b>DeFi protocol</b><br/>→ Week 3"]
-  X["<b>Explorer / Dune</b><br/>✅ Part 7 · → Week 4"]
-  F --> C --> U --> W --> E --> B --> D --> P --> X
+  B["<b>Bridge</b><br/>only if moving networks<br/>→ Week 2"]
+  D["<b>DEX / protocol</b><br/>→ Week 3"]
+  P["<b>DeFi application</b><br/>→ Week 3"]
+  E2["<b>Another network</b><br/>after bridging"]
+  X["<b>Explorer / Dune</b><br/>observe activity<br/>✅ Part 7 · → Week 4"]
+  F --> C --> U --> W --> E
+  E --> D --> P
+  E --> B --> E2 --> P
+  E -.-> X
+  D -.-> X
+  P -.-> X
 ```
 
 ✅ means you have covered it. → means it is ahead of you.
 
 ### Step by step
 
-Watch the **"what you are trusting"** line at each handover. That is the whole
-point of the page.
+Watch the **"what you are trusting"** line at each handover. Read the rows as
+branches in the example, not as a mandatory queue.
 
 | Step | What happens | What you are trusting |
 |---|---|---|
 | **Fiat → exchange** | Money moves from a bank into an exchange account. A normal regulated relationship: KYC, an account, a company holding your funds | The exchange, **entirely**. You have a claim, not an asset |
 | **Exchange → USDC** | Fiat converted to a stablecoin. Dollar value that moves at blockchain speed | The exchange, **plus Circle** — the issuer holding reserves. A new assumption, quietly added |
 | **Exchange → wallet** | Withdrawn to an address you control. Custody moves from a company to a person | **You control custody.** The exchange no longer controls the wallet, but token-level controls may still exist — for example, a stablecoin issuer may be able to freeze its token |
-| **Wallet → chain** | Assets sit on Ethereum, or on **Base**, a Layer 2 built on top for lower fees | The network, and the L2's operators → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
-| **Bridge** | Moving value between networks. Chains cannot natively see each other | Source chain + destination chain + **the bridge mechanism** → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
+| **Wallet → chain** | Assets sit on Ethereum, or on **Base**, a Layer 2 built on top for lower fees. The route does not require a bridge | The network, and the L2's operators → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
+| **Bridge, only when needed** | Moving value between networks. Chains cannot natively see each other | Source chain + destination chain + **the bridge mechanism** → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
 | **DEX** | Swapping assets through contracts, from your own wallet, no account | Your wallet + the DEX contracts + each token's contract → Week 3 |
 | **DeFi protocol** | Depositing into a lending market or pool — finance by programs, not institutions | All the above + this protocol's contracts + its **oracle** + its economic design → Week 3 |
-| **Explorer / Dune** | On-chain activity can be checked directly or explored through derived dashboards | The explorer's record; Dune's indexing and definitions if you use its dashboard → [Part 7](./part-7-your-first-transaction.md), Week 4 |
+| **Explorer / Dune** | A block explorer or dashboard lets you observe and analyse on-chain activity; it is not the destination of the assets | The explorer's record; Dune's indexing and definitions if you use its dashboard → [Part 7](./part-7-your-first-transaction.md), Week 4 |
 
 ::: warning Bridges deserve early attention
 Bridges have historically been a major source of large crypto exploits — worth

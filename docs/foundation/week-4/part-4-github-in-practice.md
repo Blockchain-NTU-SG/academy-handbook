@@ -152,9 +152,11 @@ modify or distribute it. Most people assume the opposite.
 | **GPL-3.0** | Derivatives must also be GPL |
 | **CC BY 4.0** | For writing and documentation, not code |
 
-For Academy work, **MIT is a sensible default** unless you have a reason
-otherwise. [choosealicense.com](https://choosealicense.com/) walks you through it
-in two minutes.
+For a simple software or code project, **MIT is a common, simple default**.
+Written research and documentation may need a content-appropriate licence such
+as Creative Commons. Choose a licence that matches what you are publishing;
+[choosealicense.com](https://choosealicense.com/) walks you through software
+options in two minutes.
 
 Note the split this handbook itself uses — code under one licence, written
 content under another. [Week 0 Part 3](../../getting-started/tools.md) touched on

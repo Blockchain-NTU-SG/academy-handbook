@@ -198,7 +198,9 @@ bridge adds a trust assumption that neither chain had on its own.**
 
 ### DApp architecture
 
-Pulling the week together: what is actually on-chain in a typical application?
+Now place everything from this week inside one application. This is a synthesis
+of the picture you have just built, not another network type: what is actually
+on-chain in a typical DApp, and where do the wallet, RPC, L1/L2 and bridge fit?
 
 ```mermaid
 flowchart TD

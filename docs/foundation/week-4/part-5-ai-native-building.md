@@ -16,9 +16,9 @@ sources:
 
 # Week 4 · Part 5 — AI-native building
 
-You will use AI to build your Proof of Work. AI-assisted building is increasingly
-common, and it is explicitly allowed in the Academy. The responsibility for
-checking the result remains yours.
+You may use AI to produce your Proof of Work — code, research, data or product
+work. AI-assisted work is increasingly common, and it is explicitly allowed in
+the Academy. The responsibility for checking the result remains yours.
 
 ::: important The Academy's principle
 > **AI-native building, not blind AI generation.**
@@ -29,7 +29,7 @@ it produced and why you agree with it.**
 
 ## Learning objectives
 
-- Apply a working loop for building with AI rather than prompting and hoping
+- Apply a working loop for producing work with AI rather than prompting and hoping
 - Identify where AI output must be verified before it is trusted
 - Explain what to check in generated code that touches keys, funds or contracts
 - Document AI assistance honestly
@@ -46,13 +46,13 @@ flowchart TD
   A["<b>Problem</b><br/>what am I solving?"] --> B["<b>Scope</b><br/>what is in, what is out"]
   B --> C["<b>Spec</b><br/>what does done look like?"]
   C --> D["<b>Break into small tasks</b>"]
-  D --> E["<b>Ask AI to explain</b><br/><i>before asking it to build</i>"]
-  E --> F["<b>Build one small part</b>"]
-  F --> G["<b>Run it</b>"]
-  G --> H["<b>Test and inspect</b>"]
-  H --> I{"Does it do<br/>what I expected?"}
+  D --> E["<b>Ask AI to explain</b><br/><i>or help produce one piece</i>"]
+  E --> F["<b>Produce one small part</b>"]
+  F --> G["<b>Verify and inspect</b>"]
+  G --> H["<b>Compare with evidence</b><br/><i>or expected behaviour</i>"]
+  H --> I{"Does it meet<br/>the specification?"}
   I -->|No| E
-  I -->|Yes| J["<b>Commit</b>"]
+  I -->|Yes| J["<b>Commit or document</b>"]
   J --> K{"More tasks?"}
   K -->|Yes| F
   K -->|No| L["<b>Document AI assistance</b>"]
@@ -60,12 +60,23 @@ flowchart TD
 
 Two steps carry most of the value.
 
-**"Ask AI to explain before asking it to build."** If you cannot describe what
-you want in enough detail to check the answer, you are not ready to accept code.
-Asking for an explanation first surfaces your own gaps.
+**"Ask AI to explain before asking it to produce."** If you cannot describe what
+you want in enough detail to check the answer, you are not ready to accept the
+result. Asking for an explanation first surfaces your own gaps.
 
-**"Run it."** Generated code that has never executed is a guess. AI is fluent,
-which makes wrong answers *read* exactly like right ones.
+**"Verify and compare."** A result that has not been checked against expected
+behaviour or reliable evidence is a guess. AI is fluent, which makes wrong
+answers *read* exactly like right ones.
+
+The loop works across all four directions. The kind of evidence changes, but
+the responsibility to inspect the result does not:
+
+| Direction | What verification looks like |
+|---|---|
+| **Developer** | Generate or build → run → test → inspect the code and output |
+| **Research** | Draft a claim → trace the source → use primary evidence → cross-check |
+| **Data** | Generate a query or code → run it → inspect the rows and definitions → check the methodology |
+| **Product & Ecosystem** | Generate a hypothesis or framework → inspect its assumptions → test it against users, product behaviour or evidence |
 
 ### What AI is genuinely good and bad at
 
