@@ -63,7 +63,8 @@ flowchart TD
 
 | Asset | Recoverable? |
 |---|---|
-| **Keys** — your seed phrase or private key | **Never.** Whoever holds them *is* you, permanently |
+| **Lost access** — your seed phrase or private key is gone and no valid backup exists | No support desk can restore access |
+| **Compromised secret** — your seed phrase or private key was exposed | The secret cannot be made private again; move assets and usage to a fresh wallet |
 | **Funds** — assets in a wallet you control | **Never**, once a valid transaction confirms |
 | **Identity** — the reputation tied to your address | Hard. Your address history is permanent and public |
 | **Accounts and devices** — email, GitHub, Telegram, your machine | Usually, with effort. But they are the route to everything above |

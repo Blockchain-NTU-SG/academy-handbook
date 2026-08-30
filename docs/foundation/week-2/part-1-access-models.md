@@ -81,7 +81,7 @@ Anyone can read, transact, and run a node. No gatekeeper.
 | Aspect | Details |
 |---|---|
 | **Gains** | Censorship resistance, no operator to trust, anyone can verify anything, global from day one |
-| **Costs** | Slower, more expensive, everything visible, and nobody can fix a mistake |
+| **Costs** | Can be slower or more expensive; activity is typically public; mistakes may be difficult to reverse or correct |
 | **Use when** | Participants do not trust one another and no acceptable operator exists |
 
 @tab Private
@@ -91,7 +91,7 @@ company across its own departments or subsidiaries.
 
 | Aspect | Details |
 |---|---|
-| **Gains** | Fast, cheap, private, compliant with data rules, errors can be corrected |
+| **Gains** | Can be faster, cheaper and more private; the operator can coordinate corrections |
 | **Costs** | You are trusting the operator — the thing public chains exist to avoid |
 | **Use when** | You want shared infrastructure and tamper-evident records inside a trust boundary that already exists |
 
@@ -114,7 +114,7 @@ but participation is by membership.
 
 | Aspect | Details |
 |---|---|
-| **Gains** | No single operator, known and accountable participants, good performance, privacy where needed |
+| **Gains** | No single operator, accountable members, good performance and privacy where needed |
 | **Costs** | Governance is genuinely hard — members must agree on rules, upgrades and admissions — and it is only as decentralised as its membership |
 | **Use when** | Several organisations need a shared record, do not fully trust one another, but know and can hold one another accountable |
 
@@ -129,13 +129,13 @@ Every design decision on this page is one of five dials.
 | Dimension | Public / permissionless | Consortium | Private |
 |---|---|---|---|
 | **Openness** | Anyone | Members only | One organisation |
-| **Control** | Nobody | Shared among members | One organisation |
-| **Privacy** | Everything visible | Selective | Full |
+| **Control** | No single organisation by design; protocol rules still matter | Shared among members | One organisation |
+| **Privacy** | Typically public by default | Selective | Restricted to the organisation |
 | **Operator participation** | Open under protocol rules | Members only | One organisation |
-| **Efficiency** | Low | High | Highest |
+| **Efficiency** | Often lower than tightly controlled systems | Often higher than open participation | Can be optimised for throughput and coordination |
 
 ::: important Read across any row
-**Openness and decentralisation trade directly against efficiency and privacy.**
+**Openness and decentralisation often create trade-offs with efficiency and privacy.**
 The operator-participation row is a rough description of the architecture, not
 an objective score. There is no configuration that maximises all five. Anyone
 claiming otherwise is selling something.

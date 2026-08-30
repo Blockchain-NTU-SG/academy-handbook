@@ -96,9 +96,9 @@ convenience and recourse on one side, control and self-custody on the other.
 
 | Term | One line | Example | Covered |
 |---|---|---|---|
-| **DAO** | A group coordinating through on-chain rules | A treasury governed by token holders | Week 4 |
-| **Proposal** | A formal suggested change, put to a vote | "Reduce the fee from 0.3% to 0.25%" | Week 4 |
-| **Governance** | How changes get decided and applied | Forum discussion, then on-chain voting | Week 4 |
+| **DAO** | A group coordinating shared decisions or resources using social processes, governance rules and on-chain tools | A treasury governed by a defined group | Week 4 |
+| **Proposal** | A documented suggested change for discussion or decision; publishing it does not mean it was approved or deployed | "Reduce the fee from 0.3% to 0.25%" | Week 4 |
+| **Governance** | The process used to discuss, decide and sometimes execute changes; it may happen on-chain, off-chain, or through both | Forum discussion, an off-chain vote, then on-chain execution | Week 4 |
 | **Multisig** | A wallet needing several signatures to act | A 3-of-5 treasury | Week 4 |
 
 @tab Culture
@@ -129,7 +129,7 @@ Words you will hear early but do not need yet.
 | Term | One line | Covered |
 |---|---|---|
 | **Smart contract** | A program that runs on a blockchain | Week 3 |
-| **DApp** | An application whose backend logic is smart contracts | Week 3 |
+| **DApp** | An application that uses smart contracts or on-chain state for part of its logic | Week 3 |
 | **Layer 1 / Layer 2** | A base chain, and a network built on top to make it cheaper | Week 2 |
 | **Bridge** | Infrastructure for moving value between blockchains | Week 2 |
 | **Oracle** | A service that feeds outside data to smart contracts | Week 3 |

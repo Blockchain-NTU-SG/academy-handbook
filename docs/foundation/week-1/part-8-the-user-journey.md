@@ -144,12 +144,13 @@ heard stablecoins are faster.
 
 | They do | They gain | They take on |
 |---|---|---|
-| Buy USDC on a licensed exchange | A dollar value that moves in minutes, not days | Exchange custody; issuer reserves |
+| Buy USDC on a licensed exchange | A dollar value that can move quickly | Exchange custody; issuer reserves |
 | Withdraw to their own wallet | They control custody; token-level issuer controls may remain | Full responsibility for keys |
-| Send to the recipient's address | Settlement in seconds, at a fee measured in cents | Wrong address means it is gone. No reversal |
+| Send to the recipient's address | Can settle quickly, with low on-chain fees on some networks | Wrong address means it is gone. No reversal |
 | Recipient converts to local currency | Done | Their local exchange, their local rules |
 
-Faster and cheaper than four correspondent banks. Also: no error correction
+It can be faster or cheaper than four correspondent banks, depending on the
+network, on/off ramps and conversion route. It also has no error correction
 anywhere in the chain, several new counterparties, and two jurisdictions'
 regulations — [Week 0 Part 5](../../getting-started/regulatory-awareness.md).
 

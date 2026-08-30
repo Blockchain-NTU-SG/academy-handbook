@@ -447,18 +447,6 @@ your own words, about your own hash.
 - Find a large, busy address and scroll its history. A useful sense of what *public* really means
 :::
 
-::: details Maintainer check — run before each cohort
-Verify the currently recommended Ethereum application-development testnet, and
-retest every faucet link on this page.
-
-If Ethereum's recommended testnet changes, update this page,
-[Part 6](./part-6-wallets-and-accounts.md), the
-[Week 1 Anchor Mission](./anchor-mission.md) and the Week 3 deployment
-instructions **together** — they share this dependency.
-
-Testnet plans and faucet eligibility rules both change. Do not hard-code a
-retirement date into learner-facing pages; check the current position instead.
-:::
 
 ::: details Sources and attribution
 - [ethereum.org — Networks](https://ethereum.org/developers/docs/networks/) — Reuse (CC BY 4.0), adapted

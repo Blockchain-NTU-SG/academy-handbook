@@ -58,17 +58,3 @@ returns in Week 3.
 Depth is deliberately capped. Bridge verification mechanisms, modular
 architecture, data availability layers and ZK internals are **Further
 Exploration**, not Core. You are building a map, not mastering a subfield.
-
-::: details Scope note — the Week 2 Parts 3/4/5 boundary
-The Ethereum material from Foundation v1.2 §11 is split on a fixed boundary so
-the three pages do not overlap each other or Week 3:
-
-| Part | Owns |
-|---|---|
-| 3 | Why EVM, Ethereum as a state machine, EOA vs contract accounts |
-| 4 | Transaction lifecycle, gas, RPC, read vs write, events and logs |
-| 5 | L1, L2, sidechains, appchains, bridges, DApp architecture |
-
-Events and logs are introduced in Part 4 at recognition level and deepened in
-Week 3 alongside the ABI.
-:::

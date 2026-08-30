@@ -104,14 +104,15 @@ who owns how much.
 outside can. Standard ERC-20 token transfers are typically surfaced through
 `Transfer` events that wallets and explorers index.
 
-### A contract cannot act alone
+### A contract needs a trigger
 
 Worth repeating from [Week 2 Part 3](../week-2/part-3-why-ethereum-and-evm.md),
 because it explains so much:
 
-::: important Nothing happens until something calls it
-A contract has no key, cannot sign, cannot run on a timer, and cannot see the
-internet. It does not wake up by itself.
+::: important Execution needs a trigger
+A contract has no key of its own and does not sign or submit an ordinary
+transaction by itself. It cannot run on a timer or see the internet; something
+else must trigger its execution.
 
 When a protocol appears to act automatically — a loan liquidated the moment
 collateral drops — something off-chain is watching and sending that transaction.

@@ -234,15 +234,16 @@ inspect, while dashboards make them easier to explore.
 **Limitation:** Dashboards embed someone's definitions; "TVL" is a choice, not
 a fact.
 
-**ZK and privacy**
+**ZK proofs — scaling and privacy**
 
 **Problem:** Some applications need to prove something without revealing all
 the underlying information.
 
-**Why blockchain matters:** Zero-knowledge proofs can prove that something is
-true without revealing the information used to prove it.
+**Why blockchain matters:** Zero-knowledge proofs can prove that a computation
+or statement is valid without requiring every underlying detail to be revealed
+or re-executed by everyone.
 
-**Examples:** <span class="academy-brand-label"><Icon name="token-branded:starknet" /><strong>Starknet</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:zksync" /><strong>zkSync</strong></span> and <span class="academy-brand-label"><Icon name="token-branded:scroll" /><strong>Scroll</strong></span> use zero-knowledge proofs for scaling or privacy.
+**Examples:** <span class="academy-brand-label"><Icon name="token-branded:starknet" /><strong>Starknet</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:zksync" /><strong>zkSync</strong></span> and <span class="academy-brand-label"><Icon name="token-branded:scroll" /><strong>Scroll</strong></span> primarily use zero-knowledge proofs for blockchain scaling and validity; other systems use related techniques for privacy.
 
 **Limitation:** These systems can be hard to build and audit, and privacy tools
 can attract regulatory attention.
@@ -283,7 +284,7 @@ Here, **load-bearing** means: if you removed the blockchain, would the core
 product stop working or meaningfully change?
 
 - Stablecoin payments — settlement without correspondent banks. **Real.**
-- A DEX — custody-free trading with no company. **Real.**
+- A DEX — self-custodial swapping through smart contracts without a custodial exchange operator. **Real.**
 - A supply-chain pilot with one operator and no external verification — usually a
   database with extra steps. **Often not real.**
 

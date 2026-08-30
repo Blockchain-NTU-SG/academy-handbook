@@ -74,7 +74,7 @@ The same distinction helps with Ethereum:
 | Name | What kind of thing? | What it means here |
 |---|---|---|
 | Ethereum | Network | The blockchain system participants connect to and use |
-| ETH | Token — Ethereum's native asset | Used for fees and part of the network's security model |
+| ETH | Native asset | Used for transaction fees and as part of Ethereum's security model |
 | Ethereum Foundation | Foundation | A nonprofit supporting ecosystem work; it does not automatically control Ethereum |
 
 ::: important The row that surprises people

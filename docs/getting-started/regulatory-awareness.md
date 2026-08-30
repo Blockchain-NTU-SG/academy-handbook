@@ -245,10 +245,10 @@ Including instead of this page, if the two ever disagree.
 - [U.S. Treasury — GENIUS Act implementation proposal (2026)](https://home.treasury.gov/news/press-releases/sb0605)
 :::
 
-::: warning Maintainer note
-Regulatory pages date faster than any other content in this handbook. Re-check
-these links and the summary above at the start of each cohort, and treat the MAS
-site as authoritative over this page.
+::: warning Regulatory information changes
+Regulatory pages date faster than most other content in this handbook. Check the
+linked official sources and the summary above at the start of each cohort; the
+MAS site is authoritative for the Singapore section.
 
 Last reviewed: August 2026
 :::

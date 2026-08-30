@@ -253,7 +253,7 @@ Do not start from a favourite. Start from what the application needs.
 
 | Requirement | Consequence |
 |---|---|
-| Confirmation while the customer waits | Rules out minute-scale finality |
+| Fast user-facing confirmation while the customer waits | Needs fast inclusion; the app may accept that stronger protocol finality takes longer, depending on the value and use case |
 | Fees well under a cent | Rules out congested base layers |
 | Stablecoin support | Needs a real ecosystem, not just a chain |
 | Merchants cannot lose funds to outages | Uptime is a hard requirement |
@@ -263,7 +263,7 @@ The candidates, honestly:
 | Candidate | Verdict |
 |---|---|
 | Bitcoin | **No.** Hour-scale finality, no native stablecoin support |
-| Ethereum L1 | **No.** Fees and finality both wrong for point-of-sale |
+| Ethereum L1 | **No for this target.** Fees are usually too high, and the application would need to decide whether its stronger finality delay is acceptable |
 | Solana | **Plausible.** Fast, cheap, strong stablecoin usage. Weigh the outage history |
 | An Ethereum L2 | **Plausible.** Cheap and fast, with Ethereum behind it |
 | A Cosmos appchain | **Plausible** if you need full control. You'd bootstrap your own validators |

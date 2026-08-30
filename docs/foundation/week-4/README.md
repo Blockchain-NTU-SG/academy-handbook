@@ -57,17 +57,3 @@ and the mission are where you choose yours and scope something real.
 [Part 3](./part-3-research-tool-map.md) teaches which source answers which kind of
 question. Every fact in this handbook will age. That skill will not.
 :::
-
-::: details Scope note — where the v1.2 §23 and §24 material lives
-The Foundation v1.2 notes ask for two short additions with no obvious home:
-**governance as coordination** (§23) and **identity and ownership intuition**
-(§24).
-
-Both are folded into [Part 2](./part-2-who-is-who.md) rather than given their own
-pages, because v1.2 asks for "only a short mental model" and "only a short
-explanation" in each case. Part 2 already distinguishes networks, tokens,
-protocols, companies and DAOs, so governance and on-chain identity sit naturally
-alongside it.
-
-Detailed DAO mechanism design and DID/SBT remain out of compulsory Foundation.
-:::

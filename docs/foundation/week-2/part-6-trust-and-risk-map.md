@@ -61,8 +61,8 @@ is telling which is which.**
 
 ### The map
 
-Each row lists everything that must hold for you to still have what you think
-you have tomorrow.
+Each row highlights the main assumptions worth checking first. It is not an
+exhaustive dependency graph; real systems can add more dependencies.
 
 <figure class="academy-shot">
 <svg viewBox="0 0 640 316" width="100%" role="img" aria-labelledby="trustmap-title trustmap-desc" style="max-width:640px;margin:0 auto;display:block;overflow:visible">

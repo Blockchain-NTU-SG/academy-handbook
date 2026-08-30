@@ -47,8 +47,8 @@ One asset can answer several questions at once: USDC is a token, a stablecoin,
 an ERC-20 and fungible, and it can be held custodially or self-custodially.
 
 ::: important The distinction everything hangs on
-**A coin is part of the blockchain itself. A token is a program running on top
-of it.**
+**A native asset is built into the blockchain itself. A token is an asset whose
+balances and rules are implemented by a smart contract.**
 :::
 
 ## Learning objectives
@@ -196,12 +196,13 @@ Cutting across the categories above: **who holds the keys?**
 | Company fails | You are a creditor | Unaffected |
 | Token-level controls | The platform may freeze its account | An issuer may still freeze its token |
 
-Buy ETH on an exchange and leave it there, and you do not have ETH. You have a
-claim against a company that has ETH. Usually equivalent. In the cases where
-they diverge — and there is a long history of exchange failures where they
-diverged badly — the difference is everything. Self-custody removes the
-platform's custody control, but it does not remove token-level controls built
-into an asset such as a stablecoin.
+If you buy ETH on an exchange and leave it there, you do not directly control
+the on-chain ETH. The exchange controls custody on your behalf, while your
+account records a claim or balance with the exchange. Usually equivalent. In
+the cases where they diverge — and there is a long history of exchange failures
+where they diverged badly — the difference is everything. Self-custody removes
+the platform's custody control, but it does not remove token-level controls
+built into an asset such as a stablecoin.
 
 ::: tip "Not your keys, not your coins"
 This is not advice to move everything to self-custody. Self-custody transfers

@@ -104,7 +104,7 @@ phrase. That is why MetaMask shows "Account 1", "Account 2" from a single setup.
 Ethereum has two account types, central in Weeks 2 and 3:
 
 - **EOA** (Externally Owned Account) — controlled by a private key. What you have
-- **Contract account** — controlled by its own code. No key, no recovery phrase, cannot initiate anything
+- **Contract account** — controlled by its own code. No key or recovery phrase of its own; its code does not sign or submit an ordinary transaction by itself
 
 ### Signing versus sending
 

@@ -149,9 +149,12 @@ in-game items, credentials, and records of ownership for real-world assets.
 [Week 1 Part 5](../week-1/part-5-crypto-asset-map.md) flagged this. Now you can
 see exactly why: storing an image in contract state would cost a fortune in gas.
 
-So ERC-721 stores a `tokenURI` — **a link**. If whatever hosts that file goes
-away, the token remains and the picture does not. Some projects use IPFS to make
-this less fragile; some just use a normal web server.
+Many ERC-721 projects use the metadata extension, including `tokenURI`, to point
+to a token's metadata — often a name, description and media reference. Metadata
+and media are commonly stored off-chain or content-addressed, but some projects
+use different designs, including storing more information on-chain. If the
+service holding off-chain data goes away, the token can remain while the picture
+does not.
 
 **When you evaluate an NFT project, checking where the metadata actually lives
 is a real question**, not a technicality.

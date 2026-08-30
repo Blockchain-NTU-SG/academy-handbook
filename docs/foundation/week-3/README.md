@@ -40,7 +40,7 @@ flowchart TD
 ```
 
 ::: warning Part 3 is the heaviest page in the Foundation
-Budget 45 minutes with nowhere to be. You will deploy a real contract to a test
+Budget up to an hour with nowhere to be. You will deploy a real contract to a test
 network. Nothing costs money, but the first deployment is the point at which the
 whole programme stops being abstract — give it proper time.
 :::

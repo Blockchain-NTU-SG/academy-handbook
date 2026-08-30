@@ -37,7 +37,7 @@ good, and the tooling is free.
 - Give three concrete reasons for learning the EVM first
 - Explain what "Ethereum is a state machine" actually means
 - Distinguish an EOA from a contract account
-- Explain why a contract cannot act on its own
+- Explain why a contract needs an external trigger
 
 ## Core
 
@@ -134,7 +134,7 @@ contain program code. Engineers call the first kind an **EOA** and the second a
 |---|---|---|
 | Controlled by | A private key | Its own code |
 | Has a recovery phrase | Yes | **No** |
-| Can start a transaction | **Yes** | **No** |
+| Can independently sign an ordinary transaction | **Yes** | **No** |
 | Has code | No | Yes |
 | Has storage | No | Yes |
 | Created by | Generating a key | Being deployed by a transaction |
@@ -144,14 +144,15 @@ fundamentally different things.
 
 ### The rule that surprises everyone
 
-::: important A contract cannot do anything on its own
+::: important A contract needs a trigger
 **Smart contracts do not wake up and run by themselves. Something has to trigger
 their execution.**
 
-A contract has no private key of its own, so it cannot sign a transaction. In the
-common Foundation model, a wallet-controlled account starts the call. The
-contract can then call other contracts inside that transaction, but it cannot
-start the chain of execution on a schedule or by watching the outside world.
+A contract has no private key of its own, so its code does not sign or submit an
+ordinary transaction by itself. In the common Foundation model, a
+wallet-controlled account starts the call. The contract can then call other
+contracts inside that transaction, but it cannot start the chain of execution on
+a schedule or by watching the outside world.
 :::
 
 Contracts *can* call other contracts, but only as part of execution that has
@@ -184,7 +185,7 @@ prevents a whole family of misunderstandings about what DeFi actually is.
 - **Solidity** — the dominant contract language. Week 3 uses it to show how a small contract behaves
 - **Vyper** — an alternative contract language, deliberately more restricted. A smaller language can make some behaviour easier to inspect, but it has a different ecosystem
 - **World state** — everything Ethereum remembers about its accounts and data. A successful transaction changes this shared record
-- **Account abstraction** — letting accounts be programmable, softening the simple EOA/contract split. It can support features such as different authorisation or recovery flows; this is Landscape-level nuance
+- **Account abstraction** — letting accounts be programmable, softening the simple EOA/contract split. Smart-account systems can make the user-facing flow look different, but contract code still executes when something triggers it; this is Landscape-level nuance
 - **Precompiles** — built-in shortcuts for common cryptographic work. Contracts can use them instead of implementing the same expensive operation in ordinary bytecode
 
 ## Worked example
@@ -216,8 +217,8 @@ Code:           0x60806040523480156100...
 Token Tracker:  USD Coin (USDC)
 ```
 
-Note **0 transactions sent** — as expected, since contracts cannot initiate
-anything. But it has code, storage, and it is the ledger for billions of dollars
+Note **0 transactions sent** — as expected, since a contract does not
+independently sign ordinary transactions. But it has code, storage, and it is the ledger for billions of dollars
 of USDC.
 
 USDC-related actions happen as part of execution that an account or another
