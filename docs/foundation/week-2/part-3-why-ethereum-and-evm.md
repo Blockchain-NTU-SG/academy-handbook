@@ -139,7 +139,6 @@ distinction clear.
 | Account type | **EOA** (Externally Owned Account) | **Contract account** |
 |---|---|---|
 | Controlled by | A private key | Its own code |
-| Has a recovery phrase | Yes | **No** |
 | Can independently sign an ordinary transaction | **Yes** | **No** |
 | Created by | Generating a key | Being deployed by a transaction |
 
