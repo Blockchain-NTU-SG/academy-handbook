@@ -133,7 +133,7 @@ Three properties are all you need:
 |---|---|
 | Same input, same output, always | Anyone can independently verify a hash |
 | Any change, however tiny, changes the output completely | Tampering is detectable |
-| You cannot work backwards from the output | The fingerprint reveals nothing about the input |
+| There is no known practical way to recover the original input from the hash output | Reversing it is computationally impractical with current methods |
 
 Now combine that with the chain of blocks.
 

@@ -67,10 +67,10 @@ the entire security model.
 <div class="academy-figure">
   <div class="academy-figure-surface">
 
-![A recovery phrase generates a private key; a private key derives a public key; an Ethereum address is derived from the public key through hashing and represented as 20 bytes. The reverse direction is marked as impossible.](/illustrations/w1-key-derivation.png)
+![A recovery phrase generates a private key; a private key derives a public key; an Ethereum address is derived from the public key through hashing and represented as 20 bytes. Recovering the original secret from the public information is not practically feasible with current methods.](/illustrations/w1-key-derivation.png)
 
   </div>
-  <p class="academy-figure-caption">Left to right: <strong>recovery phrase → private key → public key → address.</strong> The crossed arrow is the point — you cannot work backwards.</p>
+  <p class="academy-figure-caption">Left to right: <strong>recovery phrase → private key → public key → address.</strong> The crossed arrow is the point — recovering the original secret from the public information is computationally infeasible with current methods.</p>
 </div>
 
 ### What these actually look like
@@ -80,23 +80,24 @@ their usual forms. The examples below illustrate each format independently;
 they are not one connected wallet.
 
 ::: warning Illustrative examples only
-The values below were generated for this lesson. They are not taken from a real
-user's wallet, are not intended to correspond to one another, and should never
-be imported, funded, reused, or treated as real wallet credentials. Never share
-a real recovery phrase or private key.
+These are illustrative documentation placeholders created for this lesson only.
+They are intentionally malformed and are not valid wallet credentials. The
+examples are independent and do not form one wallet. Never import, fund, reuse,
+or treat them as real credentials. Never share a real recovery phrase or private
+key.
 :::
 
-| Thing | What it roughly looks like | Length / form | Share it? |
+| Thing | Displayed placeholder | Real format / why this placeholder is malformed | Share it? |
 |---|---|---|---|
-| Recovery / seed phrase | <code class="academy-wallet-example">harbor velvet cactus meadow orbit lantern pebble maple canyon silver tulip ember</code> | 12-word mnemonic-style example | **No — never** |
-| Private key | <code class="academy-wallet-example">0x8f2a91c4e7b35d6081fa246bc39e5a72d4c0187ef6b9a35142cd780ae59316bf</code> | 32 bytes = 64 hexadecimal characters, with an optional `0x` prefix | **No — never** |
-| Public key | <code class="academy-wallet-example">0x04a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef7bd2c4e6f80123456789abcdef0123456789abcdef0123456789abcdef0123456</code> | Uncompressed-style example: `0x04` + 128 hexadecimal characters | Yes — public information |
-| Public address | <code class="academy-wallet-example">0x742d35Cc6634C0532925a3b844Bc454e4438f44e</code> | 20 bytes = 40 hexadecimal characters after `0x` | Yes — this is the normal public identifier |
+| Recovery / seed phrase | <code class="academy-wallet-example">harbor velvet cactus meadow orbit demo pebble maple canyon silver tulip notaword</code> | Real concept: mnemonic words from a defined word list and checksum system. This placeholder intentionally contains invalid mnemonic-style words. | **No — never** |
+| Private key | <code class="academy-wallet-example">0x8f2a91c4e7b35d6081fa246bc39e5a72d4c0187ef6b9a35142cd780ae59DEMO</code> | Real format: 32 bytes = 64 hexadecimal characters, often with an optional `0x` prefix. This placeholder contains non-hexadecimal characters. | **No — never** |
+| Public key | <code class="academy-wallet-example">0x04a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef7bd2c4e6f80123456789abcdef0123456789abcdef0123456789abcdefDEMO</code> | Real uncompressed-style format: `0x04` + 128 hexadecimal characters. This placeholder is deliberately corrupted and is not a valid public key. | Yes — public information |
+| Public address | <code class="academy-wallet-example">0xA11CE0000000000000000000000000000000DEMO</code> | Real format: 20 bytes = 40 hexadecimal characters after `0x`. This placeholder is deliberately malformed and is not a valid Ethereum address. | Yes — this is the normal public identifier |
 
 | Account component | What it is |
 |---|---|
 | **Private key** | A very large secret number. Whoever knows it can sign as you, permanently. Not *like* a password — a password is checked by a server that can reset it. There is no server here |
-| **Public key** | Derived from the private key by one-way maths. Anyone can verify your signatures; nobody can work backwards. That impossibility *is* the security |
+| **Public key** | Derived from the private key by one-way maths. Anyone can verify your signatures, while recovering the private key from the public key is computationally infeasible with current methods |
 | **Address** | Derived from the public key by hashing it and representing the result as 20 bytes. This is what you share |
 | **Recovery phrase** | 12 or 24 ordinary words that regenerate the private key — and every key in the wallet |
 

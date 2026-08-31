@@ -73,6 +73,9 @@ const searchInput = ref<HTMLInputElement>()
 const resultsEl = shallowRef<HTMLElement>()
 const showSearch = ref(false)
 const { activate, deactivate } = useFocusTrap(el, { immediate: false })
+const searchHistoryKey = 'academySearchOverlay'
+const searchHistoryEntryActive = ref(false)
+const pendingNavigation = ref<string | null>(null)
 
 const searchIndex = computedAsync(async () => {
   const loader = searchIndexData.value[routeLocale.value]
@@ -208,8 +211,7 @@ onKeyStroke('Enter', (event) => {
 
   if (selected) {
     event.preventDefault()
-    window.location.assign(withBase(selected.id))
-    closeSearch()
+    navigateToResult(selected)
   }
 })
 
@@ -223,7 +225,14 @@ const isLocked = useScrollLock(typeof document !== 'undefined' ? document.body :
 watch(showSearch, (open) => {
   isLocked.value = open
   if (open) {
-    window.history.pushState(null, '', null)
+    if (!isSearchHistoryState(window.history.state)) {
+      const currentState = window.history.state
+      const nextState = currentState && typeof currentState === 'object'
+        ? { ...(currentState as Record<string, unknown>), [searchHistoryKey]: true }
+        : { [searchHistoryKey]: true }
+      window.history.pushState(nextState, '', window.location.href)
+    }
+    searchHistoryEntryActive.value = true
     nextTick().then(() => {
       searchInput.value?.focus()
       searchInput.value?.select()
@@ -235,7 +244,13 @@ watch(showSearch, (open) => {
 useEventListener('popstate', (event) => {
   if (showSearch.value) {
     event.preventDefault()
-    closeSearch()
+    closeSearch({ historyConsumed: true })
+  }
+
+  if (pendingNavigation.value) {
+    const destination = pendingNavigation.value
+    pendingNavigation.value = null
+    window.location.assign(destination)
   }
 })
 
@@ -248,20 +263,49 @@ function resetSearch() {
   nextTick(() => searchInput.value?.focus())
 }
 
-function closeSearch() {
+function isSearchHistoryState(state: unknown) {
+  return Boolean(
+    state
+    && typeof state === 'object'
+    && (state as Record<string, unknown>)[searchHistoryKey] === true,
+  )
+}
+
+function closeSearch(options: { historyConsumed?: boolean } = {}) {
+  const shouldConsumeHistory = !options.historyConsumed
+    && searchHistoryEntryActive.value
+    && isSearchHistoryState(window.history.state)
+
+  searchHistoryEntryActive.value = false
   deactivate()
   showSearch.value = false
   nextTick(() => searchTrigger.value?.focus())
+
+  if (shouldConsumeHistory)
+    window.history.back()
+
+  return shouldConsumeHistory
 }
 
-function selectedClick(event: MouseEvent) {
+function navigateToResult(result: AcademySearchResult) {
+  const destination = withBase(result.id)
+  pendingNavigation.value = destination
+
+  if (!closeSearch()) {
+    pendingNavigation.value = null
+    window.location.assign(destination)
+  }
+}
+
+function selectedClick(event: MouseEvent, result: AcademySearchResult) {
   if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
     return
 
+  event.preventDefault()
   // Keep the rendered href as the source of truth. Native local navigation
   // preserves the exact section hash instead of letting the Plume TOC
   // scroll-spy replace it with a nearby heading after an SPA transition.
-  closeSearch()
+  navigateToResult(result)
 }
 
 function decodeHtml(value: string) {

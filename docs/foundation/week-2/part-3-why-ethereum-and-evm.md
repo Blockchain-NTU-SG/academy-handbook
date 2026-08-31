@@ -130,13 +130,17 @@ Ethereum has addresses that can authorise actions with a key, and addresses that
 contain program code. Engineers call the first kind an **EOA** and the second a
 **contract account**.
 
+Traditional mental model: an EOA is controlled by a private key, while a
+contract account is controlled by code. Since EIP-7702, an EOA can also delegate
+execution to code while remaining key-controlled, so “EOA = no code” is no
+longer a strict rule. This page keeps the traditional model to make the basic
+distinction clear.
+
 | Account type | **EOA** (Externally Owned Account) | **Contract account** |
 |---|---|---|
 | Controlled by | A private key | Its own code |
 | Has a recovery phrase | Yes | **No** |
 | Can independently sign an ordinary transaction | **Yes** | **No** |
-| Has code | No | Yes |
-| Has storage | No | Yes |
 | Created by | Generating a key | Being deployed by a transaction |
 
 Both have a `0x` address. On an explorer they look similar. They are
