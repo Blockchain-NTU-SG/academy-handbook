@@ -19,11 +19,11 @@ the rest of the programme**, and Part 1 sets up accounts you need from Week 1.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [Welcome, GitHub and the platform](./welcome-and-setup.md) | 18 min |
-| 2 | [Web3 starter glossary](./glossary.md) | reference |
-| 3 | [The Web3 tool map](./tools.md) | 12 min |
-| 4 | [Staying safe: what you can lose and how](./safety.md) | 16 min |
-| 5 | [Regulatory awareness in Singapore](./regulatory-awareness.md) | 10 min |
+| 1 | [Welcome, GitHub and the platform](./welcome-and-setup.md) | 30 min hands-on |
+| 2 | [Web3 starter glossary](./glossary.md) | reference — skim now, return often |
+| 3 | [The Web3 tool map](./tools.md) | 20 min |
+| 4 | [Staying safe: what you can lose and how](./safety.md) | 25 min |
+| 5 | [Regulatory awareness in Singapore](./regulatory-awareness.md) | 20 min |
 
 ## What Week 0 is for
 

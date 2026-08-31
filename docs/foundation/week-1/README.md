@@ -21,14 +21,14 @@ on a test network and being able to explain what happened.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [Why blockchain exists](./day-1-why-blockchain-exists.md) | 12 min |
-| 2 | [How shared state works](./day-2-how-shared-state-works.md) | 15 min |
-| 3 | [Consensus, and how chains agree](./day-3-consensus.md) | 16 min |
-| 4 | [Why anyone runs the network](./day-4-incentives.md) | 13 min |
-| 5 | [What crypto assets actually are](./day-5-crypto-asset-map.md) | 15 min |
-| 6 | [Wallets, accounts and keys](./day-6-wallets-and-accounts.md) | 16 min |
-| 7 | [Your first transaction](./day-7-your-first-transaction.md) | 30 min hands-on |
-| 8 | [How it all connects: one user journey](./day-8-the-user-journey.md) | 12 min |
+| 1 | [Why blockchain exists](./part-1-why-blockchain-exists.md) | 15 min |
+| 2 | [How shared state works](./part-2-how-shared-state-works.md) | 20 min |
+| 3 | [Consensus, and how chains agree](./part-3-consensus.md) | 25 min |
+| 4 | [Why anyone runs the network](./part-4-incentives.md) | 20 min |
+| 5 | [What crypto assets actually are](./part-5-crypto-asset-map.md) | 25 min |
+| 6 | [Wallets, accounts and keys](./part-6-wallets-and-accounts.md) | 25 min |
+| 7 | [Your first transaction](./part-7-your-first-transaction.md) | 45 min hands-on |
+| 8 | [How it all connects: one user journey](./part-8-the-user-journey.md) | 15 min |
 
 **Anchor Mission:** [Week 1 mission](./anchor-mission.md) · 100 points
 

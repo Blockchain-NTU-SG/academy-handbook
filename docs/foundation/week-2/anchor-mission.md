@@ -127,8 +127,8 @@ The three most common rejections at Week 2:
 
 | What happened | The fix |
 |---|---|
-| Item 2 names a winner. "Solana is faster and therefore better" is not a trade-off | What did the speed cost? [Part 2](./day-2-comparing-blockchains.md) has the answer for all five chains |
-| Item 3 explains *how* a bridge works instead of *why* one is needed | The question is about the problem, not the mechanism. [Part 5](./day-5-l1-l2-and-bridges.md), opening two paragraphs |
-| The gas explanation says gas is "the fee" | Gas measures *work*; the fee is what that work costs. [Part 4](./day-4-transactions-and-gas.md) separates them |
+| Item 2 names a winner. "Solana is faster and therefore better" is not a trade-off | What did the speed cost? [Part 2](./part-2-comparing-blockchains.md) has the answer for all five chains |
+| Item 3 explains *how* a bridge works instead of *why* one is needed | The question is about the problem, not the mechanism. [Part 5](./part-5-l1-l2-and-bridges.md), opening two paragraphs |
+| The gas explanation says gas is "the fee" | Gas measures *work*; the fee is what that work costs. [Part 4](./part-4-transactions-and-gas.md) separates them |
 
 All three are quick fixes. Stuck on any of it, ask in the Telegram group.

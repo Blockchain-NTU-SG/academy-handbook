@@ -19,8 +19,8 @@ Upstream materials used in this curriculum, and what we may do with each.
 | [OpenZeppelin Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) | MIT | Week 3, Developer |
 | [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) | MIT | Developer |
 | [SpeedRunEthereum challenges](https://github.com/scaffold-eth/se-2-challenges) | MIT | Developer |
-| [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) | Permission granted (LXDAO) | Weeks 0, 1, 4, Product; selected blockchain-basics visuals |
-| [web3intern.xyz](https://web3intern.xyz/) | Permission granted for reuse/adaptation | Selected visual and information-architecture references |
+| [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) | Permission granted (LXDAO) | Weeks 0, 1, 4, Product; selected blockchain-basics and smart-contract-development visuals |
+| [web3intern.xyz](https://web3intern.xyz/) | Permission granted for reuse/adaptation | [Blockchain basics](https://web3intern.xyz/zh/blockchain-basic/), [smart-contract development](https://web3intern.xyz/zh/smart-contract-development/) and [industry knowledge](https://web3intern.xyz/zh/industry-knowledge/) visuals; local `blockchain-progression.jpg`, `network-rewards.jpg`, `bitcoin-monetary-properties.jpg` (source asset `currency-DbILbjLK.jpg`), `chain-access-models.svg`, `remix-workspace.png`, `github-review-workflow.svg` and `cryptopunks.jpg` |
 | [MyFirstNFT](https://nft.myfirstweb3.xyz/) | Permission granted (LXDAO) | Week 0 Part 4 phishing visual; Week 1 Part 6 hot/cold wallet visual; Weeks 1, 3 |
 | [MyFirstLayer2](https://layer2.myfirstweb3.xyz/) | Permission granted (LXDAO) | Week 2, Product |
 
@@ -42,6 +42,17 @@ subject to the relevant owner's brand and usage terms.
 | The Graph | [Official GitHub organisation profile](https://github.com/graphprotocol) | Week 0 Tool Map |
 | Infura | [Infura Press Kit](https://www.infura.io/presskit) | Week 0 Tool Map |
 | Foundry | [Official Foundry GitHub organisation](https://github.com/foundry-rs) | Week 0 Tool Map |
+| Aave | [Iconify token-branded collection](https://icon-sets.iconify.design/token-branded/aave/) | Week 4 Parts 1–2; identification only |
+| Alchemy, Circle, Tether, OpenSea, Chainlink, Helium | [Simple Icons](https://simpleicons.org/) | Week 4 Part 1; identification only |
+| BUIDL | [Crypto.com token page](https://crypto.com/us/price/blackrock-usd-institutional-digital-liquidity-fund-cdc) | Week 4 Part 1; identification only |
+| Arbitrum | [Official Arbitrum GitHub organisation](https://github.com/Arbitrum) | Week 4 Part 1; identification only |
+| LXDAO | [LXDAO Web3Logo repository](https://github.com/lxdao-official/web3logo-website) | Week 4 Part 1; identification only |
+| LayerZero | [Official LayerZero Labs GitHub organisation](https://github.com/LayerZero-Labs) | Week 4 Parts 1–2; identification only |
+| Wormhole | [Official Wormhole Foundation GitHub organisation](https://github.com/wormhole-foundation) | Week 4 Parts 1–2; identification only |
+| Across | [Official Across website](https://across.to/) | Week 4 Parts 1–2; identification only |
+| Nansen | [Nansen Brand Assets](https://nansen.ai/brand) | Week 4 Part 1; identification only |
+| 0G | [Official 0G website](https://0g.ai/) | Week 4 Part 1; identification only |
+| Sentient | [Official Sentient Foundation website](https://sentient.foundation/) | Week 4 Part 1; identification only |
 | WETH | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | Week 1 Part 5 |
 | WBTC | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599) | Week 1 Part 5 |
 
@@ -59,7 +70,7 @@ Ethernaut · SWC Registry · CryptoZombies · Cyfrin Updraft · Ethereum Magicia
 Choose a License · GitHub Skills · BuildAnything · Microsoft Learn · Dune · The
 Graph · Foundry Book · Berkeley DeFi MOOC · ethresear.ch · Solodit · The Onchain
 State Singapore Web3 Landscape · Binance Research Industry Map (March 2025) ·
-Artemis / Stablecoin.fyi Stablecoin Market Landscape
+Artemis / Stablecoin.fyi Stablecoin Market Landscape · [Web3Intern security](https://web3intern.xyz/zh/security/) (reference-only)
 
 The Week 1 hands-on pages also link to the [Coinbase Developer Platform
 Faucet](https://portal.cdp.coinbase.com/products/faucet) and

@@ -27,7 +27,7 @@
   Mermaid diagrams and GitHub Pages deployment unless a scoped change requires
   otherwise.
 - Do not blindly sync `upstream`. Review upstream changes selectively.
-- Run `npm ci` and `npm run docs:build` before proposing a documentation change.
+- Run `npm ci`, `npm run docs:check-times` and `npm run docs:build` before proposing a documentation change.
 - Use a scoped branch named `type/short-description` and use
   `type(scope): summary` for commit and pull-request titles.
 - Keep one logical objective per pull request and inspect the final diff for

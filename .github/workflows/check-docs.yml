@@ -28,3 +28,6 @@ jobs:
 
       - name: Build documentation
         run: npm run docs:build
+
+      - name: Check reading-time consistency
+        run: npm run docs:check-times

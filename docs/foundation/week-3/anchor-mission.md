@@ -17,7 +17,7 @@ and never use a wallet holding real funds.
 
 ## What you're doing
 
-Deploying your contract from [Part 3](./day-3-remix-lab.md), calling it, and
+Deploying your contract from [Part 3](./part-3-remix-lab.md), calling it, and
 explaining what it stores and what changes when you use it.
 
 ::: important The deployment is the easy part
@@ -28,6 +28,11 @@ protect against.**
 That last one matters most. Anyone can deploy a contract. Knowing its limits is
 the difference between having followed instructions and having understood them.
 :::
+
+You may use the provided `Guestbook` unchanged, make a small modification
+yourself, or make one with AI assistance. None receives extra credit for more
+code. **AI assistance is allowed. Using AI is not a reason to send a submission
+back; being unable to explain the submitted contract is.**
 
 ## What to submit
 
@@ -122,9 +127,9 @@ The three most common rejections at Week 3:
 | What happened | The fix |
 |---|---|
 | The contract address and the deployment transaction do not match | On the explorer, open the deployment transaction and copy the address from its **Created Contract** field |
-| Question 5 calls a `public` variable "not a function" | It **is** a read function — Solidity generates one for you. [Part 2](./day-2-solidity-minimum.md), State tab |
+| Question 5 calls a `public` variable "not a function" | It **is** a read function — Solidity generates one for you. [Part 2](./part-2-solidity-minimum.md), State tab |
 | 6c says "it is secure" or leaves it blank | Every contract has limits. Start with: who is allowed to call your write function? |
 
-Stuck on the deployment rather than the writing? [Part 3](./day-3-remix-lab.md)
+Stuck on the deployment rather than the writing? [Part 3](./part-3-remix-lab.md)
 has a troubleshooting section, and the Telegram group has people who hit the same
 error last week.

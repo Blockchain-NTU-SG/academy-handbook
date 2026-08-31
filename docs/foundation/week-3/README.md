@@ -19,11 +19,11 @@ made of code. This is the week you write one, deploy it, and call it.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [What a smart contract actually is](./day-1-what-is-a-smart-contract.md) | 14 min |
-| 2 | [The minimum Solidity you need](./day-2-solidity-minimum.md) | 18 min |
-| 3 | [Remix lab: deploy your first contract](./day-3-remix-lab.md) | 45 min hands-on |
-| 4 | [Tokens, standards and real applications](./day-4-tokens-and-standards.md) | 16 min |
-| 5 | [Security, approvals and permissions](./day-5-security-and-approvals.md) | 14 min |
+| 1 | [What a smart contract actually is](./part-1-what-is-a-smart-contract.md) | 20 min |
+| 2 | [The minimum Solidity you need](./part-2-solidity-minimum.md) | 25 min |
+| 3 | [Remix lab: deploy your first contract](./part-3-remix-lab.md) | 60 min hands-on |
+| 4 | [Tokens, standards and real applications](./part-4-tokens-and-standards.md) | 20 min |
+| 5 | [Security, approvals and permissions](./part-5-security-and-approvals.md) | 25 min |
 
 **Anchor Mission:** [Week 3 mission](./anchor-mission.md) · 100 points
 
@@ -40,7 +40,7 @@ flowchart TD
 ```
 
 ::: warning Part 3 is the heaviest page in the Foundation
-Budget 45 minutes with nowhere to be. You will deploy a real contract to a test
+Budget up to an hour with nowhere to be. You will deploy a real contract to a test
 network. Nothing costs money, but the first deployment is the point at which the
 whole programme stops being abstract — give it proper time.
 :::
@@ -50,6 +50,9 @@ whole programme stops being abstract — give it proper time.
 You are not becoming a smart contract developer in five days. You are becoming
 someone who can **read a contract, deploy a simple one, and reason about what it
 can and cannot do.**
+
+AI assistance is explicitly allowed: the goal is to understand what you deploy,
+not to type every line yourself.
 
 Deliberately **out of scope** and left to Further Exploration or Semester 2:
 
@@ -64,5 +67,5 @@ Deliberately **out of scope** and left to Further Exploration or Semester 2:
 
 ::: tip Everything required is testnet only
 You will deploy to the same test network you used in
-[Week 1 Part 7](../week-1/day-7-your-first-transaction.md). No real funds, ever.
+[Week 1 Part 7](../week-1/part-7-your-first-transaction.md). No real funds, ever.
 :::

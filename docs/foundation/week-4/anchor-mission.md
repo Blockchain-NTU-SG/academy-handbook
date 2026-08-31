@@ -43,7 +43,7 @@ A table is fine. One line each unless noted.
 
 4. **Why blockchain matters here** *(1–2 sentences)*
 
-   Or honestly: where it does not. [Part 1](./day-1-industry-map.md)'s question —
+   Or honestly: where it does not. [Part 1](./part-1-industry-map.md)'s question —
    if you removed the blockchain, what breaks?
 
 5. **Proposed four-week Proof of Work** — one sentence with one core deliverable
@@ -59,7 +59,7 @@ A table is fine. One line each unless noted.
 10. **Definition of done** *(1–2 sentences)*
 
     Specific enough that **someone else** could look at your output and say yes
-    or no. [Part 6](./day-6-direction-card.md) has worked examples.
+    or no. [Part 6](./part-6-direction-card.md) has worked examples.
 :::
 
 ### Part B — Mini Project Map
@@ -68,10 +68,10 @@ Pick **one** real Web3 project or protocol relevant to your interest. Five short
 answers:
 
 ::: steps
-1. **What category is it in?** — a sector from [Part 1](./day-1-industry-map.md)
+1. **What category is it in?** — a sector from [Part 1](./part-1-industry-map.md)
 
 2. **What kind of thing is it?** — network, protocol, company, foundation,
-   product, token, or a combination. [Part 2](./day-2-who-is-who.md)
+   product, token, or a combination. [Part 2](./part-2-who-is-who.md)
 
 3. **What problem does it solve?** *(1–2 sentences, your own words)*
 
@@ -118,7 +118,7 @@ expensive to fix later.
 
 | Field | What good looks like |
 |---|---|
-| 1–2 | Correct category and entity type. Getting *protocol vs company* right matters — that is [Part 2](./day-2-who-is-who.md)'s core point |
+| 1–2 | Correct category and entity type. Getting *protocol vs company* right matters — that is [Part 2](./part-2-who-is-who.md)'s core point |
 | 3 | Own words, not marketing copy |
 | 4 | A **genuine primary source** — official docs, GitHub, governance forum. **A news article or an X thread is not a primary source** |
 | 5 | A sensible data or research source, with a specific reason |
@@ -153,7 +153,7 @@ The three most common rejections at Week 4:
 |---|---|
 | The Proof of Work sentence describes several independent projects | Choose the one you most want to do. The others can become Week 8 next steps |
 | The definition of done is not checkable | Say what will exist, what question it answers, and how someone can tell it is complete |
-| B4 cites a news article or a thread as a primary source | Primary means the project's **own** docs, code or governance. [Part 3](./day-3-research-tool-map.md) has the five-source model |
+| B4 cites a news article or a thread as a primary source | Primary means the project's **own** docs, code or governance. [Part 3](./part-3-research-tool-map.md) has the five-source model |
 
 If you are stuck on choosing a direction rather than writing the card, describe
 your idea in the Telegram group. Saying it out loud is the fastest way to find

@@ -4,7 +4,7 @@ day: 3
 title: "The Web3 tool map"
 status: drafting
 owner: "Director of Education"
-reading_time: "12 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Wallets"
     url: "https://ethereum.org/wallets/"
@@ -134,7 +134,7 @@ You cannot look up a stranger's bank transfer. You *can* look up any transaction
 that has ever happened on Ethereum.
 :::
 
-On [Etherscan](https://etherscan.io/) you can check:
+On <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/etherscan.svg" alt="" aria-hidden="true" /><a href="https://etherscan.io/">Etherscan</a></span> you can check:
 
 - whether a transaction succeeded or failed, and what it cost
 - everything an address has ever done
@@ -145,7 +145,7 @@ That third one is the quiet one. **Without verified source code, outsiders can
 see the deployed bytecode but cannot easily inspect the original human-readable
 code.** You will use this in Week 3.
 
-Solana's equivalent is [Solscan](https://solscan.io/).
+Solana's equivalent is <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/solscan.png" alt="" aria-hidden="true" /><a href="https://solscan.io/">Solscan</a></span>.
 
 @tab Derived analytics
 
@@ -168,14 +168,14 @@ Recognise these; you will not use them before Week 4.
 
 | Tool | What it's for |
 |---|---|
-| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Write SQL against blockchain data and publish charts |
-| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari Research</strong></span> | Structured, professional sector and protocol research |
-| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/snapshot.png" alt="" aria-hidden="true" /><strong>Snapshot</strong></span> | Off-chain governance voting, used by many DAOs |
-| **Governance forums** | Where proposals get argued before anyone votes. Often the most informative thing about a protocol |
-| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/the-graph.png" alt="" aria-hidden="true" /><strong>The Graph</strong></span> | Indexes chain data so applications can query it |
-| <span class="academy-brand-label"><Icon name="simple-icons:openzeppelin" /><strong>OpenZeppelin</strong></span> | Audited standard contract libraries, used almost everywhere |
-| <span class="academy-brand-label"><Icon name="simple-icons:alchemy" /><strong>Alchemy</strong></span> / <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/infura.svg" alt="" aria-hidden="true" /><strong>Infura</strong></span> | Infrastructure providers running nodes so applications don't have to |
-| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/foundry.png" alt="" aria-hidden="true" /><strong>Foundry</strong></span> / <span class="academy-brand-label"><Icon name="logos:hardhat" /><strong>Hardhat</strong></span> | Professional developer toolkits. Not needed in Foundation |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Queries indexed blockchain data and turns the results into dashboards. The result depends on the query and definitions used |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/messari.jpg" alt="" aria-hidden="true" /><strong>Messari Research</strong></span> | Provides structured sector and protocol research. It adds interpretation, so important claims still need checking |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/snapshot.png" alt="" aria-hidden="true" /><strong>Snapshot</strong></span> | Runs off-chain governance votes. It records a choice but does not itself change a contract's state |
+| **Governance forums** | Where proposals get argued before anyone votes. The discussion can reveal assumptions and disagreement that a vote alone would hide |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/the-graph.png" alt="" aria-hidden="true" /><strong>The Graph</strong></span> | Indexes chain data so applications can query it more easily. An index is useful, but can still need checking against the chain |
+| <span class="academy-brand-label"><Icon name="simple-icons:openzeppelin" /><strong>OpenZeppelin</strong></span> | Publishes widely used contract libraries that reduce reinvention. Using a reviewed library lowers risk but is not a guarantee |
+| <span class="academy-brand-label"><Icon name="simple-icons:alchemy" /><strong>Alchemy</strong></span> / <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/infura.svg" alt="" aria-hidden="true" /><strong>Infura</strong></span> | Infrastructure providers running nodes so applications don't have to. An outage can interrupt access without meaning the chain stopped |
+| <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/foundry.png" alt="" aria-hidden="true" /><strong>Foundry</strong></span> / <span class="academy-brand-label"><Icon name="logos:hardhat" /><strong>Hardhat</strong></span> | Developer toolkits for compiling, testing and deploying contracts. They help catch mistakes before a transaction is sent |
 
 ## Worked example
 

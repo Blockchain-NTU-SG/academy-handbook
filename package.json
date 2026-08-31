@@ -10,17 +10,20 @@
     "docs:dev": "vuepress dev docs",
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
     "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:check-times": "node scripts/check-reading-times.mjs",
     "docs:preview": "http-server docs/.vuepress/dist",
     "vp-update": "npx vp-update"
   },
   "devDependencies": {
+    "@vuepress-plume/plugin-search": "1.0.0-rc.174",
     "@vuepress/bundler-vite": "^2.0.0-rc.26",
     "http-server": "^14.1.1",
+    "minisearch": "7.2.0",
     "sass-embedded": "^1.89.0",
     "typescript": "^5.8.3",
     "vue": "^3.5.14",
     "vuepress": "^2.0.0-rc.26",
-    "vuepress-theme-plume": "^1.0.0-rc.174"
+    "vuepress-theme-plume": "1.0.0-rc.174"
   },
   "dependencies": {
     "@iconify/json": "^2.2.348",

@@ -4,7 +4,7 @@ day: 4
 title: "Staying safe: what you can lose and how"
 status: drafting
 owner: "Director of Education"
-reading_time: "16 min"
+reading_time: "25 min"
 sources:
   - name: "ethereum.org — Security"
     url: "https://ethereum.org/security/"
@@ -21,6 +21,9 @@ sources:
   - name: "MyFirstNFT — wallet security visuals"
     url: "https://nft.myfirstweb3.xyz/"
     label: "Reuse"
+  - name: "Web3 Internship Handbook — Security"
+    url: "https://web3intern.xyz/zh/security/"
+    label: "Link"
 ---
 
 # Week 0 · Part 4 — Staying safe: what you can lose and how
@@ -60,7 +63,8 @@ flowchart TD
 
 | Asset | Recoverable? |
 |---|---|
-| **Keys** — your seed phrase or private key | **Never.** Whoever holds them *is* you, permanently |
+| **Lost access** — your seed phrase or private key is gone and no valid backup exists | No support desk can restore access |
+| **Compromised secret** — your seed phrase or private key was exposed | The secret cannot be made private again; move assets and usage to a fresh wallet |
 | **Funds** — assets in a wallet you control | **Never**, once a valid transaction confirms |
 | **Identity** — the reputation tied to your address | Hard. Your address history is permanent and public |
 | **Accounts and devices** — email, GitHub, Telegram, your machine | Usually, with effort. But they are the route to everything above |
@@ -104,7 +108,7 @@ exactly as expected until the moment you approve something.
 
 <figure class="academy-reference-visual academy-reference-visual--narrow">
   <img src="/learning/myfirstnft/fishing-websites.png" alt="A simple comparison of similar-looking website addresses, showing how small domain differences can reveal a phishing site." />
-  <figcaption>Check the domain carefully: small spelling changes can point to a phishing site. Source: <a href="https://nft.myfirstweb3.xyz/">MyFirstNFT</a> / LXDAO.</figcaption>
+  <figcaption>Check the domain carefully: small spelling changes can point to a phishing site.</figcaption>
 </figure>
 
 **Fake contracts** are the same idea one layer down: an application that looks
@@ -180,12 +184,12 @@ missing something — either we made an error, or the instruction is not from us
 
 ## Landscape
 
-- **Hardware wallet** — a device keeping keys offline. The standard for meaningful value; not needed for testnet work
-- **Multisig** — a wallet requiring several signers
-- **Smart contract audit** — a paid security review. Reduces risk; audited protocols still get exploited
-- **Blind signing** — approving a request your wallet cannot decode. Avoid
-- **Address poisoning** — an attacker sends dust from an address resembling one you use, hoping you copy it from your history later
-- **Rug pull** — a project's own team removing value or abandoning it
+- **Hardware wallet** — a device keeping keys offline. It reduces online exposure, but safe setup and backups still matter; it is not needed for testnet work
+- **Multisig** — a wallet requiring several signers. It reduces reliance on one key, but losing enough signers can block an action
+- **Smart contract audit** — a paid security review of a defined scope. It can find issues, but audited protocols still get exploited
+- **Blind signing** — approving a request your wallet cannot explain clearly. You may authorise a dangerous action without recognising it
+- **Address poisoning** — an attacker sends dust from an address resembling one you use, hoping you copy it from your history later and send funds to the wrong address
+- **Rug pull** — a project's own team removing value, changing the rules or abandoning it. Users may be left with tokens they cannot use or sell
 
 ## Guided walkthrough
 
@@ -253,7 +257,7 @@ you will have forgotten this moment entirely.
 
 Permissions like this arrive two ways, and **both matter**:
 
-| | What it looks like |
+| Permission type | What it looks like |
 |---|---|
 | **On-chain approval** | A transaction. Costs gas. Sets an allowance on-chain |
 | **Signature-based permission** | Often no gas at all. Someone else submits it later |
@@ -275,11 +279,14 @@ it, and revoke permissions you no longer use.
 - [ethereum.org — Security](https://ethereum.org/security/) — a fuller treatment of the same threats
 - [Revoke.cash](https://revoke.cash/) — inspect and revoke token approvals. Worth looking at before you have any to revoke
 - [MetaMask support — security basics](https://support.metamask.io/) — wallet-specific guidance from the vendor
+- [Web3 Internship Handbook — Security](https://web3intern.xyz/zh/security/) — a broader reference on wallet and application risks; jurisdiction-specific material is outside this handbook's scope
 :::
 
 ::: details Sources and attribution
 - [ethereum.org — Security](https://ethereum.org/security/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Smart contract security](https://ethereum.org/developers/docs/smart-contracts/security/) — Reuse (CC BY 4.0), adapted
+- [MyFirstNFT](https://nft.myfirstweb3.xyz/) — Reuse (permission granted, LXDAO); phishing visual
 - [MetaMask — Support](https://support.metamask.io/) — Link, referenced only
 - [Revoke.cash](https://revoke.cash/) — Link, referenced only
+- [Web3 Internship Handbook — Security](https://web3intern.xyz/zh/security/) — Link, reference only; no jurisdiction-specific material reused
 :::

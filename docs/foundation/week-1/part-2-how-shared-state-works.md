@@ -1,0 +1,248 @@
+---
+week: 1
+day: 2
+title: "How shared state works"
+status: drafting
+owner: "Director of Education"
+reading_time: "20 min"
+sources:
+  - name: "ethereum.org — Blocks"
+    url: "https://ethereum.org/developers/docs/blocks/"
+    label: "Reuse"
+  - name: "ethereum.org — Transactions"
+    url: "https://ethereum.org/developers/docs/transactions/"
+    label: "Reuse"
+  - name: "ethereum.org — Nodes and clients"
+    url: "https://ethereum.org/developers/docs/nodes-and-clients/"
+    label: "Reuse"
+  - name: "ethereum.org — Intro to Ethereum"
+    url: "https://ethereum.org/developers/docs/intro-to-ethereum/"
+    label: "Reuse"
+  - name: "Web3 Internship Handbook — block to blockchain visual"
+    url: "https://web3intern.xyz/zh/blockchain-basic/"
+    label: "Reuse"
+---
+
+# Week 1 · Part 2 — How shared state works
+
+[Part 1](./part-1-why-blockchain-exists.md) ended with a claim: many independent
+computers can maintain one shared record without any of them being in charge.
+That is easy to say and not at all obvious how to build.
+
+Today is the machinery. [Part 3](./part-3-consensus.md) answers the remaining
+question — *who decides what gets added next* — but none of that makes sense
+until you know what is being added.
+
+## Learning objectives
+
+- Describe what a transaction is and what makes one valid
+- Explain what a block is and why transactions are batched
+- Explain what a node does and why thousands of them exist
+- Explain, without maths, how a hash makes tampering detectable
+
+## Core
+
+### State is just "how things are right now"
+
+Strip away the jargon and a blockchain maintains one thing: **state**.
+
+```text
+Address 0xAB…  →  4.2 ETH
+Address 0xCD…  →  0.1 ETH, 300 USDC
+Contract 0xEF… →  a list of who owns which NFT
+```
+
+A blockchain is a machine for changing that, by agreed rules, in a way everyone
+can verify. **Only one thing changes state: a transaction.**
+
+### Transactions
+
+Imagine the shared record says Alice has 1 ETH and Ben has 0 ETH. Alice's wallet
+asks to send Ben 0.1 ETH. If the request is accepted, the next snapshot says
+Alice has 0.9 ETH and Ben has 0.1 ETH.
+
+That signed request is a **transaction**: an instruction to change state. A
+payment is one kind of transaction. Others deploy programs, call functions, or
+grant permissions.
+
+For now, focus on four ideas: **who authorised the request, where it is going,
+what value it carries, and the signature**. Data, nonce and fee fields will make
+more sense later as you work with contracts and transaction fees.
+
+| Field | What it is |
+|---|---|
+| **From** | The address requesting the change |
+| **To** | The recipient address, or a contract being called |
+| **Value** | How much of the native asset to move, if any |
+| **Data** | What to run, for a contract call. Empty for a plain transfer |
+| **Nonce** | A counter, so the same transaction can't be replayed |
+| **Fee fields** | What you'll pay for the work — Part 7, and Week 2 |
+| **Signature** | Cryptographic proof the sender authorised this |
+
+::: important That last field carries the whole security model
+No signature, no valid transaction. And crucially, **the signature can be
+checked by anyone** — without contacting the sender, and without any authority
+confirming their identity.
+:::
+
+A transaction is valid if it is correctly signed, the sender has the balance, the
+nonce is right, and it obeys the rules. Every participant checks this
+independently. **Nobody takes anyone's word for it.**
+
+### Blocks
+
+Transactions are gathered into **blocks** — a batch, plus a header, added as a
+unit. Two reasons, and the second is the interesting one:
+
+<figure class="academy-reference-visual academy-reference-visual--narrow">
+  <img src="/learning/blockchain-block-structure.jpg" alt="An illustrated blockchain block containing a previous hash, a random number, transactions and a resulting hash." />
+  <figcaption>A block groups transactions with metadata such as a previous hash and a resulting hash.</figcaption>
+</figure>
+
+| Reason | Why |
+|---|---|
+| **Efficiency** | Agreeing once on a batch of hundreds beats agreeing hundreds of times |
+| **Ordering** | Order determines outcome. If an address holds 1 ETH and two transactions each try to spend it, which succeeds depends entirely on which comes first |
+
+<figure class="academy-reference-visual">
+  <img src="/learning/web3intern/blockchain-progression.jpg" alt="An illustrated progression from one block, to linked blocks, to a longer blockchain." />
+  <figcaption>One block becomes a chain when each new block refers to the block before it.</figcaption>
+</figure>
+
+Ethereum produces a block roughly every 12 seconds. Bitcoin, roughly every 10
+minutes. Week 2 covers why they differ.
+
+### Hashing, without the maths
+
+A **hash function** takes any input and produces a fixed-length fingerprint.
+
+```text
+"blockchain"   →  ef7797e13d3a75526946a3bcf00daec9fc9c9c4d51ddc7cc5df888f74dd434d1
+"blockchain."  →  62cbcc24a6f9c60fdb8f32183cf3a10ab4b28d66aa8167043027a81d51a0b392
+```
+
+These are real SHA-256 values. You can check them yourself — on macOS or Linux:
+
+```bash
+printf '%s' 'blockchain' | shasum -a 256
+```
+
+Three properties are all you need:
+
+| Property | Why it matters |
+|---|---|
+| Same input, same output, always | Anyone can independently verify a hash |
+| Any change, however tiny, changes the output completely | Tampering is detectable |
+| There is no known practical way to recover the original input from the hash output | Reversing it is computationally impractical with current methods |
+
+Now combine that with the chain of blocks.
+
+Change one transaction in block 100 and block 100's hash changes. But block 101
+stored the *old* hash as its "previous" field — so block 101 no longer matches.
+Fix block 101 and its own hash changes, breaking block 102. And so on, to the
+present, on every copy held by every participant worldwide.
+
+::: important What hashes do — and do not do
+Hashes make tampering obvious: altering anything invalidates the links after it,
+publicly and quickly. They do not, by themselves, decide which history the
+network should accept. **Consensus makes a rewritten history difficult to get
+accepted.**
+:::
+
+<div class="academy-figure">
+  <div class="academy-figure-surface">
+
+![Five chained blocks. The third has been altered, and every block and link after it is broken as a result.](/illustrations/w1-tamper-cascade.png)
+
+  </div>
+  <p class="academy-figure-caption">Alter the third block and its hash changes — so every link after it breaks. The damage runs forward, publicly, on every copy.</p>
+</div>
+
+::: details Two related terms, at recognition level
+A **digital signature** uses related maths to prove a message came from the
+holder of a specific key without revealing that key. Part 6 returns to this.
+
+A **Merkle tree** hashes transactions together in pairs so a whole block reduces
+to one fingerprint — and so you can prove one transaction is in a block without
+downloading the block. Further Exploration.
+:::
+
+### Nodes
+
+A **node** is a computer running the network's software. Each one:
+
+- holds a copy of the chain and current state
+- receives new transactions and blocks and independently checks every rule
+- discards anything invalid, no matter who sent it
+- relays what's valid to its peers
+
+::: important The third point is the one to sit with
+A node does not trust the block producer. It **re-executes and re-verifies
+everything itself**. An invalid block is not rejected by a committee — it is
+independently ignored by everyone at once, because every participant checked.
+:::
+
+This is also where Part 1's honesty about cost returns. Thousands of machines
+independently redoing identical work is the opposite of efficient. **That
+redundancy is the product** — it is what you are buying when you remove the
+operator.
+
+At this point we can detect when a chain of blocks was altered. But imagine two
+different histories that are each internally valid. Which one should the
+network follow? **Part 3 answers that question with consensus.**
+
+## Landscape
+
+- **Full node** — a computer that checks blocks and transactions itself and keeps the current state. It lets an operator check the chain without relying on the computer that produces blocks
+- **Archive node** — a full node that also keeps older versions of the chain's state. It uses much more storage and helps explorers answer questions about the past
+- **Light client** — checks selected information and proofs instead of storing the whole chain. It is easier to run, but depends more on the information it receives
+- **Mempool** — the waiting room of submitted-but-not-yet-included transactions. Pending transactions can be visible before a block producer chooses their order
+- **Genesis block** — block zero, the start of the chain. It gives participants a common reference for that network's history
+- **Fork** — when a chain temporarily splits, or when its rules change. During a split, different participants may briefly see different histories
+- **Merkle tree** — a way of combining many transaction hashes into one summary hash. That summary lets you prove a transaction was included without sending every transaction in the block
+
+## Worked example
+
+Follow one transaction from your screen to a public blockchain record.
+
+| Step | What happens | Who's involved |
+|---|---|---|
+| 1 | You request: send 0.05 ETH to Ben | You |
+| 2 | Your wallet signs it with your private key | Your wallet, locally |
+| 3 | It's broadcast to a node, which checks signature, balance and nonce | One node |
+| 4 | Valid, so it's relayed to peers. It sits in the mempool | The network |
+| 5 | A block producer selects it and includes it in a block | One producer |
+| 6 | The block is broadcast. **Every node re-verifies every transaction in it** | Every node |
+| 7 | Nodes apply it. Your balance drops, Ben's rises | Everyone |
+
+Now the counterfactual. Suppose at step 5 the producer quietly edits your
+transaction to send 5 ETH to themselves instead.
+
+The edit breaks your signature — and your signature is checkable by anyone
+holding your public address. At step 6, every node checks it, finds it invalid,
+and **discards the entire block**. The producer wasted their effort and gained
+nothing.
+
+::: important Nobody adjudicated. No authority intervened.
+The block was rejected everywhere simultaneously because everyone verified
+independently.
+
+In everyday language, this is why people sometimes use the word **trustless**:
+you do not have to rely on one authority's promise, because participants can
+check the rules for themselves. It does not mean that the system has no trust
+assumptions.
+:::
+
+::: details Further exploration — optional, not assessed
+- [ethereum.org — Blocks](https://ethereum.org/developers/docs/blocks/) — full block structure
+- [ethereum.org — Transactions](https://ethereum.org/developers/docs/transactions/) — every field, precisely
+- [ethereum.org — Merkle trees](https://ethereum.org/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) — how a block reduces to one hash. Genuinely elegant, entirely optional
+:::
+
+::: details Sources and attribution
+- [ethereum.org — Blocks](https://ethereum.org/developers/docs/blocks/) — Reuse (CC BY 4.0), adapted
+- [ethereum.org — Transactions](https://ethereum.org/developers/docs/transactions/) — Reuse (CC BY 4.0), adapted
+- [ethereum.org — Nodes and clients](https://ethereum.org/developers/docs/nodes-and-clients/) — Reuse (CC BY 4.0), adapted
+- [ethereum.org — Intro to Ethereum](https://ethereum.org/developers/docs/intro-to-ethereum/) — Reuse (CC BY 4.0), adapted
+- [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) — Reuse (permission granted, LXDAO); block-structure and block-to-blockchain visuals adapted from its blockchain basics materials
+:::
