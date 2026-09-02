@@ -48,9 +48,6 @@ By the end of this page you should be able to:
 - Explain what problem blockchains were designed to solve, without using the word "crypto"
 - Describe the difference between a system with an operator and one without
 - Give one example where removing the operator genuinely helps, and one where it doesn't
-- Use Web1 → Web2 → Web3 as historical shorthand without treating it as a strict set of eras
-
-## Core
 
 ### A short history: why “Web3”?
 
@@ -95,6 +92,8 @@ proof that the two visions are identical.
 
 That is why people started calling this **Web3**. The next question is why a
 blockchain might be useful at all.
+
+## Core
 
 ### Every online system you use has an operator
 
