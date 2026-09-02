@@ -49,7 +49,7 @@ By the end of this page you should be able to:
 - Describe the difference between a system with an operator and one without
 - Give one example where removing the operator genuinely helps, and one where it doesn't
 
-### A short history: why “Web3”?
+## A short history: why “Web3”?
 
 Before asking what problem a blockchain solves, it helps to know why people call
 this space **Web3**. The name is a historical shorthand for a changing web, not a
