@@ -21,14 +21,14 @@ on a test network and being able to explain what happened.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [Why blockchain exists](./part-1-why-blockchain-exists.md) | 15 min |
+| 1 | [Why blockchain exists](./part-1-why-blockchain-exists.md) | 20 min |
 | 2 | [How shared state works](./part-2-how-shared-state-works.md) | 20 min |
 | 3 | [Consensus, and how chains agree](./part-3-consensus.md) | 25 min |
 | 4 | [Why anyone runs the network](./part-4-incentives.md) | 20 min |
 | 5 | [What crypto assets actually are](./part-5-crypto-asset-map.md) | 25 min |
 | 6 | [Wallets, accounts and keys](./part-6-wallets-and-accounts.md) | 25 min |
 | 7 | [Your first transaction](./part-7-your-first-transaction.md) | 45 min hands-on |
-| 8 | [How it all connects: one user journey](./part-8-the-user-journey.md) | 15 min |
+| 8 | [How it all connects: one user journey](./part-8-the-user-journey.md) | 20 min |
 
 **Anchor Mission:** [Week 1 mission](./anchor-mission.md) · 100 points
 

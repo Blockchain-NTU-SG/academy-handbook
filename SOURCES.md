@@ -19,8 +19,8 @@ Upstream materials used in this curriculum, and what we may do with each.
 | [OpenZeppelin Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) | MIT | Week 3, Developer |
 | [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) | MIT | Developer |
 | [SpeedRunEthereum challenges](https://github.com/scaffold-eth/se-2-challenges) | MIT | Developer |
-| [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) | Permission granted (LXDAO) | Weeks 0, 1, 4, Product; selected blockchain-basics and smart-contract-development visuals |
-| [web3intern.xyz](https://web3intern.xyz/) | Permission granted for reuse/adaptation | [Blockchain basics](https://web3intern.xyz/zh/blockchain-basic/), [smart-contract development](https://web3intern.xyz/zh/smart-contract-development/) and [industry knowledge](https://web3intern.xyz/zh/industry-knowledge/) visuals; local `blockchain-progression.jpg`, `network-rewards.jpg`, `bitcoin-monetary-properties.jpg` (source asset `currency-DbILbjLK.jpg`), `chain-access-models.svg`, `remix-workspace.png`, `github-review-workflow.svg` and `cryptopunks.jpg` |
+| [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) | Permission granted (LXDAO) | Weeks 0, 1, 3, 4, Product; selected visuals and adapted explanatory/workflow structures |
+| [web3intern.xyz](https://web3intern.xyz/) | Permission granted for reuse/adaptation | [Blockchain basics](https://web3intern.xyz/zh/blockchain-basic/), [smart-contract development](https://web3intern.xyz/zh/smart-contract-development/) and [industry knowledge](https://web3intern.xyz/zh/industry-knowledge/) visuals; adapted explanatory/workflow structures for Week 1 blockchain lifecycle, Week 3 DApp interaction and Week 4 GitHub collaboration; local `blockchain-progression.jpg`, `network-rewards.jpg`, `bitcoin-monetary-properties.jpg` (source asset `currency-DbILbjLK.jpg`), `chain-access-models.svg`, `remix-workspace.png`, `github-review-workflow.svg` and `cryptopunks.jpg` |
 | [MyFirstNFT](https://nft.myfirstweb3.xyz/) | Permission granted (LXDAO) | Week 0 Part 4 phishing visual; Week 1 Part 6 hot/cold wallet visual; Weeks 1, 3 |
 | [MyFirstLayer2](https://layer2.myfirstweb3.xyz/) | Permission granted (LXDAO) | Week 2, Product |
 
@@ -70,7 +70,7 @@ Ethernaut · SWC Registry · CryptoZombies · Cyfrin Updraft · Ethereum Magicia
 Choose a License · GitHub Skills · BuildAnything · Microsoft Learn · Dune · The
 Graph · Foundry Book · Berkeley DeFi MOOC · ethresear.ch · Solodit · The Onchain
 State Singapore Web3 Landscape · Binance Research Industry Map (March 2025) ·
-Artemis / Stablecoin.fyi Stablecoin Market Landscape · [Web3Intern security](https://web3intern.xyz/zh/security/) (reference-only)
+Artemis / Stablecoin.fyi Stablecoin Market Landscape · [Web3Intern security](https://web3intern.xyz/zh/security/) (reference-only) · [Gavin Wood — Less-techy: What Web 3.0 Is](https://gavwood.com/web3lt.html)
 
 The Week 1 hands-on pages also link to the [Coinbase Developer Platform
 Faucet](https://portal.cdp.coinbase.com/products/faucet) and

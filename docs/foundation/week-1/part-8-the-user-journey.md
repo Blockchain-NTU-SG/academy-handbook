@@ -4,7 +4,7 @@ day: 8
 title: "How it all connects: one user journey"
 status: drafting
 owner: "Director of Education"
-reading_time: "15 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Stablecoins"
     url: "https://ethereum.org/stablecoins/"
@@ -17,6 +17,9 @@ sources:
     label: "Reuse"
   - name: "ethereum.org — Layer 2"
     url: "https://ethereum.org/layer-2/"
+    label: "Reuse"
+  - name: "Web3 Internship Handbook — blockchain lifecycle"
+    url: "https://web3intern.xyz/zh/blockchain-basic/"
     label: "Reuse"
 ---
 
@@ -125,6 +128,54 @@ assumptions.**
 you can apply to anything.
 :::
 
+### Transaction lifecycle: how a blockchain actually runs
+
+The journey above followed one user's choices. Now follow the machine underneath
+those choices. This is a generic model: different chains use different rules,
+but the same broad questions keep appearing.
+
+```mermaid
+flowchart TD
+  U["User creates an instruction<br/>or transaction"]
+  W["Wallet signs it"]
+  P["Transaction is submitted<br/>and propagated"]
+  C["Nodes check basic validity"]
+  S["Proposer / block producer<br/>selects valid transactions"]
+  B["A block is proposed"]
+  V["Other participants verify<br/>the block and resulting state"]
+  K["Consensus determines<br/>the accepted history"]
+  Q["Shared state is updated"]
+  R["Wallets, explorers and applications<br/>read the new state"]
+  U --> W --> P --> C --> S --> B --> V --> K --> Q --> R
+```
+
+| Stage | What happens in this generic model | Week 1 connection |
+|---|---|---|
+| **Create and sign** | A user describes an action, and a wallet authorises it with the account's key | [Part 6](./part-6-wallets-and-accounts.md) |
+| **Propagate and check** | The request travels to network participants, which reject requests that do not follow the chain's basic rules | [Part 7](./part-7-your-first-transaction.md) |
+| **Propose a block** | A chain-specific proposer or block producer chooses valid transactions for a candidate block | [Part 3](./part-3-consensus.md) |
+| **Verify and agree** | Other participants check the block and its result; consensus determines which valid history the network follows | [Part 2](./part-2-how-shared-state-works.md) · [Part 3](./part-3-consensus.md) |
+| **Update and read** | Once accepted, the shared state includes the result. Wallets, explorers and applications can query it | [Part 2](./part-2-how-shared-state-works.md) |
+
+::: important Week 1 pieces now connected
+Part 2 explains the shared record. Part 3 explains how participants choose the
+accepted history. Part 4 explains why some participants do the work. Part 6
+explains who can authorise an action, and Part 7 lets you watch one transaction
+make the journey.
+:::
+
+### A separate question: who is paid?
+
+Depending on the chain's design, miners, validators or other block producers may
+receive protocol rewards and/or transaction fees. The amount and mechanism are
+chain-specific; payment is an incentive for participating, not part of the
+definition of every block.
+
+This is the system-level view to keep: an instruction is authorised, carried
+through the network, checked, included under the chain's rules, and reflected in
+shared state. The details of how a chain selects and finalises blocks are what
+[Part 3](./part-3-consensus.md) examines.
+
 ## Landscape
 
 - **On-ramp / off-ramp** — converting between fiat and crypto in either direction. The service handling the conversion adds its own fees, limits and custody risk
@@ -170,6 +221,7 @@ what this week was for.
 - [ethereum.org — Decentralized finance (DeFi)](https://ethereum.org/defi/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Bridges](https://ethereum.org/developers/docs/bridges/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Layer 2](https://ethereum.org/layer-2/) — Reuse (CC BY 4.0), adapted
+- [Web3 Internship Handbook](https://web3intern.xyz/zh/blockchain-basic/) — Reuse (permission granted); lifecycle structure used as inspiration and rewritten for this handbook
 
 *Named products are illustrative, not recommendations. Nothing here is financial advice.*
 :::
