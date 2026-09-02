@@ -19,7 +19,7 @@ made of code. This is the week you write one, deploy it, and call it.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [What a smart contract actually is](./part-1-what-is-a-smart-contract.md) | 20 min |
+| 1 | [What a smart contract actually is](./part-1-what-is-a-smart-contract.md) | 30 min |
 | 2 | [The minimum Solidity you need](./part-2-solidity-minimum.md) | 25 min |
 | 3 | [Remix lab: deploy your first contract](./part-3-remix-lab.md) | 60 min hands-on |
 | 4 | [Tokens, standards and real applications](./part-4-tokens-and-standards.md) | 20 min |

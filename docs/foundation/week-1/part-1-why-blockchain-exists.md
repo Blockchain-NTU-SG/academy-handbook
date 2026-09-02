@@ -4,7 +4,7 @@ day: 1
 title: "Why blockchain exists"
 status: review
 owner: "Director of Education"
-reading_time: "15 min"
+reading_time: "20 min"
 sources:
   - name: "ethereum.org — Web3"
     url: "https://ethereum.org/web3/"
@@ -21,6 +21,9 @@ sources:
   - name: "Web3 Internship Handbook — blockchain basics visuals"
     url: "https://github.com/ethpanda-org/Web3-Internship-Handbook"
     label: "Reuse"
+  - name: "Gavin Wood — Less-techy: What Web 3.0 Is"
+    url: "https://gavwood.com/web3lt.html"
+    label: "Link"
 ---
 
 # Week 1 · Part 1 — Why blockchain exists
@@ -45,8 +48,53 @@ By the end of this page you should be able to:
 - Explain what problem blockchains were designed to solve, without using the word "crypto"
 - Describe the difference between a system with an operator and one without
 - Give one example where removing the operator genuinely helps, and one where it doesn't
+- Use Web1 → Web2 → Web3 as historical shorthand without treating it as a strict set of eras
 
 ## Core
+
+### A short history: why “Web3”?
+
+Before asking what problem a blockchain solves, it helps to know why people call
+this space **Web3**. The name is a historical shorthand for a changing web, not a
+technical label that every application must satisfy.
+
+| Aspect | Web1 | Web2 | Web3 |
+|---|---|---|---|
+| **Useful shorthand** | Read | Read + write | Read + write + own |
+| **Typical identity** | Website or session | Platform account | Platform account and/or wallet |
+| **Typical state/data** | Website server | Platform database | Off-chain systems plus selected on-chain state |
+| **Digital value** | External payment rails | Platform-mediated payments | Native or tokenised programmable assets |
+| **Main trust model** | Site operator | Platform operator | A mix of users, networks, contracts and operators |
+
+These labels describe broad tendencies:
+
+- **Web1** was mainly about publishing and consuming information. “Read” is a
+  useful summary, not a claim that every early website was completely static.
+- **Web2** made accounts, user-generated content and social interaction
+  mainstream. Users can own rights to accounts or content, but platforms often
+  still control the account system and database.
+- **Web3** describes a blockchain-oriented vision in which wallets, blockchains
+  and smart contracts can add portable digital assets and programmable forms of
+  ownership or control. That does not make every application decentralised, and
+  it does not give users ownership of every piece of application data.
+
+Ethereum co-founder **Gavin Wood articulated a “Web 3.0” decentralised-web vision
+in 2014**, motivated in part by reducing how much people must rely on trusted
+central intermediaries. “Web3” later became the broader industry term used around
+blockchain-based applications, assets and ownership.
+
+The memorable **“read + write + own”** phrase is therefore a way to remember the
+direction of the idea, not a formal definition or a promise that Web3 replaces
+Web2. A modern application can use a Web2 database and login alongside a wallet
+and selected on-chain state.
+
+One last naming detail: the blockchain-oriented Web3 idea and the older
+**Semantic Web / “Web 3.0”** idea are not necessarily the same concept. You do not
+need Semantic Web theory for this course; just avoid treating the shared name as
+proof that the two visions are identical.
+
+That is why people started calling this **Web3**. The next question is why a
+blockchain might be useful at all.
 
 ### Every online system you use has an operator
 
@@ -175,4 +223,5 @@ ledger operator can simply reverse a valid native-asset transfer.
 - [ethereum.org — Intro to Ethereum](https://ethereum.org/developers/docs/intro-to-ethereum/) — Reuse (CC BY 4.0), adapted
 - [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf) — Link, referenced only
 - [Web3 Internship Handbook](https://github.com/ethpanda-org/Web3-Internship-Handbook) — Reuse (permission granted, LXDAO); distributed-network visual adapted from its blockchain basics materials
+- [Gavin Wood — Less-techy: What Web 3.0 Is](https://gavwood.com/web3lt.html) — Link, referenced for the 2014 Web 3.0 origin and decentralised-web framing
 :::

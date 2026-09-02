@@ -4,7 +4,7 @@ day: 1
 title: "What a smart contract actually is"
 status: drafting
 owner: "Director of Education"
-reading_time: "20 min"
+reading_time: "30 min"
 sources:
   - name: "ethereum.org — Introduction to smart contracts"
     url: "https://ethereum.org/developers/docs/smart-contracts/"
@@ -14,6 +14,15 @@ sources:
     label: "Reuse"
   - name: "ethereum.org — Dapps"
     url: "https://ethereum.org/dapps/"
+    label: "Reuse"
+  - name: "ethereum.org — JSON-RPC API"
+    url: "https://ethereum.org/developers/docs/apis/json-rpc/"
+    label: "Reuse"
+  - name: "ethereum.org — Interacting with smart contracts"
+    url: "https://ethereum.org/developers/docs/smart-contracts/interacting/"
+    label: "Reuse"
+  - name: "Web3 Internship Handbook — smart-contract development"
+    url: "https://web3intern.xyz/zh/smart-contract-development/"
     label: "Reuse"
 ---
 
@@ -121,19 +130,62 @@ Often a bot or service is paid a fee for doing it.
 
 ### How a DApp uses a contract
 
-Most DApps connect an ordinary interface to a contract through an RPC node.
-The path depends on what you are doing:
+A DApp is not just a smart contract. It is usually a user interface connected to
+a wallet, a route to a blockchain node, and the contract that holds on-chain
+rules and state.
 
-| Action | Typical path | What happens |
+```mermaid
+flowchart TD
+  U["User"] <--> UI["Frontend / UI"]
+  UI <--> W["Wallet"]
+  UI <--> RPC["RPC provider /<br/>blockchain node"]
+  W --> RPC
+  RPC <--> E["Blockchain / EVM"]
+  E <--> SC["Smart contract<br/>functions + state"]
+```
+
+The RPC provider is a doorway to a node. It transports requests and responses; it
+does not own the contract or control the user's key. Larger applications may add
+an indexer, a traditional backend/database or decentralised storage, but those
+are supporting layers rather than requirements for the basic model.
+
+#### Read: “show me 42 votes”
+
+1. The user opens a page and the frontend asks for the current vote count.
+2. The frontend sends a read request through an RPC provider. In Ethereum terms,
+   this is commonly an `eth_call`.
+3. The node executes or reads the request against the current chain state and
+   returns the result.
+4. The frontend renders the answer. No state changes, transaction or user
+   signature is normally required, so the user does not normally pay a
+   transaction fee for this read.
+
+#### Write: “vote”
+
+1. The user clicks **Vote**, and the frontend prepares a call to the contract's
+   `vote()` function.
+2. The wallet shows what is being requested. The frontend cannot secretly sign
+   for the user; the wallet controls the signing authority.
+3. The user approves and signs. The signed transaction travels through an RPC
+   provider to the network.
+4. The network processes it. The contract runs, its state may change, and it may
+   emit events.
+5. The frontend or an indexer later reads the result and refreshes the display.
+
+### One small UI example
+
+Imagine a voting DApp that shows **42 votes**:
+
+| User action | Path | What the learner should notice |
 |---|---|---|
-| Read | Interface → RPC node → contract | The application requests current state; no wallet signature is needed |
-| Write | Interface → wallet → RPC node → transaction → contract | Your wallet signs a state-changing transaction, which the network executes |
+| Read the count | Frontend → RPC → `votes()` → response → render **42** | The app is asking what the contract currently remembers; no transaction is sent |
+| Click **Vote** | Frontend prepares `vote()` → wallet approval → signed transaction → RPC → network → contract | The wallet authorises the action, and the contract may update the state to **43** |
 
-Contracts can also emit **events** after a write. An off-chain indexer may read
-those events and format them into the history or activity view you see in the
-interface. The full architecture appears in
-[Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md); the important idea here is
-that the contract is the on-chain rule-set, not the whole application.
+The contract is the on-chain rule-set and state, not the whole application. The
+frontend makes it usable; the wallet authorises writes; the RPC connects the
+application to a node; and the network records the result. The fuller placement
+of frontend, wallet, RPC, contracts, indexers and bridges appears in
+[Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md).
 
 ### What contracts are good at, and bad at
 
@@ -195,4 +247,7 @@ publishing something that anyone can poke, forever.
 - [ethereum.org — Introduction to smart contracts](https://ethereum.org/developers/docs/smart-contracts/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Anatomy of smart contracts](https://ethereum.org/developers/docs/smart-contracts/anatomy/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Dapps](https://ethereum.org/dapps/) — Reuse (CC BY 4.0), adapted
+- [ethereum.org — JSON-RPC API](https://ethereum.org/developers/docs/apis/json-rpc/) — Reuse (CC BY 4.0), adapted
+- [ethereum.org — Interacting with smart contracts](https://ethereum.org/developers/docs/smart-contracts/interacting/) — Reuse (CC BY 4.0), adapted
+- [Web3 Internship Handbook](https://web3intern.xyz/zh/smart-contract-development/) — Reuse (permission granted); DApp interaction structure adapted with permission
 :::
