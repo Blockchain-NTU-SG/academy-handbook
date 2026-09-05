@@ -57,41 +57,63 @@ technical label that every application must satisfy.
 
 | Aspect | Web1 | Web2 | Web3 |
 |---|---|---|---|
-| **Useful shorthand** | Read | Read + write | Read + write + own |
-| **Typical identity** | Website or session | Platform account | Platform account and/or wallet |
-| **Typical state/data** | Website server | Platform database | Off-chain systems plus selected on-chain state |
+| **Useful shorthand** | Mostly read | Read + write | Read + write + own — a shorthand for some user-controlled state |
+| **Familiar picture** | An early university, news or company website | Instagram, TikTok or YouTube | A wallet holding ETH, or a DApp using on-chain assets |
+| **Important state** | The website owner publishes the pages | The platform database and account system | Keys plus a shared network for selected on-chain state |
 | **Digital value** | External payment rails | Platform-mediated payments | Native or tokenised programmable assets |
 | **Main trust model** | Site operator | Platform operator | A mix of users, networks, contracts and operators |
 
 These labels describe broad tendencies:
 
-- **Web1** was mainly about publishing and consuming information. “Read” is a
-  useful summary, not a claim that every early website was completely static.
+- **Web1** was mainly about publishing and consuming information. Imagine an
+  early university or company website: you can read pages, click links and move
+  around, but there is little user-generated content or persistent personal
+  account state. “Mostly read” is a useful summary, not a claim that every early
+  website was completely static. The web publishes information to you.
 - **Web2** made accounts, user-generated content and social interaction
-  mainstream. Users can own rights to accounts or content, but platforms often
-  still control the account system and database.
-- **Web3** describes a blockchain-oriented vision in which wallets, blockchains
-  and smart contracts can add portable digital assets and programmable forms of
-  ownership or control. That does not make every application decentralised, and
-  it does not give users ownership of every piece of application data.
+  mainstream. On Instagram, you can create an account, post photos, comment,
+  like and message people. But where does that account live? Instagram controls
+  the database, servers and application rules. If it removes a post, suspends an
+  account, closes the service or changes its rules, you cannot independently tell
+  Instagram's database to restore the old state. **You create the content, but
+  the platform controls the database that says what exists and who may access
+  it.** This is about technical control, not a universal legal claim about who
+  owns the content.
+- **Web3** describes a blockchain-oriented vision in which some important state
+  — such as asset ownership, account authority, credentials or protocol
+  positions — can live on a shared network rather than only inside one company's
+  private database. If you hold ETH, MetaMask does not own the ETH record and it
+  is not the ledger; it is an interface. The Ethereum network records the
+  balance, and your key authorises changes. If one wallet app disappears, another
+  compatible wallet can still use the same address and key to read and interact
+  with that on-chain state.
+
+Public blockchain data is typically replicated across many network participants,
+so one company cannot unilaterally rewrite or remove the shared record. But this
+does not mean that all Web3 data is on-chain or permanent: applications still
+use frontends, databases, storage providers and companies, and a website or
+off-chain file can disappear while an underlying on-chain record remains.
 
 Ethereum co-founder **Gavin Wood articulated a “Web 3.0” decentralised-web vision
 in 2014**, motivated in part by reducing how much people must rely on trusted
 central intermediaries. “Web3” later became the broader industry term used around
 blockchain-based applications, assets and ownership.
 
-The memorable **“read + write + own”** phrase is therefore a way to remember the
-direction of the idea, not a formal definition or a promise that Web3 replaces
-Web2. A modern application can use a Web2 database and login alongside a wallet
-and selected on-chain state.
+The memorable **“read + write + own”** phrase is therefore a way to picture this
+change in where some state lives and who can authorise it, not a promise that
+users own every piece of application data or that Web3 replaces Web2. A modern
+application can use a Web2 database and login alongside a wallet and selected
+on-chain state.
 
 One last naming detail: the blockchain-oriented Web3 idea and the older
 **Semantic Web / “Web 3.0”** idea are not necessarily the same concept. You do not
 need Semantic Web theory for this course; just avoid treating the shared name as
 proof that the two visions are identical.
 
-That is why people started calling this **Web3**. The next question is why a
-blockchain might be useful at all.
+That is why people started calling this **Web3**. It also leaves the question
+that leads directly into this page: if important shared state is not controlled
+by one platform, who maintains the shared record and decides which changes are
+accepted? Blockchain is one answer to that problem.
 
 ## Core
 
