@@ -21,6 +21,9 @@ sources:
   - name: "Web3 Internship Handbook — blockchain lifecycle"
     url: "https://web3intern.xyz/zh/blockchain-basic/"
     label: "Reuse"
+  - name: "Base documentation"
+    url: "https://docs.base.org/"
+    label: "Link"
 ---
 
 # Week 1 · Part 8 — How it all connects: one user journey
@@ -62,7 +65,7 @@ flowchart TD
   C["<b>Centralised exchange</b><br/>✅ Part 5"]
   U["<b>USDC</b><br/>stablecoin · ✅ Part 5"]
   W["<b>Self-custody wallet</b><br/>✅ Part 6"]
-  E["<b>Ethereum / Base</b><br/>L1 and L2 · → Week 2"]
+  E["<b>Ethereum — L1</b><br/><b>Base — Ethereum L2</b><br/>→ Week 2"]
   B["<b>Bridge</b><br/>only if moving networks<br/>→ Week 2"]
   D["<b>DEX / protocol</b><br/>→ Week 3"]
   P["<b>DeFi application</b><br/>→ Week 3"]
@@ -179,7 +182,7 @@ shared state. The details of how a chain selects and finalises blocks are what
 ## Landscape
 
 - **On-ramp / off-ramp** — converting between fiat and crypto in either direction. The service handling the conversion adds its own fees, limits and custody risk
-- **Layer 2** — a network built on a base chain for cheaper, faster transactions (Week 2). It adds another system and therefore another set of trust assumptions
+- **Layer 2** — a network such as Base that handles activity separately while relying on a base chain such as Ethereum for important settlement or security (Week 2). It adds another system and therefore another set of trust assumptions
 - **Wrapped asset** — a token representing an asset from elsewhere ([Part 5](./part-5-crypto-asset-map.md)). Its value depends on the mechanism that links it to the underlying asset
 - **Slippage** — the gap between the price you expected on a swap and the one you got. Thin liquidity or a large trade can make the gap wider
 - **Liquidity pool** — pooled assets a DEX trades against (Week 3). More liquidity usually makes larger trades easier to execute without moving the price as much
@@ -222,6 +225,7 @@ what this week was for.
 - [ethereum.org — Bridges](https://ethereum.org/developers/docs/bridges/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Layer 2](https://ethereum.org/layer-2/) — Reuse (CC BY 4.0), adapted
 - [Web3 Internship Handbook](https://web3intern.xyz/zh/blockchain-basic/) — Reuse (permission granted); lifecycle structure used as inspiration and rewritten for this handbook
+- [Base documentation](https://docs.base.org/) — Link, referenced for the L2 example
 
 *Named products are illustrative, not recommendations. Nothing here is financial advice.*
 :::

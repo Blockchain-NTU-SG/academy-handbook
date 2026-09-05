@@ -41,6 +41,14 @@ good, and the tooling is free.
 
 ## Core
 
+### From Bitcoin to Ethereum to the EVM
+
+Bitcoin showed that a blockchain could maintain digital money without one
+trusted ledger operator. Ethereum broadened that idea into **programmable shared
+state**: the network can also run rules and applications, not just record
+payments. The **EVM** is the execution environment that runs those shared rules
+on Ethereum nodes.
+
 ### Why the EVM first
 
 | Reason | Why it matters |

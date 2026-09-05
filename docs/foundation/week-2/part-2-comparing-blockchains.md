@@ -132,7 +132,12 @@ not to quote numbers.
 ::: tabs
 @tab <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span>
 
-**Maximum conservatism.**
+**Question:** Can strangers maintain scarce digital money without one trusted
+ledger operator?
+
+Bitcoin answers with a deliberately narrow ledger and Proof of Work. That choice
+prioritises simplicity, predictability and security; it gives up throughput and
+general-purpose programmability.
 
 | Aspect | Details |
 |---|---|
@@ -149,7 +154,13 @@ deliberately narrow and conservative design since 2009.
 
 @tab <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span>
 
-**Programmability first.**
+**Question:** What if a blockchain should maintain digital money and also run
+general-purpose rules and applications?
+
+Bitcoin showed that a blockchain could maintain digital money. Ethereum broadened
+that idea into programmable shared state through smart contracts and the EVM. It
+gains flexibility and a broad ecosystem, while accepting lower base-layer
+throughput and scaling through Layer 2s.
 
 | Aspect | Details |
 |---|---|
@@ -166,11 +177,17 @@ both: gradually increasing L1 capacity while continuing to expand L2 capacity.
 
 @tab <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span>
 
-**Performance first.**
+**Question:** What if public blockchain applications need faster responses, low
+fees and much more activity?
+
+Solana prioritises that user-facing performance by accepting higher hardware,
+bandwidth and stake requirements. It still uses stake-based consensus; **Proof of
+History** adds a cryptographic clock and ordering signal that helps participants
+agree on when events happened, but it does not replace Proof of Stake.
 
 | Aspect | Details |
 |---|---|
-| Consensus | Proof of Stake, with a verifiable clock ordering transactions |
+| Consensus | Proof of Stake; Proof of History helps provide a shared clock and ordering signal |
 | Finality | Fast — seconds |
 | Throughput | High — thousands per second |
 | Security participation | **Substantial** — comparatively high-spec hardware, bandwidth and stake/economic resources |
@@ -183,24 +200,35 @@ network has had outages that Ethereum and Bitcoin have not.
 
 @tab <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span>
 
-**Many chains, not one.**
+**Question:** What if applications or communities want their own sovereign
+blockchains, but still want those chains to communicate?
+
+Cosmos answers with many chains instead of one shared execution environment. A
+standard communication protocol between connected chains, **Inter-Blockchain
+Communication (IBC)**, helps them exchange messages while each chain keeps its
+own rules and validators.
 
 | Aspect | Details |
 |---|---|
-| Consensus | CometBFT — Byzantine Fault Tolerant Proof of Stake |
+| Consensus | Proof of Stake; CometBFT is one software family for validator voting |
 | Finality | **Deterministic** once a block is committed |
 | Throughput | High per chain |
 | Security participation | Depends on the chain's validator set or shared-security model |
-| Execution | Each chain builds its own; connected via IBC |
+| Execution | Each chain builds its own; connected through IBC, a standard communication protocol |
 | **Trade-off** | Many chains choose sovereignty and their own validator set; some use shared-security models instead |
 
-Cosmos rejects the premise that everyone should share one chain. Many Cosmos
-chains run their own validator sets, trading shared security for sovereignty.
-Some can also use shared-security models such as Interchain Security.
+Many Cosmos chains run their own validator sets, trading shared security for
+sovereignty. Some can also use shared-security models such as Interchain
+Security.
 
 @tab <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span>
 
-**Avalanche L1s (formerly Subnets) and configurability.**
+**Question:** What if an application wants its own blockchain because it needs
+different fees, throughput, validator rules, access controls or token economics?
+
+Avalanche L1s answer with configurable, application-specific networks. This
+gains control and can isolate an application's workload, but the network must
+still define and fund its own security and validator system.
 
 An **Avalanche L1** is a sovereign, application-specific network with its own
 validator configuration. These networks were formerly commonly called

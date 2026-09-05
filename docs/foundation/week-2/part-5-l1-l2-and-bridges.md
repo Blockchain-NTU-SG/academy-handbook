@@ -24,6 +24,33 @@ sources:
   - name: "L2BEAT"
     url: "https://l2beat.com/"
     label: "Link"
+  - name: "Base documentation"
+    url: "https://docs.base.org/"
+    label: "Link"
+  - name: "Arbitrum documentation"
+    url: "https://docs.arbitrum.io/"
+    label: "Link"
+  - name: "Optimism documentation"
+    url: "https://docs.optimism.io/"
+    label: "Link"
+  - name: "Starknet documentation"
+    url: "https://docs.starknet.io/"
+    label: "Link"
+  - name: "ZKsync documentation"
+    url: "https://docs.zksync.io/"
+    label: "Link"
+  - name: "Polygon PoS documentation"
+    url: "https://docs.polygon.technology/pos/"
+    label: "Link"
+  - name: "Cosmos IBC documentation"
+    url: "https://docs.cosmos.network/ibc/latest/ibc/overview"
+    label: "Link"
+  - name: "Across documentation"
+    url: "https://docs.across.to/"
+    label: "Link"
+  - name: "Wormhole documentation"
+    url: "https://wormhole.com/docs/"
+    label: "Link"
 ---
 
 # Week 2 · Part 5 — L1, L2, sidechains and bridges
@@ -63,20 +90,23 @@ For Foundation, keep this first-pass model:
 
 ### The vocabulary
 
-The formal vocabulary for this model is:
+Learn the category before the subtype. These are the names you need first:
 
-| Term | What it is |
-|---|---|
-| **Layer 1 (L1)** | A base blockchain that secures itself. Ethereum, Bitcoin, Solana |
-| **Layer 2 (L2)** | A network processing transactions separately but **deriving its security from an L1** |
-| **Sidechain** | A separate chain connected to another, with **its own security** |
-| **Appchain** | A chain dedicated to one application |
-| **Bridge** | Infrastructure moving assets or messages between chains |
+| Type | Plain-English idea | Examples | Question to remember |
+|---|---|---|---|
+| **Layer 1 (L1)** | A base blockchain that secures itself | Ethereum, Bitcoin, Solana | Who secures this network? |
+| **Layer 2 (L2)** | A network that handles activity separately while relying on an L1 for important settlement or security | Base, Arbitrum, Optimism, Starknet, zkSync | What does it inherit from the L1, and what extra operators or controls do I still trust? |
+| **Sidechain** | A separate connected blockchain with its own validator and security system | Polygon PoS | Who secures this chain itself? |
+| **Appchain / application-specific chain** | A blockchain mainly built for one application, community or ecosystem | Avalanche L1s, many Cosmos chains | Why does this need its own chain rather than only a smart contract on a shared chain? |
+| **Bridge** | Infrastructure that helps assets or messages cross between networks | Across, Wormhole | What convinces the destination network that something really happened on the source network? |
 
 ::: important The distinction that actually matters
 **L2 versus sidechain — and it is about where security comes from.** Not speed,
 not fees, not branding.
 :::
+
+This table gives the category names. Only now do we ask what many Ethereum L2s
+use inside their architecture.
 
 ### How a Layer 2 works
 
@@ -102,11 +132,13 @@ in maturity, upgrade controls, data availability and withdrawal mechanisms. Some
 networks marketed as L2s do not yet provide that guarantee in practice.
 :::
 
-Two families:
+Many Ethereum L2s use a design called a **rollup**. In plain English, many
+transactions happen away from Ethereum's base layer, then enough data, results
+or proofs are brought back so Ethereum can help check or settle what happened.
 
-The names sound technical, but the first difference is simple. An optimistic
-rollup assumes a batch is valid unless someone successfully challenges it. A ZK
-rollup supplies a cryptographic proof that the batch follows the rules.
+There are two broad approaches. An optimistic-style rollup accepts a result
+unless someone successfully challenges a bad one. A validity/ZK-style rollup
+provides a cryptographic proof that the result follows the rules.
 
 | Dimension | **Optimistic rollups** | **ZK rollups** |
 |---|---|---|
@@ -143,10 +175,18 @@ self-described L2s do not yet fully qualify.
 Not a criticism — sidechains are a legitimate design and often perform better.
 The point is that the label alone does not tell you what you are trusting.
 
+**Polygon PoS** is a useful sidechain example: it is connected to Ethereum, but
+its own validator and security system remains a separate assumption.
+
 ### Bridges
 
 Blockchains are isolated by design. Ethereum has no way to observe Bitcoin;
 Solana cannot read Ethereum's state. Each only knows its own.
+
+Names such as **Across** and **Wormhole** are examples of systems used to move
+assets or messages across networks. They do not all work the same way, so the
+important question is what convinces the destination network that the event on
+the source network really happened.
 
 ::: tabs
 @tab Asset bridges
@@ -288,6 +328,11 @@ turns it into a tool you can point at anything.
 - [ethereum.org — Dapps](https://ethereum.org/dapps/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Layer 2 rollup visual](https://ethereum.org/layer-2/learn/) — Reuse (CC BY 4.0), local copy at `/learning/ethereum-org/layer-2-rollup.png`
 - [L2BEAT](https://l2beat.com/) — Link, referenced only
+- [Base documentation](https://docs.base.org/) · [Arbitrum documentation](https://docs.arbitrum.io/) · [Optimism documentation](https://docs.optimism.io/) — Link, referenced for current L2 examples
+- [Starknet documentation](https://docs.starknet.io/) · [ZKsync documentation](https://docs.zksync.io/) — Link, referenced for current validity/ZK-style L2 examples
+- [Polygon PoS documentation](https://docs.polygon.technology/pos/) — Link, referenced for the sidechain example
+- [Cosmos IBC documentation](https://docs.cosmos.network/ibc/latest/ibc/overview) — Link, referenced for the IBC/appchain context
+- [Across documentation](https://docs.across.to/) · [Wormhole documentation](https://wormhole.com/docs/) — Link, referenced for bridge examples
 
 *Named networks are illustrative examples, not recommendations.*
 :::

@@ -18,6 +18,18 @@ sources:
   - name: "ethereum.org — Networks"
     url: "https://ethereum.org/developers/docs/networks/"
     label: "Reuse"
+  - name: "Base documentation"
+    url: "https://docs.base.org/"
+    label: "Link"
+  - name: "Arbitrum documentation"
+    url: "https://docs.arbitrum.io/"
+    label: "Link"
+  - name: "Across documentation"
+    url: "https://docs.across.to/"
+    label: "Link"
+  - name: "Wormhole documentation"
+    url: "https://wormhole.com/docs/"
+    label: "Link"
 ---
 
 # Week 0 · Part 2 — Web3 starter glossary
@@ -130,8 +142,8 @@ Words you will hear early but do not need yet.
 |---|---|---|
 | **Smart contract** | A program that runs on a blockchain | Week 3 |
 | **DApp** | An application that uses smart contracts or on-chain state for part of its logic | Week 3 |
-| **Layer 1 / Layer 2** | A base chain, and a network built on top to make it cheaper | Week 2 |
-| **Bridge** | Infrastructure for moving value between blockchains | Week 2 |
+| **Layer 1 / Layer 2** | A base blockchain that secures itself; a separate network that handles activity while relying on the L1 for important settlement or security. Ethereum is an L1; Base and Arbitrum are Ethereum L2 examples | Week 2 |
+| **Bridge** | Infrastructure that helps assets or messages move between networks. Across and Wormhole are examples | Week 2 |
 | **Oracle** | A service that feeds outside data to smart contracts | Week 3 |
 | **Wallet** | Software that holds your keys and signs transactions | Week 1 |
 | **Seed phrase** | 12 or 24 words that recover your wallet | Week 1, Part 6 |
@@ -182,4 +194,6 @@ the point of this page.
 - [ethereum.org — Gas and fees](https://ethereum.org/developers/docs/gas/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Stablecoins](https://ethereum.org/stablecoins/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Networks](https://ethereum.org/developers/docs/networks/) — Reuse (CC BY 4.0), adapted
+- [Base documentation](https://docs.base.org/) · [Arbitrum documentation](https://docs.arbitrum.io/) — Link, referenced for L2 examples
+- [Across documentation](https://docs.across.to/) · [Wormhole documentation](https://wormhole.com/docs/) — Link, referenced for bridge examples
 :::
