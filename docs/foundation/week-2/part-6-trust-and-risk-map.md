@@ -114,17 +114,17 @@ exhaustive dependency graph; real systems can add more dependencies.
     <g transform="translate(390,272)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Sequencer</text></g>
   </g>
 </svg>
-<figcaption>Blue = networks · violet = code · amber = companies · green = you · red = external inputs. Read it top to bottom: <strong>the assumptions change at each handover.</strong></figcaption>
+<figcaption>Blue = networks · violet = code · amber = organisations / operators · green = you · red = external inputs. Read it top to bottom: <strong>the assumptions change at each handover.</strong></figcaption>
 </figure>
 
 ### Reading the map
 
 | Row | What to notice |
 |---|---|
-| **Hold BTC** | The shortest row. No issuer, no contract, no company — which is precisely why the entire remaining risk is *you* |
+| **Hold BTC** | The shortest row. No issuer, token contract or custodian is added. The network still has to work, while most of the user-specific responsibility sits with your own keys |
 | **Hold USDC** | Adds two. The contract could have a flaw. The issuer could fail to hold reserves, or freeze your address |
 | **Use a CEX** | Collapses to one thing. You are not really trusting the blockchain at all — you are trusting a company's balance sheet |
-| **Use a DEX** | Replaces the company with code. No custody, no permission — and now several sets of contracts must be correct, including a token's you did not write |
+| **Use a DEX** | Replaces a central custodian or account gatekeeper with code. You keep custody, but several contracts — including token contracts — now have to behave correctly |
 | **Lending protocol** | Adds an **oracle**, and this is the row worth dwelling on |
 | **Use a bridge** | Adds a historically important source of exploit risk: the bridge mechanism between two chains |
 | **Use an L2** | Keeps the underlying L1 assumption and adds L2-specific machinery: contracts and verification, a sequencer or operator, and upgrade controls |

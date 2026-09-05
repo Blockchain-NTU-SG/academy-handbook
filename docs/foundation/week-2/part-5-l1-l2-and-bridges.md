@@ -224,7 +224,6 @@ Ethereum users, assets and tooling.
 |---|---|---|
 | Security from | Ethereum | Its own validators |
 | If operators turn malicious | Designed to allow exit via L1; maturity varies | **Your funds depend on them** |
-| Data posted to L1 | Yes | No |
 
 ::: warning Do not ask only "Is this an L2?"
 Ask: **what do I still have to trust?**

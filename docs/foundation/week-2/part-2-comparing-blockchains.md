@@ -228,20 +228,24 @@ Security.
 **Question:** What if an application wants its own blockchain because it needs
 different fees, throughput, validator rules, access controls or token economics?
 
-Avalanche L1s answer with configurable, application-specific networks. This
-gains control and can isolate an application's workload, but the network must
-still define and fund its own security and validator system.
+Avalanche L1s provide configurable sovereign networks, which can be
+application-specific when a project needs that level of control. This can give
+a project more control over fees, throughput, validator rules, access controls
+or token economics and isolate its workload, but the network must still define
+and fund its own security and validator system.
 
 Deploying a smart contract on a general-purpose chain is like renting a shop in
 someone else's city: you can run your business, but you still follow the city's
-infrastructure rules. An application-specific chain is closer to building your
-own campus — more control, but more responsibility for the infrastructure and
-security. The analogy stops there; an Avalanche L1 still needs a real network
-and validator configuration, not just a campus plan.
+infrastructure rules. A dedicated/application-specific chain can be closer to
+building your own campus — more control, but more responsibility for the
+infrastructure and security. This explains why a project might want a dedicated
+chain; it is not a definition of every Avalanche L1. The analogy stops there: an
+Avalanche L1 still needs a real network and validator configuration, not just a
+campus plan.
 
-An **Avalanche L1** is a sovereign, application-specific network with its own
-validator configuration. These networks were formerly commonly called
-Subnets.
+An **Avalanche L1** is a configurable sovereign network with its own validator
+configuration. Some are application-specific; these networks were formerly
+commonly called Subnets.
 
 | Aspect | Details |
 |---|---|
@@ -250,7 +254,7 @@ Subnets.
 | Throughput | High |
 | Security participation | Depends on the particular Avalanche L1's validator configuration |
 | Execution | Multiple chains; EVM-compatible option; configurable Avalanche L1s |
-| **Trade-off** | Optimised for configurable, application-specific networks over one shared environment |
+| **Trade-off** | Optimised for configurable networks over one shared environment; some are application-specific |
 :::
 
 ### Side by side
@@ -276,7 +280,7 @@ validator trade-off especially visible.
 - **BFT consensus** — ways for a set of validators to reach a clear decision quickly, even if some fail or behave badly. It is a family of approaches, not one single protocol
 - **Parallel execution** — running independent transactions at the same time. It can process more transactions, but the chain must first know that the transactions do not conflict
 - **IBC** — a Cosmos messaging standard that lets connected chains send verified messages. It does not make them one ledger, and each connection still has assumptions to check
-- **Avalanche L1 / appchain** — a network dedicated to one application. Avalanche L1s were formerly commonly called Subnets; the separate network can be configured for that application's needs. Part 5
+- **Avalanche L1 / appchain** — Avalanche L1s are configurable sovereign networks; some are designed as appchains for a particular application or ecosystem. **Appchain** describes purpose, not automatically the network's security model. Part 5
 - **EVM-compatible** — a network that can run Ethereum-style contracts. Close compatibility lets tools and code be reused, but differences can still matter
 - **Shared vs sovereign security** — whether a chain borrows security from another network or runs its own security. Borrowing reduces the chain's own burden; sovereignty gives control but leaves the chain responsible for its security budget
 - **Client diversity** — having more than one independent software implementation of a network. It can reduce the chance that one software bug affects everyone
@@ -303,7 +307,7 @@ The candidates, honestly:
 | Ethereum L1 | **No for this target.** Fees are usually too high, and the application would need to decide whether its stronger finality delay is acceptable |
 | Solana | **Plausible.** Fast, cheap, strong stablecoin usage. Weigh the outage history |
 | An Ethereum L2 | **Plausible.** Cheap and fast, with Ethereum behind it |
-| A Cosmos appchain | **Plausible** if you need full control. You'd bootstrap your own validators |
+| A dedicated Cosmos/appchain design | **Usually overkill** unless the application genuinely needs chain-level control. If it does, the project also takes on validator, security and infrastructure responsibility |
 
 ::: important There is no single right answer — that is the exercise
 What you should be able to say is: *"We chose X. It gives us speed and low fees.
