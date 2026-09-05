@@ -19,8 +19,9 @@ pedagogical proposal.
 ## Before you edit a page
 
 Read the relevant page in `docs/`, the matching file in `templates/`, and the
-source classifications in `SOURCES.md`. The Education Director's Foundation v1.2
-architecture is not reopened in ordinary content pull requests.
+source classifications in `SOURCES.md`. The approved curriculum architecture is
+not reopened in ordinary content pull requests. Decision ownership is defined in
+[GOVERNANCE.md](./GOVERNANCE.md).
 
 ## Contribution types
 
@@ -28,6 +29,14 @@ Learner-content corrections, learner-content proposals, visual or screenshot
 changes, site/engineering changes, and source/attribution changes all use the
 same branch → pull request workflow. State the type and intended scope clearly
 so the appropriate reviewer can respond.
+
+## Contribution licensing
+
+By contributing original learner-facing educational content, you agree that it
+may be included under [CC BY-NC 4.0](./CONTENT-LICENSE.md) unless otherwise
+agreed. Original code/site infrastructure may be included under the [MIT
+licence](./LICENSE). Do not contribute third-party content unless its
+licence/permission is compatible and recorded in `SOURCES.md`.
 
 ## Local setup
 
@@ -94,9 +103,9 @@ Please describe:
 - validation performed, including `npm run docs:build` and
   `npm run docs:check-times` for relevant Foundation changes.
 
-Curriculum changes should include the Education Director or the relevant
-maintainer as a reviewer. The repository's CODEOWNERS file records the default
-maintainer group.
+Curriculum changes should involve Education leadership or the relevant
+maintainer as a reviewer. Decision ownership is defined in `GOVERNANCE.md`, and
+the repository's CODEOWNERS file records the default maintainer group.
 
 ## Operations boundary
 

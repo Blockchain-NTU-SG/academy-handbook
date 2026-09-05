@@ -1,6 +1,6 @@
 # Blockchain@NTU Academy Handbook
 
-Beginner-first, open-source Web3 curriculum.
+Beginner-first, community-maintained Web3 curriculum.
 
 Learn the systems from first principles, participate safely onchain, understand
 smart contracts and industry structure, then specialise by building.
@@ -10,7 +10,7 @@ smart contracts and industry structure, then specialise by building.
 [![Code: MIT](https://img.shields.io/badge/code-MIT-2ea44f)](./LICENSE)
 [![Content: CC BY-NC 4.0](https://img.shields.io/badge/content-CC%20BY--NC%204.0-2ea44f)](./CONTENT-LICENSE.md)
 
-[Read the Handbook](https://blockchain-ntu-sg.github.io/academy-handbook/) · [Curriculum](./docs/README.md) · [Contribute](./CONTRIBUTING.md)
+[Read the Handbook](https://blockchain-ntu-sg.github.io/academy-handbook/) · [Curriculum](./docs/getting-started/programme.md) · [Contribute](./CONTRIBUTING.md)
 
 ## What this is
 
@@ -118,7 +118,7 @@ in [UPSTREAM.md](./UPSTREAM.md). Check both before reusing material.
 
 | Material | Licence |
 |---|---|
-| Code/site infrastructure | [MIT](./LICENSE) |
+| Original code/site infrastructure | [MIT](./LICENSE) |
 | Original Blockchain@NTU educational content | [CC BY-NC 4.0](./CONTENT-LICENSE.md) |
 | Third-party/adapted material | Original source terms; see [SOURCES.md](./SOURCES.md) |
 

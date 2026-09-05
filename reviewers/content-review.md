@@ -50,6 +50,14 @@ understanding.
 You do not need to propose a solution. Identifying where understanding broke is
 useful by itself.
 
+## Where to record feedback
+
+Record meaningful confusion through the repository's [Content gap Issue
+Form](../.github/ISSUE_TEMPLATE/content-gap.yml). If Education leadership
+requests a batch review round instead, follow that review process. Prefer one
+issue per distinct **Blocker** or **Concept gap**; related minor friction from
+the same page or flow may be grouped.
+
 ## Week 3 technical read-through
 
 Where practical, follow the actual Remix/wallet/read/write flow rather than only

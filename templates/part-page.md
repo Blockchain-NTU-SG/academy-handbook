@@ -17,7 +17,7 @@ Before writing:
 - What prerequisite does it assume?
 - Which page owns this concept?
 - What should the learner be able to explain or do afterwards?
-- Is this Core, Landscape or Further Exploration?
+- Which concepts on this page belong in Core, Landscape or Further Exploration?
 -->
 
 # Week N · Part N — Title
@@ -55,7 +55,8 @@ describe. Do not add diagrams or tables only to break up prose.
 Should recognise and roughly explain. Things a member should be able to place
 in the map without being able to build or analyse them.
 
-Keep these short — a few lines each. Nothing here is assessable.
+Keep these short — a few lines each. Landscape is not assessed unless explicitly
+required elsewhere.
 
 ## Guided walkthrough
 
