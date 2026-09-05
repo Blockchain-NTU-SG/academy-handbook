@@ -152,7 +152,7 @@ Words you will hear early but do not need yet.
 | **EVM** | The Ethereum Virtual Machine, where contracts run | Week 2 |
 | **NFT** | A token where each unit is individually distinct | Weeks 1, 3 |
 | **RWA** | Real World Assets, represented on-chain | Week 4 |
-| **ZK** | Zero-knowledge cryptography, for privacy and scaling | Week 4 |
+| **ZK** | Zero-knowledge cryptography, for privacy and scaling | Week 2; broader uses in Week 4 |
 
 ::: danger Seed phrase — the one entry that matters today
 **Never share it with another person or enter it because someone told you to.**
@@ -172,8 +172,8 @@ Unpacked with this glossary and nothing else:
 
 | Fragment | Meaning |
 |---|---|
-| The DAO passed a proposal | The token-holder group voted through a formal change |
-| deploy the protocol on an L2 | Run the same application on a faster, cheaper network built on Ethereum |
+| The DAO passed a proposal | The DAO's governance process approved a proposed change |
+| deploy the protocol on an L2 | Run the application on an Ethereum L2 — a separate network that handles activity while relying on Ethereum for important settlement/security; lower fees are often one benefit |
 | TVL migrated from mainnet | The value people had deposited moved there |
 
 Plain English: **the community voted to move to a cheaper network, and users

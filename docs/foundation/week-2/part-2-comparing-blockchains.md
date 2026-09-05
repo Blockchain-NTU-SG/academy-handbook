@@ -61,7 +61,7 @@ Before comparing detailed specifications, use four simple questions:
 These questions provide a first lens. The seven dimensions below make the lens
 more complete without turning it into a memorisation exercise.
 
-### Three useful starting shapes
+### How to read these examples
 
 Start with three familiar shapes:
 
@@ -71,15 +71,12 @@ Start with three familiar shapes:
 - **Solana:** high performance, with higher hardware requirements and different
   trade-offs.
 
-These are not complete verdicts. They are handles for seeing why the additional
-Cosmos and Avalanche examples make different choices too.
-
-### How closely to read them
-
-Read **Bitcoin, Ethereum and Solana** as the main contrasting shapes. **Cosmos
-and Avalanche** broaden the design space by showing other ways to organise
-chains and security. You are not expected to memorise chain specifications;
-use the comparisons to practise asking better questions.
+These are not complete verdicts. Read **Bitcoin, Ethereum and Solana** as the
+main contrasting shapes; **Cosmos and Avalanche** broaden the design space by
+showing other ways to organise chains and security. You are not expected to
+memorise chain specifications, block times, throughput numbers, consensus names
+or validator requirements. Use the comparisons to practise asking better
+questions.
 
 ### The central tension
 

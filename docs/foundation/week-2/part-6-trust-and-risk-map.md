@@ -110,7 +110,7 @@ exhaustive dependency graph; real systems can add more dependencies.
   <g>
     <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="289" text-anchor="end">Use an L2</text>
     <g transform="translate(162,272)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Ethereum</text></g>
-    <g transform="translate(276,272)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Proof system</text></g>
+    <g transform="translate(276,272)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">L2 verification</text></g>
     <g transform="translate(390,272)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Sequencer</text></g>
   </g>
 </svg>
@@ -127,6 +127,7 @@ exhaustive dependency graph; real systems can add more dependencies.
 | **Use a DEX** | Replaces the company with code. No custody, no permission — and now several sets of contracts must be correct, including a token's you did not write |
 | **Lending protocol** | Adds an **oracle**, and this is the row worth dwelling on |
 | **Use a bridge** | Adds a historically important source of exploit risk: the bridge mechanism between two chains |
+| **Use an L2** | Keeps the underlying L1 assumption and adds L2-specific machinery: contracts and verification, a sequencer or operator, and upgrade controls |
 
 ::: warning Why the oracle row matters most
 The protocol needs a price to decide whether to liquidate. [Part 3](./part-3-why-ethereum-and-evm.md)

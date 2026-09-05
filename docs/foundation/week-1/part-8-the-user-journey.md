@@ -91,7 +91,7 @@ branches in the example, not as a mandatory queue.
 | **Fiat → exchange** | Money moves from a bank into an exchange account. A normal regulated relationship: KYC, an account, a company holding your funds | The exchange, **entirely**. You have a claim, not an asset |
 | **Exchange → USDC** | Fiat converted to a stablecoin. Dollar value that moves at blockchain speed | The exchange, **plus Circle** — the issuer holding reserves. A new assumption, quietly added |
 | **Exchange → wallet** | Withdrawn to an address you control. Custody moves from a company to a person | **You control custody.** The exchange no longer controls the wallet, but token-level controls may still exist — for example, a stablecoin issuer may be able to freeze its token |
-| **Wallet → chain** | Assets sit on Ethereum, or on **Base**, a Layer 2 built on top for lower fees. The route does not require a bridge | The network, and the L2's operators → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
+| **Wallet → chain** | Assets sit on Ethereum, or on **Base**, an Ethereum L2 that handles activity separately while relying on Ethereum for important settlement/security. Lower fees are a common benefit; the route does not require a bridge | The network, and the L2's operators → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
 | **Bridge, only when needed** | Moving value between networks. Chains cannot natively see each other | Source chain + destination chain + **the bridge mechanism** → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
 | **DEX** | Swapping assets through contracts, from your own wallet, no account | Your wallet + the DEX contracts + each token's contract → Week 3 |
 | **DeFi protocol** | Depositing into a lending market or pool — finance by programs, not institutions | All the above + this protocol's contracts + its **oracle** + its economic design → Week 3 |
@@ -111,6 +111,7 @@ Read the trust column downward and notice the shape.
 | Exchange | The exchange |
 | USDC | Exchange + issuer |
 | Self-custody | **Yourself** + issuer |
+| Chain / L2 | The network; if using an L2, also its additional operators/controls |
 | Bridge | Two chains + bridge mechanism |
 | DEX | Wallet + several sets of contracts |
 | DeFi protocol | All of the above + oracle + economic design |
