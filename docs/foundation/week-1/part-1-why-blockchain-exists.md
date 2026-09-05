@@ -222,8 +222,8 @@ Ann announces to a network that she's sending 50 to Ben, signed with a key only
 she holds. Participants check she has 50 and hasn't already spent it. They agree
 to add it to the shared record.
 
-It's now permanent, visible to anyone, and reversible by no one — including Ann,
-and including whoever wrote the software.
+Once final, it becomes part of the public chain history, and there is no central
+operator Ann can ask to reverse the transfer.
 :::
 
 ::: warning Notice the trade in both directions
