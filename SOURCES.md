@@ -64,8 +64,8 @@ checking that record.
 ## Link
 
 Bitcoin whitepaper · MetaMask docs · Google Cloud and Alchemy Sepolia faucets ·
-Sepolia Etherscan · MIT OpenCourseWare (both courses) · Solana, CometBFT and
-Avalanche docs · Base, Arbitrum, Optimism, Starknet, ZKsync, Polygon PoS, Cosmos
+Sepolia Etherscan · MIT OpenCourseWare (both courses) · Solana, CometBFT,
+Avalanche and Monad docs · Base, Arbitrum, Optimism, Starknet, ZKsync, Polygon PoS, Cosmos
 IBC, Across and Wormhole documentation · L2BEAT · evm.codes · Solidity docs ·
 Solidity by Example · Remix ·
 Ethernaut · SWC Registry · CryptoZombies · Cyfrin Updraft · Ethereum Magicians ·

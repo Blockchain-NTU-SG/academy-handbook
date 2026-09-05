@@ -4,7 +4,7 @@ day: 5
 title: "L1, L2, sidechains and bridges"
 status: drafting
 owner: "Director of Education"
-reading_time: "25 min"
+reading_time: "30 min"
 sources:
   - name: "ethereum.org — Layer 2"
     url: "https://ethereum.org/layer-2/"
@@ -73,6 +73,28 @@ a second problem appears: **they cannot see each other.**
 
 ## Core
 
+### Why L2 exists
+
+Ethereum can and does improve its L1 capacity over time. But if every L1 node
+has to process dramatically more work, the hardware and bandwidth needed to
+verify the chain can rise too. If independent verification becomes expensive,
+fewer people may be able to participate. One scaling approach is therefore to
+move much of the everyday activity elsewhere while keeping Ethereum as an
+important settlement and security base.
+
+Picture Ethereum L1 as a very secure but crowded main road. An L2 is like an
+elevated expressway handling much of the everyday traffic separately. The
+analogy stops here: an L2 is not simply another independent road network. It
+sends enough data, results or proofs back so Ethereum can help check or settle
+the L2's state according to that design.
+
+**L2 does much of the busy work; L1 keeps the important receipts and acts as the
+referee.** This is a model, not a claim that every L2 transaction is later
+re-executed one by one on Ethereum.
+
+This is why Ethereum scales in two directions at once: L1 improvements and L2
+expansion.
+
 ### First-pass model
 
 Start with the job before the labels. If Ethereum's base layer is busy, another
@@ -107,6 +129,52 @@ not fees, not branding.
 
 This table gives the category names. Only now do we ask what many Ethereum L2s
 use inside their architecture.
+
+These labels answer different questions, so they can be combined rather than
+treated as mutually exclusive categories:
+
+- **Settlement / security relationship:** L1, L2 or sidechain
+- **Execution environment:** EVM-compatible, or another execution environment
+- **Purpose:** general-purpose or application-specific (an appchain)
+- **Participation:** public, private or permissioned
+- **Communication:** bridge, IBC or another cross-chain messaging mechanism
+
+For example, **Base** can be described as an Ethereum L2 + EVM-compatible +
+general-purpose; **Monad** as an L1 + EVM-compatible + general-purpose; and an
+application-specific Avalanche L1 as an L1 + appchain. A chain can have several
+labels because each label describes a different dimension.
+
+### Why not just build another L1?
+
+A new L1, such as Solana or Monad, can optimise its own architecture and keep
+control of its validators, consensus and final history. But it must attract and
+fund its own security, infrastructure, liquidity and ecosystem. An Ethereum L2,
+such as Base or Arbitrum, handles activity separately and tries to reuse
+Ethereum as an important settlement and security base, while accepting extra
+L2-specific assumptions such as sequencers, upgrade controls and withdrawal
+mechanisms.
+
+In shorthand:
+
+```text
+Build a new L1  → own the whole system and the whole security problem
+Build an L2     → reuse more of Ethereum and accept extra L2 machinery
+```
+
+Neither is universally better. They optimise for different things.
+
+### Appchains are about purpose
+
+**Appchain** describes what a chain is mainly built for, not necessarily where
+its security comes from. An appchain could be its own L1, use a shared-security
+model, or be an application-specific L2.
+
+Deploying a smart contract on a general-purpose chain is like renting a shop in
+someone else's city: you can build an application, but you still follow that
+chain's infrastructure rules. An appchain is closer to building an industrial
+campus for one company or ecosystem — more control over fees, performance,
+access or infrastructure, but more responsibility as well. The analogy stops
+there; the chain still needs a real security and operating model.
 
 ### How a Layer 2 works
 
@@ -178,10 +246,22 @@ The point is that the label alone does not tell you what you are trusting.
 **Polygon PoS** is a useful sidechain example: it is connected to Ethereum, but
 its own validator and security system remains a separate assumption.
 
+A sidechain may be attractive because it can choose its own validator rules and
+optimise fees, performance or access while staying connected to Ethereum users,
+assets and tooling. Its design says: **“I want to stay connected to the Ethereum
+ecosystem, but I want to run my own security system.”** That is different from
+being an L2 that aims to reuse Ethereum's security.
+
 ### Bridges
 
 Blockchains are isolated by design. Ethereum has no way to observe Bitcoin;
 Solana cannot read Ethereum's state. Each only knows its own.
+
+Think of two blockchains as two banks keeping separate ledgers. Bank B cannot
+simply assume that a balance change recorded inside Bank A's system really
+happened; it needs evidence it is willing to trust. The analogy stops there — a
+bridge is not a bank, but a mechanism that carries or verifies evidence between
+separate on-chain systems.
 
 Names such as **Across** and **Wormhole** are examples of systems used to move
 assets or messages across networks. They do not all work the same way, so the

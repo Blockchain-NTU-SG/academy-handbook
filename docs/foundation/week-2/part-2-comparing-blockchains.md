@@ -208,6 +208,11 @@ standard communication protocol between connected chains, **Inter-Blockchain
 Communication (IBC)**, helps them exchange messages while each chain keeps its
 own rules and validators.
 
+Think of Cosmos less like one giant city and more like a federation of
+independent countries: each chain can keep its own rules and validators, while
+IBC gives compatible chains a common way to communicate. The analogy is about
+sovereignty and communication, not literal governments.
+
 | Aspect | Details |
 |---|---|
 | Consensus | Proof of Stake; CometBFT is one software family for validator voting |
@@ -229,6 +234,13 @@ different fees, throughput, validator rules, access controls or token economics?
 Avalanche L1s answer with configurable, application-specific networks. This
 gains control and can isolate an application's workload, but the network must
 still define and fund its own security and validator system.
+
+Deploying a smart contract on a general-purpose chain is like renting a shop in
+someone else's city: you can run your business, but you still follow the city's
+infrastructure rules. An application-specific chain is closer to building your
+own campus — more control, but more responsibility for the infrastructure and
+security. The analogy stops there; an Avalanche L1 still needs a real network
+and validator configuration, not just a campus plan.
 
 An **Avalanche L1** is a sovereign, application-specific network with its own
 validator configuration. These networks were formerly commonly called
@@ -316,6 +328,7 @@ this material.
 - [Solana documentation](https://solana.com/docs) — Link, referenced only
 - [CometBFT documentation](https://docs.cometbft.com/) — Link, referenced only
 - [Avalanche documentation](https://build.avax.network/docs) — Link, referenced only
+- [Avalanche L1s documentation](https://build.avax.network/docs/avalanche-l1s) — Link, referenced for the application-specific network example
 
 *Named networks are illustrative examples, not recommendations. Performance
 figures are approximate and change; verify against primary sources.*
