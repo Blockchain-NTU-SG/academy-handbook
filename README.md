@@ -1,16 +1,28 @@
 # Blockchain@NTU Academy Handbook
 
-Beginner-first, community-maintained Web3 curriculum.
+<p align="center">
+  <img src="docs/.vuepress/public/brand/blockchain-ntu-logo-dark.png" alt="Blockchain@NTU" width="180" />
+</p>
 
-Learn the systems from first principles, participate safely onchain, understand
-smart contracts and industry structure, then specialise by building.
+<p align="center"><strong>Learn → Build → Prove.</strong></p>
 
-[![CI](https://github.com/Blockchain-NTU-SG/academy-handbook/actions/workflows/check-docs.yml/badge.svg)](https://github.com/Blockchain-NTU-SG/academy-handbook/actions/workflows/check-docs.yml)
-[![Live handbook](https://img.shields.io/badge/handbook-live-2f80ed)](https://blockchain-ntu-sg.github.io/academy-handbook/)
-[![Code: MIT](https://img.shields.io/badge/code-MIT-2ea44f)](./LICENSE)
-[![Content: CC BY-NC 4.0](https://img.shields.io/badge/content-CC%20BY--NC%204.0-2ea44f)](./CONTENT-LICENSE.md)
+<p align="center">
+  Beginner-first, community-maintained Web3 curriculum from first principles to
+  safe onchain participation, smart contracts, research and specialisation.
+</p>
 
-[Read the Handbook](https://blockchain-ntu-sg.github.io/academy-handbook/) · [Curriculum](./docs/getting-started/programme.md) · [Contribute](./CONTRIBUTING.md)
+<p align="center">
+  <a href="https://github.com/Blockchain-NTU-SG/academy-handbook/actions/workflows/check-docs.yml"><img src="https://github.com/Blockchain-NTU-SG/academy-handbook/actions/workflows/check-docs.yml/badge.svg" alt="CI" /></a>
+  <a href="https://blockchain-ntu-sg.github.io/academy-handbook/"><img src="https://img.shields.io/badge/handbook-live-2f80ed" alt="Live handbook" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/code-MIT-2ea44f" alt="Code: MIT" /></a>
+  <a href="./CONTENT-LICENSE.md"><img src="https://img.shields.io/badge/content-CC%20BY--NC%204.0-2ea44f" alt="Content: CC BY-NC 4.0" /></a>
+</p>
+
+<p align="center">
+  <a href="https://blockchain-ntu-sg.github.io/academy-handbook/">Read the Handbook</a>
+  · <a href="./docs/getting-started/programme.md">Curriculum</a>
+  · <a href="./CONTRIBUTING.md">Contribute</a>
+</p>
 
 ## What this is
 
