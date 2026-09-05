@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the live handbook
+    url: https://blockchain-ntu-sg.github.io/academy-handbook/
+    about: Start with the published Academy Handbook.
+  - name: Read contribution guidance
+    url: https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/CONTRIBUTING.md
+    about: Learn the branch, review and validation workflow.
+  - name: Read the Editorial Guide
+    url: https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/EDITORIAL_GUIDE.md
+    about: Learn how Academy content is written and reviewed.

@@ -149,6 +149,12 @@ does not own the contract or control the user's key. Larger applications may add
 an indexer, a traditional backend/database or decentralised storage, but those
 are supporting layers rather than requirements for the basic model.
 
+Most of a DApp is ordinary web software. A frontend can be compromised while
+the contracts remain sound: a hijacked website may show a malicious transaction
+request while the contract executes exactly as written. This is why Week 0
+insisted on **bookmarks over search results**, and why a hardware wallet showing
+the transaction on its own screen can be valuable.
+
 #### Read: “show me 42 votes”
 
 1. The user opens a page and the frontend asks for the current vote count.
@@ -183,9 +189,10 @@ Imagine a voting DApp that shows **42 votes**:
 
 The contract is the on-chain rule-set and state, not the whole application. The
 frontend makes it usable; the wallet authorises writes; the RPC connects the
-application to a node; and the network records the result. The fuller placement
-of frontend, wallet, RPC, contracts, indexers and bridges appears in
-[Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md).
+application to a node; and the network records the result. Week 2 Part 4
+explained RPC and read/write mechanics, while [Part 5](../week-2/part-5-l1-l2-and-bridges.md)
+explained the network layers underneath. This section puts those pieces
+together inside an actual DApp.
 
 ### What contracts are good at, and bad at
 

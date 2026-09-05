@@ -4,7 +4,7 @@ day: 5
 title: "L1, L2, sidechains and bridges"
 status: drafting
 owner: "Director of Education"
-reading_time: "25 min"
+reading_time: "30 min"
 sources:
   - name: "ethereum.org — Layer 2"
     url: "https://ethereum.org/layer-2/"
@@ -18,11 +18,35 @@ sources:
   - name: "ethereum.org — Bridges"
     url: "https://ethereum.org/developers/docs/bridges/"
     label: "Reuse"
-  - name: "ethereum.org — Dapps"
-    url: "https://ethereum.org/dapps/"
-    label: "Reuse"
   - name: "L2BEAT"
     url: "https://l2beat.com/"
+    label: "Link"
+  - name: "Base documentation"
+    url: "https://docs.base.org/"
+    label: "Link"
+  - name: "Arbitrum documentation"
+    url: "https://docs.arbitrum.io/"
+    label: "Link"
+  - name: "Optimism documentation"
+    url: "https://docs.optimism.io/"
+    label: "Link"
+  - name: "Starknet documentation"
+    url: "https://docs.starknet.io/"
+    label: "Link"
+  - name: "ZKsync documentation"
+    url: "https://docs.zksync.io/"
+    label: "Link"
+  - name: "Polygon PoS documentation"
+    url: "https://docs.polygon.technology/pos/"
+    label: "Link"
+  - name: "Cosmos IBC documentation"
+    url: "https://docs.cosmos.network/ibc/latest/ibc/overview"
+    label: "Link"
+  - name: "Across documentation"
+    url: "https://docs.across.to/"
+    label: "Link"
+  - name: "Wormhole documentation"
+    url: "https://wormhole.com/docs/"
     label: "Link"
 ---
 
@@ -42,46 +66,117 @@ a second problem appears: **they cannot see each other.**
 - Explain what a Layer 2 is and what it inherits from its Layer 1
 - Distinguish a Layer 2 from a sidechain by their security assumptions
 - Explain why bridges are necessary and where their risk sits
-- Describe the parts of a DApp and which of them are actually on-chain
 
 ## Core
 
-### First-pass model
+### Why L2 exists
 
-Start with the job before the labels. If Ethereum's base layer is busy, another
-network can do some of the processing elsewhere and still use Ethereum as the
-place that checks or settles the result.
+Ethereum can and does improve its L1 capacity over time. But if every L1 node
+has to process dramatically more work, the hardware and bandwidth needed to
+verify the chain can rise too. If independent verification becomes expensive,
+fewer people may be able to participate. One scaling approach is therefore to
+move much of the everyday activity elsewhere while keeping Ethereum as an
+important settlement and security base.
 
-For Foundation, keep this first-pass model:
+Picture Ethereum L1 as a very secure but crowded main road. An L2 is like an
+elevated expressway handling much of the everyday traffic separately. The
+analogy explains capacity, not the security relationship. An L2 is not simply
+another independent road network: it sends enough data, results or proofs back
+so Ethereum can help check or settle the L2's state according to that design.
 
-- **L1:** the base settlement and security layer.
-- **L2:** processes many transactions elsewhere and reports or proves enough
-  back to an L1.
-- **Sidechain:** another chain with its own security.
-- **Bridge:** a mechanism for convincing one chain that something happened on
-  another chain.
+**L2 does much of the busy work; L1 keeps the important receipts and acts as the
+referee.** This is a model, not a claim that every L2 transaction is later
+re-executed one by one on Ethereum.
 
-### The vocabulary
+This is why Ethereum scales in two directions at once: L1 improvements and L2
+expansion.
 
-The formal vocabulary for this model is:
+### One more picture: where is the final court?
 
-| Term | What it is |
-|---|---|
-| **Layer 1 (L1)** | A base blockchain that secures itself. Ethereum, Bitcoin, Solana |
-| **Layer 2 (L2)** | A network processing transactions separately but **deriving its security from an L1** |
-| **Sidechain** | A separate chain connected to another, with **its own security** |
-| **Appchain** | A chain dedicated to one application |
-| **Bridge** | Infrastructure moving assets or messages between chains |
+The expressway helped with capacity. Now use a different picture for the
+question of final security and settlement:
+
+**L1.** Ethereum is like a city or country with its own official records, court
+and security system. Its network decides its own final history.
+
+**L2.** Base and Arbitrum are like fast commercial districts that process much
+of their daily activity separately, while Ethereum remains the higher court and
+final settlement layer. **An L2 does much of the work elsewhere, but ultimately
+relies on the L1 for important final settlement and security.**
+
+**Sidechain.** Polygon PoS is more like a neighbouring city with its own court,
+records and security system. It can stay connected to Ethereum through bridges,
+but Ethereum does not automatically guarantee the sidechain's internal history.
+
+The analogy is only about where final trust and security sit. Blockchains are
+not literally legal systems.
+
+> **L1 runs its own court. An L2 does much of its work elsewhere but ultimately
+> relies on the L1. A sidechain runs its own court and stays connected through
+> bridges.**
+
+### Three security relationships
+
+Now make the picture precise. The first table focuses only on the security and
+settlement relationship:
+
+| Security relationship | Plain-English meaning | Examples | Key question |
+|---|---|---|---|
+| **L1** | Secures and settles its own final history | Ethereum, Solana, Monad | Who secures this network itself? |
+| **L2** | Handles activity separately while relying on an L1 for important settlement or security | Base, Arbitrum | What does it inherit from the L1, and what additional L2 machinery do I trust? |
+| **Sidechain** | Separate connected chain with its own validator and security system | Polygon PoS | Who secures this chain itself? |
 
 ::: important The distinction that actually matters
 **L2 versus sidechain — and it is about where security comes from.** Not speed,
 not fees, not branding.
 :::
 
+### Other labels answer different questions
+
+These labels answer different questions, so they can be combined rather than
+treated as mutually exclusive categories:
+
+- **Settlement / security relationship:** L1, L2 or sidechain
+- **Execution environment:** EVM-compatible, or another execution environment
+- **Purpose:** general-purpose or application-specific (an appchain)
+- **Participation:** public, private or permissioned
+- **Communication:** bridge, IBC or another cross-chain messaging mechanism
+
+For example, **Base** can be described as an Ethereum L2 + EVM-compatible +
+general-purpose; **Monad** as an L1 + EVM-compatible + general-purpose; and an
+application-specific Avalanche L1 as an L1 + appchain. A chain can have several
+labels because each label describes a different dimension.
+
+**Appchain is a purpose label, not a security-layer label.** An appchain could
+be its own L1, use a shared-security model, or be an application-specific L2.
+The term tells you what the chain is mainly for, not automatically who secures
+it. See the Avalanche example in [Part 2](./part-2-comparing-blockchains.md)
+for why an application might want its own environment.
+
+### Why not just build another L1?
+
+A new L1, such as Solana or Monad, can optimise its own architecture and keep
+control of its validators, consensus and final history. But it must attract and
+fund its own security, infrastructure, liquidity and ecosystem. An Ethereum L2,
+such as Base or Arbitrum, handles activity separately and tries to reuse
+Ethereum as an important settlement and security base, while accepting extra
+L2-specific assumptions such as sequencers, upgrade controls and withdrawal
+mechanisms.
+
+In shorthand:
+
+```text
+Build a new L1  → own the whole system and the whole security problem
+Build an L2     → reuse more of Ethereum and accept extra L2 machinery
+```
+
+Neither is universally better. They optimise for different things.
+
 ### How a Layer 2 works
 
-The core idea: **do the work elsewhere, but post enough to Ethereum that
-Ethereum remains the referee.**
+Now zoom in on the expressway. Many Ethereum L2s use a design called a
+**rollup**: **do the work elsewhere, but post enough to Ethereum that Ethereum
+remains the referee.**
 
 <figure class="academy-reference-visual">
   <img src="/learning/ethereum-org/layer-2-rollup.png" alt="Diagram showing users making many Layer 2 transactions, a rollup bundling them, and Ethereum receiving the resulting data and blocks." />
@@ -102,11 +197,9 @@ in maturity, upgrade controls, data availability and withdrawal mechanisms. Some
 networks marketed as L2s do not yet provide that guarantee in practice.
 :::
 
-Two families:
-
-The names sound technical, but the first difference is simple. An optimistic
-rollup assumes a batch is valid unless someone successfully challenges it. A ZK
-rollup supplies a cryptographic proof that the batch follows the rules.
+There are two broad approaches. An optimistic-style rollup accepts a result
+unless someone successfully challenges a bad one. A validity/ZK-style rollup
+provides a cryptographic proof that the result follows the rules.
 
 | Dimension | **Optimistic rollups** | **ZK rollups** |
 |---|---|---|
@@ -120,16 +213,17 @@ For Foundation, know that one approach **waits and watches**, the other
 **proves** — and that this affects how long withdrawals take.
 :::
 
-### Sidechains are a different thing
+### Why choose a sidechain?
 
-A sidechain looks similar from the user's seat — cheaper, faster,
-EVM-compatible — and is structurally quite different.
+From the court picture, the defining choice is already clear: a sidechain runs
+its own security system. It may still be attractive because it can choose its
+own validator rules, optimise fees or performance, and stay connected to
+Ethereum users, assets and tooling.
 
 | Dimension | **Layer 2** | **Sidechain** |
 |---|---|---|
 | Security from | Ethereum | Its own validators |
 | If operators turn malicious | Designed to allow exit via L1; maturity varies | **Your funds depend on them** |
-| Data posted to L1 | Yes | No |
 
 ::: warning Do not ask only "Is this an L2?"
 Ask: **what do I still have to trust?**
@@ -140,13 +234,28 @@ that genuinely inherit Ethereum's security from ones that only say they do.
 self-described L2s do not yet fully qualify.
 :::
 
-Not a criticism — sidechains are a legitimate design and often perform better.
-The point is that the label alone does not tell you what you are trusting.
+**Polygon PoS** is a useful sidechain example: it is connected to Ethereum, but
+its own validator and security system remains a separate assumption.
+
+Its design says: **“I want to stay connected to the Ethereum ecosystem, but I
+want to run my own security system.”** That is different from being an L2 that
+aims to reuse Ethereum's security, not an inferior version of it.
 
 ### Bridges
 
 Blockchains are isolated by design. Ethereum has no way to observe Bitcoin;
 Solana cannot read Ethereum's state. Each only knows its own.
+
+Think of two blockchains as two banks keeping separate ledgers. Bank B cannot
+simply assume that a balance change recorded inside Bank A's system really
+happened; it needs evidence it is willing to trust. The analogy stops there — a
+bridge is not a bank, but a mechanism that carries or verifies evidence between
+separate on-chain systems.
+
+Names such as **Across** and **Wormhole** are examples of systems used to move
+assets or messages across networks. They do not all work the same way, so the
+important question is what convinces the destination network that the event on
+the source network really happened.
 
 ::: tabs
 @tab Asset bridges
@@ -196,41 +305,8 @@ For Foundation, hold this:
 bridge adds a trust assumption that neither chain had on its own.**
 :::
 
-### DApp architecture
-
-Now place everything from this week inside one application. This is a synthesis
-of the picture you have just built, not another network type: what is actually
-on-chain in a typical DApp, and where do the wallet, RPC, L1/L2 and bridge fit?
-
-```mermaid
-flowchart TD
-  F["<b>Frontend</b><br/>ordinary website<br/><i>off-chain</i>"]
-  W["<b>Wallet</b><br/>holds keys, signs<br/><i>on your device</i>"]
-  R["<b>RPC node</b><br/>reads and broadcasts<br/><i>off-chain</i>"]
-  C["<b>Smart contracts</b><br/>the actual rules<br/><b>on-chain</b>"]
-  I["<b>Indexer</b><br/>reads events for history<br/><i>off-chain</i>"]
-  F <--> W
-  F <--> R
-  W --> R
-  R <--> C
-  C -.->|events| I
-  I --> F
-```
-
-**Most of a DApp is ordinary web software.** The smart contracts and blockchain
-state are on-chain. Much of the frontend, RPC, indexing and user-interface
-infrastructure remains off-chain.
-
-::: warning A consequence people learn the hard way
-The frontend can be compromised while the contracts remain sound. A hijacked
-website serving malicious transaction requests is a well-established attack; the
-contracts may simply be executing as written while the frontend misleads the
-user.
-
-This is why Week 0 insisted on **bookmarks over search results** — and why
-hardware wallets showing you the actual transaction on their own screen are
-valuable.
-:::
+Week 3 Part 1 shows how a DApp's frontend, wallet, RPC route and smart contracts
+sit on top of these network layers.
 
 ## Landscape
 
@@ -285,9 +361,13 @@ turns it into a tool you can point at anything.
 - [ethereum.org — Layer 2](https://ethereum.org/layer-2/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Scaling](https://ethereum.org/developers/docs/scaling/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Bridges](https://ethereum.org/developers/docs/bridges/) — Reuse (CC BY 4.0), adapted
-- [ethereum.org — Dapps](https://ethereum.org/dapps/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Layer 2 rollup visual](https://ethereum.org/layer-2/learn/) — Reuse (CC BY 4.0), local copy at `/learning/ethereum-org/layer-2-rollup.png`
 - [L2BEAT](https://l2beat.com/) — Link, referenced only
+- [Base documentation](https://docs.base.org/) · [Arbitrum documentation](https://docs.arbitrum.io/) · [Optimism documentation](https://docs.optimism.io/) — Link, referenced for current L2 examples
+- [Starknet documentation](https://docs.starknet.io/) · [ZKsync documentation](https://docs.zksync.io/) — Link, referenced for current validity/ZK-style L2 examples
+- [Polygon PoS documentation](https://docs.polygon.technology/pos/) — Link, referenced for the sidechain example
+- [Cosmos IBC documentation](https://docs.cosmos.network/ibc/latest/ibc/overview) — Link, referenced for the IBC/appchain context
+- [Across documentation](https://docs.across.to/) · [Wormhole documentation](https://wormhole.com/docs/) — Link, referenced for bridge examples
 
 *Named networks are illustrative examples, not recommendations.*
 :::
