@@ -1,0 +1,47 @@
+name: Bug report
+description: Report a broken link, rendering issue, screenshot problem, mobile overflow or site bug.
+title: "[Bug] "
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page / location
+      description: Include the URL, file path or repository area.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug_type
+    attributes:
+      label: What is affected?
+      options:
+        - Broken link
+        - Rendering or layout
+        - Screenshot or asset
+        - Mobile overflow
+        - Navigation
+        - Code or site behaviour
+        - Factual error
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: What happened?
+      description: Include reproduction steps, an error message or a screenshot if useful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, viewport, OS or branch/build details where relevant.

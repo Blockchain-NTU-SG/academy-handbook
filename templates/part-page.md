@@ -11,6 +11,15 @@ sources:              # every upstream source used, with its label
     label: ""         # Reuse | Link
 ---
 
+<!--
+Before writing:
+- What ONE learner question does this page answer?
+- What prerequisite does it assume?
+- Which page owns this concept?
+- What should the learner be able to explain or do afterwards?
+- Is this Core, Landscape or Further Exploration?
+-->
+
 # Week N · Part N — Title
 
 ## Why this matters
@@ -38,7 +47,8 @@ Must understand. The main body — our own explanation, reorganised from the
 sources listed in the frontmatter, not a list of links.
 
 Any term used here is either defined here or was defined in an earlier Part.
-Prefer a diagram or table over three paragraphs of prose.
+Use a visual when structure, sequence or comparison is easier to see than
+describe. Do not add diagrams or tables only to break up prose.
 
 ## Landscape
 
@@ -49,7 +59,8 @@ Keep these short — a few lines each. Nothing here is assessable.
 
 ## Guided walkthrough
 
-The hands-on part, where the Part has one. Numbered steps, each one a single action.
+Optional — use only when the learner is actually performing an action. Numbered
+steps should each be a single action and state the expected observable result.
 
 1. Step
 2. Step
@@ -60,8 +71,14 @@ has gone wrong rather than continuing with a broken setup.
 
 ## Worked example
 
-One concrete example carried all the way through. Real values, real screenshots.
-Members follow examples far more closely than instructions.
+Strongly encouraged for abstract Core concepts, but not mandatory where it would
+be unnatural. Carry one concrete example through the explanation when it helps;
+use real values and screenshots when appropriate.
+
+## Analogy guidance
+
+If an analogy helps, say what it explains and where it stops if extending it
+further could mislead the learner.
 
 ## Further exploration
 
