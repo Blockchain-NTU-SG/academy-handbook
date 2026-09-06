@@ -17,7 +17,7 @@ npm ci
 npm run docs:dev
 ```
 
-Use Node.js 22 where possible. The production check is:
+Use Node.js 22.18 or newer. The production check is:
 
 ```bash
 npm run docs:build
