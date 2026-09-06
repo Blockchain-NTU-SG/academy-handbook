@@ -1,0 +1,61 @@
+name: Content gap
+description: Report a place where learner understanding breaks or becomes unnecessarily difficult.
+title: "[Content gap] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You do not need to propose a solution. Identifying where understanding broke is useful by itself.
+
+  - type: input
+    id: page_section
+    attributes:
+      label: Page / section
+      description: Include the page URL or file and the heading/step.
+      placeholder: Week 2 Part 3 — EVM compatibility
+    validations:
+      required: true
+
+  - type: dropdown
+    id: background
+    attributes:
+      label: Your background
+      options:
+        - Completely new to Web3
+        - Some prior exposure
+        - Comfortable with Web3 basics
+        - Technical / developer background
+    validations:
+      required: true
+
+  - type: textarea
+    id: where_stuck
+    attributes:
+      label: Where did you get stuck?
+      description: Quote the passage or describe the exact point where understanding broke.
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_meant
+    attributes:
+      label: What did you think it meant?
+      description: Optional, but this helps us distinguish a missing prerequisite from unclear wording.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Blocker
+        - Concept gap
+        - Friction
+        - Nice-to-have
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_helped
+    attributes:
+      label: What might have helped?
+      description: Optional. You may leave this blank; you do not need to propose a rewrite.

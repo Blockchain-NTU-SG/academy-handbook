@@ -61,7 +61,7 @@ Before comparing detailed specifications, use four simple questions:
 These questions provide a first lens. The seven dimensions below make the lens
 more complete without turning it into a memorisation exercise.
 
-### Three useful starting shapes
+### How to read these examples
 
 Start with three familiar shapes:
 
@@ -71,15 +71,12 @@ Start with three familiar shapes:
 - **Solana:** high performance, with higher hardware requirements and different
   trade-offs.
 
-These are not complete verdicts. They are handles for seeing why the additional
-Cosmos and Avalanche examples make different choices too.
-
-### How closely to read them
-
-Read **Bitcoin, Ethereum and Solana** as the main contrasting shapes. **Cosmos
-and Avalanche** broaden the design space by showing other ways to organise
-chains and security. You are not expected to memorise chain specifications;
-use the comparisons to practise asking better questions.
+These are not complete verdicts. Read **Bitcoin, Ethereum and Solana** as the
+main contrasting shapes; **Cosmos and Avalanche** broaden the design space by
+showing other ways to organise chains and security. You are not expected to
+memorise chain specifications, block times, throughput numbers, consensus names
+or validator requirements. Use the comparisons to practise asking better
+questions.
 
 ### The central tension
 
@@ -132,7 +129,12 @@ not to quote numbers.
 ::: tabs
 @tab <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span>
 
-**Maximum conservatism.**
+**Question:** Can strangers maintain scarce digital money without one trusted
+ledger operator?
+
+Bitcoin answers with a deliberately narrow ledger and Proof of Work. That choice
+prioritises simplicity, predictability and security; it gives up throughput and
+general-purpose programmability.
 
 | Aspect | Details |
 |---|---|
@@ -149,7 +151,13 @@ deliberately narrow and conservative design since 2009.
 
 @tab <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span>
 
-**Programmability first.**
+**Question:** What if a blockchain should maintain digital money and also run
+general-purpose rules and applications?
+
+Bitcoin showed that a blockchain could maintain digital money. Ethereum broadened
+that idea into programmable shared state through smart contracts and the EVM. It
+gains flexibility and a broad ecosystem, while accepting lower base-layer
+throughput and scaling through Layer 2s.
 
 | Aspect | Details |
 |---|---|
@@ -166,11 +174,17 @@ both: gradually increasing L1 capacity while continuing to expand L2 capacity.
 
 @tab <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span>
 
-**Performance first.**
+**Question:** What if public blockchain applications need faster responses, low
+fees and much more activity?
+
+Solana prioritises that user-facing performance by accepting higher hardware,
+bandwidth and stake requirements. It still uses stake-based consensus; **Proof of
+History** adds a cryptographic clock and ordering signal that helps participants
+agree on when events happened, but it does not replace Proof of Stake.
 
 | Aspect | Details |
 |---|---|
-| Consensus | Proof of Stake, with a verifiable clock ordering transactions |
+| Consensus | Proof of Stake; Proof of History helps provide a shared clock and ordering signal |
 | Finality | Fast — seconds |
 | Throughput | High — thousands per second |
 | Security participation | **Substantial** — comparatively high-spec hardware, bandwidth and stake/economic resources |
@@ -183,28 +197,55 @@ network has had outages that Ethereum and Bitcoin have not.
 
 @tab <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span>
 
-**Many chains, not one.**
+**Question:** What if applications or communities want their own sovereign
+blockchains, but still want those chains to communicate?
+
+Cosmos answers with many chains instead of one shared execution environment. A
+standard communication protocol between connected chains, **Inter-Blockchain
+Communication (IBC)**, helps them exchange messages while each chain keeps its
+own rules and validators.
+
+Think of Cosmos less like one giant city and more like a federation of
+independent countries: each chain can keep its own rules and validators, while
+IBC gives compatible chains a common way to communicate. The analogy is about
+sovereignty and communication, not literal governments.
 
 | Aspect | Details |
 |---|---|
-| Consensus | CometBFT — Byzantine Fault Tolerant Proof of Stake |
+| Consensus | Proof of Stake; CometBFT is one software family for validator voting |
 | Finality | **Deterministic** once a block is committed |
 | Throughput | High per chain |
 | Security participation | Depends on the chain's validator set or shared-security model |
-| Execution | Each chain builds its own; connected via IBC |
+| Execution | Each chain builds its own; connected through IBC, a standard communication protocol |
 | **Trade-off** | Many chains choose sovereignty and their own validator set; some use shared-security models instead |
 
-Cosmos rejects the premise that everyone should share one chain. Many Cosmos
-chains run their own validator sets, trading shared security for sovereignty.
-Some can also use shared-security models such as Interchain Security.
+Many Cosmos chains run their own validator sets, trading shared security for
+sovereignty. Some can also use shared-security models such as Interchain
+Security.
 
 @tab <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span>
 
-**Avalanche L1s (formerly Subnets) and configurability.**
+**Question:** What if an application wants its own blockchain because it needs
+different fees, throughput, validator rules, access controls or token economics?
 
-An **Avalanche L1** is a sovereign, application-specific network with its own
-validator configuration. These networks were formerly commonly called
-Subnets.
+Avalanche L1s provide configurable sovereign networks, which can be
+application-specific when a project needs that level of control. This can give
+a project more control over fees, throughput, validator rules, access controls
+or token economics and isolate its workload, but the network must still define
+and fund its own security and validator system.
+
+Deploying a smart contract on a general-purpose chain is like renting a shop in
+someone else's city: you can run your business, but you still follow the city's
+infrastructure rules. A dedicated/application-specific chain can be closer to
+building your own campus — more control, but more responsibility for the
+infrastructure and security. This explains why a project might want a dedicated
+chain; it is not a definition of every Avalanche L1. The analogy stops there: an
+Avalanche L1 still needs a real network and validator configuration, not just a
+campus plan.
+
+An **Avalanche L1** is a configurable sovereign network with its own validator
+configuration. Some are application-specific; these networks were formerly
+commonly called Subnets.
 
 | Aspect | Details |
 |---|---|
@@ -213,7 +254,7 @@ Subnets.
 | Throughput | High |
 | Security participation | Depends on the particular Avalanche L1's validator configuration |
 | Execution | Multiple chains; EVM-compatible option; configurable Avalanche L1s |
-| **Trade-off** | Optimised for configurable, application-specific networks over one shared environment |
+| **Trade-off** | Optimised for configurable networks over one shared environment; some are application-specific |
 :::
 
 ### Side by side
@@ -239,7 +280,7 @@ validator trade-off especially visible.
 - **BFT consensus** — ways for a set of validators to reach a clear decision quickly, even if some fail or behave badly. It is a family of approaches, not one single protocol
 - **Parallel execution** — running independent transactions at the same time. It can process more transactions, but the chain must first know that the transactions do not conflict
 - **IBC** — a Cosmos messaging standard that lets connected chains send verified messages. It does not make them one ledger, and each connection still has assumptions to check
-- **Avalanche L1 / appchain** — a network dedicated to one application. Avalanche L1s were formerly commonly called Subnets; the separate network can be configured for that application's needs. Part 5
+- **Avalanche L1 / appchain** — Avalanche L1s are configurable sovereign networks; some are designed as appchains for a particular application or ecosystem. **Appchain** describes purpose, not automatically the network's security model. Part 5
 - **EVM-compatible** — a network that can run Ethereum-style contracts. Close compatibility lets tools and code be reused, but differences can still matter
 - **Shared vs sovereign security** — whether a chain borrows security from another network or runs its own security. Borrowing reduces the chain's own burden; sovereignty gives control but leaves the chain responsible for its security budget
 - **Client diversity** — having more than one independent software implementation of a network. It can reduce the chance that one software bug affects everyone
@@ -266,7 +307,7 @@ The candidates, honestly:
 | Ethereum L1 | **No for this target.** Fees are usually too high, and the application would need to decide whether its stronger finality delay is acceptable |
 | Solana | **Plausible.** Fast, cheap, strong stablecoin usage. Weigh the outage history |
 | An Ethereum L2 | **Plausible.** Cheap and fast, with Ethereum behind it |
-| A Cosmos appchain | **Plausible** if you need full control. You'd bootstrap your own validators |
+| A dedicated Cosmos/appchain design | **Usually overkill** unless the application genuinely needs chain-level control. If it does, the project also takes on validator, security and infrastructure responsibility |
 
 ::: important There is no single right answer — that is the exercise
 What you should be able to say is: *"We chose X. It gives us speed and low fees.
@@ -288,6 +329,7 @@ this material.
 - [Solana documentation](https://solana.com/docs) — Link, referenced only
 - [CometBFT documentation](https://docs.cometbft.com/) — Link, referenced only
 - [Avalanche documentation](https://build.avax.network/docs) — Link, referenced only
+- [Avalanche L1s documentation](https://build.avax.network/docs/avalanche-l1s) — Link, referenced for the application-specific network example
 
 *Named networks are illustrative examples, not recommendations. Performance
 figures are approximate and change; verify against primary sources.*

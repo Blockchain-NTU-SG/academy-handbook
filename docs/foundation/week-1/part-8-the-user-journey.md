@@ -21,6 +21,9 @@ sources:
   - name: "Web3 Internship Handbook — blockchain lifecycle"
     url: "https://web3intern.xyz/zh/blockchain-basic/"
     label: "Reuse"
+  - name: "Base documentation"
+    url: "https://docs.base.org/"
+    label: "Link"
 ---
 
 # Week 1 · Part 8 — How it all connects: one user journey
@@ -62,7 +65,7 @@ flowchart TD
   C["<b>Centralised exchange</b><br/>✅ Part 5"]
   U["<b>USDC</b><br/>stablecoin · ✅ Part 5"]
   W["<b>Self-custody wallet</b><br/>✅ Part 6"]
-  E["<b>Ethereum / Base</b><br/>L1 and L2 · → Week 2"]
+  E["<b>Ethereum — L1</b><br/><b>Base — Ethereum L2</b><br/>→ Week 2"]
   B["<b>Bridge</b><br/>only if moving networks<br/>→ Week 2"]
   D["<b>DEX / protocol</b><br/>→ Week 3"]
   P["<b>DeFi application</b><br/>→ Week 3"]
@@ -88,7 +91,7 @@ branches in the example, not as a mandatory queue.
 | **Fiat → exchange** | Money moves from a bank into an exchange account. A normal regulated relationship: KYC, an account, a company holding your funds | The exchange, **entirely**. You have a claim, not an asset |
 | **Exchange → USDC** | Fiat converted to a stablecoin. Dollar value that moves at blockchain speed | The exchange, **plus Circle** — the issuer holding reserves. A new assumption, quietly added |
 | **Exchange → wallet** | Withdrawn to an address you control. Custody moves from a company to a person | **You control custody.** The exchange no longer controls the wallet, but token-level controls may still exist — for example, a stablecoin issuer may be able to freeze its token |
-| **Wallet → chain** | Assets sit on Ethereum, or on **Base**, a Layer 2 built on top for lower fees. The route does not require a bridge | The network, and the L2's operators → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
+| **Wallet → chain** | Assets sit on Ethereum, or on **Base**, an Ethereum L2 that handles activity separately while relying on Ethereum for important settlement/security. Lower fees are a common benefit; the route does not require a bridge | The network, and the L2's operators → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
 | **Bridge, only when needed** | Moving value between networks. Chains cannot natively see each other | Source chain + destination chain + **the bridge mechanism** → [Week 2 Part 5](../week-2/part-5-l1-l2-and-bridges.md) |
 | **DEX** | Swapping assets through contracts, from your own wallet, no account | Your wallet + the DEX contracts + each token's contract → Week 3 |
 | **DeFi protocol** | Depositing into a lending market or pool — finance by programs, not institutions | All the above + this protocol's contracts + its **oracle** + its economic design → Week 3 |
@@ -108,6 +111,7 @@ Read the trust column downward and notice the shape.
 | Exchange | The exchange |
 | USDC | Exchange + issuer |
 | Self-custody | **Yourself** + issuer |
+| Chain / L2 | The network; if using an L2, also its additional operators/controls |
 | Bridge | Two chains + bridge mechanism |
 | DEX | Wallet + several sets of contracts |
 | DeFi protocol | All of the above + oracle + economic design |
@@ -179,7 +183,7 @@ shared state. The details of how a chain selects and finalises blocks are what
 ## Landscape
 
 - **On-ramp / off-ramp** — converting between fiat and crypto in either direction. The service handling the conversion adds its own fees, limits and custody risk
-- **Layer 2** — a network built on a base chain for cheaper, faster transactions (Week 2). It adds another system and therefore another set of trust assumptions
+- **Layer 2** — a network such as Base that handles activity separately while relying on a base chain such as Ethereum for important settlement or security (Week 2). It adds another system and therefore another set of trust assumptions
 - **Wrapped asset** — a token representing an asset from elsewhere ([Part 5](./part-5-crypto-asset-map.md)). Its value depends on the mechanism that links it to the underlying asset
 - **Slippage** — the gap between the price you expected on a swap and the one you got. Thin liquidity or a large trade can make the gap wider
 - **Liquidity pool** — pooled assets a DEX trades against (Week 3). More liquidity usually makes larger trades easier to execute without moving the price as much
@@ -222,6 +226,7 @@ what this week was for.
 - [ethereum.org — Bridges](https://ethereum.org/developers/docs/bridges/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Layer 2](https://ethereum.org/layer-2/) — Reuse (CC BY 4.0), adapted
 - [Web3 Internship Handbook](https://web3intern.xyz/zh/blockchain-basic/) — Reuse (permission granted); lifecycle structure used as inspiration and rewritten for this handbook
+- [Base documentation](https://docs.base.org/) — Link, referenced for the L2 example
 
 *Named products are illustrative, not recommendations. Nothing here is financial advice.*
 :::

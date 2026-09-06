@@ -18,6 +18,9 @@ sources:
   - name: "ethereum.org — Smart contracts"
     url: "https://ethereum.org/developers/docs/smart-contracts/"
     label: "Reuse"
+  - name: "Monad documentation"
+    url: "https://docs.monad.xyz/"
+    label: "Link"
 ---
 
 # Week 2 · Part 3 — Why we start with Ethereum and the EVM
@@ -40,6 +43,14 @@ good, and the tooling is free.
 - Explain why a contract needs an external trigger
 
 ## Core
+
+### From Bitcoin to Ethereum to the EVM
+
+Bitcoin showed that a blockchain could maintain digital money without one
+trusted ledger operator. Ethereum broadened that idea into **programmable shared
+state**: the network can also run rules and applications, not just record
+payments. The **EVM** is the execution environment that runs those shared rules
+on Ethereum nodes.
 
 ### Why the EVM first
 
@@ -123,6 +134,26 @@ not need its internals yet. Three properties matter:
 That third one answers a genuinely hard problem: how do you let strangers run
 arbitrary programs on your computer without them running forever? **You charge
 per step and stop when the money runs out.**
+
+### EVM-compatible does not mean “built on Ethereum”
+
+Here is one more distinction that prevents a common mistake. **EVM-compatible**
+describes the execution environment: a network can run Ethereum-style contract
+code and use familiar tools. It does not tell you who secures the network.
+
+- **Monad** is its own Layer 1, with its own validators, consensus and final
+  history, while remaining EVM-compatible.
+- **Base** is an Ethereum Layer 2 that relies on Ethereum for important
+  settlement or security, and it is also EVM-compatible.
+- **Polygon PoS** is a connected, independently secured sidechain-style network
+  that is also EVM-compatible.
+
+Think of EVM compatibility like two computers supporting the same operating
+system: compatible software can run on both, but the computers are still
+separate machines with their own owners and security. The analogy stops there —
+blockchains have their own execution, validator and settlement designs.
+
+So: **EVM-compatible ≠ Ethereum L2 ≠ Ethereum sidechain.**
 
 ### Two kinds of account
 
@@ -255,4 +286,5 @@ for you to still own the thing tomorrow — exactly what
 - [ethereum.org — Ethereum Virtual Machine (EVM)](https://ethereum.org/developers/docs/evm/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Ethereum accounts](https://ethereum.org/developers/docs/accounts/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Smart contracts](https://ethereum.org/developers/docs/smart-contracts/) — Reuse (CC BY 4.0), adapted
+- [Monad documentation](https://docs.monad.xyz/) — Link, referenced for the EVM-compatible Layer 1 example
 :::

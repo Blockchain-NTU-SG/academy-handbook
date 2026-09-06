@@ -13,6 +13,10 @@ owner: ""
 One or two sentences. The member should know what they're producing before
 reading anything else.
 
+> Missions assess the week's Core learning, not every concept mentioned in
+> Landscape or Further Exploration. See the [Editorial Guide](../EDITORIAL_GUIDE.md)
+> for the distinction.
+
 ## Why this is the mission
 
 One short paragraph connecting it to the week. Members put more into a task when
