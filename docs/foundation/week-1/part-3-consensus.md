@@ -18,6 +18,15 @@ sources:
   - name: "Bitcoin whitepaper"
     url: "https://bitcoin.org/bitcoin.pdf"
     label: "Link"
+  - name: "Solana documentation"
+    url: "https://solana.com/docs"
+    label: "Link"
+  - name: "CometBFT documentation"
+    url: "https://docs.cometbft.com/"
+    label: "Link"
+  - name: "Avalanche documentation"
+    url: "https://build.avax.network/docs"
+    label: "Link"
 ---
 
 # Week 1 · Part 3 — Consensus, and how chains agree
@@ -223,6 +232,21 @@ maps it properly.
 
 ## Landscape
 
+### Different chains, different agreement details
+
+Proof of Work and Proof of Stake are the first security models to understand,
+but saying that a chain uses Proof of Stake does not completely describe how
+its participants reach agreement. These are useful recognition-level examples:
+
+- **Bitcoin** — confidence grows as more Proof-of-Work blocks build on the accepted history.
+- **Ethereum** — staked validators propose and attest to blocks, and the protocol can reach explicit finality.
+- **Cosmos-style chains** — validators vote until a large majority agrees on a block; CometBFT is one software family used in this ecosystem.
+- **Solana** — staked validators still vote, while Proof of History adds a cryptographic clock and ordering signal that helps participants agree on when events happened.
+- **Avalanche** — validators repeatedly ask small samples of other validators, allowing preferences to converge without every participant asking everyone else.
+
+You do not need these mechanisms yet. Week 2 uses them to show why different
+blockchains make different design choices.
+
 - **51% attack** — an attacker gains enough control over how new blocks are chosen to heavily influence the chain. Depending on the design, they may block transactions, reorder them, or try to reverse one of their own recent payments so they spend the same funds twice. The exact threshold and effects depend on the consensus design; this does not reveal private keys or let them simply take coins from someone else's wallet
 - **Slashing** — taking away part of a validator's staked assets when the protocol can prove serious rule-breaking. It makes some attacks costly, but only exists in some Proof of Stake designs
 - **Validator / miner** — validators participate in Proof of Stake; miners produce blocks in Proof of Work. They secure networks in different ways and carry different costs
@@ -270,4 +294,5 @@ security claim.**
 - [ethereum.org — Proof of stake](https://ethereum.org/developers/docs/consensus-mechanisms/pos/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Proof of work](https://ethereum.org/developers/docs/consensus-mechanisms/pow/) — Reuse (CC BY 4.0), adapted
 - [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf) — Link, referenced only
+- [Solana documentation](https://solana.com/docs) · [CometBFT documentation](https://docs.cometbft.com/) · [Avalanche documentation](https://build.avax.network/docs) — Link, referenced for the Landscape examples
 :::

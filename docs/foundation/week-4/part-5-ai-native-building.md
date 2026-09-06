@@ -114,7 +114,7 @@ trivial once someone thought to run it.
 
 ### Where you must inspect and test
 
-The [reviewer guide](https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/reviewers/review-guide.md)
+The [submission review guide](https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/reviewers/submission-review.md)
 draws this line, and it is a good one.
 
 For most code, the standard is *"can you explain what it does?"*

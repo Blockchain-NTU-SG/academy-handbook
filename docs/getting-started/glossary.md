@@ -18,6 +18,18 @@ sources:
   - name: "ethereum.org — Networks"
     url: "https://ethereum.org/developers/docs/networks/"
     label: "Reuse"
+  - name: "Base documentation"
+    url: "https://docs.base.org/"
+    label: "Link"
+  - name: "Arbitrum documentation"
+    url: "https://docs.arbitrum.io/"
+    label: "Link"
+  - name: "Across documentation"
+    url: "https://docs.across.to/"
+    label: "Link"
+  - name: "Wormhole documentation"
+    url: "https://wormhole.com/docs/"
+    label: "Link"
 ---
 
 # Week 0 · Part 2 — Web3 starter glossary
@@ -130,8 +142,8 @@ Words you will hear early but do not need yet.
 |---|---|---|
 | **Smart contract** | A program that runs on a blockchain | Week 3 |
 | **DApp** | An application that uses smart contracts or on-chain state for part of its logic | Week 3 |
-| **Layer 1 / Layer 2** | A base chain, and a network built on top to make it cheaper | Week 2 |
-| **Bridge** | Infrastructure for moving value between blockchains | Week 2 |
+| **Layer 1 / Layer 2** | A base blockchain that secures itself; a separate network that handles activity while relying on the L1 for important settlement or security. Ethereum is an L1; Base and Arbitrum are Ethereum L2 examples | Week 2 |
+| **Bridge** | Infrastructure that helps assets or messages move between networks. Across and Wormhole are examples | Week 2 |
 | **Oracle** | A service that feeds outside data to smart contracts | Week 3 |
 | **Wallet** | Software that holds your keys and signs transactions | Week 1 |
 | **Seed phrase** | 12 or 24 words that recover your wallet | Week 1, Part 6 |
@@ -140,7 +152,7 @@ Words you will hear early but do not need yet.
 | **EVM** | The Ethereum Virtual Machine, where contracts run | Week 2 |
 | **NFT** | A token where each unit is individually distinct | Weeks 1, 3 |
 | **RWA** | Real World Assets, represented on-chain | Week 4 |
-| **ZK** | Zero-knowledge cryptography, for privacy and scaling | Week 4 |
+| **ZK** | Zero-knowledge cryptography, for privacy and scaling | Week 2; broader uses in Week 4 |
 
 ::: danger Seed phrase — the one entry that matters today
 **Never share it with another person or enter it because someone told you to.**
@@ -160,8 +172,8 @@ Unpacked with this glossary and nothing else:
 
 | Fragment | Meaning |
 |---|---|
-| The DAO passed a proposal | The token-holder group voted through a formal change |
-| deploy the protocol on an L2 | Run the same application on a faster, cheaper network built on Ethereum |
+| The DAO passed a proposal | The DAO's governance process approved a proposed change |
+| deploy the protocol on an L2 | Run the application on an Ethereum L2 — a separate network that handles activity while relying on Ethereum for important settlement/security; lower fees are often one benefit |
 | TVL migrated from mainnet | The value people had deposited moved there |
 
 Plain English: **the community voted to move to a cheaper network, and users
@@ -182,4 +194,6 @@ the point of this page.
 - [ethereum.org — Gas and fees](https://ethereum.org/developers/docs/gas/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Stablecoins](https://ethereum.org/stablecoins/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Networks](https://ethereum.org/developers/docs/networks/) — Reuse (CC BY 4.0), adapted
+- [Base documentation](https://docs.base.org/) · [Arbitrum documentation](https://docs.arbitrum.io/) — Link, referenced for L2 examples
+- [Across documentation](https://docs.across.to/) · [Wormhole documentation](https://wormhole.com/docs/) — Link, referenced for bridge examples
 :::

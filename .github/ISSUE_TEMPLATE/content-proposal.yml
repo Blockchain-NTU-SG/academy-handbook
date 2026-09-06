@@ -1,0 +1,66 @@
+name: Content proposal
+description: Propose a deliberate change to learner-facing curriculum content.
+title: "[Content proposal] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for a deliberate curriculum change. Assessment changes require explicit Education approval.
+
+  - type: textarea
+    id: learner_problem
+    attributes:
+      label: Learner problem
+      description: What learner need or repeated confusion does this address?
+    validations:
+      required: true
+
+  - type: input
+    id: affected_pages
+    attributes:
+      label: Affected page(s)
+      placeholder: docs/foundation/week-2/part-3-why-ethereum-and-evm.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_insufficient
+    attributes:
+      label: Why is the current content insufficient?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_scope
+    attributes:
+      label: Proposed scope
+      description: Describe the smallest useful change and what is intentionally out of scope.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: learning_level
+    attributes:
+      label: Learning level
+      options:
+        - Core
+        - Landscape
+        - Further Exploration
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Supporting sources
+      description: Include primary/official sources and any relevant attribution or permission basis.
+
+  - type: dropdown
+    id: assessment_change
+    attributes:
+      label: Are assessment changes proposed?
+      options:
+        - No
+        - Yes — requires explicit Education approval
+    validations:
+      required: true
