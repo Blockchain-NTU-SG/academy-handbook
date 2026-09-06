@@ -11,16 +11,23 @@ const pages = [
   { path: 'foundation/week-2/part-4-transactions-and-gas.html', budgeted: true },
   { path: 'foundation/week-2/part-5-l1-l2-and-bridges.html', budgeted: true },
   { path: 'foundation/week-3/part-3-remix-lab.html', budgeted: true },
-  // Markmap's page-scoped runtime is intentionally heavier than ordinary routes.
+  // W4P1's page-scoped Markmap runtime is intentionally heavier than ordinary routes.
   { path: 'foundation/week-4/part-1-industry-map.html', budgeted: false },
-  { path: 'foundation/week-4/part-3-research-tool-map.html', budgeted: false },
+  // W4P3 currently receives Plume's shared Mermaid/d3 chunk even though its
+  // content uses tables, Tabs and Steps rather than Markmap. Keep an explicit
+  // route budget until that upstream shared-chunk behaviour changes.
+  {
+    path: 'foundation/week-4/part-3-research-tool-map.html',
+    budget: { raw: 1900 * 1024, gzip: 500 * 1024 },
+  },
   { path: 'foundation/week-4/part-4-github-in-practice.html', budgeted: true },
   { path: 'foundation/week-4/part-5-ai-native-building.html', budgeted: true },
 ]
 
 // Generous headroom catches a return to multi-MiB route graphs without making
-// normal content growth a failure. Markmap-heavy routes are reported below but
-// are tracked separately because their current page-scoped runtime is larger.
+// normal content growth a failure. W4P1 is reported separately because its
+// page-scoped Markmap runtime is intentionally larger; W4P3 has an explicit
+// route budget documented in the page list above.
 const budget = { raw: 650 * 1024, gzip: 225 * 1024 }
 
 function getInitialAssets(html) {
@@ -63,21 +70,22 @@ function measure(page) {
 
 let budgetFailed = false
 
-for (const { path, budgeted } of pages) {
+for (const page of pages) {
+  const { path, budgeted = true, budget: pageBudget = budget } = page
   const result = measure(path)
   console.log(`${path}: ${(result.raw / 1024).toFixed(1)} KiB raw, ${(result.gzip / 1024).toFixed(1)} KiB gzip`)
   if (budgeted) {
     const exceeded = []
-    if (result.raw > budget.raw)
-      exceeded.push(`raw > ${(budget.raw / 1024).toFixed(0)} KiB`)
-    if (result.gzip > budget.gzip)
-      exceeded.push(`gzip > ${(budget.gzip / 1024).toFixed(0)} KiB`)
+    if (result.raw > pageBudget.raw)
+      exceeded.push(`raw > ${(pageBudget.raw / 1024).toFixed(0)} KiB`)
+    if (result.gzip > pageBudget.gzip)
+      exceeded.push(`gzip > ${(pageBudget.gzip / 1024).toFixed(0)} KiB`)
     if (exceeded.length) {
       console.error(`  BUDGET EXCEEDED: ${exceeded.join(', ')}`)
       budgetFailed = true
     }
   } else {
-    console.log('  budget: informational Markmap-heavy route (page-scoped runtime)')
+    console.log('  budget: informational Markmap-specific route (page-scoped runtime)')
   }
   for (const asset of result.assets.sort((a, b) => b.raw - a.raw).slice(0, 6))
     console.log(`  ${(asset.raw / 1024).toFixed(1)} KiB raw ${(asset.gzip / 1024).toFixed(1)} KiB gzip ${asset.name}`)

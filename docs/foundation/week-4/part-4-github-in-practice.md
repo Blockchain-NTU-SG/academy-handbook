@@ -433,7 +433,7 @@ If it happens: rotate the key immediately. Treat it as compromised, because it i
 
 ## Worked example
 
-Two repositories from the same eight-week sprint. Same amount of work.
+Two repositories from the same four-week Proof of Work sprint. Same amount of work.
 
 :::: tabs
 @tab The one nobody can use

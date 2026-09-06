@@ -44,7 +44,7 @@ flowchart TD
   P3["<b>3 · Research tools</b><br/><i>how do I check a claim?</i>"]
   P4["<b>4 · GitHub</b><br/><i>how do I show my work?</i>"]
   P5["<b>5 · AI-native building</b><br/><i>how do I build with AI, not blindly?</i>"]
-  P6["<b>6 · Your direction</b><br/><i>what am I building for Weeks 5–8?</i>"]
+  P6["<b>6 · Your direction</b><br/><i>what could I build next?</i>"]
   P1 --> P2 --> P3 --> P4 --> P5 --> P6
 ```
 

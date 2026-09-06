@@ -158,7 +158,7 @@ acting on any direct message. See [Part 4](./safety.md).
 
 ### The two rules
 
-::: danger These hold for all eight weeks and have no exceptions
+::: danger These hold throughout the Academy and have no exceptions
 ==**1. Testnet only.**== Every hands-on activity uses a test network. Testnet coins
 are free and worth nothing. No mission will ever require real money, mainnet, or
 a wallet holding real assets. If a mission appears to ask this, stop and ask in
@@ -246,7 +246,7 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
 
    Join the Academy Telegram group using the invite in the same email, and post
    a one-line introduction: what you study, and one thing you want to understand
-   by Week 8.
+   by the end of the Foundation.
 ::::
 
 <figure class="academy-shot">
@@ -265,10 +265,10 @@ Someone joining with no technical background creates a GitHub account under a
 sensible username, turns on 2FA, and pushes one commit to a README. Total time:
 about fifteen minutes. Nothing about it is impressive.
 
-Eight weeks later, that same repository holds their Week 3 contract, their Week 4
-Direction Card, and their final Proof of Work with a README explaining what they
-built and what they would do next. The commit history shows it accumulating week
-by week.
+In the full programme, eight weeks later, that same repository holds their Week 3
+contract, their Week 4 Direction Card, and their final Proof of Work with a README
+explaining what they built and what they would do next. The commit history shows
+it accumulating week by week.
 
 ::: important The value is not any single commit
 It is that there is a visible, dated trail of someone learning in public — which
