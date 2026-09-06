@@ -222,8 +222,8 @@ Part 3](../week-2/part-3-why-ethereum-and-evm.md) explained why a contract canno
 fetch one: it must be deterministic, so it cannot read the internet.
 
 ::: important So a price has to be *put on-chain by a transaction* first
-   ==That is what an oracle is: a service that writes external data on-chain so
-   contracts can read it, with every node seeing the identical value.==
+==That is what an oracle is: a service that writes external data on-chain so
+contracts can read it, with every node seeing the identical value.==
 
 And it is why [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md) put the
 oracle in its own row. **The contract can be flawless and the input still

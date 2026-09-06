@@ -26,8 +26,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check lazy-mark syntax
+        run: npm run docs:check-marks
+
       - name: Build documentation
         run: npm run docs:build
 
       - name: Check reading-time consistency
         run: npm run docs:check-times
+
+      - name: Check initial JavaScript payload
+        run: npm run docs:check-payload

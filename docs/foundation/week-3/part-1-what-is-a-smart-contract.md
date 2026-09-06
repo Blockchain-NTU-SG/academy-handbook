@@ -130,7 +130,7 @@ Often a bot or service is paid a fee for doing it.
 
 ### How a DApp uses a contract
 
-a DApp is not just a smart contract. ==It is usually a user interface connected to
+A DApp is not just a smart contract. ==It is usually a user interface connected to
 a wallet, a route to a blockchain node, and the contract that holds on-chain
 rules and state.==
 

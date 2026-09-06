@@ -148,7 +148,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
        <span class="academy-shot-label">Screenshot 2</span>
        <span class="academy-shot-what">The Solidity Compiler tab after a successful compile, with the version selector and the green tick highlighted.</span>
      </div>
-     <figcaption>==Green tick means it compiled. It does not mean the contract is correct.==</figcaption>
+     <figcaption>Green tick means it compiled. It does not mean the contract is correct.</figcaption>
    </figure>
 
 4. **Connect your wallet**
@@ -262,7 +262,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
        <span class="academy-shot-label">Screenshot 7</span>
        <span class="academy-shot-what">The Etherscan <strong>Logs</strong> tab showing the emitted event, either decoded as <code>MessageChanged</code> or represented by raw topics and data.</span>
      </div>
-     <figcaption>==This is what an event looks like from outside. Applications read exactly this.==</figcaption>
+     <figcaption>This is what an event looks like from outside. Applications read exactly this.</figcaption>
    </figure>
 ::::
 

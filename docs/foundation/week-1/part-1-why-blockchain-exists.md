@@ -59,49 +59,36 @@ technical label that every application must satisfy.==
 - Web1 — mostly read
   time="Early web" icon="material-symbols:menu-book-outline" type="info"
 
-  Early websites mainly published information for people to browse.
+  Early websites mainly published information for people to browse. “Mostly
+  read” is a useful summary, not a claim that every early website was completely
+  static.
 - Web2 — read + write
   time="Platform web" icon="material-symbols:edit-outline" type="tip"
 
   Platforms made accounts, user-generated content and social interaction normal.
+  ==On Instagram, you create the content, but the platform controls the database
+  that says what exists and who may access it.==
 - Web3 — read + write + user-controlled state
   time="Blockchain-oriented web" icon="material-symbols:account-balance-wallet-outline" type="important"
 
-  Some important state can be controlled with keys and maintained on a shared network.
+  Some important state can be controlled with keys and maintained on a shared
+  network. If you hold ETH, a wallet app is an interface rather than the ledger;
+  another compatible wallet can still access the same on-chain state. This does
+  not mean every application detail is on-chain.
 :::
 
 | Aspect | Web1 | Web2 | Web3 |
 |---|---|---|---|
-| **Useful shorthand** | Mostly read | Read + write | Read + write + own — a shorthand for some user-controlled state |
 | **Familiar picture** | An early university, news or company website | Instagram, TikTok or YouTube | A wallet holding ETH, or a DApp using on-chain assets |
 | **Important state** | The website owner publishes the pages | The platform database and account system | Keys plus a shared network for selected on-chain state |
 | **Digital value** | External payment rails | Platform-mediated payments | Native or tokenised programmable assets |
 | **Main trust model** | Site operator | Platform operator | A mix of users, networks, contracts and operators |
 
-These labels describe broad tendencies:
 
-- **Web1** was mainly about publishing and consuming information. Imagine an
-  early university or company website: you can read pages, click links and move
-  around, but there is little user-generated content or persistent personal
-  account state. “Mostly read” is a useful summary, not a claim that every early
-  website was completely static. The web publishes information to you.
-- **Web2** made accounts, user-generated content and social interaction
-  mainstream. On Instagram, you can create an account, post photos, comment,
-  like and message people. But where does that account live? Instagram controls
-  the database, servers and application rules. If it removes a post, suspends an
-  account, closes the service or changes its rules, you cannot independently tell
-Instagram's database to restore the old state. ==**You create the content, but
-the platform controls the database that says what exists and who may access
-it.**== This is about technical control, not a universal legal claim about who
-  owns the content.
-- **Web3** describes a blockchain-oriented vision in which some important state
-  — such as asset ownership, account authority, credentials or protocol
-  positions — can live on a shared network rather than only inside one company's
-  private database. If you hold ETH, MetaMask does not own the ETH record and it
-  is not the ledger; it is an interface. The Ethereum network records the
-  balance, and your key authorises changes. If one wallet app disappears, another
-  compatible wallet can still use the same address and key to read and interact
-  with that on-chain state.
+The web labels describe broad tendencies, not strict eras or universal rules.
+The Web2 point is technical control rather than a universal legal claim about
+who owns content. The Web3 point is that selected state can be user-controlled
+and shared without making every application detail on-chain.
 
 Public blockchain data is typically replicated across many network participants,
 so one company cannot unilaterally rewrite or remove the shared record. But this

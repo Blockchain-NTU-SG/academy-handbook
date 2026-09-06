@@ -19,7 +19,7 @@
   --academy-surface-cyan: #effbfd;
   --academy-off-white: #fbfcfd;
   --academy-title-weight: 800;
-  --academy-title-tracking: -0.04em;
+  --academy-title-tracking: -0.025em;
 
   /* Plume semantic colour bridge */
   --vp-c-brand-1: var(--academy-blue-deep);
@@ -58,8 +58,6 @@
 
   --vp-code-color: #11678f;
   --vp-code-bg: rgb(55 164 227 / 9%);
-  --vp-code-block-bg: #252a35;
-  --vp-code-block-color: #e7edf3;
   --vp-bg-home-hero-name: linear-gradient(
     112deg,
     var(--academy-blue-deep) 8%,
@@ -98,7 +96,7 @@ body {
 .vp-doc h5,
 .vp-doc h6 {
   color: var(--academy-ink);
-  letter-spacing: -0.018em;
+  letter-spacing: -0.01em;
 }
 
 .content-container .vp-doc-title.page-title {
@@ -115,7 +113,7 @@ body {
   font-size: clamp(1.45rem, 1.8vw, 1.65rem);
   font-weight: 700;
   line-height: 1.25;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.015em;
   border-top-color: var(--academy-border);
 }
 
@@ -124,7 +122,7 @@ body {
   font-size: clamp(1.175rem, 1.4vw, 1.3rem);
   font-weight: 650;
   line-height: 1.35;
-  letter-spacing: -0.016em;
+  letter-spacing: -0.01em;
 }
 
 .content-container main .vp-doc-meta {
@@ -140,7 +138,7 @@ body {
 .vp-doc p,
 .vp-doc li,
 .vp-doc summary {
-  color: var(--academy-text-muted);
+  color: var(--academy-text);
 }
 
 .vp-doc p,
@@ -237,24 +235,9 @@ body {
 
 .vp-doc div[class*='language-'] {
   overflow: hidden;
-  border: 1px solid #39404c;
+  border: 1px solid var(--vp-c-border);
   border-radius: 9px;
   box-shadow: 0 8px 20px rgb(43 45 57 / 8%);
-  background: var(--vp-code-block-bg);
-}
-
-/* Shiki emits the light theme's dark text even though the Academy code surface
- * is intentionally dark. Keep plain-text blocks and unstyled code lines
- * readable without changing the syntax theme contract. */
-.vp-doc div[class*='language-'] .shiki,
-.vp-doc div[class*='language-'] .shiki code,
-.vp-doc div[class*='language-'] .shiki .line,
-.vp-doc div[class*='language-'] .shiki .line > span {
-  color: var(--vp-code-block-color) !important;
-}
-
-.vp-doc div[class*='language-'] .shiki code {
-  background: transparent !important;
 }
 
 /* Mermaid's default green/purple theme is visually out of place beside the
@@ -361,6 +344,20 @@ body {
   white-space: nowrap;
 }
 
+/* Week 0's five-source orientation map: three equal cards above two equal,
+ * centred cards. This is intentionally scoped to this one page. */
+.vp-doc._getting-started_tools .vp-card-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+}
+
+.vp-doc._getting-started_tools .vp-card-grid > .vp-card-wrapper {
+  grid-column: span 2;
+}
+
+.vp-doc._getting-started_tools .vp-card-grid > .vp-card-wrapper:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
 /* Learning hierarchy: use a quiet margin cue rather than boxed sections. */
 .vp-doc h2#learning-objectives,
 .vp-doc h2#core,
@@ -412,7 +409,7 @@ body {
 }
 
 .vp-navbar-title .title {
-  letter-spacing: -0.012em;
+  letter-spacing: 0;
 }
 
 .vp-navbar-title .logo {
@@ -559,7 +556,7 @@ body {
 
 .vp-home .vp-home-feature .title {
   color: var(--academy-ink);
-  letter-spacing: -0.012em;
+  letter-spacing: 0;
 }
 
 .vp-home .vp-home-feature .details {
@@ -899,6 +896,18 @@ body {
     max-width: 100%;
     overflow-x: auto;
   }
+
+  .vp-doc._getting-started_tools .vp-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .vp-doc._getting-started_tools .vp-card-grid > .vp-card-wrapper {
+    grid-column: span 1;
+  }
+
+  .vp-doc._getting-started_tools .vp-card-grid > .vp-card-wrapper:nth-child(4) {
+    grid-column-start: auto;
+  }
 }
 
 @media (max-width: 430px) {
@@ -906,6 +915,10 @@ body {
     width: 34px;
     min-width: 34px;
     height: 34px !important;
+  }
+
+  .vp-doc._getting-started_tools .vp-card-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .vp-navbar-title .title {

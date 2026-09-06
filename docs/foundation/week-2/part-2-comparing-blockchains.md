@@ -259,6 +259,7 @@ commonly called Subnets.
 
 ### Side by side
 
+::: table max-content
 | Dimension | <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span> |
 |---|---|---|---|---|---|
 | Operator participation | Open under protocol rules | Broad participation is the goal; hardware, stake and client/operator spread still matter | Higher-spec hardware and stake can narrow participation | Depends on each chain and security model | Depends on each Avalanche L1 configuration |
@@ -266,6 +267,7 @@ commonly called Subnets.
 | Throughput | Very low | Low (base) | High | High | High |
 | Security participation | Mining hardware + power | Solo: 32 ETH + hardware; pools are economic participation | Higher-spec hardware + stake | Per-chain or shared-security model | Per-L1 validator configuration |
 | Execution | Limited | EVM | Parallel | Per chain | Configurable |
+:::
 
 ::: tip Read the columns downward, not the rows across
 These are rough qualitative descriptions of particular dimensions, not one

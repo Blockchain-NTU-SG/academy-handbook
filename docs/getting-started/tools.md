@@ -108,14 +108,6 @@ Social, community and news: discovery and context, not final proof.
 :::
 ::::
 
-| Source type | Examples | What it helps answer |
-|---|---|---|
-| **Primary sources** | Project docs, GitHub, governance forums | What a project says, specifies or proposes |
-| **Direct chain records** | Etherscan, other block explorers, raw transactions and state | What actually happened on-chain |
-| **Derived analytics** | Dune, DefiLlama, dashboards and aggregators | Useful interpretations built from raw data |
-| **Independent research** | L2BEAT, Messari, audits and reports | Third-party interpretation and risk analysis |
-| **Current discussion** | X, Discord, Telegram, news and community discussion | Discovery and context, not final proof |
-
 Different sources answer different questions. Use the source that fits the
 question, then cross-check before concluding.
 

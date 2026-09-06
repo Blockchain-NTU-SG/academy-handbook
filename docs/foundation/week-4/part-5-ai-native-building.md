@@ -264,7 +264,6 @@ Continue: decode, threshold, output. Each one built, run, committed.
 ::: important The difference is not AI usage — it is loop size
 **==Both used AI heavily. The second person shipped something they can explain,==**
 extend and debug.
-extend and debug.
 
 The first has 80 lines they are afraid to touch.
 :::
