@@ -96,24 +96,23 @@ expansion.
 The expressway helped with capacity. Now use a different picture for the
 question of final security and settlement:
 
-**L1.** Ethereum is like a city or country with its own official records, court
-and security system. Its network decides its own final history.
-
-**L2.** Base and Arbitrum are like fast commercial districts that process much
-of their daily activity separately, while Ethereum remains the higher court and
-final settlement layer. **An L2 does much of the work elsewhere, but ultimately
-relies on the L1 for important final settlement and security.**
-
-**Sidechain.** Polygon PoS is more like a neighbouring city with its own court,
-records and security system. It can stay connected to Ethereum through bridges,
-but Ethereum does not automatically guarantee the sidechain's internal history.
+:::: card-grid
+::: card title="L1 — runs its own court" icon="material-symbols:gavel"
+Own consensus, security and final history. Ethereum, Solana and Monad each
+maintain their own network-level record.
+:::
+::: card title="L2 — relies on the higher court" icon="material-symbols:account-balance"
+Handles much activity separately while relying on an L1 for important settlement
+and security, plus extra L2 machinery.
+:::
+::: card title="Sidechain — neighbouring court" icon="material-symbols:location-city"
+Runs its own validator and security system. It can connect to Ethereum through
+bridges, but Ethereum does not automatically guarantee its internal history.
+:::
+::::
 
 The analogy is only about where final trust and security sit. Blockchains are
 not literally legal systems.
-
-> **L1 runs its own court. An L2 does much of its work elsewhere but ultimately
-> relies on the L1. A sidechain runs its own court and stays connected through
-> bridges.**
 
 ### Three security relationships
 
@@ -165,10 +164,16 @@ mechanisms.
 
 In shorthand:
 
-```text
-Build a new L1  → own the whole system and the whole security problem
-Build an L2     → reuse more of Ethereum and accept extra L2 machinery
-```
+:::: card-grid
+::: card title="Build a new L1" icon="material-symbols:construction"
+- More control over architecture, validators and final history
+- Your project must fund or attract its own security, infrastructure, liquidity and ecosystem
+:::
+::: card title="Build an L2" icon="material-symbols:layers"
+- Reuse an important Ethereum settlement/security relationship
+- Add L2 machinery such as sequencers, upgrades and withdrawal paths
+:::
+::::
 
 Neither is universally better. They optimise for different things.
 

@@ -136,6 +136,13 @@ export default defineUserConfig({
     llmstxt: true,
     search: academySearch,
     codeHighlighter: {
+      // The Academy intentionally keeps code examples on a dark editor
+      // surface in both page appearances. Pair the same dark Shiki palette
+      // with both modes so token colours stay legible without flattening them.
+      themes: {
+        light: 'vitesse-dark',
+        dark: 'vitesse-dark',
+      },
       lineNumbers: false,
     },
     markdown: {

@@ -41,17 +41,13 @@ the network follows.
 ::: important First-pass model
 Follow the story in this order:
 
-```text
-Block proposed
-  ↓
-Does it follow the rules? → validity check
-  ↓
-If valid histories compete, which one does the network follow?
-  ↓
-Consensus helps the network converge on one history
-  ↓
-Confirmations and finality increase confidence in that history
-```
+:::: steps
+1. **Block proposed** — A participant suggests the next block.
+2. **Validate it** — Every node checks whether the block follows the rules.
+3. **Valid histories may compete** — More than one allowed block can appear at nearly the same time.
+4. **Consensus chooses the history** — The agreement mechanism helps the network converge on one valid history.
+5. **Confirmations / finality increase confidence** — More evidence makes that history safer to rely on.
+::::
 
 ==Consensus does not make an invalid block valid. It helps the network choose
 between histories that already pass the rules.==

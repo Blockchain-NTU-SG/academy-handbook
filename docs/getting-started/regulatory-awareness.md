@@ -71,11 +71,18 @@ or financial advice.
 
 The most useful single idea on this page.
 
-Regulators do not generally ask "is this a blockchain?" They ask ==**what are you
-actually doing, and for whom.**== Holding customer assets, running an exchange,
-issuing a payment token, moving money across borders — these are recognisable
-financial activities, and they attract obligations whether the plumbing is a
-database or a distributed ledger.
+Regulators do not generally ask "is this a blockchain?" They ask what is being
+done, where, and for whom. Use this sequence before looking for a rule:
+
+::: steps
+1. **Activity** — What is actually happening? Holding customer assets, running an exchange, issuing a payment token or moving value are different activities.
+2. **Jurisdiction** — Where is it happening, and who is it for? The same activity can be treated differently in Singapore, the EU or the US.
+3. **Official source** — Which regulator, law or official framework explains the current position?
+4. **Obligations** — What duties, protections or restrictions follow for this activity and audience?
+:::
+
+The plumbing may be a database or a distributed ledger; the activity is what
+usually determines the regulatory question.
 
 ::: important The question is never "is crypto legal in Singapore?"
 It is: ==**what activity is this, who is it for, and does that activity already
@@ -171,12 +178,25 @@ explains the relevant obligations.
 
 Start by knowing which question each framework helps answer:
 
-| Framework | What it helps you understand |
-|---|---|
-| **SEC (United States)** | Whether a crypto asset or transaction may fall within US federal securities laws; the answer depends on its structure and the activity involved |
-| **CFTC (United States)** | Oversight of certain commodity derivatives and anti-fraud or manipulation concerns in relevant digital-asset markets; it is not a blanket regulator for every crypto activity |
-| **MiCA (European Union)** | A harmonised framework for issuing crypto-assets and providing related services that are not covered by other EU financial-services laws |
-| **GENIUS Act (United States)** | A federal framework for payment stablecoins, including issuer, reserve and compliance requirements. Implementation rules and effective dates are being phased in; check current Treasury guidance. It does not regulate every crypto asset |
+:::: card-grid
+::: card title="SEC" icon="material-symbols:account-balance"
+United States. Helps you ask whether an asset or transaction may fall under
+federal securities laws, depending on its structure and activity.
+:::
+::: card title="CFTC" icon="material-symbols:monitoring"
+United States. Helps you orient around relevant commodity derivatives and
+market-conduct questions; it is not a blanket crypto regulator.
+:::
+::: card title="MiCA" icon="material-symbols:public"
+European Union. Helps you orient around issuing crypto-assets and providing
+related services within the EU framework.
+:::
+::: card title="GENIUS Act" icon="material-symbols:account-balance-wallet"
+United States. Helps you orient around payment-stablecoin issuers, reserves and
+compliance; implementation details and effective dates still require current
+Treasury guidance.
+:::
+::::
 
 These frameworks are orientation points, not a legal checklist. Check the
 current regulator or legislative source for the jurisdiction, asset and activity

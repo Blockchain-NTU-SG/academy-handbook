@@ -101,16 +101,19 @@ in 2014**, motivated in part by reducing how much people must rely on trusted
 central intermediaries. “Web3” later became the broader industry term used around
 blockchain-based applications, assets and ownership.
 
-The memorable **“read + write + own”** phrase is therefore a way to picture this
-change in where some state lives and who can authorise it, not a promise that
-users own every piece of application data or that Web3 replaces Web2. A modern
-application can use a Web2 database and login alongside a wallet and selected
-on-chain state.
+::: details Naming caveat — Web3 vs Web 3.0
+The blockchain-oriented Web3 idea and the older **Semantic Web / “Web 3.0”** idea
+are not necessarily the same concept. You do not need Semantic Web theory for
+this course; just avoid treating the shared name as proof that the two visions
+are identical.
+:::
 
-One last naming detail: the blockchain-oriented Web3 idea and the older
-**Semantic Web / “Web 3.0”** idea are not necessarily the same concept. You do not
-need Semantic Web theory for this course; just avoid treating the shared name as
-proof that the two visions are identical.
+::: tip Read + write + own is shorthand
+Picture this as a change in where some state lives and who can authorise it, not
+a promise that users own every piece of application data or that Web3 replaces
+Web2. A modern application can use a Web2 database and login alongside a wallet
+and selected on-chain state.
+:::
 
 That is why people started calling this **Web3**. It also leaves the question
 that leads directly into this page: if important shared state is not controlled
@@ -119,34 +122,13 @@ accepted? Blockchain is one answer to that problem.
 
 ## Core
 
-### Every online system you use has an operator
+### Operator → problem → answer
 
-When you send someone money through a bank app, you don't transfer anything. You
-ask your bank to update its records. The bank owns the ledger, decides whether the
-update happens, and can reverse it.
-
-That arrangement works well. Operators are efficient, and they can fix mistakes.
-Most of the time you want one.
-
-The catch is that everyone in the system has to trust the operator — to stay
-solvent, stay honest, stay online, and keep serving you. Usually reasonable. Not
-always.
-
-### The problem: agreeing without an operator
-
-Say you want a shared record of who owns what, where no single party controls it.
-Now you have a genuinely hard problem. If everyone keeps their own copy, whose
-copy is right when they disagree?
-
-Copying a file is free, so nothing stops someone spending the same money twice by
-telling two different people two different things. With an operator this is easy —
-they check their records. Without one, it went unsolved for decades.
-
-### The idea
-
-==A blockchain is a shared record that many independent computers maintain
-together, with rules that let them agree on what is true without any of them being
-in charge.==
+::: steps
+1. **Operator** — When you send money through a bank app, you ask the bank to update its ledger. That is efficient, reversible and usually useful, but everyone relies on the operator to stay solvent, honest and available.
+2. **Problem** — If many independent parties keep a shared record with no single controller, whose copy is right when they disagree? Without an operator checking its records, even double-spending becomes a hard coordination problem.
+3. **Answer** — ==A blockchain is a shared record that many independent computers maintain together, with rules that let them agree on what is true without any of them being in charge.==
+:::
 
 <figure class="academy-reference-visual">
   <img src="/learning/blockchain-distributed-network.jpg" alt="A distributed network of connected nodes, illustrating how many computers can maintain a shared record together." />

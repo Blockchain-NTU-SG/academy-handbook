@@ -438,12 +438,12 @@ Two repositories from the same eight-week sprint. Same amount of work.
 ::: tabs
 @tab The one nobody can use
 
-```text
-web3-project/
-  main.py
-  test.py
-  notes.txt
-```
+::: file-tree icon="colored" title="A repository with no orientation"
+- web3-project # project root
+  - main.py
+  - test.py
+  - notes.txt
+:::
 
 - README: none, or one line
 - Commits: `update`, `update`, `fix`, `asdf`
@@ -455,15 +455,16 @@ A reviewer cannot tell what it is, whether it works, or what the member learned.
 
 @tab The one that works
 
-```text
-sepolia-gas-tracker/
-  README.md
-  LICENSE
-  .gitignore
-  src/
-  data/
-  docs/screenshots/
-```
+::: file-tree icon="colored" title="A reviewable repository"
+- sepolia-gas-tracker # project root
+  - README.md
+  - LICENSE
+  - .gitignore
+  - src
+  - data
+  - docs
+    - screenshots
+:::
 
 - README: problem, what it does, how to run it, what was learned, limitations, sources
 - Commits: `feat: add gas price fetcher`, `docs: add setup steps`, `fix: handle API timeout`
