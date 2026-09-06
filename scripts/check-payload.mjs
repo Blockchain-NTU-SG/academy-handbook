@@ -7,7 +7,14 @@ const pages = [
   'index.html',
   'getting-started/programme.html',
   'foundation/week-1/part-1-why-blockchain-exists.html',
+  'foundation/week-1/part-8-the-user-journey.html',
+  'foundation/week-2/part-4-transactions-and-gas.html',
+  'foundation/week-2/part-5-l1-l2-and-bridges.html',
+  'foundation/week-3/part-3-remix-lab.html',
+  'foundation/week-4/part-1-industry-map.html',
+  'foundation/week-4/part-3-research-tool-map.html',
   'foundation/week-4/part-4-github-in-practice.html',
+  'foundation/week-4/part-5-ai-native-building.html',
 ]
 
 function getInitialAssets(html) {

@@ -57,12 +57,15 @@ technical label that every application must satisfy.==
 
 ::: timeline
 - Web1 — mostly read
+  time="Early web" icon="material-symbols:menu-book-outline" type="info"
 
   Early websites mainly published information for people to browse.
 - Web2 — read + write
+  time="Platform web" icon="material-symbols:edit-outline" type="tip"
 
   Platforms made accounts, user-generated content and social interaction normal.
 - Web3 — read + write + user-controlled state
+  time="Blockchain-oriented web" icon="material-symbols:account-balance-wallet-outline" type="important"
 
   Some important state can be controlled with keys and maintained on a shared network.
 :::

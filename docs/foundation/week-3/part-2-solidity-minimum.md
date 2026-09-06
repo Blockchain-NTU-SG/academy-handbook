@@ -56,7 +56,7 @@ produced.
 
 Before reading the full contract, look at the smallest version of the idea:
 
-```solidity
+```solidity title="Minimal Guestbook.sol"
 contract Guestbook {
     string public message = "Hello";
 
@@ -85,7 +85,7 @@ Here is the complete, working `Guestbook` you will deploy tomorrow. It adds a
 visitor, a count and an event so that you can see what a real small contract
 remembers and announces.
 
-```solidity
+```solidity title="Guestbook.sol — complete example"
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -124,7 +124,7 @@ names the important pieces one at a time.
 :::: tabs
 @tab State — what the contract remembers
 
-```solidity
+```solidity title="Guestbook.sol — state"
 string public message;
 address public lastVisitor;
 uint256 public visitCount;
@@ -146,7 +146,7 @@ read function for it. Declaring `message` public means anyone can call
 
 @tab Functions
 
-```solidity
+```solidity title="Guestbook.sol — write function"
 function setMessage(string calldata newMessage) external {
     message = newMessage;
     lastVisitor = msg.sender;
@@ -162,7 +162,7 @@ transaction.
 important things in Solidity — it is how a contract knows *who* is asking, and
 it is the basis of every permission check you will ever read.
 
-```solidity
+```solidity title="Guestbook.sol — read function"
 function getMessage() external view returns (string memory) {
     return message;
 }
@@ -175,7 +175,7 @@ transaction fee. It may still depend on a node response, as
 
 @tab Events — what the contract announces
 
-```solidity
+```solidity title="Guestbook.sol — event"
 event MessageChanged(address indexed visitor, string newMessage);
 ```
 
@@ -210,7 +210,7 @@ Never put a secret in a contract. There is no such thing.
 
 @tab The header — version and licence
 
-```solidity
+```solidity title="Guestbook.sol — version and licence"
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 ```
@@ -276,7 +276,7 @@ You will meet `require` and `onlyOwner` when you read a real token in
 
 Read this contract and answer three questions before scrolling.
 
-```solidity
+```solidity{8} title="Vault.sol — review example"
 contract Vault {
     address public owner;
     mapping(address => uint256) public deposits;

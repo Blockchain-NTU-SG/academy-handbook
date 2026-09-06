@@ -99,7 +99,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
    Paste in the contract from [Part 2](./part-2-solidity-minimum.md):
 
-   ```solidity
+   ```solidity title="Guestbook.sol — paste into Remix"
    // SPDX-License-Identifier: MIT
    pragma solidity ^0.8.20;
 
@@ -239,9 +239,8 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
    ::: important You just felt the read/write distinction
    ==One button answered instantly and cost nothing. The other opened your wallet,
-   cost gas, and took a block to take effect.
-
-   That is not a Remix quirk. It is the difference between asking a node a
+   cost gas, and took a block to take effect. That is not a Remix quirk. It is
+   the difference between asking a node a
    question and asking the entire network to change its shared state.==
    :::
 
@@ -269,39 +268,41 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
 ## If something goes wrong
 
-::: details "Gas estimation failed" or the deploy button does nothing
-Usually one of three things:
+:::: collapse accordion
+- :+ "Gas estimation failed" or the deploy button does nothing
 
-1. **Not enough test ETH.** Deploying costs more than a transfer. Top up from a faucet.
-2. **Wrong network.** Check the Environment dropdown and your wallet agree.
-3. **Not compiled.** Go back to the Compiler tab and check for a green tick.
-:::
+  Usually one of three things:
 
-::: details The wallet does not open when I press Deploy
-Remix lost the connection. Re-select **Injected Provider — MetaMask** in the
-Environment dropdown, and check the wallet extension is unlocked.
-:::
+  1. **Not enough test ETH.** Deploying costs more than a transfer. Top up from a faucet.
+  2. **Wrong network.** Check the Environment dropdown and your wallet agree.
+  3. **Not compiled.** Go back to the Compiler tab and check for a green tick.
 
-::: details Compilation errors I do not understand
-Read the **first** error only — later ones are usually knock-on effects. The
-most common causes are a missing semicolon, a mismatched `pragma` version, or a
-stray character from pasting.
+- :- The wallet does not open when I press Deploy
 
-If you are stuck for more than ten minutes, paste the error into the Telegram
-group. Someone will have seen it.
-:::
+  Remix lost the connection. Re-select **Injected Provider — MetaMask** in the
+  Environment dropdown, and check the wallet extension is unlocked.
 
-::: details Optional — verify your source on Etherscan
-Not required for the mission, and genuinely worth doing.
+- :- Compilation errors I do not understand
 
-Etherscan's **Verify and Publish** flow checks that your submitted source matches
-the deployed bytecode. Once verified, Etherscan can show human-readable source
-and a convenient **Read/Write** interface for the functions it can identify.
+  Read the **first** error only — later ones are usually knock-on effects. The
+  most common causes are a missing semicolon, a mismatched `pragma` version, or a
+  stray character from pasting.
 
-This is what [Part 1](./part-1-what-is-a-smart-contract.md) meant by verified
-source, and what [Week 0 Part 3](../../getting-started/tools.md) meant about
-explorers showing you code.
-:::
+  If you are stuck for more than ten minutes, paste the error into the Telegram
+  group. Someone will have seen it.
+
+- :- Optional — verify your source on Etherscan
+
+  Not required for the mission, and genuinely worth doing.
+
+  Etherscan's **Verify and Publish** flow checks that your submitted source matches
+  the deployed bytecode. Once verified, Etherscan can show human-readable source
+  and a convenient **Read/Write** interface for the functions it can identify.
+
+  This is what [Part 1](./part-1-what-is-a-smart-contract.md) meant by verified
+  source, and what [Week 0 Part 3](../../getting-started/tools.md) meant about
+  explorers showing you code.
+::::
 
 ## Worked example
 

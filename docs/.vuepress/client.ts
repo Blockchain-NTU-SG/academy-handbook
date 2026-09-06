@@ -123,6 +123,18 @@ function scheduleHomeReveal() {
   window.requestAnimationFrame(() => setupHomeReveal())
 }
 
+function scheduleMarkmapFit() {
+  if (typeof window === 'undefined')
+    return
+
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      if (document.querySelector('.markmap-wrapper'))
+        window.dispatchEvent(new Event('resize'))
+    })
+  })
+}
+
 export default defineClientConfig({
   layouts: {
     Layout: AcademyLayout,
@@ -156,9 +168,11 @@ export default defineClientConfig({
     router.afterEach(() => {
       scheduleHomeReveal()
       scheduleAdjacentPrefetch()
+      scheduleMarkmapFit()
     })
     setupIntentPrefetch()
     scheduleHomeReveal()
     scheduleAdjacentPrefetch()
+    scheduleMarkmapFit()
   },
 })

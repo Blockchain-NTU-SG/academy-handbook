@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useData } from 'vuepress/client'
 import { Layout as PlumeLayout } from 'vuepress-theme-plume/client'
+import PageContextMenu from 'vuepress-theme-plume/features/PageContextMenu.vue'
 
 const { frontmatter } = useData()
 
@@ -26,6 +27,9 @@ const isAcademyPart = computed(() =>
 
 <template>
   <PlumeLayout v-if="isAcademyPart" class="academy-page-layout">
+    <template #doc-title-after>
+      <PageContextMenu />
+    </template>
     <template #doc-meta-bottom>
       <div class="academy-reading-time" role="status">
         <span class="vpi-clock" aria-hidden="true" />
@@ -33,7 +37,11 @@ const isAcademyPart = computed(() =>
       </div>
     </template>
   </PlumeLayout>
-  <PlumeLayout v-else />
+  <PlumeLayout v-else>
+    <template #doc-title-after>
+      <PageContextMenu />
+    </template>
+  </PlumeLayout>
 </template>
 
 <style>

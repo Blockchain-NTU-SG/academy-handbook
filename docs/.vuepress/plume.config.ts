@@ -19,7 +19,7 @@ export default defineThemeConfig({
     message: 'Blockchain@NTU Academy',
   },
   transition: {
-    page: true,
+    page: false,
     postList: true,
     appearance: 'fade',
   },

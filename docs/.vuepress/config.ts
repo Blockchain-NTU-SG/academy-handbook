@@ -34,6 +34,26 @@ const academyLazyClientFeatures: Plugin = {
       }
     }
 
+    if (sourceId.endsWith('/.temp/md-power/config.js')) {
+      const lazyImports: string[] = [];
+      const transformed = code.replace(
+        /import (VPDemoBasic|VPDemoNormal) from (['"])([^'"]+)\2\n?/g,
+        (_match, name: string, _quote: string, source: string) => {
+          lazyImports.push(
+            `const ${name} = defineAsyncComponent(() => import(${JSON.stringify(source)}))`,
+          );
+          return '';
+        },
+      );
+
+      if (lazyImports.length) {
+        return {
+          code: `import { defineAsyncComponent } from 'vue'\n${lazyImports.join('\n')}\n${transformed}`,
+          map: null,
+        };
+      }
+    }
+
     if (sourceId.endsWith('/.temp/internal/home-hero-effects.js')) {
       const lazyImports: string[] = [];
       const transformed = code.replace(
@@ -113,18 +133,37 @@ export default defineUserConfig({
     },
     article: '/article/',
     cache: 'filesystem',
+    llmstxt: true,
     search: academySearch,
     codeHighlighter: {
       lineNumbers: false,
     },
     markdown: {
       mark: 'lazy',
+      abbr: {
+        ABI: 'Application Binary Interface',
+        DAO: 'decentralised autonomous organisation',
+        DEX: 'decentralised exchange',
+        EOA: 'externally owned account',
+        EVM: 'Ethereum Virtual Machine',
+        IBC: 'Inter-Blockchain Communication',
+        L1: 'Layer 1',
+        L2: 'Layer 2',
+        NFT: 'non-fungible token',
+        PoS: 'Proof of Stake',
+        PoW: 'Proof of Work',
+        RPC: 'remote procedure call',
+        RWA: 'real-world asset',
+        TVL: 'total value locked',
+        ZK: 'zero-knowledge',
+      },
       annotation: true,
       pdf: true,
       chat: true,
       icon: {
         provider: 'iconify',
       },
+      table: true,
       collapse: true,
       demo: true,
       mermaid: true,

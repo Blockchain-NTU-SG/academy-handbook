@@ -69,7 +69,7 @@ comes next.
 There is nothing magic about ERC-20. It is a list of functions every fungible
 token agrees to expose:
 
-```solidity
+```solidity{1-5} title="ERC-20 interface"
 function balanceOf(address owner) external view returns (uint256);
 function transfer(address to, uint256 amount) external returns (bool);
 function approve(address spender, uint256 amount) external returns (bool);
@@ -115,7 +115,7 @@ the industry.
 
 State is essentially one table:
 
-```solidity
+```solidity title="ERC-20 balances"
 mapping(address => uint256) balances;
 ```
 
@@ -138,7 +138,7 @@ different owners.
 
 The state flips around:
 
-```solidity
+```solidity title="ERC-721 ownership"
 mapping(uint256 => address) owners;   // token id -> owner
 ```
 
@@ -164,7 +164,7 @@ is a real question**==, not a technicality.
 
 One contract managing **many token types at once**, fungible or not.
 
-```solidity
+```solidity title="ERC-1155 balances"
 mapping(uint256 => mapping(address => uint256)) balances;  // id -> owner -> amount
 ```
 
@@ -222,9 +222,8 @@ Part 3](../week-2/part-3-why-ethereum-and-evm.md) explained why a contract canno
 fetch one: it must be deterministic, so it cannot read the internet.
 
 ::: important So a price has to be *put on-chain by a transaction* first
-==That is what an oracle is: a service that writes external data on-chain so
-contracts can read it, with every node seeing the identical value.
-==
+   ==That is what an oracle is: a service that writes external data on-chain so
+   contracts can read it, with every node seeing the identical value.==
 
 And it is why [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md) put the
 oracle in its own row. **The contract can be flawless and the input still

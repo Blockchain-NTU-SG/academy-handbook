@@ -166,26 +166,6 @@ You work in your own copy, then propose the change back to the original project.
 You do not need a fork for every contribution. Use one when the repository does
 not allow you to push branches directly.
 
-::: demo markdown title="README source → rendered result" desc="See how Markdown becomes a readable project front door."
-```md
-# Project name
-
-One sentence: what this is and who it is for.
-
-## The problem
-
-Two or three sentences explaining what is missing or broken.
-
-## How to view or reproduce it
-
-Give a reader the steps needed to inspect or run the work.
-
-## Limitations and next steps
-
-Say what does not work yet and what you would do next.
-```
-:::
-
 #### What belongs in an Issue?
 
 A useful Issue does not need heavy project management. It usually answers:
@@ -311,8 +291,8 @@ same.
 Most people spend weeks building and ten minutes on the README. Reviewers,
 employers and collaborators read the README and often nothing else.
 
-::: important A README that works
-```markdown
+::: demo markdown title="README source → rendered result" desc="See how Markdown becomes a readable project front door."
+```md
 # Project name
 
 One sentence: what this is and who it is for.
@@ -348,6 +328,12 @@ What does not work yet, and what you would do next.
 
 What you used, and where it came from.
 ```
+:::
+
+::: important A README that works
+The demo above turns the source into the front door a reviewer reads. Keep the
+sections that fit your direction, but make the work understandable and
+checkable without a private explanation.
 :::
 
 Two sections carry disproportionate weight.

@@ -53,14 +53,14 @@ You now know enough Solidity to see it.
 
 A token contract holds an allowance table:
 
-```solidity
+```solidity title="Token allowance table"
 mapping(address => mapping(address => uint256)) allowances;
 //      owner              spender        amount
 ```
 
 When you "approve Uniswap to spend your USDC", you send a transaction calling:
 
-```solidity
+```solidity title="Approval call"
 approve(uniswapAddress, amount)
 ```
 

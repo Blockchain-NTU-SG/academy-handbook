@@ -75,40 +75,54 @@ No single map captures Web3 perfectly. Categories overlap, companies move
 between sectors, and maps become outdated. Use them for orientation, not as a
 definitive taxonomy.
 
-1. **[Singapore Web3 Landscape — Onchain State Singapore](https://www.onchainstate.sg/industry-map)**
+<LinkCard
+  href="https://www.onchainstate.sg/industry-map"
+  title="Singapore Web3 Landscape — Onchain State Singapore"
+  icon="material-symbols:map-outline"
+  description="Start here: a quick one-page view of Web3 companies and projects around Singapore."
+  target="_blank"
+  rel="noopener noreferrer"
+/>
 
-   Start here. It is a quick one-page view of the Web3 companies and projects
-   around Singapore, and the easiest map to understand at a glance. Open it at
-   full size.
+<LinkCard
+  href="https://public.bnbstatic.com/static/files/research/industry-map-mar25.pdf"
+  title="Binance Research — Industry Map, March 2025"
+  icon="material-symbols:public"
+  description="An optional deeper global map with many sectors, sub-sectors and projects."
+  target="_blank"
+  rel="noopener noreferrer"
+/>
 
-2. **[Binance Research — Industry Map, March 2025](https://public.bnbstatic.com/static/files/research/industry-map-mar25.pdf)**
-
-   Want the detailed global version? This is a much deeper map with many
-   sectors, sub-sectors and projects. It is an optional deep dive.
-
-3. **[Artemis / Stablecoin.fyi — Stablecoin Market Landscape](https://www.stablecoin.fyi/market-map)**
-
-   A sector can become an industry map of its own. Stablecoins expand into
-   issuers, blockchains, payments, on/off ramps, infrastructure, analytics and
-   financial services.
+<LinkCard
+  href="https://www.stablecoin.fyi/market-map"
+  title="Artemis / Stablecoin.fyi — Stablecoin Market Landscape"
+  icon="material-symbols:account-balance"
+  description="A sector map showing issuers, chains, payments, on/off ramps, infrastructure, analytics and financial services."
+  target="_blank"
+  rel="noopener noreferrer"
+/>
 
 **==An industry map is a snapshot, not a fixed taxonomy. And every box on the map
 can become another map of its own.==**
 
 ```markmap
 # Web3 ecosystem
-## Infrastructure
-## Wallets
-## Stablecoins & payments
-## DeFi
-## RWA
-## NFTs / consumer
-## Governance
-## Oracles / cross-chain
-## Data
-## ZK
-## DePIN
-## AI × Web3
+## Access & infrastructure
+### Infrastructure
+### Wallets
+### Oracles / cross-chain
+## Assets & markets
+### Stablecoins & payments
+### DeFi
+### RWA
+### NFTs / consumer
+## Coordination
+### Governance
+## Data & emerging technology
+### Data
+### ZK
+### DePIN
+### AI × Web3
 ```
 
 This is an orientation map, not a complete taxonomy. Use the tabs below for the
