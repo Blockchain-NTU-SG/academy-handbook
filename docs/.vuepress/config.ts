@@ -52,7 +52,6 @@ export default defineUserConfig({
     plugins: {
       git: true,
     },
-    blog: false,
     article: '/article/',
     cache: 'filesystem',
     search: academySearch,
