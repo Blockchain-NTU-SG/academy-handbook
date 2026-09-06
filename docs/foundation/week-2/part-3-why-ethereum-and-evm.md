@@ -153,7 +153,7 @@ system: compatible software can run on both, but the computers are still
 separate machines with their own owners and security. The analogy stops there —
 blockchains have their own execution, validator and settlement designs.
 
-So: **EVM-compatible ≠ Ethereum L2 ≠ Ethereum sidechain.**
+So: **==EVM-compatible ≠ Ethereum L2 ≠ Ethereum sidechain.==**
 
 ### Two kinds of account
 

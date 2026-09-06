@@ -9,7 +9,6 @@ import {
   useSessionStorage,
 } from '@vueuse/core'
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
-import MiniSearch from 'minisearch'
 import { useSearchIndex } from '@vuepress-plume/plugin-search/client'
 import {
   computed,
@@ -83,6 +82,8 @@ const searchIndex = computedAsync(async () => {
 
   if (!serialized)
     return null
+
+  const { default: MiniSearch } = await import('minisearch')
 
   return markRaw(
     MiniSearch.loadJSON<AcademySearchResult>(serialized, {

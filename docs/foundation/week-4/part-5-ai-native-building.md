@@ -18,7 +18,7 @@ sources:
 
 You may use AI to produce your Proof of Work — code, research, data or product
 work. AI-assisted work is increasingly common, and it is explicitly allowed in
-the Academy. The responsibility for checking the result remains yours.
+the Academy. ==The responsibility for checking the result remains yours.==
 
 ::: important The Academy's principle
 > **AI-native building, not blind AI generation.**

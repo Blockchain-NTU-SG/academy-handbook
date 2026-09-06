@@ -78,6 +78,33 @@ You will read your own history in Week 8 when writing up your Proof of Work.
 Write for that person.
 :::
 
+### A small repository is a collaboration surface
+
+The repository is more than a folder of files: it is the shared place where
+people read the project, inspect its history and find the checks that support a
+change. This is a compact example, not a required template for every Academy
+direction:
+
+::: file-tree title="Example Proof of Work repository"
+- proof-of-work # project root
+  - **README.md** # front door: what this is and how to use it
+  - LICENSE # how others may reuse the work
+  - .gitignore # files Git should leave out
+  - src # code or data work, when relevant
+    - …
+  - docs # research notes or supporting documentation, when relevant
+    - …
+  - .github
+    - workflows
+      - check.yml # optional automated checks
+:::
+
+The README is usually the first stop. What belongs in `src/`, `docs/` or a
+notebook depends on the direction: sources and evidence may look different for
+Developer, Research, Data, and Product & Ecosystem work. Workflows are useful
+when a project needs repeatable checks, but not every beginner project needs
+automated CI.
+
 ### How people actually collaborate on GitHub
 
 The vocabulary is useful only when you can see how the pieces work together. In
@@ -139,8 +166,8 @@ A useful Issue does not need heavy project management. It usually answers:
 - **Evidence:** a link, screenshot, example or reproduction step when relevant
 - **Environment:** browser, operating system, network or version information when it affects the problem
 
-An Issue answers **“What are we trying to change?”** A PR answers **“Here is the
-proposed change.”** Linking the two keeps the original goal visible while the
+==An Issue answers “What are we trying to change?” A PR answers “Here is the
+proposed change.”== Linking the two keeps the original goal visible while the
 implementation is reviewed.
 
 #### A complete example: missing setup instructions

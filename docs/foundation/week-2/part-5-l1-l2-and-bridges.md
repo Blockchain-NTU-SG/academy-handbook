@@ -127,7 +127,7 @@ settlement relationship:
 | **Sidechain** | Separate connected chain with its own validator and security system | Polygon PoS | Who secures this chain itself? |
 
 ::: important The distinction that actually matters
-**L2 versus sidechain — and it is about where security comes from.** Not speed,
+**==L2 versus sidechain — and it is about where security comes from.==** Not speed,
 not fees, not branding.
 :::
 

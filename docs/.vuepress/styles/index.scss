@@ -566,6 +566,39 @@ body {
   color: var(--academy-text-muted);
 }
 
+/* Reveal selected homepage surfaces as they enter the viewport. The class is
+ * added only by the client, so a no-JS render remains fully visible. */
+.vp-home .academy-home-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 460ms ease,
+    transform 460ms ease;
+  transition-delay: var(--academy-reveal-delay, 0ms);
+}
+
+.vp-home .academy-home-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.vp-home .vp-home-feature.academy-home-reveal {
+  transition:
+    opacity 460ms ease,
+    transform 460ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vp-home .academy-home-reveal,
+  .vp-home .academy-home-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Keep the introduction calm and continuous: the official horizontal lockup
  * sits directly on the white section without a second visual container. */
 .vp-home .vp-home-text-image {

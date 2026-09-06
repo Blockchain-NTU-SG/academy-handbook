@@ -55,6 +55,18 @@ Before asking what problem a blockchain solves, it helps to know why people call
 this space **Web3**. The name is a historical shorthand for a changing web, not a
 technical label that every application must satisfy.
 
+::: timeline
+- Web1 — mostly read
+
+  Early websites mainly published information for people to browse.
+- Web2 — read + write
+
+  Platforms made accounts, user-generated content and social interaction normal.
+- Web3 — read + write + user-controlled state
+
+  Some important state can be controlled with keys and maintained on a shared network.
+:::
+
 | Aspect | Web1 | Web2 | Web3 |
 |---|---|---|---|
 | **Useful shorthand** | Mostly read | Read + write | Read + write + own — a shorthand for some user-controlled state |
@@ -110,7 +122,7 @@ One last naming detail: the blockchain-oriented Web3 idea and the older
 need Semantic Web theory for this course; just avoid treating the shared name as
 proof that the two visions are identical.
 
-That is why people started calling this **Web3**. It also leaves the question
+==That is why people started calling this **Web3**.== It also leaves the question
 that leads directly into this page: if important shared state is not controlled
 by one platform, who maintains the shared record and decides which changes are
 accepted? Blockchain is one answer to that problem.

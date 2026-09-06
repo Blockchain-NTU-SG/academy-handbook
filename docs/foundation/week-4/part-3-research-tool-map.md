@@ -65,7 +65,7 @@ the source that fits the question, then cross-check before concluding.
 Because it is the loudest, fastest and most confident-sounding layer. It is also
 the least verified.
 
-**Use social media for discovery, not as final evidence for an important claim.**
+**==Use social media for discovery, not as final evidence for an important claim.==**
 X is excellent for finding out that something happened. It is a poor place to
 confirm it happened the way someone says.
 :::

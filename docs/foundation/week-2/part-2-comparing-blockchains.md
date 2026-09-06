@@ -35,8 +35,8 @@ There are thousands of chains and you will never evaluate them one at a time.
 What you can do is learn the handful of dimensions they all vary along.
 
 ::: important The conclusion, stated up front
-**Different blockchains make different design choices. None of them is strictly
-best.** A chain advertising a number without naming its cost is marketing, not
+**==Different blockchains make different design choices. None of them is strictly
+best.==** A chain advertising a number without naming its cost is marketing, not
 engineering.
 :::
 

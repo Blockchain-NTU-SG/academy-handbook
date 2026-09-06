@@ -125,8 +125,8 @@ software you interact with. Each additional protocol adds assumptions rather tha
 removing them.
 
 ::: important The single most useful sentence in Week 1
-**Web3 does not eliminate trust. It changes and redistributes trust
-assumptions.**
+**==Web3 does not eliminate trust. It changes and redistributes trust
+assumptions.==**
 
 [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md) turns this into a tool
 you can apply to anything.

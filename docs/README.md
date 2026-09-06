@@ -67,17 +67,13 @@ config:
       The cohort adds the structure, feedback, peers and accountability to turn
       open learning into Proof of Work.
     features:
-      - title: Learn with structure
-        icon: material-symbols:map-outline
+      - title: 🗺️ Learn with structure
         details: Follow a clear weekly rhythm instead of figuring out what to study next.
-      - title: Get feedback
-        icon: material-symbols:forum-outline
+      - title: 💬 Get feedback
         details: Submit missions, receive review, and improve your work instead of learning in isolation.
-      - title: Build with others
-        icon: material-symbols:groups-outline
+      - title: 🤝 Build with others
         details: Learn alongside other NTU students and take part in the Blockchain@NTU community.
-      - title: Leave with Proof of Work
-        icon: material-symbols:verified-outline
+      - title: ✅ Leave with Proof of Work
         details: Turn what you learn into a small, reviewable output you can continue developing.
   - type: features
     title: A clear path through Web3
@@ -114,10 +110,10 @@ title: Blockchain@NTU Academy
 
 Use the Handbook's learning hierarchy to decide how deeply to engage with each page:
 
-- **Core** is the primary material you should understand.
-- **Landscape** gives you the wider mental map and vocabulary to recognise.
-- **Further Exploration** points to optional depth when you want to go further.
-- **Anchor Mission** turns the week’s learning into a small, practical action.
+- 🎯 **Core** is the primary material you should understand.
+- 🗺️ **Landscape** gives you the wider mental map and vocabulary to recognise.
+- 🔭 **Further Exploration** points to optional depth when you want to go further.
+- ⚓ **Anchor Mission** turns the week’s learning into a small, practical action.
 
 ## Start here
 
