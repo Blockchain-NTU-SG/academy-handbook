@@ -155,7 +155,10 @@ request while the contract executes exactly as written. This is why Week 0
 insisted on **bookmarks over search results**, and why a hardware wallet showing
 the transaction on its own screen can be valuable.
 
-#### Read: “show me 42 votes”
+:::: tabs
+@tab <Icon name="material-symbols:visibility-outline" /> Read — “show me 42 votes”
+
+#### “show me 42 votes”
 
 1. The user opens a page and the frontend asks for the current vote count.
 2. The frontend sends a read request through an RPC provider. In Ethereum terms,
@@ -166,7 +169,9 @@ the transaction on its own screen can be valuable.
    signature is normally required, so the user does not normally pay a
    transaction fee for this read.
 
-#### Write: “vote”
+@tab <Icon name="material-symbols:edit-outline" /> Write — “vote”
+
+#### “vote”
 
 1. The user clicks **Vote**, and the frontend prepares a call to the contract's
    `vote()` function.
@@ -177,6 +182,7 @@ the transaction on its own screen can be valuable.
 4. The network processes it. The contract runs, its state may change, and it may
    emit events.
 5. The frontend or an indexer later reads the result and refreshes the display.
+::::
 
 ### One small UI example
 

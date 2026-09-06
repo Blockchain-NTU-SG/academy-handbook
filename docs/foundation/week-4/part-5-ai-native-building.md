@@ -68,6 +68,17 @@ result. Asking for an explanation first surfaces your own gaps.
 behaviour or reliable evidence is a guess. AI is fluent, which makes wrong
 answers *read* exactly like right ones.
 
+::: chat title="A bounded AI request"
+{Learner}
+I need one small change: add a read-only Sepolia balance lookup to this dashboard. Keep the existing layout, show an error when the RPC request fails, and explain which files you would touch before editing.
+
+{AI assistant}
+I would first inspect the current data-fetching component and its RPC helper. I would change only the smallest relevant piece, then run the app and test a valid address, an invalid address and an RPC failure. I would not invent a contract address or claim the result is correct without checking it.
+
+{.}
+Before accepting it, I will inspect the diff, run those cases and verify the network and RPC details against the project documentation.
+:::
+
 The loop works across all four directions. The kind of evidence changes, but
 the responsibility to inspect the result does not:
 

@@ -147,6 +147,7 @@ implementation is reviewed.
 
 Imagine the README does not explain how to run a project locally:
 
+:::: steps
 1. Open an Issue titled **Add local setup instructions**. Describe the missing
    steps and say that the definition of done is a new reader being able to run
    the project from a clean machine.
@@ -162,6 +163,7 @@ Imagine the README does not explain how to run a project locally:
    to the repository's convention.
 9. The branch is deleted, and `main` now contains the accepted instructions.
 10. Anyone continuing the work syncs their local copy with the updated `main`.
+::::
 
 The point is the collaboration loop, not the number of Git commands. Review
 comments are part of the work, not a private judgement about the person who

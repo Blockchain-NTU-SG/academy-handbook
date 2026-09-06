@@ -46,9 +46,11 @@ config:
         - theme: brand
           text: Apply to the Academy
           link: ./getting-started/programme.md#apply
+          icon: material-symbols:school-outline
         - theme: alt
           text: Start Learning
           link: ./getting-started/programme.md
+          icon: material-symbols:menu-book-outline
   - type: image-text
     title: How the Academy works
     image:
@@ -66,12 +68,16 @@ config:
       open learning into Proof of Work.
     features:
       - title: Learn with structure
+        icon: material-symbols:map-outline
         details: Follow a clear weekly rhythm instead of figuring out what to study next.
       - title: Get feedback
+        icon: material-symbols:forum-outline
         details: Submit missions, receive review, and improve your work instead of learning in isolation.
       - title: Build with others
+        icon: material-symbols:groups-outline
         details: Learn alongside other NTU students and take part in the Blockchain@NTU community.
       - title: Leave with Proof of Work
+        icon: material-symbols:verified-outline
         details: Turn what you learn into a small, reviewable output you can continue developing.
   - type: features
     title: A clear path through Web3
@@ -80,18 +86,21 @@ config:
       and the learning practical.
     features:
       - title: Week 0–4 Foundation
+        icon: material-symbols:menu-book-outline
         details: >-
           Enter Web3 safely, then build a first-principles map of blockchains,
           Ethereum, wallets, contracts and the wider ecosystem.
         link: ./getting-started/
         linkText: Start with Week 0
       - title: Weeks 5–8 Proof of Work
+        icon: material-symbols:build-circle-outline
         details: >-
           Turn the Foundation into one small, reviewable project with a clear
           scope, evidence, README and next steps.
         link: ./foundation/proof-of-work/
         linkText: See the sprint
       - title: Four directions
+        icon: material-symbols:explore-outline
         details: >-
           Choose a starting point in Developer, Research, Data, or Product &
           Ecosystem. Directions can be combined.
