@@ -50,9 +50,14 @@ npm run docs:dev
 Use Node.js 22.18 or newer. The production check is:
 
 ```bash
+npm run docs:check-marks
 npm run docs:build
 npm run docs:check-times
+npm run docs:check-payload
 ```
+
+`docs:check-payload` guards the initial JavaScript payload of representative
+routes against substantial regressions.
 
 ## Branches, commits and pull requests
 
@@ -78,9 +83,10 @@ use GitHub's Squash and merge for changes going into `main` so the shared
 history remains concise.
 
 Pull requests targeting `main` automatically run `npm ci`,
-`npm run docs:build` and `npm run docs:check-times` on Node.js 22 through the
-documentation build check. These checks validate the handbook only; they do not
-deploy Pages.
+`npm run docs:check-marks`, `npm run docs:build`,
+`npm run docs:check-times` and `npm run docs:check-payload` on Node.js 22 through
+the documentation build check. These checks validate the handbook only; they do
+not deploy Pages.
 
 ## Content workflow
 
@@ -100,8 +106,9 @@ Please describe:
 - what changed and which Academy section it affects;
 - whether the change is original, adapted, or link-only material;
 - source and attribution updates;
-- validation performed, including `npm run docs:build` and
-  `npm run docs:check-times` for relevant Foundation changes.
+- validation performed, including `npm run docs:check-marks`,
+  `npm run docs:build`, `npm run docs:check-times` and
+  `npm run docs:check-payload` for relevant changes.
 
 Curriculum changes should involve Education leadership or the relevant
 maintainer as a reviewer. Decision ownership is defined in `GOVERNANCE.md`, and

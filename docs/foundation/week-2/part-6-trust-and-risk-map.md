@@ -54,10 +54,12 @@ You are always trusting *something*. What changes is **what**, **how many
 things**, and crucially **whether you can inspect them**.
 :::
 
-Traditional finance asks you to trust institutions you cannot audit. Web3 asks
-you to trust code, networks and issuers — some inspectable, some very much not.
-A real improvement in some respects and a real downgrade in others. ==**The skill
-is telling which is which.**==
+Traditional finance generally asks users to rely on institutions, regulators
+and external audits rather than independently verifying the full system state
+themselves. Web3 can make some assumptions directly inspectable while adding or
+shifting others — some inspectable, some very much not. A real improvement in
+some respects and a real downgrade in others. ==**The skill is telling which is
+which.**==
 
 ### The map
 
@@ -69,49 +71,49 @@ exhaustive dependency graph; real systems can add more dependencies.
   <title id="trustmap-title">The trust and risk map</title>
   <desc id="trustmap-desc">Seven common Web3 actions, each shown with the trust assumptions it carries. Holding BTC carries two; holding USDC adds your keys, its token contract and its issuer. The assumptions change as you move down the map.</desc>
 
-  <text font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em" fill="currentColor" fill-opacity="0.6" x="150" y="22" text-anchor="end">WHAT YOU DO</text>
-  <text font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em" fill="currentColor" fill-opacity="0.6" x="162" y="22">WHAT YOU ARE TRUSTING</text>
+  <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em" fill="currentColor" fill-opacity="0.6" x="150" y="22" text-anchor="end">WHAT YOU DO</text>
+  <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" letter-spacing="0.06em" fill="currentColor" fill-opacity="0.6" x="162" y="22">WHAT YOU ARE TRUSTING</text>
 
   <g>
-    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="61" text-anchor="end">Hold BTC</text>
-    <g transform="translate(162,44)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Network</text></g>
-    <g transform="translate(276,44)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Your keys</text></g>
+    <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="61" text-anchor="end">Hold BTC</text>
+    <g transform="translate(162,44)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Network</text></g>
+    <g transform="translate(276,44)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Your keys</text></g>
   </g>
   <g>
-    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="99" text-anchor="end">Hold USDC</text>
-    <g transform="translate(162,82)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Network</text></g>
-    <g transform="translate(276,82)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Your keys</text></g>
-    <g transform="translate(390,82)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Token contract</text></g>
-    <g transform="translate(504,82)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Issuer</text></g>
+    <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="99" text-anchor="end">Hold USDC</text>
+    <g transform="translate(162,82)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Network</text></g>
+    <g transform="translate(276,82)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Your keys</text></g>
+    <g transform="translate(390,82)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Token contract</text></g>
+    <g transform="translate(504,82)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Issuer</text></g>
   </g>
   <g>
-    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="137" text-anchor="end">Use a CEX</text>
-    <g transform="translate(162,120)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Exchange custody</text></g>
+    <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="137" text-anchor="end">Use a CEX</text>
+    <g transform="translate(162,120)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Exchange custody</text></g>
   </g>
   <g>
-    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="175" text-anchor="end">Use a DEX</text>
-    <g transform="translate(162,158)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Wallet + keys</text></g>
-    <g transform="translate(276,158)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">DEX contracts</text></g>
-    <g transform="translate(390,158)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Token contracts</text></g>
+    <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="175" text-anchor="end">Use a DEX</text>
+    <g transform="translate(162,158)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Wallet + keys</text></g>
+    <g transform="translate(276,158)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">DEX contracts</text></g>
+    <g transform="translate(390,158)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Token contracts</text></g>
   </g>
   <g>
-    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="213" text-anchor="end">Lending protocol</text>
-    <g transform="translate(162,196)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Wallet + keys</text></g>
-    <g transform="translate(276,196)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Contracts</text></g>
-    <g transform="translate(390,196)"><rect width="108" height="26" rx="6" fill="#ef4444" fill-opacity=".16" stroke="#ef4444"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Oracle</text></g>
-    <g transform="translate(504,196)"><rect width="108" height="26" rx="6" fill="#ef4444" fill-opacity=".16" stroke="#ef4444"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Collateral model</text></g>
+    <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="213" text-anchor="end">Lending protocol</text>
+    <g transform="translate(162,196)"><rect width="108" height="26" rx="6" fill="#10b981" fill-opacity=".16" stroke="#10b981"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Wallet + keys</text></g>
+    <g transform="translate(276,196)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Contracts</text></g>
+    <g transform="translate(390,196)"><rect width="108" height="26" rx="6" fill="#ef4444" fill-opacity=".16" stroke="#ef4444"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Oracle</text></g>
+    <g transform="translate(504,196)"><rect width="108" height="26" rx="6" fill="#ef4444" fill-opacity=".16" stroke="#ef4444"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Collateral model</text></g>
   </g>
   <g>
-    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="251" text-anchor="end">Use a bridge</text>
-    <g transform="translate(162,234)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Source chain</text></g>
-    <g transform="translate(276,234)"><rect width="108" height="26" rx="6" fill="#ef4444" fill-opacity=".16" stroke="#ef4444"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Bridge mechanism</text></g>
-    <g transform="translate(390,234)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Target chain</text></g>
+    <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="251" text-anchor="end">Use a bridge</text>
+    <g transform="translate(162,234)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Source chain</text></g>
+    <g transform="translate(276,234)"><rect width="108" height="26" rx="6" fill="#ef4444" fill-opacity=".16" stroke="#ef4444"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Bridge mechanism</text></g>
+    <g transform="translate(390,234)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Target chain</text></g>
   </g>
   <g>
-    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="289" text-anchor="end">Use an L2</text>
-    <g transform="translate(162,272)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Ethereum</text></g>
-    <g transform="translate(276,272)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">L2 verification</text></g>
-    <g transform="translate(390,272)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Sequencer</text></g>
+    <text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" fill="currentColor" x="150" y="289" text-anchor="end">Use an L2</text>
+    <g transform="translate(162,272)"><rect width="108" height="26" rx="6" fill="#3b82f6" fill-opacity=".16" stroke="#3b82f6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Ethereum</text></g>
+    <g transform="translate(276,272)"><rect width="108" height="26" rx="6" fill="#8b5cf6" fill-opacity=".16" stroke="#8b5cf6"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">L2 verification</text></g>
+    <g transform="translate(390,272)"><rect width="108" height="26" rx="6" fill="#f59e0b" fill-opacity=".16" stroke="#f59e0b"/><text font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="500" fill="currentColor" x="54" y="17" text-anchor="middle">Sequencer</text></g>
   </g>
 </svg>
 <figcaption>Blue = networks · violet = code · amber = organisations / operators · green = you · red = external inputs. Read it top to bottom: <strong>the assumptions change at each handover.</strong></figcaption>
@@ -123,7 +125,7 @@ exhaustive dependency graph; real systems can add more dependencies.
 |---|---|
 | ==**Hold BTC**== | The shortest row. No issuer, token contract or custodian is added. The network still has to work, while most of the user-specific responsibility sits with your own keys |
 | **Hold USDC** | Adds two. The contract could have a flaw. The issuer could fail to hold reserves, or freeze your address |
-| **Use a CEX** | Collapses to one thing. You are not really trusting the blockchain at all — you are trusting a company's balance sheet |
+| **Use a CEX** | Exchange custody becomes the dominant immediate trust assumption, while the underlying network, token or issuer may still matter depending on the asset being held |
 | ==**Use a DEX**== | Replaces a central custodian or account gatekeeper with code. You keep custody, but several contracts — including token contracts — now have to behave correctly |
 | **Lending protocol** | Adds an **oracle**, and this is the row worth dwelling on |
 | **Use a bridge** | Adds a historically important source of exploit risk: the bridge mechanism between two chains |

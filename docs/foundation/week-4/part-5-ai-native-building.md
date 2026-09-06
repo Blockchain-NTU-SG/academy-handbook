@@ -69,7 +69,7 @@ behaviour or reliable evidence is a guess. AI is fluent, which makes wrong
 answers *read* exactly like right ones.
 
 ::: chat title="A bounded AI request"
-{Learner}
+{.}
 I need one small change: add a read-only Sepolia balance lookup to this dashboard. Keep the existing layout, show an error when the RPC request fails, and explain which files you would touch before editing.
 
 {AI assistant}

@@ -49,6 +49,9 @@ sources listed in the frontmatter, not a list of links.
 Any term used here is either defined here or was defined in an earlier Part.
 Use a visual when structure, sequence or comparison is easier to see than
 describe. Do not add diagrams or tables only to break up prose.
+Choose the visual form by information structure: relationship, sequence,
+comparison, history, hierarchy or real-interface recognition. One visual should
+perform one cognitive job.
 
 ## Landscape
 

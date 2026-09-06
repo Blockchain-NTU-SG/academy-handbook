@@ -19,9 +19,17 @@ sources:
 
 # Week 0 · Part 1 — Welcome, GitHub and the platform
 
-You are about to spend eight weeks learning a subject where the most common
+You are starting the Academy Foundation: a beginner-first path through a subject where the most common
 beginner experience is drowning in vocabulary, and the second most common is
 losing money to something avoidable. This programme is built to prevent both.
+
+::: important Foundation Pilot · Sep–Oct 2026
+The current pilot covers **Week 0 through Week 4 only**. The Week 4 Direction
+Card is the final pilot output. Weeks 5–8 are shown in the Handbook as the next
+stage of the Academy, but they are not required for Foundation Pilot
+participants. The full Week 0–8 programme begins with **Cohort 1 in January
+2027**. The Weeks 5–8 sprint is in development for Cohort 1 · January 2027.
+:::
 
 Today is housekeeping — three accounts and a clear picture of how the Academy
 works. It is the least interesting page in the handbook and the one that saves
@@ -50,18 +58,22 @@ wallets, Ethereum, smart contracts and the wider industry. You do not choose a
 specialism yet, because you cannot sensibly choose one before you know what is
 out there.
 
-**Weeks 5–8 are yours.** You pick one of four directions — Developer, Research,
-Data, or Product & Ecosystem — and build one small, reviewable thing. Directions
-are starting points, not restrictions.
+**For the full programme, Weeks 5–8 are yours.** You pick one of four directions
+— Developer, Research, Data, or Product & Ecosystem — and build one small,
+reviewable thing. Directions are starting points, not restrictions. Foundation
+Pilot learners stop after Week 4; the sprint is shown here as the next stage of
+the full Academy.
 
 ### The weekly rhythm
 
 Each Foundation week has a handful of short pages and **one Anchor Mission**.
+The full programme then adds one four-week Proof of Work sprint rather than a
+separate Anchor Mission for each sprint week.
 
 | Item | Details |
 |---|---|
-| Anchor Missions | One per week, Weeks 1–8 |
-| Points | 100 per Foundation mission, 400 for the sprint, **800 total** |
+| Anchor Missions | One per Foundation week, Weeks 1–4 |
+| Points | 100 per Foundation mission, 400 for the Weeks 5–8 sprint, **800 total** |
 | Week 0 | No mission, no points |
 | Review outcomes | **Completed** or **Rejected** — nothing in between |
 | Rejected | Comes back with specific feedback. Resubmit as many times as you need |
@@ -71,6 +83,13 @@ Each Foundation week has a handful of short pages and **one Anchor Mission**.
 There is no penalty for taking longer. A rejection is **not a fail** — it means
 something specific is missing, you will be told exactly what, and you send it
 again.
+:::
+
+::: tip Foundation Pilot completion
+For Foundation Pilot participants, the four Foundation Anchor Missions are the
+relevant missions. Week 4 is the final required week: complete the Direction
+Card / Anchor Mission, then stop here. Weeks 5–8 belong to the full Cohort 1
+programme.
 :::
 
 The pages each week are longer than the mission requires. That is on purpose:

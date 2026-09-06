@@ -88,7 +88,7 @@ flowchart TD
   D["<b>4 · Mempool</b><br/>waiting, visible to everyone"]
   E["<b>5 · Included</b><br/>a proposer puts it in a block"]
   F["<b>6 · Executed</b><br/>every node runs it and updates state"]
-  G["<b>7 · Finalised</b><br/>~13 minutes · economically irreversible"]
+  G["<b>7 · Finalised</b><br/>about 15 minutes · economically irreversible"]
   A --> B --> C --> D --> E --> F --> G
 ```
 

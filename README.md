@@ -158,9 +158,14 @@ npm run docs:dev
 Build and consistency-check the static site with:
 
 ```bash
+npm run docs:check-marks
 npm run docs:build
 npm run docs:check-times
+npm run docs:check-payload
 ```
+
+`docs:check-payload` is a regression budget for the initial JavaScript payload
+of representative routes.
 
 The default GitHub Pages project URL is
 [https://blockchain-ntu-sg.github.io/academy-handbook/](https://blockchain-ntu-sg.github.io/academy-handbook/).

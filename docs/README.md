@@ -142,6 +142,10 @@ The Handbook contains the full learning material and Anchor Mission
 instructions. Cohort operations such as application, progress, submission and
 review are handled through the Academy programme platform.
 
+The **September–October 2026 Foundation Pilot** ends after Week 4. Weeks 5–8
+are the next full-programme stage, in development for **Cohort 1 · January
+2027**.
+
 ## Stay connected with Blockchain@NTU
 
 Blockchain@NTU is NTU’s student community for blockchain and Web3, bringing

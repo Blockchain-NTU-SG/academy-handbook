@@ -172,7 +172,7 @@ why some argue pooling reintroduces concentration.
 | Energy use | Very high | Roughly 99.9% lower |
 | Barrier to entry | Hardware, cheap electricity | Solo validator: 32 ETH + suitable hardware; pools allow economic participation without running a validator |
 | Cost of cheating | Ongoing hashpower and electricity costs; no slashing | Slashed stake |
-| Finality | Probabilistic — confidence grows | Explicit — ~13 minutes |
+| Finality | Probabilistic — confidence grows | Explicit — about 15 minutes |
 | Used by | Bitcoin | Ethereum, most modern chains |
 
 ::: tip Neither is simply better
@@ -194,7 +194,7 @@ overtakes the honest chain. Each additional block adds more work to overcome,
 so confidence grows.** This is **probabilistic finality**: never mathematically
 certain, but rapidly certain enough for many practical decisions.
 
-Ethereum's Proof of Stake adds explicit finality. After roughly 13 minutes a
+Ethereum's Proof of Stake adds explicit finality. After roughly 15 minutes a
 block is **finalised**. Ethereum needs a supermajority of validator stake to
 finalise blocks, so a large attacker can disrupt finality — but producing two
 conflicting finalised histories requires provable dishonest behaviour, which

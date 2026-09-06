@@ -4,18 +4,24 @@ import { join, relative, resolve } from 'node:path'
 
 const dist = resolve('docs/.vuepress/dist')
 const pages = [
-  'index.html',
-  'getting-started/programme.html',
-  'foundation/week-1/part-1-why-blockchain-exists.html',
-  'foundation/week-1/part-8-the-user-journey.html',
-  'foundation/week-2/part-4-transactions-and-gas.html',
-  'foundation/week-2/part-5-l1-l2-and-bridges.html',
-  'foundation/week-3/part-3-remix-lab.html',
-  'foundation/week-4/part-1-industry-map.html',
-  'foundation/week-4/part-3-research-tool-map.html',
-  'foundation/week-4/part-4-github-in-practice.html',
-  'foundation/week-4/part-5-ai-native-building.html',
+  { path: 'index.html', budgeted: true },
+  { path: 'getting-started/programme.html', budgeted: true },
+  { path: 'foundation/week-1/part-1-why-blockchain-exists.html', budgeted: true },
+  { path: 'foundation/week-1/part-8-the-user-journey.html', budgeted: true },
+  { path: 'foundation/week-2/part-4-transactions-and-gas.html', budgeted: true },
+  { path: 'foundation/week-2/part-5-l1-l2-and-bridges.html', budgeted: true },
+  { path: 'foundation/week-3/part-3-remix-lab.html', budgeted: true },
+  // Markmap's page-scoped runtime is intentionally heavier than ordinary routes.
+  { path: 'foundation/week-4/part-1-industry-map.html', budgeted: false },
+  { path: 'foundation/week-4/part-3-research-tool-map.html', budgeted: false },
+  { path: 'foundation/week-4/part-4-github-in-practice.html', budgeted: true },
+  { path: 'foundation/week-4/part-5-ai-native-building.html', budgeted: true },
 ]
+
+// Generous headroom catches a return to multi-MiB route graphs without making
+// normal content growth a failure. Markmap-heavy routes are reported below but
+// are tracked separately because their current page-scoped runtime is larger.
+const budget = { raw: 650 * 1024, gzip: 225 * 1024 }
 
 function getInitialAssets(html) {
   const refs = []
@@ -55,9 +61,24 @@ function measure(page) {
   }
 }
 
-for (const page of pages) {
-  const result = measure(page)
-  console.log(`${page}: ${(result.raw / 1024).toFixed(1)} KiB raw, ${(result.gzip / 1024).toFixed(1)} KiB gzip`)
+let budgetFailed = false
+
+for (const { path, budgeted } of pages) {
+  const result = measure(path)
+  console.log(`${path}: ${(result.raw / 1024).toFixed(1)} KiB raw, ${(result.gzip / 1024).toFixed(1)} KiB gzip`)
+  if (budgeted) {
+    const exceeded = []
+    if (result.raw > budget.raw)
+      exceeded.push(`raw > ${(budget.raw / 1024).toFixed(0)} KiB`)
+    if (result.gzip > budget.gzip)
+      exceeded.push(`gzip > ${(budget.gzip / 1024).toFixed(0)} KiB`)
+    if (exceeded.length) {
+      console.error(`  BUDGET EXCEEDED: ${exceeded.join(', ')}`)
+      budgetFailed = true
+    }
+  } else {
+    console.log('  budget: informational Markmap-heavy route (page-scoped runtime)')
+  }
   for (const asset of result.assets.sort((a, b) => b.raw - a.raw).slice(0, 6))
     console.log(`  ${(asset.raw / 1024).toFixed(1)} KiB raw ${(asset.gzip / 1024).toFixed(1)} KiB gzip ${asset.name}`)
 }
@@ -73,3 +94,6 @@ const generatedJs = readdirSync(join(dist, 'assets'))
 console.log('largest generated JavaScript assets:')
 for (const asset of generatedJs.slice(0, 8))
   console.log(`  ${(asset.raw / 1024).toFixed(1)} KiB raw ${(asset.gzip / 1024).toFixed(1)} KiB gzip ${asset.name}`)
+
+if (budgetFailed)
+  process.exitCode = 1

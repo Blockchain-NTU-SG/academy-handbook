@@ -22,8 +22,10 @@ sources:
 
 # Week 4 · Part 6 — Choosing your direction
 
-This is the last page of the Foundation. Weeks 5–8 are a build sprint, and this
-is where you decide what you are building.
+This is the last page of the Foundation. In the full programme, Weeks 5–8 are a
+build sprint, and this is where you decide what you are building. For Foundation
+Pilot learners, this Direction Card is the final required output and a map of
+what they could build next.
 
 ::: important What the sprint actually asks for
 **==One small thing you can show.==** Not a startup, not a finished product, not

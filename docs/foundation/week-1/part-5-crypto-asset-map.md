@@ -233,9 +233,10 @@ differ in kind, not just in size.**
 | 0.01 BTC on an exchange | Native, **custodial** | Bitcoin works, **and the exchange stays solvent** |
 | 1 NFT in their wallet | Non-fungible | Ethereum works, keys safe, **and someone keeps hosting the image** |
 
-Five holdings, five failure modes. The exchange BTC is the only one where a
-bankruptcy costs you the asset. The USDC is the only one where an issuer could
-freeze you. The NFT is the only one that can silently become a broken link.
+Five holdings, five failure modes. The exchange BTC is the only holding here
+exposed to exchange-custodian bankruptcy risk. The USDC is the only one where
+an issuer could freeze you. The NFT is the only one that can silently become a
+broken link.
 
 ::: important This is the actual skill
 Being able to build this table for anything you hold. [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md)

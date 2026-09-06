@@ -435,7 +435,7 @@ If it happens: rotate the key immediately. Treat it as compromised, because it i
 
 Two repositories from the same eight-week sprint. Same amount of work.
 
-::: tabs
+:::: tabs
 @tab The one nobody can use
 
 ::: file-tree icon="colored" title="A repository with no orientation"
@@ -473,7 +473,7 @@ A reviewer cannot tell what it is, whether it works, or what the member learned.
 
 A reviewer understands it in two minutes without asking a question. So does
 anyone else who finds it later.
-:::
+::::
 
 ::: important The difference is about an hour of work
 And it is the difference between something that counts as Proof of Work and

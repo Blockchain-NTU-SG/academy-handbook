@@ -64,9 +64,9 @@ explanation lives.
 | **Block** | A batch of transactions added together | Ethereum adds one roughly every 12 seconds | Week 1 |
 | **Transaction** | A signed instruction to change the shared record | "Send 0.1 ETH to Ben" | Week 1 |
 | **Gas** | The amount of computation or work your transaction uses | A transfer uses less gas than deploying a contract | Week 2 |
-| **Validator** | A participant that proposes and checks new blocks | Ethereum has over a million | Week 1 |
+| **Validator** | A participant that proposes and checks new blocks | Ethereum has hundreds of thousands of validators | Week 1 |
 | **Node** | A computer running the network's software | Your wallet talks to one to read balances | Week 1 |
-| **Finality** | The point where a transaction won't be reversed | Ethereum: ~13 minutes. Solana: much faster | Week 2 |
+| **Finality** | The point where a transaction won't be reversed | Ethereum: about 15 minutes. Solana: much faster | Week 2 |
 | **Mainnet** | The real network, with real value at stake | Ethereum Mainnet | Week 1 |
 | **Testnet** | A practice network with worthless coins | Sepolia — **everything in this programme** | Week 1 |
 | **On-chain** | Recorded on the blockchain, public and permanent | A token transfer | Week 1 |

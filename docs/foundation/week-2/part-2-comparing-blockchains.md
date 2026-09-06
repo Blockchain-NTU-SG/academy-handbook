@@ -162,7 +162,7 @@ throughput and scaling through Layer 2s.
 | Aspect | Details |
 |---|---|
 | Consensus | Proof of Stake |
-| Finality | Explicit, ~13 minutes |
+| Finality | Explicit, about 15 minutes |
 | Throughput | Lower at the base layer than high-throughput chains; capacity is increasing |
 | Security participation | Solo validator: 32 ETH + suitable hardware. Pools let smaller holders participate economically without running their own validator |
 | Execution | The EVM. General-purpose smart contracts |
