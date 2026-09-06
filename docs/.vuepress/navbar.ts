@@ -7,6 +7,6 @@ export const enNavbar = defineNavbarConfig([
   {
     text: 'Contribute',
     link: 'https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/CONTRIBUTING.md',
-    icon: 'simple-icons:github',
+    icon: 'material-symbols:edit-outline',
   },
 ]);

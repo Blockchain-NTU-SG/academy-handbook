@@ -39,7 +39,7 @@ unexplained words show up in the first sentence, and by the time you have looked
 them all up you have lost the thread.
 
 ::: important This is a reference, not a lesson
-**Do not read it end to end, and do not memorise it.** Skim the tabs once so you
+==**Do not read it end to end, and do not memorise it.**== Skim the tabs once so you
 know what is here, then search it — <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>F</kbd> —
 whenever a word stops you mid-sentence.
 
@@ -48,7 +48,7 @@ Nothing on this page is assessed.
 
 Every entry gives you the same three things:
 
-> **term** → one-line explanation → a concrete example
+> ==**term** → one-line explanation → a concrete example==
 
 One line is deliberately not the whole truth. It is enough to keep reading. The
 week that owns each concept is in the last column, and that is where the real
@@ -155,7 +155,7 @@ Words you will hear early but do not need yet.
 | **ZK** | Zero-knowledge cryptography, for privacy and scaling | Week 2; broader uses in Week 4 |
 
 ::: danger Seed phrase — the one entry that matters today
-**Never share it with another person or enter it because someone told you to.**
+==**Never share it with another person or enter it because someone told you to.**==
 The normal exception is when **you deliberately restore or import your wallet
 into wallet software that you installed from a verified official source**.
 [Part 4](./safety.md) explains the rule in more detail.
@@ -180,7 +180,7 @@ Plain English: **the community voted to move to a cheaper network, and users
 followed the money within a week.**
 
 ::: important Recognition first, understanding later
-You did not need to understand how an L2 works to read that sentence. That is
+==Recognition first, understanding later.== You did not need to understand how an L2 works to read that sentence. That is
 the point of this page.
 :::
 

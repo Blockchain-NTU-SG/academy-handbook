@@ -47,8 +47,8 @@ One asset can answer several questions at once: USDC is a token, a stablecoin,
 an ERC-20 and fungible, and it can be held custodially or self-custodially.
 
 ::: important The distinction everything hangs on
-**A native asset is built into the blockchain itself. A token is an asset whose
-balances and rules are implemented by a smart contract.**
+==**A native asset is built into the blockchain itself. A token is an asset whose
+balances and rules are implemented by a smart contract.**==
 :::
 
 ## Learning objectives
@@ -76,7 +76,7 @@ a table of who owns how much. USDC on Ethereum is one contract's ledger.
 | Pays the transaction fee | **Yes** | No — you need ETH to pay the fee as well |
 
 ::: warning Every beginner hits this once
-**Holding only USDC on Ethereum means you cannot move it.** Moving it requires
+==**Holding only USDC on Ethereum means you cannot move it.**== Moving it requires
 calling a contract, calling a contract requires gas, and the resulting
 transaction fee is paid in ETH.
 :::
@@ -178,7 +178,7 @@ like ENS, credentials, ownership records.
 </figure>
 
 ::: warning The most common NFT misconception
-**The image is usually not on the blockchain.** Storing images on-chain is
+==**The image is usually not on the blockchain.**== Storing images on-chain is
 prohibitively expensive, so the token typically holds a *link*. If whatever
 hosts that file disappears, the token remains and the picture does not.
 :::

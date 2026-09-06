@@ -113,7 +113,7 @@ better questions and explain what a chain gains and gives up.
 | **Ecosystem** | What already exists — tools, users, applications? |
 | **Design trade-off** | What was deliberately given up, and for what? |
 
-That last row is the one beginners skip and the one that tells you the most.
+==That last row is the one beginners skip and the one that tells you the most.==
 
 ### Five representative chains
 
@@ -121,8 +121,8 @@ Chosen because they made genuinely different choices — not because they are th
 five best.
 
 ::: warning Figures are approximate and directional
-Real throughput depends on transaction type and network conditions, and
-advertised maximums are almost never sustained. Use these to compare *shapes*,
+==Real throughput depends on transaction type and network conditions, and
+advertised maximums are almost never sustained.== Use these to compare *shapes*,
 not to quote numbers.
 :::
 
@@ -310,8 +310,8 @@ The candidates, honestly:
 | A dedicated Cosmos/appchain design | **Usually overkill** unless the application genuinely needs chain-level control. If it does, the project also takes on validator, security and infrastructure responsibility |
 
 ::: important There is no single right answer — that is the exercise
-What you should be able to say is: *"We chose X. It gives us speed and low fees.
-What we gave up is Y, and here is why that is acceptable for this use case."*
+==What you should be able to say is: *"We chose X. It gives us speed and low fees.
+What we gave up is Y, and here is why that is acceptable for this use case."*==
 
 Someone who says "we chose X because it is the best chain" has not understood
 this material.

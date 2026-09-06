@@ -84,8 +84,8 @@ analogy explains capacity, not the security relationship. An L2 is not simply
 another independent road network: it sends enough data, results or proofs back
 so Ethereum can help check or settle the L2's state according to that design.
 
-**L2 does much of the busy work; L1 keeps the important receipts and acts as the
-referee.** This is a model, not a claim that every L2 transaction is later
+==**L2 does much of the busy work; L1 keeps the important receipts and acts as the
+referee.**== This is a model, not a claim that every L2 transaction is later
 re-executed one by one on Ethereum.
 
 This is why Ethereum scales in two directions at once: L1 improvements and L2
@@ -147,7 +147,7 @@ general-purpose; **Monad** as an L1 + EVM-compatible + general-purpose; and an
 application-specific Avalanche L1 as an L1 + appchain. A chain can have several
 labels because each label describes a different dimension.
 
-**Appchain is a purpose label, not a security-layer label.** An appchain could
+==**Appchain is a purpose label, not a security-layer label.**== An appchain could
 be its own L1, use a shared-security model, or be an application-specific L2.
 The term tells you what the chain is mainly for, not automatically who secures
 it. See the Avalanche example in [Part 2](./part-2-comparing-blockchains.md)
@@ -192,7 +192,7 @@ corners on verification, but from amortising it.
 Enough data goes to Ethereum that, in principle, your balance can be
 reconstructed and withdrawn even if the operators turn against you.
 
-**But "designed to" is doing real work in that sentence.** Real networks differ
+==**But "designed to" is doing real work in that sentence.**== Real networks differ
 in maturity, upgrade controls, data availability and withdrawal mechanisms. Some
 networks marketed as L2s do not yet provide that guarantee in practice.
 :::
@@ -301,8 +301,8 @@ catastrophe".
 ::: important Evaluating those mechanisms is deliberately Further Exploration
 For Foundation, hold this:
 
-**A wrapped asset is only as good as the mechanism holding the original. A
-bridge adds a trust assumption that neither chain had on its own.**
+==**A wrapped asset is only as good as the mechanism holding the original. A
+bridge adds a trust assumption that neither chain had on its own.**==
 :::
 
 Week 3 Part 1 shows how a DApp's frontend, wallet, RPC route and smart contracts

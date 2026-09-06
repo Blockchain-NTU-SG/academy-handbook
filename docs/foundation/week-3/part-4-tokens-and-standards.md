@@ -92,8 +92,8 @@ MetaMask does not know your token exists. It does not need to. It calls
 `balanceOf(yourAddress)` and displays whatever comes back.
 
 Wallets, exchanges, explorers and DApps can integrate tokens through the same
-interface without coordinating a new set of function names for each token. That
-is what a standard buys you, and it is one reason the Ethereum ecosystem grew.
+interface without coordinating a new set of function names for each token. ==That
+is what a standard buys you, and it is one reason the Ethereum ecosystem grew.==
 :::
 
 ::: details Where standards come from
@@ -156,8 +156,8 @@ use different designs, including storing more information on-chain. If the
 service holding off-chain data goes away, the token can remain while the picture
 does not.
 
-**When you evaluate an NFT project, checking where the metadata actually lives
-is a real question**, not a technicality.
+==**When you evaluate an NFT project, checking where the metadata actually lives
+is a real question**==, not a technicality.
 :::
 
 @tab ERC-1155 — both
@@ -222,8 +222,9 @@ Part 3](../week-2/part-3-why-ethereum-and-evm.md) explained why a contract canno
 fetch one: it must be deterministic, so it cannot read the internet.
 
 ::: important So a price has to be *put on-chain by a transaction* first
-That is what an oracle is: a service that writes external data on-chain so
+==That is what an oracle is: a service that writes external data on-chain so
 contracts can read it, with every node seeing the identical value.
+==
 
 And it is why [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md) put the
 oracle in its own row. **The contract can be flawless and the input still
@@ -270,8 +271,8 @@ Contract**.
 Anyone can deploy a contract that returns `"USD Coin"` and `"USDC"`. It costs a
 few cents and takes five minutes — you now have the skills to do it yourself.
 
-**For a token on a particular network, its practical identity is the network
-plus its contract address.** Names, symbols and logos can be copied: fake-token
+==**For a token on a particular network, its practical identity is the network
+plus its contract address.**== Names, symbols and logos can be copied: fake-token
 scams use the same name, symbol or logo at a different address.
 
 Always verify the address against the issuer's official documentation. Never

@@ -26,8 +26,8 @@ sources:
 # Week 3 · Part 3 — Remix lab: deploy your first contract
 
 ::: danger Testnet only
-Everything here uses free test assets with no monetary value. **Never deploy an
-Academy exercise to mainnet**, and never connect a wallet holding real funds.
+==Everything here uses free test assets with no monetary value. **Never deploy an
+Academy exercise to mainnet**, and never connect a wallet holding real funds.==
 :::
 
 Today you put a program on a blockchain. It will have its own address, anyone
@@ -148,7 +148,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
        <span class="academy-shot-label">Screenshot 2</span>
        <span class="academy-shot-what">The Solidity Compiler tab after a successful compile, with the version selector and the green tick highlighted.</span>
      </div>
-     <figcaption>Green tick means it compiled. It does not mean the contract is correct.</figcaption>
+     <figcaption>==Green tick means it compiled. It does not mean the contract is correct.==</figcaption>
    </figure>
 
 4. **Connect your wallet**
@@ -162,7 +162,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    Remix will show the connected network and your account address. **Confirm it
    says the test network, not Ethereum Mainnet.**
 
-   This is the single most important check on this page. Deploying to mainnet
+   ==This is the single most important check on this page.== Deploying to mainnet
    costs real money.
    :::
 
@@ -238,11 +238,11 @@ Nothing is installed. Remix runs entirely in a browser tab.
    </figure>
 
    ::: important You just felt the read/write distinction
-   One button answered instantly and cost nothing. The other opened your wallet,
+   ==One button answered instantly and cost nothing. The other opened your wallet,
    cost gas, and took a block to take effect.
 
    That is not a Remix quirk. It is the difference between asking a node a
-   question and asking the entire network to change its shared state.
+   question and asking the entire network to change its shared state.==
    :::
 
 8. **Find it on the explorer**
@@ -263,7 +263,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
        <span class="academy-shot-label">Screenshot 7</span>
        <span class="academy-shot-what">The Etherscan <strong>Logs</strong> tab showing the emitted event, either decoded as <code>MessageChanged</code> or represented by raw topics and data.</span>
      </div>
-     <figcaption>This is what an event looks like from outside. Applications read exactly this.</figcaption>
+     <figcaption>==This is what an event looks like from outside. Applications read exactly this.==</figcaption>
    </figure>
 ::::
 

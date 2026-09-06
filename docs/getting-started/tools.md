@@ -36,8 +36,8 @@ words point to.
 
 ::: important The instinct this page is building
 When someone asks *"is this project actually used, or does it just have a good
-website?"*, an experienced person does not know the answer — they know **which
-tab to open**.
+website?"*, an experienced person does not know the answer — they know **==which
+tab to open==**.
 
 That is most of what separates someone who can navigate this industry from
 someone who can only repeat what they heard on X.
@@ -78,7 +78,7 @@ use.
 | <span class="academy-brand-label"><Icon name="simple-icons:telegram" /><strong>Telegram</strong></span> | Find community announcements and discussion | Week 4 |
 
 ::: important The teaching idea is one arrow
-> **Question → Tool**
+> ==**Question → Tool**==
 
 You are not memorising a directory. You are building the reflex of knowing which
 tab to open when you have a specific question.
@@ -88,6 +88,25 @@ tab to open when you have a specific question.
 
 Everything above fits into five kinds of source. Knowing which kind you are
 looking at is more useful than knowing any individual tool.
+
+:::: card-grid
+::: card title="Primary sources" icon="material-symbols:description-outline"
+Project docs, GitHub and governance forums: what a project says, specifies or
+proposes.
+:::
+::: card title="Direct chain records" icon="material-symbols:receipt-long"
+Explorers and transactions: what actually happened on-chain.
+:::
+::: card title="Derived analytics" icon="material-symbols:query-stats"
+Dashboards and aggregators: useful interpretations built from raw data.
+:::
+::: card title="Independent research" icon="material-symbols:fact-check-outline"
+Reports and audits: third-party interpretation and risk analysis.
+:::
+::: card title="Current discussion" icon="material-symbols:forum-outline"
+Social, community and news: discovery and context, not final proof.
+:::
+::::
 
 | Source type | Examples | What it helps answer |
 |---|---|---|
@@ -101,8 +120,8 @@ Different sources answer different questions. Use the source that fits the
 question, then cross-check before concluding.
 
 ::: warning The practical rule
-**Use social media for discovery, not as the final evidence for an important
-claim.** X is excellent for finding out that something happened. It is a poor
+==**Use social media for discovery, not as the final evidence for an important
+claim.**== X is excellent for finding out that something happened. It is a poor
 place to confirm it happened the way someone says it did.
 :::
 
@@ -111,8 +130,8 @@ place to confirm it happened the way someone says it did.
 :::: tabs
 @tab Wallets
 
-A wallet does not hold your coins. It holds the **keys** that let you authorise
-changes to a shared record — the coins were never anywhere but the blockchain.
+==A wallet does not hold your coins. It holds the **keys** that let you authorise
+changes to a shared record — the coins were never anywhere but the blockchain.==
 Week 1 covers this properly.
 
 | Wallet | Chains | Note |

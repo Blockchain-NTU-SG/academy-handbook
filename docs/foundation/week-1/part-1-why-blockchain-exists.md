@@ -52,8 +52,8 @@ By the end of this page you should be able to:
 ## A short history: why “Web3”?
 
 Before asking what problem a blockchain solves, it helps to know why people call
-this space **Web3**. The name is a historical shorthand for a changing web, not a
-technical label that every application must satisfy.
+this space **Web3**. ==The name is a historical shorthand for a changing web, not a
+technical label that every application must satisfy.==
 
 ::: timeline
 - Web1 — mostly read
@@ -87,9 +87,9 @@ These labels describe broad tendencies:
   like and message people. But where does that account live? Instagram controls
   the database, servers and application rules. If it removes a post, suspends an
   account, closes the service or changes its rules, you cannot independently tell
-  Instagram's database to restore the old state. **You create the content, but
-  the platform controls the database that says what exists and who may access
-  it.** This is about technical control, not a universal legal claim about who
+Instagram's database to restore the old state. ==**You create the content, but
+the platform controls the database that says what exists and who may access
+it.**== This is about technical control, not a universal legal claim about who
   owns the content.
 - **Web3** describes a blockchain-oriented vision in which some important state
   — such as asset ownership, account authority, credentials or protocol
@@ -122,7 +122,7 @@ One last naming detail: the blockchain-oriented Web3 idea and the older
 need Semantic Web theory for this course; just avoid treating the shared name as
 proof that the two visions are identical.
 
-==That is why people started calling this **Web3**.== It also leaves the question
+That is why people started calling this **Web3**. It also leaves the question
 that leads directly into this page: if important shared state is not controlled
 by one platform, who maintains the shared record and decides which changes are
 accepted? Blockchain is one answer to that problem.
@@ -154,9 +154,9 @@ they check their records. Without one, it went unsolved for decades.
 
 ### The idea
 
-A blockchain is a shared record that many independent computers maintain
+==A blockchain is a shared record that many independent computers maintain
 together, with rules that let them agree on what is true without any of them being
-in charge.
+in charge.==
 
 <figure class="academy-reference-visual">
   <img src="/learning/blockchain-distributed-network.jpg" alt="A distributed network of connected nodes, illustrating how many computers can maintain a shared record together." />
@@ -193,7 +193,8 @@ mistake for you. Nobody can restore your access if you lose your keys.
 
 So the useful question is never "should this be on a blockchain?" — it's:
 
-::: important Is the operator actually a problem here?
+::: important Decision rule
+==Is the operator actually a problem here?==
 :::
 
 | Case | Verdict |

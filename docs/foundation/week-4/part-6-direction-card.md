@@ -26,7 +26,7 @@ This is the last page of the Foundation. Weeks 5–8 are a build sprint, and thi
 is where you decide what you are building.
 
 ::: important What the sprint actually asks for
-**One small thing you can show.** Not a startup, not a finished product, not
+**==One small thing you can show.==** Not a startup, not a finished product, not
 something impressive.
 
 The most common failure in Week 5 is scoping too large. Everything on this page
@@ -46,6 +46,25 @@ is designed to stop that.
 
 Starting points, not restrictions. You may combine them — what is judged is the
 quality of the Proof of Work, not category discipline.
+
+:::: card-grid
+::: card title="Developer" icon="material-symbols:code"
+Produce something that runs. Good fit if you want to build and explain a small
+contract, script or interface.
+:::
+::: card title="Research" icon="material-symbols:menu-book-outline"
+Produce an evidence-based analysis. Good fit if you enjoy tracing claims and
+writing a defensible view.
+:::
+::: card title="Data" icon="material-symbols:query-stats"
+Produce a dashboard, notebook or dataset. Good fit if you want to answer a
+specific question with on-chain data.
+:::
+::: card title="Product & Ecosystem" icon="material-symbols:groups-outline"
+Produce a teardown, proposal or contribution. Good fit if you notice where a
+user journey or community process could work better.
+:::
+::::
 
 :::: tabs
 @tab Developer
@@ -141,8 +160,8 @@ it would be genuinely useful.
 ### Choosing
 
 ::: tip Choose by the work, not by prestige
-None of the four directions is a higher tier. Choose the kind of work you want
-to spend four weeks doing and the evidence you want to produce.
+**==None of the four directions is a higher tier. Choose the kind of work you want
+to spend four weeks doing and the evidence you want to produce.==**
 :::
 
 Three questions that usually settle it:
@@ -175,8 +194,8 @@ The four-week shape:
 | **7 · Review & improve** | Peer review, validate assumptions, document limits |
 | **8 · Ship** | Final output, README, demo, AI disclosure, next steps |
 
-Notice V0 is due in week 6. Build something reviewable early, then use the
-remaining time for review, improvement and shipping.
+Notice V0 is due in week 6. **==Build something reviewable early, then use the
+remaining time for review, improvement and shipping.==**
 
 ### Definition of done
 

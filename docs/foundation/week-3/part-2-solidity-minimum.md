@@ -23,9 +23,9 @@ sources:
 # Week 3 · Part 2 — The minimum Solidity you need
 
 ::: important This is not a programming course
-The goal is **enough Solidity to read a simple contract and deploy one** — not
+==The goal is **enough Solidity to read a simple contract and deploy one** — not
 to make you a developer. If you have never written code, you can still complete
-this week. Everything you need is on this page.
+this week. Everything you need is on this page.==
 
 If you already program, this will feel slow. [Part 3](./part-3-remix-lab.md) is
 where it gets hands-on.
@@ -36,8 +36,8 @@ another coding assistant to explain unfamiliar Solidity, explain a line or
 structure, troubleshoot a Remix/compiler error, modify the provided example, or
 answer "what does this code do?"
 
-The standard is not **"Did you type the code yourself?"** It is: **Can you
-explain what you deployed?** By the end of the week, you should be able to point
+The standard is not **"Did you type the code yourself?"** It is: ==**Can you
+explain what you deployed?**== By the end of the week, you should be able to point
 to the major parts of this small contract, describe what changes on-chain when
 you interact with it, and recognise when you do not understand something AI
 produced.
@@ -71,7 +71,7 @@ Ask two questions:
 - **What does this program remember?** A message.
 - **What can someone do?** Call `setMessage` to change that message.
 
-That is the behaviour to understand first. The words and symbols are the
+==That is the behaviour to understand first.== The words and symbols are the
 programming language used to express it. Solidity calls the stored text a
 `string`, and calls the action that changes it a function.
 
@@ -158,7 +158,7 @@ function setMessage(string calldata newMessage) external {
 A **write** function. It changes state, so it costs gas and needs a signed
 transaction.
 
-**`msg.sender`** is the address that called this function. It is one of the most
+==**`msg.sender`** is the address that called this function.== It is one of the most
 important things in Solidity — it is how a contract knows *who* is asking, and
 it is the basis of every permission check you will ever read.
 
@@ -202,8 +202,8 @@ Who is allowed to call a function.
 | `private` | Only this contract |
 
 ::: danger `private` does not mean secret
-It restricts which *code* can call it. **All contract data is publicly readable
-on-chain regardless.** Anyone can read a `private` variable's storage directly.
+It restricts which *code* can call it. ==**All contract data is publicly readable
+on-chain regardless.**== Anyone can read a `private` variable's storage directly.
 
 Never put a secret in a contract. There is no such thing.
 :::
@@ -237,9 +237,9 @@ When Solidity compiles, it produces two useful outputs:
 | **Bytecode** | The actual program the EVM runs. Unreadable |
 | **ABI** | A JSON description of the functions and events — their names, inputs and outputs |
 
-The **ABI (Application Binary Interface)** is how anything outside knows how to
+==The **ABI (Application Binary Interface)** is how anything outside knows how to
 talk to your contract. Your wallet, a website, Etherscan — they all need the ABI
-to turn "call `setMessage` with this text" into the bytes a transaction carries.
+to turn "call `setMessage` with this text" into the bytes a transaction carries.==
 
 ::: tip This is why "verified source code" matters
 Publishing verified source lets Etherscan show human-readable code and a

@@ -53,8 +53,8 @@ Consensus helps the network converge on one history
 Confirmations and finality increase confidence in that history
 ```
 
-Consensus does not make an invalid block valid. It helps the network choose
-between histories that already pass the rules.
+==Consensus does not make an invalid block valid. It helps the network choose
+between histories that already pass the rules.==
 :::
 
 ```mermaid
@@ -92,13 +92,13 @@ blocks is a genuine coordination problem.
 
 For Foundation, keep this first-pass model:
 
-- **Validity:** Is this allowed by the rules?
-- **Consensus:** Which valid history do we follow?
+- ==**Validity:** Is this allowed by the rules?==
+- ==**Consensus:** Which valid history do we follow?==
 
 ::: important The shared goal
 You cannot stop someone *proposing* dishonest history. So instead you make
-**attacks extremely expensive, so honest participation is usually the
-economically rational choice.**
+==**attacks extremely expensive, so honest participation is usually the
+economically rational choice.**==
 
 Both mechanisms below do that — but they do it in genuinely different ways, and
 the difference is worth keeping straight.
@@ -224,7 +224,7 @@ rules were followed. It does **not** make the recorded information *true*.
 
 Record "this diamond is ethically sourced" on-chain and consensus proves that
 statement was recorded, when, and by whom. It says nothing about the diamond.
-**Blockchains secure the ledger, not reality.**
+==**Blockchains secure the ledger, not reality.**==
 :::
 
 Week 3's oracles are the partial answer to this, and [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md)

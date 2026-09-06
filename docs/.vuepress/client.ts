@@ -1,9 +1,78 @@
-import { defineClientConfig } from 'vuepress/client'
+import { defineClientConfig, resolveRoute } from 'vuepress/client'
 import './styles/index.scss'
 import AcademyLayout from './theme/AcademyLayout.vue'
 import AcademySearchBox from './theme/AcademySearchBox.vue'
 
 let homeRevealObserver: IntersectionObserver | null = null
+const prefetchedRoutes = new Set<string>()
+let adjacentPrefetchTimer: number | undefined
+
+function canPrefetch() {
+  const connection = (navigator as Navigator & {
+    connection?: { effectiveType?: string; saveData?: boolean }
+  }).connection
+
+  return !connection?.saveData && !['slow-2g', '2g'].includes(connection?.effectiveType ?? '')
+}
+
+function routePathFromLink(href: string) {
+  const url = new URL(href, window.location.href)
+  const base = '/academy-handbook/'
+
+  if (url.origin !== window.location.origin || !url.pathname.startsWith(base))
+    return null
+
+  const path = `/${url.pathname.slice(base.length)}`
+  return path === '/' ? '/' : path.replace(/\/$/u, '/')
+}
+
+function prefetchRoute(href: string) {
+  if (!canPrefetch())
+    return
+
+  const path = routePathFromLink(href)
+  if (!path || prefetchedRoutes.has(path))
+    return
+
+  const route = resolveRoute(path)
+  if (route.notFound)
+    return
+
+  prefetchedRoutes.add(path)
+  void route.loader().catch(() => prefetchedRoutes.delete(path))
+}
+
+function scheduleAdjacentPrefetch() {
+  if (typeof window === 'undefined' || !canPrefetch())
+    return
+
+  window.clearTimeout(adjacentPrefetchTimer)
+  adjacentPrefetchTimer = window.setTimeout(() => {
+    document
+      .querySelectorAll<HTMLAnchorElement>('.prev-next .pager-link.prev, .prev-next .pager-link.next')
+      .forEach((link) => prefetchRoute(link.href))
+  }, 800)
+}
+
+function setupIntentPrefetch() {
+  if (typeof window === 'undefined' || typeof document === 'undefined')
+    return
+
+  const prefetchFromIntent = (event: Event) => {
+    const target = event.target
+    if (!(target instanceof Element))
+      return
+
+    const link = target.closest<HTMLAnchorElement>('a[href]')
+    if (!link || link.target === '_blank' || link.hasAttribute('download'))
+      return
+
+    prefetchRoute(link.href)
+  }
+
+  document.addEventListener('pointerover', prefetchFromIntent, { passive: true })
+  document.addEventListener('focusin', prefetchFromIntent, { passive: true })
+}
 
 function setupHomeReveal() {
   homeRevealObserver?.disconnect()
@@ -84,7 +153,12 @@ export default defineClientConfig({
       return position
     }
 
-    router.afterEach(() => scheduleHomeReveal())
+    router.afterEach(() => {
+      scheduleHomeReveal()
+      scheduleAdjacentPrefetch()
+    })
+    setupIntentPrefetch()
     scheduleHomeReveal()
+    scheduleAdjacentPrefetch()
   },
 })

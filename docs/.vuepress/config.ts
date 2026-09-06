@@ -126,6 +126,7 @@ export default defineUserConfig({
         provider: 'iconify',
       },
       collapse: true,
+      demo: true,
       mermaid: true,
       flowchart: true,
       // Layout containers used by the Academy curriculum pages to break up
@@ -133,6 +134,7 @@ export default defineUserConfig({
       // available in Plume; timeline is enabled for the Web1/Web2/Web3
       // orientation, and fileTree is used for the GitHub repository example.
       fileTree: { icon: 'simple' },
+      markmap: true,
       timeline: true,
       image: {
         figure: true,

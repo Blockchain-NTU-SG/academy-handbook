@@ -71,15 +71,15 @@ or financial advice.
 
 The most useful single idea on this page.
 
-Regulators do not generally ask "is this a blockchain?" They ask **what are you
-actually doing, and for whom.** Holding customer assets, running an exchange,
+Regulators do not generally ask "is this a blockchain?" They ask ==**what are you
+actually doing, and for whom.**== Holding customer assets, running an exchange,
 issuing a payment token, moving money across borders — these are recognisable
 financial activities, and they attract obligations whether the plumbing is a
 database or a distributed ledger.
 
 ::: important The question is never "is crypto legal in Singapore?"
-It is: **what activity is this, who is it for, and does that activity already
-have rules?**
+It is: ==**what activity is this, who is it for, and does that activity already
+have rules?**==
 :::
 
 ### Activities that typically attract obligations
@@ -101,7 +101,7 @@ and facilitating cross-border transfers. In 2025 it further clarified the regime
 for digital token service providers.
 
 ::: warning Two things matter more than those details
-**The rules change.** The paragraph above will age. Check the current MAS
+==**The rules change.**== The paragraph above will age. Check the current MAS
 position rather than trusting a summary — including this one.
 
 **Structure determines treatment.** Two superficially similar tokens can be

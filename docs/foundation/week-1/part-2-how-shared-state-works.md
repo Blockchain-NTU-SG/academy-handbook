@@ -53,7 +53,7 @@ Contract 0xEF… →  a list of who owns which NFT
 ```
 
 A blockchain is a machine for changing that, by agreed rules, in a way everyone
-can verify. **Only one thing changes state: a transaction.**
+can verify. ==**Only one thing changes state: a transaction.**==
 
 ### Transactions
 
@@ -87,7 +87,7 @@ confirming their identity.
 
 A transaction is valid if it is correctly signed, the sender has the balance, the
 nonce is right, and it obeys the rules. Every participant checks this
-independently. **Nobody takes anyone's word for it.**
+independently. ==**Nobody takes anyone's word for it.**==
 
 ### Blocks
 
@@ -177,14 +177,14 @@ A **node** is a computer running the network's software. Each one:
 - relays what's valid to its peers
 
 ::: important The third point is the one to sit with
-A node does not trust the block producer. It **re-executes and re-verifies
-everything itself**. An invalid block is not rejected by a committee — it is
+A node does not trust the block producer. It ==**re-executes and re-verifies
+everything itself**==. An invalid block is not rejected by a committee — it is
 independently ignored by everyone at once, because every participant checked.
 :::
 
 This is also where Part 1's honesty about cost returns. Thousands of machines
 independently redoing identical work is the opposite of efficient. **That
-redundancy is the product** — it is what you are buying when you remove the
+==**That redundancy is the product**== — it is what you are buying when you remove the
 operator.
 
 At this point we can detect when a chain of blocks was altered. But imagine two

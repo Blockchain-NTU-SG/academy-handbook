@@ -52,8 +52,8 @@ They are not in an app on your phone. Delete your wallet software and your
 assets are entirely unaffected.
 
 ::: important The correction
-**A wallet holds keys. Keys authorise changes to state. The assets never move
-off the chain, because they were never anywhere else.**
+==**A wallet holds keys. Keys authorise changes to state. The assets never move
+off the chain, because they were never anywhere else.**==
 :::
 
 Which is why reinstalling a wallet and entering your recovery phrase restores
@@ -99,7 +99,7 @@ key.
 | **Private key** | A very large secret number. Whoever knows it can sign as you, permanently. Not *like* a password — a password is checked by a server that can reset it. There is no server here |
 | **Public key** | Derived from the private key by one-way maths. Anyone can verify your signatures, while recovering the private key from the public key is computationally infeasible with current methods |
 | **Address** | Derived from the public key by hashing it and representing the result as 20 bytes. This is what you share |
-| **Recovery phrase** | 12 or 24 ordinary words that regenerate the private key — and every key in the wallet |
+| ==**Recovery phrase**== | 12 or 24 ordinary words that regenerate the private key — and every key in the wallet |
 
 ::: danger The recovery phrase is strictly more powerful than any single key
 Anyone holding it holds **every account in that wallet, forever, from anywhere**.
@@ -137,7 +137,7 @@ explorer.
 **Sending** is broadcasting a *signed transaction*, where the transaction
 consumes gas, a transaction fee is paid, and state can change.
 
-So every transaction is signed, but **not everything you sign is a transaction.**
+So every transaction is signed, but ==**not everything you sign is a transaction.**==
 :::
 
 | You sign | What happens now | What can happen later |
@@ -145,7 +145,7 @@ So every transaction is signed, but **not everything you sign is a transaction.*
 | Login to a site ("prove you own this address") | Nothing on-chain | Normally nothing |
 | A transaction to send 0.05 ETH | 0.05 ETH moves | Nothing further. Bounded |
 | **An on-chain approval** — an `approve()` transaction | Costs gas; sets an allowance on-chain | That contract can move your tokens **at any future time** |
-| **A signature-based permission** | **Nothing visible, often no gas** | Someone else can submit it later to create the same permission |
+| **A signature-based permission** | ==**Nothing visible, often no gas**== | Someone else can submit it later to create the same permission |
 
 The last two rows do the same job by different routes. One is a transaction you
 pay for; the other is a signature that may cost nothing at all. **Both can hand
@@ -157,8 +157,8 @@ permission that outlives the moment entirely.
 
 This is the mechanism behind a large share of wallet drains.
 
-**"It's just a signature, not a transaction" is false comfort. So is "it didn't
-cost any gas."** A wallet request can be dangerous even when nothing moves
+==**"It's just a signature, not a transaction" is false comfort. So is "it didn't
+cost any gas."**== A wallet request can be dangerous even when nothing moves
 immediately.
 :::
 

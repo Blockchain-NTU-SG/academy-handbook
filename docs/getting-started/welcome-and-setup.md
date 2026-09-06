@@ -45,7 +45,7 @@ flowchart TD
   P --> O["<b>One small thing</b><br/>you can show"]
 ```
 
-**Weeks 1–4 are the same for everyone.** They build a shared map of blockchains,
+==**Weeks 1–4 are the same for everyone.**== They build a shared map of blockchains,
 wallets, Ethereum, smart contracts and the wider industry. You do not choose a
 specialism yet, because you cannot sensibly choose one before you know what is
 out there.
@@ -74,7 +74,7 @@ again.
 :::
 
 The pages each week are longer than the mission requires. That is on purpose:
-**richer content, not heavier assessment.** Read the Core sections properly,
+==**richer content, not heavier assessment.**== Read the Core sections properly,
 skim Landscape, treat Further Exploration as optional.
 
 ### Reading levels
@@ -116,7 +116,7 @@ The handbook and the platform have a clean division of labour:
 | Points, progress, leaderboard | — | ✅ |
 
 ::: tip If the two ever disagree about what a mission requires
-**The handbook is correct.**
+==**The handbook is correct.**==
 :::
 
 @tab <Icon name="simple-icons:telegram" /> Telegram
@@ -140,12 +140,12 @@ acting on any direct message. See [Part 4](./safety.md).
 ### The two rules
 
 ::: danger These hold for all eight weeks and have no exceptions
-**1. Testnet only.** Every hands-on activity uses a test network. Testnet coins
+==**1. Testnet only.**== Every hands-on activity uses a test network. Testnet coins
 are free and worth nothing. No mission will ever require real money, mainnet, or
 a wallet holding real assets. If a mission appears to ask this, stop and ask in
 the group.
 
-**2. Nobody asks for your keys.** No reviewer, organiser or committee member
+==**2. Nobody asks for your keys.**== No reviewer, organiser or committee member
 will ever ask for your seed phrase or private key. Anyone who does is not who
 they claim to be, regardless of what their profile says.
 :::

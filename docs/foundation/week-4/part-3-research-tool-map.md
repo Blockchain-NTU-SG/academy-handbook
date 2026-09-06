@@ -33,7 +33,7 @@ Every specific fact in Weeks 1–3 will eventually age. Chains change, protocols
 die, standards get superseded.
 
 **This does not.** If you leave the Academy with one thing, make it the ability
-to investigate something you have never heard of and reach a defensible view.
+to investigate something you have never heard of and reach a **==defensible view.==**
 :::
 
 [Week 0 Part 3](../../getting-started/tools.md) introduced the tools. This is the
@@ -52,6 +52,24 @@ to investigate something you have never heard of and reach a defensible view.
 
 Week 0 introduced a five-part model. Week 4 turns it into a workflow. Start with
 the source that fits the question, then cross-check before concluding.
+
+:::: card-grid
+::: card title="Primary sources" icon="material-symbols:description-outline"
+Project docs, code and proposals. Best for what a project says or specifies.
+:::
+::: card title="Direct chain records" icon="material-symbols:receipt-long"
+Transactions and state. Best for what actually happened on-chain.
+:::
+::: card title="Derived analytics" icon="material-symbols:query-stats"
+Dashboards and aggregators. Best for comparisons built from raw data.
+:::
+::: card title="Independent research" icon="material-symbols:fact-check-outline"
+Reports and audits. Best for third-party interpretation and risk analysis.
+:::
+::: card title="Current discussion" icon="material-symbols:forum-outline"
+Social and community channels. Best for discovery and context, not final proof.
+:::
+::::
 
 | Source type | Examples | Best for | Limits |
 |---|---|---|---|
@@ -172,13 +190,13 @@ not evidence.
 
 ### When have you done enough?
 
-You do not need certainty. You need a **defensible** view.
+**==You do not need certainty. You need a defensible view.==**
 
 ::: important A reasonable stopping point
 1. You can state what it does **in your own words**
 2. You have cross-checked the key claim with another source type that actually fits the question
-3. You can name **one thing that would change your mind**
-4. You can say **what you still do not know**
+3. You can name **==one thing that would change your mind==**
+4. You can say **==what you still do not know==**
 
 Points 3 and 4 are what separate research from advocacy. Anyone can accumulate
 supporting evidence.

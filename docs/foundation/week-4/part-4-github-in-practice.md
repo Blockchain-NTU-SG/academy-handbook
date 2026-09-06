@@ -42,7 +42,7 @@ You made an account and pushed one commit in
 knowledge you need for Weeks 5–8, where your Proof of Work lives on GitHub.
 
 ::: important GitHub is not only for developers
-**For the Academy, GitHub is the default home for your Proof of Work.**
+**==For the Academy, GitHub is the default home for your Proof of Work.==**
 Developers can store code there; researchers can publish analysis; data learners
 can publish queries or notebooks; Product learners can publish a teardown or
 documented proposal.
@@ -85,7 +85,7 @@ people read the project, inspect its history and find the checks that support a
 change. This is a compact example, not a required template for every Academy
 direction:
 
-::: file-tree title="Example Proof of Work repository"
+::: file-tree icon="colored" title="Example Proof of Work repository"
 - proof-of-work # project root
   - **README.md** # front door: what this is and how to use it
   - LICENSE # how others may reuse the work
@@ -99,7 +99,7 @@ direction:
       - check.yml # optional automated checks
 :::
 
-The README is usually the first stop. What belongs in `src/`, `docs/` or a
+**==The README is usually the first stop.==** What belongs in `src/`, `docs/` or a
 notebook depends on the direction: sources and evidence may look different for
 Developer, Research, Data, and Product & Ecosystem work. Workflows are useful
 when a project needs repeatable checks, but not every beginner project needs
@@ -148,13 +148,43 @@ that change.
 
 The review loop is the same; the place where the branch lives differs:
 
-| Access | Typical path |
-|---|---|
-| You have write access | Repository → branch → PR → review → merge |
-| You do not have write access | Fork → branch in your fork → PR back to the upstream repository → review → merge |
+:::: tabs
+@tab I have write access
+
+`Repository → branch → PR → review → merge`
+
+You create the task branch in the shared repository, so the PR can be opened
+directly against `main`.
+
+@tab I do not have write access
+
+`Fork → branch in your fork → PR back to the upstream repository → review → merge`
+
+You work in your own copy, then propose the change back to the original project.
+::::
 
 You do not need a fork for every contribution. Use one when the repository does
 not allow you to push branches directly.
+
+::: demo markdown title="README source → rendered result" desc="See how Markdown becomes a readable project front door."
+```md
+# Project name
+
+One sentence: what this is and who it is for.
+
+## The problem
+
+Two or three sentences explaining what is missing or broken.
+
+## How to view or reproduce it
+
+Give a reader the steps needed to inspect or run the work.
+
+## Limitations and next steps
+
+Say what does not work yet and what you would do next.
+```
+:::
 
 #### What belongs in an Issue?
 
@@ -247,8 +277,9 @@ The social loop is simple:
 Comment → author revises → push → PR updates → reviewer re-checks
 ```
 
-Keep important technical discussion in the Issue or PR rather than moving it to
-private DMs. Disagreement is normal. Respond to the substance of a comment,
+**==Keep important technical discussion in the Issue or PR rather than moving it to
+private DMs.==** Disagreement is normal. **==Review comments are part of the work, not
+judgement about the person.==** Respond to the substance of a comment,
 explain a different decision when needed, and review the change rather than the
 person. Do not resolve a thread without addressing or explaining the issue.
 
@@ -346,7 +377,7 @@ is still the same — make the work understandable and checkable.
 ### Licences
 
 ::: warning No licence means "all rights reserved"
-Public code with no licence is **not** open source. Legally, nobody may use,
+Public code with no licence is **==not open source.==** Legally, nobody may use,
 modify or distribute it. Most people assume the opposite.
 :::
 

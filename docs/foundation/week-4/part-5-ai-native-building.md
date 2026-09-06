@@ -21,7 +21,7 @@ work. AI-assisted work is increasingly common, and it is explicitly allowed in
 the Academy. ==The responsibility for checking the result remains yours.==
 
 ::: important The Academy's principle
-> **AI-native building, not blind AI generation.**
+> **==AI-native building, not blind AI generation.==**
 
 The difference is not how much AI you use. It is whether **you can explain what
 it produced and why you agree with it.**
@@ -100,8 +100,8 @@ the responsibility to inspect the result does not:
 | Rubber-ducking a design | Knowing what it does not know |
 
 ::: danger The specific failure mode that matters here
-**AI can confidently produce a plausible contract address, API endpoint,
-package name or configuration value that does not exist or is wrong.**
+**==AI can confidently produce a plausible contract address, API endpoint,
+package name or configuration value that does not exist or is wrong.==**
 
 It reads exactly like the correct answer. In this field, a wrong address can send
 funds to the wrong place and may be irreversible.
@@ -119,7 +119,7 @@ convincing and was **fabricated**. It sat on the page that specifically teaches
 
 It was caught by a reviewer, and confirmed in one second by running `shasum`.
 
-That is the whole lesson: **plausible is not verified**, and the check was
+That is the whole lesson: **==plausible is not verified==**, and the check was
 trivial once someone thought to run it.
 :::
 
@@ -142,8 +142,8 @@ For **security-critical logic, do not use generated code blindly**:
 | Anything touching secrets | Committed keys are compromised keys |
 
 ::: important A simple rule
-**If code can move funds, grant permissions, use secrets, or choose a network or
-contract address, do not use it blindly.**
+**==If code can move funds, grant permissions, use secrets, or choose a network or
+contract address, do not use it blindly.==**
 
 1. Understand what that small section is supposed to do.
 2. Verify addresses and configuration against primary sources.
@@ -262,7 +262,8 @@ Continue: decode, threshold, output. Each one built, run, committed.
 :::
 
 ::: important The difference is not AI usage — it is loop size
-Both used AI heavily. The second person shipped something they can explain,
+**==Both used AI heavily. The second person shipped something they can explain,==**
+extend and debug.
 extend and debug.
 
 The first has 80 lines they are afraid to touch.

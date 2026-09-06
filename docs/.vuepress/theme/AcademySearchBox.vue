@@ -20,7 +20,7 @@ import {
   withDefaults,
   watch,
 } from 'vue'
-import { useRouteLocale, withBase } from 'vuepress/client'
+import { useRouteLocale, useRouter, withBase } from 'vuepress/client'
 
 interface SearchOptions {
   disableQueryPersistence?: boolean
@@ -58,6 +58,7 @@ const props = withDefaults(defineProps<{
 })
 
 const routeLocale = useRouteLocale()
+const router = useRouter()
 const searchIndexData = useSearchIndex()
 const locale = computed(() => props.locales[routeLocale.value] ?? props.locales['/'] ?? {
   placeholder: 'Search',
@@ -251,7 +252,7 @@ useEventListener('popstate', (event) => {
   if (pendingNavigation.value) {
     const destination = pendingNavigation.value
     pendingNavigation.value = null
-    window.location.assign(destination)
+    void navigateWithRouter(destination)
   }
 })
 
@@ -289,12 +290,21 @@ function closeSearch(options: { historyConsumed?: boolean } = {}) {
 }
 
 function navigateToResult(result: AcademySearchResult) {
-  const destination = withBase(result.id)
+  const destination = result.id
   pendingNavigation.value = destination
 
   if (!closeSearch()) {
     pendingNavigation.value = null
-    window.location.assign(destination)
+    void navigateWithRouter(destination)
+  }
+}
+
+async function navigateWithRouter(destination: string) {
+  try {
+    await router.push(destination)
+  } catch {
+    // Keep a hard-navigation fallback for a route the SPA cannot resolve.
+    window.location.assign(withBase(destination))
   }
 }
 

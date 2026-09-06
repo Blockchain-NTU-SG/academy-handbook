@@ -47,8 +47,8 @@ That is not right, and believing it is actively dangerous, because it stops you
 asking the useful question.
 
 ::: important The accurate version
-**Web3 does not eliminate trust. It changes and redistributes trust
-assumptions.**
+==**Web3 does not eliminate trust. It changes and redistributes trust
+assumptions.**==
 
 You are always trusting *something*. What changes is **what**, **how many
 things**, and crucially **whether you can inspect them**.
@@ -56,8 +56,8 @@ things**, and crucially **whether you can inspect them**.
 
 Traditional finance asks you to trust institutions you cannot audit. Web3 asks
 you to trust code, networks and issuers — some inspectable, some very much not.
-A real improvement in some respects and a real downgrade in others. **The skill
-is telling which is which.**
+A real improvement in some respects and a real downgrade in others. ==**The skill
+is telling which is which.**==
 
 ### The map
 
@@ -121,10 +121,10 @@ exhaustive dependency graph; real systems can add more dependencies.
 
 | Row | What to notice |
 |---|---|
-| **Hold BTC** | The shortest row. No issuer, token contract or custodian is added. The network still has to work, while most of the user-specific responsibility sits with your own keys |
+| ==**Hold BTC**== | The shortest row. No issuer, token contract or custodian is added. The network still has to work, while most of the user-specific responsibility sits with your own keys |
 | **Hold USDC** | Adds two. The contract could have a flaw. The issuer could fail to hold reserves, or freeze your address |
 | **Use a CEX** | Collapses to one thing. You are not really trusting the blockchain at all — you are trusting a company's balance sheet |
-| **Use a DEX** | Replaces a central custodian or account gatekeeper with code. You keep custody, but several contracts — including token contracts — now have to behave correctly |
+| ==**Use a DEX**== | Replaces a central custodian or account gatekeeper with code. You keep custody, but several contracts — including token contracts — now have to behave correctly |
 | **Lending protocol** | Adds an **oracle**, and this is the row worth dwelling on |
 | **Use a bridge** | Adds a historically important source of exploit risk: the bridge mechanism between two chains |
 | **Use an L2** | Keeps the underlying L1 assumption and adds L2-specific machinery: contracts and verification, a sequencer or operator, and upgrade controls |
@@ -135,14 +135,15 @@ explained that contracts cannot see outside the chain, so a price must be *put*
 on-chain by someone.
 
 Corrupt that feed and the contract behaves perfectly while producing a
-catastrophic outcome. **The code can be flawless and the input still wrong.**
+catastrophic outcome. ==**The code can be flawless and the input still wrong.**==
 :::
 
 ### The useful question
 
 For anything you encounter, from now on:
 
-::: important What has to be true, and who has to behave, for me to still have this tomorrow?
+::: important The question to keep asking
+==What has to be true, and who has to behave, for me to still have this tomorrow?==
 Then find the **weakest** item in the answer. Not the scariest-sounding one —
 the weakest. They are frequently different, and the gap is where people get hurt.
 :::
@@ -157,8 +158,8 @@ flowchart TD
 ```
 
 ::: tip The final box is the whole point
-This is not a method for **avoiding** risk. It is a method for **taking risk
-deliberately** instead of accidentally.
+==This is not a method for **avoiding** risk. It is a method for **taking risk
+deliberately** instead of accidentally.==
 :::
 
 ::: warning What this is not
@@ -198,7 +199,7 @@ Ethereum. An entirely ordinary thing to do. Here is the full stack.
 | Liquidation model | Sound economic design | Bad debt, partial loss |
 | Their own keys | Themselves | Total loss of everything |
 
-**Nine assumptions. For one deposit.**
+==**Nine assumptions. For one deposit.**==
 
 Now the two questions that matter:
 

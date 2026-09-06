@@ -42,7 +42,7 @@ protocol named and think *"that is a lending protocol"* or *"that is
 infrastructure"* — and to know roughly what problem that sector is trying to
 solve.
 
-Recognition. Not expertise.
+==Recognition. Not expertise.==
 :::
 
 ## Learning objectives
@@ -64,7 +64,7 @@ Each one gets four questions, and the fourth is the one that matters:
 4. **What is one major limitation or risk?**
 
 ::: warning Question 4 is not pessimism
-Every sector below has real problems. A description that omits them is marketing.
+==Every sector below has real problems. A description that omits them is marketing.==
 If you can only recite what a sector claims, you cannot evaluate anything in it —
 and the Week 4 mission asks you to evaluate something.
 :::
@@ -92,8 +92,27 @@ definitive taxonomy.
    issuers, blockchains, payments, on/off ramps, infrastructure, analytics and
    financial services.
 
-**An industry map is a snapshot, not a fixed taxonomy. And every box on the map
-can become another map of its own.**
+**==An industry map is a snapshot, not a fixed taxonomy. And every box on the map
+can become another map of its own.==**
+
+```markmap
+# Web3 ecosystem
+## Infrastructure
+## Wallets
+## Stablecoins & payments
+## DeFi
+## RWA
+## NFTs / consumer
+## Governance
+## Oracles / cross-chain
+## Data
+## ZK
+## DePIN
+## AI × Web3
+```
+
+This is an orientation map, not a complete taxonomy. Use the tabs below for the
+problem, blockchain role, examples and limitation in each sector.
 
 ::: tabs
 @tab Infrastructure
@@ -282,7 +301,7 @@ to the load-bearing question is "nothing".
 ### The question to carry into every sector
 
 ::: important Where is the blockchain actually load-bearing?
-For each sector, ask: **if you removed the blockchain, what specifically breaks?**
+==For each sector, ask: **if you removed the blockchain, what specifically breaks?**==
 
 Here, **load-bearing** means: if you removed the blockchain, would the core
 product stop working or meaningfully change?
