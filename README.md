@@ -1,7 +1,7 @@
 # Blockchain@NTU Academy Handbook
 
 <p align="center">
-  <img src="docs/.vuepress/public/brand/blockchain-ntu-logo-dark.png" alt="Blockchain@NTU" width="180" />
+  <img src="docs/.vuepress/public/brand/blockchain-ntu-academy-logo.jpeg" alt="Blockchain@NTU Academy" width="180" />
 </p>
 
 <p align="center"><strong>Learn → Build → Prove.</strong></p>
