@@ -1,5 +1,10 @@
 # Weeks 5–8 — Proof of Work sprint
 
+::: important In development for Cohort 1 · January 2027
+This sprint is part of the full Week 0–8 Academy programme. It is not required
+for the September–October 2026 Foundation Pilot, which ends at Week 4.
+:::
+
 Members build one small thing they can show. The scope must be buildable by a
 beginner in the time available; the most common failure is scoping too large in
 Week 5.

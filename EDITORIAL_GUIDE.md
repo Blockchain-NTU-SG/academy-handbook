@@ -150,6 +150,59 @@ Connect to the previous and next Part so Foundation reads as one story. Use a
 table or diagram when structure, sequence or comparison is easier to see than to
 describe; do not add a visual merely to break up prose.
 
+### Visual learning grammar
+
+Interaction and visuals should replace cognitive effort, not decorate content.
+Choose a visual when it makes a relationship, sequence, comparison, history,
+hierarchy or real interface state easier to understand than prose alone. Use the
+information structure to choose the form:
+
+- relationship or architecture → diagram;
+- sequence or process → steps;
+- alternatives or comparison → tabs or a comparison table;
+- history or evolution → timeline;
+- directory structure → file tree;
+- multi-file code architecture → code tree only when the structure genuinely matters;
+- conversation → chat;
+- source and rendered result → demo only when seeing both improves understanding;
+- ecosystem or conceptual hierarchy → a compact map or mind map when orientation is otherwise difficult;
+- optional side explanation → annotation, collapse or details;
+- key mental-model sentence → restrained emphasis or an animated mark;
+- real product recognition → screenshot;
+- functional action or interface → vector icon;
+- explanatory introduction → native emoji when appropriate;
+- presentation motion → subtle and non-essential only.
+
+A compact visual may orient the learner first while the existing table or prose
+remains the precision layer. For example, a timeline can orient and a table can
+provide precision. Do not show a diagram, card grid and table that all
+communicate the same information; prefer one orientation visual and one precise
+layer. A richer visual explanation does not turn Landscape or optional context
+into Core, and preserves **richer content, not heavier assessment**.
+
+Use real screenshots when learners must recognise a real interface or state. Do
+not fabricate product UI. Screenshots should show what to notice, contain no
+private information, keys, recovery phrases or secrets, remain understandable
+if the interface shifts slightly, and have useful captions and accessible
+labels.
+
+Use clean vector icons for navigation, CTAs and functional actions. Use native
+Unicode emoji for explanatory or introductory cues when they add recognition.
+Do not use emoji merely as decoration or mix icon styles randomly. Motion must
+never carry essential information: keep it subtle, support scanning or arrival,
+respect reduced-motion preferences, and avoid bouncing, heavy parallax or
+animation that delays access to content.
+
+Visual teaching devices must remain legible on narrow layouts. A learner must
+not need horizontal page scrolling to understand required material. Wide
+precision tables may use contained overflow, but the document itself should not
+overflow. Do not rely on colour, hover or animation alone; use labels, captions
+and semantic structure as well.
+
+When reviewing a visual, ask: **If this visual disappeared, what extra mental
+work would the learner have to perform?** If the answer is “almost none”, it may
+be decorative and should probably not be added.
+
 ## Examples and analogies
 
 Prefer familiar examples that let a learner answer “where would I see this?”

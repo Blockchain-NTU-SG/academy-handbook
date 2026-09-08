@@ -46,8 +46,8 @@ balance or send a transaction? It asks a **node** to do that work for it.
 
 ::: important The doorway to the network
 Your wallet sends requests to a node through an interface called **JSON-RPC**.
-That node does the actual talking to the network. Your wallet is a convenient
-window onto Ethereum, not the chain itself.
+That node does the actual talking to the network. ==Your wallet is a convenient
+window onto Ethereum, not the chain itself.==
 :::
 
 ```mermaid
@@ -88,7 +88,7 @@ flowchart TD
   D["<b>4 · Mempool</b><br/>waiting, visible to everyone"]
   E["<b>5 · Included</b><br/>a proposer puts it in a block"]
   F["<b>6 · Executed</b><br/>every node runs it and updates state"]
-  G["<b>7 · Finalised</b><br/>~13 minutes · economically irreversible"]
+  G["<b>7 · Finalised</b><br/>about 15 minutes · economically irreversible"]
   A --> B --> C --> D --> E --> F --> G
 ```
 
@@ -104,7 +104,7 @@ verification, now applied to contract code as well as transfers.
 ### Gas
 
 Before looking at individual fee fields, keep one plain-English model in mind:
-**gas measures how much computational work Ethereum has to perform.** A
+==**gas measures how much computational work Ethereum has to perform.**== A
 transaction fee is roughly:
 
 ```text
@@ -161,7 +161,7 @@ The formal distinction is:
 **Reads are free** because one node computes the answer from its own copy.
 Nothing is broadcast, nothing changes, so nobody else needs to care.
 
-**Writes cost** because they change state for everyone.
+==**Writes cost because they change state for everyone.**==
 
 ::: warning A wallet pop-up is not automatically a transaction
 Loading a page and seeing your balances, prices and positions — those are reads,
@@ -177,7 +177,7 @@ be an on-chain transaction, or it may be an off-chain signature. Both matter.
 | Costs gas | Yes | Often nothing |
 | Can still grant permission | Yes | **Yes** — someone else may submit it later |
 
-**"No gas" does not automatically mean "safe."**
+==**"No gas" does not automatically mean "safe."**==
 :::
 
 ::: details A subtle point that pays off in Week 3

@@ -60,8 +60,8 @@ electricity, hardware, locked-up capital, time.
 There is no employer. So the protocol itself pays.
 
 ::: important The design goal
-**Make honest participation profitable, and make attacking the network
-expensive.** Every incentive below exists to serve that one sentence.
+==**Make honest participation profitable, and make attacking the network
+expensive.**== Every incentive below exists to serve that one sentence.
 :::
 
 ### Bitcoin — paying miners
@@ -84,10 +84,10 @@ event called the **halving**. Fewer new BTC are created per block over time, and
 total supply approaches a fixed limit of 21 million.
 
 ::: warning What the halving does — and what it does not do
-The halving **reduces the rate at which new BTC enters circulation.** That
+The halving ==**reduces the rate at which new BTC enters circulation.**== That
 creates a predictable supply schedule.
 
-It does **not** mean the price goes up. Whether BTC becomes more valuable is
+It does ==**not** mean the price goes up.== Whether BTC becomes more valuable is
 determined by market demand, not by the issuance schedule. You will hear
 "halving therefore number go up" stated as if it were arithmetic. It is not, and
 recognising that is part of understanding this properly.
@@ -133,7 +133,7 @@ about price.
 ### Running a node is not the same as earning rewards
 
 ::: warning A distinction beginners get wrong constantly
-**Running a full node does not pay you.** A full node independently verifies the
+==**Running a full node does not pay you.**== A full node independently verifies the
 chain — that is its value, and it is genuinely valuable — but the protocol does
 not send you rewards for having one online.
 
@@ -196,8 +196,8 @@ does not directly receive the base fee.
 ::: tip This is what "incentive design" means in practice
 Not slogans about decentralisation — a concrete decision that removes a specific
 conflict of interest. When you meet a new protocol, the useful question is the
-same one: **who gets paid, for doing what, and what does that encourage them to
-do?**
+same one: ==**who gets paid, for doing what, and what does that encourage them to
+do?**==
 :::
 
 ::: details Further exploration — optional, not assessed

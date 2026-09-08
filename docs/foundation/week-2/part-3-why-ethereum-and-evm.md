@@ -30,7 +30,7 @@ different choices and deliberately did not crown a winner. So it is fair to ask
 why the rest of this programme is built on Ethereum.
 
 ::: important The answer is not that Ethereum is best
-It is that the EVM is the most useful **first** environment to learn. What you
+==It is that the EVM is the most useful **first** environment to learn.== What you
 learn transfers to dozens of other networks, the documentation is unusually
 good, and the tooling is free.
 :::
@@ -87,7 +87,7 @@ Ethereum can be pictured as two things working together:
 | **Shared record** | Remembers ETH balances, contract data, and token ownership |
 | **Shared computer** | Follows program rules that determine how the record may change |
 
-A transaction asks the shared computer to make a change to the shared record.
+==A transaction asks the shared computer to make a change to the shared record.==
 Every node follows the same rules and should reach the same result.
 
 Engineers describe this before → instruction → after pattern as a **state
@@ -105,8 +105,8 @@ Apply the same transaction to the same starting state and the result should be
 the same. That requirement matters because thousands of computers are executing
 the same transaction. They cannot each produce a different answer.
 
-The rule that makes this possible is **determinism**: the same input produces the
-same output on every machine.
+The rule that makes this possible is ==**determinism: the same input produces the
+same output on every machine.**==
 
 It also explains why smart contracts cannot freely use ordinary outside data:
 
@@ -153,7 +153,7 @@ system: compatible software can run on both, but the computers are still
 separate machines with their own owners and security. The analogy stops there —
 blockchains have their own execution, validator and settlement designs.
 
-So: **EVM-compatible ≠ Ethereum L2 ≠ Ethereum sidechain.**
+So: **==EVM-compatible ≠ Ethereum L2 ≠ Ethereum sidechain.==**
 
 ### Two kinds of account
 
@@ -179,8 +179,8 @@ fundamentally different things.
 ### The rule that surprises everyone
 
 ::: important A contract needs a trigger
-**Smart contracts do not wake up and run by themselves. Something has to trigger
-their execution.**
+==**Smart contracts do not wake up and run by themselves. Something has to trigger
+their execution.**==
 
 A contract has no private key of its own, so its code does not sign or submit an
 ordinary transaction by itself. In the common Foundation model, a

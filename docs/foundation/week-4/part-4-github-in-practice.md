@@ -42,7 +42,7 @@ You made an account and pushed one commit in
 knowledge you need for Weeks 5–8, where your Proof of Work lives on GitHub.
 
 ::: important GitHub is not only for developers
-**For the Academy, GitHub is the default home for your Proof of Work.**
+**==For the Academy, GitHub is the default home for your Proof of Work.==**
 Developers can store code there; researchers can publish analysis; data learners
 can publish queries or notebooks; Product learners can publish a teardown or
 documented proposal.
@@ -77,6 +77,33 @@ faucet API` tells them what changed and why.
 You will read your own history in Week 8 when writing up your Proof of Work.
 Write for that person.
 :::
+
+### A small repository is a collaboration surface
+
+The repository is more than a folder of files: it is the shared place where
+people read the project, inspect its history and find the checks that support a
+change. This is a compact example, not a required template for every Academy
+direction:
+
+::: file-tree icon="colored" title="Example Proof of Work repository"
+- proof-of-work # project root
+  - **README.md** # front door: what this is and how to use it
+  - LICENSE # how others may reuse the work
+  - .gitignore # files Git should leave out
+  - src # code or data work, when relevant
+    - …
+  - docs # research notes or supporting documentation, when relevant
+    - …
+  - .github
+    - workflows
+      - check.yml # optional automated checks
+:::
+
+**==The README is usually the first stop.==** What belongs in `src/`, `docs/` or a
+notebook depends on the direction: sources and evidence may look different for
+Developer, Research, Data, and Product & Ecosystem work. Workflows are useful
+when a project needs repeatable checks, but not every beginner project needs
+automated CI.
 
 ### How people actually collaborate on GitHub
 
@@ -121,10 +148,20 @@ that change.
 
 The review loop is the same; the place where the branch lives differs:
 
-| Access | Typical path |
-|---|---|
-| You have write access | Repository → branch → PR → review → merge |
-| You do not have write access | Fork → branch in your fork → PR back to the upstream repository → review → merge |
+:::: tabs
+@tab I have write access
+
+`Repository → branch → PR → review → merge`
+
+You create the task branch in the shared repository, so the PR can be opened
+directly against `main`.
+
+@tab I do not have write access
+
+`Fork → branch in your fork → PR back to the upstream repository → review → merge`
+
+You work in your own copy, then propose the change back to the original project.
+::::
 
 You do not need a fork for every contribution. Use one when the repository does
 not allow you to push branches directly.
@@ -139,14 +176,15 @@ A useful Issue does not need heavy project management. It usually answers:
 - **Evidence:** a link, screenshot, example or reproduction step when relevant
 - **Environment:** browser, operating system, network or version information when it affects the problem
 
-An Issue answers **“What are we trying to change?”** A PR answers **“Here is the
-proposed change.”** Linking the two keeps the original goal visible while the
+==An Issue answers “What are we trying to change?” A PR answers “Here is the
+proposed change.”== Linking the two keeps the original goal visible while the
 implementation is reviewed.
 
 #### A complete example: missing setup instructions
 
 Imagine the README does not explain how to run a project locally:
 
+:::: steps
 1. Open an Issue titled **Add local setup instructions**. Describe the missing
    steps and say that the definition of done is a new reader being able to run
    the project from a clean machine.
@@ -162,6 +200,7 @@ Imagine the README does not explain how to run a project locally:
    to the repository's convention.
 9. The branch is deleted, and `main` now contains the accepted instructions.
 10. Anyone continuing the work syncs their local copy with the updated `main`.
+::::
 
 The point is the collaboration loop, not the number of Git commands. Review
 comments are part of the work, not a private judgement about the person who
@@ -218,8 +257,9 @@ The social loop is simple:
 Comment → author revises → push → PR updates → reviewer re-checks
 ```
 
-Keep important technical discussion in the Issue or PR rather than moving it to
-private DMs. Disagreement is normal. Respond to the substance of a comment,
+**==Keep important technical discussion in the Issue or PR rather than moving it to
+private DMs.==** Disagreement is normal. **==Review comments are part of the work, not
+judgement about the person.==** Respond to the substance of a comment,
 explain a different decision when needed, and review the change rather than the
 person. Do not resolve a thread without addressing or explaining the issue.
 
@@ -251,8 +291,8 @@ same.
 Most people spend weeks building and ten minutes on the README. Reviewers,
 employers and collaborators read the README and often nothing else.
 
-::: important A README that works
-```markdown
+::: demo markdown title="README source → rendered result" desc="See how Markdown becomes a readable project front door."
+```md
 # Project name
 
 One sentence: what this is and who it is for.
@@ -290,6 +330,12 @@ What you used, and where it came from.
 ```
 :::
 
+::: important A README that works
+The demo above turns the source into the front door a reviewer reads. Keep the
+sections that fit your direction, but make the work understandable and
+checkable without a private explanation.
+:::
+
 Two sections carry disproportionate weight.
 
 **Limitations** signals judgement. A project claiming no weaknesses reads as
@@ -317,7 +363,7 @@ is still the same — make the work understandable and checkable.
 ### Licences
 
 ::: warning No licence means "all rights reserved"
-Public code with no licence is **not** open source. Legally, nobody may use,
+Public code with no licence is **==not open source.==** Legally, nobody may use,
 modify or distribute it. Most people assume the opposite.
 :::
 
@@ -387,17 +433,17 @@ If it happens: rotate the key immediately. Treat it as compromised, because it i
 
 ## Worked example
 
-Two repositories from the same eight-week sprint. Same amount of work.
+Two repositories from the same four-week Proof of Work sprint. Same amount of work.
 
-::: tabs
+:::: tabs
 @tab The one nobody can use
 
-```text
-web3-project/
-  main.py
-  test.py
-  notes.txt
-```
+::: file-tree icon="colored" title="A repository with no orientation"
+- web3-project # project root
+  - main.py
+  - test.py
+  - notes.txt
+:::
 
 - README: none, or one line
 - Commits: `update`, `update`, `fix`, `asdf`
@@ -409,15 +455,16 @@ A reviewer cannot tell what it is, whether it works, or what the member learned.
 
 @tab The one that works
 
-```text
-sepolia-gas-tracker/
-  README.md
-  LICENSE
-  .gitignore
-  src/
-  data/
-  docs/screenshots/
-```
+::: file-tree icon="colored" title="A reviewable repository"
+- sepolia-gas-tracker # project root
+  - README.md
+  - LICENSE
+  - .gitignore
+  - src
+  - data
+  - docs
+    - screenshots
+:::
 
 - README: problem, what it does, how to run it, what was learned, limitations, sources
 - Commits: `feat: add gas price fetcher`, `docs: add setup steps`, `fix: handle API timeout`
@@ -426,7 +473,7 @@ sepolia-gas-tracker/
 
 A reviewer understands it in two minutes without asking a question. So does
 anyone else who finds it later.
-:::
+::::
 
 ::: important The difference is about an hour of work
 And it is the difference between something that counts as Proof of Work and

@@ -33,7 +33,7 @@ Every specific fact in Weeks 1–3 will eventually age. Chains change, protocols
 die, standards get superseded.
 
 **This does not.** If you leave the Academy with one thing, make it the ability
-to investigate something you have never heard of and reach a defensible view.
+to investigate something you have never heard of and reach a **==defensible view.==**
 :::
 
 [Week 0 Part 3](../../getting-started/tools.md) introduced the tools. This is the
@@ -53,6 +53,7 @@ to investigate something you have never heard of and reach a defensible view.
 Week 0 introduced a five-part model. Week 4 turns it into a workflow. Start with
 the source that fits the question, then cross-check before concluding.
 
+::: table max-content
 | Source type | Examples | Best for | Limits |
 |---|---|---|---|
 | **Primary sources** | Docs, GitHub, governance forums | Intended design, code and proposals | May describe plans rather than current practice |
@@ -60,12 +61,13 @@ the source that fits the question, then cross-check before concluding.
 | **Derived analytics** | Dune, DefiLlama | Interpreted activity and comparisons | Definitions, queries and labels shape the result |
 | **Independent research** | L2BEAT, Messari, audits | Risk analysis and comparison | Scope, authorship and incentives matter |
 | **Current discussion** | X, Discord, Telegram, news | Discovery and context | Useful leads, not final proof |
+:::
 
 ::: warning Beginners often start with current discussion and stop there
 Because it is the loudest, fastest and most confident-sounding layer. It is also
 the least verified.
 
-**Use social media for discovery, not as final evidence for an important claim.**
+**==Use social media for discovery, not as final evidence for an important claim.==**
 X is excellent for finding out that something happened. It is a poor place to
 confirm it happened the way someone says.
 :::
@@ -172,13 +174,13 @@ not evidence.
 
 ### When have you done enough?
 
-You do not need certainty. You need a **defensible** view.
+**==You do not need certainty. You need a defensible view.==**
 
 ::: important A reasonable stopping point
 1. You can state what it does **in your own words**
 2. You have cross-checked the key claim with another source type that actually fits the question
-3. You can name **one thing that would change your mind**
-4. You can say **what you still do not know**
+3. You can name **==one thing that would change your mind==**
+4. You can say **==what you still do not know==**
 
 Points 3 and 4 are what separate research from advocacy. Anyone can accumulate
 supporting evidence.

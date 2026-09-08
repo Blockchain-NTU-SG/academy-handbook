@@ -84,8 +84,8 @@ analogy explains capacity, not the security relationship. An L2 is not simply
 another independent road network: it sends enough data, results or proofs back
 so Ethereum can help check or settle the L2's state according to that design.
 
-**L2 does much of the busy work; L1 keeps the important receipts and acts as the
-referee.** This is a model, not a claim that every L2 transaction is later
+==**L2 does much of the busy work; L1 keeps the important receipts and acts as the
+referee.**== This is a model, not a claim that every L2 transaction is later
 re-executed one by one on Ethereum.
 
 This is why Ethereum scales in two directions at once: L1 improvements and L2
@@ -96,24 +96,23 @@ expansion.
 The expressway helped with capacity. Now use a different picture for the
 question of final security and settlement:
 
-**L1.** Ethereum is like a city or country with its own official records, court
-and security system. Its network decides its own final history.
-
-**L2.** Base and Arbitrum are like fast commercial districts that process much
-of their daily activity separately, while Ethereum remains the higher court and
-final settlement layer. **An L2 does much of the work elsewhere, but ultimately
-relies on the L1 for important final settlement and security.**
-
-**Sidechain.** Polygon PoS is more like a neighbouring city with its own court,
-records and security system. It can stay connected to Ethereum through bridges,
-but Ethereum does not automatically guarantee the sidechain's internal history.
+:::: card-grid
+::: card title="L1 — runs its own court" icon="material-symbols:gavel"
+Own consensus, security and final history. Ethereum, Solana and Monad each
+maintain their own network-level record.
+:::
+::: card title="L2 — relies on the higher court" icon="material-symbols:account-balance"
+Handles much activity separately while relying on an L1 for important settlement
+and security, plus extra L2 machinery.
+:::
+::: card title="Sidechain — neighbouring court" icon="material-symbols:location-city"
+Runs its own validator and security system. It can connect to Ethereum through
+bridges, but Ethereum does not automatically guarantee its internal history.
+:::
+::::
 
 The analogy is only about where final trust and security sit. Blockchains are
 not literally legal systems.
-
-> **L1 runs its own court. An L2 does much of its work elsewhere but ultimately
-> relies on the L1. A sidechain runs its own court and stays connected through
-> bridges.**
 
 ### Three security relationships
 
@@ -127,7 +126,7 @@ settlement relationship:
 | **Sidechain** | Separate connected chain with its own validator and security system | Polygon PoS | Who secures this chain itself? |
 
 ::: important The distinction that actually matters
-**L2 versus sidechain — and it is about where security comes from.** Not speed,
+**==L2 versus sidechain — and it is about where security comes from.==** Not speed,
 not fees, not branding.
 :::
 
@@ -147,7 +146,7 @@ general-purpose; **Monad** as an L1 + EVM-compatible + general-purpose; and an
 application-specific Avalanche L1 as an L1 + appchain. A chain can have several
 labels because each label describes a different dimension.
 
-**Appchain is a purpose label, not a security-layer label.** An appchain could
+==**Appchain is a purpose label, not a security-layer label.**== An appchain could
 be its own L1, use a shared-security model, or be an application-specific L2.
 The term tells you what the chain is mainly for, not automatically who secures
 it. See the Avalanche example in [Part 2](./part-2-comparing-blockchains.md)
@@ -165,10 +164,16 @@ mechanisms.
 
 In shorthand:
 
-```text
-Build a new L1  → own the whole system and the whole security problem
-Build an L2     → reuse more of Ethereum and accept extra L2 machinery
-```
+:::: card-grid
+::: card title="Build a new L1" icon="material-symbols:construction"
+- More control over architecture, validators and final history
+- Your project must fund or attract its own security, infrastructure, liquidity and ecosystem
+:::
+::: card title="Build an L2" icon="material-symbols:layers"
+- Reuse an important Ethereum settlement/security relationship
+- Add L2 machinery such as sequencers, upgrades and withdrawal paths
+:::
+::::
 
 Neither is universally better. They optimise for different things.
 
@@ -192,7 +197,7 @@ corners on verification, but from amortising it.
 Enough data goes to Ethereum that, in principle, your balance can be
 reconstructed and withdrawn even if the operators turn against you.
 
-**But "designed to" is doing real work in that sentence.** Real networks differ
+==**But "designed to" is doing real work in that sentence.**== Real networks differ
 in maturity, upgrade controls, data availability and withdrawal mechanisms. Some
 networks marketed as L2s do not yet provide that guarantee in practice.
 :::
@@ -301,8 +306,8 @@ catastrophe".
 ::: important Evaluating those mechanisms is deliberately Further Exploration
 For Foundation, hold this:
 
-**A wrapped asset is only as good as the mechanism holding the original. A
-bridge adds a trust assumption that neither chain had on its own.**
+==**A wrapped asset is only as good as the mechanism holding the original. A
+bridge adds a trust assumption that neither chain had on its own.**==
 :::
 
 Week 3 Part 1 shows how a DApp's frontend, wallet, RPC route and smart contracts

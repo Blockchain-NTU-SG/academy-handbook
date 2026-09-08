@@ -47,8 +47,8 @@ One asset can answer several questions at once: USDC is a token, a stablecoin,
 an ERC-20 and fungible, and it can be held custodially or self-custodially.
 
 ::: important The distinction everything hangs on
-**A native asset is built into the blockchain itself. A token is an asset whose
-balances and rules are implemented by a smart contract.**
+==**A native asset is built into the blockchain itself. A token is an asset whose
+balances and rules are implemented by a smart contract.**==
 :::
 
 ## Learning objectives
@@ -76,7 +76,7 @@ a table of who owns how much. USDC on Ethereum is one contract's ledger.
 | Pays the transaction fee | **Yes** | No — you need ETH to pay the fee as well |
 
 ::: warning Every beginner hits this once
-**Holding only USDC on Ethereum means you cannot move it.** Moving it requires
+==**Holding only USDC on Ethereum means you cannot move it.**== Moving it requires
 calling a contract, calling a contract requires gas, and the resulting
 transaction fee is paid in ETH.
 :::
@@ -178,7 +178,7 @@ like ENS, credentials, ownership records.
 </figure>
 
 ::: warning The most common NFT misconception
-**The image is usually not on the blockchain.** Storing images on-chain is
+==**The image is usually not on the blockchain.**== Storing images on-chain is
 prohibitively expensive, so the token typically holds a *link*. If whatever
 hosts that file disappears, the token remains and the picture does not.
 :::
@@ -233,9 +233,10 @@ differ in kind, not just in size.**
 | 0.01 BTC on an exchange | Native, **custodial** | Bitcoin works, **and the exchange stays solvent** |
 | 1 NFT in their wallet | Non-fungible | Ethereum works, keys safe, **and someone keeps hosting the image** |
 
-Five holdings, five failure modes. The exchange BTC is the only one where a
-bankruptcy costs you the asset. The USDC is the only one where an issuer could
-freeze you. The NFT is the only one that can silently become a broken link.
+Five holdings, five failure modes. The exchange BTC is the only holding here
+exposed to exchange-custodian bankruptcy risk. The USDC is the only one where
+an issuer could freeze you. The NFT is the only one that can silently become a
+broken link.
 
 ::: important This is the actual skill
 Being able to build this table for anything you hold. [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md)

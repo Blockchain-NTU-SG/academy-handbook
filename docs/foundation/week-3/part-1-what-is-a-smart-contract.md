@@ -32,9 +32,9 @@ sources:
 an account made of code. That is accurate and it is not yet useful.
 
 ::: important The plain-English version
-**A smart contract is a program deployed at an address on the blockchain.
+==**A smart contract is a program deployed at an address on the blockchain.
 People and applications interact with the functions it exposes, and the
-network executes the same rules for each call.**
+network executes the same rules for each call.**==
 
 Some functions may be open to everyone, while others use permission checks.
 Some contracts are immutable; others include admin or governance controls that
@@ -66,8 +66,8 @@ executed by the network's nodes according to its deployed code and rules.
 | Who can call it | Whoever is allowed | Functions may be open or restricted by their rules |
 | If it has a bug | Patch and redeploy | It keeps running the bug |
 
-That fourth row is the one people underestimate. **A deployed contract is
-public infrastructure whether or not you intended it to be.** Anyone can call any
+That fourth row is the one people underestimate. ==**A deployed contract is
+public infrastructure whether or not you intended it to be.**== Anyone can call any
 function you left callable, in any order, at any time, including in ways you
 never imagined.
 
@@ -119,9 +119,9 @@ Worth repeating from [Week 2 Part 3](../week-2/part-3-why-ethereum-and-evm.md),
 because it explains so much:
 
 ::: important Execution needs a trigger
-A contract has no key of its own and does not sign or submit an ordinary
+==A contract has no key of its own and does not sign or submit an ordinary
 transaction by itself. It cannot run on a timer or see the internet; something
-else must trigger its execution.
+else must trigger its execution.==
 
 When a protocol appears to act automatically — a loan liquidated the moment
 collateral drops — something off-chain is watching and sending that transaction.
@@ -130,9 +130,9 @@ Often a bot or service is paid a fee for doing it.
 
 ### How a DApp uses a contract
 
-A DApp is not just a smart contract. It is usually a user interface connected to
+A DApp is not just a smart contract. ==It is usually a user interface connected to
 a wallet, a route to a blockchain node, and the contract that holds on-chain
-rules and state.
+rules and state.==
 
 ```mermaid
 flowchart TD
@@ -155,7 +155,10 @@ request while the contract executes exactly as written. This is why Week 0
 insisted on **bookmarks over search results**, and why a hardware wallet showing
 the transaction on its own screen can be valuable.
 
-#### Read: “show me 42 votes”
+:::: tabs
+@tab <Icon name="material-symbols:visibility-outline" /> Read — “show me 42 votes”
+
+#### “show me 42 votes”
 
 1. The user opens a page and the frontend asks for the current vote count.
 2. The frontend sends a read request through an RPC provider. In Ethereum terms,
@@ -166,7 +169,9 @@ the transaction on its own screen can be valuable.
    signature is normally required, so the user does not normally pay a
    transaction fee for this read.
 
-#### Write: “vote”
+@tab <Icon name="material-symbols:edit-outline" /> Write — “vote”
+
+#### “vote”
 
 1. The user clicks **Vote**, and the frontend prepares a call to the contract's
    `vote()` function.
@@ -177,6 +182,7 @@ the transaction on its own screen can be valuable.
 4. The network processes it. The contract runs, its state may change, and it may
    emit events.
 5. The frontend or an indexer later reads the result and refreshes the display.
+::::
 
 ### One small UI example
 
@@ -236,8 +242,8 @@ for everyone.
 | Physical presence limits abuse | **The attacker can be a program, calling a million times** |
 
 ::: important The lesson the analogy hides
-A vending machine's bugs are bounded by physics. A contract's bugs are bounded by
-nothing.
+==A vending machine's bugs are bounded by physics. A contract's bugs are bounded by
+nothing.==
 
 That is why every remaining page this week keeps returning to security — not
 because contracts are dangerous to *learn*, but because deploying one is

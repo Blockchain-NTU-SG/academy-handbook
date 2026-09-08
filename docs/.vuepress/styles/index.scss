@@ -18,8 +18,22 @@
   --academy-surface: #f5f9fb;
   --academy-surface-cyan: #effbfd;
   --academy-off-white: #fbfcfd;
-  --academy-title-weight: 800;
-  --academy-title-tracking: -0.04em;
+  --academy-font-sans: var(--vp-font-family-base);
+  --academy-weight-body: 400;
+  --academy-weight-medium: 550;
+  --academy-weight-strong: 650;
+  --academy-weight-component: 700;
+  --academy-weight-heading: 750;
+  --academy-weight-display: 800;
+  --academy-title-weight: var(--academy-weight-display);
+  --academy-title-tracking: -0.025em;
+
+  /* Dark editor surfaces are intentional, even when the document is light. */
+  --academy-code-bg: #252a35;
+  --academy-code-bg-deep: #20242d;
+  --academy-code-border: #39404c;
+  --academy-code-text: #e7edf3;
+  --academy-code-muted: #aab4c3;
 
   /* Plume semantic colour bridge */
   --vp-c-brand-1: var(--academy-blue-deep);
@@ -58,8 +72,22 @@
 
   --vp-code-color: #11678f;
   --vp-code-bg: rgb(55 164 227 / 9%);
-  --vp-code-block-bg: #252a35;
-  --vp-code-block-color: #e7edf3;
+  --vp-code-block-bg: var(--academy-code-bg);
+  --vp-code-block-color: var(--academy-code-text);
+  --vp-code-block-divider-color: var(--academy-code-border);
+  --vp-code-lang-color: var(--academy-code-muted);
+  --vp-code-line-highlight-color: rgb(154 234 246 / 12%);
+  --vp-code-line-number-color: var(--academy-code-muted);
+  --vp-code-tab-bg: var(--academy-code-bg-deep);
+  --vp-code-tab-text-color: var(--academy-code-muted);
+  --vp-code-tab-hover-text-color: var(--academy-code-text);
+  --vp-code-tab-active-text-color: var(--academy-code-text);
+  --code-c-bg: var(--academy-code-bg);
+  --code-c-text: var(--academy-code-text);
+  --code-c-highlight-bg: rgb(154 234 246 / 12%);
+  --code-title-c-bg: var(--academy-code-bg-deep);
+  --code-title-c-text: var(--academy-code-text);
+  --code-title-divider: var(--academy-code-border);
   --vp-bg-home-hero-name: linear-gradient(
     112deg,
     var(--academy-blue-deep) 8%,
@@ -80,7 +108,15 @@
 
 body {
   color: var(--academy-text);
+  font-family: var(--academy-font-sans);
   text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--academy-font-sans);
 }
 
 :focus-visible {
@@ -98,13 +134,22 @@ body {
 .vp-doc h5,
 .vp-doc h6 {
   color: var(--academy-ink);
-  letter-spacing: -0.018em;
+  font-family: var(--academy-font-sans);
+  letter-spacing: -0.01em;
 }
 
-.content-container .vp-doc-title.page-title {
+.content-container .vp-doc-title {
   margin-bottom: 0.65rem;
   font-size: clamp(1.875rem, 2.5vw, 2.375rem);
   font-weight: var(--academy-title-weight);
+  line-height: 1.12;
+  letter-spacing: var(--academy-title-tracking);
+}
+
+.content-container .vp-doc-title h1.page-title {
+  font-family: var(--academy-font-sans);
+  font-size: clamp(1.875rem, 2.5vw, 2.375rem);
+  font-weight: var(--academy-weight-display);
   line-height: 1.12;
   letter-spacing: var(--academy-title-tracking);
 }
@@ -113,18 +158,25 @@ body {
   padding-top: 26px;
   margin-top: 50px;
   font-size: clamp(1.45rem, 1.8vw, 1.65rem);
-  font-weight: 700;
+  font-weight: var(--academy-weight-heading);
   line-height: 1.25;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.012em;
   border-top-color: var(--academy-border);
 }
 
 .plume-content.vp-doc h3 {
   margin-top: 34px;
   font-size: clamp(1.175rem, 1.4vw, 1.3rem);
-  font-weight: 650;
+  font-weight: var(--academy-weight-strong);
   line-height: 1.35;
-  letter-spacing: -0.016em;
+  letter-spacing: -0.006em;
+}
+
+.plume-content.vp-doc h4,
+.plume-content.vp-doc h5,
+.plume-content.vp-doc h6 {
+  font-weight: var(--academy-weight-strong);
+  letter-spacing: 0;
 }
 
 .content-container main .vp-doc-meta {
@@ -140,7 +192,7 @@ body {
 .vp-doc p,
 .vp-doc li,
 .vp-doc summary {
-  color: var(--academy-text-muted);
+  color: var(--academy-text);
 }
 
 .vp-doc p,
@@ -172,6 +224,7 @@ body {
 
 .vp-doc strong {
   color: var(--academy-text);
+  font-weight: var(--academy-weight-strong);
 }
 
 .vp-doc a {
@@ -215,6 +268,7 @@ body {
 
 .vp-doc th {
   color: var(--academy-ink);
+  font-weight: var(--academy-weight-medium);
   background: var(--academy-surface);
 }
 
@@ -230,31 +284,34 @@ body {
 }
 
 .vp-doc :not(pre) > code {
-  font-weight: 600;
+  font-weight: var(--academy-weight-medium);
   border: 1px solid rgb(55 164 227 / 14%);
   border-radius: 5px;
 }
 
 .vp-doc div[class*='language-'] {
   overflow: hidden;
-  border: 1px solid #39404c;
+  background: var(--academy-code-bg);
+  border: 1px solid var(--academy-code-border);
   border-radius: 9px;
-  box-shadow: 0 8px 20px rgb(43 45 57 / 8%);
-  background: var(--vp-code-block-bg);
+  box-shadow: 0 8px 20px rgb(20 24 32 / 18%);
 }
 
-/* Shiki emits the light theme's dark text even though the Academy code surface
- * is intentionally dark. Keep plain-text blocks and unstyled code lines
- * readable without changing the syntax theme contract. */
+.vp-doc div[class*='language-'] .code-block-title-bar {
+  background: var(--academy-code-bg-deep);
+  border-bottom-color: var(--academy-code-border);
+  color: var(--academy-code-text);
+  font-weight: var(--academy-weight-medium);
+}
+
+.vp-doc div[class*='language-'] .code-block-title-bar .vp-icon,
+.vp-doc div[class*='language-']::before {
+  color: var(--academy-code-muted);
+}
+
 .vp-doc div[class*='language-'] .shiki,
-.vp-doc div[class*='language-'] .shiki code,
-.vp-doc div[class*='language-'] .shiki .line,
-.vp-doc div[class*='language-'] .shiki .line > span {
-  color: var(--vp-code-block-color) !important;
-}
-
-.vp-doc div[class*='language-'] .shiki code {
-  background: transparent !important;
+.vp-doc div[class*='language-'] pre {
+  background: var(--academy-code-bg) !important;
 }
 
 /* Mermaid's default green/purple theme is visually out of place beside the
@@ -361,6 +418,45 @@ body {
   white-space: nowrap;
 }
 
+/* Week 0's five-source orientation map: three equal cards above two equal,
+ * centred cards. This is intentionally scoped to this one page. */
+.vp-doc._getting-started_tools .vp-card-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+}
+
+.vp-doc._getting-started_tools .vp-card-grid > .vp-card-wrapper {
+  grid-column: span 2;
+}
+
+.vp-doc._getting-started_tools .vp-card-grid > .vp-card-wrapper:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+/* The regulatory map is intentionally a calm 2 × 2 orientation grid. */
+.vp-doc._getting-started_regulatory-awareness .vp-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* W2P5 uses three cards for the security relationship and two for the
+ * architecture choice. Keep both representations full-width without adding
+ * page-specific markup or a client-side layout system. */
+.vp-doc._foundation_week-2_part-5-l1-l2-and-bridges .vp-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.vp-doc._foundation_week-2_part-5-l1-l2-and-bridges .vp-card-grid:not(:has(> .vp-card-wrapper:nth-child(3))) {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.vp-card-wrapper .title {
+  font-weight: var(--academy-weight-component);
+}
+
+.vp-steps li > strong:first-child,
+.vp-doc .vp-timeline-item .vp-timeline-content .vp-timeline-title {
+  font-weight: var(--academy-weight-component);
+}
+
 /* Learning hierarchy: use a quiet margin cue rather than boxed sections. */
 .vp-doc h2#learning-objectives,
 .vp-doc h2#core,
@@ -412,7 +508,7 @@ body {
 }
 
 .vp-navbar-title .title {
-  letter-spacing: -0.012em;
+  letter-spacing: 0;
 }
 
 .vp-navbar-title .logo {
@@ -442,7 +538,7 @@ body {
   margin-top: 16px;
   color: var(--academy-ink);
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 750;
+  font-weight: var(--academy-weight-heading);
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
@@ -559,11 +655,45 @@ body {
 
 .vp-home .vp-home-feature .title {
   color: var(--academy-ink);
-  letter-spacing: -0.012em;
+  font-weight: var(--academy-weight-strong);
+  letter-spacing: 0;
 }
 
 .vp-home .vp-home-feature .details {
   color: var(--academy-text-muted);
+}
+
+/* Reveal selected homepage surfaces as they enter the viewport. The class is
+ * added only by the client, so a no-JS render remains fully visible. */
+.vp-home .academy-home-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 460ms ease,
+    transform 460ms ease;
+  transition-delay: var(--academy-reveal-delay, 0ms);
+}
+
+.vp-home .academy-home-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.vp-home .vp-home-feature.academy-home-reveal {
+  transition:
+    opacity 460ms ease,
+    transform 460ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vp-home .academy-home-reveal,
+  .vp-home .academy-home-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Keep the introduction calm and continuous: the official horizontal lockup
@@ -727,7 +857,7 @@ body {
 .vp-sidebar-item.level-1 > .item > a[href*='/foundation/week-'] .text,
 .vp-sidebar-item.level-1 > .item > a[href$='/foundation/proof-of-work/'] .text {
   color: var(--academy-text);
-  font-weight: 600;
+  font-weight: var(--academy-weight-medium);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
 }
@@ -740,7 +870,7 @@ body {
 
 .vp-sidebar-item.level-2.is-active > .item .text {
   color: var(--academy-blue-deep);
-  font-weight: 500;
+  font-weight: var(--academy-weight-medium);
 }
 
 /* Reading navigation ---------------------------------------------------- */
@@ -757,18 +887,18 @@ body {
 }
 
 .vp-breadcrumb .breadcrumb {
-  font-weight: 600;
+  font-weight: var(--academy-weight-medium);
   color: var(--academy-blue-deep);
 }
 
 .vp-breadcrumb .breadcrumb.current {
-  font-weight: 500;
+  font-weight: var(--academy-weight-medium);
   color: var(--academy-text-muted);
 }
 
 .vp-doc-aside-outline .outline-title {
   color: var(--academy-ink);
-  font-weight: 700;
+  font-weight: var(--academy-weight-strong);
   letter-spacing: 0;
 }
 
@@ -783,7 +913,7 @@ body {
 }
 
 .vp-doc-aside-outline .outline-link.active {
-  font-weight: 600;
+  font-weight: var(--academy-weight-medium);
   background: rgb(55 164 227 / 7%);
 }
 
@@ -866,6 +996,26 @@ body {
     max-width: 100%;
     overflow-x: auto;
   }
+
+  .vp-doc._getting-started_tools .vp-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .vp-doc._getting-started_tools .vp-card-grid > .vp-card-wrapper {
+    grid-column: span 1;
+  }
+
+  .vp-doc._getting-started_tools .vp-card-grid > .vp-card-wrapper:nth-child(4) {
+    grid-column-start: auto;
+  }
+
+  .vp-doc._foundation_week-2_part-5-l1-l2-and-bridges .vp-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .vp-doc._foundation_week-2_part-5-l1-l2-and-bridges .vp-card-grid:not(:has(> .vp-card-wrapper:nth-child(3))) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
 }
 
 @media (max-width: 430px) {
@@ -873,6 +1023,15 @@ body {
     width: 34px;
     min-width: 34px;
     height: 34px !important;
+  }
+
+  .vp-doc._getting-started_tools .vp-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .vp-doc._getting-started_regulatory-awareness .vp-card-grid,
+  .vp-doc._foundation_week-2_part-5-l1-l2-and-bridges .vp-card-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .vp-navbar-title .title {
@@ -991,7 +1150,7 @@ body {
 
 .vp-tabs-nav .vp-tab-nav.active {
   color: #fff;
-  font-weight: 600;
+  font-weight: var(--academy-weight-medium);
 }
 
 /* The tab labels may contain <strong> from the chain-name markup. Keep that
@@ -1086,6 +1245,12 @@ body {
   --academy-surface-cyan: #16232b;
   --academy-off-white: #16181d;
 
+  --academy-code-bg: #252a35;
+  --academy-code-bg-deep: #20242d;
+  --academy-code-border: #39404c;
+  --academy-code-text: #e7edf3;
+  --academy-code-muted: #aab4c3;
+
   --vp-c-brand-1: var(--academy-blue-deep);
   --vp-c-brand-2: var(--academy-blue);
   --vp-c-brand-3: #3f9fd6;
@@ -1122,6 +1287,22 @@ body {
 
   --vp-code-color: #7fd0f4;
   --vp-code-bg: rgb(79 179 236 / 12%);
+  --vp-code-block-bg: var(--academy-code-bg);
+  --vp-code-block-color: var(--academy-code-text);
+  --vp-code-block-divider-color: var(--academy-code-border);
+  --vp-code-lang-color: var(--academy-code-muted);
+  --vp-code-line-highlight-color: rgb(154 234 246 / 12%);
+  --vp-code-line-number-color: var(--academy-code-muted);
+  --vp-code-tab-bg: var(--academy-code-bg-deep);
+  --vp-code-tab-text-color: var(--academy-code-muted);
+  --vp-code-tab-hover-text-color: var(--academy-code-text);
+  --vp-code-tab-active-text-color: var(--academy-code-text);
+  --code-c-bg: var(--academy-code-bg);
+  --code-c-text: var(--academy-code-text);
+  --code-c-highlight-bg: rgb(154 234 246 / 12%);
+  --code-title-c-bg: var(--academy-code-bg-deep);
+  --code-title-c-text: var(--academy-code-text);
+  --code-title-divider: var(--academy-code-border);
 
   --vp-home-hero-name-color: var(--academy-blue-deep);
 }

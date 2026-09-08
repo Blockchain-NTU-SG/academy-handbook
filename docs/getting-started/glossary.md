@@ -39,7 +39,7 @@ unexplained words show up in the first sentence, and by the time you have looked
 them all up you have lost the thread.
 
 ::: important This is a reference, not a lesson
-**Do not read it end to end, and do not memorise it.** Skim the tabs once so you
+==**Do not read it end to end, and do not memorise it.**== Skim the tabs once so you
 know what is here, then search it — <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>F</kbd> —
 whenever a word stops you mid-sentence.
 
@@ -48,7 +48,7 @@ Nothing on this page is assessed.
 
 Every entry gives you the same three things:
 
-> **term** → one-line explanation → a concrete example
+> ==**term** → one-line explanation → a concrete example==
 
 One line is deliberately not the whole truth. It is enough to keep reading. The
 week that owns each concept is in the last column, and that is where the real
@@ -64,9 +64,9 @@ explanation lives.
 | **Block** | A batch of transactions added together | Ethereum adds one roughly every 12 seconds | Week 1 |
 | **Transaction** | A signed instruction to change the shared record | "Send 0.1 ETH to Ben" | Week 1 |
 | **Gas** | The amount of computation or work your transaction uses | A transfer uses less gas than deploying a contract | Week 2 |
-| **Validator** | A participant that proposes and checks new blocks | Ethereum has over a million | Week 1 |
+| **Validator** | A participant that proposes and checks new blocks | Ethereum has hundreds of thousands of validators | Week 1 |
 | **Node** | A computer running the network's software | Your wallet talks to one to read balances | Week 1 |
-| **Finality** | The point where a transaction won't be reversed | Ethereum: ~13 minutes. Solana: much faster | Week 2 |
+| **Finality** | The point where a transaction won't be reversed | Ethereum: about 15 minutes. Solana: much faster | Week 2 |
 | **Mainnet** | The real network, with real value at stake | Ethereum Mainnet | Week 1 |
 | **Testnet** | A practice network with worthless coins | Sepolia — **everything in this programme** | Week 1 |
 | **On-chain** | Recorded on the blockchain, public and permanent | A token transfer | Week 1 |
@@ -155,7 +155,7 @@ Words you will hear early but do not need yet.
 | **ZK** | Zero-knowledge cryptography, for privacy and scaling | Week 2; broader uses in Week 4 |
 
 ::: danger Seed phrase — the one entry that matters today
-**Never share it with another person or enter it because someone told you to.**
+==**Never share it with another person or enter it because someone told you to.**==
 The normal exception is when **you deliberately restore or import your wallet
 into wallet software that you installed from a verified official source**.
 [Part 4](./safety.md) explains the rule in more detail.
@@ -180,7 +180,7 @@ Plain English: **the community voted to move to a cheaper network, and users
 followed the money within a week.**
 
 ::: important Recognition first, understanding later
-You did not need to understand how an L2 works to read that sentence. That is
+==Recognition first, understanding later.== You did not need to understand how an L2 works to read that sentence. That is
 the point of this page.
 :::
 

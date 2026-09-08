@@ -70,7 +70,7 @@ flowchart TD
 | **Accounts and devices** — email, GitHub, Telegram, your machine | Usually, with effort. But they are the route to everything above |
 
 ::: important Two things follow from that table
-Your seed phrase is **not like a password** — a password can be reset, and this
+Your seed phrase is ==**not like a password**== — a password can be reset, and this
 cannot.
 
 And securing your email and your laptop **is** Web3 security, because that is
@@ -90,8 +90,8 @@ in a screenshot or cloud note, pasted into a chat, or entered into a "support
 tool".
 
 ::: danger No one should ask for your recovery phrase
-**No website, DApp, support agent, reviewer or other person should ever ask for
-your recovery phrase.** Not to help you, not to verify you, not to fix a stuck
+==**No website, DApp, support agent, reviewer or other person should ever ask for
+your recovery phrase.**== Not to help you, not to verify you, not to fix a stuck
 transaction.
 
 The normal exception is when **you deliberately restore or import your wallet
@@ -119,7 +119,7 @@ code on a block explorer is one check — it is not proof of good intent.
 
 **This is the one beginners never see coming.**
 
-You can lose assets **without sending a transaction**. Some signature requests
+You can lose assets ==**without sending a transaction**==. Some signature requests
 are not payments — they are permissions. Sign the wrong one and you have
 authorised someone to move your tokens later, at a time of their choosing.
 
@@ -160,7 +160,7 @@ regardless of how convincing the profile picture is.
 |---|---|
 | **Verify the URL every time** | Bookmark the real site and use the bookmark. Never reach a wallet or protocol through a search ad, a DM, or a forwarded link |
 | **Never share keys** | No exceptions. Nobody needs them |
-| **Read before signing** | Which network, which contract, which token, how much, what permission. If the wallet cannot explain it plainly, reject it |
+| ==**Read before signing**== | Which network, which contract, which token, how much, what permission. If the wallet cannot explain it plainly, reject it |
 | **Use testnet for Academy work** | Every required activity here is testnet only. A mistake costs nothing |
 | **Separate wallets** | One for learning. A different one for anything you would mind losing. They should share nothing |
 | **Turn on 2FA** | Email, GitHub, exchange accounts. An authenticator app, not SMS |

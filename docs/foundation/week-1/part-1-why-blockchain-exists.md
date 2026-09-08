@@ -52,41 +52,43 @@ By the end of this page you should be able to:
 ## A short history: why “Web3”?
 
 Before asking what problem a blockchain solves, it helps to know why people call
-this space **Web3**. The name is a historical shorthand for a changing web, not a
-technical label that every application must satisfy.
+this space **Web3**. ==The name is a historical shorthand for a changing web, not a
+technical label that every application must satisfy.==
+
+::: timeline
+- Web1 — mostly read
+  time="Early web" icon="material-symbols:menu-book-outline" type="info"
+
+  Early websites mainly published information for people to browse. “Mostly
+  read” is a useful summary, not a claim that every early website was completely
+  static.
+- Web2 — read + write
+  time="Platform web" icon="material-symbols:edit-outline" type="tip"
+
+  Platforms made accounts, user-generated content and social interaction normal.
+  ==On Instagram, you create the content, but the platform controls the database
+  that says what exists and who may access it.==
+- Web3 — read + write + user-controlled state
+  time="Blockchain-oriented web" icon="material-symbols:account-balance-wallet-outline" type="important"
+
+  Some important state can be controlled with keys and maintained on a shared
+  network. If you hold ETH, a wallet app is an interface rather than the ledger;
+  another compatible wallet can still access the same on-chain state. This does
+  not mean every application detail is on-chain.
+:::
 
 | Aspect | Web1 | Web2 | Web3 |
 |---|---|---|---|
-| **Useful shorthand** | Mostly read | Read + write | Read + write + own — a shorthand for some user-controlled state |
 | **Familiar picture** | An early university, news or company website | Instagram, TikTok or YouTube | A wallet holding ETH, or a DApp using on-chain assets |
 | **Important state** | The website owner publishes the pages | The platform database and account system | Keys plus a shared network for selected on-chain state |
 | **Digital value** | External payment rails | Platform-mediated payments | Native or tokenised programmable assets |
 | **Main trust model** | Site operator | Platform operator | A mix of users, networks, contracts and operators |
 
-These labels describe broad tendencies:
 
-- **Web1** was mainly about publishing and consuming information. Imagine an
-  early university or company website: you can read pages, click links and move
-  around, but there is little user-generated content or persistent personal
-  account state. “Mostly read” is a useful summary, not a claim that every early
-  website was completely static. The web publishes information to you.
-- **Web2** made accounts, user-generated content and social interaction
-  mainstream. On Instagram, you can create an account, post photos, comment,
-  like and message people. But where does that account live? Instagram controls
-  the database, servers and application rules. If it removes a post, suspends an
-  account, closes the service or changes its rules, you cannot independently tell
-  Instagram's database to restore the old state. **You create the content, but
-  the platform controls the database that says what exists and who may access
-  it.** This is about technical control, not a universal legal claim about who
-  owns the content.
-- **Web3** describes a blockchain-oriented vision in which some important state
-  — such as asset ownership, account authority, credentials or protocol
-  positions — can live on a shared network rather than only inside one company's
-  private database. If you hold ETH, MetaMask does not own the ETH record and it
-  is not the ledger; it is an interface. The Ethereum network records the
-  balance, and your key authorises changes. If one wallet app disappears, another
-  compatible wallet can still use the same address and key to read and interact
-  with that on-chain state.
+The web labels describe broad tendencies, not strict eras or universal rules.
+The Web2 point is technical control rather than a universal legal claim about
+who owns content. The Web3 point is that selected state can be user-controlled
+and shared without making every application detail on-chain.
 
 Public blockchain data is typically replicated across many network participants,
 so one company cannot unilaterally rewrite or remove the shared record. But this
@@ -99,16 +101,19 @@ in 2014**, motivated in part by reducing how much people must rely on trusted
 central intermediaries. “Web3” later became the broader industry term used around
 blockchain-based applications, assets and ownership.
 
-The memorable **“read + write + own”** phrase is therefore a way to picture this
-change in where some state lives and who can authorise it, not a promise that
-users own every piece of application data or that Web3 replaces Web2. A modern
-application can use a Web2 database and login alongside a wallet and selected
-on-chain state.
+::: details Naming caveat — Web3 vs Web 3.0
+The blockchain-oriented Web3 idea and the older **Semantic Web / “Web 3.0”** idea
+are not necessarily the same concept. You do not need Semantic Web theory for
+this course; just avoid treating the shared name as proof that the two visions
+are identical.
+:::
 
-One last naming detail: the blockchain-oriented Web3 idea and the older
-**Semantic Web / “Web 3.0”** idea are not necessarily the same concept. You do not
-need Semantic Web theory for this course; just avoid treating the shared name as
-proof that the two visions are identical.
+::: tip Read + write + own is shorthand
+Picture this as a change in where some state lives and who can authorise it, not
+a promise that users own every piece of application data or that Web3 replaces
+Web2. A modern application can use a Web2 database and login alongside a wallet
+and selected on-chain state.
+:::
 
 That is why people started calling this **Web3**. It also leaves the question
 that leads directly into this page: if important shared state is not controlled
@@ -117,34 +122,13 @@ accepted? Blockchain is one answer to that problem.
 
 ## Core
 
-### Every online system you use has an operator
+### Operator → problem → answer
 
-When you send someone money through a bank app, you don't transfer anything. You
-ask your bank to update its records. The bank owns the ledger, decides whether the
-update happens, and can reverse it.
-
-That arrangement works well. Operators are efficient, and they can fix mistakes.
-Most of the time you want one.
-
-The catch is that everyone in the system has to trust the operator — to stay
-solvent, stay honest, stay online, and keep serving you. Usually reasonable. Not
-always.
-
-### The problem: agreeing without an operator
-
-Say you want a shared record of who owns what, where no single party controls it.
-Now you have a genuinely hard problem. If everyone keeps their own copy, whose
-copy is right when they disagree?
-
-Copying a file is free, so nothing stops someone spending the same money twice by
-telling two different people two different things. With an operator this is easy —
-they check their records. Without one, it went unsolved for decades.
-
-### The idea
-
-A blockchain is a shared record that many independent computers maintain
-together, with rules that let them agree on what is true without any of them being
-in charge.
+::: steps
+1. **Operator** — When you send money through a bank app, you ask the bank to update its ledger. That is efficient, reversible and usually useful, but everyone relies on the operator to stay solvent, honest and available.
+2. **Problem** — If many independent parties keep a shared record with no single controller, whose copy is right when they disagree? Without an operator checking its records, even double-spending becomes a hard coordination problem.
+3. **Answer** — ==A blockchain is a shared record that many independent computers maintain together, with rules that let them agree on what is true without any of them being in charge.==
+:::
 
 <figure class="academy-reference-visual">
   <img src="/learning/blockchain-distributed-network.jpg" alt="A distributed network of connected nodes, illustrating how many computers can maintain a shared record together." />
@@ -181,7 +165,8 @@ mistake for you. Nobody can restore your access if you lose your keys.
 
 So the useful question is never "should this be on a blockchain?" — it's:
 
-::: important Is the operator actually a problem here?
+::: important Decision rule
+==Is the operator actually a problem here?==
 :::
 
 | Case | Verdict |

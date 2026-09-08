@@ -30,12 +30,12 @@ A project or ecosystem can contain a network, a protocol, a company, a token, an
 interface and a governance process at the same time.
 
 ::: important The sentence this page exists for
-**Sector tells you what problem area something belongs to. Type tells you what
-the named thing actually is.**
+**==Sector tells you what problem area something belongs to. Type tells you what
+the named thing actually is.==**
 
 For example, "Uniswap" can mean the protocol, the website, the company behind
-one interface, the UNI token or the governance process. These are not
-interchangeable: they can change, fail or be controlled in different ways.
+one interface, the UNI token or the governance process. **==These are not
+interchangeable: they can change, fail or be controlled in different ways.==**
 :::
 
 ## Learning objectives
@@ -95,14 +95,40 @@ These are not slogans. They are different dependencies that can be checked.
 Use these as recognition-level definitions. You do not need to memorise a list
 of organisations.
 
-- **Network** — the blockchain system participants connect to and use. If the network is unavailable, applications built on it cannot use its current state.
-- **Protocol** — rules and contracts that provide a service on a network, such as exchanging or lending assets. The protocol is not automatically the same thing as the website in front of it.
-- **Company / Labs** — a legal organisation with people, owners and a jurisdiction. It may build software around a protocol without owning the protocol itself.
-- **Foundation** — often a nonprofit that funds or supports ecosystem work. Supporting a network does not automatically mean controlling its rules or validators.
-- **Native asset** — an asset built into a network's protocol, such as ETH on Ethereum. It does not need a token contract to exist.
-- **Token** — an asset whose balances and rules are implemented by a smart contract on a network. A token may coordinate voting, ownership or incentives, but it is not automatically company equity.
-- **Interface** — the website or app a person uses to interact with a protocol. An interface can change or disappear while the underlying contracts remain available, if the contracts and required services are still available.
-- **DAO / governance** — a way for a community or defined group of participants to coordinate decisions. DAOs do not all use the same voting rules, legal structure or execution process.
+:::: card-grid
+::: card title="Network" icon="material-symbols:hub-outline"
+The blockchain system participants connect to and use. If it is unavailable,
+applications built on it cannot use its current state.
+:::
+::: card title="Protocol" icon="material-symbols:account-tree-outline"
+Rules and contracts that provide a service on a network; it is not automatically
+the same thing as the website in front of it.
+:::
+::: card title="Company / Labs" icon="material-symbols:corporate-fare"
+A legal organisation with people, owners and a jurisdiction that may build
+software around a protocol without owning the protocol itself.
+:::
+::: card title="Foundation" icon="material-symbols:foundation"
+An organisation that often supports ecosystem work without automatically
+controlling network rules or validators.
+:::
+::: card title="Native asset" icon="material-symbols:token-outline"
+An asset built into a network's protocol, such as ETH on Ethereum, used for
+network roles such as transaction fees and security.
+:::
+::: card title="Token" icon="material-symbols:generating-tokens"
+An asset whose balances and rules are implemented by a smart contract on a
+network.
+:::
+::: card title="Interface" icon="material-symbols:touch-app-outline"
+The website or app a person uses to interact with a protocol; it can change or
+disappear while the underlying contracts remain available.
+:::
+::: card title="DAO / Governance" icon="material-symbols:how-to-vote-outline"
+A way for a community or defined group to coordinate decisions; voting rules,
+legal structure and execution process vary.
+:::
+::::
 
 ### Quick classification: keep these separate
 
@@ -184,7 +210,7 @@ Different types of things answer different practical questions:
 | What native asset am I holding? | The network, such as ETH on Ethereum |
 | What token am I holding? | The token's network + contract address |
 
-This is why "decentralised" is not a complete answer. A protocol may have
+**==This is why "decentralised" is not a complete answer.==** A protocol may have
 decentralised contracts but a company-run interface, a concentrated upgrade
 key, or a token issued by a centralised entity.
 
@@ -208,8 +234,8 @@ here the useful idea is the process:
 
 `idea → proposal/specification → discussion/review → decision/adoption → implementation`
 
-Other ecosystems use different names and processes. Publishing a proposal does
-not by itself mean that the change was approved, activated or deployed. Some
+Other ecosystems use different names and processes. **==Publishing a proposal does
+not by itself mean that the change was approved, activated or deployed.==** Some
 governance happens on-chain, some off-chain, and some combines both.
 
 One common pattern is a proposal discussed on a forum, an off-chain vote taken
@@ -264,7 +290,7 @@ Withdraw from a KYC'd exchange to your address, and that exchange can connect
 the two. Reuse one address across a forum post, an ENS name and a donation, and
 anyone can connect them.
 
-**Deanonymisation is usually done by correlation, not by breaking cryptography.**
+**==Deanonymisation is usually done by correlation, not by breaking cryptography.==**
 :::
 
 The genuine trade-off:

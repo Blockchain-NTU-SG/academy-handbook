@@ -32,8 +32,8 @@ sources:
 # Week 1 · Part 7 — Your first transaction
 
 ::: danger Testnet only
-Everything on this page uses free test assets with no monetary value. **Never
-use real funds for an Academy activity.**
+==Everything on this page uses free test assets with no monetary value. **Never
+use real funds for an Academy activity.**==
 :::
 
 Six parts of theory. Today you use it.
@@ -188,7 +188,7 @@ guessing — wallet interfaces change, and the group will know.
    :::
 
    ::: warning Check this every single time from now on
-   **Which network am I on** is the first question of every transaction.
+==**Which network am I on** is the first question of every transaction.==
    Confusing mainnet and testnet is a classic and expensive mistake.
    :::
 
@@ -213,7 +213,7 @@ guessing — wallet interfaces change, and the group will know.
    | **Contract address** | A program's address on the chain | **Yes** |
    | **Private key / recovery phrase** | What controls your wallet | **Never** |
 
-   The first three are public by design. The fourth is the only secret.
+   ==The first three are public by design. The fourth is the only secret.==
    :::
 
 5. **Claim test ETH from a faucet**
@@ -257,7 +257,7 @@ guessing — wallet interfaces change, and the group will know.
    :::
 
    ::: danger Never pay for testnet ETH
-   It is worthless by definition, so anyone selling it is running a scam. There
+   ==It is worthless by definition, so anyone selling it is running a scam.== There
    is **no way to convert or bridge Sepolia ETH into real mainnet ETH**. Anyone
    claiming they can turn your test ETH into real ETH is scamming you. Never
    connect a wallet holding real assets to a faucet.

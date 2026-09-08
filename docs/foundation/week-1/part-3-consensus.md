@@ -41,20 +41,16 @@ the network follows.
 ::: important First-pass model
 Follow the story in this order:
 
-```text
-Block proposed
-  ↓
-Does it follow the rules? → validity check
-  ↓
-If valid histories compete, which one does the network follow?
-  ↓
-Consensus helps the network converge on one history
-  ↓
-Confirmations and finality increase confidence in that history
-```
+:::: steps
+1. **Block proposed** — A participant suggests the next block.
+2. **Validate it** — Every node checks whether the block follows the rules.
+3. **Valid histories may compete** — More than one allowed block can appear at nearly the same time.
+4. **Consensus chooses the history** — The agreement mechanism helps the network converge on one valid history.
+5. **Confirmations / finality increase confidence** — More evidence makes that history safer to rely on.
+::::
 
-Consensus does not make an invalid block valid. It helps the network choose
-between histories that already pass the rules.
+==Consensus does not make an invalid block valid. It helps the network choose
+between histories that already pass the rules.==
 :::
 
 ```mermaid
@@ -92,13 +88,13 @@ blocks is a genuine coordination problem.
 
 For Foundation, keep this first-pass model:
 
-- **Validity:** Is this allowed by the rules?
-- **Consensus:** Which valid history do we follow?
+- ==**Validity:** Is this allowed by the rules?==
+- ==**Consensus:** Which valid history do we follow?==
 
 ::: important The shared goal
 You cannot stop someone *proposing* dishonest history. So instead you make
-**attacks extremely expensive, so honest participation is usually the
-economically rational choice.**
+==**attacks extremely expensive, so honest participation is usually the
+economically rational choice.**==
 
 Both mechanisms below do that — but they do it in genuinely different ways, and
 the difference is worth keeping straight.
@@ -176,7 +172,7 @@ why some argue pooling reintroduces concentration.
 | Energy use | Very high | Roughly 99.9% lower |
 | Barrier to entry | Hardware, cheap electricity | Solo validator: 32 ETH + suitable hardware; pools allow economic participation without running a validator |
 | Cost of cheating | Ongoing hashpower and electricity costs; no slashing | Slashed stake |
-| Finality | Probabilistic — confidence grows | Explicit — ~13 minutes |
+| Finality | Probabilistic — confidence grows | Explicit — about 15 minutes |
 | Used by | Bitcoin | Ethereum, most modern chains |
 
 ::: tip Neither is simply better
@@ -198,7 +194,7 @@ overtakes the honest chain. Each additional block adds more work to overcome,
 so confidence grows.** This is **probabilistic finality**: never mathematically
 certain, but rapidly certain enough for many practical decisions.
 
-Ethereum's Proof of Stake adds explicit finality. After roughly 13 minutes a
+Ethereum's Proof of Stake adds explicit finality. After roughly 15 minutes a
 block is **finalised**. Ethereum needs a supermajority of validator stake to
 finalise blocks, so a large attacker can disrupt finality — but producing two
 conflicting finalised histories requires provable dishonest behaviour, which
@@ -224,7 +220,7 @@ rules were followed. It does **not** make the recorded information *true*.
 
 Record "this diamond is ethically sourced" on-chain and consensus proves that
 statement was recorded, when, and by whom. It says nothing about the diamond.
-**Blockchains secure the ledger, not reality.**
+==**Blockchains secure the ledger, not reality.**==
 :::
 
 Week 3's oracles are the partial answer to this, and [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md)

@@ -10,6 +10,8 @@
     "docs:dev": "vuepress dev docs",
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
     "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:check-payload": "node scripts/check-payload.mjs",
+    "docs:check-marks": "node scripts/check-mark-syntax.mjs",
     "docs:check-times": "node scripts/check-reading-times.mjs",
     "docs:preview": "http-server docs/.vuepress/dist",
     "vp-update": "npx vp-update"
@@ -36,6 +38,9 @@
     "@vuepress-plume/plugin-search": "1.0.0-rc.205",
     "@vuepress/bundler-vite": "2.0.0-rc.30",
     "http-server": "^14.1.1",
+    "markmap-lib": "^0.18.12",
+    "markmap-toolbar": "^0.18.12",
+    "markmap-view": "^0.18.12",
     "minisearch": "7.2.0",
     "sass-embedded": "^1.89.0",
     "typescript": "^5.8.3",

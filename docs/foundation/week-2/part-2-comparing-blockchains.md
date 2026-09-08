@@ -35,8 +35,8 @@ There are thousands of chains and you will never evaluate them one at a time.
 What you can do is learn the handful of dimensions they all vary along.
 
 ::: important The conclusion, stated up front
-**Different blockchains make different design choices. None of them is strictly
-best.** A chain advertising a number without naming its cost is marketing, not
+**==Different blockchains make different design choices. None of them is strictly
+best.==** A chain advertising a number without naming its cost is marketing, not
 engineering.
 :::
 
@@ -113,7 +113,7 @@ better questions and explain what a chain gains and gives up.
 | **Ecosystem** | What already exists — tools, users, applications? |
 | **Design trade-off** | What was deliberately given up, and for what? |
 
-That last row is the one beginners skip and the one that tells you the most.
+==That last row is the one beginners skip and the one that tells you the most.==
 
 ### Five representative chains
 
@@ -121,8 +121,8 @@ Chosen because they made genuinely different choices — not because they are th
 five best.
 
 ::: warning Figures are approximate and directional
-Real throughput depends on transaction type and network conditions, and
-advertised maximums are almost never sustained. Use these to compare *shapes*,
+==Real throughput depends on transaction type and network conditions, and
+advertised maximums are almost never sustained.== Use these to compare *shapes*,
 not to quote numbers.
 :::
 
@@ -162,7 +162,7 @@ throughput and scaling through Layer 2s.
 | Aspect | Details |
 |---|---|
 | Consensus | Proof of Stake |
-| Finality | Explicit, ~13 minutes |
+| Finality | Explicit, about 15 minutes |
 | Throughput | Lower at the base layer than high-throughput chains; capacity is increasing |
 | Security participation | Solo validator: 32 ETH + suitable hardware. Pools let smaller holders participate economically without running their own validator |
 | Execution | The EVM. General-purpose smart contracts |
@@ -259,6 +259,7 @@ commonly called Subnets.
 
 ### Side by side
 
+::: table max-content
 | Dimension | <span class="academy-brand-label"><Icon name="token-branded:bitcoin" /><strong>Bitcoin</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:ethereum" /><strong>Ethereum</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:solana" /><strong>Solana</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:cosmos" /><strong>Cosmos</strong></span> | <span class="academy-brand-label"><Icon name="token-branded:avalanche" /><strong>Avalanche</strong></span> |
 |---|---|---|---|---|---|
 | Operator participation | Open under protocol rules | Broad participation is the goal; hardware, stake and client/operator spread still matter | Higher-spec hardware and stake can narrow participation | Depends on each chain and security model | Depends on each Avalanche L1 configuration |
@@ -266,6 +267,7 @@ commonly called Subnets.
 | Throughput | Very low | Low (base) | High | High | High |
 | Security participation | Mining hardware + power | Solo: 32 ETH + hardware; pools are economic participation | Higher-spec hardware + stake | Per-chain or shared-security model | Per-L1 validator configuration |
 | Execution | Limited | EVM | Parallel | Per chain | Configurable |
+:::
 
 ::: tip Read the columns downward, not the rows across
 These are rough qualitative descriptions of particular dimensions, not one
@@ -310,8 +312,8 @@ The candidates, honestly:
 | A dedicated Cosmos/appchain design | **Usually overkill** unless the application genuinely needs chain-level control. If it does, the project also takes on validator, security and infrastructure responsibility |
 
 ::: important There is no single right answer — that is the exercise
-What you should be able to say is: *"We chose X. It gives us speed and low fees.
-What we gave up is Y, and here is why that is acceptable for this use case."*
+==What you should be able to say is: *"We chose X. It gives us speed and low fees.
+What we gave up is Y, and here is why that is acceptable for this use case."*==
 
 Someone who says "we chose X because it is the best chain" has not understood
 this material.

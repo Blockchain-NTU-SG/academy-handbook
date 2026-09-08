@@ -10,16 +10,25 @@ owner: "Director of Education"
 
 <Badge type="tip" text="100 points" /> <Badge type="info" text="No on-chain activity" /> <Badge type="warning" text="No deadline" />
 
+::: important Foundation Pilot completion · Sep–Oct 2026
+For Foundation Pilot participants, completing this Direction Card / Anchor
+Mission completes the required pilot curriculum. Stop here. Weeks 5–8 belong to
+the full Cohort 1 programme beginning in January 2027.
+:::
+
 ## What you're doing
 
-Two things on one page: **a Direction Card** — what you will build in Weeks 5–8 —
-and **a Mini Project Map**, showing you can place and investigate a real Web3
-project.
+Two things on one page: **a Direction Card** — what full-programme learners may
+build in Weeks 5–8 — and **a Mini Project Map**, showing you can place and
+investigate a real Web3 project. For the current Foundation Pilot, this is the
+final required Foundation output and a map of what you could build next.
 
 ::: important This mission is the bridge
 Every other Anchor Mission looked backwards at what you learned. This one looks
-forward. Your Direction Card becomes the starting point for **Week 5 · Define**, so the
-effort you put in here is effort you do not repeat.
+forward. For full-programme learners, the Direction Card becomes the starting
+point for **Week 5 · Define**, so the effort you put in here is effort you do not
+repeat. For Foundation Pilot learners, it is the final required output and a map
+of what they could build next.
 
 Scope it honestly and Week 5 is straightforward. Scope it vaguely and Week 5 is
 where that catches up with you.

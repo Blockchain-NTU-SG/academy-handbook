@@ -116,7 +116,7 @@ Read the trust column downward and notice the shape.
 | DEX | Wallet + several sets of contracts |
 | DeFi protocol | All of the above + oracle + economic design |
 
-**Trust assumptions change as you move through the stack.** They can increase,
+==**Trust assumptions change as you move through the stack.**== They can increase,
 decrease or shift depending on the path. In this example, each extra component
 adds another assumption.
 
@@ -125,8 +125,8 @@ software you interact with. Each additional protocol adds assumptions rather tha
 removing them.
 
 ::: important The single most useful sentence in Week 1
-**Web3 does not eliminate trust. It changes and redistributes trust
-assumptions.**
+**==Web3 does not eliminate trust. It changes and redistributes trust
+assumptions.==**
 
 [Week 2 Part 6](../week-2/part-6-trust-and-risk-map.md) turns this into a tool
 you can apply to anything.
@@ -155,10 +155,10 @@ flowchart TD
 
 | Stage | What happens in this generic model | Week 1 connection |
 |---|---|---|
-| **Create and sign** | A user describes an action, and a wallet authorises it with the account's key | [Part 6](./part-6-wallets-and-accounts.md) |
+| ==**Create and sign**== | A user describes an action, and a wallet authorises it with the account's key | [Part 6](./part-6-wallets-and-accounts.md) |
 | **Propagate and check** | The request travels to network participants, which reject requests that do not follow the chain's basic rules | [Part 7](./part-7-your-first-transaction.md) |
 | **Propose a block** | A chain-specific proposer or block producer chooses valid transactions for a candidate block | [Part 3](./part-3-consensus.md) |
-| **Verify and agree** | Other participants check the block and its result; consensus determines which valid history the network follows | [Part 2](./part-2-how-shared-state-works.md) · [Part 3](./part-3-consensus.md) |
+| ==**Verify and agree**== | Other participants check the block and its result; consensus determines which valid history the network follows | [Part 2](./part-2-how-shared-state-works.md) · [Part 3](./part-3-consensus.md) |
 | **Update and read** | Once accepted, the shared state includes the result. Wallets, explorers and applications can query it | [Part 2](./part-2-how-shared-state-works.md) |
 
 ::: important Week 1 pieces now connected
@@ -175,9 +175,9 @@ receive protocol rewards and/or transaction fees. The amount and mechanism are
 chain-specific; payment is an incentive for participating, not part of the
 definition of every block.
 
-This is the system-level view to keep: an instruction is authorised, carried
+==This is the system-level view to keep: an instruction is authorised, carried
 through the network, checked, included under the chain's rules, and reflected in
-shared state. The details of how a chain selects and finalises blocks are what
+shared state.== The details of how a chain selects and finalises blocks are what
 [Part 3](./part-3-consensus.md) examines.
 
 ## Landscape

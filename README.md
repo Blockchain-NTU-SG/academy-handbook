@@ -1,7 +1,7 @@
 # Blockchain@NTU Academy Handbook
 
 <p align="center">
-  <img src="docs/.vuepress/public/brand/blockchain-ntu-logo-dark.png" alt="Blockchain@NTU" width="180" />
+  <img src="docs/.vuepress/public/brand/blockchain-ntu-academy-logo.jpeg" alt="Blockchain@NTU Academy" width="180" />
 </p>
 
 <p align="center"><strong>Learn → Build → Prove.</strong></p>
@@ -158,9 +158,14 @@ npm run docs:dev
 Build and consistency-check the static site with:
 
 ```bash
+npm run docs:check-marks
 npm run docs:build
 npm run docs:check-times
+npm run docs:check-payload
 ```
+
+`docs:check-payload` is a regression budget for the initial JavaScript payload
+of representative routes.
 
 The default GitHub Pages project URL is
 [https://blockchain-ntu-sg.github.io/academy-handbook/](https://blockchain-ntu-sg.github.io/academy-handbook/).

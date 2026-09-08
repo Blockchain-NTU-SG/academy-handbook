@@ -53,7 +53,7 @@ Contract 0xEF… →  a list of who owns which NFT
 ```
 
 A blockchain is a machine for changing that, by agreed rules, in a way everyone
-can verify. **Only one thing changes state: a transaction.**
+can verify. ==**Only one thing changes state: a transaction.**==
 
 ### Transactions
 
@@ -87,7 +87,7 @@ confirming their identity.
 
 A transaction is valid if it is correctly signed, the sender has the balance, the
 nonce is right, and it obeys the rules. Every participant checks this
-independently. **Nobody takes anyone's word for it.**
+independently. ==**Nobody takes anyone's word for it.**==
 
 ### Blocks
 
@@ -169,7 +169,9 @@ downloading the block. Further Exploration.
 
 ### Nodes
 
-A **node** is a computer running the network's software. Each one:
+A **node** is a computer running the network's software. For the Foundation
+model below, “node” means a validating/full node unless stated otherwise. Each
+one:
 
 - holds a copy of the chain and current state
 - receives new transactions and blocks and independently checks every rule
@@ -177,14 +179,15 @@ A **node** is a computer running the network's software. Each one:
 - relays what's valid to its peers
 
 ::: important The third point is the one to sit with
-A node does not trust the block producer. It **re-executes and re-verifies
-everything itself**. An invalid block is not rejected by a committee — it is
-independently ignored by everyone at once, because every participant checked.
+A validating/full node does not trust the block producer. It ==**re-executes
+and re-verifies everything itself**==. An invalid block is not rejected by a
+committee — it is independently ignored by everyone at once, because every
+validating/full node checked.
 :::
 
 This is also where Part 1's honesty about cost returns. Thousands of machines
-independently redoing identical work is the opposite of efficient. **That
-redundancy is the product** — it is what you are buying when you remove the
+independently redoing identical work is the opposite of efficient. ==**That
+redundancy is the product.**== It is what you are buying when you remove the
 operator.
 
 At this point we can detect when a chain of blocks was altered. But imagine two
@@ -212,16 +215,16 @@ Follow one transaction from your screen to a public blockchain record.
 | 3 | It's broadcast to a node, which checks signature, balance and nonce | One node |
 | 4 | Valid, so it's relayed to peers. It sits in the mempool | The network |
 | 5 | A block producer selects it and includes it in a block | One producer |
-| 6 | The block is broadcast. **Every node re-verifies every transaction in it** | Every node |
+| 6 | The block is broadcast. **Every validating/full node re-verifies every transaction in it** | Every validating/full node |
 | 7 | Nodes apply it. Your balance drops, Ben's rises | Everyone |
 
 Now the counterfactual. Suppose at step 5 the producer quietly edits your
 transaction to send 5 ETH to themselves instead.
 
 The edit breaks your signature — and your signature is checkable by anyone
-holding your public address. At step 6, every node checks it, finds it invalid,
-and **discards the entire block**. The producer wasted their effort and gained
-nothing.
+holding your public address. At step 6, every validating/full node checks it,
+finds it invalid, and **discards the entire block**. The producer wasted their
+effort and gained nothing.
 
 ::: important Nobody adjudicated. No authority intervened.
 The block was rejected everywhere simultaneously because everyone verified

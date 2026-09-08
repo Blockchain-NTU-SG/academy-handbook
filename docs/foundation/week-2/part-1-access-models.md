@@ -51,8 +51,8 @@ People collapse these into a single spectrum, and it causes real confusion.
 
 | Question | Axis |
 |---|---|
-| **Who can see, use or access the system?** | Open ↔ Restricted |
-| **Who can help operate, validate or maintain it?** | Permissionless ↔ Permissioned |
+| ==**Who can see, use or access the system?**== | Open ↔ Restricted |
+| ==**Who can help operate, validate or maintain it?**== | Permissionless ↔ Permissioned |
 
 Ethereum is public and permissionless. A bank's internal chain is private and
 permissioned. A consortium chain might publish some data publicly while
@@ -96,8 +96,8 @@ company across its own departments or subsidiaries.
 | **Use when** | You want shared infrastructure and tamper-evident records inside a trust boundary that already exists |
 
 ::: warning The fair question to ask any private chain — out loud
-*If one organisation controls it, what does the blockchain give you that a
-well-run database with good audit logs would not?*
+==*If one organisation controls it, what does the blockchain give you that a
+well-run database with good audit logs would not?*==
 
 Sometimes there is a genuinely good answer: shared write access across mutually
 suspicious internal parties, cryptographic auditability, easier reconciliation.
@@ -135,7 +135,7 @@ Every design decision on this page is one of five dials.
 | **Efficiency** | Often lower than tightly controlled systems | Often higher than open participation | Can be optimised for throughput and coordination |
 
 ::: important Read across any row
-**Openness and decentralisation often create trade-offs with efficiency and privacy.**
+==**Openness and decentralisation often create trade-offs with efficiency and privacy.**==
 The operator-participation row is a rough description of the architecture, not
 an objective score. There is no configuration that maximises all five. Anyone
 claiming otherwise is selling something.
@@ -157,8 +157,8 @@ flowchart TD
 ```
 
 ::: tip Being willing to say "this should be a database" is a mark of competence
-The most common mistake in this industry is starting at the bottom right when
-the honest answer was the top left.
+==The most common mistake in this industry is starting at the bottom right when
+the honest answer was the top left.==
 :::
 
 ## Landscape

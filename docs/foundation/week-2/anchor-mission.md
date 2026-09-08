@@ -88,12 +88,12 @@ not whether they picked the comparison you would have.
 |---|---|
 | **1** | All six fields, matching a real Sepolia transaction from that member. The gas explanation should convey that gas measures *computational work*, and that a contract call does more work than a plain transfer. Any wording carrying that idea is fine |
 | **2** | Three genuine dimensions, with a stated trade-off in **both** directions |
-| **3** | Reaches the actual reason: **blockchains cannot see each other**. Each network only knows its own state, so there is no native way for one to observe or verify what happened on another. A bridge is external infrastructure that watches both |
+| **3** | Reaches the actual reason: **blockchains cannot see each other**. Each network only knows its own state, so there is no native way for one to observe or verify what happened on another. A bridge or cross-chain messaging mechanism provides or verifies evidence from one chain so another chain can act on it |
 
 **Acceptable trade-offs for item 2** — any defensible answer counts, including
 ones not listed here:
 
-- Solana's speed costing validator accessibility and stability
+- Solana's high performance requiring more validator hardware and bandwidth, which can reduce validator accessibility
 - Bitcoin's simplicity costing programmability
 - Cosmos's sovereignty costing shared security
 - Avalanche's configurability costing ecosystem concentration

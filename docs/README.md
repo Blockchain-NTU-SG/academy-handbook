@@ -46,9 +46,11 @@ config:
         - theme: brand
           text: Apply to the Academy
           link: ./getting-started/programme.md#apply
+          icon: material-symbols:school-outline
         - theme: alt
           text: Start Learning
           link: ./getting-started/programme.md
+          icon: material-symbols:menu-book-outline
   - type: image-text
     title: How the Academy works
     image:
@@ -66,12 +68,16 @@ config:
       open learning into Proof of Work.
     features:
       - title: Learn with structure
+        icon: 🗺️
         details: Follow a clear weekly rhythm instead of figuring out what to study next.
       - title: Get feedback
+        icon: 🔄
         details: Submit missions, receive review, and improve your work instead of learning in isolation.
       - title: Build with others
+        icon: 🤝
         details: Learn alongside other NTU students and take part in the Blockchain@NTU community.
       - title: Leave with Proof of Work
+        icon: 🧩
         details: Turn what you learn into a small, reviewable output you can continue developing.
   - type: features
     title: A clear path through Web3
@@ -80,18 +86,21 @@ config:
       and the learning practical.
     features:
       - title: Week 0–4 Foundation
+        icon: 🧱
         details: >-
           Enter Web3 safely, then build a first-principles map of blockchains,
           Ethereum, wallets, contracts and the wider ecosystem.
         link: ./getting-started/
         linkText: Start with Week 0
       - title: Weeks 5–8 Proof of Work
+        icon: 🚀
         details: >-
           Turn the Foundation into one small, reviewable project with a clear
           scope, evidence, README and next steps.
         link: ./foundation/proof-of-work/
         linkText: See the sprint
       - title: Four directions
+        icon: 🧭
         details: >-
           Choose a starting point in Developer, Research, Data, or Product &
           Ecosystem. Directions can be combined.
@@ -105,21 +114,37 @@ title: Blockchain@NTU Academy
 
 Use the Handbook's learning hierarchy to decide how deeply to engage with each page:
 
-- **Core** is the primary material you should understand.
-- **Landscape** gives you the wider mental map and vocabulary to recognise.
-- **Further Exploration** points to optional depth when you want to go further.
-- **Anchor Mission** turns the week’s learning into a small, practical action.
+:::: card-grid
+::: card title="🎯 Core"
+The primary material you should understand.
+:::
+::: card title="🗺️ Landscape"
+The wider mental map and vocabulary to recognise.
+:::
+::: card title="🔭 Further Exploration"
+Optional depth when you want to go further.
+:::
+::: card title="⚓ Anchor Mission"
+The week's learning turned into a small, practical action.
+:::
+::::
 
 ## Start here
 
+:::: steps
 1. [Read the programme overview](./getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./getting-started/).
 3. Follow the [Foundation](./foundation/) from Week 1 through Week 4.
 4. Choose a direction and complete the [Proof of Work sprint](./foundation/proof-of-work/).
+::::
 
 The Handbook contains the full learning material and Anchor Mission
 instructions. Cohort operations such as application, progress, submission and
 review are handled through the Academy programme platform.
+
+The **September–October 2026 Foundation Pilot** ends after Week 4. Weeks 5–8
+are the next full-programme stage, in development for **Cohort 1 · January
+2027**.
 
 ## Stay connected with Blockchain@NTU
 

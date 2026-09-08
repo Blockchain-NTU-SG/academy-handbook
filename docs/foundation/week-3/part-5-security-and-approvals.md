@@ -53,25 +53,25 @@ You now know enough Solidity to see it.
 
 A token contract holds an allowance table:
 
-```solidity
+```solidity title="Token allowance table"
 mapping(address => mapping(address => uint256)) allowances;
 //      owner              spender        amount
 ```
 
 When you "approve Uniswap to spend your USDC", you send a transaction calling:
 
-```solidity
+```solidity title="Approval call"
 approve(uniswapAddress, amount)
 ```
 
-That writes one number into that table. **Nothing moves.** Later, Uniswap calls
+That writes one number into that table. ==**Nothing moves.**== Later, Uniswap calls
 `transferFrom(you, someoneElse, amount)`, the token contract checks the
 allowance, and moves your tokens.
 
 ::: important Why the two-step pattern exists at all
 A contract cannot reach into your wallet. It has no key. So the only way it can
-ever move your tokens is if **you** first write permission into the token's own
-storage.
+ever move your tokens is if ==**you** first write permission into the token's own
+storage.==
 
 The design makes the spender and amount explicit. The risk depends on which
 contract receives permission, how much it can spend, and whether that contract
@@ -95,8 +95,8 @@ future holdings of this token for as long as the allowance stands.**
 The allowance does not expire. It survives you forgetting about the site, the
 team abandoning it, and the contract being compromised eighteen months later.
 
-If that contract is ever exploited, your tokens can be taken **without you doing
-anything at all**. You granted the permission years ago.
+If that contract is ever exploited, your tokens can be taken ==**without you doing
+anything at all**==. You granted the permission years ago.
 :::
 
 **The defence** is unglamorous and works:
@@ -121,9 +121,9 @@ you sign.
 | Grants real permission | Yes | **Yes** |
 
 ::: danger "No gas" is not "no risk"
-A signature-based permission can create the same standing access as an approval
+==A signature-based permission can create the same standing access as an approval
 without appearing anywhere on-chain when you sign it. It may be submitted later
-by someone else. A signature is not automatically dangerous: inspect what
+by someone else.== A signature is not automatically dangerous: inspect what
 permission it authorises, who can submit it, and how long it lasts.
 
 This is why [Week 2 Part 4](../week-2/part-4-transactions-and-gas.md) says: **when
@@ -154,7 +154,7 @@ a flaw three layers down can reach you.
 Audited protocols get exploited. An audit means competent people reviewed a
 specific version at a specific time, and found what they found.
 
-It is meaningfully better than no audit. It is not a warranty.
+==It is meaningfully better than no audit. It is not a warranty.==
 :::
 
 ## Landscape

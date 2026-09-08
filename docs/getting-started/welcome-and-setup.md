@@ -19,9 +19,17 @@ sources:
 
 # Week 0 · Part 1 — Welcome, GitHub and the platform
 
-You are about to spend eight weeks learning a subject where the most common
+You are starting the Academy Foundation: a beginner-first path through a subject where the most common
 beginner experience is drowning in vocabulary, and the second most common is
 losing money to something avoidable. This programme is built to prevent both.
+
+::: important Foundation Pilot · Sep–Oct 2026
+The current pilot covers **Week 0 through Week 4 only**. The Week 4 Direction
+Card is the final pilot output. Weeks 5–8 are shown in the Handbook as the next
+stage of the Academy, but they are not required for Foundation Pilot
+participants. The full Week 0–8 programme begins with **Cohort 1 in January
+2027**. The Weeks 5–8 sprint is in development for Cohort 1 · January 2027.
+:::
 
 Today is housekeeping — three accounts and a clear picture of how the Academy
 works. It is the least interesting page in the handbook and the one that saves
@@ -45,23 +53,27 @@ flowchart TD
   P --> O["<b>One small thing</b><br/>you can show"]
 ```
 
-**Weeks 1–4 are the same for everyone.** They build a shared map of blockchains,
+==**Weeks 1–4 are the same for everyone.**== They build a shared map of blockchains,
 wallets, Ethereum, smart contracts and the wider industry. You do not choose a
 specialism yet, because you cannot sensibly choose one before you know what is
 out there.
 
-**Weeks 5–8 are yours.** You pick one of four directions — Developer, Research,
-Data, or Product & Ecosystem — and build one small, reviewable thing. Directions
-are starting points, not restrictions.
+**For the full programme, Weeks 5–8 are yours.** You pick one of four directions
+— Developer, Research, Data, or Product & Ecosystem — and build one small,
+reviewable thing. Directions are starting points, not restrictions. Foundation
+Pilot learners stop after Week 4; the sprint is shown here as the next stage of
+the full Academy.
 
 ### The weekly rhythm
 
 Each Foundation week has a handful of short pages and **one Anchor Mission**.
+The full programme then adds one four-week Proof of Work sprint rather than a
+separate Anchor Mission for each sprint week.
 
 | Item | Details |
 |---|---|
-| Anchor Missions | One per week, Weeks 1–8 |
-| Points | 100 per Foundation mission, 400 for the sprint, **800 total** |
+| Anchor Missions | One per Foundation week, Weeks 1–4 |
+| Points | 100 per Foundation mission, 400 for the Weeks 5–8 sprint, **800 total** |
 | Week 0 | No mission, no points |
 | Review outcomes | **Completed** or **Rejected** — nothing in between |
 | Rejected | Comes back with specific feedback. Resubmit as many times as you need |
@@ -73,8 +85,15 @@ something specific is missing, you will be told exactly what, and you send it
 again.
 :::
 
+::: tip Foundation Pilot completion
+For Foundation Pilot participants, the four Foundation Anchor Missions are the
+relevant missions. Week 4 is the final required week: complete the Direction
+Card / Anchor Mission, then stop here. Weeks 5–8 belong to the full Cohort 1
+programme.
+:::
+
 The pages each week are longer than the mission requires. That is on purpose:
-**richer content, not heavier assessment.** Read the Core sections properly,
+==**richer content, not heavier assessment.**== Read the Core sections properly,
 skim Landscape, treat Further Exploration as optional.
 
 ### Reading levels
@@ -116,7 +135,7 @@ The handbook and the platform have a clean division of labour:
 | Points, progress, leaderboard | — | ✅ |
 
 ::: tip If the two ever disagree about what a mission requires
-**The handbook is correct.**
+==**The handbook is correct.**==
 :::
 
 @tab <Icon name="simple-icons:telegram" /> Telegram
@@ -139,13 +158,13 @@ acting on any direct message. See [Part 4](./safety.md).
 
 ### The two rules
 
-::: danger These hold for all eight weeks and have no exceptions
-**1. Testnet only.** Every hands-on activity uses a test network. Testnet coins
+::: danger These hold throughout the Academy and have no exceptions
+==**1. Testnet only.**== Every hands-on activity uses a test network. Testnet coins
 are free and worth nothing. No mission will ever require real money, mainnet, or
 a wallet holding real assets. If a mission appears to ask this, stop and ask in
 the group.
 
-**2. Nobody asks for your keys.** No reviewer, organiser or committee member
+==**2. Nobody asks for your keys.**== No reviewer, organiser or committee member
 will ever ask for your seed phrase or private key. Anyone who does is not who
 they claim to be, regardless of what their profile says.
 :::
@@ -227,7 +246,7 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
 
    Join the Academy Telegram group using the invite in the same email, and post
    a one-line introduction: what you study, and one thing you want to understand
-   by Week 8.
+   by the end of the Foundation.
 ::::
 
 <figure class="academy-shot">
@@ -246,10 +265,10 @@ Someone joining with no technical background creates a GitHub account under a
 sensible username, turns on 2FA, and pushes one commit to a README. Total time:
 about fifteen minutes. Nothing about it is impressive.
 
-Eight weeks later, that same repository holds their Week 3 contract, their Week 4
-Direction Card, and their final Proof of Work with a README explaining what they
-built and what they would do next. The commit history shows it accumulating week
-by week.
+In the full programme, eight weeks later, that same repository holds their Week 3
+contract, their Week 4 Direction Card, and their final Proof of Work with a README
+explaining what they built and what they would do next. The commit history shows
+it accumulating week by week.
 
 ::: important The value is not any single commit
 It is that there is a visible, dated trail of someone learning in public — which
