@@ -110,10 +110,7 @@ guessing — wallet interfaces change, and the group will know.
    Install the browser extension and choose **Create a new wallet**.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the MetaMask onboarding screen showing Create a new wallet and Import an existing wallet">
-       <span class="academy-shot-label">Screenshot 2</span>
-       <span class="academy-shot-what">MetaMask onboarding, with **Create a new wallet** highlighted.</span>
-     </div>
+     <img src="/images/week-1/02b-create-wallet.png" alt="The MetaMask onboarding welcome screen, offering Create a new wallet or I have an existing wallet." />
      <figcaption>Create a new wallet. Do not import one you already use.</figcaption>
    </figure>
 
@@ -146,11 +143,8 @@ guessing — wallet interfaces change, and the group will know.
    :::
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: a MetaMask recovery phrase screen with the words fully blurred or replaced with placeholders">
-       <span class="academy-shot-label">Screenshot 3</span>
-       <span class="academy-shot-what">The recovery phrase screen — **with every word blurred or replaced by placeholders.** Never publish a real phrase, even a testnet one.</span>
-     </div>
-     <figcaption>A redacted example. The point is to show *where* the phrase appears, never what it says.</figcaption>
+     <img src="/images/week-1/03-recovery-phrase-mockup.png" alt="A mock-up of a wallet recovery phrase screen. The twelve words shown are invented placeholders and a red banner marks the image as not a real recovery phrase." />
+     <figcaption>A mock-up, not a real screen. The point is to show <em>where</em> the phrase appears, never what a real one says.</figcaption>
    </figure>
 
    Confirm the phrase when prompted. *You should now see a wallet with one
