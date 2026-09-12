@@ -103,10 +103,7 @@ guessing — wallet interfaces change, and the group will know.
    :::
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the official metamask.io download page with the URL bar visible">
-       <span class="academy-shot-label">Screenshot 1</span>
-       <span class="academy-shot-what">The official metamask.io site, with the address bar visible so learners can compare the URL.</span>
-     </div>
+     <img src="/images/week-1/01-metamask-site.png" alt="The official metamask.io website, with the address bar showing metamask.io." />
      <figcaption>Check the URL first, every time. This is the habit, not the click.</figcaption>
    </figure>
 
@@ -166,18 +163,12 @@ guessing — wallet interfaces change, and the group will know.
    them, and select **Ethereum Sepolia**.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the MetaMask network dropdown open with the Show test networks toggle visible">
-       <span class="academy-shot-label">Screenshot 4</span>
-       <span class="academy-shot-what">The network dropdown open, with **Show test networks** highlighted.</span>
-     </div>
+     <img src="/images/week-1/04-show-test-networks-off.png" alt="MetaMask's Manage networks screen with the Show test networks toggle switched off, and no Sepolia in the list." />
      <figcaption>Test networks are hidden by default. Enable them once.</figcaption>
    </figure>
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: MetaMask showing Ethereum Sepolia selected as the active network with a zero balance">
-       <span class="academy-shot-label">Screenshot 5</span>
-       <span class="academy-shot-what">The wallet with **Ethereum Sepolia** active, and the network name visible on the main screen.</span>
-     </div>
+     <img src="/images/week-1/07-sepolia-selected.png" alt="The MetaMask main screen with Sepolia active, showing a balance of 0 SepoliaETH." />
      <figcaption>Confirm Sepolia is showing before you go any further.</figcaption>
    </figure>
 
@@ -198,10 +189,7 @@ guessing — wallet interfaces change, and the group will know.
    the wallet to copy.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: MetaMask main screen with the account address and its copy button highlighted">
-       <span class="academy-shot-label">Screenshot 6</span>
-       <span class="academy-shot-what">The wallet address and its copy button, highlighted.</span>
-     </div>
+     <img src="/images/week-1/08-copy-address.png" alt="The MetaMask account address dropdown, showing the Ethereum address beginning 0x alongside addresses for other chains." />
      <figcaption>This is the value you paste into a faucet.</figcaption>
    </figure>
 
@@ -230,18 +218,12 @@ guessing — wallet interfaces change, and the group will know.
    | **Directory** | [ethereum.org testnet and faucet list](https://ethereum.org/developers/docs/networks/) | The official list, if both above fail |
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: a Sepolia faucet page with the wallet address pasted into the input field">
-       <span class="academy-shot-label">Screenshot 7</span>
-       <span class="academy-shot-what">A faucet page with the wallet address pasted into the input and the request button highlighted.</span>
-     </div>
+     <img src="/images/week-1/09-faucet-form.png" alt="The Google Cloud Sepolia faucet with a wallet address pasted into the input field." />
      <figcaption>Paste the address you copied in step 4.</figcaption>
    </figure>
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: MetaMask showing a non-zero Sepolia ETH balance after a successful faucet claim">
-       <span class="academy-shot-label">Screenshot 8</span>
-       <span class="academy-shot-what">The wallet balance after the faucet succeeds — no longer zero.</span>
-     </div>
+     <img src="/images/week-1/11-eth-arrived.png" alt="The MetaMask wallet showing a balance of 0.0500 SepoliaETH after the faucet request succeeded." />
      <figcaption>Funds usually arrive within a minute.</figcaption>
    </figure>
 
@@ -272,10 +254,7 @@ guessing — wallet interfaces change, and the group will know.
    enter a small amount such as **0.001**.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the MetaMask send screen with the recipient address and amount fields filled in">
-       <span class="academy-shot-label">Screenshot 9</span>
-       <span class="academy-shot-what">The Send screen with the recipient address pasted and the amount entered.</span>
-     </div>
+     <img src="/images/week-1/13-send-screen.png" alt="The MetaMask Send screen with a recipient account selected and an amount of 0.001 SepoliaETH entered." />
      <figcaption>Sending to yourself is a perfectly valid transaction.</figcaption>
    </figure>
 
@@ -289,10 +268,7 @@ guessing — wallet interfaces change, and the group will know.
    | Estimated fee | A small amount of SepoliaETH |
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the MetaMask transaction confirmation screen with network, recipient, amount and estimated fee each highlighted">
-       <span class="academy-shot-label">Screenshot 10</span>
-       <span class="academy-shot-what">The confirmation screen with **Network**, **To**, **Amount** and **Estimated fee** each circled.</span>
-     </div>
+     <img src="/images/week-1/14-confirm-gas.png" alt="The MetaMask confirmation screen showing From, To, Network set to Sepolia, and the network fee." />
      <figcaption>The four fields to read before you ever press Confirm.</figcaption>
    </figure>
 
@@ -307,10 +283,7 @@ guessing — wallet interfaces change, and the group will know.
    but it can take longer.*
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: MetaMask activity list showing the transaction confirmed, with the transaction hash visible">
-       <span class="academy-shot-label">Screenshot 11</span>
-       <span class="academy-shot-what">The confirmed transaction in the activity list, with the transaction hash and its copy button highlighted.</span>
-     </div>
+     <img src="/images/week-1/15-tx-complete.png" alt="The MetaMask Activity tab listing the completed Sent SepoliaETH transaction." />
      <figcaption>Copy the transaction hash — you need it for the Anchor Mission.</figcaption>
    </figure>
 
@@ -320,18 +293,12 @@ guessing — wallet interfaces change, and the group will know.
    transaction hash into the search box.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Sepolia Etherscan search box with a transaction hash pasted in">
-       <span class="academy-shot-label">Screenshot 12</span>
-       <span class="academy-shot-what">Sepolia Etherscan with the transaction hash pasted into the search box.</span>
-     </div>
+     <img src="/images/week-1/16-etherscan-overview.png" alt="The transaction on Sepolia Etherscan, showing status, block, from, to and value." />
      <figcaption>No account. No login. No permission needed.</figcaption>
    </figure>
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: a Sepolia Etherscan transaction detail page with Status, Block, From, To, Value, Transaction Fee and Gas Used highlighted">
-       <span class="academy-shot-label">Screenshot 13</span>
-       <span class="academy-shot-what">The transaction detail page, with **Status**, **Block**, **From**, **To**, **Value**, **Transaction Fee** and **Gas Used** each highlighted.</span>
-     </div>
+     <img src="/images/week-1/17-etherscan-detail.png" alt="The expanded Etherscan transaction detail, showing gas limit and usage, nonce and input data." />
      <figcaption>Every field here is something you now understand.</figcaption>
    </figure>
 
@@ -409,23 +376,40 @@ you feel about it, because it applies to everything you do on-chain.
 A completed transaction, field by field.
 
 ```text
-Status:            Success
-Block:             4,782,109  (37 block confirmations)
-From:              0x3f7a…c214   ← your address
-To:                0x3f7a…c214   ← also your address
-Value:             0.001 ETH
-Transaction Fee:   0.000021 ETH
-Gas Used:          21,000
-Nonce:             0
+Status:              Success
+Block:               11,679,871  (20 block confirmations)
+From:                0x8fB2…FD6ec   ← your address
+To:                  0x3f31…DC8dC   ← your second account
+Value:               0.001 ETH
+Transaction Fee:     0.000057162195783 ETH
+Gas Price:           2.722009323 Gwei
+Gas Limit & Usage:   31,500 | 21,000 (66.67%)
+Nonce:               0
+Input Data:          0x
 ```
 
 Read it back in plain English:
 
-> Address `0x3f7a…c214` sent 0.001 test ETH to itself. It was included in block
-> 4,782,109, and 37 blocks have followed — so it now has many
-> confirmations. It used exactly 21,000 gas, the traditional gas cost of a plain
-> ETH transfer under the current fee schedule. Nonce 0 means this was the
-> first transaction this address ever made.
+> Address `0x8fB2…FD6ec` sent 0.001 test ETH to another account it controls. It
+> was included in block 11,679,871, and 20 blocks have followed — so it now has
+> many confirmations. It used exactly 21,000 gas, the traditional cost of a plain
+> ETH transfer under the current fee schedule. Nonce 0 means this was the first
+> transaction this address ever sent — receiving the faucet's transfer did not
+> increment it, because only sending does.
+
+Three details worth pausing on:
+
+**The limit is not the price.** Gas Limit & Usage reads `31,500 | 21,000` — the
+wallet reserved headroom, the transaction used 21,000, and ==**you are not
+charged for the unused portion**==.
+
+**The fee is gas used × gas price.** 21,000 × 2.722 Gwei ≈ 0.000057 ETH. Both
+numbers are on the page, so you can check the arithmetic yourself.
+
+**Input Data is `0x` — empty.** That is what makes this a plain transfer. When
+you interact with a contract in Week 3, this field carries the instruction you
+sent, and that difference is the whole distinction between moving value and
+running code.
 
 Now connect it to the theory:
 
