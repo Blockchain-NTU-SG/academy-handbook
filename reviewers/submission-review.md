@@ -6,6 +6,8 @@
 > the important parts of what they submitted?
 
 Not academic grading. Not deadline enforcement. Verification of learning.
+The same two-outcome standard applies to Foundation Anchor Missions, Deep Dive
+Part tasks, the Scope Freeze and the W7/W8 Proof of Work milestones.
 
 ## Two outcomes
 

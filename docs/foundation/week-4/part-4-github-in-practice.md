@@ -39,13 +39,14 @@ sources:
 
 You made an account and pushed one commit in
 [Week 0 Part 1](../../getting-started/welcome-and-setup.md). This is the working
-knowledge you need for Weeks 5–8, where your Proof of Work lives on GitHub.
+knowledge you need for the Deep Dive and later Proof of Work, where your work
+lives on GitHub.
 
 ::: important GitHub is not only for developers
 **==For the Academy, GitHub is the default home for your Proof of Work.==**
-Developers can store code there; researchers can publish analysis; data learners
-can publish queries or notebooks; Product learners can publish a teardown or
-documented proposal.
+Builders can store code there, while Researchers can publish analysis and
+evidence. Data/querying and product thinking can support either track; the
+repository should make the actual output clear.
 :::
 
 ## Learning objectives
@@ -100,8 +101,8 @@ direction:
 :::
 
 **==The README is usually the first stop.==** What belongs in `src/`, `docs/` or a
-notebook depends on the direction: sources and evidence may look different for
-Developer, Research, Data, and Product & Ecosystem work. Workflows are useful
+notebook depends on the work: sources and evidence may look different for
+Builder and Researcher outputs. Workflows are useful
 when a project needs repeatable checks, but not every beginner project needs
 automated CI.
 
@@ -354,7 +355,7 @@ questions:
 - What evidence shows what you did or found?
 - What are the limits, sources, and any important AI assistance?
 
-The evidence can look different across the four directions: code output, a
+The evidence can look different across the two tracks: a built output, a
 research argument, a dataset or query, or a product walkthrough. The standard
 is still the same — make the work understandable and checkable.
 :::
@@ -432,7 +433,7 @@ If it happens: rotate the key immediately. Treat it as compromised, because it i
 
 ## Worked example
 
-Two repositories from the same four-week Proof of Work sprint. Same amount of work.
+Two repositories from the same Proof of Work milestone sequence. Same amount of work.
 
 :::: tabs
 @tab The one nobody can use

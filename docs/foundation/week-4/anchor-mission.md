@@ -1,6 +1,6 @@
 ---
 week: 4
-title: "Direction Card and Mini Project Map"
+title: "Track Exploration Card and Mini Project Map"
 points: 100
 status: drafting
 owner: "Director of Education"
@@ -11,72 +11,58 @@ owner: "Director of Education"
 <Badge type="tip" text="100 points" /> <Badge type="info" text="No on-chain activity" /> <Badge type="warning" text="No deadline" />
 
 ::: important Foundation Pilot completion · Sep–Oct 2026
-For Foundation Pilot participants, completing this Direction Card / Anchor
-Mission completes the required pilot curriculum. Stop here. Weeks 5–8 belong to
-the full Cohort 1 programme beginning in January 2027.
+For Foundation Pilot participants, completing this Track Exploration Card and
+Mini Project Map completes the required pilot curriculum. Stop here. The Deep
+Dive belongs to the full Cohort 1 programme beginning in January 2027.
 :::
 
 ## What you're doing
 
-Two things on one page: **a Direction Card** — what full-programme learners may
-build in Weeks 5–8 — and **a Mini Project Map**, showing you can place and
-investigate a real Web3 project. For the current Foundation Pilot, this is the
-final required Foundation output and a map of what you could build next.
+Two short pieces on one page: a **Track Exploration Card**, recording a
+provisional Builder or Researcher choice, and a **Mini Project Map**, showing
+that you can place and investigate a real Web3 project. This is not a final PoW
+proposal. The final question and scope are developed during W5–W6 and frozen at
+the end-of-W6 Scope Freeze.
+
+For Foundation Pilot learners, this is the final required Foundation output and
+a map of what they could build or investigate next. For full-programme learners,
+it becomes a starting hypothesis for the Deep Dive rather than a commitment.
 
 ::: important This mission is the bridge
-Every other Anchor Mission looked backwards at what you learned. This one looks
-forward. For full-programme learners, the Direction Card becomes the starting
-point for **Week 5 · Define**, so the effort you put in here is effort you do not
-repeat. For Foundation Pilot learners, it is the final required output and a map
-of what they could build next.
-
-Scope it honestly and Week 5 is straightforward. Scope it vaguely and Week 5 is
-where that catches up with you.
+Every other Foundation Anchor Mission looked backwards at what you learned. This
+one looks forward by asking what kind of work you want to practise and what you
+still need to learn. You may change your track, domain or topic during the Deep
+Dive.
 :::
 
 ## What to submit
 
-### Part A — Direction Card
+### Part A — Track Exploration Card
 
-A table is fine. One line each unless noted.
+A table is fine. One or two lines each.
 
-::: steps
-1. **Primary direction** — Developer, Research, Data, or Product & Ecosystem
+:::: steps
+1. **Provisional track** — Builder or Researcher
 
-   Optional: a secondary direction, if your project genuinely spans two.
+2. **Topics or domains currently interesting to you** — name the areas, systems
+   or questions that caught your attention in Foundation
 
-2. **Problem or topic** — what are you looking at, and why does it matter?
+3. **Something you may want to build or investigate** — one small possibility,
+   not a final project commitment
 
-3. **Target user or audience** — who is this for? "Other Academy members" is a
-   perfectly good answer.
+4. **Current knowledge gaps** — two or three things you do not yet understand
+   well enough to work on confidently
 
-4. **Why blockchain matters here** *(1–2 sentences)*
-
-   Or honestly: where it does not. [Part 1](./part-1-industry-map.md)'s question —
-   if you removed the blockchain, what breaks?
-
-5. **Proposed four-week Proof of Work** — one sentence with one core deliverable
-
-6. **Tools** you expect to use
-
-7. **Alternatives** you considered and set aside, with one reason
-
-8. **Knowledge gaps** — two or three things you do not yet know
-
-9. **Biggest risk** — the most likely reason this does not finish
-
-10. **Definition of done** *(1–2 sentences)*
-
-    Specific enough that **someone else** could look at your output and say yes
-    or no. [Part 6](./part-6-direction-card.md) has worked examples.
-:::
+5. **Why the provisional track fits** — connect it to the kind of work you want
+   to practise
+::::
 
 ### Part B — Mini Project Map
 
 Pick **one** real Web3 project or protocol relevant to your interest. Five short
 answers:
 
-::: steps
+:::: steps
 1. **What category is it in?** — a sector from [Part 1](./part-1-industry-map.md)
 
 2. **What kind of thing is it?** — network, protocol, company, foundation,
@@ -89,39 +75,38 @@ answers:
 
 5. **Name one data or research source that could help evaluate it** — and one
    sentence on what you would look for there
-:::
+::::
 
 ::: tip Expected length
-**Roughly 300–400 words total**, and it should fit on one page with the
-Direction Card. **This is not a report.**
+**Roughly 250–350 words total.** This is an exploration note, not a report and
+not a final PoW scope.
 
 Optional: up to eight image or PDF uploads.
 :::
 
 ## Submission checklist
 
-- [ ] All ten Direction Card fields are answered
-- [ ] My Proof of Work sentence describes one core deliverable
-- [ ] My definition of done is something another person could check
+- [ ] My provisional track is Builder or Researcher
+- [ ] I recorded topics or domains that currently interest me
+- [ ] I named something I may build or investigate without treating it as final
+- [ ] I listed current knowledge gaps and explained why the track fits for now
 - [ ] All five Mini Project Map questions are answered
 - [ ] My primary source in B4 is a real link I actually opened
 - [ ] Part B is in my own words, not copied from the project's marketing
 - [ ] If I used AI, I can explain what it produced and why I agree with it
 
 :::: details For reviewers — what "completed" looks like
-Three or four minutes. This one is worth slightly more attention than the others,
-because a weak Direction Card creates problems in Weeks 5–8 that are much more
-expensive to fix later.
+This should take three or four minutes to review. The standard is a clear,
+honest starting hypothesis, not a polished project plan.
 
 **Part A standard**
 
 | Field | What good looks like |
 |---|---|
-| 1 | A named direction. Combining two is fine if the project genuinely spans them |
-| 4 | Engages with whether blockchain is load-bearing. **"It's decentralised" is not an answer.** Honestly saying "the chain matters less than I first thought" is a strong answer |
-| 5 | **One clear deliverable.** If several independent projects are bundled together, ask the member to choose one |
-| 9 | A real risk. "Not enough time" is weak; "I might drift into comparing rather than analysing" is real |
-| 10 | **Checkable by a third party.** This is the field that matters most |
+| 1 | Builder or Researcher is named, with permission to change later |
+| 2–3 | The interest is concrete enough to guide Deep Dive exploration, without pretending to be final scope |
+| 4 | The learner names real gaps rather than claiming expertise |
+| 5 | The reason describes the work they want to practise, not prestige |
 
 **Part B standard**
 
@@ -129,25 +114,16 @@ expensive to fix later.
 |---|---|
 | 1–2 | Correct category and entity type. Getting *protocol vs company* right matters — that is [Part 2](./part-2-who-is-who.md)'s core point |
 | 3 | Own words, not marketing copy |
-| 4 | A **genuine primary source** — official docs, GitHub, governance forum. **A news article or an X thread is not a primary source** |
+| 4 | A **genuine primary source** — official docs, GitHub or governance forum |
 | 5 | A sensible data or research source, with a specific reason |
 
-**Send it back if:** the PoW proposal clearly contains several independent
-projects; the definition of done is unverifiable ("a good dashboard"); B4 cites
-a secondary source as primary; Part B is copied from the project's own
-description; or fields are left blank.
+**Send it back if:** the track is missing, the idea is so broad that it gives no
+useful starting point, fields are blank, B4 cites a secondary source as primary,
+or Part B is copied from the project's own description.
 
-::: warning On scope, be firm but kind
-An over-scoped Direction Card is the single most common cause of an unfinished
-sprint. Sending it back now with *"this is three projects — pick the one you most
-want to do"* is genuinely more helpful than letting it through.
-
-That is not a failure. It is the mission working.
-:::
-
-**Do not send it back for:** an unambitious project that is well scoped, choosing
-a direction that seems unlike them, a project you personally find uninteresting,
-or a Mini Project Map on a well-known protocol.
+**Do not send it back for:** changing track later, choosing a modest interest,
+choosing a domain that is not currently fashionable, or mapping a well-known
+protocol.
 ::::
 
 ## If this gets rejected
@@ -156,14 +132,12 @@ or a Mini Project Map on a well-known protocol.
 No deadline, no penalty. You will be told the one thing to fix.
 :::
 
-The three most common rejections at Week 4:
-
 | What happened | The fix |
 |---|---|
-| The Proof of Work sentence describes several independent projects | Choose the one you most want to do. The others can become Week 8 next steps |
-| The definition of done is not checkable | Say what will exist, what question it answers, and how someone can tell it is complete |
-| B4 cites a news article or a thread as a primary source | Primary means the project's **own** docs, code or governance. [Part 3](./part-3-research-tool-map.md) has the five-source model |
+| No provisional track or reason | Choose Builder or Researcher for now and say what kind of work you want to practise |
+| The interest is too broad to guide learning | Name one topic, system or question to explore during the Deep Dive |
+| B4 cites a news article or thread as a primary source | Use the project's own docs, code or governance source |
+| Part B is copied from marketing material | Rewrite the explanation in your own words |
 
-If you are stuck on choosing a direction rather than writing the card, describe
-your idea in the Telegram group. Saying it out loud is the fastest way to find
-out whether it is one project or three.
+If you are unsure, describe the idea in the Telegram group. Saying it out loud is
+the fastest way to find out what you still need to learn.

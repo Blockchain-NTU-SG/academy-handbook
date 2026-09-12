@@ -1,13 +1,11 @@
 ---
-track: research
 status: stub
-owner: ''
-title: Research track kit
+search: false
+title: "Legacy Research track path"
 ---
 
-# Research track kit
+# This track path has moved
 
-Stub. This kit will contain the playbook, templates, examples, checklists,
-recommended tools, reference links, and required final output for the Research
-direction. It is intentionally not a textbook; depth follows the Week 4 Direction
-Cards.
+The former Research direction is now the [Researcher Deep Dive](../researcher/).
+Use that page for the current Academy architecture. Detailed Researcher W5–W6
+content is in development.

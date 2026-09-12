@@ -1,11 +1,11 @@
 # Programme overview
 
-Blockchain@NTU Academy Semester 1 follows one continuous story:
+Blockchain@NTU Academy follows one continuous story:
 
 ::: important Foundation Pilot · Sep–Oct 2026
 The current Foundation Pilot covers **Week 0 through Week 4 only**.
 
-The Week 4 Direction Card is the final required Pilot output. Weeks 5–8 remain
+The Week 4 Track Exploration Card is the final required Pilot output. Weeks 5–8 remain
 visible in this Handbook because they are the next stage of the full Academy,
 but they are not required for Foundation Pilot participants.
 
@@ -18,16 +18,34 @@ The full Week 0–8 programme begins with **Cohort 1 in January 2027**.
 | Week 1 | Web3, blockchain, crypto assets and wallets | First-principles foundation |
 | Week 2 | Blockchain architectures, Ethereum and interoperability | Architecture and risk map |
 | Week 3 | Smart contracts, tokens and DApps | Contract and application foundations |
-| Week 4 | Web3 industry, research and contribution | Direction card |
-| Weeks 5–8 | Proof of Work sprint | One small, reviewable project |
+| Week 4 | Web3 industry, research and contribution | Track Exploration Card |
+| Week 5 | Builder or Researcher Deep Dive | Six Part tasks × 100 points |
+| Week 6 | Builder or Researcher Deep Dive | Six Part tasks × 100 points |
+| End of Week 6 | PoW Scope Freeze | Scope checkpoint · 100 points |
+| Week 7 | Proof of Work MVP / V1 | 100 points |
+| Week 8 | Final Proof of Work | 200 points |
 
-The four starting directions are **Developer**, **Research**, **Data**, and
-**Product & Ecosystem**. They are starting points rather than restrictions, and
-members may combine them.
+The Academy has two Deep Dive tracks: **Builder**, who learns to compose
+unfamiliar Web3 systems, and **Researcher**, who learns to decompose them.
+Domains such as DeFi, stablecoins, NFTs, RWA, prediction markets, DePIN,
+infrastructure, governance and AI × Web3 are cases and application lenses, not
+separate tracks.
 
-The four Foundation Anchor Missions are 100 points each. The Weeks 5–8 sprint is
-400 points, for 800 points total; points are an operational measure and do not
-change the richer-content, lighter-assessment principle.
+## Scoring at a glance
+
+| Stage | Completion-based points |
+|---|---:|
+| Foundation W1–W4 | 4 Anchor Missions × 100 = **400** |
+| W5 Deep Dive | 6 Part tasks × 100 = **600** |
+| W6 Deep Dive | 6 Part tasks × 100 = **600** |
+| End-of-W6 PoW Scope Freeze | **100** |
+| W7 MVP / V1 | **100** |
+| W8 Final PoW | **200** |
+| **Total full programme** | **2,000** |
+
+W0 is onboarding and does not add points. A task is completed or returned for
+revision; there is no partial-score rubric. Resubmission follows the existing
+programme policy. This preserves **richer content, not heavier assessment**.
 
 ## How to read the handbook
 
@@ -41,7 +59,9 @@ never use real funds for an Academy requirement.
 
 ## Operations boundary
 
-The handbook contains the canonical learning and Anchor Mission instructions.
+The Handbook contains the canonical learning material, Foundation Anchor Mission
+requirements, Deep Dive Part-task requirements and Proof of Work milestone
+requirements.
 emerging.builders / WCB handles applications, cohort management, submissions,
 review, points, progress and leaderboards.
 
@@ -51,8 +71,9 @@ The Academy Handbook is open to everyone, so you can start learning without
 joining a cohort.
 
 The Academy cohort adds structured pacing, peer learning, mission review,
-progress tracking and accountability. The current Foundation Pilot covers W0–W4;
-the full Cohort 1 programme adds the Weeks 5–8 Proof of Work sprint.
+progress tracking and accountability. The current Foundation Pilot covers W0–W4.
+The full Cohort 1 programme adds the W5–W6 Builder or Researcher Deep Dive,
+Scope Freeze, and the W7–W8 Proof of Work milestones.
 
 Applications and cohort operations are managed through emerging.builders / WCB.
 The application link will be added here when the next intake opens.

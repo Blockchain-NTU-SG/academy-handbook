@@ -1,13 +1,10 @@
 ---
-track: data
 status: stub
-owner: ''
-title: Data track kit
+search: false
+title: "Legacy Data track path"
 ---
 
-# Data track kit
+# This track path has retired
 
-Stub. This kit will contain the playbook, templates, examples, checklists,
-recommended tools, reference links, and required final output for the Data
-direction. It is intentionally not a textbook; depth follows the Week 4 Direction
-Cards.
+Data and querying are now transferable methods used especially within the
+[Researcher Deep Dive](../researcher/), not a standalone Academy track.

@@ -24,11 +24,12 @@ beginner experience is drowning in vocabulary, and the second most common is
 losing money to something avoidable. This programme is built to prevent both.
 
 ::: important Foundation Pilot · Sep–Oct 2026
-The current pilot covers **Week 0 through Week 4 only**. The Week 4 Direction
-Card is the final pilot output. Weeks 5–8 are shown in the Handbook as the next
+The current pilot covers **Week 0 through Week 4 only**. The Week 4 Track
+Exploration Card is the final pilot output. Weeks 5–8 are shown in the Handbook as the next
 stage of the Academy, but they are not required for Foundation Pilot
 participants. The full Week 0–8 programme begins with **Cohort 1 in January
-2027**. The Weeks 5–8 sprint is in development for Cohort 1 · January 2027.
+2027**. The W5–W6 Deep Dive and W7–W8 Proof of Work milestones are in
+development for Cohort 1 · January 2027.
 :::
 
 Today is housekeeping — three accounts and a clear picture of how the Academy
@@ -49,8 +50,10 @@ you the most time later.
 ```mermaid
 flowchart TD
   W0["<b>Week 0</b><br/>Entering Web3 safely"] --> F["<b>Weeks 1–4</b><br/>Shared Foundation"]
-  F --> P["<b>Weeks 5–8</b><br/>Proof of Work sprint"]
-  P --> O["<b>One small thing</b><br/>you can show"]
+  F --> D["<b>Weeks 5–6</b><br/>Builder or Researcher Deep Dive"]
+  D --> S["<b>End of Week 6</b><br/>PoW Scope Freeze"]
+  S --> P["<b>Weeks 7–8</b><br/>Proof of Work milestones"]
+  P --> O["<b>A reviewable artefact</b><br/>you can show"]
 ```
 
 ==**Weeks 1–4 are the same for everyone.**== They build a shared map of blockchains,
@@ -58,22 +61,24 @@ wallets, Ethereum, smart contracts and the wider industry. You do not choose a
 specialism yet, because you cannot sensibly choose one before you know what is
 out there.
 
-**For the full programme, Weeks 5–8 are yours.** You pick one of four directions
-— Developer, Research, Data, or Product & Ecosystem — and build one small,
-reviewable thing. Directions are starting points, not restrictions. Foundation
-Pilot learners stop after Week 4; the sprint is shown here as the next stage of
-the full Academy.
+**For the full programme, Weeks 5–6 are the Deep Dive.** You make a provisional
+choice between Builder and Researcher, then build transferable skills through
+reviewable Part tasks. Foundation Pilot learners stop after Week 4; the Deep
+Dive and later Proof of Work milestones are shown here as the next stages of the
+full Academy.
 
 ### The weekly rhythm
 
 Each Foundation week has a handful of short pages and **one Anchor Mission**.
-The full programme then adds one four-week Proof of Work sprint rather than a
-separate Anchor Mission for each sprint week.
+The full programme then adds six 100-point Deep Dive tasks in Week 5, six more
+in Week 6, a 100-point Scope Freeze, and the W7–W8 Proof of Work milestones.
 
 | Item | Details |
 |---|---|
-| Anchor Missions | One per Foundation week, Weeks 1–4 |
-| Points | 100 per Foundation mission, 400 for the Weeks 5–8 sprint, **800 total** |
+| Anchor Missions | One per Foundation week, Weeks 1–4; 100 points each |
+| Deep Dive tasks | Six Part tasks in W5 and six in W6; 100 points each |
+| PoW checkpoints | Scope Freeze 100, W7 MVP / V1 100, W8 Final PoW 200 |
+| Total | **2,000 points** for the full programme |
 | Week 0 | No mission, no points |
 | Review outcomes | **Completed** or **Rejected** — nothing in between |
 | Rejected | Comes back with specific feedback. Resubmit as many times as you need |
@@ -87,9 +92,9 @@ again.
 
 ::: tip Foundation Pilot completion
 For Foundation Pilot participants, the four Foundation Anchor Missions are the
-relevant missions. Week 4 is the final required week: complete the Direction
-Card / Anchor Mission, then stop here. Weeks 5–8 belong to the full Cohort 1
-programme.
+relevant missions. Week 4 is the final required week: complete the Track
+Exploration Card / Anchor Mission, then stop here. The W5–W6 Deep Dive and
+W7–W8 Proof of Work milestones belong to the full Cohort 1 programme.
 :::
 
 The pages each week are longer than the mission requires. That is on purpose:
@@ -129,7 +134,9 @@ The handbook and the platform have a clean division of labour:
 | Area | Handbook | Platform |
 |---|---|---|
 | Learning material | ✅ canonical | short operational copy |
-| Anchor Mission instructions | ✅ canonical | short operational copy |
+| Foundation Anchor Mission instructions | ✅ canonical | short operational copy |
+| Deep Dive Part-task requirements | ✅ canonical | short operational copy |
+| Proof of Work milestone requirements | ✅ canonical | short operational copy |
 | Submitting work | — | ✅ |
 | Review and feedback | — | ✅ |
 | Points, progress, leaderboard | — | ✅ |
@@ -262,10 +269,10 @@ Someone joining with no technical background creates a GitHub account under a
 sensible username, turns on 2FA, and pushes one commit to a README. Total time:
 about fifteen minutes. Nothing about it is impressive.
 
-In the full programme, eight weeks later, that same repository holds their Week 3
-contract, their Week 4 Direction Card, and their final Proof of Work with a README
-explaining what they built and what they would do next. The commit history shows
-it accumulating week by week.
+**In the full programme, eight weeks later,** that same repository holds their
+Week 3 contract, their Week 4 Track Exploration Card, Deep Dive work and final
+Proof of Work with a README explaining what they built and what they would do
+next. The commit history shows it accumulating week by week.
 
 ::: important The value is not any single commit
 It is that there is a visible, dated trail of someone learning in public — which

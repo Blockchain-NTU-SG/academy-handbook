@@ -11,9 +11,9 @@
 <Badge type="info" text="6 parts" /> <Badge type="tip" text="100 points" /> <Badge type="warning" text="No wallet work" />
 
 ::: important Foundation Pilot · Sep–Oct 2026
-The current Foundation Pilot ends after Week 4. The Week 4 Direction Card is
-the final pilot output; Weeks 5–8 are the next stage of the full Academy and are
-in development for **Cohort 1 · January 2027**.
+The current Foundation Pilot ends after Week 4. The Week 4 Track Exploration
+Card is the final pilot output; the Builder and Researcher Deep Dive is the next
+stage of the full Academy and is in development for **Cohort 1 · January 2027**.
 :::
 
 > **Core question — what does the Web3 world actually look like, and how do I
@@ -31,7 +31,7 @@ out.
 | 3 | [Which tool answers which question](./part-3-research-tool-map.md) | 25 min |
 | 4 | [GitHub in practice](./part-4-github-in-practice.md) | 30 min |
 | 5 | [AI-native building](./part-5-ai-native-building.md) | 20 min |
-| 6 | [Choosing your direction](./part-6-direction-card.md) | 25 min |
+| 6 | [Track exploration card](./part-6-direction-card.md) | 25 min |
 
 **Anchor Mission:** [Week 4 mission](./anchor-mission.md) · 100 points
 
@@ -44,7 +44,7 @@ flowchart TD
   P3["<b>3 · Research tools</b><br/><i>how do I check a claim?</i>"]
   P4["<b>4 · GitHub</b><br/><i>how do I show my work?</i>"]
   P5["<b>5 · AI-native building</b><br/><i>how do I build with AI, not blindly?</i>"]
-  P6["<b>6 · Your direction</b><br/><i>what could I build next?</i>"]
+  P6["<b>6 · Track exploration</b><br/><i>what could I build or investigate next?</i>"]
   P1 --> P2 --> P3 --> P4 --> P5 --> P6
 ```
 
@@ -56,10 +56,11 @@ Week 4 has two jobs, and they meet in the Anchor Mission.
 named and place it — what sector, what kind of entity, what problem it claims to
 solve — without knowing anything specific about it.
 
-**Direction.** In the full programme, Weeks 5–8 are a build sprint in one of
-four directions. Part 6 and the mission are where you choose yours and scope
-something real. For Foundation Pilot learners, the Direction Card is the final
-required Foundation output and a map of what they could build next.
+**Track exploration.** Part 6 and the mission help you make a provisional
+Builder or Researcher choice, record the domains that interest you and identify
+your gaps. For Foundation Pilot learners, the Track Exploration Card is the
+final required Foundation output. In the full programme, it informs the W5–W6
+Deep Dive; final Proof of Work scope is frozen only after Week 6.
 
 ::: important The most transferable page in the handbook
 [Part 3](./part-3-research-tool-map.md) teaches which source answers which kind of

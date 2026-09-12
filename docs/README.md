@@ -92,20 +92,20 @@ config:
           Ethereum, wallets, contracts and the wider ecosystem.
         link: ./getting-started/
         linkText: Start with Week 0
-      - title: Weeks 5–8 Proof of Work
+      - title: Weeks 5–6 Deep Dive
         icon: 🚀
         details: >-
-          Turn the Foundation into one small, reviewable project with a clear
-          scope, evidence, README and next steps.
-        link: ./foundation/proof-of-work/
-        linkText: See the sprint
-      - title: Four directions
+          Build transferable hard skills through six reviewable tasks each week
+          in either the Builder or Researcher track.
+        link: ./tracks/
+        linkText: Explore the Deep Dive
+      - title: Weeks 7–8 Proof of Work
         icon: 🧭
         details: >-
-          Choose a starting point in Developer, Research, Data, or Product &
-          Ecosystem. Directions can be combined.
-        link: ./tracks/
-        linkText: Explore the tracks
+          Freeze scope after the Deep Dive, then produce an MVP / V1 and a final
+          reviewable artefact.
+        link: ./proof-of-work/
+        linkText: See the milestones
   - type: custom
 title: Blockchain@NTU Academy
 ---
@@ -135,11 +135,12 @@ The week's learning turned into a small, practical action.
 1. [Read the programme overview](./getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./getting-started/).
 3. Follow the [Foundation](./foundation/) from Week 1 through Week 4.
-4. Choose a direction and complete the [Proof of Work sprint](./foundation/proof-of-work/).
+4. Continue into the [Deep Dive](./tracks/) and then the [Proof of Work milestones](./proof-of-work/) when your cohort reaches them.
 ::::
 
-The Handbook contains the full learning material and Anchor Mission
-instructions. Cohort operations such as application, progress, submission and
+The Handbook contains the full learning material, Foundation Anchor Mission
+requirements, Deep Dive task requirements and Proof of Work milestone
+requirements. Cohort operations such as application, progress, submission and
 review are handled through the Academy programme platform.
 
 The **September–October 2026 Foundation Pilot** ends after Week 4. Weeks 5–8

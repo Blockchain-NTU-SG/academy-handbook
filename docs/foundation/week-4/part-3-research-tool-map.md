@@ -248,8 +248,8 @@ If someone cannot answer that about their own protocol, that is itself a finding
 > understand better. I have not verified who holds those keys."
 
 Note what it does: **names the evidence, quantifies where it can, states the
-main risk, and admits what is unknown.** That is what Week 5–8 research work
-looks like, and it is what the [Anchor Mission](./anchor-mission.md) is asking
+main risk, and admits what is unknown.** That is what Researcher Deep Dive work
+will practise, and it is what the [Anchor Mission](./anchor-mission.md) is asking
 you to start doing.
 
 ::: details Further exploration — optional, not assessed

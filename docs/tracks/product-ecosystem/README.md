@@ -1,13 +1,11 @@
 ---
-track: product-ecosystem
 status: stub
-owner: ''
-title: "Product & Ecosystem track kit"
+search: false
+title: "Legacy Product and Ecosystem track path"
 ---
 
-# Product & Ecosystem track kit
+# This track path has retired
 
-Stub. This kit will contain the playbook, templates, examples, checklists,
-recommended tools, reference links, and required final output for the Product &
-Ecosystem direction. It is intentionally not a textbook; depth follows the Week 4
-Direction Cards.
+Product thinking is an application lens that may support either the [Builder](../builder/)
+or [Researcher](../researcher/) Deep Dive. It is no longer a standalone Academy
+track.

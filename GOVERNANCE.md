@@ -12,7 +12,7 @@ Blockchain@NTU Academy Education leadership owns:
 
 - week structure and learning outcomes;
 - assessment and Anchor Mission architecture;
-- the shared Foundation and specialisation structure.
+- the shared Foundation and Deep Dive track structure.
 
 Changes to these areas require Education approval.
 

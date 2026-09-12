@@ -62,7 +62,7 @@ Deliberately **out of scope** and left to Further Exploration or Semester 2:
 | Liquidation mechanics | Further Exploration |
 | Advanced DeFi strategy | Semester 2 |
 | Oracle architecture | Further Exploration |
-| Gas optimisation, assembly, proxies | Developer track |
+| Gas optimisation, assembly, proxies | Builder Deep Dive |
 | Formal verification, audit methodology | Semester 2 |
 
 ::: tip Everything required is testnet only

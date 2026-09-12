@@ -1,10 +1,10 @@
 ---
 week: 7
 status: stub
-owner: ''
-title: week-7-review
+search: false
+title: "Legacy Week 7 PoW path"
 ---
 
-# Week 7 — Review and Improve
+# This PoW page has moved
 
-> **Status: stub.** This page is migrated from the Education Director's Proof of Work framework and awaits the completed lesson.
+The current Week 7 milestone is [MVP / V1](../../proof-of-work/week-7-mvp.md).
