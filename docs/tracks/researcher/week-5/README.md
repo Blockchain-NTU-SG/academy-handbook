@@ -16,6 +16,9 @@ Each Part has one lightweight, reviewable hands-on task worth **100 points**.
 Detailed Core material and task instructions are in development for the
 Education team.
 
+**There is no separate weekly submission.** These six Part tasks are the
+assessed progress evidence for this week.
+
 | Part | Planned title | Task status |
 |---:|---|---|
 | 1 | Whitepaper → System Model | In development |
