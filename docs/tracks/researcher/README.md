@@ -16,6 +16,10 @@ rollups, Uniswap, lending and other protocols are training cases that support
 methods learners can later apply to NFTs, stablecoins, RWA, prediction markets,
 DePIN, AI × Web3, infrastructure, governance or future domains.
 
+Once selected at the end of Week 4, Researcher remains the learner's Academy
+path through W8. The application domain, research question and eventual Proof of
+Work can still evolve until W7.
+
 ## Weeks
 
 - [Week 5 · Deconstruct Blockchain Systems](./week-5/)

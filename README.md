@@ -26,8 +26,8 @@
 
 ## What this is
 
-The Blockchain@NTU Academy Handbook is a structured shared foundation for
-students entering Web3, including learners with no technical background. It is
+The Blockchain@NTU Academy Handbook is a structured beginner-first Web3 learning
+path for students entering Web3, including learners with no technical background. It is
 the canonical source for the Academy's learning material, Foundation Anchor
 Mission instructions, Deep Dive Part-task requirements and Proof of Work
 milestone requirements; the public site is built from the same `docs/` source.
@@ -54,17 +54,17 @@ By the end of the shared Foundation, a learner should be able to:
 | Stage | Focus |
 |---|---|
 | Week 0 | Enter Web3 safely and learn the basic tools and risks. |
-| Weeks 1–4 | Shared Foundation: blockchains, Ethereum, wallets, contracts, industry and research. |
-| Weeks 5–6 | Deep Dive: choose Builder or Researcher and complete six reviewable Part tasks each week. |
-| End of Week 6 | PoW Scope Freeze: define the project scope after the Deep Dive. |
-| Week 7 | MVP / V1: produce the smallest meaningful version. |
-| Week 8 | Final Proof of Work: ship a reviewable final artefact. |
+| Weeks 1–4 | Shared Foundation: blockchains, Ethereum, wallets, contracts, industry and research; 4 Anchor Missions × 100 = 400 points. |
+| Weeks 5–6 | Deep Dive: follow the selected Builder or Researcher track and complete six reviewable Part tasks each week. |
+| Week 7 | Scope + MVP / V1: define the PoW while producing its first meaningful version; 200 points. |
+| Week 8 | Refine + Final Proof of Work: improve, validate and ship or publish the final artefact; 200 points. |
 | Full programme | 2,000 completion-based points; W0 remains onboarding. |
 
 The Foundation uses **Core**, **Landscape** and **Further Exploration** to make
-depth visible. The Academy follows the principle **richer content, not heavier
-assessment**: seeing an advanced idea on a page does not automatically make it
-a new requirement. Required blockchain activities are testnet-only, and the
+depth visible. Foundation follows **richer content, lighter assessment**: seeing
+an advanced idea on a page does not automatically make it a new requirement.
+Deep Dive keeps assessment embedded in the learning through focused Part tasks,
+not extra homework. Required blockchain activities are testnet-only, and the
 weekly pace is a recommended rhythm rather than a deadline.
 
 ## How we teach
@@ -94,7 +94,7 @@ docs/                 Learner-facing handbook and VuePress source
   getting-started/    Week 0 onboarding
   foundation/         Weeks 1–4 shared Foundation
   tracks/             Builder and Researcher Deep Dive scaffold
-  proof-of-work/      Scope Freeze, MVP / V1 and Final PoW scaffold
+  proof-of-work/      W7 Scope + MVP / V1 and W8 Final PoW scaffold
 templates/            Page and Anchor Mission authoring formats
 reviewers/            Submission and beginner content-review guidance
 .github/              CI, CODEOWNERS, PR and Issue templates

@@ -2,16 +2,19 @@
 week: 7
 status: stub
 owner: "Education Team"
-title: "Week 7 — MVP / V1"
+title: "Week 7 — Scope + MVP / V1"
 ---
 
-# Week 7 — MVP / V1
+# Week 7 — Scope + MVP / V1
 
-Build the smallest meaningful version of the scope frozen at the end of Week 6.
+W7 is where the learner decides what to do with the capability developed in the
+selected Deep Dive track and immediately produces its first meaningful version.
+Define it by doing it.
 
-- **Builder:** a working MVP or smallest meaningful vertical slice.
-- **Researcher:** an evidence-backed Analysis V1, complete enough for a first
-  review.
+- **Builder:** define a realistic PoW while producing a working MVP or smallest
+  meaningful vertical slice.
+- **Researcher:** define a realistic PoW while producing a rough but complete
+  evidence-backed Analysis V1.
 
 This page is a scaffold. The Education team will add the detailed milestone,
-evidence and review instructions. **Completion: 100 points.**
+evidence and review instructions. **Completion: 200 points.**

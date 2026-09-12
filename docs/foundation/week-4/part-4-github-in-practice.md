@@ -84,7 +84,7 @@ Write for that person.
 The repository is more than a folder of files: it is the shared place where
 people read the project, inspect its history and find the checks that support a
 change. This is a compact example, not a required template for every Academy
-direction:
+project:
 
 ::: file-tree icon="colored" title="Example Proof of Work repository"
 - proof-of-work # project root

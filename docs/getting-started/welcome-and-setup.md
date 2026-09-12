@@ -25,7 +25,7 @@ losing money to something avoidable. This programme is built to prevent both.
 
 ::: important Foundation Pilot · Sep–Oct 2026
 The current pilot covers **Week 0 through Week 4 only**. The Week 4 Track
-Exploration Card is the final pilot output. Weeks 5–8 are shown in the Handbook as the next
+Selection Card is the final pilot output. Weeks 5–8 are shown in the Handbook as the next
 stage of the Academy, but they are not required for Foundation Pilot
 participants. The full Week 0–8 programme begins with **Cohort 1 in January
 2027**. The W5–W6 Deep Dive and W7–W8 Proof of Work milestones are in
@@ -51,9 +51,9 @@ you the most time later.
 flowchart TD
   W0["<b>Week 0</b><br/>Entering Web3 safely"] --> F["<b>Weeks 1–4</b><br/>Shared Foundation"]
   F --> D["<b>Weeks 5–6</b><br/>Builder or Researcher Deep Dive"]
-  D --> S["<b>End of Week 6</b><br/>PoW Scope Freeze"]
-  S --> P["<b>Weeks 7–8</b><br/>Proof of Work milestones"]
-  P --> O["<b>A reviewable artefact</b><br/>you can show"]
+  D --> P["<b>Week 7</b><br/>Scope + MVP / V1"]
+  P --> Q["<b>Week 8</b><br/>Refine + Final PoW"]
+  Q --> O["<b>A reviewable artefact</b><br/>you can show"]
 ```
 
 ==**Weeks 1–4 are the same for everyone.**== They build a shared map of blockchains,
@@ -61,23 +61,26 @@ wallets, Ethereum, smart contracts and the wider industry. You do not choose a
 specialism yet, because you cannot sensibly choose one before you know what is
 out there.
 
-**For the full programme, Weeks 5–6 are the Deep Dive.** You make a provisional
-choice between Builder and Researcher, then build transferable skills through
-reviewable Part tasks. Foundation Pilot learners stop after Week 4; the Deep
-Dive and later Proof of Work milestones are shown here as the next stages of the
-full Academy.
+**For the full programme, Weeks 5–6 are the Deep Dive.** At the end of Week 4,
+you select Builder or Researcher and stay on that capability path through W8,
+then build transferable skills through reviewable Part tasks. Your domain and
+eventual PoW topic can still evolve; W7 combines scope definition with producing
+an MVP / V1. Foundation Pilot learners stop after Week 4; the Deep Dive and
+later Proof of Work milestones are shown here as the next stages of the full
+Academy.
 
 ### The weekly rhythm
 
 Each Foundation week has a handful of short pages and **one Anchor Mission**.
 The full programme then adds six 100-point Deep Dive tasks in Week 5, six more
-in Week 6, a 100-point Scope Freeze, and the W7–W8 Proof of Work milestones.
+in Week 6, and the W7–W8 Proof of Work milestones. There is no separate W5 or
+W6 weekly submission: each Part task is that week's progress evidence.
 
 | Item | Details |
 |---|---|
 | Anchor Missions | One per Foundation week, Weeks 1–4; 100 points each |
 | Deep Dive tasks | Six Part tasks in W5 and six in W6; 100 points each |
-| PoW checkpoints | Scope Freeze 100, W7 MVP / V1 100, W8 Final PoW 200 |
+| PoW checkpoints | W7 Scope + MVP / V1 200, W8 Refine + Final PoW 200 |
 | Total | **2,000 points** for the full programme |
 | Week 0 | No mission, no points |
 | Review outcomes | **Completed** or **Rejected** — nothing in between |
@@ -93,13 +96,14 @@ again.
 ::: tip Foundation Pilot completion
 For Foundation Pilot participants, the four Foundation Anchor Missions are the
 relevant missions. Week 4 is the final required week: complete the Track
-Exploration Card / Anchor Mission, then stop here. The W5–W6 Deep Dive and
+Selection Card / Anchor Mission, then stop here. The W5–W6 Deep Dive and
 W7–W8 Proof of Work milestones belong to the full Cohort 1 programme.
 :::
 
-The pages each week are longer than the mission requires. That is on purpose:
-==**richer content, not heavier assessment.**== Read the Core sections properly,
-skim Landscape, treat Further Exploration as optional.
+The Foundation pages are longer than their missions require. That is on purpose:
+==**richer content, lighter assessment.**== Read the Core sections properly,
+skim Landscape, and treat Further Exploration as optional. In Deep Dive, each
+Part task is embedded in the learning rather than added as extra homework.
 
 ### Reading levels
 
@@ -270,7 +274,7 @@ sensible username, turns on 2FA, and pushes one commit to a README. Total time:
 about fifteen minutes. Nothing about it is impressive.
 
 **In the full programme, eight weeks later,** that same repository holds their
-Week 3 contract, their Week 4 Track Exploration Card, Deep Dive work and final
+Week 3 contract, their Week 4 Track Selection Card, Deep Dive work and final
 Proof of Work with a README explaining what they built and what they would do
 next. The commit history shows it accumulating week by week.
 

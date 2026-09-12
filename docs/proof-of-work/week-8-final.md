@@ -2,16 +2,18 @@
 week: 8
 status: stub
 owner: "Education Team"
-title: "Week 8 — Final Proof of Work"
+title: "Week 8 — Refine + Final Proof of Work"
 ---
 
-# Week 8 — Final Proof of Work
+# Week 8 — Refine + Final Proof of Work
 
-Turn the reviewed W7 version into a final artefact that another person can
-understand and inspect.
+Use review, testing, stronger evidence and iteration to turn the W7 version into
+a final reviewable artefact.
 
-- **Builder:** a shipped, reviewable final artefact.
-- **Researcher:** a publishable, evidence-backed final research artefact.
+- **Builder:** MVP → test → debug → validate → improve reliability/usability →
+  document → ship.
+- **Researcher:** Analysis V1 → challenge weak claims → gather stronger or
+  counter-evidence → revise interpretation → improve communication → publish.
 
 This page is a scaffold. The Education team will add the detailed milestone,
 evidence and review instructions. **Completion: 200 points.**

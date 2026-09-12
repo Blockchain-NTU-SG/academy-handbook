@@ -95,15 +95,15 @@ config:
       - title: Weeks 5–6 Deep Dive
         icon: 🚀
         details: >-
-          Build transferable hard skills through six reviewable tasks each week
-          in either the Builder or Researcher track.
+          Build transferable hard skills through six lightweight, reviewable
+          tasks each week in the selected Builder or Researcher track.
         link: ./tracks/
         linkText: Explore the Deep Dive
       - title: Weeks 7–8 Proof of Work
         icon: 🧭
         details: >-
-          Freeze scope after the Deep Dive, then produce an MVP / V1 and a final
-          reviewable artefact.
+          Define the PoW while producing an MVP / V1 in Week 7, then refine,
+          validate and ship or publish the final artefact in Week 8.
         link: ./proof-of-work/
         linkText: See the milestones
   - type: custom

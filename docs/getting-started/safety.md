@@ -169,7 +169,7 @@ regardless of how convincing the profile picture is.
 
 ### The Academy's rules
 
-::: danger These hold for all eight weeks and have no exceptions
+::: danger These hold throughout the Academy and have no exceptions
 **1. Testnet only.** Every hands-on activity uses a test network. Testnet coins
 are free and worth nothing. No Academy mission will ever require real money,
 mainnet, or a wallet holding real assets.

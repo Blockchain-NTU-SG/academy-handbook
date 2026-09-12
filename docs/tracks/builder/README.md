@@ -14,6 +14,10 @@ interfaces and reliable evidence.
 This Deep Dive begins after Foundation's Solidity, Remix, ABI and RPC
 introduction. It is not another smart-contract introduction.
 
+Once selected at the end of Week 4, Builder remains the learner's Academy path
+through W8. The application domain and eventual Proof of Work can still evolve
+until W7.
+
 ## Weeks
 
 - [Week 5 · Programmatic Web3 Development](./week-5/)

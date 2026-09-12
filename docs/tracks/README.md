@@ -1,8 +1,9 @@
 # Deep Dive tracks
 
-After the shared Foundation, the full Academy offers two provisional Deep Dive
-tracks. The Week 4 Track Exploration Card is a starting hypothesis, not a final
-Proof of Work commitment.
+After the shared Foundation, the full Academy offers two Deep Dive tracks. At
+the end of Week 4, each learner selects Builder or Researcher; that track remains
+their Academy path through W5–W8. The Track Selection Card does not fix the
+final PoW topic, domain or deliverable, which may evolve until W7.
 
 | Track | Positioning | Deep Dive |
 |---|---|---|

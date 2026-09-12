@@ -1,7 +1,7 @@
 ---
 week: 4
 day: 6
-title: "Track Exploration Card"
+title: "Track Selection Card"
 status: drafting
 owner: "Director of Education"
 reading_time: "25 min"
@@ -20,12 +20,13 @@ sources:
     label: "Link"
 ---
 
-# Week 4 · Part 6 — Track Exploration Card
+# Week 4 · Part 6 — Track Selection Card
 
 This is the last page of the Foundation. The full Academy continues into a
-Builder or Researcher Deep Dive in Weeks 5–6, then freezes Proof of Work scope
-at the end of Week 6. **This card is a provisional exploration, not your PoW
-proposal. You are not committing to a final topic yet.**
+Builder or Researcher Deep Dive in Weeks 5–6. **This card is not your final PoW
+proposal. Your track choice is fixed for W5–W8, but you are not committing to a
+final topic yet.** Your domain, question and final PoW idea may evolve through
+the Deep Dive and W7.
 
 For Foundation Pilot learners, completing this card as part of the Week 4 Anchor
 Mission is the final required Foundation output. It remains a useful map of what
@@ -40,8 +41,8 @@ you and what you still need to learn.
 ## Learning objectives
 
 - Distinguish the Builder and Researcher ways of working
-- Record a provisional track choice and the topics or domains currently holding your interest
-- Identify current knowledge gaps and explain why the provisional track fits for now
+- Select a Builder or Researcher track for the W5–W8 capability path
+- Identify current knowledge gaps and explain why the selected track fits the kind of work you want to practise
 
 ## Core
 
@@ -62,15 +63,14 @@ evidence-backed analysis, measurement or other defensible research artefact.
 :::
 ::::
 
-### Your Track Exploration Card
+### Your Track Selection Card
 
-Write one or two lines for each field. Keep the choice provisional.
+Write one or two lines for each field. Keep the domain and final PoW topic open.
 
 :::: steps
-1. **Provisional track** — Builder or Researcher
+1. **Selected track** — Builder or Researcher. This selection remains your Academy path through W8.
 
-   Choose the kind of work you currently want to learn more about. You may
-   change your mind during the Deep Dive.
+   Choose the kind of work you want to practise through the Deep Dive and Proof of Work.
 
 2. **Topics or domains of interest** — what areas, systems or questions are
    currently catching your attention?
@@ -81,14 +81,14 @@ Write one or two lines for each field. Keep the choice provisional.
 4. **Current knowledge gaps** — two or three things you do not yet understand
    well enough to work on confidently.
 
-5. **Why this provisional track fits** — connect the choice to the kind of work
+5. **Why this track fits** — connect the choice to the kind of work
    you want to practise, not to its prestige.
 ::::
 
 ::: tip This is not your PoW proposal
-The actual project question and scope are developed during the W5–W6 Deep Dive
-and frozen only at the end-of-W6 Scope Freeze. You are allowed to change track,
-domain or topic as your understanding improves.
+Your track is fixed for W5–W8. Your domain, question and final deliverable may
+evolve through Deep Dive; W7 combines deciding the scope with producing an MVP /
+V1.
 :::
 
 ### What comes next
@@ -97,8 +97,8 @@ domain or topic as your understanding improves.
 |---|---|
 | W5 Deep Dive | Six Builder or Researcher Part tasks, each worth 100 points |
 | W6 Deep Dive | Six more Part tasks, each worth 100 points |
-| End of W6 | Freeze the PoW scope · 100 points |
-| W7 / W8 | MVP / V1 · 100 points, then Final PoW · 200 points |
+| W7 | Scope + MVP / V1 · 200 points |
+| W8 | Refine + Final PoW · 200 points |
 
 ## Landscape
 
@@ -106,8 +106,8 @@ domain or topic as your understanding improves.
 - **Researcher** — a track for learning to decompose unfamiliar Web3 systems
 - **Case or application domain** — an area such as stablecoins, DeFi, NFTs or
   governance; it is not a permanent Academy track
-- **Scope Freeze** — the later checkpoint where a final PoW question and
-  deliverable become specific enough to review
+- **PoW topic and domain** — flexible until W7, when scope definition and the
+  first meaningful version happen together
 
 ::: tip Track kits
 The [Builder Deep Dive](../../tracks/builder/) and [Researcher Deep Dive](../../tracks/researcher/)
@@ -122,9 +122,9 @@ yet.
 
 > *"I'm interested in stablecoins."*
 
-| Field | Provisional answer |
+| Field | Example answer |
 |---|---|
-| **Track** | Researcher, for now |
+| **Track** | Researcher |
 | **Topics** | Reserves, freezing, chain deployment and what holders have to trust |
 | **Something I may investigate** | Compare one or two stablecoin designs using official documents and on-chain evidence |
 | **Knowledge gaps** | How attestations work; what freeze functions can and cannot do |
