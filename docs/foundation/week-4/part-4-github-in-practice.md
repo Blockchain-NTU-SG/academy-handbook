@@ -207,10 +207,7 @@ comments are part of the work, not a private judgement about the person who
 wrote it.
 
 <figure class="academy-shot">
-  <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: a GitHub Issue titled Add local setup instructions, showing context, expected outcome, labels and any useful reproduction or environment details.">
-    <span class="academy-shot-label">Screenshot needed</span>
-    <span class="academy-shot-what">A GitHub Issue with a clear title, short context, definition of done, labels and any relevant evidence.</span>
-  </div>
+  <img src="/images/week-4/01-github-issue.png" alt="A GitHub Issue in the academy-handbook repository reporting that every built page title renders with a literal &quot;undefined&quot; in it. The Issue gives the location, what is affected, the evidence as a code block, reproduction steps, the expected result, a definition of done and the environment, and carries a bug label." />
   <figcaption>An Issue gives the team a shared description of what needs changing.</figcaption>
 </figure>
 
