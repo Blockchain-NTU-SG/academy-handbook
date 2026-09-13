@@ -212,10 +212,7 @@ wrote it.
 </figure>
 
 <figure class="academy-shot">
-  <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: a GitHub Pull Request showing the changed files, conversation with an inline review comment, passing checks and the merge controls, with no secrets or personal data visible.">
-    <span class="academy-shot-label">Screenshot needed</span>
-    <span class="academy-shot-what">A PR showing the diff, a reviewer comment, a follow-up revision, passing checks and the merge area.</span>
-  </div>
+  <img src="/images/week-4/02-github-pull-request.png" alt="The conversation on a GitHub pull request in the academy-handbook repository. A reviewer requests changes and explains what is missing, the author then pushes two follow-up commits, the reviewer approves, and the merge panel shows one approval, all checks passed, no conflicts with the base branch and a Squash and merge button." />
   <figcaption>A PR keeps the proposed change, evidence and review conversation together.</figcaption>
 </figure>
 
