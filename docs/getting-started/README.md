@@ -42,7 +42,7 @@ to define every term. Recognition, not mastery.
 
 ## Two rules that apply all semester
 
-::: danger No exceptions, for all eight weeks
+::: danger No exceptions, throughout the Academy
 **1. Everything required in this programme is testnet only.** Testnet coins have
 no monetary value. No Academy mission will ever ask you to spend real money or
 use a mainnet network.

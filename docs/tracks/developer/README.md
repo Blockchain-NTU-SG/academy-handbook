@@ -1,13 +1,11 @@
 ---
-track: developer
 status: stub
-owner: ''
-title: Developer track kit
+search: false
+title: "Legacy Developer track path"
 ---
 
-# Developer track kit
+# This track path has moved
 
-Stub. This kit will contain the playbook, templates, examples, checklists,
-recommended tools, reference links, and required final output for the Developer
-direction. It is intentionally not a textbook; depth follows the Week 4 Direction
-Cards.
+The former Developer direction is now the [Builder Deep Dive](../builder/).
+Use that page for the current Academy architecture. Detailed Builder W5–W6
+content is in development.

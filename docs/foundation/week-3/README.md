@@ -54,16 +54,17 @@ can and cannot do.**
 AI assistance is explicitly allowed: the goal is to understand what you deploy,
 not to type every line yourself.
 
-Deliberately **out of scope** and left to Further Exploration or Semester 2:
+Deliberately **out of scope** and left to Further Exploration or advanced study
+beyond the current programme:
 
 | Not covered | Where it belongs |
 |---|---|
 | AMM maths | Further Exploration |
 | Liquidation mechanics | Further Exploration |
-| Advanced DeFi strategy | Semester 2 |
+| Advanced DeFi strategy | Advanced study beyond the current programme |
 | Oracle architecture | Further Exploration |
-| Gas optimisation, assembly, proxies | Developer track |
-| Formal verification, audit methodology | Semester 2 |
+| Gas optimisation, assembly, proxies | Builder Deep Dive |
+| Formal verification, audit methodology | Advanced study beyond the current programme |
 
 ::: tip Everything required is testnet only
 You will deploy to the same test network you used in

@@ -1,10 +1,12 @@
 ---
 week: 5
 status: stub
-owner: ''
-title: week-5-define
+search: false
+title: "Legacy Week 5 PoW path"
 ---
 
-# Week 5 — Define
+# This PoW page has moved
 
-> **Status: stub.** This page is migrated from the Education Director's Proof of Work framework and awaits the completed lesson.
+The former Week 5 Define page is retired. Current Week 5 content is organised
+under the [Builder](../../../tracks/builder/week-5/) and
+[Researcher](../../../tracks/researcher/week-5/) Deep Dive scaffolds.

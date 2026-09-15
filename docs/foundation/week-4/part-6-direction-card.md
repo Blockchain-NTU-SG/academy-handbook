@@ -1,7 +1,7 @@
 ---
 week: 4
 day: 6
-title: "Choosing your direction"
+title: "Track Selection Card"
 status: drafting
 owner: "Director of Education"
 reading_time: "25 min"
@@ -20,253 +20,124 @@ sources:
     label: "Link"
 ---
 
-# Week 4 · Part 6 — Choosing your direction
+# Week 4 · Part 6 — Track Selection Card
 
-This is the last page of the Foundation. In the full programme, Weeks 5–8 are a
-build sprint, and this is where you decide what you are building. For Foundation
-Pilot learners, this Direction Card is the final required output and a map of
-what they could build next.
+This is the last page of the Foundation. The full Academy continues into a
+Builder or Researcher Deep Dive in Weeks 5–6. **This card is not your final PoW
+proposal. Your track choice is fixed for W5–W8, but you are not committing to a
+final topic yet.** Your domain, question and final PoW idea may evolve through
+the Deep Dive and W7.
 
-::: important What the sprint actually asks for
-**==One small thing you can show.==** Not a startup, not a finished product, not
-something impressive.
+For Foundation Pilot learners, completing this card as part of the Week 4 Anchor
+Mission is the final required Foundation output. It remains a useful map of what
+you might build or investigate next.
 
-The most common failure in Week 5 is scoping too large. Everything on this page
-is designed to stop that.
+::: important The useful output is a better next question
+**==One small thing you may want to build or investigate.==** Not a startup, not a
+finished product and not a final PoW scope. Use the card to notice what interests
+you and what you still need to learn.
 :::
 
 ## Learning objectives
 
-- Describe the four directions and what each produces
-- Choose one, and say why it fits you
-- Scope a four-week project a beginner can actually finish
-- Write a definition of done that someone else could check
+- Distinguish the Builder and Researcher ways of working
+- Select a Builder or Researcher track for the W5–W8 capability path
+- Identify current knowledge gaps and explain why the selected track fits the kind of work you want to practise
 
 ## Core
 
-### The four directions
+### Two Deep Dive tracks
 
-Starting points, not restrictions. You may combine them — what is judged is the
-quality of the Proof of Work, not category discipline.
+The tracks describe a kind of work, not a prestige tier. Domains such as DeFi,
+stablecoins, NFTs, RWA, prediction markets, DePIN, infrastructure, governance
+and AI × Web3 are cases that may be explored through either track.
 
 :::: card-grid
-::: card title="Developer" icon="material-symbols:code"
-Produce something that runs. Good fit if you want to build and explain a small
-contract, script or interface.
+::: card title="Builder" icon="material-symbols:code"
+Learn to **compose unfamiliar Web3 systems**. You may eventually produce a
+working vertical slice, interface, integration or other reviewable build.
 :::
-::: card title="Research" icon="material-symbols:menu-book-outline"
-Produce an evidence-based analysis. Good fit if you enjoy tracing claims and
-writing a defensible view.
-:::
-::: card title="Data" icon="material-symbols:query-stats"
-Produce a dashboard, notebook or dataset. Good fit if you want to answer a
-specific question with on-chain data.
-:::
-::: card title="Product & Ecosystem" icon="material-symbols:groups-outline"
-Produce a teardown, proposal or contribution. Good fit if you notice where a
-user journey or community process could work better.
+::: card title="Researcher" icon="material-symbols:menu-book-outline"
+Learn to **decompose unfamiliar Web3 systems**. You may eventually produce an
+evidence-backed analysis, measurement or other defensible research artefact.
 :::
 ::::
 
-:::: tabs
-@tab Developer
+### Your Track Selection Card
 
-**You build something that runs.**
+Write one or two lines for each field. Keep the domain and final PoW topic open.
 
-| Field | Details |
-|---|---|
-| Output | Working code, deployed or runnable, with a README |
-| Core skills | Solidity, a frontend or script, testnet deployment |
-| Tools | Remix, GitHub, a wallet, an explorer, optionally Foundry or Hardhat |
-| Good fit if | You enjoyed [Week 3 Part 3](../week-3/part-3-remix-lab.md) and want more |
+:::: steps
+1. **Selected track** — Builder or Researcher. This selection remains your Academy path through W8.
 
-**Realistic four-week projects:**
+   Choose the kind of work you want to practise through the Deep Dive and Proof of Work.
 
-- A contract with a real access-control pattern, deployed and verified, with a minimal page that reads and writes it
-- A script that watches a contract's events and reports something useful
-- A small tool that solves a problem you personally hit during the Foundation
+2. **Topics or domains of interest** — what areas, systems or questions are
+   currently catching your attention?
 
-::: warning Scope reality check
-"Build a DEX" is not a four-week beginner project. **"Deploy a token with a
-capped supply and a page that displays holders"** is.
-:::
+3. **Something you may build or investigate** — one small possibility, not a
+   final project commitment.
 
-@tab Research
+4. **Current knowledge gaps** — two or three things you do not yet understand
+   well enough to work on confidently.
 
-**You investigate something and write it up.**
-
-| Field | Details |
-|---|---|
-| Output | A written analysis with evidence and sources |
-| Core skills | Source selection, evidence checking, clear writing |
-| Tools | Docs, GitHub, Etherscan, Dune, DefiLlama, L2BEAT, Messari |
-| Good fit if | [Part 3](./part-3-research-tool-map.md) was the page you enjoyed most |
-
-**Realistic four-week projects:**
-
-- A protocol teardown: what it does, its trust assumptions, on-chain evidence of use, and what would change your view
-- A comparison of three protocols in one sector on dimensions you define and defend
-- A post-mortem of a past exploit, reconstructed from on-chain evidence and public reports
-
-::: warning Scope reality check
-"Analyse DeFi" is not a project. **"Compare how three lending protocols handle
-oracle risk, with evidence"** is.
-:::
-
-@tab Data
-
-**You find something in on-chain data and show it.**
-
-| Field | Details |
-|---|---|
-| Output | A dashboard, notebook or dataset, with an explanation of what it shows |
-| Core skills | SQL, chain data structure, honest charting |
-| Tools | Dune, DefiLlama, block explorers, optionally Python |
-| Good fit if | You want to answer questions nobody has asked yet |
-
-**Realistic four-week projects:**
-
-- A Dune dashboard answering one specific question, with written interpretation
-- An analysis of activity patterns around a single event — a launch, an upgrade, an exploit
-- A reproducible comparison of a metric across chains, with your definitions stated
-
-::: warning Scope reality check
-The hard part is **the question**, not the SQL. A dashboard with no question is a
-pile of charts. Start from something you genuinely want to know.
-:::
-
-@tab Product & Ecosystem
-
-**You examine how something works as a product, or contribute to an ecosystem.**
-
-| Field | Details |
-|---|---|
-| Output | A teardown, proposal, contribution, or documented community work |
-| Core skills | User-journey thinking, clear writing, judgement about trade-offs |
-| Tools | The products themselves, governance forums, GitHub, testnets |
-| Good fit if | You keep noticing *why is this so hard to use?* |
-
-**Realistic four-week projects:**
-
-- A UX teardown of one Web3 onboarding flow, with specific, evidenced recommendations
-- A governance analysis: read a real proposal end to end and assess how the decision was made
-- A genuine contribution to an open-source project — documentation counts, and is often the most needed
-
-::: warning Scope reality check
-"Improve Web3 UX" is not a project. **"Walk five non-crypto NTU students through
-one wallet onboarding flow and document exactly where each got stuck"** is — and
-it would be genuinely useful.
-:::
+5. **Why this track fits** — connect the choice to the kind of work
+   you want to practise, not to its prestige.
 ::::
 
-### Choosing
-
-::: tip Choose by the work, not by prestige
-**==None of the four directions is a higher tier. Choose the kind of work you want
-to spend four weeks doing and the evidence you want to produce.==**
+::: tip This is not your PoW proposal
+Your track is fixed for W5–W8. Your domain, question and final deliverable may
+evolve through Deep Dive; W7 combines deciding the scope with producing an MVP /
+V1.
 :::
 
-Three questions that usually settle it:
+### What comes next
 
-1. **Which Foundation page did you enjoy most?** That is a real signal.
-2. **What do you want to be able to show at the end of the sprint?**
-3. **What will you still want to work on in week 7**, when it stops being novel?
-
-### Scoping so you can actually finish
-
-Beginners often overestimate what fits in four weeks.
-
-::: important The scoping test
-Say your project in one sentence with one core question or deliverable.
-Supporting pieces are fine when they serve that same output.
-
-- "Build a token, analyse stablecoin regulation, **and** create a trading dashboard" → three independent projects
-- "Build a small dashboard **and** add a short explanation of what the chart shows" → one deliverable with a supporting explanation
-
-Avoid joining multiple independent projects under one broad sentence; keep one
-core question or deliverable.
-:::
-
-The four-week shape:
-
-| Week | What happens |
+| Stage | What it does |
 |---|---|
-| **5 · Define** | Problem, scope, repo, plan, definition of done |
-| **6 · Build V0** | Something reviewable. Rough is fine |
-| **7 · Review & improve** | Peer review, validate assumptions, document limits |
-| **8 · Ship** | Final output, README, demo, AI disclosure, next steps |
-
-Notice V0 is due in week 6. **==Build something reviewable early, then use the
-remaining time for review, improvement and shipping.==**
-
-### Definition of done
-
-The single most useful thing on your Direction Card.
-
-::: warning Vague vs checkable
-**Vague:** "A working dashboard about stablecoins."
-
-**Checkable:** "A Dune dashboard with three charts showing daily USDC transfer
-volume on Base for the last 90 days, plus 300 words explaining what the pattern
-suggests and what it does not prove."
-
-The second one you can finish. You will know when you have.
-:::
-
-Write it so **someone else** could look at your output and say yes or no.
+| W5 Deep Dive | Six Builder or Researcher Part tasks, each worth 100 points |
+| W6 Deep Dive | Six more Part tasks, each worth 100 points |
+| W7 | Scope + MVP / V1 · 200 points |
+| W8 | Refine + Final PoW · 200 points |
 
 ## Landscape
 
-- **Scope creep** — adding work after the goal is already clear. It makes a sprint harder to finish, so a definition of done is the defence
-- **V0** — the first version that does the thing badly but visibly. It gives you something to test and improve in week 6
-- **Peer review** — having someone else inspect the work. A fresh reader can find assumptions or failures you did not notice in week 7
-- **Proof of Work** — evidence that the project exists and works at the promised level. It gives a reviewer something real to inspect
+- **Builder** — a track for learning to compose unfamiliar Web3 systems
+- **Researcher** — a track for learning to decompose unfamiliar Web3 systems
+- **Case or application domain** — an area such as stablecoins, DeFi, NFTs or
+  governance; it is not a permanent Academy track
+- **PoW topic and domain** — flexible until W7, when scope definition and the
+  first meaningful version happen together
 
 ::: tip Track kits
-The Developer, Research, Data and Product & Ecosystem kits will add deeper
-playbooks and examples. **This page has enough to write your Direction Card and
-scope a real project** — do not wait for them.
+The [Builder Deep Dive](../../tracks/builder/) and [Researcher Deep Dive](../../tracks/researcher/)
+pages are structural scaffolds. The Education team will add the detailed lessons
+and Part tasks later.
 :::
 
 ## Worked example
 
-The same interest, scoped three ways. Only one finishes.
+The same interest can point toward either track without becoming a final project
+yet.
 
 > *"I'm interested in stablecoins."*
 
-| Version | Verdict |
+| Field | Example answer |
 |---|---|
-| "Research stablecoins" | **Not a project.** No question, no output, no end |
-| "Build a stablecoin, analyse the whole market, and write a report on regulation" | **Three projects**, none finishable. It contains three independent deliverables |
-| "Compare how USDC and USDT differ in what a holder has to trust — reserves, freezing, chain deployment — with on-chain evidence for each claim" | **One project.** Clear question, defined scope, checkable output |
+| **Track** | Researcher |
+| **Topics** | Reserves, freezing, chain deployment and what holders have to trust |
+| **Something I may investigate** | Compare one or two stablecoin designs using official documents and on-chain evidence |
+| **Knowledge gaps** | How attestations work; what freeze functions can and cannot do |
+| **Why it fits** | I want to practise tracing claims and evidence before deciding on a final deliverable |
 
-The third version, as a Direction Card:
-
-| Field | Answer |
-|---|---|
-| **Direction** | Research |
-| **Problem** | People treat stablecoins as interchangeable dollars. They carry different trust assumptions |
-| **Audience** | Academy members and anyone holding stablecoins without thinking about it |
-| **Why blockchain matters** | The differences are visible on-chain and in contract code — checkable, not opinion |
-| **Four-week PoW** | A written comparison with evidence, published in a GitHub repo |
-| **Tools** | Circle and Tether docs, Etherscan contract code, DefiLlama, Dune |
-| **Alternatives** | Could be a Dune dashboard instead — written form suits the trust-assumption question better |
-| **Knowledge gaps** | How attestations actually work; what the freeze functions can and cannot do |
-| **Biggest risk** | Drifting into "which is better" instead of "what do you trust" |
-| **Definition of done** | 1,500 words, both contracts' freeze mechanisms documented with links, at least three on-chain data points, one section on what I could not verify |
-
-::: important Why this one works
-It is **specific, evidence-based, achievable in four weeks, and it names what it
-will not do.**
-
-That last row is the difference between finishing and drifting. Write yours
-before you start, not after.
-:::
+This is enough to guide Deep Dive learning. It does not decide the final PoW
+question, scope or definition of done.
 
 ::: details Further exploration — optional, not assessed
-- Look at previous cohorts' Proof of Work, when available, for a realistic sense of scope
-- Read one Messari report and one good Dune dashboard. Notice how narrow the best ones are
-- Ask in the Telegram group. Describing your idea to someone is the fastest way to find out it is too big
+- Browse [Dune](https://dune.com/) or [DefiLlama](https://defillama.com/) and
+  note one question you cannot answer yet.
+- Ask in the Telegram group what kinds of Builder or Researcher work other
+  learners are curious about.
 :::
 
 ::: details Sources and attribution

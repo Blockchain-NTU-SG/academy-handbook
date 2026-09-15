@@ -79,15 +79,13 @@ I would first inspect the current data-fetching component and its RPC helper. I 
 Before accepting it, I will inspect the diff, run those cases and verify the network and RPC details against the project documentation.
 :::
 
-The loop works across all four directions. The kind of evidence changes, but
+The loop works across both tracks. The kind of evidence changes, but
 the responsibility to inspect the result does not:
 
 | Direction | What verification looks like |
 |---|---|
-| **Developer** | Generate or build → run → test → inspect the code and output |
-| **Research** | Draft a claim → trace the source → use primary evidence → cross-check |
-| **Data** | Generate a query or code → run it → inspect the rows and definitions → check the methodology |
-| **Product & Ecosystem** | Generate a hypothesis or framework → inspect its assumptions → test it against users, product behaviour or evidence |
+| **Builder** | Generate or build → run → test → inspect the code and output |
+| **Researcher** | Draft a claim → trace the source → use primary evidence → cross-check |
 
 ### What AI is genuinely good and bad at
 
@@ -189,10 +187,9 @@ complete beginners from an idea to a working decentralised app using AI as a
 coding partner. It is a low-friction way to experience the full
 idea → prompt → build → test → deploy loop.
 
-It can support different directions: prototype a contract or app for Developer,
-turn a product idea into a demo for Product & Ecosystem, build a dashboard or
-simple interface for Data, or turn research into an interactive tool for
-Research.
+It can support either track: prototype a contract or app for Builder, or turn
+research into an interactive tool for Researcher. Data querying and product
+thinking can support either kind of work.
 
 **A note on Monad:** BuildAnything uses Monad as its example blockchain. Monad
 is EVM-compatible, so the Solidity, wallet and smart-contract concepts you
@@ -269,8 +266,8 @@ The first has 80 lines they are afraid to touch.
 :::
 
 ::: tip Where this actually pays off
-Weeks 5–8, when something breaks in week 7 and you have to fix it. Small
-verified steps leave you able to. A large unverified block leaves you starting
+the Deep Dive and later Proof of Work, when something breaks and you have to fix
+it. Small verified steps leave you able to. A large unverified block leaves you starting
 over.
 :::
 

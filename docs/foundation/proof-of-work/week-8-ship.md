@@ -1,10 +1,10 @@
 ---
 week: 8
 status: stub
-owner: ''
-title: week-8-ship
+search: false
+title: "Legacy Week 8 PoW path"
 ---
 
-# Week 8 — Ship
+# This PoW page has moved
 
-> **Status: stub.** This page is migrated from the Education Director's Proof of Work framework and awaits the completed lesson.
+The current Week 8 milestone is [Final Proof of Work](../../proof-of-work/week-8-final.md).

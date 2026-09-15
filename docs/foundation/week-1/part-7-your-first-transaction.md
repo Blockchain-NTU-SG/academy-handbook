@@ -50,7 +50,8 @@ By the end you will have sent a transaction, seen it recorded on the chain, and
 found that public record through a block explorer.
 
 ::: important This is also your Anchor Mission evidence
-Work carefully and keep what you produce — the address, the hash, and the link.
+Work carefully and keep what you produce — the sender address (Account 1), the
+hash, and the link.
 :::
 
 ## Learning objectives
@@ -276,7 +277,7 @@ guessing — wallet interfaces change, and the group will know.
 
    <figure class="academy-shot">
      <img src="/images/week-1/13-send-screen.png" alt="The MetaMask Send screen with a recipient account selected and an amount of 0.001 SepoliaETH entered." />
-     <figcaption>Sending to yourself is a perfectly valid transaction.</figcaption>
+     <figcaption>Sending between two accounts you control lets you see both sides of the transfer.</figcaption>
    </figure>
 
    On the confirmation screen, **read every line before confirming**:

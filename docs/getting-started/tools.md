@@ -65,7 +65,7 @@ use.
 | <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Create a wallet, sign and send transactions | Week 1 |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/etherscan.svg" alt="" aria-hidden="true" /><strong>Etherscan</strong></span> | Check what actually happened on Ethereum | Weeks 1–3 |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/solscan.png" alt="" aria-hidden="true" /><strong>Solscan</strong></span> | The same, for Solana | Landscape |
-| <span class="academy-brand-label"><Icon name="simple-icons:github" /><strong>GitHub</strong></span> | Read a protocol's code, and store your Proof of Work | Weeks 0, 4–8 |
+| <span class="academy-brand-label"><Icon name="simple-icons:github" /><strong>GitHub</strong></span> | Read a protocol's code, and store Deep Dive or Proof of Work evidence | Weeks 0, 4–8 |
 | <span class="academy-brand-label"><Icon name="logos:remix-icon" /><strong>Remix</strong></span> | Write and deploy a simple smart contract | Week 3 |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span> | Compare protocols and chains by size | Weeks 2, 4 |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Explore on-chain data and dashboards | Week 4 |

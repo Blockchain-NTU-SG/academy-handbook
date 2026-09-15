@@ -18,6 +18,9 @@ sources:
   - name: "ethereum.org — Oracles"
     url: "https://ethereum.org/developers/docs/oracles/"
     label: "Reuse"
+  - name: "Circle Docs — USDC contract addresses"
+    url: "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+    label: "Link"
   - name: "EIPs"
     url: "https://eips.ethereum.org/"
     label: "Reuse"
@@ -234,7 +237,8 @@ wrong.**
 **How AMM pricing maths works.** **How liquidation thresholds are calculated.**
 **How oracle networks reach agreement.**
 
-These are genuinely interesting and they are Further Exploration or Semester 2.
+These are genuinely interesting and they are Further Exploration or advanced
+study beyond the current programme.
 You need to know what these things are *for* and what they add to your trust
 map. That is enough for Foundation.
 :::
@@ -254,8 +258,9 @@ map. That is enough for Foundation.
 
 Read a real token's storage without reading its code.
 
-Open the <span class="academy-brand-label"><Icon name="token-branded:usdc" /><strong>USDC</strong></span> contract on Etherscan — `0xA0b8…eB48`, the address from
-[Week 2 Part 3](../week-2/part-3-why-ethereum-and-evm.md) — and open **Read
+Open the [<span class="academy-brand-label"><Icon name="token-branded:usdc" /><strong>USDC</strong></span> contract on Etherscan](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) —
+`0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48`, the Ethereum mainnet address
+listed in [Circle's official USDC contract-address documentation](https://developers.circle.com/stablecoins/usdc-contract-addresses) — and open **Read
 Contract**.
 
 | Call | What comes back | What it tells you |
@@ -267,15 +272,16 @@ Contract**.
 | `balanceOf(addr)` | A number | That address's holdings, in raw form |
 
 ::: danger `name()` is just a string somebody chose
-Anyone can deploy a contract that returns `"USD Coin"` and `"USDC"`. It costs a
-few cents and takes five minutes — you now have the skills to do it yourself.
+Anyone can deploy a contract using the same name and symbol. Those strings do
+not establish the token's identity.
 
 ==**For a token on a particular network, its practical identity is the network
 plus its contract address.**== Names, symbols and logos can be copied: fake-token
 scams use the same name, symbol or logo at a different address.
 
-Always verify the address against the issuer's official documentation. Never
-trust a token because a website or a message told you its name.
+For this example, verify the full address against Circle's official documentation
+rather than trusting the `USDC` name, symbol or logo alone. Never trust a token
+because a website or a message told you its name.
 :::
 
 Now look at the **Contract** tab. USDC is verified, so you can read its actual
@@ -298,6 +304,7 @@ which is a genuinely different position from being told about it.
 - [ethereum.org — ERC-721 token standard](https://ethereum.org/developers/docs/standards/tokens/erc-721/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — ERC-1155 token standard](https://ethereum.org/developers/docs/standards/tokens/erc-1155/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Oracles](https://ethereum.org/developers/docs/oracles/) — Reuse (CC BY 4.0), adapted
+- [Circle Docs — USDC contract addresses](https://developers.circle.com/stablecoins/usdc-contract-addresses) — Link, referenced
 - [EIPs](https://eips.ethereum.org/) — Reuse (CC0), referenced
 
 *Named tokens are illustrative examples, not recommendations.*

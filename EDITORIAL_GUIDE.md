@@ -128,7 +128,8 @@ explicitly stated elsewhere.
 Optional depth for curiosity or later specialisation. Advanced topics belong here
 when learners do not need them for the Foundation mental model.
 
-> **Richer content, not heavier assessment.**
+> **Foundation: richer content, lighter assessment.** Deep Dive keeps assessment
+> embedded in the learning through focused Part tasks rather than extra homework.
 
 Adding context, caveats or industry examples does not automatically create a new
 learner requirement. Assessment changes require explicit curriculum approval.
@@ -178,7 +179,8 @@ remains the precision layer. For example, a timeline can orient and a table can
 provide precision. Do not show a diagram, card grid and table that all
 communicate the same information; prefer one orientation visual and one precise
 layer. A richer visual explanation does not turn Landscape or optional context
-into Core, and preserves **richer content, not heavier assessment**.
+into Core. Foundation keeps assessment light; Deep Dive tasks remain embedded in
+the learning rather than becoming extra homework.
 
 Use real screenshots when learners must recognise a real interface or state. Do
 not fabricate product UI. Screenshots should show what to notice, contain no

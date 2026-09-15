@@ -117,7 +117,7 @@ the repository's CODEOWNERS file records the default maintainer group.
 ## Operations boundary
 
 The handbook contains canonical learning and Anchor Mission instructions.
-emerging.builders / WCB handles applications, cohort operations, submissions,
+Web3CareerBuild (WCB) handles applications, cohort operations, submissions,
 review, points, progress and leaderboard data. Do not add WCB API keys or private
 operational data to this repository.
 

@@ -38,7 +38,7 @@ Complete [Part 7](./part-7-your-first-transaction.md) first.
 ### Evidence — three items
 
 ::: steps
-1. **Your wallet address** — the `0x` address you used
+1. **Your sender address (Account 1)** — the `From` address used for the transaction
 
 2. **Your transaction hash** — the `0x` hash from step 6
 
@@ -73,7 +73,7 @@ screenshots are welcome but not required.
 
 Tick these before submitting. Reviewers check the same list.
 
-- [ ] Wallet address, transaction hash and explorer link are all included
+- [ ] Sender address (Account 1), transaction hash and explorer link are all included
 - [ ] The explorer link opens and shows a **Sepolia** transaction with status Success
 - [ ] The address in item 1 matches the From address on the explorer page
 - [ ] Q1, Q2 and Q3 are written in my own words
@@ -90,7 +90,7 @@ writing**.
 
 | Item | Standard |
 |---|---|
-| 1–3 | A working explorer link to a **successful Sepolia transaction**, where the From address matches the submitted address |
+| 1–3 | A working explorer link to a **successful Sepolia transaction**, where the From address matches the submitted sender address (Account 1) |
 | Q1 | Describes the *process* — wallet signed, broadcast, network verified, included in a block, visible on the explorer — rather than restating the explorer fields |
 | Q2 | Names real checks — network, recipient, amount, and what the wallet was asking them to authorise |
 | Q3 | Reaches the real distinction: everyone can check validity independently, but the network still needs a way to agree on **one shared history**. Without it, participants diverge and double-spending becomes possible |

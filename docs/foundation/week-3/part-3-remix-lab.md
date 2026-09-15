@@ -25,13 +25,14 @@ sources:
 
 # Week 3 · Part 3 — Remix lab: deploy your first contract
 
-::: danger Testnet only
-==Everything here uses free test assets with no monetary value. **Never deploy an
-Academy exercise to mainnet**, and never connect a wallet holding real funds.==
+::: danger Sepolia only
+==Everything here uses free Sepolia test assets with no monetary value. **Never
+deploy an Academy exercise to mainnet**, and never connect a wallet holding real
+funds.==
 :::
 
 Today you put a program on a blockchain. It will have its own address, anyone
-can call it, and it remains publicly queryable while the testnet and its history
+can call it, and it remains publicly queryable while Sepolia and its history
 are maintained.
 
 ::: tip Use AI as a tutor, not an autopilot
@@ -55,7 +56,7 @@ transaction hash. You will need all three.
 
 ## Learning objectives
 
-- Compile and deploy a Solidity contract to a test network
+- Compile and deploy a Solidity contract to Sepolia
 - Call a read function and a write function, and explain the difference in cost
 - Find your contract on a block explorer and read its transactions
 - Explain what an event looks like from the outside
@@ -63,7 +64,7 @@ transaction hash. You will need all three.
 ## Before you start
 
 ::: warning You need three things
-1. **Your Academy wallet** from [Week 1 Part 7](../week-1/part-7-your-first-transaction.md), on the test network
+1. **Your Academy wallet** from [Week 1 Part 7](../week-1/part-7-your-first-transaction.md), on Sepolia
 2. **Test ETH** in it — deploying costs more gas than a transfer, so top up from a faucet if your balance is low
 3. **A desktop browser.** Remix does not work well on mobile
 :::
@@ -136,7 +137,8 @@ Nothing is installed. Remix runs entirely in a browser tab.
 3. **Compile**
 
    Open the **Solidity Compiler** tab in the left icon column. Check the
-   compiler version matches your `pragma` — 0.8.20 or later — then press
+   compiler version matches your `pragma` — 0.8.20 or a later compatible 0.8.x
+   release — then press
    **Compile Guestbook.sol**.
 
    *You should get a green tick on the compiler icon.* Warnings do not normally
@@ -163,7 +165,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
    ::: danger Check the network before you go further
    Remix will show the connected network and your account address. **Confirm it
-   says the test network, not Ethereum Mainnet.**
+   says Sepolia, not Ethereum Mainnet.**
 
    ==This is the single most important check on this page.== Deploying to mainnet
    costs real money.
@@ -176,7 +178,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
    Two tells, either of which means you are on the simulator:
 
-   - the account balance is a round number like 100 ETH rather than your real testnet balance
+   - the account balance is a round number like 100 ETH rather than your real Sepolia balance
    - **no MetaMask confirmation appears** when you deploy or write
 
    Check the Environment field before every deploy and every write.
@@ -211,7 +213,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
    <figure class="academy-shot">
      <img src="/images/week-3/04-deployed-contract.png" alt="The Remix Deployed Contracts panel showing the deployed Guestbook contract, its address and a copy button, tagged Sepolia." />
-     <figcaption>This address is a public deployment recorded on the testnet while its history is maintained.</figcaption>
+     <figcaption>This address is a public deployment recorded on Sepolia while its history is maintained.</figcaption>
    </figure>
 
 6. **Call a read function**
@@ -231,17 +233,14 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
    Your wallet opens again.
 
-   ::: warning Untick "Added protection" before you confirm
-   MetaMask may tick an **Added protection** box, because it does not recognise
-   your contract. Left on, your call is routed through MetaMask's own delegation
-   contract instead of being sent straight to your `Guestbook`.
+   ::: warning For this Sepolia lab only: untick "Added protection"
+   If MetaMask shows **Added protection**, untick it so this transaction is sent
+   directly to your `Guestbook` and matches the explorer and Anchor Mission flow
+   below. With protection enabled, MetaMask may route the top-level transaction
+   through an additional contract, so the explorer view may differ.
 
-   It still works, but the transaction's **To** becomes MetaMask's contract, a
-   second `RedeemedDelegation` event joins your own in the logs, and ==your call
-   never appears in your contract's transaction list on the explorer== — which is
-   exactly where the next step sends you to look for it.
-
-   Untick it, then confirm.
+   This is a controlled Sepolia exercise using a contract you deployed yourself.
+   Do not treat disabling wallet protections as a general habit.
    :::
 
    *Once it confirms, press `message` again — the value has changed. Press
