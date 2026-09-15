@@ -144,17 +144,20 @@ Nothing is installed. Remix runs entirely in a browser tab.
    be fixed before you can deploy.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Remix Solidity Compiler tab showing a successful compile with a green check.">
-       <span class="academy-shot-label">Screenshot 2</span>
-       <span class="academy-shot-what">The Solidity Compiler tab after a successful compile, with the version selector and the green tick highlighted.</span>
-     </div>
+     <img src="/images/week-3/01-compile.png" alt="The Remix Solidity Compiler tab after a successful compile, showing the compiler version selector, the Compile Guestbook.sol button, Guestbook selected as the contract, and a green tick on the Compile icon." />
      <figcaption>Green tick means it compiled. It does not mean the contract is correct.</figcaption>
    </figure>
 
 4. **Connect your wallet**
 
    Open the **Deploy & Run Transactions** tab. In the **Environment** dropdown,
-   choose **Injected Provider — MetaMask**.
+   choose **Browser Extension**, then **MetaMask**.
+
+   ::: warning The option only appears in a browser that has your wallet
+   Remix offers this because it can see a wallet extension in the browser you are
+   using. Open Remix in the **same browser where MetaMask is installed**, or the
+   option will not be listed at all.
+   :::
 
    Your wallet will ask permission to connect. Approve it.
 
@@ -166,11 +169,21 @@ Nothing is installed. Remix runs entirely in a browser tab.
    costs real money.
    :::
 
+   ::: warning Remix resets to its own simulator when the page reloads
+   If the page refreshes, Environment silently reverts to **Remix VM** — a
+   simulated chain inside your browser. Anything deployed there is not on any
+   real network and will never appear on a block explorer.
+
+   Two tells, either of which means you are on the simulator:
+
+   - the account balance is a round number like 100 ETH rather than your real testnet balance
+   - **no MetaMask confirmation appears** when you deploy or write
+
+   Check the Environment field before every deploy and every write.
+   :::
+
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Remix Deploy and Run tab with Injected Provider selected and the connected testnet and account address visible.">
-       <span class="academy-shot-label">Screenshot 3</span>
-       <span class="academy-shot-what">Deploy &amp; Run with <strong>Injected Provider</strong> selected, and the connected network name and account address circled.</span>
-     </div>
+     <img src="/images/week-3/02-browser-extension.png" alt="The Remix Deploy and Run panel with Browser Extension and MetaMask selected, showing Sepolia (11155111), the connected account and its testnet balance, and Guestbook marked as compiled." />
      <figcaption>Network first, always. Then account.</figcaption>
    </figure>
 
@@ -187,10 +200,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    Confirm.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the wallet confirmation for a contract deployment, with the estimated gas fee highlighted.">
-       <span class="academy-shot-label">Screenshot 4</span>
-       <span class="academy-shot-what">The wallet confirmation for the deployment, with the network and the estimated fee highlighted.</span>
-     </div>
+     <img src="/images/week-3/03-deploy-confirm.png" alt="The MetaMask confirmation for a contract deployment, showing the network as Sepolia and the estimated network fee." />
      <figcaption>Compare this fee to your Week 1 transfer. That difference is the lesson.</figcaption>
    </figure>
 
@@ -200,10 +210,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    **Copy the contract address.** You need it for the mission.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Remix Deployed Contracts panel showing the deployed Guestbook contract and its address with the copy button.">
-       <span class="academy-shot-label">Screenshot 5</span>
-       <span class="academy-shot-what">The <strong>Deployed Contracts</strong> panel with the contract address and its copy button highlighted.</span>
-     </div>
+     <img src="/images/week-3/04-deployed-contract.png" alt="The Remix Deployed Contracts panel showing the deployed Guestbook contract, its address and a copy button, tagged Sepolia." />
      <figcaption>This address is a public deployment recorded on the testnet while its history is maintained.</figcaption>
    </figure>
 
@@ -222,7 +229,20 @@ Nothing is installed. Remix runs entirely in a browser tab.
    The **orange** button is the write function in the current Remix interface. In
    the field next to **`setMessage`**, type a new message and press it.
 
-   Your wallet opens again. Confirm.
+   Your wallet opens again.
+
+   ::: warning Untick "Added protection" before you confirm
+   MetaMask may tick an **Added protection** box, because it does not recognise
+   your contract. Left on, your call is routed through MetaMask's own delegation
+   contract instead of being sent straight to your `Guestbook`.
+
+   It still works, but the transaction's **To** becomes MetaMask's contract, a
+   second `RedeemedDelegation` event joins your own in the logs, and ==your call
+   never appears in your contract's transaction list on the explorer== — which is
+   exactly where the next step sends you to look for it.
+
+   Untick it, then confirm.
+   :::
 
    *Once it confirms, press `message` again — the value has changed. Press
    `visitCount` — it has gone up.*
@@ -230,10 +250,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    **Copy this transaction hash.** You need it for the mission.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Remix deployed contract panel with blue read buttons and the orange setMessage write button, showing a returned value.">
-       <span class="academy-shot-label">Screenshot 6</span>
-       <span class="academy-shot-what">The expanded contract with the blue read buttons and orange write button labelled, and a returned value visible.</span>
-     </div>
+     <img src="/images/week-3/05-read-call.png" alt="The expanded Guestbook contract in Remix showing the blue message read function, the Call button, and the returned value 0: string: Hello from Blockchain@NTU." />
      <figcaption>Read calls do not send a transaction. State-changing calls require a signed transaction and gas.</figcaption>
    </figure>
 
@@ -258,10 +275,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    contract.
 
    <figure class="academy-shot">
-     <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the Etherscan transaction Logs tab showing the MessageChanged event, either decoded or as raw topics and data.">
-       <span class="academy-shot-label">Screenshot 7</span>
-       <span class="academy-shot-what">The Etherscan <strong>Logs</strong> tab showing the emitted event, either decoded as <code>MessageChanged</code> or represented by raw topics and data.</span>
-     </div>
+     <img src="/images/week-3/06-etherscan-logs.png" alt="The Etherscan Logs tab for a setMessage transaction, showing one decoded MessageChanged event emitted by the Guestbook contract, the caller address as the indexed user topic, and the new message string in the data field." />
      <figcaption>This is what an event looks like from outside. Applications read exactly this.</figcaption>
    </figure>
 ::::
@@ -279,7 +293,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
 - :- The wallet does not open when I press Deploy
 
-  Remix lost the connection. Re-select **Injected Provider — MetaMask** in the
+  Remix lost the connection. Re-select **Browser Extension** in the
   Environment dropdown, and check the wallet extension is unlocked.
 
 - :- Compilation errors I do not understand
