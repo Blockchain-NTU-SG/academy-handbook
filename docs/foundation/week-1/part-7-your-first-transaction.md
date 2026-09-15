@@ -50,7 +50,8 @@ By the end you will have sent a transaction, seen it recorded on the chain, and
 found that public record through a block explorer.
 
 ::: important This is also your Anchor Mission evidence
-Work carefully and keep what you produce — the address, the hash, and the link.
+Work carefully and keep what you produce — the sender address (Account 1), the
+hash, and the link.
 :::
 
 ## Learning objectives

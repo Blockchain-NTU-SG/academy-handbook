@@ -272,8 +272,8 @@ Contract**.
 | `balanceOf(addr)` | A number | That address's holdings, in raw form |
 
 ::: danger `name()` is just a string somebody chose
-Anyone can deploy a contract that returns `"USD Coin"` and `"USDC"`. It costs a
-few cents and takes five minutes — you now have the skills to do it yourself.
+Anyone can deploy a contract using the same name and symbol. Those strings do
+not establish the token's identity.
 
 ==**For a token on a particular network, its practical identity is the network
 plus its contract address.**== Names, symbols and logos can be copied: fake-token
@@ -304,6 +304,7 @@ which is a genuinely different position from being told about it.
 - [ethereum.org — ERC-721 token standard](https://ethereum.org/developers/docs/standards/tokens/erc-721/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — ERC-1155 token standard](https://ethereum.org/developers/docs/standards/tokens/erc-1155/) — Reuse (CC BY 4.0), adapted
 - [ethereum.org — Oracles](https://ethereum.org/developers/docs/oracles/) — Reuse (CC BY 4.0), adapted
+- [Circle Docs — USDC contract addresses](https://developers.circle.com/stablecoins/usdc-contract-addresses) — Link, referenced
 - [EIPs](https://eips.ethereum.org/) — Reuse (CC0), referenced
 
 *Named tokens are illustrative examples, not recommendations.*

@@ -58,8 +58,11 @@ Resubmission follows the existing programme policy.
 
 Foundation follows richer content, lighter assessment. Deep Dive keeps tasks
 embedded in the learning rather than adding extra homework. Weekly pacing is a
-recommended rhythm, not a deadline. Required hands-on activity is testnet-only;
-never use real funds for an Academy requirement.
+recommended rhythm, not a deadline. Any Academy activity that sends a
+transaction, deploys a contract, performs a state-changing wallet action, or
+otherwise requires funds or an on-chain signature is testnet-only; some lessons
+may ask you to inspect public mainnet data read-only. Never use real funds for
+an Academy requirement.
 
 ## Operations boundary
 

@@ -8,10 +8,10 @@ owner: "Director of Education"
 
 # Week 3 — Anchor Mission
 
-<Badge type="tip" text="100 points" /> <Badge type="info" text="Testnet only" /> <Badge type="warning" text="No deadline" />
+<Badge type="tip" text="100 points" /> <Badge type="info" text="Sepolia only" /> <Badge type="warning" text="No deadline" />
 
-::: danger Testnet only
-Deploy to the test network only. **Never deploy an Academy exercise to mainnet**,
+::: danger Sepolia only
+Deploy to Sepolia only. **Never deploy an Academy exercise to mainnet**,
 and never use a wallet holding real funds.
 :::
 
@@ -43,7 +43,7 @@ back; being unable to explain the submitted contract is.**
 
 3. **One successful write transaction hash** — your `setMessage` call
 
-   All three must be on the test network and must open on the explorer.
+   All three must be on Sepolia and must open on the explorer.
 
 4. **Your source code**
 
@@ -82,7 +82,7 @@ You are not expected to find a clever exploit. You are expected to notice that
 ## Submission checklist
 
 - [ ] Contract address, deployment hash and write transaction hash are all included
-- [ ] All three open on the explorer and are on the **test network**
+- [ ] All three open on the explorer and are on **Sepolia**
 - [ ] My source code is included or linked
 - [ ] I named a read function, a write function and an event
 - [ ] I answered all three parts of question 6
@@ -95,11 +95,11 @@ code quality**, and not whether they extended the contract.
 
 | Item | Standard |
 |---|---|
-| 1–3 | All three open on the **test network**. The contract address matches the deployment transaction's created contract, and the write transaction targets that same address |
+| 1–3 | All three open on **Sepolia**. The contract address matches the deployment transaction's created contract, and the write transaction targets that same address |
 | 4 | Source is included and is consistent with the submitted Guestbook and demonstrated behaviour. Exact source-to-bytecode verification is only expected if the learner verified the contract on Etherscan |
 | 5 | Correctly identifies which is read, which is write, and names an event. A `public` state variable counts as a read function — that is correct, and worth acknowledging if they spot it |
 | 6a | Names the actual state — the message, and ideally the visitor and count |
-| 6b | Describes the state change **and** that it costs gas or needs a signature |
+| 6b | Accurately describes the state change: `message` changes, `lastVisitor` changes, `visitCount` increments and the event is emitted where relevant. Gas and signature context is useful supporting understanding, but is not required unless the learner question asks for it |
 | 6c | **Any genuine limitation.** Missing access control, immutability, public data, gas cost. Accept anything real |
 
 **Send it back if:** any link is broken, points to mainnet, or the addresses do

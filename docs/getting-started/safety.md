@@ -161,7 +161,7 @@ regardless of how convincing the profile picture is.
 | **Verify the URL every time** | Bookmark the real site and use the bookmark. Never reach a wallet or protocol through a search ad, a DM, or a forwarded link |
 | **Never share keys** | No exceptions. Nobody needs them |
 | ==**Read before signing**== | Which network, which contract, which token, how much, what permission. If the wallet cannot explain it plainly, reject it |
-| **Use testnet for Academy work** | Every required activity here is testnet only. A mistake costs nothing |
+| **Use testnet for transactions and wallet actions** | Any activity that sends a transaction, deploys a contract, performs a state-changing wallet action, or otherwise requires funds or an on-chain signature must use testnet only. Read-only inspection of public mainnet data is allowed when a lesson explicitly asks for it |
 | **Separate wallets** | One for learning. A different one for anything you would mind losing. They should share nothing |
 | **Turn on 2FA** | Email, GitHub, exchange accounts. An authenticator app, not SMS |
 | **Review approvals** | Periodically revoke old allowances at [revoke.cash](https://revoke.cash/) |
@@ -170,9 +170,13 @@ regardless of how convincing the profile picture is.
 ### The Academy's rules
 
 ::: danger These hold throughout the Academy and have no exceptions
-**1. Testnet only.** Every hands-on activity uses a test network. Testnet coins
-are free and worth nothing. No Academy mission will ever require real money,
-mainnet, or a wallet holding real assets.
+**1. Testnet only for transactions and wallet actions.** Any Academy activity
+that sends a transaction, deploys a contract, performs a state-changing wallet
+action, or otherwise requires funds or an on-chain signature must use testnet
+only. Some lessons may ask you to inspect public mainnet data in a block
+explorer without connecting a wallet or sending anything. Testnet coins are
+free and worth nothing. No Academy mission will ever require real money or a
+wallet holding real assets.
 
 **2. Nobody asks for your keys.** No reviewer, organiser or committee member
 will ever ask for your seed phrase or private key. Anyone who asks is an

@@ -170,10 +170,13 @@ acting on any direct message. See [Part 4](./safety.md).
 ### The two rules
 
 ::: danger These hold throughout the Academy and have no exceptions
-==**1. Testnet only.**== Every hands-on activity uses a test network. Testnet coins
-are free and worth nothing. No mission will ever require real money, mainnet, or
-a wallet holding real assets. If a mission appears to ask this, stop and ask in
-the group.
+==**1. Testnet only for transactions and wallet actions.**== Any Academy
+activity that sends a transaction, deploys a contract, performs a state-changing
+wallet action, or otherwise requires funds or an on-chain signature must use
+testnet only. Some lessons may ask you to inspect public mainnet data in a block
+explorer without connecting a wallet or sending anything. Testnet coins are free
+and worth nothing. No mission will ever require real money or a wallet holding
+real assets. If a mission appears to ask this, stop and ask in the group.
 
 ==**2. Nobody asks for your keys.**== No reviewer, organiser or committee member
 will ever ask for your seed phrase or private key. Anyone who does is not who
