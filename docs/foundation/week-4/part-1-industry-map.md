@@ -239,7 +239,7 @@ financial incentives. Financialising play can attract speculators rather than pl
 **Why blockchain matters:** treasuries and voting can be enforced by contracts
 rather than trust.
 
-**Examples:** <span class="academy-brand-label"><strong>Sky (formerly MakerDAO)</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/arbitrum.png" alt="" aria-hidden="true" /><strong>Arbitrum DAO</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:uni" /><strong>Uniswap governance</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/lxdao.svg" alt="" aria-hidden="true" /><strong>LXDAO</strong></span>, grant programmes
+**Examples:** <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/sky.svg" alt="" aria-hidden="true" /><strong>Sky (formerly MakerDAO)</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:arbitrum" /><strong>Arbitrum DAO</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:uni" /><strong>Uniswap governance</strong></span>, <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/lxdao.svg" alt="" aria-hidden="true" /><strong>LXDAO</strong></span>, grant programmes
 
 **Limitation:** governance participation can be low, and token-weighted voting
 can concentrate influence in large holders. Legal status is unresolved in many
