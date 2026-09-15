@@ -250,11 +250,8 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
 ::::
 
 <figure class="academy-shot">
-  <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: the emerging.builders dashboard showing the Semester 1 programme and the Week 1 mission slot.">
-    <span class="academy-shot-label">Screenshot needed</span>
-    <span class="academy-shot-what">The emerging.builders dashboard, showing the Semester 1 programme and the Week 1 mission submission slot.</span>
-  </div>
-  <figcaption>What you should see once registration is complete.</figcaption>
+  <img src="/images/getting-started/02-platform-dashboard.png" alt="The Blockchain@NTU Academy programme page on emerging.builders, showing the Foundation Pilot marked as running, the programme overview and curriculum, and an Application status panel reading &quot;Application submitted, pending review&quot;." />
+  <figcaption>What you should see once you have applied. The missions open up once your application is approved.</figcaption>
 </figure>
 
 ## Worked example

@@ -221,10 +221,7 @@ No wallet yet — that is Week 1. Do the account hardening now instead.
 :::
 
 <figure class="academy-shot">
-  <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: a MetaMask signature request with the network, contract and requested permission highlighted.">
-    <span class="academy-shot-label">Screenshot needed</span>
-    <span class="academy-shot-what">A MetaMask signature request, with the network, contract address and requested permission each circled.</span>
-  </div>
+  <img src="/images/getting-started/01-spending-cap-request.png" alt="A MetaMask spending cap request on the Sepolia test network. It reads &quot;This site wants permission to withdraw your tokens&quot; and grants an unlimited spending cap on a test token to a contract address. The unlimited cap, the spender address and the network are each circled." />
   <figcaption>The three things to read before you approve anything. Practise on testnet, where getting it wrong is free.</figcaption>
 </figure>
 
