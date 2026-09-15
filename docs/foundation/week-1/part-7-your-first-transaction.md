@@ -150,15 +150,31 @@ guessing — wallet interfaces change, and the group will know.
    Confirm the phrase when prompted. *You should now see a wallet with one
    account and a balance of 0 ETH.*
 
+   <figure class="academy-shot">
+     <img src="/images/week-1/03-wallet-home.png" alt="The MetaMask wallet home screen after setup, showing a single account and a balance of 0 ETH on Ethereum Mainnet." />
+     <figcaption>Setup is done when you land here. The balance is 0 and the network is still Mainnet.</figcaption>
+   </figure>
+
 3. **Switch to Ethereum Sepolia**
 
-   MetaMask opens on Ethereum Mainnet. Open the network dropdown at the top
-   left, enable **Show test networks** in settings if the list does not include
-   them, and select **Ethereum Sepolia**.
+   MetaMask opens on Ethereum Mainnet, and test networks are hidden until you
+   ask for them. There is no plain network dropdown any more: open the **network
+   selector** at the top left, choose **Manage networks**, turn on **Show test
+   networks**, then pick **Ethereum Sepolia**.
 
    <figure class="academy-shot">
      <img src="/images/week-1/04-show-test-networks-off.png" alt="MetaMask's Manage networks screen with the Show test networks toggle switched off, and no Sepolia in the list." />
      <figcaption>Test networks are hidden by default. Enable them once.</figcaption>
+   </figure>
+
+   <figure class="academy-shot">
+     <img src="/images/week-1/05-show-test-networks-on.png" alt="The same MetaMask Manage networks screen with the Show test networks toggle switched on and test networks now listed." />
+     <figcaption>With the toggle on, the test networks appear.</figcaption>
+   </figure>
+
+   <figure class="academy-shot">
+     <img src="/images/week-1/06-select-network-sepolia.png" alt="The MetaMask network selector open, with Ethereum Sepolia listed among the available networks." />
+     <figcaption>Now pick Ethereum Sepolia from the list.</figcaption>
    </figure>
 
    <figure class="academy-shot">
@@ -217,6 +233,11 @@ guessing — wallet interfaces change, and the group will know.
    </figure>
 
    <figure class="academy-shot">
+     <img src="/images/week-1/10-faucet-success.png" alt="The Google Cloud faucet showing a confirmation that SepoliaETH has been sent, with a link to the transaction." />
+     <figcaption>The faucet confirms first. The wallet catches up a moment later.</figcaption>
+   </figure>
+
+   <figure class="academy-shot">
      <img src="/images/week-1/11-eth-arrived.png" alt="The MetaMask wallet showing a balance of 0.0500 SepoliaETH after the faucet request succeeded." />
      <figcaption>Funds usually arrive within a minute.</figcaption>
    </figure>
@@ -241,11 +262,17 @@ guessing — wallet interfaces change, and the group will know.
 
 6. **Send a test transaction**
 
-   You will send a small amount to yourself. It is a real transaction in every
-   respect, and it needs no second person.
+   You will send a small amount between two accounts you control. It is a real
+   transaction in every respect, and it needs no second person.
 
-   In MetaMask choose **Send**, paste **your own address** as the recipient, and
-   enter a small amount such as **0.001**.
+   In MetaMask, add a **second account** from the account menu and copy its
+   address. Then choose **Send**, paste that address as the recipient, and enter
+   a small amount such as **0.001**.
+
+   <figure class="academy-shot">
+     <img src="/images/week-1/12-two-accounts.png" alt="The MetaMask account list showing two accounts belonging to the same wallet." />
+     <figcaption>One wallet, two accounts. The second one is the recipient.</figcaption>
+   </figure>
 
    <figure class="academy-shot">
      <img src="/images/week-1/13-send-screen.png" alt="The MetaMask Send screen with a recipient account selected and an amount of 0.001 SepoliaETH entered." />
@@ -257,7 +284,7 @@ guessing — wallet interfaces change, and the group will know.
    | Check | Should say |
    |---|---|
    | Network | Sepolia |
-   | To | Your address |
+   | To | Your second account |
    | Amount | 0.001 SepoliaETH |
    | Estimated fee | A small amount of SepoliaETH |
 
