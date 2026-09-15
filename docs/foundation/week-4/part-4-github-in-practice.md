@@ -207,19 +207,18 @@ comments are part of the work, not a private judgement about the person who
 wrote it.
 
 <figure class="academy-shot">
-  <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: a GitHub Issue titled Add local setup instructions, showing context, expected outcome, labels and any useful reproduction or environment details.">
-    <span class="academy-shot-label">Screenshot needed</span>
-    <span class="academy-shot-what">A GitHub Issue with a clear title, short context, definition of done, labels and any relevant evidence.</span>
-  </div>
+  <img src="/images/week-4/01-github-issue.png" alt="A GitHub Issue in the academy-handbook repository reporting that every built page title renders with a literal &quot;undefined&quot; in it. The Issue gives the location, what is affected, the evidence as a code block, reproduction steps, the expected result, a definition of done and the environment, and carries a bug label." />
   <figcaption>An Issue gives the team a shared description of what needs changing.</figcaption>
 </figure>
 
 <figure class="academy-shot">
-  <div class="academy-shot-pending" role="img" aria-label="Screenshot pending: a GitHub Pull Request showing the changed files, conversation with an inline review comment, passing checks and the merge controls, with no secrets or personal data visible.">
-    <span class="academy-shot-label">Screenshot needed</span>
-    <span class="academy-shot-what">A PR showing the diff, a reviewer comment, a follow-up revision, passing checks and the merge area.</span>
-  </div>
-  <figcaption>A PR keeps the proposed change, evidence and review conversation together.</figcaption>
+  <img src="/images/week-4/02-github-pull-request-description.png" alt="The description of a pull request in the academy-handbook repository, filled in against the repository's template. It states the objective, the scope, the changes as a short list, how the change was validated, the evidence, the risks, and ticked checklists for sources and safety and for curriculum checks." />
+  <figcaption>The description is the first thing a reviewer reads. It says what changed, why, and how you checked it — before anyone looks at a single line.</figcaption>
+</figure>
+
+<figure class="academy-shot">
+  <img src="/images/week-4/03-github-pull-request-review.png" alt="The conversation on a GitHub pull request in the academy-handbook repository. A reviewer requests changes and explains what is missing, the author then pushes two follow-up commits, the reviewer approves, and the merge panel shows one approval, all checks passed, no conflicts with the base branch and a Squash and merge button." />
+  <figcaption>Then the loop: a review, a revision on the same branch, an approval, green checks, and a merge button.</figcaption>
 </figure>
 
 #### Commit messages: small labels for future readers
