@@ -212,8 +212,13 @@ wrote it.
 </figure>
 
 <figure class="academy-shot">
-  <img src="/images/week-4/02-github-pull-request.png" alt="The conversation on a GitHub pull request in the academy-handbook repository. A reviewer requests changes and explains what is missing, the author then pushes two follow-up commits, the reviewer approves, and the merge panel shows one approval, all checks passed, no conflicts with the base branch and a Squash and merge button." />
-  <figcaption>A PR keeps the proposed change, evidence and review conversation together.</figcaption>
+  <img src="/images/week-4/02-github-pull-request-description.png" alt="The description of a pull request in the academy-handbook repository, filled in against the repository's template. It states the objective, the scope, the changes as a short list, how the change was validated, the evidence, the risks, and ticked checklists for sources and safety and for curriculum checks." />
+  <figcaption>The description is the first thing a reviewer reads. It says what changed, why, and how you checked it — before anyone looks at a single line.</figcaption>
+</figure>
+
+<figure class="academy-shot">
+  <img src="/images/week-4/03-github-pull-request-review.png" alt="The conversation on a GitHub pull request in the academy-handbook repository. A reviewer requests changes and explains what is missing, the author then pushes two follow-up commits, the reviewer approves, and the merge panel shows one approval, all checks passed, no conflicts with the base branch and a Squash and merge button." />
+  <figcaption>Then the loop: a review, a revision on the same branch, an approval, green checks, and a merge button.</figcaption>
 </figure>
 
 #### Commit messages: small labels for future readers
