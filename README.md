@@ -121,7 +121,7 @@ decision ownership.
 
 The Handbook is the canonical home for learning material, Foundation Anchor
 Mission requirements, Deep Dive Part-task requirements and Proof of Work
-milestone requirements. emerging.builders / WCB handles applications, cohorts,
+milestone requirements. Web3CareerBuild (WCB) handles applications, cohorts,
 submissions, review workflow, points, progress and leaderboard data. WCB may
 carry a shorter operational copy, but it does not replace the canonical Handbook
 page. Never add WCB API keys or private operational data here.

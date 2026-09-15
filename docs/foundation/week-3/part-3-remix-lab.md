@@ -231,17 +231,14 @@ Nothing is installed. Remix runs entirely in a browser tab.
 
    Your wallet opens again.
 
-   ::: warning Untick "Added protection" before you confirm
-   MetaMask may tick an **Added protection** box, because it does not recognise
-   your contract. Left on, your call is routed through MetaMask's own delegation
-   contract instead of being sent straight to your `Guestbook`.
+   ::: warning For this Sepolia lab only: untick "Added protection"
+   If MetaMask shows **Added protection**, untick it so this transaction is sent
+   directly to your `Guestbook` and matches the explorer and Anchor Mission flow
+   below. With protection enabled, MetaMask may route the top-level transaction
+   through an additional contract, so the explorer view may differ.
 
-   It still works, but the transaction's **To** becomes MetaMask's contract, a
-   second `RedeemedDelegation` event joins your own in the logs, and ==your call
-   never appears in your contract's transaction list on the explorer== — which is
-   exactly where the next step sends you to look for it.
-
-   Untick it, then confirm.
+   This is a controlled testnet exercise using a contract you deployed yourself.
+   Do not treat disabling wallet protections as a general habit.
    :::
 
    *Once it confirms, press `message` again — the value has changed. Press

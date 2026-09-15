@@ -45,7 +45,7 @@ config:
       actions:
         - theme: brand
           text: Apply to the Academy
-          link: ./getting-started/programme.md#apply
+          link: https://web3career.build/en/programs/blockchain-ntu-academy
           icon: material-symbols:school-outline
         - theme: alt
           text: Start Learning

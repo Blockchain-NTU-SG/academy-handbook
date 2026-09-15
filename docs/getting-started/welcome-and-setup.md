@@ -249,20 +249,26 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
    That is the whole GitHub loop: **edit, describe the change, commit.**
    Everything else is a variation on it.
 
-5. **Join the platform and the group**
+5. **Open your learning page on Web3CareerBuild (WCB)**
 
-   Complete your emerging.builders registration using the link in your
-   acceptance email. *You should be able to see the Semester 1 programme and
-   Week 1's mission slot.*
+   If your Academy application has been approved, open the **Learning** panel
+   in WCB.
 
-   Join the Academy Telegram group using the invite in the same email, and post
-   a one-line introduction: what you study, and one thing you want to understand
-   by the end of the Foundation.
+   You should see the Academy learning page with the **recommended reading
+   order, handbook links, and your current task**. Use this page as your
+   starting point each week. The handbook remains the source of truth for the
+   learning material and task requirements.
+
+6. **Join the Academy Telegram group**
+
+   Use the invite in your acceptance email, and post a one-line introduction:
+   what you study, and one thing you want to understand by the end of the
+   Foundation.
 ::::
 
 <figure class="academy-shot">
-  <img src="/images/getting-started/02-platform-dashboard.png" alt="The Blockchain@NTU Academy programme page on emerging.builders, showing the Foundation Pilot marked as running, the programme overview and curriculum, and an Application status panel reading &quot;Application submitted, pending review&quot;." />
-  <figcaption>What you should see once you have applied. The missions open up once your application is approved.</figcaption>
+  <img src="/images/getting-started/02-platform-dashboard.png" alt="The Blockchain@NTU Academy learning page in WCB, showing the Learning panel with the recommended reading order, handbook links and current task." />
+  <figcaption>Once approved, open the Learning panel to see what to read and work on next.</figcaption>
 </figure>
 
 ## Worked example

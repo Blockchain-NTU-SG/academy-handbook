@@ -276,7 +276,7 @@ guessing — wallet interfaces change, and the group will know.
 
    <figure class="academy-shot">
      <img src="/images/week-1/13-send-screen.png" alt="The MetaMask Send screen with a recipient account selected and an amount of 0.001 SepoliaETH entered." />
-     <figcaption>Sending to yourself is a perfectly valid transaction.</figcaption>
+     <figcaption>Sending between two accounts you control lets you see both sides of the transfer.</figcaption>
    </figure>
 
    On the confirmation screen, **read every line before confirming**:

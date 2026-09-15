@@ -66,7 +66,7 @@ never use real funds for an Academy requirement.
 The Handbook contains the canonical learning material, Foundation Anchor Mission
 requirements, Deep Dive Part-task requirements and Proof of Work milestone
 requirements.
-emerging.builders / WCB handles applications, cohort management, submissions,
+Web3CareerBuild (WCB) handles applications, cohort management, submissions,
 review, points, progress and leaderboards.
 
 ## Apply
@@ -80,5 +80,5 @@ The full Cohort 1 programme adds the selected W5–W6 Builder or Researcher Deep
 Dive, then the W7 Scope + MVP / V1 and W8 Refine + Final Proof of Work
 milestones.
 
-Applications and cohort operations are managed through emerging.builders / WCB.
+Applications and cohort operations are managed through WCB.
 The application link will be added here when the next intake opens.
