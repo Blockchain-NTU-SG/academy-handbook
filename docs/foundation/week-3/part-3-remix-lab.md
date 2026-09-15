@@ -144,7 +144,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    be fixed before you can deploy.
 
    <figure class="academy-shot">
-     <img src="/images/week-3/01-compile.png" alt="The Remix Solidity Compiler tab after a successful compile, showing the compiler version selector and a green tick on the Compile icon." />
+     <img src="/images/week-3/01-compile.png" alt="The Remix Solidity Compiler tab after a successful compile, showing the compiler version selector, the Compile Guestbook.sol button, Guestbook selected as the contract, and a green tick on the Compile icon." />
      <figcaption>Green tick means it compiled. It does not mean the contract is correct.</figcaption>
    </figure>
 
@@ -183,7 +183,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    :::
 
    <figure class="academy-shot">
-     <img src="/images/week-3/02-browser-extension.png" alt="The Remix Deploy and Run panel with Browser Extension and MetaMask selected, showing Sepolia (11155111) and the connected account address." />
+     <img src="/images/week-3/02-browser-extension.png" alt="The Remix Deploy and Run panel with Browser Extension and MetaMask selected, showing Sepolia (11155111), the connected account and its testnet balance, and Guestbook marked as compiled." />
      <figcaption>Network first, always. Then account.</figcaption>
    </figure>
 
@@ -210,7 +210,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    **Copy the contract address.** You need it for the mission.
 
    <figure class="academy-shot">
-     <img src="/images/week-3/04-deployed-contract.png" alt="The Remix Deployed Contracts panel showing the deployed Message contract, its address and a copy button, tagged Sepolia." />
+     <img src="/images/week-3/04-deployed-contract.png" alt="The Remix Deployed Contracts panel showing the deployed Guestbook contract, its address and a copy button, tagged Sepolia." />
      <figcaption>This address is a public deployment recorded on the testnet while its history is maintained.</figcaption>
    </figure>
 
@@ -229,7 +229,20 @@ Nothing is installed. Remix runs entirely in a browser tab.
    The **orange** button is the write function in the current Remix interface. In
    the field next to **`setMessage`**, type a new message and press it.
 
-   Your wallet opens again. Confirm.
+   Your wallet opens again.
+
+   ::: warning Untick "Added protection" before you confirm
+   MetaMask may tick an **Added protection** box, because it does not recognise
+   your contract. Left on, your call is routed through MetaMask's own delegation
+   contract instead of being sent straight to your `Guestbook`.
+
+   It still works, but the transaction's **To** becomes MetaMask's contract, a
+   second `RedeemedDelegation` event joins your own in the logs, and ==your call
+   never appears in your contract's transaction list on the explorer== — which is
+   exactly where the next step sends you to look for it.
+
+   Untick it, then confirm.
+   :::
 
    *Once it confirms, press `message` again — the value has changed. Press
    `visitCount` — it has gone up.*
@@ -237,7 +250,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    **Copy this transaction hash.** You need it for the mission.
 
    <figure class="academy-shot">
-     <img src="/images/week-3/05-read-call.png" alt="The expanded contract in Remix showing the blue message read function, the Call button, and the returned value 0: string: hello." />
+     <img src="/images/week-3/05-read-call.png" alt="The expanded Guestbook contract in Remix showing the blue message read function, the Call button, and the returned value 0: string: Hello from Blockchain@NTU." />
      <figcaption>Read calls do not send a transaction. State-changing calls require a signed transaction and gas.</figcaption>
    </figure>
 
@@ -262,7 +275,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    contract.
 
    <figure class="academy-shot">
-     <img src="/images/week-3/06-etherscan-logs.png" alt="The Etherscan Logs tab showing the MessageChanged event decoded, with the user address topic and the message string in the data field." />
+     <img src="/images/week-3/06-etherscan-logs.png" alt="The Etherscan Logs tab for a setMessage transaction, showing one decoded MessageChanged event emitted by the Guestbook contract, the caller address as the indexed user topic, and the new message string in the data field." />
      <figcaption>This is what an event looks like from outside. Applications read exactly this.</figcaption>
    </figure>
 ::::
