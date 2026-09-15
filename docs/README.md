@@ -76,9 +76,9 @@ config:
       - title: Build with others
         icon: 🤝
         details: Learn alongside other NTU students and take part in the Blockchain@NTU community.
-      - title: Leave with Proof of Work
+      - title: Build reviewable work
         icon: 🧩
-        details: Turn what you learn into a small, reviewable output you can continue developing.
+        details: Turn each Foundation week into a small reviewable output; the full Academy continues toward a final Proof of Work.
   - type: features
     title: A clear path through Web3
     description: >-

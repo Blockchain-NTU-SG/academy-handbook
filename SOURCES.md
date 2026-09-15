@@ -80,7 +80,7 @@ Faucet](https://portal.cdp.coinbase.com/products/faucet) and
 Internship Program](https://moledao.io/intern/) is reference-only and is not
 reused as handbook content.
 
-Full mapping is in the Semester 1 Resource List maintained by the Education
+Full mapping is in the Academy Resource List maintained by the Education
 Director.
 
 ## Avoid

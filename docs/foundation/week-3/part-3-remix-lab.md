@@ -136,7 +136,8 @@ Nothing is installed. Remix runs entirely in a browser tab.
 3. **Compile**
 
    Open the **Solidity Compiler** tab in the left icon column. Check the
-   compiler version matches your `pragma` — 0.8.20 or later — then press
+   compiler version matches your `pragma` — 0.8.20 or a later compatible 0.8.x
+   release — then press
    **Compile Guestbook.sol**.
 
    *You should get a green tick on the compiler icon.* Warnings do not normally

@@ -81,4 +81,4 @@ Dive, then the W7 Scope + MVP / V1 and W8 Refine + Final Proof of Work
 milestones.
 
 Applications and cohort operations are managed through WCB.
-The application link will be added here when the next intake opens.
+Apply through [Web3CareerBuild (WCB)](https://web3career.build/en/programs/blockchain-ntu-academy) when the next intake opens.

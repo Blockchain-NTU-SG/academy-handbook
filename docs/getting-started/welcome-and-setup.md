@@ -234,7 +234,7 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
    ```markdown
    # Blockchain@NTU Academy
 
-   Learning notes and Proof of Work for Semester 1.
+   Learning notes and progress for Blockchain@NTU Academy.
 
    ## What I want from this programme
 

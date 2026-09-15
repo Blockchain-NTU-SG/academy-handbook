@@ -261,7 +261,8 @@ And governance has real problems, named honestly in
 [Part 1](./part-1-industry-map.md): turnout is often very low, and token-weighted
 voting concentrates influence in the largest holders.
 
-Detailed DAO mechanism design belongs in Semester 2.
+Detailed DAO mechanism design belongs in Further Exploration or advanced study
+beyond the current programme.
 :::
 
 ### One last category mistake: address ≠ person
