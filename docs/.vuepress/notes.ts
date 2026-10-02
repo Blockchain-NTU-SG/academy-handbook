@@ -99,7 +99,14 @@ const academyNote = defineNoteConfig({
           collapsed: true,
           items: [
             { text: 'Week 5 · Programmatic development', link: '/tracks/builder/week-5/' },
-            { text: 'Week 6 · Reliable engineering', link: '/tracks/builder/week-6/' },
+            {
+              text: 'Week 6 · Reliable engineering',
+              link: '/tracks/builder/week-6/',
+              collapsed: true,
+              items: [
+                { text: 'Part 1 · Testing contract behaviour', link: '/tracks/builder/week-6/part-1-testing-contract-behaviour.html' },
+              ],
+            },
           ],
         },
         {
