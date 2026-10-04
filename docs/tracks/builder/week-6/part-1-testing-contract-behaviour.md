@@ -45,6 +45,12 @@ project lines change every day.
 This Part turns *"I checked it once"* into checks that run in seconds, every
 time the code changes.
 
+In real Web3 engineering, the same habit protects important boundaries. A
+lending protocol might use tests to check that only the intended actor can
+trigger a liquidation and that collateral or health-factor thresholds behave
+as specified. Those tests provide evidence about the behaviours they cover;
+they do not prove that the protocol is safe overall.
+
 ::: tip Picture a pre-flight checklist
 A pilot does not rely on remembering to check the fuel. The same list is run the
 same way before every flight. A test suite is that list for your contract.
@@ -77,6 +83,9 @@ not re-explain them. It makes you prove them.
 Everyone tests the same contract: the Week 3 `Guestbook`, extended with three
 rules. Put it in your Foundry project from
 [Week 5 Part 1](../week-5/README.md) as `src/Guestbook.sol`.
+
+This assumes the Foundry project and `forge-std` setup from Builder W5 are
+already available; it does not add a separate installation tutorial.
 
 ```solidity title="src/Guestbook.sol"
 // SPDX-License-Identifier: MIT
@@ -120,6 +129,11 @@ contract Guestbook {
     }
 }
 ```
+
+`MAX_LENGTH` counts `bytes(newMessage).length`, so it measures encoded bytes
+rather than visible characters. A non-ASCII character can occupy multiple
+UTF-8 bytes, so a string that looks short on screen can still be closer to the
+limit than expected.
 
 Read it as a list of promises. Each one is something a test can check:
 
@@ -225,13 +239,19 @@ Suite result: ok. 2 passed; 0 failed; 0 skipped
 
 Your gas numbers may differ slightly. That is fine.
 
-::: important A test you have never seen fail proves nothing
+::: important Make the protected rule fail on purpose
+A passing test is useful. Deliberately making the protected rule fail gives
+stronger evidence that the test is checking what you intended. This is not
+proof that the contract is safe overall; it is a focused check that this test
+guards this particular rule.
+
 Delete the `if (length == 0) revert EmptyMessage();` line from the contract and
 run `forge test` again. `test_RevertWhen_MessageIsEmpty` should now fail. Put
 the line back.
 
-==If breaking the rule does not break a test, that test was not checking the
-rule.== Professional developers do this on purpose to check their own tests.
+==If deliberately breaking the rule does not break the test, inspect the test:
+it may not be checking the intended behaviour.== Professional developers do
+this on purpose to check their own tests.
 :::
 
 ::: details Landscape — fuzz testing
