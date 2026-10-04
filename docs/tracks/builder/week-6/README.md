@@ -21,7 +21,7 @@ assessed progress evidence for this week.
 
 | Part | Planned title | Task status |
 |---:|---|---|
-| 1 | Testing Contract Behaviour | In development |
+| 1 | [Testing Contract Behaviour](./part-1-testing-contract-behaviour.md) | Drafting |
 | 2 | Simulation, Debugging and Tracing | In development |
 | 3 | Security Engineering | In development |
 | 4 | Docs-Driven Primitive Integration | In development |
