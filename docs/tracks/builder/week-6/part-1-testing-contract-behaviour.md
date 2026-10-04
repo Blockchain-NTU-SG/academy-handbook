@@ -27,8 +27,10 @@ Author note (Education team): this is the example Part for the W5–W6 Deep Dive
 The contract under test is a stand-in: the Week 3 Guestbook with three added
 rules. When the Builder starter repository is ready, decide whether to keep this
 contract or switch the Part to the starter contract, and update the code, the
-rules table and the worked example together. The model answer and reviewer notes
-are kept outside the public handbook.
+rules table, examples and tasks together. Prefer one coherent project/codebase
+across W5–W6 where practical, so learners build on the same context rather than
+switching examples. The model answer and reviewer notes are kept outside the
+public handbook.
 -->
 
 # Week 6 · Part 1 — Testing contract behaviour
@@ -62,7 +64,7 @@ After this Part you can:
 - test the normal path and check the state it leaves behind;
 - prove that a bad call fails, with the exact error you expect;
 - check that an event was emitted with the right data;
-- choose an edge case worth testing, and test both sides of it.
+- choose an edge case worth testing, and check the behaviour at that boundary.
 
 You already know what state, reverts and events are from
 [Week 3](../../../foundation/week-3/part-2-solidity-minimum.md). This Part does
@@ -149,7 +151,7 @@ Read it as a list of promises. Each one is something a test can check:
 | Normal path | Does normal use change state correctly? | `assertEq` |
 | Failure path | Does a bad call fail, with the right error? | `vm.expectRevert` |
 | Event | Is the outside world told what happened? | `vm.expectEmit` |
-| Edge case | Does it behave correctly right at a boundary? | One test each side of the line |
+| Edge case | Does it behave correctly right at a boundary? | A focused boundary test |
 
 Event tests matter more than they look. In
 [Week 5](../week-5/README.md) your app read history from events. If an
