@@ -20,17 +20,19 @@ sources:
   - name: "forge-std"
     url: "https://github.com/foundry-rs/forge-std"
     label: "Link"
+  - name: "Blockchain@NTU Academy Builder starter"
+    url: "https://github.com/Blockchain-NTU-SG/academy-builder-starter"
+    label: "Reuse"
 ---
 
 <!--
-Author note (Education team): this is the example Part for the W5–W6 Deep Dive.
-The contract under test is a stand-in: the Week 3 Guestbook with three added
-rules. When the Builder starter repository is ready, decide whether to keep this
-contract or switch the Part to the starter contract, and update the code, the
-rules table, examples and tasks together. Prefer one coherent project/codebase
-across W5–W6 where practical, so learners build on the same context rather than
-switching examples. The model answer and reviewer notes are kept outside the
-public handbook.
+Author note (Education team): this Part uses the Builder starter repository's
+Registry contract and its existing Foundry tests as the worked example, so W5
+and W6 stay in one codebase. The hands-on task asks learners to test the
+feature they added in W5 Part 2, which must include a state change, an
+access/validation rule, an event and a failure condition. Keep W5 Part 2 and
+this task in step if either changes. The model answer and reviewer notes are
+kept outside the public handbook.
 -->
 
 # Week 6 · Part 1 — Testing contract behaviour
@@ -80,76 +82,77 @@ not re-explain them. It makes you prove them.
 
 ### The contract under test
 
-Everyone tests the same contract: the Week 3 `Guestbook`, extended with three
-rules. Put it in your Foundry project from
-[Week 5 Part 1](../week-5/README.md) as `src/Guestbook.sol`.
+You keep working in the
+[Builder starter repository](https://github.com/Blockchain-NTU-SG/academy-builder-starter)
+you set up in [Week 5](../week-5/README.md). Its contract is
+`contracts/src/Registry.sol`: every account keeps one short record, and the
+deployer (the owner) can clear any record.
 
 This assumes the Foundry project and `forge-std` setup from Builder W5 are
 already available; it does not add a separate installation tutorial.
 
-```solidity title="src/Guestbook.sol"
+```solidity title="contracts/src/Registry.sol"
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity 0.8.28;
 
-contract Guestbook {
-    error EmptyMessage();
-    error MessageTooLong(uint256 length, uint256 maxLength);
-    error NotOwner(address caller);
-
-    uint256 public constant MAX_LENGTH = 140;
+/// @notice Each account manages its own short record; the owner can remove one.
+contract Registry {
+    error EmptyRecord();
+    error RecordTooLong();
+    error NotOwner();
 
     address public immutable owner;
-    string public message;
-    address public lastVisitor;
-    uint256 public visitCount;
+    mapping(address => string) public records;
+    event RecordUpdated(address indexed account, string value);
 
-    event MessageChanged(address indexed visitor, string newMessage);
-    event MessageCleared(address indexed by);
-
-    constructor(string memory initialMessage) {
+    constructor() {
         owner = msg.sender;
-        message = initialMessage;
+        records[msg.sender] = "Hello from NTU Blockchain Builder Lab";
+        emit RecordUpdated(msg.sender, records[msg.sender]);
     }
 
-    function setMessage(string calldata newMessage) external {
-        uint256 length = bytes(newMessage).length;
-        if (length == 0) revert EmptyMessage();
-        if (length > MAX_LENGTH) revert MessageTooLong(length, MAX_LENGTH);
-
-        message = newMessage;
-        lastVisitor = msg.sender;
-        visitCount += 1;
-        emit MessageChanged(msg.sender, newMessage);
+    function setRecord(string calldata value) external {
+        if (bytes(value).length == 0) revert EmptyRecord();
+        if (bytes(value).length > 140) revert RecordTooLong();
+        records[msg.sender] = value;
+        emit RecordUpdated(msg.sender, value);
     }
 
-    function clearMessage() external {
-        if (msg.sender != owner) revert NotOwner(msg.sender);
-        delete message;
-        emit MessageCleared(msg.sender);
+    function clearRecord(address account) external {
+        if (msg.sender != owner) revert NotOwner();
+        delete records[account];
+        emit RecordUpdated(account, "");
     }
 }
 ```
 
-`MAX_LENGTH` counts `bytes(newMessage).length`, so it measures encoded bytes
-rather than visible characters. A non-ASCII character can occupy multiple
-UTF-8 bytes, so a string that looks short on screen can still be closer to the
-limit than expected.
+The 140 limit counts `bytes(value).length`, so it measures encoded bytes rather
+than visible characters. A non-ASCII character can occupy multiple UTF-8
+bytes, so a string that looks short on screen can still be closer to the limit
+than expected.
 
-Read it as a list of promises. Each one is something a test can check:
+Read the contract as a list of promises. Each one is something a test can
+check:
 
 | Rule | What should happen |
 |---|---|
-| A visitor sets a message | `message`, `lastVisitor` and `visitCount` all update, and `MessageChanged` is emitted |
-| The message is empty | The call fails with `EmptyMessage` and nothing changes |
-| The message is over 140 bytes | The call fails with `MessageTooLong` |
-| Someone other than the owner clears the message | The call fails with `NotOwner` |
+| An account sets its record | Only that account's record changes, and `RecordUpdated` is emitted |
+| The record is empty | The call fails with `EmptyRecord` and nothing changes |
+| The record is over 140 bytes | The call fails with `RecordTooLong` |
+| Someone other than the owner clears a record | The call fails with `NotOwner` |
+| The owner clears a record | The record is deleted, and `RecordUpdated` is emitted with an empty value |
+
+Your own copy also has the feature you added in
+[Week 5 Part 2](../week-5/README.md). That feature has promises of its own, and
+nothing checks them yet. That is your task.
 
 ### How a Foundry test is laid out
 
-- Test files live in `test/` and end in `.t.sol`.
+- Test files live in `contracts/test/` in this project and end in `.t.sol`.
 - A test contract inherits `Test` from `forge-std`, Foundry's standard library.
 - `setUp()` runs before **every** test, so each test starts from a fresh contract.
-- Every function whose name starts with `test` is a test. `forge test` runs them all.
+- Every function whose name starts with `test` is a test. `forge test`, run
+  from the repository root, runs them all.
 - **Cheatcodes** on `vm` let a test do things a normal user cannot:
 
 | Cheatcode | What it does |
@@ -168,76 +171,100 @@ Read it as a list of promises. Each one is something a test can check:
 | Edge case | Does it behave correctly right at a boundary? | A focused boundary test |
 
 Event tests matter more than they look. In
-[Week 5](../week-5/README.md) your app read history from events. If an
-event silently stops firing, the contract still "works", but every app built on
-it shows the wrong history.
+[Week 5](../week-5/README.md) your app read history from `RecordUpdated`
+events. If an event silently stops firing, the contract still "works", but
+every app built on it shows the wrong history.
 
 ### Worked example
 
-Create `test/Guestbook.t.sol`:
+The starter already ships six tests in `contracts/test/Registry.t.sol`. They
+cover all four kinds, so read them as the worked example:
 
-```solidity title="test/Guestbook.t.sol"
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+| Test | Kind |
+|---|---|
+| `testWriteEmitsEventAndOnlyChangesCallersRecord` | Normal path and event |
+| `testEmptyRecordReverts` | Failure path |
+| `testNonOwnerCannotClear` | Failure path (access rule) |
+| `testByteBoundaries` | Edge case |
+| `testInitialOwnerAndRecord`, `testOwnerCanClearWithEvent` | Starting state; owner path and event |
 
-import {Test} from "forge-std/Test.sol";
-import {Guestbook} from "../src/Guestbook.sol";
+Here are three of them:
 
-contract GuestbookTest is Test {
-    Guestbook internal guestbook;
-    address internal alice = makeAddr("alice");
+```solidity title="contracts/test/Registry.t.sol (excerpt)"
+contract RegistryTest is Test {
+    Registry registry;
+    address alice = address(0xA11CE);
+    address bob = address(0xB0B);
+    event RecordUpdated(address indexed account, string value);
 
-    function setUp() public {
-        guestbook = new Guestbook("Hello from Blockchain@NTU");
-    }
+    function setUp() public { registry = new Registry(); }
 
-    function test_SetMessage_UpdatesState() public {
+    function testWriteEmitsEventAndOnlyChangesCallersRecord() public {
+        vm.expectEmit(true, false, false, true, address(registry));
+        emit RecordUpdated(alice, "Hello");
         vm.prank(alice);
-        guestbook.setMessage("gm");
-
-        assertEq(guestbook.message(), "gm");
-        assertEq(guestbook.lastVisitor(), alice);
-        assertEq(guestbook.visitCount(), 1);
+        registry.setRecord("Hello");
+        vm.prank(bob);
+        registry.setRecord("Bob's record");
+        assertEq(registry.records(alice), "Hello");
+        assertEq(registry.records(bob), "Bob's record");
     }
 
-    function test_RevertWhen_MessageIsEmpty() public {
-        vm.expectRevert(Guestbook.EmptyMessage.selector);
-        guestbook.setMessage("");
+    function testEmptyRecordReverts() public {
+        vm.expectRevert(Registry.EmptyRecord.selector);
+        registry.setRecord("");
+        assertEq(registry.records(address(this)), "Hello from NTU Blockchain Builder Lab");
+    }
+
+    function testByteBoundaries() public {
+        registry.setRecord(string(new bytes(140)));
+        assertEq(bytes(registry.records(address(this))).length, 140);
+        vm.expectRevert(Registry.RecordTooLong.selector);
+        registry.setRecord(string(new bytes(141)));
     }
 }
 ```
 
-Why each line is there:
+Why each part is there:
 
-1. **`setUp()` deploys a new `Guestbook`.** Every test starts from the same
-   clean state, so one test can never pass or fail because of another.
-2. **`makeAddr("alice")` creates a labelled test address.** Failure messages
-   then say `alice` instead of a long hex string.
-3. **`vm.prank(alice)` before `setMessage`.** Without it, the caller would be
-   the test contract, and you could not tell whether `lastVisitor` records the
-   real caller.
-4. **Three `assertEq` lines, not one.** The rule promises three state changes,
-   so the test checks all three.
-5. **`vm.expectRevert` comes *before* the call.** It sets up the expectation
+1. **`setUp()` deploys a new `Registry`.** Every test starts from the same
+   clean state, so one test can never pass or fail because of another. The
+   test contract deploys it, so the test contract is the owner.
+2. **The test declares `event RecordUpdated(...)` itself.** That lets it
+   `emit` the event it expects. `vm.expectEmit(true, false, false, true, ...)`
+   then compares the first indexed field (the account) and the data (the
+   value) against the next real event, from the registry's address.
+3. **`vm.prank(alice)`, then `vm.prank(bob)`.** Two different callers prove
+   the promise "only the caller's record changes". With one caller, a bug that
+   wrote every record at once would still pass.
+4. **`vm.expectRevert` comes *before* the call.** It sets up the expectation
    for the very next call. Passing the error's `selector` means the test only
-   passes if the call fails for *this* reason, not for any reason.
+   passes if the call fails for *this* reason, not for any reason. The
+   `assertEq` afterwards checks that the failed call changed nothing.
+5. **140 passes, 141 fails.** An edge-case test checks both sides of the line.
+   A bug that wrote `>=` instead of `>` would break the 140 case.
 
-Run it:
+Run them from the repository root:
 
 ```bash
 forge test
 ```
 
-*You should see both tests pass:*
+*You should see all six pass:*
 
 ```text
-Ran 2 tests for test/Guestbook.t.sol:GuestbookTest
-[PASS] test_RevertWhen_MessageIsEmpty() (gas: 30304)
-[PASS] test_SetMessage_UpdatesState() (gas: 110964)
-Suite result: ok. 2 passed; 0 failed; 0 skipped
+Ran 6 tests for contracts/test/Registry.t.sol:RegistryTest
+[PASS] testByteBoundaries() (gas: 29408)
+[PASS] testEmptyRecordReverts() (gas: 17628)
+[PASS] testInitialOwnerAndRecord() (gas: 17668)
+[PASS] testNonOwnerCannotClear() (gas: 20082)
+[PASS] testOwnerCanClearWithEvent() (gas: 30723)
+[PASS] testWriteEmitsEventAndOnlyChangesCallersRecord() (gas: 72146)
+Suite result: ok. 6 passed; 0 failed; 0 skipped
 ```
 
-Your gas numbers may differ slightly. That is fine.
+Your gas numbers may differ slightly, and once you have added your Week 5
+feature they will change. That is fine.
 
 ::: important Make the protected rule fail on purpose
 A passing test is useful. Deliberately making the protected rule fail gives
@@ -245,9 +272,9 @@ stronger evidence that the test is checking what you intended. This is not
 proof that the contract is safe overall; it is a focused check that this test
 guards this particular rule.
 
-Delete the `if (length == 0) revert EmptyMessage();` line from the contract and
-run `forge test` again. `test_RevertWhen_MessageIsEmpty` should now fail. Put
-the line back.
+Delete the `if (bytes(value).length == 0) revert EmptyRecord();` line from
+`Registry.sol` and run `forge test` again. `testEmptyRecordReverts` should now
+fail with `next call did not revert as expected`. Put the line back.
 
 ==If deliberately breaking the rule does not break the test, inspect the test:
 it may not be checking the intended behaviour.== Professional developers do
@@ -256,13 +283,14 @@ this on purpose to check their own tests.
 
 ::: details Landscape — fuzz testing
 A normal test checks one input you chose. A **fuzz test** takes inputs as
-parameters and Foundry runs it many times with random values (256 by default).
-`bound` keeps the random value inside a range you care about:
+parameters and Foundry runs it many times with random values (256 runs in
+this project). `bound` keeps the random value inside a range you care about:
 
 ```solidity
-function testFuzz_SetMessage_AnyValidLength(uint256 length) public {
-    length = bound(length, 1, guestbook.MAX_LENGTH());
-    // build a string of `length` bytes, call setMessage, assert it was accepted
+function testFuzz_SetRecord_AnyValidLength(uint256 length) public {
+    length = bound(length, 1, 140);
+    registry.setRecord(string(new bytes(length)));
+    assertEq(bytes(registry.records(address(this))).length, length);
 }
 ```
 
@@ -273,19 +301,24 @@ required for this Part. See the
 
 ## Hands-on task
 
-In `test/Guestbook.t.sol`, build a test suite that covers:
+The starter's six tests cover the original Registry. Nothing yet covers the
+feature **you** added in Week 5 Part 2. Write those tests.
 
-1. **One normal path.** The worked example's `test_SetMessage_UpdatesState`
-   counts.
-2. **Two distinct failure paths.** The worked example gives you one. Add a
-   second that fails for a *different* rule.
+Create a new file in `contracts/test/` (for example
+`contracts/test/MyFeature.t.sol`) and build a suite for your feature that
+covers:
+
+1. **One normal path.** Use your feature the intended way and check the state
+   it leaves behind.
+2. **Two distinct failure paths.** Your feature has an access or validation
+   rule and a failure condition. Test both, each with the exact error you
+   expect.
 3. **One event or state assertion** beyond the normal path. For example, check
-   that `MessageChanged` carries the right visitor and message. Hint: declare
-   the same `event MessageChanged(...)` line inside your test contract, so you
-   can `emit` the expected event straight after `vm.expectEmit`.
-4. **One edge case.** Pick a boundary in the rules and test what happens at it.
+   that your feature's event carries the right values.
+4. **One edge case.** Pick a boundary in your feature and check the behaviour
+   at it.
 
-Then run `forge test` until every test passes.
+Then run `forge test` until every test passes, including the starter's six.
 
 **Out of scope:** testing your Week 5 scripts or frontend, coverage
 percentages, gas optimisation and invariant testing.
@@ -298,9 +331,11 @@ purpose" check above to confirm it really guards that rule.
 
 ## Evidence required
 
-- Your `test/Guestbook.t.sol` file (a link to the commit, or the file itself).
+- One line naming the feature you added in Week 5 Part 2.
+- Your new test file (a link to the commit, or the file itself).
 - The output of `forge test` showing every test passing.
-- One sentence per test: the behaviour it protects, and the bug it would catch.
+- One sentence per new test: the behaviour it protects, and the bug it would
+  catch.
 
 ## Completion and revision
 
@@ -312,10 +347,10 @@ revision. There is no partial-score rubric.
 - Run `forge coverage` to see which lines your tests never reach. See the
   [forge coverage reference](https://getfoundry.sh/forge/reference/forge-coverage).
 - Write an **invariant test**: a property that must hold after any sequence of
-  calls, such as "`visitCount` never decreases". See
+  calls, such as "a record never grows past 140 bytes". See
   [invariant testing](https://getfoundry.sh/forge/invariant-testing).
 - Run `forge test --gas-report` and compare the cost of a short and a long
-  message. See [gas reports](https://getfoundry.sh/forge/gas-reports).
+  record. See [gas reports](https://getfoundry.sh/forge/gas-reports).
 :::
 
 ::: details Sources and attribution
@@ -323,5 +358,5 @@ revision. There is no partial-score rubric.
 - [Foundry Book — Cheatcodes reference](https://getfoundry.sh/reference/cheatcodes/overview) — Link, referenced only
 - [Foundry Book — Fuzz testing](https://getfoundry.sh/forge/fuzz-testing) — Link, referenced only
 - [forge-std](https://github.com/foundry-rs/forge-std) — Link, referenced only
-- `Guestbook` contract extended from the Academy's own [Week 3 Part 3](../../../foundation/week-3/part-3-remix-lab.md) lab — original Academy material
+- [Blockchain@NTU Academy Builder starter](https://github.com/Blockchain-NTU-SG/academy-builder-starter) — Reuse (MIT), the `Registry` contract and tests are quoted from it
 :::
