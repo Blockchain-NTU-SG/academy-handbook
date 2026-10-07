@@ -23,7 +23,7 @@ assessed progress evidence for this week.
 |---:|---|---|
 | 1 | [Testing Contract Behaviour](./part-1-testing-contract-behaviour.md) | Drafting |
 | 2 | Simulation, Debugging and Tracing | In development |
-| 3 | Security Engineering | In development |
+| 3 | [Security Engineering](./part-3-security-engineering.md) | Drafting |
 | 4 | Docs-Driven Primitive Integration | In development |
 | 5 | Deployment and Reproducibility | In development |
 | 6 | Independent Builder Challenge | In development |
