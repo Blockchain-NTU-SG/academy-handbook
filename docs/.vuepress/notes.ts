@@ -105,6 +105,7 @@ const academyNote = defineNoteConfig({
               collapsed: true,
               items: [
                 { text: 'Part 1 · Testing contract behaviour', link: '/tracks/builder/week-6/part-1-testing-contract-behaviour.html' },
+                { text: 'Part 2 · Simulation, debugging and tracing', link: '/tracks/builder/week-6/part-2-simulation-debugging-and-tracing.html' },
                 { text: 'Part 3 · Security engineering', link: '/tracks/builder/week-6/part-3-security-engineering.html' },
               ],
             },
