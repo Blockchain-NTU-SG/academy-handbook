@@ -33,10 +33,9 @@ sources:
 
 <!--
 Author note (Education team): the worked-example script was tested against the
-starter Registry on a local fork of Sepolia. BEFORE MERGING, replace the two
-transaction hashes in the worked-example output with a real Sepolia run of the
-same script, so the Etherscan link works. The model answer and reviewer notes
-are kept outside the public handbook.
+starter Registry on a local copy (fork) of Sepolia, so the outputs are real but
+the transaction hash is shown as a placeholder. The model answer and reviewer
+notes are kept outside the public handbook.
 -->
 
 # Week 5 · Part 3 — Programmatic contract interaction
@@ -195,7 +194,8 @@ main().catch((error: unknown) => {
 ```
 
 Put your test account's key in `.env` as `PRIVATE_KEY`, make sure it has a
-little Sepolia ETH, then run:
+little Sepolia ETH, then run it. The output below is from a test run; your
+account, hash and block number will be different.
 
 ```bash
 npx tsx scripts/write.ts "gm from my first script"
@@ -205,10 +205,10 @@ npx tsx scripts/write.ts "gm from my first script"
 Account: 0x9b72A74f04016025F492DadBD59771758b1f5B30
 Before: ""
 Simulation passed
-Sent: 0xf908ec48b271e6328b6f89f8ce1d499107b0cdc40d683326a69d37af70437035
+Sent: 0x<your transaction hash>
 Mined in block 11926675, status: success
 After: "gm from my first script"
-Check it: https://sepolia.etherscan.io/tx/0xf908ec48b271e6328b6f89f8ce1d499107b0cdc40d683326a69d37af70437035
+Check it: https://sepolia.etherscan.io/tx/0x<your transaction hash>
 ```
 
 Now the expected failures. An empty record and one over 140 bytes:
@@ -227,8 +227,8 @@ A 141-character record prints `Rejected by the contract: RecordTooLong`. In
 both cases the simulation stopped the call, so no transaction was sent and no
 gas was spent.
 
-**Verify on Etherscan.** Open the "Check it" link. The transaction page shows
-**Status: Success**, the method `Set Record`, and under **Logs** one
+**Verify on Etherscan.** Open your "Check it" link. The transaction page
+should show **Success**, the `setRecord` call, and under **Logs** one
 `RecordUpdated` event with your address and the new value. That is the chain's
 own record of what happened, independent of your script.
 
