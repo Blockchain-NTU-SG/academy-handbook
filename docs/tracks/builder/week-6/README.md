@@ -1,20 +1,22 @@
 ---
 track: builder
 week: 6
-status: stub
+status: drafting
 owner: "Education Team"
 title: "Builder W6 — Reliable Web3 Engineering"
 ---
 
 # Builder Week 6 — Reliable Web3 Engineering
 
-This week develops the engineering habits that make a Web3 system testable,
-reviewable and reproducible. It is a Deep Dive scaffold, not a completed lesson
-sequence.
+Week 5 got your app working. This week makes it reliable: you test what the
+contract does, debug failures layer by layer, find and fix a weakness, add a
+tool nobody taught you, ship the app so others can run it, and finish with an
+independent challenge built from a spec alone.
 
 Each Part has one lightweight, reviewable hands-on task worth **100 points**.
-Detailed Core material and task instructions are in development for the
-Education team.
+Every Part builds on the
+[Builder starter](https://github.com/Blockchain-NTU-SG/academy-builder-starter)
+and the app you made in Week 5.
 
 **There is no separate weekly submission.** These six Part tasks are the
 assessed progress evidence for this week.
@@ -25,8 +27,8 @@ assessed progress evidence for this week.
 | 2 | [Simulation, Debugging and Tracing](./part-2-simulation-debugging-and-tracing.md) | Drafting |
 | 3 | [Security Engineering](./part-3-security-engineering.md) | Drafting |
 | 4 | [Docs-Driven Integration](./part-4-docs-driven-integration.md) | Drafting |
-| 5 | Deployment and Reproducibility | In development |
-| 6 | Independent Builder Challenge | In development |
+| 5 | [Deployment and Reproducibility](./part-5-deployment-and-reproducibility.md) | Drafting |
+| 6 | [Independent Builder Challenge](./part-6-independent-builder-challenge.md) | Drafting |
 
 **Assessment:** 6 Part tasks × 100 points = **600 points**. Completion is
 binary; incomplete or materially incorrect work is returned for revision.
