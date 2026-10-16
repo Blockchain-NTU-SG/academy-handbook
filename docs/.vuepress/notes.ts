@@ -98,7 +98,18 @@ const academyNote = defineNoteConfig({
           link: '/tracks/builder/',
           collapsed: true,
           items: [
-            { text: 'Week 5 · Programmatic development', link: '/tracks/builder/week-5/' },
+            {
+              text: 'Week 5 · Programmatic development',
+              link: '/tracks/builder/week-5/',
+              collapsed: true,
+              items: [
+                { text: 'Part 1 · Run the stack', link: '/tracks/builder/week-5/part-1-run-the-stack.html' },
+                { text: 'Part 2 · Contract engineering', link: '/tracks/builder/week-5/part-2-contract-engineering.html' },
+                { text: 'Part 3 · Programmatic contract interaction', link: '/tracks/builder/week-5/part-3-programmatic-contract-interaction.html' },
+                { text: 'Part 4 · Wallet and frontend integration', link: '/tracks/builder/week-5/part-4-wallet-and-frontend-integration.html' },
+                { text: 'Part 6 · End-to-end vertical slice', link: '/tracks/builder/week-5/part-6-end-to-end-vertical-slice.html' },
+              ],
+            },
             {
               text: 'Week 6 · Reliable engineering',
               link: '/tracks/builder/week-6/',
