@@ -90,6 +90,7 @@ not your page. The page only changes when you read again.
 | Wallet → transaction | Hash treated as success | Wait for the receipt and check `status` |
 | Chain → page | Page shows the old value after success | Read again and reload events after the receipt |
 | Events → page | Activity list empty or very slow | Query from your deployment block, not from block 0 |
+| RPC → events | `pruned history unavailable` | Use an RPC that keeps old logs, as in Part 5 |
 
 ### What "one slice" means
 
