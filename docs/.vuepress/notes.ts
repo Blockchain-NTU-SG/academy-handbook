@@ -130,8 +130,31 @@ const academyNote = defineNoteConfig({
           link: '/tracks/researcher/',
           collapsed: true,
           items: [
-            { text: 'Week 5 · Deconstruct systems', link: '/tracks/researcher/week-5/' },
-            { text: 'Week 6 · Measure and verify', link: '/tracks/researcher/week-6/' },
+            {
+              text: 'Week 5 · Deconstruct systems',
+              link: '/tracks/researcher/week-5/',
+              collapsed: true,
+              items: [
+                { text: 'Part 2 · Architecture and trust reconstruction', link: '/tracks/researcher/week-5/part-2-architecture-and-trust.html' },
+                { text: 'Part 3 · Mechanism and market design', link: '/tracks/researcher/week-5/part-3-mechanism-and-market-design.html' },
+                { text: 'Part 4 · Collateral, credit and economic risk', link: '/tracks/researcher/week-5/part-4-collateral-credit-and-risk.html' },
+                { text: 'Part 5 · Token and incentive economics', link: '/tracks/researcher/week-5/part-5-token-and-incentive-economics.html' },
+                { text: 'Part 6 · System analysis', link: '/tracks/researcher/week-5/part-6-system-analysis.html' },
+              ],
+            },
+            {
+              text: 'Week 6 · Measure and verify',
+              link: '/tracks/researcher/week-6/',
+              collapsed: true,
+              items: [
+                { text: 'Part 1 · On-chain data as evidence', link: '/tracks/researcher/week-6/part-1-on-chain-data-as-evidence.html' },
+                { text: 'Part 2 · Querying real data', link: '/tracks/researcher/week-6/part-2-querying-real-data.html' },
+                { text: 'Part 3 · Measurement design', link: '/tracks/researcher/week-6/part-3-measurement-design.html' },
+                { text: 'Part 4 · Token and market evidence', link: '/tracks/researcher/week-6/part-4-token-and-market-evidence.html' },
+                { text: 'Part 5 · Dependency, governance and risk', link: '/tracks/researcher/week-6/part-5-dependency-governance-and-risk.html' },
+                { text: 'Part 6 · Evidence to claim', link: '/tracks/researcher/week-6/part-6-evidence-to-claim.html' },
+              ],
+            },
           ],
         },
       ],
