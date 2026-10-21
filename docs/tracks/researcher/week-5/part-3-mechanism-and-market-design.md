@@ -1,0 +1,177 @@
+---
+track: researcher
+week: 5
+day: 3
+title: "Mechanism and market design"
+status: drafting
+owner: "Education Team"
+reading_time: "40 min"
+points: 100
+sources:
+  - name: "Uniswap v2 Core whitepaper"
+    url: "https://app.uniswap.org/whitepaper.pdf"
+    label: "Link"
+  - name: "Uniswap docs — v2 pricing"
+    url: "https://developers.uniswap.org/docs/protocols/v2/concepts/pricing"
+    label: "Link"
+---
+
+<!--
+Author note (Education team): every figure in the worked example, the deeper
+pool comparison and the model answer was recalculated on 21 October 2026. The
+model answer is kept outside the public handbook.
+-->
+
+# Week 5 · Part 3 — Mechanism and market design
+
+> **Core question — what does a swap actually do to a Uniswap-style pool,
+> and why does the size of the pool change the price you get?**
+
+Product pages describe an AMM as "instant swaps with no order book". That is
+true and tells you almost nothing. In this Part you work out, number by
+number, what a swap does to a constant-product pool: the fee, the payout, the
+price you really get, and what changes when the pool is deeper.
+
+::: tip Picture a see-saw with two buckets
+One bucket holds ETH, the other USDC. Pour ETH into one side and the pool
+pays you out of the other, keeping the two in balance by its rule. The more
+you pour in, the more the balance tilts against you.
+
+Where the picture stops: a see-saw tilts back by itself. A pool does not. It
+only moves back when someone trades the other way, usually an arbitrageur who
+profits from the gap.
+:::
+
+## The hard skill
+
+**Derive what a trade does to a constant-product pool from its rule, rather
+than from a product description.**
+
+After this Part you can:
+
+- calculate the payout of a swap, including the fee;
+- tell the starting spot price from the average price a trade actually gets;
+- explain where liquidity providers' fee income comes from;
+- explain why deeper pools give better prices, and what arbitrageurs do next.
+
+## Core / reference material
+
+### The rule
+
+A Uniswap v2-style pool holds two token reserves. Call them A and B. The
+pricing rule is:
+
+> A × B = K
+
+The ratio of the two reserves is the current **spot price**. When a trader
+adds one token and takes the other out, the ratio changes, so the price moves
+during the trade itself.
+
+K is held constant only while **working out the payout**. The full fee stays
+in the pool, so the real A × B after the trade is slightly larger than before.
+That increase is where liquidity providers' fee income comes from.
+
+### Worked example: selling 10 ETH
+
+A pool holds **100 ETH** and **200,000 USDC**, with a **0.3%** fee.
+
+- K = 100 × 200,000 = 20,000,000
+- Starting spot price = 200,000 ÷ 100 = **2,000 USDC per ETH**
+
+A trader sells **10 ETH** to the pool.
+
+1. **Take out the fee** for the payout calculation: 10 × 0.003 = 0.03 ETH.
+   Effective input = 9.97 ETH.
+2. **Find the new USDC reserve.** 100 + 9.97 = 109.97 ETH, so
+   B = 20,000,000 ÷ 109.97 = 181,867.78 USDC.
+3. **The trader receives** what leaves the pool: 200,000 − 181,867.78 =
+   **18,132.22 USDC**.
+4. **Average execution price** = 18,132.22 ÷ 10 = **1,813.22 USDC per ETH**,
+   about **9.34%** below the starting spot price:
+   (2,000 − 1,813.22) ÷ 2,000 × 100.
+   Without the fee the payout would be 18,181.82 USDC, so the fee itself cost
+   the trader about 49.60 USDC. Most of the gap comes from the trade moving
+   the price, not from the fee.
+5. **K after the trade.** The pool keeps the full 10 ETH, so its real
+   reserves are 110 ETH and 181,867.78 USDC:
+   110 × 181,867.78 ≈ 20,005,456. That is above 20,000,000 because the
+   0.03 ETH fee stayed in the pool.
+6. **The pool's new spot price** is 181,867.78 ÷ 110 ≈ **1,653.34 USDC per
+   ETH**. If ETH still trades at about 2,000 USDC elsewhere, anyone can buy
+   cheap ETH from this pool and sell it elsewhere. Those arbitrage trades put
+   USDC back in and take ETH out, pushing the pool price back towards the
+   market. That is how the pool's price stays honest without an oracle.
+
+### Why deeper pools give better prices
+
+Repeat the same 10 ETH trade in a pool twice as deep: 200 ETH and 400,000
+USDC. The starting price is still 2,000 USDC per ETH.
+
+- K = 200 × 400,000 = 80,000,000
+- Effective input is still 9.97 ETH, so the ETH reserve becomes 209.97
+- New USDC reserve = 80,000,000 ÷ 209.97 = 381,006.81
+- USDC received = 400,000 − 381,006.81 = 18,993.19
+- Average execution price = 1,899.32 USDC per ETH, about **5.03%** below 2,000
+
+| Pool | USDC received | Average execution price | Below 2,000 by |
+|---|---:|---:|---:|
+| 100 ETH / 200,000 USDC | 18,132.22 | 1,813.22 | 9.34% |
+| 200 ETH / 400,000 USDC | 18,993.19 | 1,899.32 | 5.03% |
+
+A bigger pool absorbs the same trade with a smaller change in its reserve
+ratio. More liquidity means less price movement and a better price for the
+trader.
+
+## Hands-on task
+
+A pool holds **150 ETH** and **300,000 USDC**, with a **0.3%** fee. A trader
+sells **12 ETH** for USDC.
+
+1. Calculate the starting K and the starting ETH price.
+2. Calculate the fee and the effective ETH input.
+3. Calculate the USDC the trader receives.
+4. Calculate the average execution price, and how far below the starting
+   spot price it is, as a percentage.
+5. Calculate the real K after the trade, and explain why it is higher than
+   the starting K.
+6. Calculate the pool's new spot price. If ETH still trades at 2,000 USDC
+   elsewhere, who would trade with the pool next, in which direction, and
+   what would that do to the pool's price?
+7. In one or two sentences, explain why the same trade would move the price
+   less in a deeper pool.
+
+**Out of scope:** Uniswap v3 concentrated liquidity, impermanent loss
+formulas, gas costs and multi-hop routes.
+
+## Evidence required
+
+- Your working for each step, with the numbers you used.
+- Your short answers to steps 6 and 7.
+
+## Completion and revision
+
+This Part is worth **100 points**. Completed / approved earns the full points;
+incomplete or materially incorrect work is returned with specific feedback for
+revision. There is no partial-score rubric.
+
+Your work is complete when:
+
+- [ ] the fee is taken off before the payout is calculated, not after;
+- [ ] the payout, average price and percentage difference are correct to the cent;
+- [ ] the post-trade K uses the full 12 ETH, and you explain why it rose;
+- [ ] the arbitrage answer names the direction of the next trade and its effect;
+- [ ] the depth explanation refers to the reserve ratio, not just "more money".
+
+::: details Further exploration — optional, not assessed
+- How large a trade, in ETH, would move the 150 ETH pool's spot price by 1%?
+  Why do aggregators split big trades across pools?
+- A liquidity provider owns 10% of the pool. How much of this trade's fee is
+  theirs, and in which token?
+- Read section 2.2 of the Uniswap v2 whitepaper on price oracles. Why does
+  Uniswap average prices over time rather than use the spot price?
+:::
+
+::: details Sources and attribution
+- [Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf) — Link, referenced only
+- [Uniswap docs — v2 pricing](https://developers.uniswap.org/docs/protocols/v2/concepts/pricing) — Link, referenced only
+:::
