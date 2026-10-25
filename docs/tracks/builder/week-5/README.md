@@ -29,7 +29,7 @@ assessed progress evidence for this week.
 | 2 | [Contract Engineering](./part-2-contract-engineering.md) | Drafting |
 | 3 | [Programmatic Contract Interaction](./part-3-programmatic-contract-interaction.md) | Drafting |
 | 4 | [Wallet and Frontend Integration](./part-4-wallet-and-frontend-integration.md) | Drafting |
-| 5 | Events as Application Data | In development |
+| 5 | [Events as Data](./part-5-events-as-data.md) | Drafting |
 | 6 | [End-to-End Vertical Slice](./part-6-end-to-end-vertical-slice.md) | Drafting |
 
 **Assessment:** 6 Part tasks × 100 points = **600 points**. Completion is
