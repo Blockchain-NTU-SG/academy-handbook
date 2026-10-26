@@ -249,11 +249,10 @@ textarea {
   display: none;
 }
 
-.vp-doc table {
-  /* Intrinsic table width can exceed the article even with max-width: 100%.
-   * Keep the HTML table/rows/cells, but contain wide precision tables here. */
-  display: block;
-  width: 100%;
+.vp-doc .academy-table-scroll {
+  /* Scroll the wrapper, not the table: intrinsic table sizing keeps columns
+   * content-sized and avoids a false blank region on the right. */
+  width: max-content;
   max-width: 100%;
   overflow-x: auto;
   margin: 24px 0 30px;
@@ -261,6 +260,14 @@ textarea {
   border: 1px solid var(--academy-border);
   border-radius: 8px;
   -webkit-overflow-scrolling: touch;
+}
+
+.vp-doc .academy-table-scroll > table {
+  display: table;
+  width: max-content;
+  margin: 0;
+  overflow: visible;
+  border-collapse: collapse;
 }
 
 .vp-doc code.academy-wallet-example {
