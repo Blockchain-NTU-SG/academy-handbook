@@ -107,6 +107,7 @@ const academyNote = defineNoteConfig({
                 { text: 'Part 2 · Contract engineering', link: '/tracks/builder/week-5/part-2-contract-engineering.html' },
                 { text: 'Part 3 · Programmatic contract interaction', link: '/tracks/builder/week-5/part-3-programmatic-contract-interaction.html' },
                 { text: 'Part 4 · Wallet and frontend integration', link: '/tracks/builder/week-5/part-4-wallet-and-frontend-integration.html' },
+                { text: 'Part 5 · Events as data', link: '/tracks/builder/week-5/part-5-events-as-data.html' },
                 { text: 'Part 6 · End-to-end vertical slice', link: '/tracks/builder/week-5/part-6-end-to-end-vertical-slice.html' },
               ],
             },
