@@ -20,8 +20,14 @@ sources:
   - name: "Aave — Reserve parameters"
     url: "https://www.aave.com/docs/aave-v3/concepts/reserve"
     label: "Link"
+  - name: "Aave — Efficiency Mode"
+    url: "https://aave.com/help/borrowing/e-mode"
+    label: "Link"
   - name: "Lido — wstETH"
     url: "https://docs.lido.fi/contracts/wsteth/"
+    label: "Link"
+  - name: "Lido — Tokens integration guide"
+    url: "https://docs.lido.fi/guides/lido-tokens-integration-guide/"
     label: "Link"
   - name: "Lido — Withdrawal queue"
     url: "https://docs.lido.fi/contracts/withdrawal-queue-erc721/"
@@ -51,8 +57,9 @@ not just the list.
 A problem at one transformer can cut power to several buildings. The useful
 map includes both the wires and the circuit breakers.
 
-Where the picture stops: DeFi stress is adversarial. Arbitrageurs, liquidators
-and borrowers adapt, so a causal arrow is a **scenario**, not a certain forecast.
+Where the picture stops: **decentralised finance (DeFi)** stress is
+adversarial. Arbitrageurs, liquidators and borrowers adapt, so a causal arrow
+is a **scenario**, not a certain forecast.
 :::
 
 ## The hard skill
@@ -64,28 +71,65 @@ After this Part you can:
 
 - draw a dependency graph with at least five nodes;
 - compute how an illustrative collateral shock changes an Aave health factor;
-- identify first-order losses, possible contagion and the conditions that
-  would interrupt it.
+- identify the direct (first-order) loss, possible **contagion** (pressure
+  spreading through dependent positions or markets) and conditions that could
+  interrupt it.
 
 ## Core / reference material
 
 ### Case: wstETH collateral in Aave V3 on Ethereum
 
 Aave lending depends on prices, collateral, loan parameters, liquidators and
-market liquidity. As a connection back to Week 5 Part 6, take **Lido's wstETH**, a
-wrapped representation of stETH whose token balance does not rebase. Its
-redemption and market value may diverge in stress. Aave's health factor uses
-**oracle-valued** collateral and debt plus the applicable liquidation threshold.
+market liquidity. An **oracle** is the service or mechanism that supplies the
+prices the protocol uses for valuation. As a connection back to Week 5 Part 6,
+take Lido's **staked ETH (stETH)** and **wrapped staked ETH (wstETH)**: stETH
+balances can update as staking rewards or penalties are reflected, while a
+wstETH balance stays fixed and its conversion value in stETH changes. That
+conversion rate is not a promise of the same market price or immediate
+redemption; see [Lido's
+token guide](https://docs.lido.fi/guides/lido-tokens-integration-guide/).
 
-For one collateral asset, simplified:
+The **health factor (HF)** compares safety-adjusted collateral with debt. For
+one collateral asset, the simplified model is:
 
-`Health factor = (collateral value × liquidation threshold) / debt value`
+$$
+HF_0 = \frac{V_c\times LT}{D}
+$$
 
-A position may be liquidated when the health factor drops **below 1**.
-Liquidation depends on external actors submitting transactions and available
-liquidity to dispose of collateral. Asset-specific risk settings can change;
-check the current **Aave reserve / e-mode** configuration rather than
-assuming a generic threshold applies to wstETH.
+$V_c$ is the current collateral value in the protocol's valuation currency,
+as supplied by its oracle; $LT$ is the **liquidation threshold**, a fraction
+of that value the protocol counts toward its liquidation boundary; and $D$
+is debt value in the same currency. Multiplying by $LT$ discounts collateral
+for risk, so $HF_0$ is unitless. In this model, $HF=1$ is the boundary and a
+position with $HF<1$ may become eligible for liquidation under Aave's rules.
+
+To see how an oracle-valued collateral shock changes this simplified model,
+let $s$ be the fractional decline (for example, 12% is $0.12$). If debt,
+threshold and the single collateral quantity stay fixed, then:
+
+$$
+HF(s) = \frac{V_c(1-s)\times LT}{D} = HF_0(1-s)
+$$
+
+The model assumes the oracle-valued collateral moves by exactly $s$ while debt
+and the threshold do not change. Setting $HF(s)=1$ gives the simplified
+boundary shock:
+
+$$
+s^*=1-\frac{1}{HF_0}
+$$
+
+For the example's starting $HF_0\approx1.111$, this is about a 10% decline:
+under these assumptions, $HF$ reaches 1 at that point. This is a sensitivity
+calculation, not a liquidation forecast. Real positions can have multiple
+assets, accrued interest, changing parameters and different oracle behaviour.
+
+**Efficiency Mode (E-mode)** is an Aave V3 feature that groups eligible,
+price-correlated assets under category-specific borrowing and liquidation
+parameters. It can increase capital efficiency, but the category and enabled
+assets matter; check the current [E-mode configuration](https://aave.com/help/borrowing/e-mode)
+and reserve settings rather than assuming a generic threshold applies to
+wstETH.
 
 ### Worked example: the first shock
 
@@ -95,13 +139,20 @@ assuming a generic threshold applies to wstETH.
 - They owe **$7,200** of a USD-denominated asset.
 - Their effective liquidation threshold is **80%**, assumed only to show the math.
 
-Initial health factor = `$10,000 × 0.80 / $7,200 = 1.111`.
+The initial health factor is:
 
-Now imagine the **oracle-valued collateral** falls by **12%**, while the debt
-stays $7,200: new collateral `$8,800`; new health factor
-`$8,800 × 0.80 / $7,200 ≈ 0.978`.
+$$
+HF_0 = \frac{10{,}000\times0.80}{7{,}200}\approx1.111
+$$
 
-That crosses the `1` threshold. A liquidator *may* now repay part or all of
+Now imagine the **oracle-valued collateral** falls by **12%**, while debt and
+the threshold stay fixed. The new health factor is:
+
+$$
+HF(0.12) = 1.111\times(1-0.12)\approx0.978
+$$
+
+That is below the $HF=1$ boundary. A liquidator *may* now repay part or all of
 eligible debt according to live Aave rules, receiving discounted collateral.
 Whether the liquidation is profitable or the borrower becomes bad debt also
 depends on gas, liquidator access, available collateral and liquidity. A
@@ -123,14 +174,21 @@ flowchart TD
   Q -.-> D["If proceeds fall short:<br/>bad-debt risk to suppliers<br/>or the protocol"]
 ```
 
-The dotted arrow is **conditional**: a borrower being liquidated is not itself
-proof that suppliers incurred a loss.
+The borrower's collateral loss is a **first-order loss**: the direct effect
+of the initial liquidation. **Contagion** means a later effect spreads through
+another dependent position or market. The dotted arrow is conditional: a
+borrower being liquidated is not itself proof that suppliers incurred a loss.
 
 Use earlier Parts to sharpen an arrow, not lengthen a checklist: an upgrade
 authority can change accepted logic; an oracle transmits an erroneous price;
 a bridge can impair a representation; incentive withdrawal can reduce executable
 liquidity. For each, name the affected state or action and then who is exposed.
 Governance is an actor with a power and delay, not an all-purpose mitigation.
+
+A **monitorable signal** is an observable measure that could warn that a link
+is changing. A **breaker or mitigation** is a control that might interrupt
+that path; **residual risk** is what remains even if the control works. No
+control guarantees the scenario will stop.
 
 ## Hands-on task
 
@@ -183,8 +241,8 @@ There is no partial-score rubric.
 ::: details Further exploration — optional, not assessed
 - Replace the hypothetical threshold and debt with a public, date-stamped
   sample position and on-chain Aave reserve configuration, then recompute.
-- Research how oracle circuits, governance parameter changes or an L2's
-  congestion might alter the failure path.
+- Research how oracle circuits, governance parameter changes or a Layer 2
+  (L2) network's congestion might alter the failure path.
 :::
 
 ::: details Sources and attribution
@@ -192,6 +250,8 @@ There is no partial-score rubric.
 - [Aave V3 — Overview](https://www.aave.com/docs/aave-v3/overview) — Link, protocol-authored
 - [Aave — Risks](https://www.aave.com/docs/resources/risks) — Link, protocol-authored
 - [Aave — Reserve parameters](https://www.aave.com/docs/aave-v3/concepts/reserve) — Link, protocol-authored
+- [Aave — Efficiency Mode](https://aave.com/help/borrowing/e-mode) — Link, protocol-authored; check the selected market and current category
 - [Lido — wstETH](https://docs.lido.fi/contracts/wsteth/) — Link, protocol-authored
+- [Lido — Tokens integration guide](https://docs.lido.fi/guides/lido-tokens-integration-guide/) — Link, protocol-authored; stETH rebasing and wstETH balance behaviour
 - [Lido — WithdrawalQueueERC721](https://docs.lido.fi/contracts/withdrawal-queue-erc721/) — Link, protocol-authored
 :::

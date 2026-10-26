@@ -8,6 +8,9 @@ owner: "Education Team"
 reading_time: "65 min hands-on"
 points: 100
 sources:
+  - name: "Allium — Academic access"
+    url: "https://www.allium.so/use-case/academia"
+    label: "Link"
   - name: "DefiLlama — Public API"
     url: "https://api-docs.defillama.com/"
     label: "Link"
@@ -38,12 +41,15 @@ are parts of one analysis, not separate reports.
 
 ## The hard skill
 
-**Retrieve an auditable public series, use minimal SQL to compare consistent
-windows, and test whether the headline survives alternative measurements.**
+**Retrieve an auditable public series, use minimal Structured Query Language
+(SQL) to compare consistent windows, and test whether the headline survives
+alternative measurements.**
 
-The question is bounded: **DefiLlama-reported Uniswap daily DEX volume on
-Ethereum, in USD, across the last 90 complete UTC days**. It is not a count of
-trades, wallets or people. No account, API key or wallet is needed.
+The question is bounded: **DefiLlama-reported Uniswap daily decentralised
+exchange (DEX) volume on Ethereum, in USD, across the last 90 complete
+Coordinated Universal Time (UTC) days**. It is not a count of trades, wallets
+or people. No account, application programming interface (API) key or wallet
+is needed.
 
 ## Core / reference material
 
@@ -70,16 +76,18 @@ python3 W6.3-free-public-data.py
 # Windows: python W6.3-free-public-data.py
 ```
 
-It reads DefiLlama's free
-[Uniswap volume endpoint](https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false).
+It requests data from DefiLlama's free [Uniswap volume endpoint](https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false),
+part of its application programming interface (API).
 Use the Ethereum entries of `totalDataChartBreakdown`, summed across reported
 versions, **not** the all-chain `totalDataChart`.
 
 The outputs are:
 
-- `uniswap_ethereum_90days.csv`: 90 ascending dates, `day_utc` and `volume_usd`;
-- `W6.3-source-snapshot.json`: the selected Ethereum version values and totals,
-  endpoint, retrieval time and inclusive dates;
+- `uniswap_ethereum_90days.csv`: a comma-separated values (CSV) file with 90
+  ascending dates, `day_utc` and `volume_usd`;
+- `W6.3-source-snapshot.json`: a JavaScript Object Notation (JSON) file with
+  the selected Ethereum version values and totals, endpoint, retrieval time
+  and inclusive dates;
 - `W6.3-data-provenance.txt`: the scope, unit, dates and method.
 
 The window ends yesterday UTC. The script rejects missing/duplicate days,
@@ -90,6 +98,10 @@ completed measurement. Ask for a dated source snapshot rather than inventing val
 
 ### Just enough SQL
 
+SQL is a language for selecting and summarising rows in a table. DuckDB's
+browser shell can query the CSV you add to the current session; this does not
+upload it to a database service or write anything to a blockchain.
+
 Open [DuckDB's free web shell](https://shell.duckdb.org/). Your CSV is read in
 the browser, without uploading it to a database service. Run `.files add` and
 select the CSV, then:
@@ -99,16 +111,25 @@ CREATE TABLE uni AS SELECT * FROM 'uniswap_ethereum_90days.csv';
 DESCRIBE uni;
 ```
 
-Confirm a DATE column and a numeric volume column. SQL pieces you need:
+Read the first line in three parts:
+
+- `CREATE TABLE uni` makes a table named `uni` for this analysis;
+- `SELECT *` takes every column;
+- `FROM 'uniswap_ethereum_90days.csv'` reads the rows from the named file.
+
+This converts the CSV into a table SQL can query; it does not upload, modify
+or write anything to the blockchain. `DESCRIBE uni` lists the table's column
+names and data types; `DATE` is a calendar date and a numeric volume column can
+be used in calculations. SQL pieces you need:
 
 | Piece | Cognitive job | Example |
 |---|---|---|
-| SELECT / FROM | Choose a table and its fields | SELECT day_utc, volume_usd FROM uni |
-| WHERE | Retain matching rows | WHERE volume_usd > 1000000000 |
-| COUNT / MIN / MAX | Check coverage and range | COUNT(DISTINCT day_utc) |
-| CASE WHEN | Label rows by a rule | CASE WHEN condition THEN 'first' ELSE 'last' END |
-| GROUP BY | Summarise each label | GROUP BY period |
-| AVG / MEDIAN | Compare average with typical day | AVG(volume_usd), MEDIAN(volume_usd) |
+| SELECT / FROM | Select columns and the table to read | SELECT day_utc, volume_usd FROM uni |
+| WHERE | Keep only rows meeting a condition | WHERE volume_usd > 1000000000 |
+| COUNT / MIN / MAX | Count rows or find smallest/largest values | COUNT(DISTINCT day_utc) |
+| CASE WHEN | Assign a label when a condition is true | CASE WHEN condition THEN 'first' ELSE 'last' END |
+| GROUP BY | Produce one summary per label | GROUP BY period |
+| AVG / MEDIAN | Calculate the mean and middle ordered value | AVG(volume_usd), MEDIAN(volume_usd) |
 
 For a source check:
 
@@ -155,6 +176,11 @@ example's dates into a new download.
 | Median | Middle of the ordered daily values, USD/day | A typical day, less dominated by spikes |
 | Top-three share | Sum of busiest three days / window total, % | Concentration in outliers |
 
+For example, daily volumes of **$2m, $2m, $2m, $2m and $12m** have a mean
+of **$4m** and a median of **$2m**. The one large day pulls the mean up; the
+median is the middle observation in this small ordered set. Neither alone
+explains why the spike occurred.
+
 For two consistent windows, percentage change in a metric is:
 
 $$
@@ -175,7 +201,8 @@ $$
 $V_{(1)},V_{(2)},V_{(3)}$ are the three largest observed daily USD volumes in
 that window; the denominator is the sum of all 30 daily values. Multiply the
 ratio by 100 to report a percentage. If the window total is zero, the share is
-undefined.
+undefined. A high $C_3$ means the period's total depends heavily on three
+spike days; it does not by itself show manipulation or wash trading.
 
 In Calc, with CSV headers in row 1 and sorted dates, use:
 
@@ -206,6 +233,21 @@ provider coverage can all change USD volume. Mean, median and concentration
 come from the same series: they are sensitivity checks, not independent
 verification of users. Record **source / unit / chain / dates / retrieval
 time**, then name which extra data could separate the explanations.
+
+::: details Optional industry-data path — Allium academic access
+Allium offers an Explorer for querying on-chain data with SQL and an academic
+access programme. Access requires an institutional request and confirmation;
+do not assume your university or this cohort is already approved. This is an
+optional alternative for learning how to query a provider's schema, not a
+replacement for the reproducible DefiLlama-to-CSV workflow or an added task.
+
+If access is available, first inspect what each row and field represents,
+record the query and retrieval date, then compare a clearly matched metric
+with this Part's DefiLlama series. Different results may reflect different
+coverage, schemas or metric definitions; a mismatch is a question to
+investigate, not proof that either source is wrong. See [Allium academic
+access](https://www.allium.so/use-case/academia).
+:::
 
 ## Hands-on task
 
@@ -253,4 +295,5 @@ Neither is required; a JOIN is unnecessary for this single-table question.
 - [Uniswap volume endpoint](https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false) — Link, live data; preserve the retrieval snapshot
 - [DuckDB — Web shell](https://shell.duckdb.org/), [SQL](https://duckdb.org/docs/stable/sql/introduction) and [CSV import](https://duckdb.org/docs/stable/data/csv/overview) — Link, tool documentation
 - [LibreOffice — Calc](https://books.libreoffice.org/en/) — Link, tool documentation
+- [Allium — Academic access](https://www.allium.so/use-case/academia) — Link, optional industry-data path; subject to institutional application and access approval
 :::

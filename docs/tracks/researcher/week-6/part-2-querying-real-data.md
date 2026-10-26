@@ -41,6 +41,15 @@ treasury operations, a market maker, coordinated selling or obfuscation. A
 flow diagram alone cannot decide. Part 1 taught what the records mean; now
 combine signals into a hypothesis without inventing an identity.
 
+An **address** is an on-chain identifier, not a person's name. An **entity**
+is the organisation, service or person someone thinks may control or use an
+address; **attribution** is the evidence-based link supporting that label.
+A **cluster** is a tentative group of addresses linked by observations, not a
+proven entity. A **counterparty** is the other address or contract in a
+recorded interaction. A **first funder** here means the earliest funder seen
+in the queried records—not necessarily the address's first-ever source of
+funds.
+
 ## The hard skill
 
 **Reconstruct a fund-flow hypothesis, state a competing explanation and
@@ -77,16 +86,18 @@ it before calibrating confidence.
 
 Use **at least two independent signal families** for a tentative activity
 classification. Timing and a count of those same timed transactions are
-weakly independent at best. A large EOA can be automated; a contract can serve
+weakly independent at best. A large **externally owned account (EOA)**—an
+address controlled by a signing key—can be automated; a contract can serve
 many humans. **Address ≠ person.**
 
 ### Investigating a large allocation split
 
 Check source, timing, recipient count, amount distribution and recipient
 histories. Was there a claim call or known vesting/distributor contract? What
-happened next: DEX swaps, service deposits, bridging or holding? A transfer to
-a router is not proof of a sale without the execution and assets received.
-A service label is a provider assertion, not ground truth.
+happened next: **decentralised exchange (DEX)** swaps, service deposits,
+bridging or holding? A transfer to a router is not proof of a sale without
+the execution and assets received. A service label is a provider's
+attribution claim, not ground truth; check who supplied it and what supports it.
 
 No direct transfers between top holders does **not** rule out coordination.
 Check common first/gas funding, near-synchronous activation, coordinated
@@ -100,15 +111,20 @@ Connect a source lock/burn/message to a destination mint/release using a
 message ID or documented bridge evidence, not amount and time alone. Record
 both chains, hashes and token representations; addresses may stay the same
 or change. Liquidity-network bridges need not expose a neat one-to-one mint.
-A custodial exchange can end public attribution continuity. Mark that boundary
+A custodial exchange may pool many customers' deposits at a shared address;
+the public chain may show funds reaching that endpoint without revealing which
+internal customer account received credit. Mark that attribution boundary
 rather than guessing the next owner.
 
-### A “locked LP” badge is a question
+### A “locked liquidity” badge is a question
 
-Identify the pool and liquidity-position token first: v2 LP tokens and v3
-position NFTs have different ownership models. Inspect owner, locker, unlock
-time, beneficiary, withdrawal rights and upgrade/admin power. Sending LP tokens
-to an inaccessible address (often called burned liquidity) differs from a
+Identify the pool and liquidity-position token first: a v2 **liquidity
+provider (LP) token** represents a share of pool positions, while a v3
+position **non-fungible token (NFT)** represents a specific range and has
+different ownership rules.
+Inspect owner, locker, unlock time, beneficiary, withdrawal rights and
+upgrade/admin power. Sending LP tokens to an inaccessible address (often
+called burned liquidity) differs from a
 releasable lock. Do not confuse it with the pool's burn operation that redeems
 LP tokens for underlying assets. Neither control proves all liquidity or
 every project power is locked. A
@@ -117,7 +133,8 @@ project-controlled upgradeable locker may not constrain the project as a badge i
 ### Map the supplied observations
 
 The following is an **Academy schematic of the synthetic case records**
-F01–F18. Edges identify what each supplied record says; they do not imply
+F01–F18. Case-L1 and Case-L2 are invented names for the two networks in this
+case. Edges identify what each supplied record says; they do not imply
 shared control, identity, intent or wrongdoing. The dashed website claim and
 provider label are not on-chain facts.
 
@@ -131,7 +148,7 @@ flowchart TB
     F["Funder"] -->|"gas: 0.02 ETH each · F05–F07"| ABC
     ABC -->|"swap: 100k CASE each<br/>48k / 47k / 46k USDX out · F08–F10"| P["Pool"]
     A["A"] -->|"bridge lock: 40k USDX · F11"| B["Bridge"]
-    P -->|"LP transfer: 900 / 1,000 · F14"| K["Locker"]
+    P -->|"pool-share token transfer: 900 / 1,000 · F14"| K["Locker"]
     K -.->|"beneficiary field: Treasury · F15"| TR
     AM["Admin-M"] -.->|"proxy admin field · F15"| K
     AM -.->|"signer / emergency constraints unknown · F16"| Unknown["Unknown"]

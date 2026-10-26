@@ -15,7 +15,8 @@ independent investigation brief.
 
 Each Part has one lightweight, reviewable hands-on task worth **100 points**.
 Every tool used is free and needs no account: block explorers, DefiLlama's
-public API, a short Python script, DuckDB in the browser and a spreadsheet.
+public application programming interface (API), a short Python script,
+DuckDB in the browser and a spreadsheet.
 
 **There is no separate weekly submission.** These six Part tasks are the
 assessed progress evidence for this week.

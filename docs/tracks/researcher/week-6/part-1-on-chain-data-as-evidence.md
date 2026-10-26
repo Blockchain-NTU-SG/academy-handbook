@@ -59,6 +59,23 @@ that is not supported by the chain**.
 Why it matters: a dashboard can label something a swap, payment or withdrawal.
 Only the transaction, receipt, logs and block let you test that label.
 
+### Before you inspect a transaction
+
+| Term | Plain-English meaning |
+|---|---|
+| **Transaction** | A signed instruction submitted to Ethereum; it may ask a contract to do work. |
+| **Receipt** | The execution record for a transaction, including its result, gas used and emitted logs. |
+| **Call** | One step in execution that invokes a contract. An internal call is not a separate signed transaction. |
+| **Event / log** | Structured data a contract emits during execution; it is not the complete state. |
+| **State** | Data stored by the network at an address and a particular block. |
+| **Proxy** | In common patterns, a user-facing address that forwards execution to replaceable contract logic. |
+| **Implementation** | The contract logic a proxy uses at the block being investigated. |
+
+An **externally owned account (EOA)** is an address controlled by a signing
+key that can authorize a transaction. A single EOA transaction can call
+contracts, which may make further internal calls and change several pieces of
+state.
+
 **Academy schematic — one signed transaction can produce several observable
 execution effects; it is not a complete state diff:**
 
@@ -79,7 +96,9 @@ logs are records of what contracts emitted during execution. Do not treat a
 requested action as proof that it happened.
 
 Where the picture stops: logs are emitted by contracts. A malicious contract
-can emit misleading logs. Interpret the emitter and ABI, not just the label.
+can emit misleading logs. Interpret the emitter and its **application binary
+interface (ABI)**—the description used to decode contract functions and
+events—not just the label.
 :::
 
 ## The hard skill
@@ -98,15 +117,14 @@ After this Part you can:
 
 ### Four pieces of evidence
 
-An **externally owned account (EOA)** is controlled by a signing key and can
-originate a transaction. A **contract account** executes code when called;
-it does not independently originate a signed transaction. One EOA transaction
-can trigger many contract calls and asset movements. **Address ≠ person**:
+An **EOA** can originate a signed transaction. A **contract account** executes
+code when called; it does not independently originate a signed transaction.
+**Address ≠ person**:
 one person may use many accounts; a service address may serve many people.
 
 | Record | What you can establish | What it does **not** establish |
 |---|---|---|
-| **Transaction** | `from`, `to`, input data, ETH `value`, gas limit | Whether the attempted action succeeded |
+| **Transaction** | `from`, `to`, input data (also called **calldata**: encoded function and arguments), ETH `value`, gas limit | Whether the attempted action succeeded |
 | **Receipt** | `status`, `gasUsed`, `effectiveGasPrice`, emitted logs | The user's intent or why they transferred |
 | **Event log** | What an identified contract emitted and its indexed arguments | That any human-readable explorer label is trustworthy on its own |
 | **Block** | Inclusion height and timestamp | Whether two addresses belong to the same real-world person |
@@ -199,11 +217,13 @@ recipient and amount, rather than relying only on Etherscan's action label.
 
 Use that **same transaction** so everyone can compare their evidence. Aim for
 25–30 minutes. Work from the transaction's **Overview**, **Logs** and, where
-available, its **Input Data** and token contract page. You may cross-check with
-an RPC receipt if you have access, but no coding is required.
+available, its **Input Data** and token contract page. If you have access to
+an Ethereum **remote procedure call (RPC)** endpoint, you may cross-check its
+receipt; no coding is required.
 
-1. **Write a six-line transaction record:** chain, full hash, UTC time and
-   block, transaction sender, transaction `to`, and receipt status. Link the
+1. **Write a six-line transaction record:** chain, full hash, Coordinated
+   Universal Time (UTC), block, transaction sender, transaction `to`, and
+   receipt status. Link the
    explorer page.
 2. **Trace the token movement:** name the token and its contract, sender,
    recipient, displayed amount, and the relevant `Transfer` log. State whose

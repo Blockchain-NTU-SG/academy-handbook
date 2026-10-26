@@ -40,6 +40,10 @@ fragile liquidity or simply an invalid comparison. Use the supply model from
 W5.5, the investigation discipline from Part 2 and measurement discipline from
 Part 3 to decide what a number means before making a claim.
 
+**Market capitalisation (market cap)** is a token's quoted price multiplied
+by a provider's reported circulating supply. It is an estimate of market
+value, not cash held by the protocol.
+
 ## The hard skill
 
 **Choose a defensible valuation denominator and interpret relative value
@@ -48,28 +52,37 @@ alongside token structure, executable liquidity and competing explanations.**
 This is economic research methodology. No trade, wallet connection, price
 target, portfolio decision or real-money activity is required.
 
+A **decentralised exchange (DEX)** lets users trade through protocol
+mechanisms rather than a conventional order-matching company. An **automated
+market maker (AMM)** is one DEX design; **liquidity providers (LPs)** supply
+assets to its pools. The exact mechanism matters when deciding what a volume,
+fee or liquidity number represents.
+
 ## Core / reference material
 
 ### Eight lenses, selected by the question
 
-| Lens | Research question |
-|---|---|
-| Fundamentals | What does the protocol do? Which activity creates economic value, what does it charge, and who receives it? |
-| Flows | What actually moved, from whom, and with what attribution limits? |
-| Valuation | Which numerator and denominator fit the economics and period? |
-| Tokenomics | Does ownership have a credible path to protocol economics? |
-| Unlocks | Who gains transferable supply, and under what incentives? Unlock ≠ sale. |
-| Catalysts | Which observable change could alter usage, costs, value capture or risk? |
-| Risks | What dependency could invalidate the result or stop value reaching holders? |
-| Narrative | What attracts attention, and is that supported by fundamentals? |
+| Lens | What you are asking | Useful evidence | Common mistake |
+|---|---|---|---|
+| **Fundamentals** | What does it do, who uses it, what activity is charged for, and who receives the fees? | Protocol docs, activity, fees and retained revenue under stated definitions | Treating usage or total value locked (TVL)—assets a provider counts as deposited—as revenue |
+| **Flows** | What capital, tokens or liquidity entered or left, and where did it go? | Dated bridge flows, issuance/redemption, treasury or exchange movements and liquidity changes | Treating a transfer or unlock as organic demand or a sale |
+| **Valuation** | Does the chosen value measure match the economic denominator and period? | Comparable market value, supply basis, fee/revenue definitions and time window | Dividing by TVL or volume as if either were retained earnings |
+| **Tokenomics** | How are supply, utility, security, governance and holder rights connected? | Token contracts, protocol terms, fee destinations and enforceable rights | Assuming governance power creates a claim on cash flow |
+| **Unlocks** | Who receives newly transferable tokens, when, and relative to float and liquidity? An unlock is the end of a transfer restriction, not proof of a sale. | Dated vesting schedule, recipient, circulating-supply method and market depth | Treating every unlocked token as immediately sold or fully liquid |
+| **Catalysts** | What observable change could alter use, cost, value capture or risk? | A defined before/after measure and a dated launch or parameter change | Treating an announcement as evidence that the change worked |
+| **Risks** | Which failure could break the thesis, who is exposed, and what signal would show it? | Dependency, permissions, liquidity, oracle and incident evidence | Listing generic risks without a causal path or exposed party |
+| **Narrative** | What story attracts attention, and what evidence supports it? | Dated communications, attention measures and independently checked outcomes | Treating attention or a compelling story as economic proof |
 
-Not every question needs all eight. This framework organises evidence; it
-does not produce a buy/sell score. Attention is not automatically a catalyst
-for improved fundamentals, and a catalyst is not an instruction to buy.
+Not every question needs all eight. Use them as lenses, not a checklist or
+score: begin with fundamentals and flows, test whether token holders connect
+to the economics, choose a matching valuation, then consider catalysts, risks
+and narrative. Attention is not automatically a catalyst for improved
+fundamentals, and a catalyst is not an instruction to buy.
 
 ### Supply is not executable liquidity
 
-The common supply-based valuation relationships are:
+The common supply-based valuation relationships use **fully diluted
+valuation (FDV)** as one possible supply basis:
 
 $$
 \text{Market Cap} = P\times S_{\text{circ}}
@@ -106,17 +119,20 @@ $$
 \frac{\text{Valuation}}{\text{Chosen Economic Denominator}}
 $$
 
-The numerator and denominator must match the research question, currency,
-period and convention. For example, a USD market value divided by comparable
-USD retained revenue for the same stated period gives a valuation-to-revenue
-multiple. Market cap and FDV answer different supply questions; neither is
-universally correct. TVL, fees, revenue, earnings and economic volume are not
-interchangeable. An apparent discount is a question to investigate, not
-automatically an opportunity.
+The **numerator** is the value being compared; the **denominator** is the
+economic quantity chosen as its reference. A multiple says how many units of
+valuation correspond to one unit of that measure. For example, a market cap
+of 100 million currency units divided by comparable annual retained revenue
+of 10 million units gives **10×**: ten units of valuation per unit of annual
+revenue. The currency, period and definitions must match. Market cap and FDV
+answer different supply questions; neither is universally correct. TVL,
+fees, revenue, earnings and economic volume are not interchangeable. A
+**premium** means a higher multiple than a defined comparison set; a
+**discount** means a lower one. Neither label alone means expensive or cheap.
 
 | Candidate | What it can help compare | Main boundary |
 |---|---|---|
-| TVL | Deposited capital under a consistent methodology | Not revenue; price effects and double-counting can inflate it |
+| Total value locked (TVL) | Deposited capital under a consistent methodology | Not revenue; price effects and double-counting can inflate it |
 | Fees | User charges under a stated definition | Much may go to suppliers/LPs |
 | Revenue | Retained/distributed economics after supplier payments | Define recipient and provider convention |
 | Earnings / holder accrual | Net economics after specified costs, or actual holder distributions | Not interchangeable; governance can change rights and costs may be omitted |
@@ -127,17 +143,21 @@ Do not compare a rollup's transaction fees with a DEX's trading volume as if
 they were the same revenue. Trailing 12 months and annualised last month can
 tell different stories; label extrapolation and avoid seasonal distortion.
 
-### Worked example: explaining a multiple
+### Worked example: eight lenses on one fictional protocol
 
-Synthetic peer P has $120m market cap and $12m comparable trailing-year
-retained revenue: **10×**. Peer Q has $180m and $12m: **15×**. Two-point mean
-and median are both 12.5×; P is 20% below that reference. That is arithmetic,
-not proof of undervaluation. Perhaps Q has stronger sustainable growth; perhaps
-P's token lacks a credible revenue claim. Check the rights and quality of the
-denominator before choosing between those explanations.
-
-An outlier is a question. A premium/discount needs an explanation, evidence
-that could falsify it, and a confidence boundary.
+Fictional AMM Alder reports **$20m** in annual user fees, pays **$8m** to
+liquidity providers, and retains **$12m**. With a **$120m market cap**, its
+market-cap-to-retained-revenue multiple is $120m ÷ $12m = **10×**. Comparable
+fictional Birch is $180m ÷ $12m = **15×**, so Alder is one-third below that
+reference multiple—not automatically cheap. Alder has no holder distribution,
+a 15% circulating-supply unlock due in three months, and shallow quotes for a
+$100,000 sale. Its announced chain integration is a catalyst to test, not
+proof of growth; “AI-powered” attention is narrative, not economic evidence.
+The flows and retained revenue look measurable, but holder rights and market
+depth remain limits. A bounded next question is whether the integration
+produces sustained retained revenue without weakening liquidity. Check fee
+definitions, unlock recipients and post-launch usage; use counter-evidence to
+bound confidence.
 
 ## Hands-on task
 

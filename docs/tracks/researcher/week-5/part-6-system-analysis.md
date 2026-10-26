@@ -110,7 +110,10 @@ could actually chase.
 
 ## Hands-on task
 
-Analyse **Lido's stETH liquid staking on Ethereum**. If you prefer another
+Liquid staking lets a user stake ETH through a protocol and receive a
+transferable token representing that stake. For Lido, that token is **stETH**;
+its balance can update as staking rewards or penalties are reported. Analyse
+**Lido's stETH liquid staking on Ethereum**. If you prefer another
 single-purpose protocol you have not met, name it in your evidence; reviewers
 will check it against its own documentation.
 
@@ -119,7 +122,8 @@ Write a **one-page analysis note** with the four lenses:
 1. **Mechanism:** a numbered flow of 5 to 7 steps from "I deposit ETH" to "I
    get ETH back".
 2. **Incentives:** at least three actors (for Lido: stakers, node operators
-   and the DAO or treasury), each with a gain, a cost and a temptation.
+   and the decentralised autonomous organisation (DAO) or treasury), each
+   with a gain, a cost and a temptation.
 3. **Risks:** at least three, each written as *what fails → who loses → how
    you know*. Include at least one that comes from *outside* the protocol. For
    one of them, name the protection that exists today and the risk that

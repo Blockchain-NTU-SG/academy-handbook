@@ -40,6 +40,14 @@ not distinguish these two explanations yet”.
 case evidence, quantitative/economic evidence and counter-evidence. For a real
 case, include direct chain evidence relevant to the question.**
 
+A **bounded claim** states which case, evidence and time window it covers. A
+**falsifiable claim** names what observation would weaken or contradict it.
+**Counter-evidence** weighs against your claim; an **alternative hypothesis**
+is another explanation that fits at least some of the same observations.
+**Confidence** is how strongly the evidence supports your conclusion, with
+reasons—not certainty. A **next check** is a specific observation that could
+distinguish the explanations.
+
 This is Researcher readiness for W7, not a project proposal, trading call or
 a new weekly submission. Work read-only with public data. AI can help draft
 a query or challenge a claim; you must verify every cited result and explain
@@ -49,21 +57,67 @@ the reasoning yourself.
 
 ### Choose a case that makes you investigate
 
-**Default: a new-token allocation case.** Use the
-<a :href="$withBase('/files/researcher/W6.6-launch-dossier.md')" download>original synthetic launch dossier</a>.
-It contains attention, allocation, selling and liquidity claims with different
-evidence quality. Your question might be: *which observations are consistent
-with coordinated distribution/control, and what else explains them?*
-Do not declare “insider dumping” or “scam” from a pattern.
+**Default: a new-token allocation case.** Use the self-contained case file
+below. It contains attention, allocation, selling and liquidity claims with
+different evidence quality. Your question might be: *which observations are
+consistent with coordinated distribution/control, and what else explains
+them?* Do not declare “insider dumping” or “scam” from a pattern.
 
-The dossier is a reproducible set of synthetic record-level observations, not
-real chain evidence. Use its records to test competing explanations; do not
-add an unrelated real transaction just to satisfy a checklist. If you instead
-choose a real unfamiliar system, use at least one direct public chain record
-that bears on your actual question, and verify its event emitter and result.
+::: details Case file — NOVEL launch (synthetic)
+This original Academy case was created 26 October 2026. NOVEL, Case-L1,
+addresses A–D, Sponsor-S, Market-M and Locker-L are invented aliases. There
+are no real transaction hashes or people behind these records. Units are
+display units. This is a bounded dataset, not a claim about a real project.
+
+NOVEL is a fictional governance token for a data-service protocol. The website
+claims “community-led ownership” and “locked liquidity”. Governance can
+allocate treasury funds; no direct token-holder fee distribution is specified.
+No implementation/admin records for the token or locker are supplied.
+
+**Observation snapshot: 1–8 September 2026**
+
+| Record | Evidence type | Observation / claim |
+|---|---|---|
+| N01 | Synthetic allocation log summary | Before launch, A, B, C and D each receive 5m NOVEL from Distributor; total supply 100m, reported circulation 40m |
+| N02 | Synthetic funding history | Sponsor-S funds gas for A–C within two minutes; D has an earlier unrelated funding record |
+| N03 | Synthetic swap receipts | A–C each sell 0.5m NOVEL on launch day and 0.5m again on day 3; USDQ receipts are shown in execution summaries |
+| N04 | Synthetic holdings | At day 8 A–D together retain 17m NOVEL; no direct transfers among A–D appear in this window |
+| N05 | Synthetic service flow | A–C send received USDQ to Market-M; a provider labels it market-maker infrastructure, without provenance |
+| N06 | Synthetic LP ownership | 70% of v2 pool-share tokens are in Locker-L, 30% at Treasury; locker unlock time is six months away; admin powers are unavailable |
+| N07 | Synthetic volume aggregate | Seven complete days report USDQ turnover of 2m, 8m, 3m, 2m, 2m, 1m, 2m; unique users and counterparties are not supplied |
+| N08 | Website/social claim | Attention rose sharply; the promoter calls transfers “organic demand”; there is no independently validated audience count |
+| N09 | Synthetic quote | Selling 100,000 USDQ of NOVEL at the displayed marginal price returns 88,000 USDQ, net of fees, at the snapshot time |
+| N10 | Unverified allocation note | Website calls A–D ecosystem partners with vesting exceptions; no signed agreement or on-chain vesting evidence is supplied |
+
+USDQ is an invented dollar-denominated quote unit, not a real stablecoin. N03
+reports six swaps totalling 3m NOVEL. N04 reflects that reduction from the
+initial 20m; it does not establish how much belongs to independent people.
+
+Use the observations to choose a bounded question. Possible measurements
+include share of reported circulation, observed sold/allocated share or volume
+concentration, with explicit denominator choices. No particular conclusion
+or calculation is prescribed.
+
+The missing history, label provenance, admin powers, attribution and private
+allocation terms remain unknown. An operational-distribution explanation and
+a coordinated-control explanation may both fit some observations. Identify
+the next evidence that would distinguish them.
+
+These records are synthetic and cannot establish facts about a real protocol
+or person. No separate real-chain field check is required for this default
+exercise. A learner choosing a real case instead must use direct chain
+evidence relevant to that case's question.
+:::
+
+For the default dossier, use its records to test competing explanations; do
+not add an unrelated real transaction just to satisfy a checklist. If you
+instead choose a real unfamiliar system, use at least one direct public chain
+record that bears on your actual question, and verify its event emitter and
+result.
 
 **Non-token alternative:** investigate an unfamiliar protocol/system, including
-a tokenised-Treasury product, governance execution or infrastructure dependency.
+a tokenised-Treasury product or **real-world asset (RWA)**, governance execution
+or infrastructure dependency.
 Ask a comparably falsifiable question and combine a primary source with direct
 chain evidence and a meaningful measurement. Researcher is cross-domain, not
 investment-only.

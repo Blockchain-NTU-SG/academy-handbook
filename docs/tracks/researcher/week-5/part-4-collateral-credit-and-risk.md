@@ -8,6 +8,9 @@ owner: "Education Team"
 reading_time: "40 min"
 points: 100
 sources:
+  - name: "Aave V3 Technical Paper"
+    url: "https://github.com/aave/aave-v3-core/blob/master/techpaper/Aave_V3_Technical_Paper.pdf"
+    label: "Link"
   - name: "Aave — Health factor and liquidations"
     url: "https://aave.com/help/borrowing/liquidations"
     label: "Link"
@@ -39,7 +42,8 @@ answer is kept outside the public handbook.
 > **Core question — at what price does a crypto loan get liquidated, and
 > what happens to the lender if the market moves faster than that?**
 
-A lending protocol lends to strangers with no credit check. All it has is the
+A lending protocol is one kind of decentralised finance (DeFi) system: it lends
+to users without a conventional credit check. All it has is the
 collateral they deposit and a rule for when to sell it. In this Part you turn
 that rule into numbers: how safe a loan is now, the price where it gets
 liquidated, and how a wrong price feed can leave the protocol with a loss.
@@ -69,23 +73,36 @@ After this Part you can:
 
 ## Core / reference material
 
+### Primary source — Aave V3 Technical Paper
+
+The paper describes the V3 design and architecture; it is useful for seeing
+the protocol team's original reasoning. Read the sections on liquidation and
+interest-rate design alongside the model below. It is a 2022 design reference,
+not a specification of every current deployment or parameter—use [Aave's
+current liquidation documentation](https://aave.com/help/borrowing/liquidations)
+for live behaviour.
+
+- [Open the Aave V3 Technical Paper on GitHub](https://github.com/aave/aave-v3-core/blob/master/techpaper/Aave_V3_Technical_Paper.pdf) (opens/downloads the PDF; the repository does not serve it as an inline PDF).
+
 ### The health factor
 
-A common measure is the **health factor** (HF). In the simplified single-asset
-model used here:
+A common measure is the **health factor (HF)**. Read it as **safety-adjusted
+collateral value divided by debt**. A protocol does not count the full market
+value of collateral as safe backing: multiplying by its liquidation threshold
+sets the fraction it counts toward the liquidation boundary. In the
+simplified single-asset model used here:
 
 $$
 HF = \frac{V_{\text{collateral}}\times LT}{D}
 $$
 
-Here, $V_{\text{collateral}}$ is the collateral's current value in the
-protocol's valuation currency (USD in our examples), $LT$ is the liquidation
-threshold as a fraction (80% is $0.80$), and $D$ is the debt value in the same
-currency. Multiplying by $LT$ turns the market value into a safety-adjusted
-value: only that fraction counts toward the liquidation boundary. A higher HF
-means more buffer. $HF=1$ is the simplified boundary; under Aave's model, a
-position may become eligible for liquidation below 1. Real multi-asset
-positions use protocol-specific valuation and threshold rules.
+Here, $V_{\text{collateral}}$ is the current collateral value in the
+protocol's valuation currency (USD in our examples); $LT$ is the **liquidation
+threshold**, a fraction (80% is $0.80$); and $D$ is debt value in the same
+currency. Thus $HF$ is unitless. A higher HF means more buffer. $HF=1$ is the
+simplified boundary; under Aave's model, a position may become eligible for
+liquidation below 1. Real multi-asset positions use protocol-specific
+valuation and threshold rules.
 
 ### Solve for a single-asset liquidation price
 
@@ -97,11 +114,13 @@ P_{\text{liq}} =
 \frac{D}{Q_{\text{collateral}}\times LT}
 $$
 
-$P_{\text{liq}}$ is currency per collateral unit (USD per ETH here). The
-formula assumes one collateral asset, debt and threshold unchanged, and the
-protocol's oracle price matching the price used in the calculation. It omits
-interest accrual, liquidation bonuses, fees and changing collateral. It is
-not the break-even price: break-even is where collateral value equals debt.
+$P_{\text{liq}}$ is the **liquidation price**, in currency per collateral unit
+(USD per ETH here); $Q_{\text{collateral}}$ is the collateral quantity, so
+multiplying it by the per-unit price gives a value in currency. The formula assumes
+one collateral asset, unchanged debt and threshold, and that the protocol's
+oracle price matches the price used in the calculation. It omits interest,
+liquidation bonuses, fees and changing collateral. It is not the break-even
+price: break-even is where collateral value equals debt.
 
 ### Where the price comes from
 
@@ -169,7 +188,8 @@ debt and threshold.
 
 ### The economic feedback: utilisation and interest
 
-In the simplified reserve model here, utilisation $U$ is:
+**Utilisation** asks what share of supplied assets is currently borrowed. In
+the simplified reserve model here, the utilisation rate $U$ is:
 
 $$
 U = \frac{\text{Total Borrowed}}{\text{Total Supplied}}
@@ -184,8 +204,9 @@ rates, utilisation and the protocol's retained share. Extra token rewards are
 a separate subsidy.
 
 Aave V3's [official interest-rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy)
-uses two slopes around an optimal-usage point: above the **kink**, borrowing
-becomes more expensive more quickly. This can encourage repayment and new
+uses two slopes around an optimal-usage point. The **kink** is the point where
+the curve's slope changes; above it, borrowing becomes more expensive more
+quickly. This can encourage repayment and new
 supply; it cannot guarantee either during stress.
 The target and slopes depend on the reserve and deployment. The chart is a
 conceptual Academy schematic, not a live Aave curve or parameter quote:
@@ -212,16 +233,20 @@ liquidation exposure all grow; a subsidy can disappear before the debt does.
 The same HF model still asks what collateral and debt the protocol actually values.
 
 ::: details Landscape — Pendle: composing principal, yield and credit
-Pendle wraps a yield-bearing asset into a standardised yield token (SY), then
-separates principal (PT) from yield entitlement (YT) up to a maturity date.
+An asset that earns yield bundles two exposures: the underlying principal and
+the variable yield it may generate. Pendle separates those exposures. Its
+**Standardized Yield (SY)** token is the protocol's common representation of a
+yield-bearing asset; a **Principal Token (PT)** represents the principal-side
+claim associated with maturity; and a **Yield Token (YT)** represents variable
+yield exposure up to maturity.
 
 ```mermaid
 flowchart TB
   accTitle: Yield tokenisation overview
   accDescr: A yield-bearing asset is standardised as SY and separated into principal-token and yield-token claims that both run to maturity.
-  A["Yield-bearing asset"] --> B["SY<br/>standardised yield interface"]
-  B --> C["PT<br/>principal claim"]
-  B --> D["YT<br/>variable-yield claim"]
+  A["Yield-bearing asset"] --> B["SY<br/>Standardized Yield"]
+  B --> C["PT<br/>Principal Token"]
+  B --> D["YT<br/>Yield Token"]
   C --> M["Maturity"]
   D --> M
 ```
@@ -296,6 +321,7 @@ Your work is complete when:
 :::
 
 ::: details Sources and attribution
+- [Aave V3 Technical Paper](https://github.com/aave/aave-v3-core/blob/master/techpaper/Aave_V3_Technical_Paper.pdf) — Link, protocol-authored 2022 design reference; not a current deployment specification
 - [Aave — Health factor and liquidations](https://aave.com/help/borrowing/liquidations) — Link, referenced only
 - [Chainlink — Price feeds](https://docs.chain.link/data-feeds/price-feeds) — Link, referenced only
 - [Aave V3 — Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) — Link, protocol documentation

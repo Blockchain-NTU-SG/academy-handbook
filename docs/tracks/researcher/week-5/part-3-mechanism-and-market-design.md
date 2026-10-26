@@ -36,10 +36,13 @@ model answer is kept outside the public handbook.
 > **Core question — what does a swap actually do to a Uniswap-style pool,
 > and why does the size of the pool change the price you get?**
 
-Product pages describe an AMM as "instant swaps with no order book". That is
-true and tells you almost nothing. In this Part you work out, number by
-number, what a swap does to a constant-product pool: the fee, the payout, the
-price you really get, and what changes when the pool is deeper.
+An **automated market maker (AMM)** is a contract that calculates a swap from
+the tokens held in a pool instead of matching a buyer's order with a seller's
+order. A **decentralised exchange (DEX)** can use different designs; this Part
+works through one constant-product example. A **liquidity provider (LP)**
+deposits the pool's tokens and may receive a share of trading fees. You will
+calculate what one swap does to the reserves, payout and execution price, and
+why a deeper pool changes the result.
 
 ::: tip Picture a see-saw with two buckets
 One bucket holds ETH, the other USDC. Pour ETH into one side and the pool
@@ -69,17 +72,30 @@ After this Part you can:
 
 A simplified Uniswap v2-style pool holds reserves of token X and token Y.
 Let $x$ be the pool's reserve of X and $y$ its reserve of Y, measured in
-their respective token units. Its payout rule is:
+their respective token units. An **invariant** is a rule the mechanism uses
+to preserve or target while calculating an action. Here, the reserve product
+is the target used to calculate a swap's payout:
 
 $$
 xy = k
 $$
 
-The product $k$ is the reserve-product invariant used to calculate a swap's
-output. For a very small trade, the pool's marginal spot price is approximately
-$y/x$ units of Y per X. A finite trade changes both reserves, so the average
-execution price differs from the starting spot price. This is the simplified
-constant-product v2 model, not a formula for every DEX design.
+The product $k$ is the reserve-product invariant used in the payout
+calculation. To see why the reserve ratio gives a price, imagine a pool with
+100 ETH and 200,000 USDC: it holds 2,000 USDC for every 1 ETH. Before a very
+small trade moves the reserves, that ratio is the pool's starting marginal
+price—its price for an infinitesimally small trade. Because the pool follows
+$xy\approx k$, adding a tiny amount of X must be matched by a small decrease
+in Y; the local change is about $y/x$ units of Y for each unit of X:
+
+$$
+P_X \approx \frac{y}{x}
+$$
+
+Here $P_X$ is measured in units of Y per unit of X. A finite trade changes
+both reserves, so its average execution price differs from the starting spot
+price. This is the simplified constant-product v2 model, not a formula for
+every AMM or DEX design.
 
 For an input of $\Delta x$ X (measured in token X units) and fee rate $f$
 (a fraction, such as $0.003$ for 0.3%), the fee-adjusted amount used in the
@@ -111,15 +127,13 @@ $\Delta x_{\mathrm{eff}}$ are token X and the units of $y'$ and $\Delta y$ are
 token Y. These expressions assume a two-reserve constant-product pool, a
 stated fee, and no other route or market impact.
 
-::: details Primary source: Uniswap v2 Core whitepaper
+### Primary source: Uniswap v2 Core whitepaper
+
 Read **§2.1, “Constant Product Market Maker”** for the reserve rule. Section
 2.2 on price oracles is optional context; the calculation below is the focus.
 
 - [Open the Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf)
 - For protocol-authored pool and swap diagrams, see [Uniswap's “How Uniswap Works”](https://developers.uniswap.org/docs/get-started/concepts/how-uniswap-works).
-
-@[pdf 1 height="620px" zoom="90"](https://app.uniswap.org/whitepaper.pdf)
-:::
 
 ### Worked example: selling 10 ETH
 

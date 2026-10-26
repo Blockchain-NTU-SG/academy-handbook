@@ -95,6 +95,10 @@ sell the tokens. An unlock also does not always add the full amount to
 reported circulating supply, for example if the tokens stay in a treasury
 wallet that is still counted as non-circulating.
 
+A **supply sink** is a mechanism that removes tokens from active circulation.
+A burn is permanent; staking or locking may only restrict transferability for
+a time, so these mechanisms do not have the same economic effect.
+
 ### Who receives tokens and why
 
 | Recipient | Why projects allocate tokens to them |
@@ -114,16 +118,23 @@ supply and what they are paid to want.
 ### Follow the economics as well as the supply
 
 ==Protocol usage ≠ fees ≠ revenue ≠ earnings ≠ token-holder value accrual.==
-Map the path instead of assuming that an active protocol makes its token
-valuable. The diagram is an Academy economic-flow schematic: each arrow is a
-question to verify, and the final link is conditional.
+**Value accrual** asks whether protocol success creates a credible economic
+benefit for token holders—for example, a distribution, buyback or burn,
+required utility, or another enforceable mechanism. Governance rights alone
+do not automatically create that benefit. Map the path instead of assuming
+that an active protocol makes its token valuable. The diagram is an Academy
+economic-flow schematic: each arrow is a question to verify, and the final
+link is conditional.
+
+**Liquidity providers** supply assets to a pool and may receive some trading
+fees; protocols can also pay suppliers, validators or incentive recipients.
 
 ```mermaid
 flowchart TB
   accTitle: Protocol economics and conditional token-holder accrual
   accDescr: Usage may create fees; fees may pay providers or become retained revenue; revenue may form treasury or earnings; any path to token-holder accrual is conditional.
   U["Protocol usage"] -->|"only paid activity"| F["Fees"]
-  F -->|"some fees paid out"| P["Payments to LPs,<br/>suppliers, validators<br/>or incentives"]
+  F -->|"some fees paid out"| P["Payments to liquidity providers,<br/>suppliers, validators<br/>or incentives"]
   F -->|"amount retained"| R["Protocol revenue"]
   R -->|"after costs / policy"| T["Treasury or earnings"]
   T -.->|"only with a credible mechanism / right"| H["Possible token-holder accrual"]
@@ -137,17 +148,17 @@ keeps the definitions and questions precise.
 | Flow | Research question |
 |---|---|
 | Supply sources and sinks | What mints/emits/unlocks tokens? What permanently burns them? Staking or a lock restricts liquidity but is not necessarily a permanent sink. |
-| Demand drivers | Is the token required for a service, collateral, security or another use? Who needs it, and why? |
+| Demand drivers | A demand driver is a reason someone needs or wants the token. Is it required for a service, collateral, security, governance or another use—and who needs it, and why? |
 | Usage → fees | Which activity pays a charge, rather than just moving assets? |
-| Fees → revenue | What goes to suppliers/LPs, and what is retained by the protocol or distributed to holders? |
+| Fees → revenue | What goes to suppliers or liquidity providers, and what is retained by the protocol or distributed to holders? |
 | Revenue → earnings / treasury | What remains after the stated costs or incentives? Is the figure cash flow, an accounting estimate or token emissions? |
 | Token-holder accrual | Is there an enforceable distribution, buyback/burn or another credible economic link? Who can change it? |
 
 Providers use different definitions; DefiLlama separates supply-side payments,
 protocol revenue and token-holder revenue. Name your convention and period
-before comparing figures. Governance rights alone establish decision power,
-not a contractual claim on cash flow or automatic economic demand. An unlock
-percentage is context, not a universal danger threshold.
+before comparing figures. Governance rights establish decision power, not by
+themselves a claim on cash flow or automatic demand. An unlock percentage is
+context, not a universal danger threshold.
 
 ### Worked example: NOVA
 
@@ -176,7 +187,8 @@ is worth noting. It still does not tell you whether they will sell.
 
 ### A real check: Arbitrum
 
-Arbitrum's docs list where its initial 10 billion ARB went: 35.28% to the DAO
+Arbitrum's decentralised autonomous organisation (DAO) docs list where its
+initial 10 billion ARB went: 35.28% to the DAO
 treasury, 26.94% to the team, contributors and advisers, 17.53% to investors,
 11.62% to users by airdrop, 7.5% to the Arbitrum Foundation and 1.13% to DAOs
 building on Arbitrum. User and DAO airdrops were claimable from March 2023.

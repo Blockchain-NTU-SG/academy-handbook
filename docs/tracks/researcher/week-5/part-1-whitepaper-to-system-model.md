@@ -45,10 +45,6 @@ You do not need to read every paragraph before building the model.
 
 - [Open the original Bitcoin whitepaper (PDF)](https://bitcoin.org/bitcoin.pdf)
 
-::: details Read the original PDF here (optional)
-@[pdf 1 height="620px" zoom="90"](https://bitcoin.org/bitcoin.pdf)
-:::
-
 ### A method for reading a whitepaper
 
 This is a reading method, not a diagram of Bitcoin's architecture. Follow the
