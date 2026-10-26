@@ -217,15 +217,20 @@ a finished version of the Registry app, with a wallet connection, your record,
 a form to update it and an activity list, and it has been broken in several
 places.
 
-1. **Get the lab and run it.**
+1. **Get the lab and run it.** Commit and preserve your existing W5 work
+   first. Create your own working branch from the shared remote lab branch
+   (replace `yourname` with your identifier):
 
    ```bash
    git fetch origin
-   git checkout w6-2-broken-dapp
+   git switch -c w6-2-yourname origin/w6-2-broken-dapp
    npm ci
    cp .env.example .env
    npm run dev
    ```
+
+   Commit fixes on your own branch; do not push them back to the shared
+   `w6-2-broken-dapp` branch.
 
    Connect MetaMask on **Ethereum Sepolia**, using your Academy test wallet
    with a little test ETH.

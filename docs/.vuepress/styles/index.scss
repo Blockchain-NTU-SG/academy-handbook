@@ -250,9 +250,12 @@ textarea {
 }
 
 .vp-doc table {
-  display: table;
+  /* Intrinsic table width can exceed the article even with max-width: 100%.
+   * Keep the HTML table/rows/cells, but contain wide precision tables here. */
+  display: block;
   width: 100%;
   max-width: 100%;
+  overflow-x: auto;
   margin: 24px 0 30px;
   overscroll-behavior-inline: contain;
   border: 1px solid var(--academy-border);
@@ -277,6 +280,14 @@ textarea {
   min-width: 120px;
   padding: 11px 14px;
   border-color: var(--academy-border);
+}
+
+.vp-doc td :not(pre) > code,
+.vp-doc th :not(pre) > code,
+.vp-doc td > code,
+.vp-doc th > code {
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .vp-doc tr:nth-child(2n) {
@@ -987,14 +998,6 @@ textarea {
 
   .vp-home .academy-social-link {
     flex: 0 0 40px;
-  }
-
-  .vp-doc table {
-    display: block;
-    width: max-content;
-    min-width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
   }
 
   .vp-doc._getting-started_tools .vp-card-grid {
