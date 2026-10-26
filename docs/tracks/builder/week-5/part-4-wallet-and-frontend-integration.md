@@ -5,7 +5,7 @@ day: 4
 title: "Wallet and frontend integration"
 status: drafting
 owner: "Education Team"
-reading_time: "60 min hands-on"
+reading_time: "50 min hands-on"
 points: 100
 sources:
   - name: "EIP-1193 — Ethereum Provider JavaScript API"
@@ -76,9 +76,14 @@ After this Part you can:
 
 ### How the page talks to the wallet
 
-MetaMask and similar wallets put an object called `window.ethereum` on every
-page. It follows a standard, [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193):
-you call `request({ method, params })` and listen for events.
+MetaMask and similar wallets expose a **provider**: a JavaScript object that
+passes a page's Ethereum requests to the wallet and its connected node. Many
+wallets make it available as `window.ethereum`.
+
+[EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) is the standard browser-
+wallet provider interface. It gives a page a `request({ method, params })`
+entry point plus events for changes such as the selected account or chain. It
+does not give the page the user's private key; the wallet remains the signer.
 
 | You want to… | Call or listen for |
 |---|---|
@@ -118,9 +123,43 @@ VITE_RPC_URL=https://ethereum-sepolia-rpc.publicnode.com
 Restart `npm run dev` after changing `.env`. Only public values ever go in a
 `VITE_` variable, since every visitor can read them.
 
+### Two paths through the frontend
+
+The page uses a public client for questions and a wallet client for
+user-authorised writes. The two paths share the contract address, chain and
+ABI, but they have different trust boundaries:
+
+```mermaid
+flowchart TD
+  accTitle: Public and wallet client paths
+  accDescr: The frontend uses a public client to ask an RPC node for blockchain state, while a wallet client asks a browser wallet to sign a transaction before sending it to the blockchain.
+  F1["Frontend"] --> P["Public client"] --> R["RPC"] --> C["Chain"]
+  F1 --> W["Wallet client"] --> B["Browser wallet"] --> C
+```
+
+The public client asks and can work before anyone connects a wallet. The wallet
+client requests a user-authorised signature; it does not silently receive the
+key or turn a rejected request into a success.
+
 ### The stages of a write
 
 A write from a page has more ways to end than a script:
+
+```mermaid
+flowchart TD
+  accTitle: Frontend write states
+  accDescr: A frontend write starts idle, waits for the wallet, then either ends in rejection or receives a transaction hash, waits for a receipt, and shows success or a revert before refreshing displayed state.
+  A["Idle"] --> B["Await wallet"]
+  B --> C["Rejected"]
+  B --> D["Hash<br/>pending"] --> E["Receipt"]
+  E --> F["Success"]
+  E --> G["Revert"]
+  F --> H["Read again"]
+```
+
+The page should reflect these states honestly: a popup still waiting for the
+user is not a pending transaction, and a hash is not a mined success. Refresh
+displayed state only after the receipt says the write succeeded.
 
 | Stage | What the user sees | How you know |
 |---|---|---|
