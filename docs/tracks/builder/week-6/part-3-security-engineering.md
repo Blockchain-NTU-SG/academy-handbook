@@ -239,13 +239,17 @@ thank the author of a record, and authors withdraw what they have received.
 Never deploy it, and never send it real funds.==
 :::
 
-1. **Get the lab.** From your starter repository:
+1. **Get the lab.** Commit and preserve your W5 work first. From your starter
+   repository, create your own working branch (replace `yourname`):
 
    ```bash
    git fetch origin
-   git checkout w6-3-security-lab
+   git switch -c w6-3-yourname origin/w6-3-security-lab
    forge test --match-contract TipRegistryTest
    ```
+
+   Keep fixes on your own branch; do not push them back to the shared
+   vulnerable `w6-3-security-lab` branch.
 
    *All six tests pass.* That does not mean the contract is safe.
 

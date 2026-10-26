@@ -55,9 +55,9 @@ protects you is the notice period in your contract: time to find somewhere
 else before the change lands.
 
 Where the picture stops: a landlord is one person you can name. In a rollup,
-the "landlord" is a mix of software, a company running the sequencer, a DAO
-vote and a 12-person council, each with different powers and different notice
-periods. Some of them can act with no notice at all.
+the "landlord" is a mix of software, a company running the sequencer, a
+decentralised autonomous organisation (DAO) vote and a 12-person council,
+each with different powers and notice periods. Some can act with no notice.
 :::
 
 ## The hard skill
@@ -85,6 +85,29 @@ For each actor in the system, write down:
 4. **Time:** how long your recourse takes, and whether you must start before
    the actor acts.
 
+### Before reading the architecture
+
+The diagram is easier to follow with a small amount of vocabulary. In this
+case, **Layer 1 (L1)** is Ethereum; a **Layer 2 (L2)** processes transactions
+separately and relies on Ethereum for published data and important dispute or
+withdrawal steps.
+
+| Term | Plain-English role in this example |
+|---|---|
+| **Sequencer** | A service that orders L2 transactions quickly. Its early confirmation is useful, but it is not the same as Ethereum finality. |
+| **Batch** | A group of L2 messages or transactions published to Ethereum. |
+| **Blob / calldata** | Two ways to publish transaction data. Calldata is available to EVM contracts; blob contents are not directly readable by them and have protocol-defined availability. For this Part, focus on how rollup users can reconstruct the published data, not byte encoding. |
+| **State root** | A compact cryptographic commitment to a particular L2 state. It is a checkable fingerprint, not the state contents themselves. |
+| **Validator / assertion** | A validator proposes an assertion: a claim about L2 execution and resulting state that another participant can challenge under the rollup rules. |
+| **Inbox / Outbox** | Ethereum contracts that record messages sent to the rollup and provide the route for eligible messages or withdrawals back to Ethereum. |
+| **Forced inclusion** | If a sequencer does not include a user's message, the user may submit it through Ethereum's Inbox and wait through the protocol's delay. |
+| **Withdrawal / exit** | A user proves an eligible L2 withdrawal through the Outbox after the required state claim is confirmed; it is distinct from forcing a transaction into the L2. |
+
+You do not need to understand blob encoding, every Inbox function or the
+internal dispute game yet. The terms above are enough to trace who publishes
+data, who makes a state claim and how a user can seek a delayed inclusion or
+withdrawal route.
+
 ### The architecture: the path of a transaction
 
 ```mermaid
@@ -102,9 +125,11 @@ publishes the data on Ethereum (2). A validator claims what the resulting
 state is (3). Anyone can challenge that claim (4). If nobody does for long
 enough, the root becomes final (5) and you can withdraw against it (6).
 
-Challenges use **BoLD** fraud proofs. Two rival claims split their
-disagreement in half again and again until they disagree about a single
-instruction, which Ethereum then executes itself to decide who is right.
+Challenges use Arbitrum's **BoLD** dispute protocol and interactive fraud
+proofs: if a state claim is challenged, the parties narrow their disagreement
+until it concerns one execution step, which the Ethereum contracts can verify.
+You need to know that the protocol provides a way to challenge a claim, not
+the details of its dispute-game implementation.
 
 ### The five questions L2BEAT asks
 
@@ -129,17 +154,25 @@ Every critical contract can be upgraded, so the most important trust question
 is who can upgrade, and with what delay.
 
 - **Regular path:** a change passes a DAO vote (or comes from the
-  non-emergency Security Council), then goes through several timelocks in a
-  row before it runs.
+  non-emergency Security Council), then waits through several **timelocks**—
+  enforced delays between approving an upgrade and executing it.
 - **Emergency path:** the **Security Council**, a 9-of-12 multisig, can
-  upgrade **instantly**.
+  upgrade **instantly**. A **multisig** is a wallet that requires a specified
+  number of separate signers; here, 9 of 12 must approve.
 
 What matters is the **exit window**:
 
-> Exit window = time before an upgrade goes live − time you need to get out
+An exit window is the usable warning time left after subtracting how long a
+user needs to leave. If it is zero or less, there is no usable time buffer.
 
-A long delay only protects you if you can finish leaving before the upgrade
-lands. A delay of zero means a window of zero.
+$$
+W_{\text{exit}} = T_{\text{upgrade}} - T_{\text{leave}}
+$$
+
+Here $T_{\text{upgrade}}$ is the remaining time before the change can go live,
+and $T_{\text{leave}}$ is the time the user's withdrawal path requires. A long
+delay only protects a user if they can finish leaving before the upgrade lands.
+A delay of zero means a window of zero.
 
 ### Reading stages carefully
 
@@ -176,9 +209,10 @@ The failure path, step by step:
    SequencerInbox. That second Ethereum transaction fixes its place in the
    order for good.
 
-**Conclusion:** your funds are safe from permanent censorship, but you pay
-for two Ethereum transactions and wait up to a day. Anything time-sensitive
-can still fail.
+**Conclusion:** Against sequencer-only censorship, the user still has an L1
+forced-inclusion route. It is slow and costs Ethereum gas, so time-sensitive
+actions can still fail. This does not remove the separate upgrade and Security
+Council assumptions described elsewhere on this page.
 
 Notice the method: actor → power → recourse → time → limit. You do the same
 for the rest of the system.

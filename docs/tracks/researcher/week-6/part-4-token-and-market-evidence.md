@@ -2,179 +2,459 @@
 track: researcher
 week: 6
 day: 4
-title: "Token and market evidence"
+title: "Token, liquidity and valuation evidence"
 status: drafting
 owner: "Education Team"
-reading_time: "40 min"
+reading_time: "60 min hands-on"
 points: 100
 sources:
   - name: "CoinGecko — Supply methodology"
     url: "https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology"
     label: "Link"
-  - name: "CoinGecko — What is fully diluted valuation (FDV)?"
+  - name: "CoinGecko — FDV"
     url: "https://www.coingecko.com/learn/what-is-fully-diluted-valuation-fdv-in-crypto"
     label: "Link"
-  - name: "Uniswap — What is price impact?"
+  - name: "DefiLlama — Data definitions"
+    url: "https://docs.llama.fi/analysts/data-definitions"
+    label: "Link"
+  - name: "Uniswap — Price impact"
     url: "https://support.uniswap.org/hc/en-us/articles/8671539602317-What-is-price-impact"
     label: "Link"
-  - name: "Etherscan — Understanding the token page"
+  - name: "Etherscan — Token pages"
     url: "https://info.etherscan.com/understanding-token-page/"
     label: "Link"
-  - name: "Arkham — Token pages, holders and entities"
+  - name: "Arkham — Token pages"
     url: "https://codex.arkm.com/the-intelligence-platform/token-pages"
+    label: "Link"
+  - name: "Aave — Market operations"
+    url: "https://www.aave.com/docs/aave-v3/markets/operations"
+    label: "Link"
+  - name: "Aave — FAQ and reserve factor"
+    url: "https://aave.com/faq"
+    label: "Link"
+  - name: "Aave — Governance"
+    url: "https://aave.com/docs/ecosystem/governance"
+    label: "Link"
+  - name: "Ethereum.org — Gas and fees"
+    url: "https://ethereum.org/developers/docs/gas/"
+    label: "Link"
+  - name: "Ethereum.org — Staking"
+    url: "https://ethereum.org/staking/"
+    label: "Link"
+  - name: "Ethereum.org — ETH issuance and burn"
+    url: "https://ethereum.org/roadmap/merge/issuance/"
+    label: "Link"
+  - name: "Arbitrum DAO — Token supply and vesting"
+    url: "https://docs.arbitrum.foundation/token-supply"
+    label: "Link"
+  - name: "Aave Governance — Aave V4 on Arc activation (16 September 2026)"
+    url: "https://governance.aave.com/t/arfc-deploy-aave-v4-on-arc/25170/9"
+    label: "Link"
+  - name: "Aave Governance — Horizon RWA update (31 July 2026)"
+    url: "https://governance.aave.com/t/horizon-technical-maintenance-updates/25408"
     label: "Link"
 ---
 
-<!--
-Author note (Education team): PIX and ORBIT are made-up tokens; ORBIT
-continues the supply example from Week 5 Part 5. Every figure was recalculated
-on 21 October 2026. The model answer is kept outside the public handbook.
--->
+<!-- Original synthetic data, not live valuations or recommendations.
+No reviewer solution is published here. Existing route retained. -->
 
-# Week 6 · Part 4 — Token and market evidence
+# Week 6 · Part 4 — Token, liquidity and valuation evidence
 
-> **Core question — how much of a token can actually be traded, by whom, and
-> at what price, compared with what its headline valuation suggests?**
+> **Core question — what makes a valuation comparison meaningful, and what could explain an apparent discount?**
 
-A token page shows a market cap, a fully diluted valuation and a daily volume.
-Together they look like a description of a market. In this Part you test them:
-how much supply is really tradable, how concentrated it is, and what a
-realistic purchase would actually cost.
+A low multiple can reflect overlooked economics, weak value capture, low float,
+fragile liquidity or a bad comparison. Use W5.5 and W6 Parts 2–3 to test what
+it means before making a claim.
 
-::: tip Picture a house price in a small village
-If one house sells for a high price, an estate agent may value every house
-in the village at that price. That does not mean all of them could be sold
-tomorrow at that price.
-
-Where the picture stops: in a token market you can see some of the "buyers'
-queue" directly, in an AMM pool or an order book, so you can calculate what
-a trade of a given size would cost instead of guessing.
-:::
+**Market capitalisation (market cap)** is a token's quoted price multiplied
+by a provider's reported circulating supply. It is an estimate of market
+value, not cash held by the protocol.
 
 ## The hard skill
 
-**Judge a token's real float, holder concentration and executable liquidity
-against its headline market cap and FDV.**
+**Choose a valuation denominator that fits the question and interpret relative
+value alongside token structure, executable liquidity and other explanations.**
 
-After this Part you can:
+This is economic research methodology. No trade, wallet connection, price
+target, portfolio decision or real-money activity is required.
 
-- calculate market cap, FDV and their ratio, and say what each leaves out;
-- estimate a real float with stated assumptions;
-- measure concentration among independent large holders;
-- test what a trade of a given size would cost in a pool.
+W5P3 introduced DEX and automated market maker (AMM) mechanics; use that
+distinction when deciding what a volume, fee or liquidity number represents.
 
 ## Core / reference material
 
-### Five terms
+### Framework map: eight lenses, selected by the question
 
-- **Reported circulating supply:** tokens a data provider classes as
-  available to the public market. It may not equal the tokens actually on
-  offer at a given moment.
-- **Estimated real float:** the part of reported circulation plausibly
-  tradable soon, after a clearly stated adjustment for strategic holdings and
-  delayed withdrawals. This is your estimate, not a standard metric.
-- **Holder concentration:** the share of supply held by the largest
-  independent holders. Exchanges, bridges and liquidity pools hold tokens for
-  many people, so label or remove them before treating a big address as one
-  investor.
-- **Liquidity:** the ability to buy or sell without moving the price much.
-  Check pool reserves, order-book depth, spreads and a realistic quote. Daily
-  volume alone does not guarantee it.
-- **Market cap and FDV:** market cap = price × reported circulating supply.
-  For this Part, FDV = price × maximum supply. When you compare real tokens,
-  say which supply definition you used.
+| Lens | What you are asking | Useful evidence | Common mistake |
+|---|---|---|---|
+| **Fundamentals** | What does it do, who uses it, what activity is charged for, and who receives the fees? | Protocol docs, activity, fees and retained revenue under stated definitions | Treating usage or total value locked (TVL)—assets a provider counts as deposited—as revenue |
+| **Flows** | What capital, tokens or liquidity entered or left, and where did it go? | Dated bridge flows, issuance/redemption, treasury or exchange movements and liquidity changes | Treating a transfer or unlock as organic demand or a sale |
+| **Valuation** | Does the chosen value measure match the economic denominator and period? | Comparable market value, supply basis, fee/revenue definitions and time window | Dividing by TVL or volume as if either were retained earnings |
+| **Tokenomics** | How are supply, utility, security, governance and holder rights connected? | Token contracts, protocol terms, fee destinations and enforceable rights | Assuming governance power creates a claim on cash flow |
+| **Unlocks** | Who receives newly transferable tokens, when, and relative to float and liquidity? An unlock is the end of a transfer restriction, not proof of a sale. | Dated vesting schedule, recipient, circulating-supply method and market depth | Treating every unlocked token as immediately sold or fully liquid |
+| **Catalysts** | What observable change could alter use, cost, value capture or risk? | A defined before/after measure and a dated launch or parameter change | Treating an announcement as evidence that the change worked |
+| **Risks** | Which failure could break the thesis, who is exposed, and what signal would show it? | Dependency, permissions, liquidity, oracle and incident evidence | Listing generic risks without a causal path or exposed party |
+| **Narrative** | What story attracts attention, and what evidence supports it? | Dated communications, attention measures and independently checked outcomes | Treating attention or a compelling story as economic proof |
 
-### Worked example: PIX
+The first seven lenses focus mainly on observable system and economic evidence;
+**Narrative** asks how market participants interpret it and where attention is
+focused. None is perfectly objective: definitions, coverage and interpretation
+still require judgment. Not every question needs all eight.
 
-PIX is a made-up token trading at **$2**, with **100m** reported circulating
-tokens and **500m** maximum. 20m of the circulating tokens are strategic
-holdings, 10m are staked with delayed withdrawals, and five independent large
-holders control 21m of the rest. Its main AMM pool holds **2m PIX and 4m
-USDC**. Reported daily volume is **$3m**. Ignore swap fees, and assume no
-other venue has comparable depth.
+### How the lenses relate
 
-1. **Headline valuation.** Market cap = 100m × $2 = **$200m**. FDV = 500m ×
-   $2 = **$1bn**. Market cap ÷ FDV = **20%**. Neither tells you how much can
-   actually be traded near $2.
-2. **Real float.** 100m − 20m − 10m = **70m PIX**, which is 70% of reported
-   circulation. This is an estimate, not an official figure.
-3. **Concentration.** Five holders own 21m ÷ 70m = **30%** of the real float.
-   That is a concentration risk on the selling side. On a real token, check
-   that the addresses belong to separate owners.
-4. **One AMM trade.** With x = 2,000,000 PIX and y = 4,000,000 USDC,
-   k = x × y = 8,000,000,000,000. A buyer adds 400,000 USDC, so y becomes
-   4,400,000 and the new PIX reserve is k ÷ 4,400,000 ≈ 1,818,181.82. The
-   buyer receives about **181,818.18 PIX**, at an average of $400,000 ÷
-   181,818.18 ≈ **$2.20**, **10%** above the $2 starting price. This is a
-   simplified model, not a live quote.
-5. **Judgment.** PIX has a $200m market cap and $3m of daily volume, yet a
-   $400,000 buy pays about 10% over the starting price, and five holders
-   control 30% of what can trade. Past volume is not proof of depth today.
+The groups below help organise a question; they are not a mandatory order or a
+checklist. Select the lenses that can actually inform the case.
+
+```mermaid
+flowchart LR
+  subgraph SYS["System"]
+    F[Fundamentals] --- FL[Flows]
+  end
+  subgraph TOK["Token"]
+    T[Tokenomics] --- U[Unlocks]
+  end
+  V[Valuation]
+  C[Catalysts]
+  R[Risks]
+  N[Narrative / attention]
+  B[Conclusion limited to evidence]
+  SYS -. informs .-> V
+  TOK -. informs .-> V
+  C -. may change .-> SYS
+  R -. tests .-> B
+  N -. context, not proof .-> B
+  V --> B
+```
+
+**Academy schematic — a way to organise the lenses, not a fixed research
+sequence.** Bring together the evidence that answers the question and state
+what remains unknown.
+
+### 1. Fundamentals — what economic system exists underneath the token?
+
+Before asking whether a token is cheap or expensive, ask whether an economic
+system worth valuing exists: what it does, who uses it and what useful activity
+results.
+
+For a decentralised exchange (DEX), start with a trade: a trader swaps, pays a
+fee, and the protocol's rules allocate that fee. Some may go to liquidity
+providers (LPs); some protocol designs may retain a portion. Retained
+economics may enter a treasury or support other costs. Only a documented rule
+or mechanism might connect them to token holders.
+
+```mermaid
+flowchart LR
+  accTitle: From protocol use to possible token-holder value
+  accDescr: A swap creates a fee, which may be paid to liquidity providers or partly retained. Retained economics may enter a treasury or earnings, and only a defined mechanism may connect them to token holders.
+  U["Protocol use<br/>a trader swaps"] --> F["Fee paid"]
+  F -->|"allocated share"| LP["LP payments"]
+  F -->|"if retained"| R["Protocol revenue / retained economics"]
+  R --> T["Treasury or earnings after costs"]
+  T -->|"only if rights and mechanism allow"| H["Possible token-holder accrual"]
+```
+
+**Academy schematic — a simplified economic path, not a protocol's actual
+fee-allocation architecture.** The important distinction is:
+
+**Usage ≠ fees ≠ protocol revenue ≠ earnings ≠ token-holder value accrual.**
+
+| Ask | Evidence to check | Boundary |
+|---|---|---|
+| What problem is solved, and who uses it? | Official mechanism docs and independently measured activity | Transaction count alone does not show useful activity. |
+| What does a user pay, and who receives it? | Fee rules and destinations | Fees paid to LPs or suppliers are not automatically retained by the protocol. |
+| What remains after payments and costs? | Defined retained revenue, treasury and distribution rules | TVL is deposited assets under a provider's method, not revenue. |
+| Is growth economically meaningful? | Activity definitions and incentive context | Subsidised activity may not persist when incentives change. |
+
+Use [W5P5](../week-5/part-5-token-and-incentive-economics.md) for the full
+fee-flow and value-accrual model; here, test whether that chain exists in the
+case rather than repeating it.
+
+### 2. Flows — where is capital actually moving?
+
+Fundamentals describe the economic machine; **flows describe where capital,
+tokens or liquidity moved during a stated period**. W6P2 traces individual
+records; this lens asks what a set of records means at system level.
+
+| Ecosystem / market flows | Protocol / token flows |
+|---|---|
+| Stablecoin issuance or redemption | Deposits and withdrawals |
+| Bridge flows and cross-chain liquidity migration | LP movement and staking / unstaking |
+| Institutional or treasury accumulation | Treasury transfers and token issuance / redemption |
+| Exchange-traded product flows, where relevant | Exchange deposits and bridge movement |
+
+These are possible questions, not a checklist. Verify asset, chain, direction,
+period, labels and coverage before interpreting totals: **bridge inflow ≠
+revenue; transfer ≠ organic demand; exchange deposit ≠ confirmed sale; unlock
+≠ sale.**
+
+### 3. Valuation — what economic quantity is the market value compared with?
+
+Valuation asks: **how much market value is assigned per unit of a chosen
+economic quantity?**
+
+$$
+\text{Multiple} =
+\frac{\text{Valuation}}{\text{Chosen Economic Denominator}}
+$$
+
+The numerator is what is being valued; the denominator is the quantity used
+for comparison. For example, **USD 100 million market cap ÷ USD 10 million
+comparable annual retained revenue = 10×**: ten units of value per unit of
+annual retained revenue. Match currency, period, scope and definitions. This
+is a comparison, not a return forecast.
+
+| Comparison | Question it can help ask | Why it is not interchangeable |
+|---|---|---|
+| Market cap / revenue | How does the currently reported circulating-token value compare with a defined revenue measure? | Supply basis is current reported circulation; “revenue” still needs a recipient and cost definition. |
+| FDV / revenue | How does a broader specified supply basis compare with that revenue measure at today's marginal price? | FDV convention varies; it does not mean all tokens will circulate at today's price. |
+| Market cap / TVL | How does token market value compare with assets a provider counts as deposited? | TVL is not revenue, earnings or executable liquidity. |
+
+Market cap commonly uses reported circulating supply; fully diluted valuation
+(FDV) uses a stated broader supply basis. A simplified relationship is:
+
+$$
+\text{Market Cap} = P\times S_{\text{circ}}
+\qquad\qquad
+\text{FDV} = P\times S_{\text{max}}
+$$
+
+Here $P$ is price per token; $S_{\text{circ}}$ is reported circulating
+supply; and $S_{\text{max}}$ is maximum supply. The products are in the chosen
+currency. State the provider's FDV convention: using today's marginal price
+for all maximum supply does not mean all tokens could be sold at that price.
+Market cap and FDV answer different supply questions; neither is universally
+right.
+
+**Estimated real float** is an analyst's assumption about supply plausibly
+tradable soon, not a universal standard; state adjustments and avoid
+double-subtraction. Top-holder **addresses** may represent exchanges, bridges,
+LPs or many users, so do not assume one address is one person (W6P2).
+
+Executable liquidity asks what a stated-size trade could get now; quote size,
+direction, venue, fees and time matter. Daily volume is turnover, not depth.
+[W5P3](../week-5/part-3-mechanism-and-market-design.md) teaches the AMM
+calculation; here we interpret quotes.
+
+A **premium** is a higher multiple than a valid comparison set; a **discount**
+is a lower one. **Premium ≠ automatically expensive; discount ≠ automatically
+cheap.** Growth, competitive position, value capture, treasury, liquidity,
+incentives, rights, risk and expectations may explain a difference. If
+mechanisms or definitions are not comparable, correct arithmetic can still
+support a weak conclusion.
+
+| Economic denominator | What it measures | Main boundary |
+|---|---|---|
+| TVL | Deposited assets under a consistent method | Not revenue; price effects or double-counting can inflate it |
+| Fees | User charges under a stated definition | Some or most may go to LPs / suppliers |
+| Retained revenue | Economics left or distributed after supplier payments | State recipient and provider convention |
+| Earnings / holder accrual | Net economics after costs or actual holder distributions | Not interchangeable; costs and rights may be omitted or change |
+| Economic volume | Activity for comparable business models | Incentivised or wash-like flow can inflate it |
+
+Compare like mechanisms, fee recipients, token rights, periods and
+definitions. A rollup's transaction fees and a DEX's trading volume are not the
+same revenue measure; trailing-12-month and annualised-last-month figures are
+not interchangeable without explaining the time basis.
+
+### 4. Tokenomics — if the protocol succeeds, why should the token benefit?
+
+This lens tests the connection between protocol outcomes and the token. A
+protocol can become more useful without its token benefiting unless a clear
+mechanism links the two.
+
+| Supply / availability | Demand / rights |
+|---|---|
+| Emissions, minting and burns | Required gas or protocol access |
+| Unlocks and circulating supply | Staking / security and collateral |
+| Staking or locking; treasury inventory | Fee discounts and enforceable distributions |
+| Provider classifications and their date | Governance and other documented rights |
+
+Governance can matter, but it does not automatically create a cash-flow claim
+or continuous demand. Check token and governing documents, then connect to
+W5P5: **protocol success ≠ token success unless a clear mechanism links
+them.**
+
+### 5. Unlocks — what new transferable supply is becoming available?
+
+An **unlock** removes a transfer restriction; it is not evidence of a sale or
+intent. Check four things:
+
+| Question | What to compare |
+|---|---|
+| **How much?** | Reported circulation, estimated float, executable liquidity and relevant turnover; these differ. |
+| **Who?** | Team, early investors, treasury, ecosystem or users; category alone does not reveal intent. |
+| **When?** | A cliff releases at a point; linear vesting releases over time. Check the dated schedule. |
+| **Absorbable?** | Liquidity, turnover, holder concentration and recipient behaviour; historical volume does not guarantee execution. |
+
+There is no universal “large unlock” threshold. Any heuristic depends on the
+token's float and market structure. Treat an unlock as a supply event to
+investigate, not proof of selling pressure.
+
+### 6. Catalysts — what observable change could materially alter the thesis?
+
+A **catalyst is not simply news**: it is an observable change that could alter
+usage, costs, value capture, supply/demand, competition or risk. A product
+launch, fee-policy change, integration or governance decision matters only if
+it changes implementation or behaviour.
+
+```mermaid
+flowchart LR
+  A[Announcement] --> I[Implemented?] --> U[Adoption or behaviour change?] --> E[Measured economic effect?]
+```
+
+Check each link against a baseline and plausible alternatives. An announcement
+without changed behaviour is not demonstrated economic impact; a catalyst may
+strengthen, weaken or leave a thesis unchanged. It is not an instruction to buy.
+
+### 7. Risks — what could make the thesis wrong?
+
+A useful risk is more than “smart-contract risk” or “regulation”. Trace:
+
+**Trigger → mechanism → exposed party → economic or thesis impact →
+observable evidence.**
+
+For example: an oracle stops updating → collateral may be mispriced → borrowers,
+liquidators or suppliers may be exposed. Check update freshness, market depth,
+position health and pause/fallback rules. This is a scenario, not a forecast.
+W6P5 teaches the full dependency and stress-test method. Here, identify
+evidence that would make you reduce confidence in the valuation or value-
+accrual thesis.
+
+### 8. Narrative — why is the market paying attention to this now?
+
+A **narrative** is the story market participants use to interpret or focus
+attention on a protocol, token or sector (for example, stablecoins, RWA,
+AI agents or DePIN). Attention may bring discussion or capital interest and
+coincide with demand or valuation, but does not itself change protocol
+economics or prove value accrual.
+
+| Fundamentals | Attention | What it can mean |
+|---|---|---|
+| Weak | Strong | The story may be running ahead of the economics. |
+| Improving | Weak | Economics may improve before the market notices. |
+
+Ask what claim is repeated, who makes it and what independent evidence
+supports or contradicts it. Attention measures are imperfect; narrative is
+context, not economic proof. This is not a trading-entry or exit method.
+
+### Use the lenses together
+
+Use evidence that speaks to one question, state what remains unknown and
+identify what could disprove your explanation. No single metric or story
+should dominate the conclusion.
+
+### What the framework looks like in real research
+
+These real-world examples show the **research move**, not an investment
+conclusion; re-check live state. A protocol can appear under several lenses
+because a lens is a question, not a protocol category.
+
+| Lens | Real example | How a researcher uses the lens |
+|---|---|---|
+| **Fundamentals** | [Aave lending](https://www.aave.com/docs/aave-v3/markets/operations) and [reserve FAQ](https://aave.com/faq) | Trace suppliers, borrowers, interest flows and reserve-factor allocation. Gross borrower interest does not automatically accrue to token holders. |
+| **Flows** | [Aave reserves](https://aave.com/faq) | Compare supply, withdrawals, borrowing and repayment for one reserve/period. Fundamentals maps mechanics; flows tracks capital movement. |
+| **Valuation** | [AAVE](https://aave.com/docs/ecosystem/governance) | Separate supplier economics, treasury allocation, costs and documented AAVE rights before choosing a multiple; gross interest is not holder earnings. |
+| **Tokenomics** | ETH: [gas](https://ethereum.org/developers/docs/gas/), [staking](https://ethereum.org/staking/), [issuance and burn](https://ethereum.org/roadmap/merge/issuance/) | Study gas use, staking, issuance and base-fee burn together; activity alone does not reveal net supply or demand. |
+| **Unlocks** | [ARB](https://docs.arbitrum.foundation/token-supply) | Compare scheduled team/investor transfers with circulation, float and liquidity. The page's supply examples are dated 2024; recheck current state. |
+| **Catalysts** | [Aave V4 on Arc](https://governance.aave.com/t/arfc-deploy-aave-v4-on-arc/25170/9) | Governance reported activation on **16 September 2026**: implementation evidence. Measure adoption and economic effects against a baseline before calling it a catalyst. |
+| **Risks** | [Aave with wstETH collateral](part-5-dependency-governance-and-risk.md#case-wsteth-collateral-in-aave-v3-on-ethereum) | Trace market/oracle trigger → collateral value and health factor → liquidation demand → exposed party. W6P5 develops the full causal method. |
+| **Narrative** | [RWA / Aave Horizon](https://governance.aave.com/t/horizon-technical-maintenance-updates/25408) | AaveLabs described Horizon's tokenized-asset context on **31 July 2026**. Verify assets, users, borrowing and fees; sector attention is not proof of stronger fundamentals. |
+
+Real examples show where to look; Alder removes live-data noise so you can
+combine evidence into one conclusion limited by the case.
+
+### Worked example: eight lenses on fictional AMM Alder
+
+This fictional case is illustrative, not live data or a recommendation.
+
+| Lens | Alder observation | What it means / question remaining |
+|---|---|---|
+| Fundamentals | USD 20m fees; USD 12m retained under the case definition | Verify definitions and omitted costs. |
+| Flows | No dated flow series supplied | Direction is unknown; obtain a scoped series. |
+| Valuation | USD 120m cap ÷ USD 12m retained revenue = 10×; Birch = 15× on the same measure | Below this reference, not automatically cheap; test comparability and rights. |
+| Tokenomics | No direct holder distribution stated | Verify enforceable rights and other demand mechanisms. |
+| Unlocks | 15% of reported circulation unlocks in three months; recipients unknown | Check schedule, float assumptions and market depth. |
+| Catalysts | New chain integration announced | Verify deployment, adoption and post-launch economics. |
+| Risks | USD 100,000 sale quote is shallow; holder-accrual link unclear | Check executable depth and token rights. |
+| Narrative | “AI-powered” attention reported | Attention is not evidence of better use, revenue or accrual. |
+
+**Now combine the lenses.** Alder has stated retained economics but no evidence
+that holders receive them. Its 10× multiple is below Birch's reference, but
+rights, comparability, the unlock and shallow liquidity remain unresolved; the
+integration is not yet a demonstrated economic change. A useful next check is
+to verify token rights and unlock recipients, then compare post-launch retained
+economics and executable depth with a dated baseline. Use the lenses to build
+one explanation and identify what could disprove it—not to collect eight facts.
 
 ## Hands-on task
 
-ORBIT is the made-up token from [Week 5 Part 5](../week-5/part-5-token-and-incentive-economics.md).
-All amounts are in US dollars unless stated.
+Use this **synthetic snapshot dated 26 October 2026**. All three fictional
+protocols are comparable spot AMMs on Case-L1, with the same trailing-year
+definitions and no cross-listed revenue. Values are USD millions unless stated.
 
-| Market and ownership input | Value |
-|---|---|
-| Price; total supply; maximum supply | $0.50; 2,000m; 2,000m ORBIT |
-| Reported circulating supply | 820m ORBIT |
-| Known strategic holdings; staked tokens with delayed withdrawal | 220m ORBIT; 100m ORBIT |
-| Five independent large holders | 200m ORBIT, within the estimated real float |
-| Main AMM pool reserves | 10m ORBIT and 5m USDC |
-| Reported trading volume, past 24 hours | $4m across venues |
+| Protocol | Market cap | FDV | TVL | User fees | Retained revenue after LP payments |
+|---|---:|---:|---:|---:|---:|
+| ORBIT | 410 | 1,000 | 600 | 60 | 12 |
+| LANE | 300 | 400 | 450 | 40 | 10 |
+| MESH | 240 | 480 | 500 | 50 | 8 |
 
-The strategic and delayed-withdrawal tokens are counted in reported
-circulation, are separate from each other, and are not readily tradable. No
-other venue has comparable depth. Ignore swap fees.
+ORBIT's token is USD 0.50: 820m circulating / 2,000m maximum tokens.
+Within reported circulation, 220m strategic tokens and a separate 100m in
+delayed withdrawals are assumed unavailable soon. Five addresses hold 200m
+of the remainder; common control is unverified. The next 100m unlock is
+assumed fully tradable. ORBIT has no direct holder distribution; holders vote
+on treasury spending. Comparable rights for LANE/MESH are **unknown**.
 
-1. Calculate market cap, FDV and the market cap to FDV ratio.
-2. Estimate the real float and its share of reported circulation. Then
-   assume the 100m unlock from Week 5 Part 5 arrives and all of it is
-   tradable: what is the real float then, and by what percentage has it
-   grown?
-3. Calculate the five large holders' share of today's real float.
-4. A buyer adds 500,000 USDC to the pool. Using x × y = k, calculate the ORBIT
-   received and the average price paid.
-5. Give an overall risk judgment, and explain why the $4m daily volume is not
-   enough to show the market is deep.
+A fictional quote snapshot for selling USD 100,000 worth at the marginal
+price returns USD 91,000 for ORBIT, USD 98,000 for LANE and USD 97,000 for
+MESH, net of fees.
+These quotes are not live execution guarantees.
 
-**Out of scope:** price predictions, trading advice, order-book modelling and
-fees across several venues.
+Produce **one calculation/interpretation table**:
+
+1. Choose and defend a denominator from the table. Compute market-cap multiples
+   for all three and their mean/median. Identify one apparent premium/discount.
+   State whether FDV would change that comparison and why.
+2. Estimate ORBIT's real float now and after the unlock, and the five addresses'
+   current share of that estimate. Label assumptions; do not call them five people.
+3. Give **two explanations** for the apparent valuation difference and the
+   evidence needed to discriminate. Connect token rights, unlock/liquidity or
+   activity quality to at least one explanation.
+4. In **up to 100 words**, state a conclusion limited to the evidence, one
+   potential fundamental catalyst, a plausible narrative-only explanation,
+   and evidence that would invalidate your conclusion. An unknown rights
+   comparison can justify withholding a value judgment.
+
+**Out of scope:** price targets, position sizing, trade recommendations,
+repeating constant-product maths or pretending these are real protocols.
 
 ## Evidence required
 
-- Your calculations for each step, with the assumptions you used.
-- Your short judgment from step 5.
+- One table containing calculations, assumptions and competing explanations.
+- The short conclusion with a next evidence check; no separate investment report.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Completed / approved earns full points;
+incomplete or materially incorrect work is returned for revision. There is no
+partial-score rubric or separate weekly submission.
 
-Your work is complete when:
+Complete means a justified denominator, reproducible relative calculations,
+labelled float/concentration assumptions, two explanations with discriminating
+evidence, and a conclusion that respects unknown rights and liquidity.
+A premium is not automatically expensive; a discount is not automatically an opportunity.
 
-- [ ] market cap, FDV and their ratio are correct, and you say which supply each uses;
-- [ ] the real float is labelled as your estimate, with its assumptions;
-- [ ] the unlock's effect on real float is calculated;
-- [ ] the concentration share uses the real float as its base;
-- [ ] the AMM trade is calculated with x × y = k and compared with the starting price;
-- [ ] the judgment explains why volume is not depth.
-
-::: details Further exploration — optional, not assessed
-- Pick a real token. Open its holders tab on Etherscan and label the top ten
-  addresses as exchange, bridge, pool, contract or unknown. How much of the
-  top-ten share is left once you remove the first four types?
-- Get a real swap quote for a $10,000 and a $500,000 trade on a DEX
-  aggregator. How does the price impact change?
+::: details Further Exploration — optional, not assessed
+Compare a real protocol's fee and revenue definitions across its docs and a
+data provider. Date your observations and explain differences before comparing
+multiples. A quote may be inspected read-only; do not connect or trade.
 :::
 
 ::: details Sources and attribution
-- [CoinGecko — Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) — Link, referenced only
-- [CoinGecko — What is fully diluted valuation (FDV)?](https://www.coingecko.com/learn/what-is-fully-diluted-valuation-fdv-in-crypto) — Link, referenced only
-- [Uniswap — What is price impact?](https://support.uniswap.org/hc/en-us/articles/8671539602317-What-is-price-impact) — Link, referenced only
-- [Etherscan — Understanding the token page](https://info.etherscan.com/understanding-token-page/) — Link, referenced only
-- [Arkham — Token pages, holders and entities](https://codex.arkm.com/the-intelligence-platform/token-pages) — Link, referenced only
+- [CoinGecko — Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) and [FDV](https://www.coingecko.com/learn/what-is-fully-diluted-valuation-fdv-in-crypto) — Link, data-provider definitions
+- [DefiLlama — Data definitions](https://docs.llama.fi/analysts/data-definitions) — Link, independent provider methodology; checked 26 October 2026
+- [Uniswap — Price impact](https://support.uniswap.org/hc/en-us/articles/8671539602317-What-is-price-impact) — Link, protocol/tool reference
+- [Etherscan — Token pages](https://info.etherscan.com/understanding-token-page/) — Link, explorer evidence and labels
+- [Arkham — Token pages](https://codex.arkm.com/the-intelligence-platform/token-pages) — Link, commercial intelligence provider; optional reference, not required access
+- Peer table, quote snapshot and comparison method — original Academy teaching example
 :::

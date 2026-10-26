@@ -2,10 +2,10 @@
 track: researcher
 week: 6
 day: 1
-title: "On-chain data as evidence"
+title: "On-chain evidence and trace semantics"
 status: drafting
 owner: "Education Team"
-reading_time: "40 min"
+reading_time: "35 min"
 points: 100
 sources:
   - name: "Etherscan — example Ethereum USDC transfer (27 Jun 2026)"
@@ -14,8 +14,29 @@ sources:
   - name: "ERC-20: Token Standard (EIP-20)"
     url: "https://eips.ethereum.org/EIPS/eip-20"
     label: "Link"
+  - name: "EIP-4844 — Shard Blob Transactions"
+    url: "https://eips.ethereum.org/EIPS/eip-4844"
+    label: "Link"
   - name: "Ethereum Execution API — eth_getTransactionReceipt"
     url: "https://ethereum.github.io/execution-apis/api/methods/eth_getTransactionReceipt/"
+    label: "Link"
+  - name: "ethereum.org — Accounts"
+    url: "https://ethereum.org/en/developers/docs/accounts/"
+    label: "Link"
+  - name: "ERC-1967 — Proxy storage slots"
+    url: "https://eips.ethereum.org/EIPS/eip-1967"
+    label: "Link"
+  - name: "OpenZeppelin — Proxy API"
+    url: "https://docs.openzeppelin.com/contracts/5.x/api/proxy"
+    label: "Link"
+  - name: "Etherscan — Understanding an Ethereum transaction"
+    url: "https://info.etherscan.com/understanding-an-ethereum-transaction/"
+    label: "Link"
+  - name: "Etherscan — Proxy types"
+    url: "https://info.etherscan.com/types-of-proxy-contracts-detected-by-etherscan/"
+    label: "Link"
+  - name: "EIP-7702 — Set EOA account code"
+    url: "https://eips.ethereum.org/EIPS/eip-7702"
     label: "Link"
 ---
 
@@ -26,7 +47,7 @@ gas price). The model answer and reviewer notes are kept outside the public
 handbook.
 -->
 
-# Week 6 · Part 1 — On-chain data as evidence
+# Week 6 · Part 1 — On-chain evidence and trace semantics
 
 > **Core question — what can you prove happened in one transaction, without trusting its sender's story?**
 
@@ -38,13 +59,46 @@ that is not supported by the chain**.
 Why it matters: a dashboard can label something a swap, payment or withdrawal.
 Only the transaction, receipt, logs and block let you test that label.
 
+### Before you inspect a transaction
+
+| Term | Plain-English meaning |
+|---|---|
+| **Transaction** | A signed instruction submitted to Ethereum; it may ask a contract to do work. |
+| **Receipt** | The execution record for a transaction, including its result, gas used and emitted logs. |
+| **Call** | One step in execution that invokes a contract. An internal call is not a separate signed transaction. |
+| **Event / log** | Structured data a contract emits during execution; it is not the complete state. |
+| **State** | Data stored by the network at an address and a particular block. |
+| **Proxy** | In common patterns, a user-facing address that forwards execution to replaceable contract logic. |
+| **Implementation** | The contract logic a proxy uses at the block being investigated. |
+
+An **externally owned account (EOA)** is an address controlled by a signing
+key that can authorize a transaction. A single EOA transaction can call
+contracts, which may make further internal calls and change several pieces of
+state.
+
+**Academy schematic — one signed transaction can produce several observable
+execution effects; it is not a complete state diff:**
+
+```mermaid
+flowchart TB
+  accTitle: One signed transaction and its execution effects
+  accDescr: An EOA signs a transaction envelope that can trigger contract execution, internal calls and multiple state, ETH and log effects, summarized partly in a receipt.
+  E["EOA"] -->|"signs once"| T["Transaction envelope"] --> C["Contract / proxy execution"] --> I["Internal calls<br/>not separately signed"] --> O["Effects: state changes,<br/>ETH movement and logs"] --> R["Receipt: status, gas and logs"]
+```
+
+An ERC-20 transfer can appear in a contract log while the transaction's ETH
+`value` is zero. Logs are emitted records, not the state itself; the receipt
+reports execution outcome and logs, not a complete before/after state snapshot.
+
 ::: tip Think of an incident report
 The signed transaction is the instruction; the receipt is the outcome; event
 logs are records of what contracts emitted during execution. Do not treat a
 requested action as proof that it happened.
 
 Where the picture stops: logs are emitted by contracts. A malicious contract
-can emit misleading logs. Interpret the emitter and ABI, not just the label.
+can emit misleading logs. Interpret the emitter and its **application binary
+interface (ABI)**—the description used to decode contract functions and
+events—not just the label.
 :::
 
 ## The hard skill
@@ -63,9 +117,14 @@ After this Part you can:
 
 ### Four pieces of evidence
 
+An **EOA** can originate a signed transaction. A **contract account** executes
+code when called; it does not independently originate a signed transaction.
+**Address ≠ person**:
+one person may use many accounts; a service address may serve many people.
+
 | Record | What you can establish | What it does **not** establish |
 |---|---|---|
-| **Transaction** | `from`, `to`, input data, ETH `value`, gas limit | Whether the attempted action succeeded |
+| **Transaction** | `from`, `to`, input data (also called **calldata**: encoded function and arguments), ETH `value`, gas limit | Whether the attempted action succeeded |
 | **Receipt** | `status`, `gasUsed`, `effectiveGasPrice`, emitted logs | The user's intent or why they transferred |
 | **Event log** | What an identified contract emitted and its indexed arguments | That any human-readable explorer label is trustworthy on its own |
 | **Block** | Inclusion height and timestamp | Whether two addresses belong to the same real-world person |
@@ -76,9 +135,68 @@ to,value)` event has the token **contract** as its emitter. Its `value` is a
 raw integer: divide by that token's `decimals` to obtain display units. See
 [EIP-20](https://eips.ethereum.org/EIPS/eip-20).
 
-The receipt, not the gas limit, gives the amount actually used:
+The receipt, not the gas limit, gives the execution gas actually used. For a
+standard execution-gas transaction, its fee is:
 
-`fee in ETH = gasUsed × effectiveGasPrice (in gwei) ÷ 1,000,000,000`.
+$$
+\text{Fee}_{\mathrm{ETH}} =
+\frac{\text{gasUsed}\times\text{effectiveGasPrice}_{\mathrm{gwei}}}{10^9}
+$$
+
+The $10^9$ converts gwei to ETH; multiply the gas actually used by its
+effective price, not the transaction's maximum gas limit. This is the
+execution-gas component; a blob transaction can incur a separate blob fee
+([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)).
+
+### The normal Transactions tab is only the envelope
+
+| View | What you inspect | Common mistake |
+|---|---|---|
+| Normal transaction | Signed instruction, ETH value, calldata | Reading to as the final economic beneficiary |
+| Receipt / status | Top-level execution or revert, gas, logs | Assuming Success means every intended sub-operation succeeded |
+| Calls / Internal Txns | Execution trace; internal ETH movements where indexed | Treating each call as a separately signed transaction, or this tab as every call |
+| Token transfers / logs | Identified token's Transfer events and other emitted events | Adding ERC-20 units to ETH value or trusting arbitrary event text |
+| Contract state | Values at a specified address and block | Treating an event as a complete state snapshot |
+
+Internal calls are execution effects, not extra signed transactions. Some move
+ETH, many move none. Explorer coverage and filtering differ; a missing internal
+transfer row does not establish that no contract logic ran. Logs record emitted
+data; balances and other state need the correct contract and block.
+
+### Proxy: one address, replaceable logic
+
+**Academy schematic — one simplified upgradeable `delegatecall` pattern;
+not every proxy uses this architecture:**
+
+```mermaid
+flowchart TB
+  accTitle: Upgradeable proxy and implementation relationship
+  accDescr: A user calls a proxy address that delegates execution to implementation logic; where upgradeable, an authority may change the target.
+  U["User"] --> P["Proxy address<br/>user-facing address + storage"]
+  P -->|"delegatecall"| I["Implementation<br/>execution logic"]
+  A["Upgrade authority"] -.->|"where upgradeable: may change target"| P
+```
+
+A proxy keeps the user-facing address and persistent storage while delegating
+execution to an **implementation**. Upgrades can change logic without changing
+that address. Record **proxy → implementation at the relevant block → upgrade
+authority/admin**. ERC-1967 specifies conventional implementation, beacon and
+admin storage slots; not every proxy follows it, and a slot alone does not
+explain all permissions. Transparent and UUPS patterns place upgrade checks differently.
+
+Research traps: reading only the proxy bytecode; applying today's implementation
+to an old transaction; attributing all activity to the logic address; querying
+the implementation's storage instead of the proxy's; or ignoring who can
+replace the logic. Use the explorer's proxy/read-as-proxy view where available,
+then trace authority in verified code. If unresolved, write **unknown**, not immutable.
+
+::: details Landscape — modern account-model nuance
+EIP-7702 lets an EOA designate code for delegated execution while the account
+remains key-controlled. This is why “code present” is not a complete account
+classification rule; it does not change the evidence distinctions in this
+Part. See [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) for the exact
+transaction and authorization model.
+:::
 
 ### Worked example: the receipt is not the instruction
 
@@ -99,11 +217,13 @@ recipient and amount, rather than relying only on Etherscan's action label.
 
 Use that **same transaction** so everyone can compare their evidence. Aim for
 25–30 minutes. Work from the transaction's **Overview**, **Logs** and, where
-available, its **Input Data** and token contract page. You may cross-check with
-an RPC receipt if you have access, but no coding is required.
+available, its **Input Data** and token contract page. If you have access to
+an Ethereum **remote procedure call (RPC)** endpoint, you may cross-check its
+receipt; no coding is required.
 
-1. **Write a six-line transaction record:** chain, full hash, UTC time and
-   block, transaction sender, transaction `to`, and receipt status. Link the
+1. **Write a six-line transaction record:** chain, full hash, Coordinated
+   Universal Time (UTC), block, transaction sender, transaction `to`, and
+   receipt status. Link the
    explorer page.
 2. **Trace the token movement:** name the token and its contract, sender,
    recipient, displayed amount, and the relevant `Transfer` log. State whose
@@ -116,8 +236,11 @@ an RPC receipt if you have access, but no coding is required.
    **observed / inferred / unknown**, and a precise URL + page section or
    receipt field. Include one **claim you cannot conclude** (such as sender
    intent, legal ownership or the recipient's identity).
-5. **Write a 70-word verdict:** what happened, what proves it, and what you
-   cannot know without outside information.
+5. **Recognise the contract structure.** Open the USDC Code page and record its
+   proxy indicator and linked implementation (or what the explorer cannot
+   resolve). This is a real proxy example, not a claim that USDC uses ERC-1967.
+   State why today's implementation is insufficient to explain old execution.
+   Do not connect a wallet.
 
 **Out of scope:** profiling wallet owners, assuming transfer motive, and tracing
 all transactions before or after the case.
@@ -126,7 +249,8 @@ all transactions before or after the case.
 
 - Your transaction record and token movement trace.
 - Gas calculation with units.
-- Evidence table and 70-word verdict, with at least one explicit uncertainty.
+- Evidence table with an uncertainty, plus the dated proxy/implementation link.
+  No separate report is required.
 
 ## Completion and revision
 
@@ -142,7 +266,8 @@ revision. There is no partial-score rubric.
       an explorer summary;
 - [ ] the fee multiplication has correct units and uses **gas used**;
 - [ ] every claim has a provenance tag, and you explicitly flag an unknown;
-- [ ] the short verdict does not claim to know a wallet owner's identity.
+- [ ] the proxy observation is dated and does not establish historical logic
+      or a wallet owner's identity.
 
 ::: details Further exploration — optional, not assessed
 - Retrieve the raw receipt via `eth_getTransactionReceipt`, compare the returned
@@ -157,4 +282,8 @@ revision. There is no partial-score rubric.
 - [Etherscan — USDC transfer transaction, 27 June 2026](https://etherscan.io/tx/0x1e904783e35ffbfd6c01f126e59e722a83d0c7245b907429136b96eb8ff31618) — Link, the case transaction
 - [EIP-20 — ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20) — Link, referenced only
 - [Ethereum Execution API — eth_getTransactionReceipt](https://ethereum.github.io/execution-apis/api/methods/eth_getTransactionReceipt/) — Link, referenced only
+- [ethereum.org — Accounts](https://ethereum.org/en/developers/docs/accounts/) and [Transactions](https://ethereum.org/en/developers/docs/transactions/) — Link, primary technical reference; checked 26 October 2026
+- [ERC-1967 — Proxy storage slots](https://eips.ethereum.org/EIPS/eip-1967) — Link, primary standard; not universal to all proxies
+- [OpenZeppelin — Proxy API](https://docs.openzeppelin.com/contracts/5.x/api/proxy) — Link, implementation documentation
+- [Etherscan — Understanding an Ethereum transaction](https://info.etherscan.com/understanding-an-ethereum-transaction/) and [Proxy types](https://info.etherscan.com/types-of-proxy-contracts-detected-by-etherscan/) — Link, explorer terminology only; older consensus discussion is not used
 :::

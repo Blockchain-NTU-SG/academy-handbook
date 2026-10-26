@@ -15,5 +15,6 @@ lenses, not separate Academy tracks. Domains such as DeFi, stablecoins, NFTs,
 RWA, prediction markets, DePIN, infrastructure, governance and AI × Web3 are
 training cases that may appear in either track.
 
-Each Deep Dive week has six Part tasks worth 100 points each. Detailed lesson
-content is in development and will be authored by the Education team.
+Each Deep Dive week has six Part tasks worth 100 points each, with no separate
+weekly submission. Both tracks now have authored Parts undergoing curriculum
+and pilot review; individual pages retain their draft/review status.

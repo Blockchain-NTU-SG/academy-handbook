@@ -2,6 +2,7 @@ import { viteBundler } from '@vuepress/bundler-vite';
 import { defineUserConfig } from 'vuepress';
 import { plumeTheme } from 'vuepress-theme-plume';
 import type { Plugin } from 'vite';
+import type { Plugin as VuePressPlugin } from 'vuepress/core';
 import { academySearchTabsPlugin } from './academy-search-tabs';
 
 // Plume's generated client config registers chart and hero components
@@ -89,6 +90,30 @@ const academySearch = {
   },
 } as any;
 
+// Keep markdown tables as semantic HTML tables and contain horizontal
+// scrolling in a small wrapper only when their intrinsic width needs it.
+const academyTableScrollPlugin: VuePressPlugin = {
+  name: 'academy-table-scroll',
+  extendsMarkdown: (md) => {
+    const tableOpen = md.renderer.rules.table_open;
+    const tableClose = md.renderer.rules.table_close;
+
+    md.renderer.rules.table_open = (tokens, index, options, env, self) => {
+      const rendered = tableOpen
+        ? tableOpen(tokens, index, options, env, self)
+        : self.renderToken(tokens, index, options);
+      return `<div class="academy-table-scroll">\n${rendered}`;
+    };
+
+    md.renderer.rules.table_close = (tokens, index, options, env, self) => {
+      const rendered = tableClose
+        ? tableClose(tokens, index, options, env, self)
+        : self.renderToken(tokens, index, options);
+      return `${rendered}\n</div>\n`;
+    };
+  },
+};
+
 export default defineUserConfig({
   // GitHub Pages project site: https://blockchain-ntu-sg.github.io/academy-handbook/
   base: '/academy-handbook/',
@@ -116,7 +141,7 @@ export default defineUserConfig({
     },
   }),
   shouldPrefetch: false,
-  plugins: [academySearchTabsPlugin()],
+  plugins: [academySearchTabsPlugin(), academyTableScrollPlugin],
 
   theme: plumeTheme({
     docsRepo: 'https://github.com/Blockchain-NTU-SG/academy-handbook',

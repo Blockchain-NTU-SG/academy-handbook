@@ -2,173 +2,218 @@
 track: researcher
 week: 6
 day: 6
-title: "Evidence to claim"
+title: "Independent investigation brief"
 status: drafting
 owner: "Education Team"
-reading_time: "45 min"
+reading_time: "50 min"
 points: 100
 sources:
+  - name: "Etherscan — Token pages"
+    url: "https://info.etherscan.com/understanding-token-page/"
+    label: "Link"
   - name: "RWA.xyz — Tokenized U.S. Treasury Funds"
     url: "https://app.rwa-xyz.com/treasuries"
     label: "Link"
-  - name: "RWA.xyz — Distributed vs represented assets methodology"
+  - name: "RWA.xyz — Distributed vs represented methodology"
     url: "https://app.rwa-xyz.com/blog/a-new-framework-for-tokenized-assets-distributed-and-represented"
     label: "Link"
-  - name: "Franklin Templeton — Franklin OnChain U.S. Government Money Fund prospectus"
+  - name: "Franklin Templeton — OnChain U.S. Government Money Fund prospectus"
     url: "https://www.franklintempleton.com/forms-literature/download-preview/9001-P"
     label: "Link"
-  - name: "SEC Commissioner Peirce — statement on tokenized securities"
+  - name: "SEC Commissioner Peirce — Statement on tokenized securities"
     url: "https://www.sec.gov/newsroom/speeches-statements/peirce-statement-tokenized-securities-070925"
     label: "Link"
 ---
 
-<!--
-Author note (Education team): RWA.xyz figures change daily, so the page gives
-no live numbers; learners date their own snapshot. The model answer and
-reviewer notes are kept outside the public handbook.
--->
+# Week 6 · Part 6 — Independent investigation brief
 
-# Week 6 · Part 6 — Evidence to claim
+> **Core question — can you make a careful claim about an unfamiliar case and show what could overturn it?**
 
-> **Core question — can you make a defensible claim about a new blockchain area and present evidence against your own claim?**
-
-In Week 5 you learned to take apart a system. In Week 6 you traced
-transactions, queried activity, designed measurements and modelled a failure.
-Now do the researcher's job end to end: **make a bounded claim, find primary
-evidence, confront counter-evidence and say how sure you are**.
-
-This is a bridge to Weeks 7–8: there is **no step-by-step answer** and no
-single right conclusion. What matters is whether another researcher could
-repeat your reasoning and challenge it.
-
-::: tip Imagine being the second reviewer
-A useful brief makes it easy for a sceptic to ask “where does this number
-come from?” and “what evidence would change your mind?”.
-
-Where the picture stops: footnotes cannot rescue a vague research question.
-First choose a claim narrow enough to test.
-:::
+You can now reconstruct a system, interpret execution records, trace flows,
+measure activity and test economic/risk claims. This Part combines those skills
+without a step-by-step answer. A useful conclusion may be “the evidence does
+not distinguish these two explanations yet”.
 
 ## The hard skill
 
-**Produce a short, falsifiable research brief about an unfamiliar area using
-multiple source types and explicit counter-evidence.**
+**Form a bounded, falsifiable conclusion by combining system understanding,
+case evidence, quantitative/economic evidence and counter-evidence. For a real
+case, include direct chain evidence relevant to the question.**
 
-After this Part you can:
+A **bounded claim** states which case, evidence and time window it covers. A
+**falsifiable claim** names what observation would weaken or contradict it.
+**Counter-evidence** weighs against your claim; an **alternative hypothesis**
+is another explanation that fits at least some of the same observations.
+**Confidence** is how strongly the evidence supports your conclusion, with
+reasons—not certainty. A **next check** is a specific observation that could
+distinguish the explanations.
 
-- distinguish a narrow finding from a sector-wide prediction;
-- reconcile a third-party dataset with an issuer's legal/operational documents;
-- report dates, definitions, counterarguments and unresolved uncertainties;
-- propose a realistic next check that could change your conclusion.
+This is Researcher readiness for W7, not a project proposal, trading call or
+a new weekly submission. Work read-only with public data. AI can help draft
+a query or challenge a claim; you must verify every cited result and explain
+the reasoning yourself.
 
 ## Core / reference material
 
-### The example area: tokenized U.S. Treasury products
+### Choose a case that makes you investigate
 
-For this Part, investigate the claim:
+**Default: a new-token allocation case.** Use the self-contained case file
+below. It contains attention, allocation, selling and liquidity claims with
+different evidence quality. Your question might be: *which observations are
+consistent with coordinated distribution/control, and what else explains
+them?* Do not declare “insider dumping” or “scam” from a pattern.
 
-> **“Tokenized U.S. Treasury funds make Treasury exposure as freely usable as
-> ordinary on-chain tokens.”**
+::: details Case file — NOVEL launch (synthetic)
+This original Academy case was created 26 October 2026. NOVEL, Case-L1,
+addresses A–D, Sponsor-S, Market-M and Locker-L are invented aliases. There
+are no real transaction hashes or people behind these records. Units are
+display units. This is a bounded dataset, not a claim about a real project.
 
-The word **freely** is testable. A token can represent a claim on a fund or
-security while ownership, transfers, eligibility, redemption and trading are
-still restricted by an issuer and applicable law. A large on-chain value is not
-proof of a deep permissionless secondary market.
+NOVEL is a fictional governance token for a data-service protocol. The website
+claims “community-led ownership” and “locked liquidity”. Governance can
+allocate treasury funds; no direct token-holder fee distribution is specified.
+No implementation/admin records for the token or locker are supplied.
 
-Read the [RWA.xyz Treasury dashboard](https://app.rwa-xyz.com/treasuries)
-for a **dated market snapshot**. Read its
-[definitions of distributed versus represented assets](https://app.rwa-xyz.com/blog/a-new-framework-for-tokenized-assets-distributed-and-represented)
-*before* adding numbers; those categories are different. Then inspect a
-specific issuer's documents, such as the
-[Franklin OnChain U.S. Government Money Fund prospectus](https://www.franklintempleton.com/forms-literature/download-preview/9001-P).
-A [2025 SEC Commissioner's statement](https://www.sec.gov/newsroom/speeches-statements/peirce-statement-tokenized-securities-070925)
-provides a regulatory perspective; a single Commissioner's statement is not
-itself a binding rule or proof of a particular product's legal terms.
+**Observation snapshot: 1–8 September 2026**
 
-### Worked example: how to test one word
-
-Suppose an issuer says a fund share is represented by a blockchain token.
-
-| Claim | Evidence that could support it | Evidence that challenges the leap |
+| Record | Evidence type | Observation / claim |
 |---|---|---|
-| "The fund uses tokens to represent shares" | Issuer documentation identifies the share–token link | Token representation alone says nothing about redemption speed or permissionless trading |
-| "Anyone can freely trade them" | Verified public, unrestricted transfers and a functioning accessible market | Prospectus may impose investor eligibility, wallet approvals or transfer conditions |
+| N01 | Synthetic allocation log summary | Before launch, A, B, C and D each receive 5m NOVEL from Distributor; total supply 100m, reported circulation 40m |
+| N02 | Synthetic funding history | Sponsor-S funds gas for A–C within two minutes; D has an earlier unrelated funding record |
+| N03 | Synthetic swap receipts | A–C each sell 0.5m NOVEL on launch day and 0.5m again on day 3; USDQ receipts are shown in execution summaries |
+| N04 | Synthetic holdings | At day 8 A–D together retain 17m NOVEL; no direct transfers among A–D appear in this window |
+| N05 | Synthetic service flow | A–C send received USDQ to Market-M; a provider labels it market-maker infrastructure, without provenance |
+| N06 | Synthetic LP ownership | 70% of v2 pool-share tokens are in Locker-L, 30% at Treasury; locker unlock time is six months away; admin powers are unavailable |
+| N07 | Synthetic volume aggregate | Seven complete days report USDQ turnover of 2m, 8m, 3m, 2m, 2m, 1m, 2m; unique users and counterparties are not supplied |
+| N08 | Website/social claim | Attention rose sharply; the promoter calls transfers “organic demand”; there is no independently validated audience count |
+| N09 | Synthetic quote | Selling 100,000 USDQ of NOVEL at the displayed marginal price returns 88,000 USDQ, net of fees, at the snapshot time |
+| N10 | Unverified allocation note | Website calls A–D ecosystem partners with vesting exceptions; no signed agreement or on-chain vesting evidence is supplied |
 
-Notice the distinction: **tokenized** describes a record or representation.
-**Freely transferable** is a separate claim requiring separate evidence.
+USDQ is an invented dollar-denominated quote unit, not a real stablecoin. N03
+reports six swaps totalling 3m NOVEL. N04 reflects that reduction from the
+initial 20m; it does not establish how much belongs to independent people.
 
-### A five-part brief
+Use the observations to choose a bounded question. Possible measurements
+include share of reported circulation, observed sold/allocated share or volume
+concentration, with explicit denominator choices. No particular conclusion
+or calculation is prescribed.
 
-1. **Question and one-sentence thesis:** narrowly scoped and falsifiable.
-2. **Two findings in favour:** numbers or documented mechanics with links.
-3. **Two pieces of counter-evidence:** facts that weaken or bound the thesis,
-   not a generic “there are risks”.
-4. **Judgment and confidence:** high, medium or low, plus the biggest unknown.
-5. **Next test:** a dataset, filing or chain record that could change your view.
+The missing history, label provenance, admin powers, attribution and private
+allocation terms remain unknown. An operational-distribution explanation and
+a coordinated-control explanation may both fit some observations. Identify
+the next evidence that would distinguish them.
 
-Grade each source as **primary issuer/regulator**, **independent data/analysis**
-(or label a provider as third-party and note its methodology), or **opinion**.
+These records are synthetic and cannot establish facts about a real protocol
+or person. No separate real-chain field check is required for this default
+exercise. A learner choosing a real case instead must use direct chain
+evidence relevant to that case's question.
+:::
+
+For the default dossier, use its records to test competing explanations; do
+not add an unrelated real transaction just to satisfy a checklist. If you
+instead choose a real unfamiliar system, use at least one direct public chain
+record that bears on your actual question, and verify its event emitter and
+result.
+
+**Non-token alternative:** investigate an unfamiliar protocol/system, including
+a tokenised-Treasury product or **real-world asset (RWA)**, governance execution
+or infrastructure dependency.
+Ask a similarly testable question and combine a primary source with direct
+chain evidence and one calculation that helps answer the question. Researcher
+is cross-domain, not investment-only.
+
+### Worked example: testing “freely usable”
+
+Suppose a Treasury-token issuer documents share representation on-chain. That
+supports the representation claim, not unrestricted trading. A prospectus can
+specify eligibility, approvals and redemption conditions. A public transfer
+shows one successful transfer, not that everyone can transfer.
+
+For this alternate case, use the [RWA.xyz dashboard](https://app.rwa-xyz.com/treasuries)
+with its [distributed/represented definitions](https://app.rwa-xyz.com/blog/a-new-framework-for-tokenized-assets-distributed-and-represented),
+and an issuer document such as the
+[Franklin prospectus](https://www.franklintempleton.com/forms-literature/download-preview/9001-P).
+Do not sum categories without defining the total. An
+[SEC Commissioner's statement](https://www.sec.gov/newsroom/speeches-statements/peirce-statement-tokenized-securities-070925)
+is regulator commentary, not a binding rule or the product's legal terms.
+Date your snapshot; a provider's totals are not a measure of permissionless liquidity.
+
+### Build a brief another researcher can challenge
+
+Use the following as one-page headings, not eleven separate assignments:
+
+| Brief section | Include |
+|---|---|
+| Question / thesis | A bounded claim, case, date and falsification condition |
+| System | Mechanism summary and relevant actors/dependencies |
+| Evidence | Relevant case records plus one calculation that helps answer your question, with units and provenance; direct chain evidence is required when the case is real |
+| Challenge | Strongest support, strongest counter-evidence/alternative, and one risk that could change the conclusion, traced to who is affected |
+| Judgment | Confidence with reason, what would change it, and one concrete next check |
+
+Tag statements **observed / inferred / unknown**. Classify sources as primary
+protocol/issuer, explorer/raw chain, independent data provider, commercial
+intelligence provider, or opinion/secondary analysis. “Independent” describes
+your source relationship; it does not certify accuracy or absence of incentives.
+
+**Address ≠ person. Correlation ≠ common control. Unlock ≠ sale. Transfer ≠
+economic demand. Volume ≠ users.** A bridge hop or mixer can reduce attribution
+confidence without proving intent. Name the link you cannot establish.
 
 ## Hands-on task
 
-Write a **250–350-word research brief**, **as of a stated date**, on the
-question above. You may narrow the claim to a particular issuer/product or
-change to another unfamiliar area (such as prediction markets) **if you first
-write a comparable falsifiable question** and identify credible sources.
+Write **approximately one page / 450–600 words**, plus a compact evidence table
+if needed. Budget about 50 minutes including reading. Choose a narrow question
+and a few decisive sources, not an entire sector.
 
-For the Treasury case:
+The brief must contain:
 
-1. Read at least **four sources**, including a dated market-data source, an
-   issuer's legal/operational document, and a non-issuer perspective.
-2. State **two verifiable supporting findings and two counter-findings**.
-   Distinguish the claim that tokens represent shares from the claim they
-   can be traded freely by everyone.
-3. Include **at least one numerical fact** with the specific metric,
-   date, unit and definition. Do not add “represented” and “distributed”
-   values unless you have defined what that combined number would mean.
-4. Include **one explicit uncertainty or conflicting source interpretation**.
-   Explain what could reverse your judgment.
-5. Close with **one actionable next check** and mark your confidence
-   **high / medium / low**.
+1. research question and bounded thesis;
+2. system/mechanism summary and relevant actors/dependencies;
+3. evidence appropriate to the case: for the synthetic dossier, cite relevant
+   record IDs and label them as invented observations; for a real case, include
+   a direct chain record relevant to the question, with chain, full hash/address,
+   block/date, result and link;
+4. at least one calculation that helps answer the question, with unit,
+   window, source and working;
+5. strongest supporting evidence and strongest counter-evidence/alternative;
+6. one risk that could change the conclusion, traced to who is affected;
+7. confidence, evidence that would change the conclusion, and one concrete next check.
 
-**Out of scope:** price targets, recommending fund purchases, unverified
-“market size” headlines, unsupported forecasts and generic descriptions of
-blockchain basics.
+For the synthetic case, label dossier records synthetic and keep conclusions
+within their bounded observation window. For a real case, the direct record
+must bear on the question, and missing attribution must stay unknown.
+
+**Out of scope:** price targets, investment recommendations, identity claims
+from clusters, long reports, paid forensic tools, or a final PoW commitment.
 
 ## Evidence required
 
-- Your 250–350-word brief with a date and question/thesis.
-- Four or more directly linked sources, with source grades.
-- Two supporting findings, two counter-findings, one check and confidence.
-- One sentence: which claim in your brief is least secure and why?
+- The brief and compact linked evidence table, with check date and source types.
+- Calculation working can be a table cell; do not add a second report.
 
 ## Completion and revision
 
 This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+incomplete or materially incorrect work is returned for revision. There is no
+partial-score rubric or separate weekly submission.
 
-**Your work is complete when:**
+Complete means the question is falsifiable, system and risk are causal,
+source observations and derived evidence are distinguishable, the calculation
+is reproducible, and the strongest alternative is engaged rather than
+dismissed. For a real case, include relevant direct chain evidence. Confidence
+should be no stronger than the weakest important evidence it depends on. A
+carefully justified unknown is preferable to an unsupported accusation.
 
-- [ ] the question is narrow enough to be refuted by evidence;
-- [ ] the brief is 250–350 words and date-stamped;
-- [ ] the sourced numerical claim names the metric and category correctly;
-- [ ] at least two counter-findings address the thesis directly;
-- [ ] issuer claims are distinguishable from third-party measurements and
-      regulator commentary;
-- [ ] confidence, an unresolved issue and a test that could alter the judgment
-      are included.
-
-::: details Further exploration — optional, not assessed
-- Follow a specific Treasury-token product's transfer/holder restrictions
-  through its issuer documentation, contract design and observed trading.
-- Compare a fund's reported assets with public token supply, noting whether
-  there is any off-chain or represented-value component.
+::: details Further Exploration — optional, not assessed
+Repeat one calculation with a different definition or seek evidence that would
+reverse your conclusion. Larger reports and a different domain belong to later
+independent work, not a second assessed task here.
 :::
 
 ::: details Sources and attribution
-- [RWA.xyz — Tokenized U.S. Treasury Funds](https://app.rwa-xyz.com/treasuries) — Link, third-party data; the snapshot changes daily
-- [RWA.xyz — Distributed vs represented assets methodology](https://app.rwa-xyz.com/blog/a-new-framework-for-tokenized-assets-distributed-and-represented) — Link, third-party definitions
-- [Franklin Templeton — Franklin OnChain U.S. Government Money Fund prospectus](https://www.franklintempleton.com/forms-literature/download-preview/9001-P) — Link, primary issuer filing and product terms
-- [SEC Commissioner Peirce — statement on tokenized securities](https://www.sec.gov/newsroom/speeches-statements/peirce-statement-tokenized-securities-070925) — Link, regulator commentary, not a binding rule
+- [Etherscan — Token pages](https://info.etherscan.com/understanding-token-page/) — Link, explorer reference
+- [RWA.xyz — Treasury funds](https://app.rwa-xyz.com/treasuries) and [methodology](https://app.rwa-xyz.com/blog/a-new-framework-for-tokenized-assets-distributed-and-represented) — Link, independent data provider; date your snapshot
+- [Franklin prospectus](https://www.franklintempleton.com/forms-literature/download-preview/9001-P) — Link, primary issuer terms
+- [SEC Commissioner Peirce — Tokenized securities](https://www.sec.gov/newsroom/speeches-statements/peirce-statement-tokenized-securities-070925) — Link, regulator commentary, not a binding rule
+- Launch dossier and brief method — original Academy material
 :::

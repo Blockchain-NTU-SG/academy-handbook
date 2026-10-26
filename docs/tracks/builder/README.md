@@ -1,6 +1,6 @@
 ---
 track: builder
-status: stub
+status: review
 owner: "Education Team"
 title: "Builder Deep Dive"
 ---
@@ -27,5 +27,6 @@ Each week contains six Part tasks. Every Part task is worth **100 points** and
 is assessed by completion and understanding, with revision when the work is
 incomplete or materially incorrect.
 
-> **Status: scaffold.** The Education team will author the detailed lessons,
-> examples and task instructions.
+> **Status: curriculum / pilot review.** Both Deep Dive weeks have authored
+> Parts. Individual lessons retain their draft/review status; learner timing
+> and starter-repository continuity still need pilot verification.

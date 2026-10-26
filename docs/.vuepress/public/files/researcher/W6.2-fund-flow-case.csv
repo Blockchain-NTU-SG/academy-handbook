@@ -1,0 +1,19 @@
+record_id,chain,time_utc,record_type,from_alias,to_alias,asset,amount,detail
+F01,Case-L1,2026-09-01T08:00:00Z,token_log,Distributor,Treasury,CASE,9000000,Allocation; source ownership not independently verified
+F02,Case-L1,2026-09-01T08:02:00Z,token_log,Treasury,A,CASE,3000000,New recipient
+F03,Case-L1,2026-09-01T08:02:12Z,token_log,Treasury,B,CASE,3000000,New recipient
+F04,Case-L1,2026-09-01T08:02:24Z,token_log,Treasury,C,CASE,3000000,New recipient
+F05,Case-L1,2026-09-01T08:03:00Z,eth_transfer,Funder,A,ETH,0.02,First observed gas funding in provided history
+F06,Case-L1,2026-09-01T08:03:12Z,eth_transfer,Funder,B,ETH,0.02,First observed gas funding in provided history
+F07,Case-L1,2026-09-01T08:03:24Z,eth_transfer,Funder,C,ETH,0.02,First observed gas funding in provided history
+F08,Case-L1,2026-09-02T09:00:00Z,swap,A,Pool,CASE,100000,Receipt shows 48000 USDX returned; method swapExactTokens
+F09,Case-L1,2026-09-02T09:01:00Z,swap,B,Pool,CASE,100000,Receipt shows 47000 USDX returned; same method
+F10,Case-L1,2026-09-02T09:02:00Z,swap,C,Pool,CASE,100000,Receipt shows 46000 USDX returned; same method
+F11,Case-L1,2026-09-02T09:05:00Z,bridge_lock,A,Bridge,USDX,40000,Message CASE-M1 names Recipient-D on Case-L2
+F12,Case-L2,2026-09-02T09:08:00Z,bridge_release,Bridge,Recipient-D,USDX.e,40000,Message CASE-M1; representation differs
+F13,Case-L2,2026-09-02T09:10:00Z,token_log,Recipient-D,Service-Deposit,USDX.e,40000,Exchange label from fictional provider; owner beyond deposit unknown
+F14,Case-L1,2026-09-01T07:00:00Z,lp_transfer,Pool,Locker,CASE-USDX-LP,900,900 of 1000 v2 LP units outstanding
+F15,Case-L1,2026-09-01T07:01:00Z,contract_state,Locker,Locker,NONE,0,Unlock 2027-09-01; beneficiary Treasury; proxy upgrade admin Admin-M
+F16,Case-L1,2026-09-01T07:02:00Z,contract_state,Admin-M,Admin-M,NONE,0,Signers and emergency upgrade constraints not provided
+F17,Case-L1,2026-09-02T09:15:00Z,marketing_claim,Website,Public,NONE,0,Claim says liquidity permanently locked
+F18,Case-L1,2026-09-02T09:16:00Z,provider_label,Funder,Funder,NONE,0,Unverified gas-sponsorship service label; no direct A-B-C transfers in supplied window
