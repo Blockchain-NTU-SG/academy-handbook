@@ -1,6 +1,6 @@
 ---
 track: researcher
-status: stub
+status: review
 owner: "Education Team"
 title: "Researcher Deep Dive"
 ---
@@ -9,7 +9,9 @@ title: "Researcher Deep Dive"
 
 Researcher learners develop the transferable skill of **decomposing unfamiliar
 Web3 systems**: reconstructing how a system works, measuring it with evidence,
-and making a defensible claim about its risks and behaviour.
+and making a defensible claim about its risks and behaviour. The connected
+capabilities are system research (how it works), on-chain investigation (what
+happened), and economic research (what the evidence means).
 
 This is cross-domain Web3 systems research, not a DeFi-only track. Bitcoin,
 rollups, Uniswap, lending and other protocols are training cases that support
@@ -29,5 +31,7 @@ Each week contains six Part tasks. Every Part task is worth **100 points** and
 is assessed by completion and understanding, with revision when the work is
 incomplete or materially incorrect.
 
-> **Status: scaffold.** The Education team will author the detailed lessons,
-> examples and task instructions.
+> **Status: curriculum / pilot review.** All twelve Parts are authored and
+> remain drafts for review. The progression is system reconstruction →
+> investigation → measurement → economic/risk interpretation → defensible claim.
+> Allow about 4–4.5 hours per week; optional exploration is not assessed.

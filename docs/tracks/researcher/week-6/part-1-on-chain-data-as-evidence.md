@@ -2,10 +2,10 @@
 track: researcher
 week: 6
 day: 1
-title: "On-chain data as evidence"
+title: "On-chain evidence and trace semantics"
 status: drafting
 owner: "Education Team"
-reading_time: "40 min"
+reading_time: "35 min"
 points: 100
 sources:
   - name: "Etherscan — example Ethereum USDC transfer (27 Jun 2026)"
@@ -17,6 +17,21 @@ sources:
   - name: "Ethereum Execution API — eth_getTransactionReceipt"
     url: "https://ethereum.github.io/execution-apis/api/methods/eth_getTransactionReceipt/"
     label: "Link"
+  - name: "ethereum.org — Accounts"
+    url: "https://ethereum.org/en/developers/docs/accounts/"
+    label: "Link"
+  - name: "ERC-1967 — Proxy storage slots"
+    url: "https://eips.ethereum.org/EIPS/eip-1967"
+    label: "Link"
+  - name: "OpenZeppelin — Proxy API"
+    url: "https://docs.openzeppelin.com/contracts/5.x/api/proxy"
+    label: "Link"
+  - name: "Etherscan — Understanding an Ethereum transaction"
+    url: "https://info.etherscan.com/understanding-an-ethereum-transaction/"
+    label: "Link"
+  - name: "Etherscan — Proxy types"
+    url: "https://info.etherscan.com/types-of-proxy-contracts-detected-by-etherscan/"
+    label: "Link"
 ---
 
 <!--
@@ -26,7 +41,7 @@ gas price). The model answer and reviewer notes are kept outside the public
 handbook.
 -->
 
-# Week 6 · Part 1 — On-chain data as evidence
+# Week 6 · Part 1 — On-chain evidence and trace semantics
 
 > **Core question — what can you prove happened in one transaction, without trusting its sender's story?**
 
@@ -63,6 +78,14 @@ After this Part you can:
 
 ### Four pieces of evidence
 
+An **externally owned account (EOA)** is controlled by a signing key and can
+originate a transaction. A **contract account** executes code when called;
+it does not independently originate a signed transaction. One EOA transaction
+can trigger many contract calls and asset movements. **Address ≠ person**:
+one person may use many accounts; a service address may serve many people.
+Code presence alone is not a perfect classification rule: delegated EOAs
+(EIP-7702) can execute delegated code while retaining key control.
+
 | Record | What you can establish | What it does **not** establish |
 |---|---|---|
 | **Transaction** | `from`, `to`, input data, ETH `value`, gas limit | Whether the attempted action succeeded |
@@ -79,6 +102,36 @@ raw integer: divide by that token's `decimals` to obtain display units. See
 The receipt, not the gas limit, gives the amount actually used:
 
 `fee in ETH = gasUsed × effectiveGasPrice (in gwei) ÷ 1,000,000,000`.
+
+### The normal Transactions tab is only the envelope
+
+| View | What you inspect | Common mistake |
+|---|---|---|
+| Normal transaction | Signed instruction, ETH value, calldata | Reading to as the final economic beneficiary |
+| Receipt / status | Top-level execution or revert, gas, logs | Assuming Success means every intended sub-operation succeeded |
+| Calls / Internal Txns | Execution trace; internal ETH movements where indexed | Treating each call as a separately signed transaction, or this tab as every call |
+| Token transfers / logs | Identified token's Transfer events and other emitted events | Adding ERC-20 units to ETH value or trusting arbitrary event text |
+| Contract state | Values at a specified address and block | Treating an event as a complete state snapshot |
+
+Internal calls are execution effects, not extra signed transactions. Some move
+ETH, many move none. Explorer coverage and filtering differ; a missing internal
+transfer row does not establish that no contract logic ran. Logs record emitted
+data; balances and other state need the correct contract and block.
+
+### Proxy: one address, replaceable logic
+
+A proxy keeps the user-facing address and persistent storage while delegating
+execution to an **implementation**. Upgrades can change logic without changing
+that address. Record **proxy → implementation at the relevant block → upgrade
+authority/admin**. ERC-1967 specifies conventional implementation, beacon and
+admin storage slots; not every proxy follows it, and a slot alone does not
+explain all permissions. Transparent and UUPS patterns place upgrade checks differently.
+
+Research traps: reading only the proxy bytecode; applying today's implementation
+to an old transaction; attributing all activity to the logic address; querying
+the implementation's storage instead of the proxy's; or ignoring who can
+replace the logic. Use the explorer's proxy/read-as-proxy view where available,
+then trace authority in verified code. If unresolved, write **unknown**, not immutable.
 
 ### Worked example: the receipt is not the instruction
 
@@ -116,8 +169,11 @@ an RPC receipt if you have access, but no coding is required.
    **observed / inferred / unknown**, and a precise URL + page section or
    receipt field. Include one **claim you cannot conclude** (such as sender
    intent, legal ownership or the recipient's identity).
-5. **Write a 70-word verdict:** what happened, what proves it, and what you
-   cannot know without outside information.
+5. **Recognise the contract structure.** Open the USDC Code page and record its
+   proxy indicator and linked implementation (or what the explorer cannot
+   resolve). This is a real proxy example, not a claim that USDC uses ERC-1967.
+   State why today's implementation is insufficient to explain old execution.
+   Do not connect a wallet.
 
 **Out of scope:** profiling wallet owners, assuming transfer motive, and tracing
 all transactions before or after the case.
@@ -126,7 +182,8 @@ all transactions before or after the case.
 
 - Your transaction record and token movement trace.
 - Gas calculation with units.
-- Evidence table and 70-word verdict, with at least one explicit uncertainty.
+- Evidence table with an uncertainty, plus the dated proxy/implementation link.
+  No separate report is required.
 
 ## Completion and revision
 
@@ -142,7 +199,8 @@ revision. There is no partial-score rubric.
       an explorer summary;
 - [ ] the fee multiplication has correct units and uses **gas used**;
 - [ ] every claim has a provenance tag, and you explicitly flag an unknown;
-- [ ] the short verdict does not claim to know a wallet owner's identity.
+- [ ] the proxy observation is dated and does not establish historical logic
+      or a wallet owner's identity.
 
 ::: details Further exploration — optional, not assessed
 - Retrieve the raw receipt via `eth_getTransactionReceipt`, compare the returned
@@ -157,4 +215,8 @@ revision. There is no partial-score rubric.
 - [Etherscan — USDC transfer transaction, 27 June 2026](https://etherscan.io/tx/0x1e904783e35ffbfd6c01f126e59e722a83d0c7245b907429136b96eb8ff31618) — Link, the case transaction
 - [EIP-20 — ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20) — Link, referenced only
 - [Ethereum Execution API — eth_getTransactionReceipt](https://ethereum.github.io/execution-apis/api/methods/eth_getTransactionReceipt/) — Link, referenced only
+- [ethereum.org — Accounts](https://ethereum.org/en/developers/docs/accounts/) and [Transactions](https://ethereum.org/en/developers/docs/transactions/) — Link, primary technical reference; checked 26 October 2026
+- [ERC-1967 — Proxy storage slots](https://eips.ethereum.org/EIPS/eip-1967) — Link, primary standard; not universal to all proxies
+- [OpenZeppelin — Proxy API](https://docs.openzeppelin.com/contracts/5.x/api/proxy) — Link, implementation documentation
+- [Etherscan — Understanding an Ethereum transaction](https://info.etherscan.com/understanding-an-ethereum-transaction/) and [Proxy types](https://info.etherscan.com/types-of-proxy-contracts-detected-by-etherscan/) — Link, explorer terminology only; older consensus discussion is not used
 :::

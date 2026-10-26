@@ -83,6 +83,30 @@ reused as handbook content.
 Full mapping is in the Academy Resource List maintained by the Education
 Director.
 
+### Researcher Deep Dive references
+
+All entries below are **Link, referenced only**. The Academy explanations,
+synthetic case packs and calculation exercises are original; no private deck
+prose, charts or figures are reproduced. Technical mechanics were checked
+against public references on 26 October 2026; live observations retain their
+own check dates.
+
+| Source / type | Used for |
+|---|---|
+| [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf), [Bitcoin Developer Guide](https://developer.bitcoin.org/devguide/block_chain.html) — primary design / implementation reference | W5.1 document-to-model reconstruction and original-paper/implementation boundary |
+| [ethereum.org accounts](https://ethereum.org/en/developers/docs/accounts/), [transactions](https://ethereum.org/en/developers/docs/transactions/), [bridges](https://ethereum.org/en/developers/docs/bridges/), [MEV](https://ethereum.org/en/developers/docs/mev/) — technical reference | W6.1–2 account, execution and investigation boundaries |
+| [ERC-20](https://eips.ethereum.org/EIPS/eip-20), [ERC-1967](https://eips.ethereum.org/EIPS/eip-1967), [OpenZeppelin proxies](https://docs.openzeppelin.com/contracts/5.x/api/proxy) — primary standards / implementation | Logs, state, proxy/implementation/authority distinctions |
+| [Etherscan transaction guide](https://info.etherscan.com/understanding-an-ethereum-transaction/), [proxy types](https://info.etherscan.com/types-of-proxy-contracts-detected-by-etherscan/), [token pages](https://info.etherscan.com/understanding-token-page/) — explorer | Record views and label limitations; older consensus wording is not used |
+| [L2BEAT](https://l2beat.com/scaling/projects/arbitrum), [Arbitrum docs](https://docs.arbitrum.io/), [DAO supply docs](https://docs.arbitrum.foundation/token-supply) — independent risk analysis / primary protocol | W5.2 trust powers and delays; W5.5 supply schedule; date live facts |
+| [Uniswap v2 pricing](https://developers.uniswap.org/docs/protocols/v2/concepts/pricing), [returns](https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns), [concentrated liquidity](https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity) — protocol | W5.3 original AMM calculations, range and LP opportunity-cost intuition |
+| [Uniswap v2 pools](https://developers.uniswap.org/docs/protocols/v2/concepts/pools), [v3 position manager](https://docs.uniswap.org/contracts/v3/reference/periphery/NonfungiblePositionManager) — protocol | W6.2 LP ownership, redemption and liquidity-lock evidence boundaries |
+| [Aave interest rates](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy), [liquidations](https://aave.com/help/borrowing/liquidations), [Chainlink feeds](https://docs.chain.link/data-feeds/price-feeds), [Lido docs](https://docs.lido.fi/) — protocol | W5.4/6 and W6.5 collateral economics and causal risk |
+| [Pendle PT](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT), [YT](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/YT), [glossary](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary) — protocol | Optional W5.4 yield/principal/composability recognition |
+| [DefiLlama API](https://api-docs.defillama.com/), [metric definitions](https://docs.llama.fi/analysts/data-definitions), [CoinGecko supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) — independent data providers | W5.5 and W6.3–4 reproducible measurement, denominator and economic-flow definitions |
+| [DuckDB SQL](https://duckdb.org/docs/stable/sql/introduction), [CSV](https://duckdb.org/docs/stable/data/csv/overview), [web shell](https://shell.duckdb.org/), [LibreOffice](https://books.libreoffice.org/en/) — tool documentation | W6.3 local public-data analysis |
+| [Arkham token pages](https://codex.arkm.com/the-intelligence-platform/token-pages) — commercial intelligence provider | Optional W6.4 source reference only; no subscription or labels required for tasks |
+| [RWA.xyz](https://app.rwa-xyz.com/treasuries) — independent data; [Franklin prospectus](https://www.franklintempleton.com/forms-literature/download-preview/9001-P) — primary issuer; [SEC Commissioner statement](https://www.sec.gov/newsroom/speeches-statements/peirce-statement-tokenized-securities-070925) — regulator commentary | W6.6 alternate non-token investigation; commentary is not binding law |
+
 ## Avoid
 
 | Source | Reason |

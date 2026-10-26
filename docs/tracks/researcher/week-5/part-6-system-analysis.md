@@ -2,7 +2,7 @@
 track: researcher
 week: 5
 day: 6
-title: "System analysis"
+title: "Independent system analysis"
 status: drafting
 owner: "Education Team"
 reading_time: "45 min"
@@ -32,7 +32,7 @@ reviewers against Lido's own documentation. The model answer is kept outside
 the public handbook.
 -->
 
-# Week 5 · Part 6 — System analysis
+# Week 5 · Part 6 — Independent system analysis
 
 > **Core question — how does this system work, why do its participants
 > behave the way it hopes, and where could it fail?**
@@ -83,8 +83,11 @@ Not every source is equal. Label each one you use:
 
 - **Protocol-authored:** the project's own docs or blog. Good for *how it
   works*, weaker for *how well it holds up*.
-- **Independent:** a third party with no stake, such as an auditor, a
-  researcher, or on-chain data you queried yourself.
+- **Independent data/analysis:** outside the protocol's own publishing, such
+  as a researcher or data provider. Auditors may be commissioned and providers
+  may have incentives; independence is not a guarantee of accuracy.
+- **Explorer / raw chain:** records you can locate by chain, block and hash;
+  distinguish the explorer's labels from those records.
 
 An analysis that rests only on protocol-authored sources must say so in its
 open questions.
@@ -124,7 +127,8 @@ Write a **one-page analysis note** with the four lenses:
 4. **Open questions:** at least two, each with the evidence that would
    answer it.
 
-Under every source link, label it **protocol-authored** or **independent**.
+Under every source link, label its type: **protocol-authored**,
+**independent data/analysis** or **explorer/raw chain**.
 
 **Out of scope:** price predictions, comparing yields, investment advice, and
 reading smart-contract code.
@@ -132,7 +136,8 @@ reading smart-contract code.
 ## Evidence required
 
 - Your one-page analysis note with the four lenses.
-- A source list with each source labelled protocol-authored or independent.
+- A source list with each source labelled protocol-authored, independent
+  data/analysis or explorer/raw chain.
 - One sentence: which claim in your note are you least sure of, and why?
 
 ## Completion and revision

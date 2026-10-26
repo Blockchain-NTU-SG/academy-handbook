@@ -3,10 +3,10 @@
 
 Free, no sign-in and no third-party Python packages required.
 Source: DefiLlama public DEX-volume API (not Dune).
-Creates: uniswap_ethereum_90days.csv, W6.2-data-provenance.txt,
-         W6.2-source-snapshot.json (provider chain-level rows for the selected dates).
+Creates: uniswap_ethereum_90days.csv, W6.3-data-provenance.txt,
+         W6.3-source-snapshot.json (provider chain-level rows for the selected dates).
 
-Usage: python W6.2-free-public-data.py
+Usage: python W6.3-free-public-data.py
 """
 
 import csv
@@ -74,7 +74,7 @@ def extract_eth_volume(payload, today_utc):
 
 
 def main():
-    request = Request(URL, headers={"User-Agent": "W6.2-research-lesson/1.0"})
+    request = Request(URL, headers={"User-Agent": "W6.3-research-lesson/1.0"})
     with urlopen(request, timeout=40) as response:
         payload = json.load(response)
 
@@ -87,7 +87,7 @@ def main():
         for day, amount in rows:
             writer.writerow([day, f"{amount:.2f}"])
 
-    Path("W6.2-source-snapshot.json").write_text(
+    Path("W6.3-source-snapshot.json").write_text(
         json.dumps({
             "source_url": URL,
             "retrieved_utc": retrieved_at.isoformat(timespec="seconds"),
@@ -96,7 +96,7 @@ def main():
         }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8",
     )
 
-    (Path("W6.2-data-provenance.txt")).write_text(
+    (Path("W6.3-data-provenance.txt")).write_text(
         f"Source: {URL}\n"
         f"Retrieved at (UTC): {retrieved_at.isoformat(timespec='seconds')}\n"
         f"Metric: DefiLlama reported daily Uniswap Ethereum DEX volume in USD\n"
@@ -107,7 +107,7 @@ def main():
         encoding="utf-8",
     )
     print(f"Saved {csv_path}: 90 dates, {first_day} to {last_day} (UTC)")
-    print("Saved W6.2-data-provenance.txt and W6.2-source-snapshot.json")
+    print("Saved W6.3-data-provenance.txt and W6.3-source-snapshot.json")
     print("Open CSV in LibreOffice Calc to chart daily volume and compare the first and last 30 days.")
 
 

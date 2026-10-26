@@ -2,7 +2,7 @@
 track: researcher
 week: 6
 day: 4
-title: "Token and market evidence"
+title: "Token, liquidity and valuation evidence"
 status: drafting
 owner: "Education Team"
 reading_time: "40 min"
@@ -11,170 +11,176 @@ sources:
   - name: "CoinGecko — Supply methodology"
     url: "https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology"
     label: "Link"
-  - name: "CoinGecko — What is fully diluted valuation (FDV)?"
+  - name: "CoinGecko — FDV"
     url: "https://www.coingecko.com/learn/what-is-fully-diluted-valuation-fdv-in-crypto"
     label: "Link"
-  - name: "Uniswap — What is price impact?"
+  - name: "DefiLlama — Data definitions"
+    url: "https://docs.llama.fi/analysts/data-definitions"
+    label: "Link"
+  - name: "Uniswap — Price impact"
     url: "https://support.uniswap.org/hc/en-us/articles/8671539602317-What-is-price-impact"
     label: "Link"
-  - name: "Etherscan — Understanding the token page"
+  - name: "Etherscan — Token pages"
     url: "https://info.etherscan.com/understanding-token-page/"
     label: "Link"
-  - name: "Arkham — Token pages, holders and entities"
+  - name: "Arkham — Token pages"
     url: "https://codex.arkm.com/the-intelligence-platform/token-pages"
     label: "Link"
 ---
 
-<!--
-Author note (Education team): PIX and ORBIT are made-up tokens; ORBIT
-continues the supply example from Week 5 Part 5. Every figure was recalculated
-on 21 October 2026. The model answer is kept outside the public handbook.
--->
+<!-- Original synthetic data, not live valuations or recommendations.
+No reviewer solution is published here. Existing route retained. -->
 
-# Week 6 · Part 4 — Token and market evidence
+# Week 6 · Part 4 — Token, liquidity and valuation evidence
 
-> **Core question — how much of a token can actually be traded, by whom, and
-> at what price, compared with what its headline valuation suggests?**
+> **Core question — what makes a valuation comparison meaningful, and what could explain an apparent discount?**
 
-A token page shows a market cap, a fully diluted valuation and a daily volume.
-Together they look like a description of a market. In this Part you test them:
-how much supply is really tradable, how concentrated it is, and what a
-realistic purchase would actually cost.
-
-::: tip Picture a house price in a small village
-If one house sells for a high price, an estate agent may value every house
-in the village at that price. That does not mean all of them could be sold
-tomorrow at that price.
-
-Where the picture stops: in a token market you can see some of the "buyers'
-queue" directly, in an AMM pool or an order book, so you can calculate what
-a trade of a given size would cost instead of guessing.
-:::
+A low multiple can mean overlooked economics, weak value capture, low float,
+fragile liquidity or simply an invalid comparison. Use the supply model from
+W5.5, the investigation discipline from Part 2 and measurement discipline from
+Part 3 to decide what a number means before making a claim.
 
 ## The hard skill
 
-**Judge a token's real float, holder concentration and executable liquidity
-against its headline market cap and FDV.**
+**Choose a defensible valuation denominator and interpret relative value
+alongside token structure, executable liquidity and competing explanations.**
 
-After this Part you can:
-
-- calculate market cap, FDV and their ratio, and say what each leaves out;
-- estimate a real float with stated assumptions;
-- measure concentration among independent large holders;
-- test what a trade of a given size would cost in a pool.
+This is economic research methodology. No trade, wallet connection, price
+target, portfolio decision or real-money activity is required.
 
 ## Core / reference material
 
-### Five terms
+### Eight lenses, selected by the question
 
-- **Reported circulating supply:** tokens a data provider classes as
-  available to the public market. It may not equal the tokens actually on
-  offer at a given moment.
-- **Estimated real float:** the part of reported circulation plausibly
-  tradable soon, after a clearly stated adjustment for strategic holdings and
-  delayed withdrawals. This is your estimate, not a standard metric.
-- **Holder concentration:** the share of supply held by the largest
-  independent holders. Exchanges, bridges and liquidity pools hold tokens for
-  many people, so label or remove them before treating a big address as one
-  investor.
-- **Liquidity:** the ability to buy or sell without moving the price much.
-  Check pool reserves, order-book depth, spreads and a realistic quote. Daily
-  volume alone does not guarantee it.
-- **Market cap and FDV:** market cap = price × reported circulating supply.
-  For this Part, FDV = price × maximum supply. When you compare real tokens,
-  say which supply definition you used.
+| Lens | Research question |
+|---|---|
+| Fundamentals | What does the protocol do? Which activity creates economic value, what does it charge, and who receives it? |
+| Flows | What actually moved, from whom, and with what attribution limits? |
+| Valuation | Which numerator and denominator fit the economics and period? |
+| Tokenomics | Does ownership have a credible path to protocol economics? |
+| Unlocks | Who gains transferable supply, and under what incentives? Unlock ≠ sale. |
+| Catalysts | Which observable change could alter usage, costs, value capture or risk? |
+| Risks | What dependency could invalidate the result or stop value reaching holders? |
+| Narrative | What attracts attention, and is that supported by fundamentals? |
 
-### Worked example: PIX
+Not every question needs all eight. This framework organises evidence; it
+does not produce a buy/sell score. Attention is not automatically a catalyst
+for improved fundamentals, and a catalyst is not an instruction to buy.
 
-PIX is a made-up token trading at **$2**, with **100m** reported circulating
-tokens and **500m** maximum. 20m of the circulating tokens are strategic
-holdings, 10m are staked with delayed withdrawals, and five independent large
-holders control 21m of the rest. Its main AMM pool holds **2m PIX and 4m
-USDC**. Reported daily volume is **$3m**. Ignore swap fees, and assume no
-other venue has comparable depth.
+### Supply is not executable liquidity
 
-1. **Headline valuation.** Market cap = 100m × $2 = **$200m**. FDV = 500m ×
-   $2 = **$1bn**. Market cap ÷ FDV = **20%**. Neither tells you how much can
-   actually be traded near $2.
-2. **Real float.** 100m − 20m − 10m = **70m PIX**, which is 70% of reported
-   circulation. This is an estimate, not an official figure.
-3. **Concentration.** Five holders own 21m ÷ 70m = **30%** of the real float.
-   That is a concentration risk on the selling side. On a real token, check
-   that the addresses belong to separate owners.
-4. **One AMM trade.** With x = 2,000,000 PIX and y = 4,000,000 USDC,
-   k = x × y = 8,000,000,000,000. A buyer adds 400,000 USDC, so y becomes
-   4,400,000 and the new PIX reserve is k ÷ 4,400,000 ≈ 1,818,181.82. The
-   buyer receives about **181,818.18 PIX**, at an average of $400,000 ÷
-   181,818.18 ≈ **$2.20**, **10%** above the $2 starting price. This is a
-   simplified model, not a live quote.
-5. **Judgment.** PIX has a $200m market cap and $3m of daily volume, yet a
-   $400,000 buy pays about 10% over the starting price, and five holders
-   control 30% of what can trade. Past volume is not proof of depth today.
+Market cap = price × **reported circulating supply**. For this exercise,
+FDV = price × **maximum supply**; state a different provider convention if
+you use one. Market cap asks about current reported circulation; FDV asks
+about a specified broader supply base at today's marginal price. Neither is
+always the correct numerator or the cash needed to buy all tokens.
+
+**Estimated real float** is your assumption about supply plausibly tradable
+soon after specified adjustments, not a universal standard. Avoid double
+subtracting allocations. Top-holder **addresses** can represent exchanges,
+bridges, LPs or many users; independence must be justified, not assumed.
+Use Part 2's hypothesis standard.
+
+Executable liquidity asks what a stated-size trade could get now: quote size,
+direction, venue, fees and time matter. Daily volume is turnover, not depth.
+[W5.3](../week-5/part-3-mechanism-and-market-design.md) owns the AMM calculation;
+here we interpret quotes rather than repeat its algebra.
+
+### Choosing the denominator is the work
+
+| Candidate | What it can help compare | Main boundary |
+|---|---|---|
+| TVL | Deposited capital under a consistent methodology | Not revenue; price effects and double-counting can inflate it |
+| Fees | User charges under a stated definition | Much may go to suppliers/LPs |
+| Revenue | Retained/distributed economics after supplier payments | Define recipient and provider convention |
+| Earnings / holder accrual | Net economics after specified costs, or actual holder distributions | Not interchangeable; governance can change rights and costs may be omitted |
+| Economic volume / sector metric | Useful activity for comparable business models | Incentivised or wash-like flow can inflate activity |
+
+Use comparable mechanisms, fee recipients, token rights, dates and definitions.
+Do not compare a rollup's transaction fees with a DEX's trading volume as if
+they were the same revenue. Trailing 12 months and annualised last month can
+tell different stories; label extrapolation and avoid seasonal distortion.
+
+### Worked example: explaining a multiple
+
+Synthetic peer P has $120m market cap and $12m comparable trailing-year
+retained revenue: **10×**. Peer Q has $180m and $12m: **15×**. Two-point mean
+and median are both 12.5×; P is 20% below that reference. That is arithmetic,
+not proof of undervaluation. Perhaps Q has stronger sustainable growth; perhaps
+P's token lacks a credible revenue claim. Check the rights and quality of the
+denominator before choosing between those explanations.
+
+An outlier is a question. A premium/discount needs an explanation, evidence
+that could falsify it, and a confidence boundary.
 
 ## Hands-on task
 
-ORBIT is the made-up token from [Week 5 Part 5](../week-5/part-5-token-and-incentive-economics.md).
-All amounts are in US dollars unless stated.
+Use this **synthetic snapshot dated 26 October 2026**. All three fictional
+protocols are comparable spot AMMs on Case-L1, with the same trailing-year
+definitions and no cross-listed revenue. Values in $m unless stated.
 
-| Market and ownership input | Value |
-|---|---|
-| Price; total supply; maximum supply | $0.50; 2,000m; 2,000m ORBIT |
-| Reported circulating supply | 820m ORBIT |
-| Known strategic holdings; staked tokens with delayed withdrawal | 220m ORBIT; 100m ORBIT |
-| Five independent large holders | 200m ORBIT, within the estimated real float |
-| Main AMM pool reserves | 10m ORBIT and 5m USDC |
-| Reported trading volume, past 24 hours | $4m across venues |
+| Protocol | Market cap | FDV | TVL | User fees | Retained revenue after LP payments |
+|---|---:|---:|---:|---:|---:|
+| ORBIT | 410 | 1,000 | 600 | 60 | 12 |
+| LANE | 300 | 400 | 450 | 40 | 10 |
+| MESH | 240 | 480 | 500 | 50 | 8 |
 
-The strategic and delayed-withdrawal tokens are counted in reported
-circulation, are separate from each other, and are not readily tradable. No
-other venue has comparable depth. Ignore swap fees.
+ORBIT's token is $0.50: 820m circulating / 2,000m maximum tokens.
+Within reported circulation, 220m strategic tokens and a separate 100m in
+delayed withdrawals are assumed unavailable soon. Five addresses hold 200m
+of the remainder; common control is unverified. The next 100m unlock is
+assumed fully tradable. ORBIT has no direct holder distribution; holders vote
+on treasury spending. Comparable rights for LANE/MESH are **unknown**.
 
-1. Calculate market cap, FDV and the market cap to FDV ratio.
-2. Estimate the real float and its share of reported circulation. Then
-   assume the 100m unlock from Week 5 Part 5 arrives and all of it is
-   tradable: what is the real float then, and by what percentage has it
-   grown?
-3. Calculate the five large holders' share of today's real float.
-4. A buyer adds 500,000 USDC to the pool. Using x × y = k, calculate the ORBIT
-   received and the average price paid.
-5. Give an overall risk judgment, and explain why the $4m daily volume is not
-   enough to show the market is deep.
+A fictional quote snapshot for selling $100,000 worth at the marginal price
+returns $91,000 for ORBIT, $98,000 for LANE and $97,000 for MESH, net of fees.
+These quotes are not live execution guarantees.
 
-**Out of scope:** price predictions, trading advice, order-book modelling and
-fees across several venues.
+Produce **one calculation/interpretation table**:
+
+1. Choose and defend a denominator from the table. Compute market-cap multiples
+   for all three and their mean/median. Identify one apparent premium/discount.
+   State whether FDV would change that comparison and why.
+2. Estimate ORBIT's real float now and after the unlock, and the five addresses'
+   current share of that estimate. Label assumptions; do not call them five people.
+3. Give **two explanations** for the apparent valuation difference and the
+   evidence needed to discriminate. Connect token rights, unlock/liquidity or
+   activity quality to at least one explanation.
+4. In **up to 100 words**, state the bounded conclusion, one potential
+   fundamental catalyst, a plausible narrative-only explanation, and evidence
+   that would invalidate your conclusion. An unknown rights comparison can
+   justify withholding a value judgment.
+
+**Out of scope:** price targets, position sizing, trade recommendations,
+repeating constant-product maths or pretending these are real protocols.
 
 ## Evidence required
 
-- Your calculations for each step, with the assumptions you used.
-- Your short judgment from step 5.
+- One table containing calculations, assumptions and competing explanations.
+- The short conclusion with a next evidence check; no separate investment report.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Completed / approved earns full points;
+incomplete or materially incorrect work is returned for revision. There is no
+partial-score rubric or separate weekly submission.
 
-Your work is complete when:
+Complete means a justified denominator, reproducible relative calculations,
+labelled float/concentration assumptions, two explanations with discriminating
+evidence, and a conclusion that respects unknown rights and liquidity.
+A premium is not automatically expensive; a discount is not automatically an opportunity.
 
-- [ ] market cap, FDV and their ratio are correct, and you say which supply each uses;
-- [ ] the real float is labelled as your estimate, with its assumptions;
-- [ ] the unlock's effect on real float is calculated;
-- [ ] the concentration share uses the real float as its base;
-- [ ] the AMM trade is calculated with x × y = k and compared with the starting price;
-- [ ] the judgment explains why volume is not depth.
-
-::: details Further exploration — optional, not assessed
-- Pick a real token. Open its holders tab on Etherscan and label the top ten
-  addresses as exchange, bridge, pool, contract or unknown. How much of the
-  top-ten share is left once you remove the first four types?
-- Get a real swap quote for a $10,000 and a $500,000 trade on a DEX
-  aggregator. How does the price impact change?
+::: details Further Exploration — optional, not assessed
+Compare a real protocol's fee and revenue definitions across its docs and a
+data provider. Date your observations and explain differences before comparing
+multiples. A quote may be inspected read-only; do not connect or trade.
 :::
 
 ::: details Sources and attribution
-- [CoinGecko — Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) — Link, referenced only
-- [CoinGecko — What is fully diluted valuation (FDV)?](https://www.coingecko.com/learn/what-is-fully-diluted-valuation-fdv-in-crypto) — Link, referenced only
-- [Uniswap — What is price impact?](https://support.uniswap.org/hc/en-us/articles/8671539602317-What-is-price-impact) — Link, referenced only
-- [Etherscan — Understanding the token page](https://info.etherscan.com/understanding-token-page/) — Link, referenced only
-- [Arkham — Token pages, holders and entities](https://codex.arkm.com/the-intelligence-platform/token-pages) — Link, referenced only
+- [CoinGecko — Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) and [FDV](https://www.coingecko.com/learn/what-is-fully-diluted-valuation-fdv-in-crypto) — Link, data-provider definitions
+- [DefiLlama — Data definitions](https://docs.llama.fi/analysts/data-definitions) — Link, independent provider methodology; checked 26 October 2026
+- [Uniswap — Price impact](https://support.uniswap.org/hc/en-us/articles/8671539602317-What-is-price-impact) — Link, protocol/tool reference
+- [Etherscan — Token pages](https://info.etherscan.com/understanding-token-page/) — Link, explorer evidence and labels
+- [Arkham — Token pages](https://codex.arkm.com/the-intelligence-platform/token-pages) — Link, commercial intelligence provider; optional reference, not required access
+- Peer table, quote snapshot and comparison method — original Academy teaching example
 :::

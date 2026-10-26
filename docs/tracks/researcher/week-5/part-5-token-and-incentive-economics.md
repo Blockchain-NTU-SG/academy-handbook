@@ -17,6 +17,9 @@ sources:
   - name: "Arbitrum DAO — Token circulating supply"
     url: "https://docs.arbitrum.foundation/token-supply"
     label: "Link"
+  - name: "DefiLlama — Data definitions"
+    url: "https://docs.llama.fi/analysts/data-definitions"
+    label: "Link"
 ---
 
 <!--
@@ -104,6 +107,26 @@ investor unlock makes restricted insider tokens transferable all at once. Do
 not assume any group will sell. The point is to know who controls the new
 supply and what they are paid to want.
 
+### Follow the economics as well as the supply
+
+==Protocol usage ≠ fees ≠ revenue ≠ earnings ≠ token-holder value accrual.==
+Map the path instead of assuming that an active protocol makes its token valuable:
+
+| Flow | Research question |
+|---|---|
+| Supply sources and sinks | What mints/emits/unlocks tokens? What permanently burns them? Staking or a lock restricts liquidity but is not necessarily a permanent sink. |
+| Demand drivers | Is the token required for a service, collateral, security or another use? Who needs it, and why? |
+| Usage → fees | Which activity pays a charge, rather than just moving assets? |
+| Fees → revenue | What goes to suppliers/LPs, and what is retained by the protocol or distributed to holders? |
+| Revenue → earnings / treasury | What remains after the stated costs or incentives? Is the figure cash flow, an accounting estimate or token emissions? |
+| Token-holder accrual | Is there an enforceable distribution, buyback/burn or another credible economic link? Who can change it? |
+
+Providers use different definitions; DefiLlama separates supply-side payments,
+protocol revenue and token-holder revenue. Name your convention and period
+before comparing figures. Governance rights alone establish decision power,
+not a contractual claim on cash flow or automatic economic demand. An unlock
+percentage is context, not a universal danger threshold.
+
 ### Worked example: NOVA
 
 NOVA has a max and total supply of 1 billion tokens. For this example, every
@@ -135,7 +158,7 @@ Arbitrum's docs list where its initial 10 billion ARB went: 35.28% to the DAO
 treasury, 26.94% to the team, contributors and advisers, 17.53% to investors,
 11.62% to users by airdrop, 7.5% to the Arbitrum Foundation and 1.13% to DAOs
 building on Arbitrum. User and DAO airdrops were claimable from March 2023.
-Team and investor tokens were locked for four years: the first unlock came a
+Team and investor allocations vest over four years: the first unlock came a
 year after launch, then monthly unlocks for the remaining three years. So for
 most of ARB's life, the supply allocated was far larger than the supply
 circulating.
@@ -204,4 +227,5 @@ Your work is complete when:
 - [CoinGecko — Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) — Link, referenced only
 - [Arbitrum DAO — Airdrop eligibility and distribution](https://docs.arbitrum.foundation/airdrop-eligibility-distribution) — Link, allocation and vesting figures (checked 21 October 2026)
 - [Arbitrum DAO — Token circulating supply](https://docs.arbitrum.foundation/token-supply) — Link, referenced only
+- [DefiLlama — Data definitions](https://docs.llama.fi/analysts/data-definitions) — Link, data-provider methodology; checked 26 October 2026
 :::

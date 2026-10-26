@@ -5,7 +5,7 @@ day: 5
 title: "Dependency, governance and risk"
 status: drafting
 owner: "Education Team"
-reading_time: "45 min"
+reading_time: "40 min"
 points: 100
 sources:
   - name: "Aave — Health Factor & Liquidations"
@@ -126,6 +126,12 @@ flowchart TD
 The dotted arrow is **conditional**: a borrower being liquidated is not itself
 proof that suppliers incurred a loss.
 
+Use earlier Parts to sharpen an arrow, not lengthen a checklist: an upgrade
+authority can change accepted logic; an oracle transmits an erroneous price;
+a bridge can impair a representation; incentive withdrawal can reduce executable
+liquidity. For each, name the affected state or action and then who is exposed.
+Governance is an actor with a power and delay, not an all-purpose mitigation.
+
 ## Hands-on task
 
 Use the Aave + Lido sources above. Produce a **one-page risk model**:
@@ -140,7 +146,7 @@ Use the Aave + Lido sources above. Produce a **one-page risk model**:
    working. Keep the 80% threshold visibly marked **illustrative**.
 3. **Write a risk table with four rows:**
    **trigger → transmission mechanism → first exposed party → monitorable
-   signal → possible breaker/mitigation**. Include one row where an oracle
+   signal → possible breaker/mitigation → residual risk**. Include one row where an oracle
    misprices assets and one where market liquidity is poor.
 4. **Trace one worst-case conditional path** in 5–7 lines. Distinguish
    liquidation loss to a borrower from the additional conditions required
@@ -169,8 +175,8 @@ There is no partial-score rubric.
 - [ ] five or more dependencies and a feedback loop are shown clearly;
 - [ ] all three stress health factors and the HF=1 crossing are correct;
 - [ ] oracle price is not confused with a spot-market price;
-- [ ] each of four risks names a first loser, observable signal and possible
-      control or reason no control is assured;
+- [ ] each of four risks names a first loser, observable signal, possible
+      control and residual risk (or why no control is assured);
 - [ ] borrower liquidation is distinguished from potential protocol bad debt;
 - [ ] unverified live parameters are explicitly identified.
 

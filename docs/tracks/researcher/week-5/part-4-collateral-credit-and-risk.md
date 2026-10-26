@@ -2,7 +2,7 @@
 track: researcher
 week: 5
 day: 4
-title: "Collateral, credit and economic risk"
+title: "Collateral, credit and DeFi economics"
 status: drafting
 owner: "Education Team"
 reading_time: "40 min"
@@ -14,6 +14,15 @@ sources:
   - name: "Chainlink — Price feeds"
     url: "https://docs.chain.link/data-feeds/price-feeds"
     label: "Link"
+  - name: "Aave V3 — Interest rate strategy"
+    url: "https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy"
+    label: "Link"
+  - name: "Pendle — Principal token"
+    url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT"
+    label: "Link"
+  - name: "Pendle — Glossary"
+    url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary"
+    label: "Link"
 ---
 
 <!--
@@ -22,7 +31,7 @@ table and the model answer was recalculated on 21 October 2026. The model
 answer is kept outside the public handbook.
 -->
 
-# Week 5 · Part 4 — Collateral, credit and economic risk
+# Week 5 · Part 4 — Collateral, credit and DeFi economics
 
 > **Core question — at what price does a crypto loan get liquidated, and
 > what happens to the lender if the market moves faster than that?**
@@ -111,6 +120,43 @@ The liquidation price is not a second market price. The market price moves;
 the liquidation price is the trigger level set by the position's collateral,
 debt and threshold.
 
+### The economic feedback: utilisation and interest
+
+In a simplified reserve, **utilisation = borrowed / supplied**. If 80 of 100
+units supplied are borrowed, utilisation is 80%; the remaining liquidity is
+the buffer for withdrawals. Borrowers pay for access to scarce liquidity;
+supplier yield generally depends on borrow rates, utilisation and the
+protocol's retained share. Extra token rewards are a separate subsidy.
+
+Aave V3's variable-rate model uses two slopes around an optimal-usage point:
+above the **kink**, borrowing becomes more expensive more quickly. This can
+encourage repayment and new supply; it cannot guarantee either during stress.
+The target, slopes and full liquidity accounting depend on the reserve and
+deployment. This is an intuition, not a live rate quote or an exact curve for
+every market (documentation checked 26 October 2026).
+
+Recursive borrowing means borrowing against collateral and redepositing or
+buying more collateral to borrow again. Gross supplied assets and debt grow
+together while initial equity does not. Yield exposure, borrowing cost and
+liquidation exposure all grow; a subsidy can disappear before the debt does.
+The same HF model still asks what collateral and debt the protocol actually values.
+
+::: details Landscape — Pendle: composing principal, yield and credit
+Pendle wraps a yield-bearing asset into a standardised yield token (SY), then
+separates principal (PT) from yield entitlement (YT) up to a maturity date.
+PT's maturity claim is denominated in its **accounting asset**, which can
+differ from the yield-bearing token delivered through redemption. Buying PT
+below that maturity value gives a fixed-return interpretation in that unit
+if held to maturity and redemption works. YT exposes the holder to realised
+variable yield up to expiry, not a guaranteed return.
+
+If a lender accepts PT as collateral, it composes another dependency chain:
+underlying asset → yield protocol → SY/PT settlement → lender's valuation and
+liquidation rules. Maturity does not remove contract, liquidity, oracle or
+underlying-asset risk. This is recognition material, not a borrowing strategy
+or a second assessed task.
+:::
+
 ## Hands-on task
 
 A borrower deposits **8 ETH** when ETH is **2,500 USD**. The debt is
@@ -126,8 +172,9 @@ A borrower deposits **8 ETH** when ETH is **2,500 USD**. The debt is
 6. Write the failure path in four to six short steps, from "ETH falls fast"
    to "the protocol is left with a loss". Name who bears the loss.
 
-**Out of scope:** interest rates, liquidation bonuses, recursive borrowing and
-specific Aave market parameters.
+**Out of scope:** live rate calibration, liquidation bonuses, executing leverage
+or Pendle strategies, and specific Aave market parameters. All numbers above
+are hypothetical; use a worksheet, not funds or wallet actions.
 
 ## Evidence required
 
@@ -154,9 +201,15 @@ Your work is complete when:
   updates. How far could the price move between two updates?
 - Find a real bad-debt event on a lending protocol. Which step of your
   failure path broke?
+- Compare a funding-rate/basis trade or a recursive PT lending loop as a
+  dependency model only: what borrowing, settlement and funding assumptions
+  could fail together? No position, return forecast or trade is required.
 :::
 
 ::: details Sources and attribution
 - [Aave — Health factor and liquidations](https://aave.com/help/borrowing/liquidations) — Link, referenced only
 - [Chainlink — Price feeds](https://docs.chain.link/data-feeds/price-feeds) — Link, referenced only
+- [Aave V3 — Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) — Link, protocol documentation
+- [Pendle — Principal token](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT) — Link, protocol documentation
+- [Pendle — Glossary](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary) — Link, protocol documentation
 :::

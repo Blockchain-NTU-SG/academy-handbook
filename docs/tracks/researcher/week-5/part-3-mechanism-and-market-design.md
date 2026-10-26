@@ -14,6 +14,12 @@ sources:
   - name: "Uniswap docs — v2 pricing"
     url: "https://developers.uniswap.org/docs/protocols/v2/concepts/pricing"
     label: "Link"
+  - name: "Uniswap — Concentrated liquidity"
+    url: "https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity"
+    label: "Link"
+  - name: "Uniswap v2 — Understanding returns"
+    url: "https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns"
+    label: "Link"
 ---
 
 <!--
@@ -122,6 +128,21 @@ A bigger pool absorbs the same trade with a smaller change in its reserve
 ratio. More liquidity means less price movement and a better price for the
 trader.
 
+### Where the v2 model stops
+
+V2 allocates liquidity across the entire positive price range: providers do not
+choose an interval. V3 lets them concentrate liquidity near a selected price,
+so the same capital can support deeper execution **within that interval**.
+Outside it, the position becomes inactive, stops earning trading fees and may
+be entirely one asset. Pool TVL alone therefore does not reveal active depth.
+
+An LP's changing asset mix also creates **impermanent (divergence) loss**:
+the position can underperform simply holding the original assets when their
+relative price changes. It is an opportunity-cost comparison, not necessarily
+a negative dollar return. Fees may offset it; “impermanent” does not promise
+recovery. These concepts explain the boundary of our v2 arithmetic; they add
+no second calculation task.
+
 ## Hands-on task
 
 A pool holds **150 ETH** and **300,000 USDC**, with a **0.3%** fee. A trader
@@ -140,8 +161,8 @@ sells **12 ETH** for USDC.
 7. In one or two sentences, explain why the same trade would move the price
    less in a deeper pool.
 
-**Out of scope:** Uniswap v3 concentrated liquidity, impermanent loss
-formulas, gas costs and multi-hop routes.
+**Out of scope:** concentrated-liquidity maths, impermanent-loss formulas,
+gas costs and multi-hop routes.
 
 ## Evidence required
 
@@ -169,9 +190,13 @@ Your work is complete when:
   theirs, and in which token?
 - Read section 2.2 of the Uniswap v2 whitepaper on price oracles. Why does
   Uniswap average prices over time rather than use the spot price?
+- Compare an LP's fee income with divergence loss under a stated price path;
+  range maths and the IL formula are optional depth.
 :::
 
 ::: details Sources and attribution
 - [Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf) — Link, referenced only
 - [Uniswap docs — v2 pricing](https://developers.uniswap.org/docs/protocols/v2/concepts/pricing) — Link, referenced only
+- [Uniswap — Concentrated liquidity](https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity) — Link, protocol documentation; checked 26 October 2026
+- [Uniswap v2 — Understanding returns](https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns) — Link, protocol documentation
 :::
