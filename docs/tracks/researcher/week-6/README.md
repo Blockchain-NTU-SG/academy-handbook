@@ -26,11 +26,11 @@ assessed progress evidence for this week.
 | 1 | [On-chain Evidence and Trace Semantics](./part-1-on-chain-data-as-evidence.md) | 35 min | Drafting |
 | 2 | [Entity and Fund-Flow Investigation](./part-2-querying-real-data.md) | 40 min | Drafting |
 | 3 | [Querying and Measurement Design](./part-3-measurement-design.md) | 65 min hands-on | Drafting |
-| 4 | [Token, Liquidity and Valuation Evidence](./part-4-token-and-market-evidence.md) | 40 min | Drafting |
+| 4 | [Token, Liquidity and Valuation Evidence](./part-4-token-and-market-evidence.md) | 60 min hands-on | Drafting |
 | 5 | [Dependency, Governance and Risk](./part-5-dependency-governance-and-risk.md) | 40 min | Drafting |
 | 6 | [Independent Investigation Brief](./part-6-evidence-to-claim.md) | 50 min | Drafting |
 
-**Required estimate: 270 minutes (4 h 30 min)**, including hands-on work.
+**Required estimate: 290 minutes (4 h 50 min)**, including hands-on work.
 These are authoring estimates to test in the pilot, not completion deadlines.
 Optional exploration is not assessed. Existing page URLs are retained.
 

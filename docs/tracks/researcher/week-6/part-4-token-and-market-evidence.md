@@ -5,7 +5,7 @@ day: 4
 title: "Token, liquidity and valuation evidence"
 status: drafting
 owner: "Education Team"
-reading_time: "40 min"
+reading_time: "60 min hands-on"
 points: 100
 sources:
   - name: "CoinGecko — Supply methodology"
@@ -35,10 +35,9 @@ No reviewer solution is published here. Existing route retained. -->
 
 > **Core question — what makes a valuation comparison meaningful, and what could explain an apparent discount?**
 
-A low multiple can mean overlooked economics, weak value capture, low float,
-fragile liquidity or simply an invalid comparison. Use the supply model from
-W5.5, the investigation discipline from Part 2 and measurement discipline from
-Part 3 to decide what a number means before making a claim.
+A low multiple can reflect overlooked economics, weak value capture, low float,
+fragile liquidity or a bad comparison. Use W5.5 and W6 Parts 2–3 to test what
+it means before making a claim.
 
 **Market capitalisation (market cap)** is a token's quoted price multiplied
 by a provider's reported circulating supply. It is an estimate of market
@@ -52,11 +51,8 @@ alongside token structure, executable liquidity and competing explanations.**
 This is economic research methodology. No trade, wallet connection, price
 target, portfolio decision or real-money activity is required.
 
-A **decentralised exchange (DEX)** lets users trade through protocol
-mechanisms rather than a conventional order-matching company. An **automated
-market maker (AMM)** is one DEX design; **liquidity providers (LPs)** supply
-assets to its pools. The exact mechanism matters when deciding what a volume,
-fee or liquidity number represents.
+W5P3 introduced DEX and automated market maker (AMM) mechanics; use that
+distinction when deciding what a volume, fee or liquidity number represents.
 
 ## Core / reference material
 
@@ -73,20 +69,46 @@ fee or liquidity number represents.
 | **Risks** | Which failure could break the thesis, who is exposed, and what signal would show it? | Dependency, permissions, liquidity, oracle and incident evidence | Listing generic risks without a causal path or exposed party |
 | **Narrative** | What story attracts attention, and what evidence supports it? | Dated communications, attention measures and independently checked outcomes | Treating attention or a compelling story as economic proof |
 
-The first seven lenses focus mainly on observable system and economic
-evidence. **Narrative** asks how market participants interpret that evidence
-and where their attention is focused. This is a useful distinction, not a
-claim that the first seven are perfectly objective: definitions, coverage and
-interpretation still require judgment.
+The first seven lenses focus mainly on observable system and economic evidence;
+**Narrative** asks how market participants interpret it and where attention is
+focused. None is perfectly objective: definitions, coverage and interpretation
+still require judgment. Not every question needs all eight.
 
-Not every question needs all eight. They are lenses, not a checklist or score.
-The overview is a map; the sections below teach how to use each lens.
+### How the lenses relate
+
+The groups below help organise a question; they are not a mandatory order or a
+checklist. Select the lenses that can actually inform the case.
+
+```mermaid
+flowchart LR
+  subgraph SYS["System"]
+    F[Fundamentals] --- FL[Flows]
+  end
+  subgraph TOK["Token"]
+    T[Tokenomics] --- U[Unlocks]
+  end
+  V[Valuation]
+  C[Catalysts]
+  R[Risks]
+  N[Narrative / attention]
+  B[Bounded conclusion]
+  SYS -. informs .-> V
+  TOK -. informs .-> V
+  C -. may change .-> SYS
+  R -. tests .-> B
+  N -. context, not proof .-> B
+  V --> B
+```
+
+**Academy schematic — a way to organise the lenses, not a fixed research
+sequence.** The conclusion should connect relevant evidence and state what
+remains unknown.
 
 ### 1. Fundamentals — what economic system exists underneath the token?
 
-Before asking whether a token is cheap or expensive, ask whether there is an
-economic system worth valuing. Fundamentals describe the mechanism that
-creates useful activity and what happens economically when people use it.
+Before asking whether a token is cheap or expensive, ask whether an economic
+system worth valuing exists: what it does, who uses it and what useful activity
+results.
 
 For a decentralised exchange (DEX), start with a trade: a trader swaps, pays a
 fee, and the protocol's rules allocate that fee. Some may go to liquidity
@@ -110,63 +132,50 @@ fee-allocation architecture.** The important distinction is:
 
 **Usage ≠ fees ≠ protocol revenue ≠ earnings ≠ token-holder value accrual.**
 
-Ask: What problem does the protocol solve? Who uses it, and why? Which
-activity is economically meaningful? What does the user pay, who receives
-those payments, and what costs sit between fees and retained economics? Does
-growth create something economically valuable?
+| Ask | Evidence to check | Boundary |
+|---|---|---|
+| What problem is solved, and who uses it? | Official mechanism docs and independently measured activity | Transaction count alone does not show useful activity. |
+| What does a user pay, and who receives it? | Fee rules and destinations | Fees paid to LPs or suppliers are not automatically retained by the protocol. |
+| What remains after payments and costs? | Defined retained revenue, treasury and distribution rules | TVL is deposited assets under a provider's method, not revenue. |
+| Is growth economically meaningful? | Activity definitions and incentive context | Subsidised activity may not persist when incentives change. |
 
-Useful evidence includes official mechanism and fee documentation, measured
-activity with a defined method, fee destinations, revenue-recipient rules,
-treasury/distribution rules and independently measured usage. A dashboard
-metric needs its own definition. **Total value locked (TVL)** is a provider's
-measure of assets deposited in a protocol; it is not revenue. Transaction
-count does not show whether activity is useful, and subsidised activity may
-not persist when incentives change. W5P5 introduced the distinction between
-protocol economics and token value capture; use it here rather than assuming
-that protocol success automatically benefits the token.
+Use [W5P5](../week-5/part-5-token-and-incentive-economics.md) for the full
+fee-flow and value-accrual model; here, test whether that chain exists in the
+case rather than repeating it.
 
 ### 2. Flows — where is capital actually moving?
 
-Fundamentals describe the economic machine; **flows describe movement through
-it over a stated period**. A flow can involve capital, tokens, liquidity or
-claims, at either market/ecosystem level or protocol/token level.
+Fundamentals describe the economic machine; **flows describe where capital,
+tokens or liquidity moved during a stated period**. W6P2 traces individual
+records; this lens asks what a set of records means at system level.
 
-At market or ecosystem level, a researcher might examine stablecoin
-issuance/redemption, bridge inflows and outflows, exchange-traded product
-flows where relevant, institutional or treasury accumulation, or liquidity
-migration between chains. At protocol or token level, examples include
-deposits and withdrawals, issuance/redemption, treasury transfers, exchange
-deposits, LP inflows/outflows, staking/unstaking and bridge movement. These
-are possible questions, not a requirement to measure every category.
+| Ecosystem / market flows | Protocol / token flows |
+|---|---|
+| Stablecoin issuance or redemption | Deposits and withdrawals |
+| Bridge flows and cross-chain liquidity migration | LP movement and staking / unstaking |
+| Institutional or treasury accumulation | Treasury transfers and token issuance / redemption |
+| Exchange-traded product flows, where relevant | Exchange deposits and bridge movement |
 
-W6P2 taught you to trace individual records. This lens asks what a collection
-of such records means economically: Did liquidity move into the system or
-between its components? Was supply issued or redeemed? Is the observed change
-large relative to the relevant base and time window?
-
-Flows establish movement only within the records and labels you can verify.
-A bridge inflow is not protocol revenue; a token transfer is not necessarily
-organic demand; an exchange deposit does not prove a sale; an unlock proves
-that transfer restrictions changed, not that a recipient sold. Check the
-asset, chain, direction, period, counterparty labels and missing coverage
-before interpreting a total.
+These are possible questions, not a checklist. Verify asset, chain, direction,
+period, labels and coverage before interpreting totals: **bridge inflow ≠
+revenue; transfer ≠ organic demand; exchange deposit ≠ confirmed sale; unlock
+≠ sale.**
 
 ### 3. Valuation — what economic quantity is the market value compared with?
 
-Valuation asks: **how much market value is assigned per unit of a relevant
-economic quantity?** A multiple makes that comparison explicit:
+Valuation asks: **how much market value is assigned per unit of a chosen
+economic quantity?**
 
 $$
 \text{Multiple} =
 \frac{\text{Valuation}}{\text{Chosen Economic Denominator}}
 $$
 
-The numerator is what is being valued; the denominator is the economic
-quantity chosen for comparison. For example, a market cap of **USD 100
-million** divided by **USD 10 million of comparable annual retained revenue**
-gives **10×**: ten units of market value per unit of annual retained revenue. The
-currency, time period, scope and definitions must match. This is a comparison,
-not a forecast of returns.
+The numerator is what is being valued; the denominator is the quantity used
+for comparison. For example, **USD 100 million market cap ÷ USD 10 million
+comparable annual retained revenue = 10×**: ten units of value per unit of
+annual retained revenue. Match currency, period, scope and definitions. This
+is a comparison, not a return forecast.
 
 | Comparison | Question it can help ask | Why it is not interchangeable |
 |---|---|---|
@@ -174,9 +183,8 @@ not a forecast of returns.
 | FDV / revenue | How does a broader specified supply basis compare with that revenue measure at today's marginal price? | FDV convention varies; it does not mean all tokens will circulate at today's price. |
 | Market cap / TVL | How does token market value compare with assets a provider counts as deposited? | TVL is not revenue, earnings or executable liquidity. |
 
-Market cap is commonly calculated as price multiplied by reported circulating
-supply; FDV uses a specified broader supply basis. A simplified relationship
-is:
+Market cap commonly uses reported circulating supply; fully diluted valuation
+(FDV) uses a stated broader supply basis. A simplified relationship is:
 
 $$
 \text{Market Cap} = P\times S_{\text{circ}}
@@ -184,200 +192,152 @@ $$
 \text{FDV} = P\times S_{\text{max}}
 $$
 
-$P$ is the token price in a chosen currency per token; $S_{\text{circ}}$ is
-reported circulating supply and $S_{\text{max}}$ is maximum supply, both in
-token units. The products are in the chosen currency. For this lesson, use
-maximum supply when the source defines FDV that way and state any different
-provider convention. FDV uses today's marginal price as a comparison basis;
-it does not mean all tokens could be sold at that price. Market cap and FDV
-answer different supply questions; neither is universally the right measure.
-Fees, retained revenue, earnings, TVL and economic volume also answer
-different questions. Choose the denominator that fits the mechanism and
-explain what it leaves out.
+Here $P$ is price per token; $S_{\text{circ}}$ is reported circulating
+supply; and $S_{\text{max}}$ is maximum supply. The products are in the chosen
+currency. State the provider's FDV convention: using today's marginal price
+for all maximum supply does not mean all tokens could be sold at that price.
+Market cap and FDV answer different supply questions; neither is universally
+right.
 
 **Estimated real float** is an analyst's assumption about supply plausibly
-tradable soon after specified adjustments, not a universal standard. Avoid
-double-subtracting allocations. Top-holder **addresses** can represent
-exchanges, bridges, LPs or many users; independence must be justified, not
-assumed. Use W6P2's hypothesis standard.
+tradable soon, not a universal standard; state adjustments and avoid
+double-subtraction. Top-holder **addresses** may represent exchanges, bridges,
+LPs or many users, so do not assume one address is one person (W6P2).
 
-Executable liquidity asks what a stated-size trade could get now: quote size,
+Executable liquidity asks what a stated-size trade could get now; quote size,
 direction, venue, fees and time matter. Daily volume is turnover, not depth.
 [W5P3](../week-5/part-3-mechanism-and-market-design.md) teaches the AMM
-calculation; here we interpret quotes rather than repeat its algebra.
+calculation; here we interpret quotes.
 
-A **premium** means a higher valuation per unit of a chosen denominator than
-a valid comparison set. A **discount** means a lower one. These are relative
-descriptions: a premium is not automatically expensive, and a discount is
-not automatically cheap. Multiples may differ because of expected growth,
-competitive position, value capture, treasury, executable liquidity,
-incentives, token rights, risk or market expectations. If the comparison set
-does not have comparable mechanisms or definitions, the arithmetic may be
-correct while the conclusion is not.
+A **premium** is a higher multiple than a valid comparison set; a **discount**
+is a lower one. **Premium ≠ automatically expensive; discount ≠ automatically
+cheap.** Growth, competitive position, value capture, treasury, liquidity,
+incentives, rights, risk and expectations may explain a difference. If
+mechanisms or definitions are not comparable, correct arithmetic can still
+support a weak conclusion.
 
-| Candidate denominator | What it can help compare | Main boundary |
+| Economic denominator | What it measures | Main boundary |
 |---|---|---|
-| Total value locked (TVL) | Deposited capital under a consistent methodology | Not revenue; price effects and double-counting can inflate it |
-| Fees | User charges under a stated definition | Much may go to suppliers/LPs |
-| Revenue | Retained/distributed economics after supplier payments | Define recipient and provider convention |
-| Earnings / holder accrual | Net economics after specified costs, or actual holder distributions | Not interchangeable; governance can change rights and costs may be omitted |
-| Economic volume / sector metric | Useful activity for comparable business models | Incentivised or wash-like flow can inflate activity |
+| TVL | Deposited assets under a consistent method | Not revenue; price effects or double-counting can inflate it |
+| Fees | User charges under a stated definition | Some or most may go to LPs / suppliers |
+| Retained revenue | Economics left or distributed after supplier payments | State recipient and provider convention |
+| Earnings / holder accrual | Net economics after costs or actual holder distributions | Not interchangeable; costs and rights may be omitted or change |
+| Economic volume | Activity for comparable business models | Incentivised or wash-like flow can inflate it |
 
-Use comparable mechanisms, fee recipients, token rights, dates and
-definitions. Do not compare a rollup's transaction fees with a DEX's trading
-volume as if they were the same revenue. Trailing 12 months and annualised
-last month can tell different stories; label extrapolation and avoid
-seasonal distortion.
+Compare like mechanisms, fee recipients, token rights, periods and
+definitions. A rollup's transaction fees and a DEX's trading volume are not the
+same revenue measure; trailing-12-month and annualised-last-month figures are
+not interchangeable without explaining the time basis.
 
 ### 4. Tokenomics — if the protocol succeeds, why should the token benefit?
 
 This lens tests the connection between protocol outcomes and the token. A
-protocol can become more useful without its token becoming more valuable if
-there is no credible mechanism linking the two. **Protocol success ≠ token
-success unless a mechanism connects them.**
+protocol can become more useful without its token benefiting unless a
+credible mechanism links the two.
 
-On the **supply side**, ask how emissions, unlocks, burns, minting, staking or
-locking, treasury inventory and circulating/non-circulating classifications
-change the amount or availability of tokens. Providers may classify supply
-differently, so state whose method and date you use.
+| Supply / availability | Demand / rights |
+|---|---|
+| Emissions, minting and burns | Required gas or protocol access |
+| Unlocks and circulating supply | Staking / security and collateral |
+| Staking or locking; treasury inventory | Fee discounts and enforceable distributions |
+| Provider classifications and their date | Governance and other documented rights |
 
-On the **demand and rights side**, check whether the token is needed for gas
-or protocol access, used in staking/security or collateral, provides a fee
-discount, or carries enforceable revenue/distribution rights or governance
-rights. Governance may be economically meaningful in some systems, but it
-does not automatically create a cash-flow claim or continuous token demand.
-Read the token contract and governing documents; a name or marketing phrase
-does not establish rights. Connect this lens to W5P5's fee-flow analysis:
-first find retained economics, then verify whether and how the token can
-benefit.
+Governance can matter, but it does not automatically create a cash-flow claim
+or continuous demand. Check token and governing documents, then connect to
+W5P5: **protocol success ≠ token success unless a credible mechanism links
+them.**
 
 ### 5. Unlocks — what new transferable supply is becoming available?
 
-An **unlock** changes the ability to transfer tokens under a restriction. It
-does not establish a sale or the recipient's intention. Ask four questions:
+An **unlock** removes a transfer restriction; it is not evidence of a sale or
+intent. Check four things:
 
-1. **How much?** Compare the amount with reported circulating supply,
-   explicitly estimated float, executable liquidity and relevant market
-   turnover. These denominators are not interchangeable.
-2. **Who receives it?** It may go to a team, early investors, treasury,
-   ecosystem incentives or users. Do not infer a selling plan from a category.
-3. **When does it become transferable?** Distinguish a one-time cliff from
-   linear vesting, which releases tokens over time. Check the schedule and
-   date rather than relying on a rounded calendar summary.
-4. **Can the market absorb it?** Consider liquidity, turnover, holder
-   concentration and evidence about recipient behaviour. A displayed pool
-   size or historical volume is not a guarantee of execution at a given size.
+| Question | What to compare |
+|---|---|
+| **How much?** | Reported circulation, estimated float, executable liquidity and relevant turnover; these differ. |
+| **Who?** | Team, early investors, treasury, ecosystem or users; category alone does not reveal intent. |
+| **When?** | A cliff releases at a point; linear vesting releases over time. Check the dated schedule. |
+| **Absorbable?** | Liquidity, turnover, holder concentration and recipient behaviour; historical volume does not guarantee execution. |
 
-There is no universal “large unlock” percentage. Any threshold is a
-context-dependent heuristic that needs validation against the token's float,
-liquidity and market structure. An unlock is a supply event to investigate,
-not proof of selling pressure.
+There is no universal “large unlock” threshold. Any heuristic depends on the
+token's float and market structure. Treat an unlock as a supply event to
+investigate, not proof of selling pressure.
 
 ### 6. Catalysts — what observable change could materially alter the thesis?
 
-A **catalyst** is not simply news. It is a change that could affect usage,
-revenue, cost, market structure, value capture, token supply/demand,
-competitive position or risk. Possible examples include a product launch, a
-new chain deployment, a fee-policy or governance-parameter change, a major
-integration, a regulatory event or a tokenomics change.
+A **catalyst is not simply news**: it is an observable change that could alter
+usage, costs, value capture, supply/demand, competition or risk. A product
+launch, fee-policy change, integration or governance decision matters only if
+it changes implementation or behaviour.
 
-Test the evidence chain:
+```mermaid
+flowchart LR
+  A[Announcement] --> I[Implemented?] --> U[Adoption or behaviour change?] --> E[Measured economic effect?]
+```
 
-**Announcement → implementation → adoption or behaviour change → measurable
-economic effect.**
-
-Each arrow is a question. Was the feature actually deployed? Did the intended
-users adopt it? Did measurable activity or economics change, relative to a
-baseline and plausible alternatives? An announced partnership with no
-resulting behaviour change is not demonstrated fundamental impact. A
-catalyst can strengthen, weaken or leave a thesis unchanged; it is not an
-instruction to buy.
+Check each link against a baseline and plausible alternatives. An announcement
+without changed behaviour is not demonstrated economic impact; a catalyst may
+strengthen, weaken or leave a thesis unchanged. It is not an instruction to buy.
 
 ### 7. Risks — what could make the thesis wrong?
 
-A useful risk is more than a label such as “smart-contract risk”,
-“regulation” or “competition”. Trace a conditional path:
+A useful risk is more than “smart-contract risk” or “regulation”. Trace:
 
 **Trigger → mechanism → exposed party → economic or thesis impact →
 observable evidence.**
 
-For example, if a critical oracle stops updating, a lending market may value
-collateral incorrectly; borrowers, liquidators, suppliers or the protocol
-could be affected in different ways depending on the design. Evidence might
-include update freshness, market depth, position health factors and the
-protocol's pause or fallback rules. The path is a scenario, not a forecast.
-
-W6P5 develops this into a dependency and stress-test method. Here, ask what
-could invalidate the valuation or value-accrual explanation. **The best risk
-statement names evidence that would make you reduce confidence in the
-thesis.**
+For example: an oracle stops updating → collateral may be mispriced → borrowers,
+liquidators or suppliers may be exposed. Check update freshness, market depth,
+position health and pause/fallback rules. This is a scenario, not a forecast.
+W6P5 teaches the full dependency and stress-test method. Here, identify
+evidence that would make you reduce confidence in the valuation or value-
+accrual thesis.
 
 ### 8. Narrative — why is the market paying attention to this now?
 
-A **narrative** is the story through which market participants currently
-interpret or focus attention on a protocol, token or sector. Stablecoins,
-real-world assets (RWA), AI agents, privacy, decentralised physical
-infrastructure networks (DePIN) and restaking are examples of themes that
-may attract attention at different times; their use here does not imply any
-particular investment view.
+A **narrative** is the story market participants use to interpret or focus
+attention on a protocol, token or sector (for example, stablecoins, RWA,
+AI agents or DePIN). Attention may bring discussion or capital interest and
+coincide with demand or valuation, but does not itself change protocol
+economics or prove value accrual.
 
-Attention can lead to more discussion, research or capital interest and may
-coincide with higher demand or valuation. But narrative does not by itself
-change protocol economics or prove token value capture. **Strong narrative,
-weak fundamentals:** attention can grow while activity, retained economics or
-rights remain weak. **Improving fundamentals, weak narrative:** a system may
-improve economically before the wider market pays attention.
+| Fundamentals | Attention | What it can mean |
+|---|---|---|
+| Weak | Strong | The story may be running ahead of the economics. |
+| Improving | Weak | Economics may improve before the market notices. |
 
-Use narrative as context for interpretation: what claim is being repeated,
-who is repeating it, and what independent evidence supports or contradicts
-it? Attention measures are themselves imperfect. Narrative is not economic
-proof and this framework does not teach narrative-trading entry or exit
-strategies.
+Ask what claim is repeated, who makes it and what independent evidence
+supports or contradicts it. Attention measures are imperfect; narrative is
+context, not economic proof. This is not a trading-entry or exit method.
 
-### How the lenses fit together
+### Use the lenses together
 
-The framework is not eight independent boxes. A reasonable research path is
-to identify the mechanism, find meaningful activity, trace capital, test
-whether the token connects to the economics, inspect new supply, choose a
-matching valuation, then examine change, failure and market attention:
-
-```mermaid
-flowchart TB
-  accTitle: Research path through the eight lenses
-  accDescr: Start with the system and meaningful activity, examine capital flows and token value capture, then supply, valuation, possible thesis-changing events, risks and narrative before making a bounded conclusion.
-  F["System and fundamentals"] --> FL["Flows"] --> T["Token value capture"] --> U["Unlocks and supply"] --> V["Valuation"] --> C["Catalysts"] --> R["Risks and falsification"] --> N["Narrative and attention"] --> B["Bounded conclusion"]
-```
-
-**Academy schematic — one possible order, not a universal research recipe.**
-Not every case needs every lens, and the order may change with the question.
-The framework helps prevent one attractive metric or story from dominating
-the whole analysis.
+Relate relevant evidence to one question, state what remains unknown and
+identify what could disprove your explanation. No single metric or story
+should dominate the conclusion.
 
 ### Worked example: eight lenses on fictional AMM Alder
 
-This compact fictional case shows how the lenses relate. Its observations are
-illustrative, not live data or recommendations.
+This fictional case is illustrative, not live data or a recommendation.
 
 | Lens | Alder observation | What it means / question remaining |
 |---|---|---|
-| Fundamentals | USD 20m annual user fees; USD 8m paid to LPs; USD 12m retained under the case definition | Measurable activity and retained economics; verify how fees and retained amounts are defined and which costs are omitted. |
-| Flows | No dated deposit, withdrawal, bridge or treasury-flow series is supplied | Direction of capital is unknown; obtain a scoped series before claiming liquidity is entering or leaving. |
-| Valuation | USD 120m market cap ÷ USD 12m retained annual revenue = 10×; fictional Birch is 15× on the same stated measure | Alder is one-third below that reference multiple, not automatically cheap; check mechanism, rights, dates and comparability. |
-| Tokenomics | No direct holder distribution is stated | Retained protocol economics may not accrue to the token; inspect enforceable rights and any other demand mechanism. |
-| Unlocks | A 15% circulating-supply unlock is due in three months; recipients are not specified | Newly transferable supply may matter; verify recipients, schedule, float assumptions and market depth. |
-| Catalysts | A new chain integration is announced | It is a hypothesis to test; check deployment, adoption and post-launch economics rather than the announcement alone. |
-| Risks | A USD 100,000 sale quote is shallow, and the link from retained economics to holders is unclear | Liquidity and value capture could weaken the valuation interpretation; test quote depth and token rights. |
-| Narrative | “AI-powered” attention is reported | Attention exists in the case, but is not evidence of improved use, revenue or holder accrual. |
+| Fundamentals | USD 20m fees; USD 12m retained under the case definition | Verify definitions and omitted costs. |
+| Flows | No dated flow series supplied | Direction is unknown; obtain a scoped series. |
+| Valuation | USD 120m cap ÷ USD 12m retained revenue = 10×; Birch = 15× on the same measure | Below this reference, not automatically cheap; test comparability and rights. |
+| Tokenomics | No direct holder distribution stated | Verify enforceable rights and other demand mechanisms. |
+| Unlocks | 15% of reported circulation unlocks in three months; recipients unknown | Check schedule, float assumptions and market depth. |
+| Catalysts | New chain integration announced | Verify deployment, adoption and post-launch economics. |
+| Risks | USD 100,000 sale quote is shallow; holder-accrual link unclear | Check executable depth and token rights. |
+| Narrative | “AI-powered” attention reported | Attention is not evidence of better use, revenue or accrual. |
 
-**Now combine the lenses.** Alder has measurable fees and retained economics
-under the stated definitions, but no supplied evidence shows that holders
-receive them. Its 10× multiple is below Birch's 15× reference, while
-comparability, holder rights, an upcoming unlock and shallow quoted liquidity
-remain material unknowns. The integration is not yet a demonstrated
-fundamental change. A bounded next check is to verify unlock recipients and
-token rights, then compare post-launch retained economics and executable
-quote depth with a dated baseline. The framework is not “collect eight
-facts”; it is “build one explanation and identify what could disprove it.”
+**Now combine the lenses.** Alder has stated retained economics but no evidence
+that holders receive them. Its 10× multiple is below Birch's reference, but
+rights, comparability, the unlock and shallow liquidity remain unresolved; the
+integration is not yet a demonstrated economic change. A bounded next check is
+to verify token rights and unlock recipients, then compare post-launch retained
+economics and executable depth with a dated baseline. Use the lenses to build
+one explanation and identify what could disprove it—not to collect eight facts.
 
 ## Hands-on task
 

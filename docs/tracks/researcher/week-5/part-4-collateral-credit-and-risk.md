@@ -94,10 +94,12 @@ strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy),
 - [Download the Aave V3 Technical Paper (official PDF)](https://raw.githubusercontent.com/aave-dao/aave-v3-origin/main/docs/Aave_V3_Technical_Paper.pdf)
 - [View the PDF in the official Aave DAO repository](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf).
 
-The official raw PDF response uses a sandboxed content policy and
-`X-Frame-Options: deny`, so browsers refuse to display it inside the Handbook.
-Open the direct PDF or repository link above; the current Aave documentation
-links remain the reference for live behaviour.
+::: details Read the Aave V3 Technical Paper inside the Academy
+@[pdf 1 height="620px" zoom="90"](/files/researcher/aave-v3-technical-paper.pdf)
+:::
+
+The embedded PDF is an unmodified reading copy of the official paper. Use the
+current Aave documentation linked above for present behaviour.
 
 ### The health factor
 
@@ -340,7 +342,8 @@ Your work is complete when:
 :::
 
 ::: details Sources and attribution
-- [Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) — Link, protocol-authored design reference; not a current deployment specification
+- [Aave DAO — Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) — Official source for the unmodified local reading copy; design reference, not a current deployment specification
+- [Aave DAO — repository licence](https://github.com/aave-dao/aave-v3-origin/blob/main/LICENSE) — Business Source License 1.1 identifies the Licensed Work as Aave v3.7; the PDF has no separate file-level licence notice.
 - [Aave — Health factor and liquidations](https://aave.com/help/borrowing/liquidations) — Link, referenced only
 - [Chainlink — Price feeds](https://docs.chain.link/data-feeds/price-feeds) — Link, referenced only
 - [Aave V3 — Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) — Link, protocol documentation
