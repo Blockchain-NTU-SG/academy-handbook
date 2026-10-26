@@ -37,7 +37,8 @@ not distinguish these two explanations yet”.
 ## The hard skill
 
 **Form a bounded, falsifiable conclusion by combining system understanding,
-direct on-chain evidence, quantitative/economic evidence and counter-evidence.**
+case evidence, quantitative/economic evidence and counter-evidence. For a real
+case, include direct chain evidence relevant to the question.**
 
 This is Researcher readiness for W7, not a project proposal, trading call or
 a new weekly submission. Work read-only with public data. AI can help draft
@@ -55,16 +56,11 @@ evidence quality. Your question might be: *which observations are consistent
 with coordinated distribution/control, and what else explains them?*
 Do not declare “insider dumping” or “scam” from a pattern.
 
-The dossier supplies a reproducible starting point, not real chain evidence.
-For the required direct observation, inspect **one public token transaction
-you have not used in Parts 1–2**, record its full hash/chain and verify the
-event emitter and result. You may choose a transaction from the public
-[Ethereum USDC transfer list](https://etherscan.io/token/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48).
-Keep its role explicit: it verifies a transfer/record-reading claim, **not**
-the synthetic actors' existence or identity. Place that small field check in
-a labelled evidence-table row, separate from the dossier conclusion.
-Alternatively use a real unfamiliar system throughout, with public evidence
-supporting the same bounded question.
+The dossier is a reproducible set of synthetic record-level observations, not
+real chain evidence. Use its records to test competing explanations; do not
+add an unrelated real transaction just to satisfy a checklist. If you instead
+choose a real unfamiliar system, use at least one direct public chain record
+that bears on your actual question, and verify its event emitter and result.
 
 **Non-token alternative:** investigate an unfamiliar protocol/system, including
 a tokenised-Treasury product, governance execution or infrastructure dependency.
@@ -96,7 +92,7 @@ Use the following as one-page headings, not eleven separate assignments:
 |---|---|
 | Question / thesis | A bounded claim, case, date and falsification condition |
 | System | Mechanism summary and relevant actors/dependencies |
-| Evidence | Direct chain observation plus meaningful quantitative/economic measurement, with units and provenance |
+| Evidence | Relevant case records plus a meaningful quantitative/economic measurement, with units and provenance; direct chain evidence is required when the case is real |
 | Challenge | Strongest support, strongest counter-evidence/alternative, and one material causal risk |
 | Judgment | Confidence with reason, what would change it, and one concrete next check |
 
@@ -119,7 +115,9 @@ The brief must contain:
 
 1. research question and bounded thesis;
 2. system/mechanism summary and relevant actors/dependencies;
-3. at least one direct on-chain observation, with chain, full hash/address,
+3. evidence appropriate to the case: for the synthetic dossier, cite relevant
+   record IDs and label them as invented observations; for a real case, include
+   a direct chain record relevant to the question, with chain, full hash/address,
    block/date, result and link;
 4. at least one meaningful quantitative/economic measurement with unit,
    window, source and working;
@@ -127,10 +125,9 @@ The brief must contain:
 6. one material risk traced to an exposed party;
 7. confidence, evidence that would change the conclusion, and one concrete next check.
 
-For the synthetic case, label all dossier records synthetic and keep the real
-explorer field check separate as described above. Do not use that field check
-to authenticate the dossier. For a real case, the direct record should bear
-on the question, and missing attribution must stay unknown.
+For the synthetic case, label dossier records synthetic and keep conclusions
+within their bounded observation window. For a real case, the direct record
+must bear on the question, and missing attribution must stay unknown.
 
 **Out of scope:** price targets, investment recommendations, identity claims
 from clusters, long reports, paid forensic tools, or a final PoW commitment.
@@ -147,8 +144,9 @@ incomplete or materially incorrect work is returned for revision. There is no
 partial-score rubric or separate weekly submission.
 
 Complete means the question is falsifiable, system and risk are causal,
-direct and derived evidence are distinguishable, the measurement is reproducible,
-and the strongest alternative is engaged rather than dismissed. Confidence
+source observations and derived evidence are distinguishable, the measurement
+is reproducible, and the strongest alternative is engaged rather than
+dismissed. For a real case, include relevant direct chain evidence. Confidence
 must fit the weakest material link. A carefully justified unknown is preferable
 to an unsupported accusation.
 

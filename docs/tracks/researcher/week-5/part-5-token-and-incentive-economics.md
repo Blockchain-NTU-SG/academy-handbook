@@ -72,13 +72,17 @@ After this Part you can:
   Locked or vesting tokens are left out, and data providers may also leave
   out project-controlled allocations not meant for trading yet.
 
-For this Part, use the simplified relationship:
+For this Part, use the simplified relationship, with all supply values in
+the same token units:
 
-> Circulating supply = total supply − non-circulating tokens
+$$
+S_{\text{circ}} = S_{\text{total}} - S_{\text{non-circulating}}
+$$
 
-Real projects classify treasury, foundation and unlocked insider tokens
-differently, so always check the project's own disclosures and the data
-provider's methodology.
+This is a teaching relationship, not a universal provider formula. Providers
+may classify treasury, foundation, unlocked insider and other allocations
+differently, so check the project's disclosures and the provider's dated
+methodology before comparing reported supply.
 
 ### What an unlock is, and is not
 
@@ -110,7 +114,25 @@ supply and what they are paid to want.
 ### Follow the economics as well as the supply
 
 ==Protocol usage ≠ fees ≠ revenue ≠ earnings ≠ token-holder value accrual.==
-Map the path instead of assuming that an active protocol makes its token valuable:
+Map the path instead of assuming that an active protocol makes its token
+valuable. The diagram is an Academy economic-flow schematic: each arrow is a
+question to verify, and the final link is conditional.
+
+```mermaid
+flowchart TB
+  accTitle: Protocol economics and conditional token-holder accrual
+  accDescr: Usage may create fees; fees may pay providers or become retained revenue; revenue may form treasury or earnings; any path to token-holder accrual is conditional.
+  U["Protocol usage"] -->|"only paid activity"| F["Fees"]
+  F -->|"some fees paid out"| P["Payments to LPs,<br/>suppliers, validators<br/>or incentives"]
+  F -->|"amount retained"| R["Protocol revenue"]
+  R -->|"after costs / policy"| T["Treasury or earnings"]
+  T -.->|"only with a credible mechanism / right"| H["Possible token-holder accrual"]
+```
+
+The dotted final arrow is not automatic. Activity may be free or subsidised;
+fees may mostly pay providers; retained revenue may be spent on operations or
+incentives; treasury control may not give holders a claim. The table below
+keeps the definitions and questions precise.
 
 | Flow | Research question |
 |---|---|

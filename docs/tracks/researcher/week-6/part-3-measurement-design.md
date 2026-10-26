@@ -33,9 +33,8 @@ sources:
 > **Core question — did reported trading volume rise, and was the rise typical or concentrated in a few days?**
 
 A flow investigation asks what happened in particular records. A measurement
-asks what a defined series can support. Use one workflow:
-**question → retrieve → validate → query → stress-test metric → interpret**.
-Retrieval and interpretation belong to one analysis, not separate reports.
+asks what a defined series can support. Retrieval, validation and interpretation
+are parts of one analysis, not separate reports.
 
 ## The hard skill
 
@@ -47,6 +46,19 @@ Ethereum, in USD, across the last 90 complete UTC days**. It is not a count of
 trades, wallets or people. No account, API key or wallet is needed.
 
 ## Core / reference material
+
+### A measurement workflow
+
+```mermaid
+flowchart TB
+  accTitle: Measurement workflow
+  accDescr: A research question moves through retrieval, provenance, coverage validation, querying, cross-checking and metric stress-testing to a bounded claim.
+  Q["Question"] --> R["Retrieve"] --> P["Preserve provenance"] --> V["Validate coverage"] --> SQL["Query"] --> X["Cross-check"] --> S["Stress-test metric"] --> I["Interpret"] --> C["Bounded claim"]
+```
+
+**Academy workflow schematic:** each step constrains the next. A query cannot
+repair a missing date, and a calculated metric cannot support a broader claim
+than its source, unit, window and coverage allow.
 
 ### Retrieve once; preserve the source
 
@@ -142,6 +154,28 @@ example's dates into a new download.
 | Mean | Total USD / 30 observed days, USD/day | Headline average |
 | Median | Middle of the ordered daily values, USD/day | A typical day, less dominated by spikes |
 | Top-three share | Sum of busiest three days / window total, % | Concentration in outliers |
+
+For two consistent windows, percentage change in a metric is:
+
+$$
+\%\Delta = \left(\frac{x_1}{x_0}-1\right)\times100
+$$
+
+$x_0$ is the baseline-window value and $x_1$ is the comparison-window value;
+both must use the same unit and metric definition. If $x_0=0$, percentage
+change is undefined (report the values rather than dividing by zero).
+
+For a 30-day window, top-three share is:
+
+$$
+C_3 =
+\frac{V_{(1)}+V_{(2)}+V_{(3)}}{\sum_{i=1}^{30}V_i}
+$$
+
+$V_{(1)},V_{(2)},V_{(3)}$ are the three largest observed daily USD volumes in
+that window; the denominator is the sum of all 30 daily values. Multiply the
+ratio by 100 to report a percentage. If the window total is zero, the share is
+undefined.
 
 In Calc, with CSV headers in row 1 and sorted dates, use:
 

@@ -69,11 +69,22 @@ for improved fundamentals, and a catalyst is not an instruction to buy.
 
 ### Supply is not executable liquidity
 
-Market cap = price × **reported circulating supply**. For this exercise,
-FDV = price × **maximum supply**; state a different provider convention if
-you use one. Market cap asks about current reported circulation; FDV asks
-about a specified broader supply base at today's marginal price. Neither is
-always the correct numerator or the cash needed to buy all tokens.
+The common supply-based valuation relationships are:
+
+$$
+\text{Market Cap} = P\times S_{\text{circ}}
+\qquad\qquad
+\text{FDV} = P\times S_{\text{max}}
+$$
+
+$P$ is the token's stated price in a chosen currency (for example, USD per
+token); $S_{\text{circ}}$ is reported circulating supply, and $S_{\text{max}}$
+is maximum supply, both in token units. The products are therefore in the
+chosen currency. For this lesson FDV uses maximum supply; report a provider's
+different convention if it uses another supply base. Market cap asks about
+current reported circulation; FDV asks about a specified broader supply base
+at today's marginal price. Neither is always the correct numerator or the cash
+needed to buy all tokens.
 
 **Estimated real float** is your assumption about supply plausibly tradable
 soon after specified adjustments, not a universal standard. Avoid double
@@ -87,6 +98,21 @@ direction, venue, fees and time matter. Daily volume is turnover, not depth.
 here we interpret quotes rather than repeat its algebra.
 
 ### Choosing the denominator is the work
+
+When comparing valuation with an economic measure, use:
+
+$$
+\text{Multiple} =
+\frac{\text{Valuation}}{\text{Chosen Economic Denominator}}
+$$
+
+The numerator and denominator must match the research question, currency,
+period and convention. For example, a USD market value divided by comparable
+USD retained revenue for the same stated period gives a valuation-to-revenue
+multiple. Market cap and FDV answer different supply questions; neither is
+universally correct. TVL, fees, revenue, earnings and economic volume are not
+interchangeable. An apparent discount is a question to investigate, not
+automatically an opportunity.
 
 | Candidate | What it can help compare | Main boundary |
 |---|---|---|

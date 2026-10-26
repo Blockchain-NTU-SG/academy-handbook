@@ -20,6 +20,9 @@ sources:
   - name: "Pendle — Principal token"
     url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT"
     label: "Link"
+  - name: "Pendle — Yield tokenization architecture"
+    url: "https://docs.pendle.finance/pendle-v2-dev/Contracts/YieldTokenization"
+    label: "Link"
   - name: "Pendle — Glossary"
     url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary"
     label: "Link"
@@ -68,12 +71,37 @@ After this Part you can:
 
 ### The health factor
 
-A common measure is the **health factor** (HF):
+A common measure is the **health factor** (HF). In the simplified single-asset
+model used here:
 
-> HF = (collateral value × liquidation threshold) ÷ debt
+$$
+HF = \frac{V_{\text{collateral}}\times LT}{D}
+$$
 
-A higher HF means more buffer. HF = 1 is the boundary. In Aave, a position
-can be liquidated once HF falls below 1.
+Here, $V_{\text{collateral}}$ is the collateral's current value in the
+protocol's valuation currency (USD in our examples), $LT$ is the liquidation
+threshold as a fraction (80% is $0.80$), and $D$ is the debt value in the same
+currency. Multiplying by $LT$ turns the market value into a safety-adjusted
+value: only that fraction counts toward the liquidation boundary. A higher HF
+means more buffer. $HF=1$ is the simplified boundary; under Aave's model, a
+position may become eligible for liquidation below 1. Real multi-asset
+positions use protocol-specific valuation and threshold rules.
+
+### Solve for a single-asset liquidation price
+
+If a borrower has $Q_{\text{collateral}}$ units of one collateral asset, fixed
+debt $D$, and a fixed threshold $LT$, set $HF=1$ and solve for the price:
+
+$$
+P_{\text{liq}} =
+\frac{D}{Q_{\text{collateral}}\times LT}
+$$
+
+$P_{\text{liq}}$ is currency per collateral unit (USD per ETH here). The
+formula assumes one collateral asset, debt and threshold unchanged, and the
+protocol's oracle price matching the price used in the calculation. It omits
+interest accrual, liquidation bonuses, fees and changing collateral. It is
+not the break-even price: break-even is where collateral value equals debt.
 
 ### Where the price comes from
 
@@ -94,9 +122,9 @@ and the liquidation threshold is **80%**.
 1. **Collateral value** = 10 × 2,000 = 20,000 USD.
 2. **Health factor** = (20,000 × 0.80) ÷ 12,000 = **1.33**. Above 1, so there
    is a buffer.
-3. **Liquidation price.** Let P be the ETH price where HF = 1:
-   1 = (10P × 0.80) ÷ 12,000, so 8P = 12,000 and **P = 1,500 USD**.
-4. **The fall needed** = (2,000 − 1,500) ÷ 2,000 × 100 = **25%**.
+3. **Liquidation price:**
+   $P_{\text{liq}}=12{,}000/(10\times0.80)=\mathbf{1{,}500\ USD/ETH}$.
+4. **The fall needed** = $(2{,}000-1{,}500)/2{,}000\times100=$ **25%**.
 
 ### Why liquidate before the collateral is worth less than the debt?
 
@@ -116,24 +144,66 @@ was congested, the protocol is left with **bad debt**.
 | 1,200 | 12,000 | 0.80 | Collateral = debt |
 | 1,100 | 11,000 | 0.73 | Collateral < debt |
 
+**Academy schematic — a conditional lending failure path, not a claim that
+every liquidation produces bad debt:**
+
+```mermaid
+flowchart TB
+  accTitle: Lending liquidation failure path
+  accDescr: A collateral price fall lowers health factor. Liquidation may repay debt, but insufficient proceeds or liquidity may leave bad debt and expose suppliers or the protocol depending on loss rules.
+  P["Collateral price falls"] --> V["Valued collateral falls"] --> H["Health factor falls"] --> T{"HF below threshold?"}
+  T -->|Eligible| L["Liquidation attempt"]
+  L -->|Enough proceeds and liquidity| R["Debt repaid<br/>borrower loses collateral"]
+  L -->|Price, oracle, liquidity or congestion shortfall| B["Bad debt may remain"]
+  B --> E["Supplier or protocol exposure<br/>depends on loss rules"]
+```
+
+The diagram separates a borrower's liquidation loss from protocol bad debt.
+Eligibility does not guarantee that a liquidator acts in time; a liquidation
+shortfall can expose suppliers or the protocol only if its accounting and loss
+rules leave debt uncovered.
+
 The liquidation price is not a second market price. The market price moves;
 the liquidation price is the trigger level set by the position's collateral,
 debt and threshold.
 
 ### The economic feedback: utilisation and interest
 
-In a simplified reserve, **utilisation = borrowed / supplied**. If 80 of 100
-units supplied are borrowed, utilisation is 80%; the remaining liquidity is
-the buffer for withdrawals. Borrowers pay for access to scarce liquidity;
-supplier yield generally depends on borrow rates, utilisation and the
-protocol's retained share. Extra token rewards are a separate subsidy.
+In the simplified reserve model here, utilisation $U$ is:
 
-Aave V3's variable-rate model uses two slopes around an optimal-usage point:
-above the **kink**, borrowing becomes more expensive more quickly. This can
-encourage repayment and new supply; it cannot guarantee either during stress.
-The target, slopes and full liquidity accounting depend on the reserve and
-deployment. This is an intuition, not a live rate quote or an exact curve for
-every market (documentation checked 26 October 2026).
+$$
+U = \frac{\text{Total Borrowed}}{\text{Total Supplied}}
+$$
+
+Both quantities refer to the same reserve and asset; $U$ is a fraction, often
+shown as a percentage. If 80 of 100 units supplied are borrowed, $U=0.80$ and
+20 units remain as the simple withdrawal buffer. High utilisation means less
+immediately available liquidity relative to supplied assets; borrowers pay
+for access to scarcer liquidity. Supplier yield generally depends on borrow
+rates, utilisation and the protocol's retained share. Extra token rewards are
+a separate subsidy.
+
+Aave V3's [official interest-rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy)
+uses two slopes around an optimal-usage point: above the **kink**, borrowing
+becomes more expensive more quickly. This can encourage repayment and new
+supply; it cannot guarantee either during stress.
+The target and slopes depend on the reserve and deployment. The chart is a
+conceptual Academy schematic, not a live Aave curve or parameter quote:
+
+```mermaid
+xychart-beta
+  accTitle: Conceptual utilisation and borrow-rate curve
+  accDescr: Borrow rate rises gradually before optimal utilisation and more steeply after the kink; the chart is illustrative, not scaled or a live quote.
+  x-axis "Reserve utilisation (% of supplied)" 0 --> 100
+  y-axis "Borrow rate (illustrative %; not to scale)" 0 --> 50
+  line [3, 4, 5, 6, 7, 8, 9, 10, 12, 28, 45]
+```
+
+**How to read it:** the horizontal axis is the share of supplied reserve
+currently borrowed; the vertical axis is the illustrative borrowing rate.
+Before the optimal-use kink the rate rises gradually; beyond it the steeper
+slope makes borrowing rise faster, attempting to preserve liquidity. The
+shape does not guarantee repayment, new supply or a particular rate.
 
 Recursive borrowing means borrowing against collateral and redepositing or
 buying more collateral to borrow again. Gross supplied assets and debt grow
@@ -144,11 +214,30 @@ The same HF model still asks what collateral and debt the protocol actually valu
 ::: details Landscape — Pendle: composing principal, yield and credit
 Pendle wraps a yield-bearing asset into a standardised yield token (SY), then
 separates principal (PT) from yield entitlement (YT) up to a maturity date.
+
+```mermaid
+flowchart TB
+  accTitle: Yield tokenisation overview
+  accDescr: A yield-bearing asset is standardised as SY and separated into principal-token and yield-token claims that both run to maturity.
+  A["Yield-bearing asset"] --> B["SY<br/>standardised yield interface"]
+  B --> C["PT<br/>principal claim"]
+  B --> D["YT<br/>variable-yield claim"]
+  C --> M["Maturity"]
+  D --> M
+```
+
+**Academy schematic — simplified tokenisation flow, not Pendle contract
+architecture.** For the protocol's own [PT/YT yield-stream diagram and
+architecture](https://docs.pendle.finance/pendle-v2-dev/Contracts/YieldTokenization),
+see its official documentation. This sketch only orients the learner to the
+token split; consult the protocol's current terms for exact settlement.
+
 PT's maturity claim is denominated in its **accounting asset**, which can
 differ from the yield-bearing token delivered through redemption. Buying PT
 below that maturity value gives a fixed-return interpretation in that unit
 if held to maturity and redemption works. YT exposes the holder to realised
-variable yield up to expiry, not a guaranteed return.
+variable yield up to expiry, not a guaranteed return. Contract, liquidity,
+oracle and underlying-asset risks remain.
 
 If a lender accepts PT as collateral, it composes another dependency chain:
 underlying asset → yield protocol → SY/PT settlement → lender's valuation and

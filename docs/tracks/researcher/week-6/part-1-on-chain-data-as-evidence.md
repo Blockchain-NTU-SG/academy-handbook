@@ -14,6 +14,9 @@ sources:
   - name: "ERC-20: Token Standard (EIP-20)"
     url: "https://eips.ethereum.org/EIPS/eip-20"
     label: "Link"
+  - name: "EIP-4844 — Shard Blob Transactions"
+    url: "https://eips.ethereum.org/EIPS/eip-4844"
+    label: "Link"
   - name: "Ethereum Execution API — eth_getTransactionReceipt"
     url: "https://ethereum.github.io/execution-apis/api/methods/eth_getTransactionReceipt/"
     label: "Link"
@@ -31,6 +34,9 @@ sources:
     label: "Link"
   - name: "Etherscan — Proxy types"
     url: "https://info.etherscan.com/types-of-proxy-contracts-detected-by-etherscan/"
+    label: "Link"
+  - name: "EIP-7702 — Set EOA account code"
+    url: "https://eips.ethereum.org/EIPS/eip-7702"
     label: "Link"
 ---
 
@@ -52,6 +58,20 @@ that is not supported by the chain**.
 
 Why it matters: a dashboard can label something a swap, payment or withdrawal.
 Only the transaction, receipt, logs and block let you test that label.
+
+**Academy schematic — one signed transaction can produce several observable
+execution effects; it is not a complete state diff:**
+
+```mermaid
+flowchart TB
+  accTitle: One signed transaction and its execution effects
+  accDescr: An EOA signs a transaction envelope that can trigger contract execution, internal calls and multiple state, ETH and log effects, summarized partly in a receipt.
+  E["EOA"] -->|"signs once"| T["Transaction envelope"] --> C["Contract / proxy execution"] --> I["Internal calls<br/>not separately signed"] --> O["Effects: state changes,<br/>ETH movement and logs"] --> R["Receipt: status, gas and logs"]
+```
+
+An ERC-20 transfer can appear in a contract log while the transaction's ETH
+`value` is zero. Logs are emitted records, not the state itself; the receipt
+reports execution outcome and logs, not a complete before/after state snapshot.
 
 ::: tip Think of an incident report
 The signed transaction is the instruction; the receipt is the outcome; event
@@ -83,8 +103,6 @@ originate a transaction. A **contract account** executes code when called;
 it does not independently originate a signed transaction. One EOA transaction
 can trigger many contract calls and asset movements. **Address ≠ person**:
 one person may use many accounts; a service address may serve many people.
-Code presence alone is not a perfect classification rule: delegated EOAs
-(EIP-7702) can execute delegated code while retaining key control.
 
 | Record | What you can establish | What it does **not** establish |
 |---|---|---|
@@ -99,9 +117,18 @@ to,value)` event has the token **contract** as its emitter. Its `value` is a
 raw integer: divide by that token's `decimals` to obtain display units. See
 [EIP-20](https://eips.ethereum.org/EIPS/eip-20).
 
-The receipt, not the gas limit, gives the amount actually used:
+The receipt, not the gas limit, gives the execution gas actually used. For a
+standard execution-gas transaction, its fee is:
 
-`fee in ETH = gasUsed × effectiveGasPrice (in gwei) ÷ 1,000,000,000`.
+$$
+\text{Fee}_{\mathrm{ETH}} =
+\frac{\text{gasUsed}\times\text{effectiveGasPrice}_{\mathrm{gwei}}}{10^9}
+$$
+
+The $10^9$ converts gwei to ETH; multiply the gas actually used by its
+effective price, not the transaction's maximum gas limit. This is the
+execution-gas component; a blob transaction can incur a separate blob fee
+([EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)).
 
 ### The normal Transactions tab is only the envelope
 
@@ -120,6 +147,18 @@ data; balances and other state need the correct contract and block.
 
 ### Proxy: one address, replaceable logic
 
+**Academy schematic — one simplified upgradeable `delegatecall` pattern;
+not every proxy uses this architecture:**
+
+```mermaid
+flowchart TB
+  accTitle: Upgradeable proxy and implementation relationship
+  accDescr: A user calls a proxy address that delegates execution to implementation logic; where upgradeable, an authority may change the target.
+  U["User"] --> P["Proxy address<br/>user-facing address + storage"]
+  P -->|"delegatecall"| I["Implementation<br/>execution logic"]
+  A["Upgrade authority"] -.->|"where upgradeable: may change target"| P
+```
+
 A proxy keeps the user-facing address and persistent storage while delegating
 execution to an **implementation**. Upgrades can change logic without changing
 that address. Record **proxy → implementation at the relevant block → upgrade
@@ -132,6 +171,14 @@ to an old transaction; attributing all activity to the logic address; querying
 the implementation's storage instead of the proxy's; or ignoring who can
 replace the logic. Use the explorer's proxy/read-as-proxy view where available,
 then trace authority in verified code. If unresolved, write **unknown**, not immutable.
+
+::: details Landscape — modern account-model nuance
+EIP-7702 lets an EOA designate code for delegated execution while the account
+remains key-controlled. This is why “code present” is not a complete account
+classification rule; it does not change the evidence distinctions in this
+Part. See [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) for the exact
+transaction and authorization model.
+:::
 
 ### Worked example: the receipt is not the instruction
 

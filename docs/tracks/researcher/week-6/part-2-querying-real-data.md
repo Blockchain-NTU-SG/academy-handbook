@@ -51,17 +51,21 @@ forensic platform, account, wallet connection or personal data is required.
 
 ## Core / reference material
 
-### Observe → classify → trace → hypothesis → alternative → confidence → next check
+### A repeatable investigation method
 
-1. **Observe:** record chain, asset/contract, block/time, amount, sender,
-   recipient and evidence type. Keep a row ID or transaction hash.
-2. **Classify:** EOA, contract, proxy, pool or unknown? Separate the transaction
-   envelope from token logs and internal ETH movements.
-3. **Trace:** follow relevant flows within a bounded window. Do not count one
-   event from multiple explorer tabs as additional volume.
-4. **Hypothesise:** combine independent signals, not repeated versions of a clue.
-5. **Challenge:** give a plausible alternative and evidence that discriminates.
-6. **Calibrate:** low/medium/high confidence, with a reason and one next check.
+```mermaid
+flowchart TB
+  accTitle: Investigation workflow
+  accDescr: Observe and classify records, trace bounded flows, form a hypothesis and alternative, state confidence, then identify a next check.
+  O["Observe<br/>record fields + source"] --> C["Classify<br/>record type / unknown"] --> T["Trace<br/>bounded window"] --> H["Hypothesis<br/>combine signals"] --> A["Alternative<br/>what else fits?"] --> F["Confidence<br/>state why"] --> N["Next check<br/>separate explanations"]
+```
+
+**Academy investigation-method schematic.** Keep chain, asset/contract,
+block/time, amount, sender, recipient and a row ID or transaction hash. Separate
+the transaction envelope from token logs and internal ETH movements; do not
+count one event seen in multiple explorer tabs as extra activity. Combine
+independent clues, then name an alternative and evidence that could distinguish
+it before calibrating confidence.
 
 ### Whale-sized is not human; repetitive is not proven bot ownership
 
@@ -109,6 +113,42 @@ releasable lock. Do not confuse it with the pool's burn operation that redeems
 LP tokens for underlying assets. Neither control proves all liquidity or
 every project power is locked. A
 project-controlled upgradeable locker may not constrain the project as a badge implies.
+
+### Map the supplied observations
+
+The following is an **Academy schematic of the synthetic case records**
+F01–F18. Edges identify what each supplied record says; they do not imply
+shared control, identity, intent or wrongdoing. The dashed website claim and
+provider label are not on-chain facts.
+
+```mermaid
+flowchart TB
+  accTitle: Observed synthetic case-record network
+  accDescr: Synthetic records F01–F18 show token distributions, gas funding, swaps, bridge messages, liquidity, roles and claims; edges report observations and unknowns, not inferred identity or intent.
+  subgraph L1["Case-L1 records"]
+    D["Distributor"] -->|"token log: 9m CASE · F01"| TR["Treasury"]
+    TR -->|"token logs: 3m each · F02–F04"| ABC["A / B / C"]
+    F["Funder"] -->|"gas: 0.02 ETH each · F05–F07"| ABC
+    ABC -->|"swap: 100k CASE each<br/>48k / 47k / 46k USDX out · F08–F10"| P["Pool"]
+    A["A"] -->|"bridge lock: 40k USDX · F11"| B["Bridge"]
+    P -->|"LP transfer: 900 / 1,000 · F14"| K["Locker"]
+    K -.->|"beneficiary field: Treasury · F15"| TR
+    AM["Admin-M"] -.->|"proxy admin field · F15"| K
+    AM -.->|"signer / emergency constraints unknown · F16"| Unknown["Unknown"]
+    W["Website"] -.->|"permanent-lock claim · F17"| Public["Public"]
+    F -.->|"unverified provider label · F18"| Label["Provider label"]
+  end
+  subgraph L2["Case-L2 records"]
+    B -->|"message CASE-M1; release 40k USDX.e · F12"| R["Recipient-D"]
+    R -->|"token log: 40k USDX.e · F13"| SD["Service-Deposit"]
+  end
+```
+
+Read the labels literally: the bridge message links the supplied lock and
+release records, while the later service deposit does not reveal who controls
+the recipient. F15 records a beneficiary and proxy-admin field, but F16 leaves
+signer and emergency constraints unknown. Those are observations and gaps;
+whether they support a hypothesis is for your table to argue.
 
 Check deployer, treasury and market-maker funding before treating repetitive
 small transfers or volume as independent retail demand. Farming, incentives,

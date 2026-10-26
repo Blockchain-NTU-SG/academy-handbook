@@ -36,6 +36,37 @@ read-only: no wallet, funds, mining software or transactions are needed.
 
 ## Core / reference material
 
+### Primary source: Bitcoin's original whitepaper
+
+**Bitcoin: A Peer-to-Peer Electronic Cash System** is the case document for
+this Part. Start with the abstract and sections 1–6; then read section 8 and
+sections 11–12 for the lighter verification model and adversarial argument.
+You do not need to read every paragraph before building the model.
+
+- [Open the original Bitcoin whitepaper (PDF)](https://bitcoin.org/bitcoin.pdf)
+
+::: details Read the original PDF here (optional)
+@[pdf 1 height="620px" zoom="90"](https://bitcoin.org/bitcoin.pdf)
+:::
+
+### A method for reading a whitepaper
+
+This is a reading method, not a diagram of Bitcoin's architecture. Follow the
+document's claims outward: identify who acts, what shared state exists, what
+changes it, how participants coordinate, why they participate, and what the
+argument assumes.
+
+```mermaid
+flowchart TB
+  accTitle: Whitepaper reading method
+  accDescr: A reading sequence from the document through actors, state, transitions, coordination and incentives to assumptions.
+  D["Document"] --> A["Actors"] --> S["State"] --> T["State transitions"] --> C["Coordination"] --> I["Incentives"] --> X["Assumptions"]
+```
+
+**Academy reading-method schematic:** each step turns a claim in the paper
+into a question you can answer and source; the model-layer table below makes
+those questions precise.
+
 ### Read for questions, not quotable sentences
 
 First skim the abstract and section headings. Then read sections 1–6 for the

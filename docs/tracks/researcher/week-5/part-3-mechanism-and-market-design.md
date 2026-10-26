@@ -11,6 +11,9 @@ sources:
   - name: "Uniswap v2 Core whitepaper"
     url: "https://app.uniswap.org/whitepaper.pdf"
     label: "Link"
+  - name: "Uniswap — How Uniswap Works"
+    url: "https://developers.uniswap.org/docs/get-started/concepts/how-uniswap-works"
+    label: "Link"
   - name: "Uniswap docs — v2 pricing"
     url: "https://developers.uniswap.org/docs/protocols/v2/concepts/pricing"
     label: "Link"
@@ -64,37 +67,80 @@ After this Part you can:
 
 ### The rule
 
-A Uniswap v2-style pool holds two token reserves. Call them A and B. The
-pricing rule is:
+A simplified Uniswap v2-style pool holds reserves of token X and token Y.
+Let $x$ be the pool's reserve of X and $y$ its reserve of Y, measured in
+their respective token units. Its payout rule is:
 
-> A × B = K
+$$
+xy = k
+$$
 
-The ratio of the two reserves is the current **spot price**. When a trader
-adds one token and takes the other out, the ratio changes, so the price moves
-during the trade itself.
+The product $k$ is the reserve-product invariant used to calculate a swap's
+output. For a very small trade, the pool's marginal spot price is approximately
+$y/x$ units of Y per X. A finite trade changes both reserves, so the average
+execution price differs from the starting spot price. This is the simplified
+constant-product v2 model, not a formula for every DEX design.
 
-K is held constant only while **working out the payout**. The full fee stays
-in the pool, so the real A × B after the trade is slightly larger than before.
-That increase is where liquidity providers' fee income comes from.
+For an input of $\Delta x$ X (measured in token X units) and fee rate $f$
+(a fraction, such as $0.003$ for 0.3%), the fee-adjusted amount used in the
+payout calculation is:
+
+$$
+\Delta x_{\mathrm{eff}} = \Delta x(1-f)
+$$
+
+The trader sends all of $\Delta x$, but the fee portion is not used to compute
+the immediate output. In v2, that fee remains in the pool, so the pool's real
+reserve product after the trade can be slightly larger than $k$; this is one
+source of liquidity-provider fee income.
+
+If the pool starts with reserves $x$ and $y$, then after the effective X input
+the simplified new Y reserve and trader output are:
+
+$$
+y' = \frac{xy}{x+\Delta x_{\mathrm{eff}}}
+\qquad\qquad
+\Delta y = y-y'
+$$
+
+Here $y'$ is the remaining Y reserve, while $\Delta y$ is the amount of Y
+paid to the trader. The rule keeps the reserve product at $k$ for the payout
+calculation: once the X reserve increases, divide $k$ by that new reserve to
+find the Y that must remain; the difference is the output. The units of
+$\Delta x_{\mathrm{eff}}$ are token X and the units of $y'$ and $\Delta y$ are
+token Y. These expressions assume a two-reserve constant-product pool, a
+stated fee, and no other route or market impact.
+
+::: details Primary source: Uniswap v2 Core whitepaper
+Read **§2.1, “Constant Product Market Maker”** for the reserve rule. Section
+2.2 on price oracles is optional context; the calculation below is the focus.
+
+- [Open the Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf)
+- For protocol-authored pool and swap diagrams, see [Uniswap's “How Uniswap Works”](https://developers.uniswap.org/docs/get-started/concepts/how-uniswap-works).
+
+@[pdf 1 height="620px" zoom="90"](https://app.uniswap.org/whitepaper.pdf)
+:::
 
 ### Worked example: selling 10 ETH
 
 A pool holds **100 ETH** and **200,000 USDC**, with a **0.3%** fee.
 
-- K = 100 × 200,000 = 20,000,000
-- Starting spot price = 200,000 ÷ 100 = **2,000 USDC per ETH**
+- $k=100\times200{,}000=20{,}000{,}000$
+- Starting spot price = $200{,}000/100=$ **2,000 USDC per ETH**
 
 A trader sells **10 ETH** to the pool.
 
-1. **Take out the fee** for the payout calculation: 10 × 0.003 = 0.03 ETH.
-   Effective input = 9.97 ETH.
-2. **Find the new USDC reserve.** 100 + 9.97 = 109.97 ETH, so
-   B = 20,000,000 ÷ 109.97 = 181,867.78 USDC.
-3. **The trader receives** what leaves the pool: 200,000 − 181,867.78 =
+1. **Take out the fee** for the payout calculation:
+   $\Delta x_{\mathrm{eff}}=10(1-0.003)=9.97$ ETH. The pool keeps the 0.03 ETH
+   fee, but it is not included in the effective input.
+2. **Find the new USDC reserve.**
+   $y'=20{,}000{,}000/(100+9.97)=181{,}867.78$ USDC.
+3. **The trader receives** what leaves the pool:
+   $\Delta y=200{,}000-181{,}867.78=$
    **18,132.22 USDC**.
-4. **Average execution price** = 18,132.22 ÷ 10 = **1,813.22 USDC per ETH**,
+4. **Average execution price** = $18{,}132.22/10=$ **1,813.22 USDC per ETH**,
    about **9.34%** below the starting spot price:
-   (2,000 − 1,813.22) ÷ 2,000 × 100.
+   $(2{,}000-1{,}813.22)/2{,}000\times100$.
    Without the fee the payout would be 18,181.82 USDC, so the fee itself cost
    the trader about 49.60 USDC. Most of the gap comes from the trade moving
    the price, not from the fee.
@@ -106,7 +152,8 @@ A trader sells **10 ETH** to the pool.
    ETH**. If ETH still trades at about 2,000 USDC elsewhere, anyone can buy
    cheap ETH from this pool and sell it elsewhere. Those arbitrage trades put
    USDC back in and take ETH out, pushing the pool price back towards the
-   market. That is how the pool's price stays honest without an oracle.
+   market. Arbitrage can therefore bring the pool price back toward the
+   external market without an oracle; it is not instantaneous or guaranteed.
 
 ### Why deeper pools give better prices
 
@@ -124,9 +171,22 @@ USDC. The starting price is still 2,000 USDC per ETH.
 | 100 ETH / 200,000 USDC | 18,132.22 | 1,813.22 | 9.34% |
 | 200 ETH / 400,000 USDC | 18,993.19 | 1,899.32 | 5.03% |
 
-A bigger pool absorbs the same trade with a smaller change in its reserve
-ratio. More liquidity means less price movement and a better price for the
-trader.
+**Academy schematic — same initial price and 10 ETH trade; illustrative
+comparison, not a live quote:**
+
+```mermaid
+flowchart TB
+  accTitle: Constant-product depth comparison
+  accDescr: The same initial price and trade enter shallower or deeper pools; the deeper pool returns more output with less price impact.
+  S["Same starting spot price<br/>2,000 USDC / ETH"] --> T{"Same trade<br/>10 ETH; 0.3% fee"}
+  T --> A["Shallower pool<br/>greater price impact<br/>less USDC out"]
+  T --> B["Deeper pool<br/>smaller price impact<br/>more USDC out"]
+```
+
+A deeper pool absorbs this same trade with a smaller change in its reserve
+ratio. The illustration holds starting price, trade size and fee constant;
+pool TVL alone is not always active executable depth, especially when
+liquidity is concentrated into selected price ranges.
 
 ### Where the v2 model stops
 
