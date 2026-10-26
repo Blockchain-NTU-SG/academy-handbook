@@ -5,7 +5,7 @@ day: 5
 title: "Deployment and reproducibility"
 status: drafting
 owner: "Education Team"
-reading_time: "60 min hands-on"
+reading_time: "45 min hands-on"
 points: 100
 sources:
   - name: "Foundry Book — forge verify-contract"
@@ -86,12 +86,30 @@ A reviewer should be able to do four things without contacting you:
 
 Each section below covers one row.
 
+```mermaid
+flowchart TD
+  accTitle: Shipping and reproducibility pipeline
+  accDescr: A project moves from local tests and build through contract deployment and verification, frontend build and Pages deployment, then a fresh-clone test that checks the whole project can be reproduced.
+  A["Local project"] --> B["Tests and build"] --> C["Deploy contract"]
+  C --> D["Verify source"] --> E["Build frontend"] --> F["Deploy Pages"]
+  F --> G["Fresh-clone test"] --> H["Reproducible project"]
+```
+
+This is a handoff pipeline, not a promise that one command performs every
+step. Each arrow produces evidence for the next person: a passing build, a
+contract address, a source match, a generated frontend artifact, a live URL,
+and finally a clean-room run from the README.
+
 ### Verify the contract
 
-On-chain, a contract is only bytecode. **Verification** publishes your source
-code and compiler settings so an explorer can compile it again and confirm it
-produces exactly the bytecode at your address. After that, anyone can read the
+On-chain, a contract is only **bytecode**: the machine-level code produced by
+the compiler and stored at the deployed address. **Verification** publishes
+your source code and compiler settings so a service can compile it again and
+confirm it produces exactly that bytecode. After that, anyone can read the
 code and call functions from the explorer.
+
+Verification proves source correspondence for that address and build settings;
+it does not prove that the code is safe, useful or free of economic bugs.
 
 Foundry reads your compiler settings from `foundry.toml`, so one command is
 enough. There are two common verifiers:
@@ -257,9 +275,12 @@ it still works from `/` when you run `npm run dev` locally.
 `grep -rn "PRIVATE_KEY" dist/` prints nothing, because the key has no `VITE_`
 prefix and the frontend never reads it.
 
-**5. Add the workflow.** `.github/workflows/pages.yml`, based on the workflow
-in Vite's GitHub Pages guide:
+**5. Add the workflow.** A **workflow** is an automated sequence GitHub runs
+after an event such as a push. The build output passed to the Pages action is
+an **artifact**: generated files, not source code. `.github/workflows/pages.yml`
+below is based on the workflow in Vite's GitHub Pages guide:
 
+::: details Full GitHub Pages workflow
 ```yaml
 # Builds the frontend and publishes it to GitHub Pages on every push to main.
 name: Deploy frontend to Pages
@@ -311,6 +332,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 ```
+:::
 
 Delete the `VITE_RPC_URL` line if your frontend does not read any `VITE_`
 values. Once Pages is set to **GitHub Actions**, every push to `main` shows a

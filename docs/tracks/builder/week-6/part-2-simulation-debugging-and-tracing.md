@@ -5,7 +5,7 @@ day: 2
 title: "Simulation, debugging and tracing"
 status: drafting
 owner: "Education Team"
-reading_time: "60 min hands-on"
+reading_time: "50 min hands-on"
 points: 100
 sources:
   - name: "viem — Errors"
@@ -76,6 +76,8 @@ Every read and every write in your app passes through these layers:
 
 ```mermaid
 flowchart TD
+  accTitle: Web3 request debugging path
+  accDescr: A read or write moves from frontend through wallet, client library, RPC and simulation; a write then creates a transaction receipt and changes contract state and events.
   A["<b>Frontend</b><br/><i>React state, inputs, what is shown</i>"]
   B["<b>Wallet</b><br/><i>account, network, signature</i>"]
   C["<b>Client library</b><br/><i>viem: address, ABI, chain, env</i>"]
@@ -89,6 +91,17 @@ flowchart TD
 Reads skip the wallet and the transaction: the frontend asks viem, viem asks
 the RPC, and the RPC answers from the contract's state. Writes go through
 every layer.
+
+Three terms in the diagram are worth naming before you use them as evidence:
+
+- **Bytecode** is the machine-level code stored at a deployed contract address.
+  A `cast code` result of `0x` means there is no deployed code at that address.
+- An **event topic** is a log value used to identify an event signature or an
+  indexed field. You can filter by it without decoding every unrelated log;
+  you do not need to learn the topic hashing internals for this Part.
+- A **receipt** is the post-inclusion record for a transaction: it includes the
+  block, execution status and logs. A transaction hash alone is only an
+  identifier.
 
 ### Where things usually go wrong
 
@@ -156,10 +169,11 @@ cast sig-event "RecordUpdated(address,string)"
 set.
 
 **Simulation.** Before sending a write, the starter-style code calls
-`simulateContract`. It runs the call against current state without spending
-anything, so a revert shows up with its custom error name before the wallet
-ever opens. If a write fails *before* the wallet pop-up, the problem is
-probably in simulation or earlier.
+`simulateContract`. It runs the call against the current visible state without
+sending an on-chain transaction or paying on-chain gas, so a revert can show
+up with its custom error name before the wallet ever opens. The RPC request may
+still be subject to provider limits or service costs. If a write fails *before*
+the wallet pop-up, the problem is probably in simulation or earlier.
 
 ### Worked example
 
@@ -201,6 +215,11 @@ faucet, as in [Week 1 Part 7](../../../foundation/week-1/part-7-your-first-trans
 
 Notice the order: the error message suggested a layer, and independent
 evidence confirmed it before anything changed.
+
+The exact shared Registry address and record shown in the command output are
+examples from the checked deployment, not timeless expected values. Confirm
+the current address and value in `deployments/sepolia.json`, the explorer or a
+fresh read before treating them as evidence in your own log.
 
 ::: details Landscape — transaction tracing
 When a transaction is mined but does something unexpected, a **trace** shows

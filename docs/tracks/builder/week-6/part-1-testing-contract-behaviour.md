@@ -5,7 +5,7 @@ day: 1
 title: "Testing contract behaviour"
 status: drafting
 owner: "Education Team"
-reading_time: "45 min hands-on"
+reading_time: "40 min hands-on"
 points: 100
 sources:
   - name: "Foundry Book — Writing tests"
@@ -80,6 +80,26 @@ not re-explain them. It makes you prove them.
 
 ## Core / reference material
 
+### The test mental model
+
+A useful test is a small experiment with four moves: prepare the state, choose
+the caller and expected result, call the contract, then assert the state,
+revert or event. This is the general **Arrange → Act → Assert** pattern, not a
+Foundry-only ritual; the caller choice is part of the arrangement.
+
+```mermaid
+flowchart TD
+  accTitle: Test mental model
+  accDescr: A contract test prepares state, chooses the caller and expected result, calls the contract, then asserts state, revert or event data.
+  A["Arrange<br/>prepare state"] --> B["Choose caller<br/>and expectation"]
+  B --> C["Act<br/>call contract"]
+  C --> D["Assert<br/>state, revert or event"]
+```
+
+The visual is a checklist for thinking, not a new required artifact. It helps
+you notice that a test which never changes caller or checks an observable result
+may be exercising less of the rule than its name suggests.
+
 ### The contract under test
 
 You keep working in the
@@ -153,13 +173,23 @@ nothing checks them yet. That is your task.
 - `setUp()` runs before **every** test, so each test starts from a fresh contract.
 - Every function whose name starts with `test` is a test. `forge test`, run
   from the repository root, runs them all.
-- **Cheatcodes** on `vm` let a test do things a normal user cannot:
+- **Foundry cheatcodes** are testing-only controls on `vm`. They let a test
+  manipulate the local test environment—such as pretending the next call came
+  from Alice or expecting a specific revert—without adding those powers to the
+  deployed contract:
 
 | Cheatcode | What it does |
 |---|---|
 | `vm.prank(addr)` | The next call comes from `addr` instead of the test contract |
 | `vm.expectRevert(...)` | The next call **must** fail, with this error |
 | `vm.expectEmit(...)` | The next call **must** emit an event matching the one you emit after it |
+
+The `selector` in `Registry.EmptyRecord.selector` is the first four bytes of
+the encoded error signature. Matching it means the test expects this particular
+failure, not merely any revert. For `vm.expectEmit(true, false, false, true,
+address(registry))`, the booleans check the first indexed topic, ignore the
+second and third topic slots, check the non-indexed event data, and the final
+argument checks the emitting contract.
 
 ### The four kinds of test
 
@@ -233,7 +263,8 @@ Why each part is there:
 2. **The test declares `event RecordUpdated(...)` itself.** That lets it
    `emit` the event it expects. `vm.expectEmit(true, false, false, true, ...)`
    then compares the first indexed field (the account) and the data (the
-   value) against the next real event, from the registry's address.
+   value) against the next real event, from the registry's address. The other
+   topic slots are ignored because this event has only one indexed field.
 3. **`vm.prank(alice)`, then `vm.prank(bob)`.** Two different callers prove
    the promise "only the caller's record changes". With one caller, a bug that
    wrote every record at once would still pass.

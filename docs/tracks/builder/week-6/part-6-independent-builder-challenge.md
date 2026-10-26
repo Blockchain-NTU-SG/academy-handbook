@@ -5,7 +5,7 @@ day: 6
 title: "Independent builder challenge"
 status: drafting
 owner: "Education Team"
-reading_time: "120 min hands-on"
+reading_time: "90 min hands-on"
 points: 100
 sources:
   - name: "OpenZeppelin Contracts — IERC20 (approve, allowance, transferFrom)"
@@ -118,6 +118,29 @@ builder, you now decide how much your app asks for.
 The functions involved are described in the
 [ERC-20 interface reference](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#IERC20).
 The rest is up to you.
+
+```mermaid
+flowchart TD
+  accTitle: ERC-20 approval and transfer flow
+  accDescr: The user first approves the tip contract to spend an exact amount of USDC, then calls the tip contract, which uses transferFrom to move that amount directly from the user to the author.
+  U["User"] -->|"approve exact amount"| T["USDC token"]
+  T -->|"allowance"| C["TipContract"]
+  U -->|"call tip"| C
+  C -->|"transferFrom"| T
+  T -->|"tokens"| A["Author"]
+```
+
+The **approval** is permission granted by the token owner. The **allowance**
+is how much the named spender is still permitted to move. In this flow the
+tip contract is the spender: it calls **`transferFrom`** to use that allowance
+on the user's behalf, while the USDC contract moves the tokens from user to
+author. Approving the exact tip amount is safer for this exercise than leaving
+an unlimited permission open.
+
+Reuse the deployment and Pages setup you completed in Part 5. This challenge
+still requires a deployed and usable result, but it is not a second deployment
+engineering assignment: extend the existing pipeline and provide the new
+contract, app and evidence through it.
 
 ## Hands-on task
 
