@@ -125,13 +125,19 @@ The rest is up to you.
 ```mermaid
 flowchart TD
   accTitle: ERC-20 approval and transfer flow
-  accDescr: The user first tells the USDC contract to record an allowance for the TipContract. Later, the user calls TipContract, which asks the USDC contract to move tokens; the USDC contract updates balances and reduces the allowance. The arrows show the sequence, not allowance or token transfers between the boxes.
-  U1["User"] -->|"approve(TipContract,<br/>amount)"| T1["USDC<br/>contract"]
-  T1 --> S1["Allowance state<br/>owner → spender → amount"]
-  S1 -->|"later"| U2["User"]
-  U2 -->|"tip(...)"| C2["TipContract"]
-  C2 -->|"transferFrom(user,<br/>author, amount)"| T2["USDC<br/>contract"]
-  T2 --> S2["Balances and allowance<br/>user − · author + · allowance −"]
+  accDescr: Two labeled phases show the user first granting permission to the USDC contract and later using that permission through TipContract. The USDC contract stores the allowance and performs the balance updates. The link between the phases shows time sequence, not allowance or token transfers between the boxes.
+  subgraph phase1["PHASE 1 — GRANT PERMISSION"]
+    direction TB
+    U1["User"] -->|"approve(TipContract,<br/>amount)"| T1["USDC<br/>contract"]
+    T1 --> S1["Records allowance<br/>owner: User<br/>spender: TipContract<br/>amount: X"]
+  end
+  subgraph phase2["PHASE 2 — USE PERMISSION"]
+    direction TB
+    U2["User"] -->|"tip(...)"| C2["TipContract"]
+    C2 -->|"transferFrom(User,<br/>Author, amount)"| T2["USDC<br/>contract"]
+    T2 --> S2["Updates state<br/>User balance ↓<br/>Author balance ↑<br/>Allowance ↓"]
+  end
+  phase1 -->|"later"| phase2
 ```
 
 The **approval** is the user's instruction to the token contract to grant a

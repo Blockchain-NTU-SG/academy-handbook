@@ -283,6 +283,9 @@ it still works from `/` when you run `npm run dev` locally.
 `PRIVATE_KEY=academy_secret_must_not_ship` in `.env`, then run `npm run build`
 and `grep -R "academy_secret_must_not_ship" dist/`. It should print no
 matches because the key has no `VITE_` prefix and the frontend never reads it.
+This is a useful sanity check, not a formal proof that the bundle contains no
+sensitive information; understand which values the frontend reads and what
+Vite exposes.
 
 **5. Add the workflow.** A **workflow** is an automated sequence GitHub runs
 after an event such as a push. The build output passed to the Pages action is

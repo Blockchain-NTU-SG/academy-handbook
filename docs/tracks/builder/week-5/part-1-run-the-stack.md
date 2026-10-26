@@ -145,7 +145,9 @@ is never written into the code. Instead:
 
 1. `.env.example` is committed and shows which settings exist.
 2. You copy it to `.env` and fill in your own values.
-3. `.gitignore` stops `.env` from ever being committed.
+3. `.gitignore` helps prevent an **untracked** `.env` from being added through
+   normal Git workflows. It does not erase a secret that was already
+   committed, and a file can still be force-added.
 4. `scripts/client.ts` explicitly loads the file and reads the value when it
    starts.
 
