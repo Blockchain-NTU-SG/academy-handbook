@@ -142,16 +142,17 @@ that a malicious contract is the authentic token. A fake contract can return
 # Is there a contract at this address on this network? "0x" means no.
 cast code <address> --rpc-url $RPC_URL
 
-# What units does it use?
+# What decimals does this deployed contract report?
 cast call <address> "decimals()(uint8)" --rpc-url $RPC_URL
 
-# Is it the contract I think it is?
+# What symbol does this deployed contract report?
 cast call <address> "symbol()(string)" --rpc-url $RPC_URL
 ```
 
 Record which source answered each question in your docs log: provenance comes
 from the official deployment source; these calls verify code and state at the
-selected address.
+selected address. A successful call does not prove the address's source
+identity; a fake contract can report the same metadata.
 
 ### Worked example: show USDC amounts correctly
 
@@ -174,8 +175,12 @@ stored as integers in base units; `decimals` tells the app where to place the
 display point. With 6 decimals, `20 USDC` is `20,000,000` base units, and
 `bigint` keeps that integer exact.
 
-**4. Freshness.** A balance is read straight from contract state, so it is
-always current. Nothing to do.
+**4. Freshness.** A token balance does not have a separate oracle-style
+heartbeat or staleness model. A normal read returns the state at the latest
+block the selected RPC is serving, unless you explicitly query a historical
+block. For this use case, there is no separate freshness threshold to
+calculate as there is for an external price feed; the RPC can still lag, so
+the block context matters when freshness is important.
 
 **5. What can go wrong.** The address is for Sepolia only. On another network
 it is a different contract or nothing at all.
@@ -240,7 +245,7 @@ would have crashed to warn us.
 | Network and address | Sepolia, `0x1c7D…7238` | Circle, USDC contract addresses, Testnet table | `cast code` returns bytecode |
 | Functions | `symbol`, `decimals` (`balanceOf` for balances) | ERC-20 standard; viem's `erc20Abi` | The script reads both |
 | Units | 6 decimals | Not on the page | `cast call … decimals()` returns `6` |
-| Freshness | Always current | Balances are contract state | Not needed |
+| Freshness | Latest state served by the selected RPC | Token balances have no oracle heartbeat; note the block context if needed | Normal read; query a historical block only when required |
 | What can go wrong | Address only valid on Sepolia | Circle's table lists one address per network | Script refuses other chains via `requireSepolia()` |
 
 Notice the distinction: docs establish the intended deployment and interface;
@@ -252,9 +257,15 @@ The task uses a different kind of external component. A **data feed** is a
 contract interface that exposes a value such as ETH / USD. An **oracle** is the
 system that brings information from outside the chain into that contract. A
 feed's **timestamp** tells you when the returned answer was produced or
-recorded. Its **heartbeat** is the maximum scheduled interval between updates
-when the value has not moved enough to trigger an earlier update. **Stale
-data** is an answer older than the freshness rule your application accepts.
+recorded. A Chainlink Data Feed is a **push-style oracle**: the oracle network
+writes new answers on-chain according to feed-specific update rules, commonly
+when the observed value moves beyond a **deviation threshold** or when the
+**heartbeat** interval is reached. A deviation threshold means sufficient
+movement can trigger an update earlier; a heartbeat is the maximum intended
+interval before an update when movement is small. These values differ between
+feeds and networks, so look up the actual configuration in the official docs.
+**Stale data** is an answer older than the freshness rule your application
+accepts.
 
 The age check is therefore an application decision: read the answer and its
 timestamp, compare the age with the documented heartbeat plus a margin, and
@@ -263,11 +274,11 @@ that the price is economically correct; it only answers the freshness question.
 
 ::: details Landscape — push and pull oracles
 The feed in this Part's task is a **push** oracle: the oracle network writes a
-new answer on-chain on a schedule, and anyone can read the latest one. Some
-newer oracles are **pull** based: the app fetches a signed price off-chain and
-submits it with its own transaction, so the price is only written when someone
-needs it. The method on this page works for both. Only the answers to the five
-questions change.
+new answer on-chain when its deviation or heartbeat rules call for an update,
+and anyone can read the latest one. Some newer oracles are **pull** based: the
+app fetches a signed price off-chain and submits it with its own transaction,
+so the price is only written when someone needs it. The method on this page
+works for both. Only the answers to the five questions change.
 :::
 
 ## Hands-on task

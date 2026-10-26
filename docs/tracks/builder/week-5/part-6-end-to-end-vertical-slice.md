@@ -105,10 +105,22 @@ One complete slice is better than three features that only half work.
 
 ### Selectors, calldata and RPC method names
 
-A **function selector** is the first four bytes of the encoded function
-signature that Ethereum uses to identify which function is being called. The
-rest of the **calldata** carries the encoded arguments. You can inspect a
-selector without learning the hash derivation:
+A **function selector** is the first four bytes of the Keccak-256 hash of a
+function's canonical signature. Ethereum uses it to identify which function
+is being called; the rest of the **calldata** carries the encoded arguments.
+You do not need to calculate Keccak manually:
+
+```text
+setRecord(string)
+      ↓
+keccak256(...)
+      ↓
+first 4 bytes
+      ↓
+0x3e0a0099
+```
+
+`cast sig "setRecord(string)"` computes this selector for you.
 
 The request table below uses **JSON-RPC method names**: standard strings
 spoken between wallets, libraries, RPC providers and nodes. For example,

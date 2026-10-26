@@ -135,16 +135,19 @@ the first place to look.
 
 ### Settings live in `.env`
 
-`.env` is configuration, not magic. When the process starts, Node loads the
-file's `NAME=value` entries into environment variables; `scripts/client.ts`
-then reads `process.env.RPC_URL`. An RPC address can contain a private API key,
-and different people use different providers, so it is never written into the
-code. Instead:
+`.env` is configuration, not magic. When `scripts/client.ts` starts, it
+explicitly calls `process.loadEnvFile('.env')`. Node then loads the file's
+`NAME=value` entries into the process environment, and the script reads
+`process.env.RPC_URL`. Node does not automatically load `.env` in every
+project; this starter chooses to load it explicitly. An RPC address can
+contain a private API key, and different people use different providers, so it
+is never written into the code. Instead:
 
 1. `.env.example` is committed and shows which settings exist.
 2. You copy it to `.env` and fill in your own values.
 3. `.gitignore` stops `.env` from ever being committed.
-4. A script reads the value when it starts.
+4. `scripts/client.ts` explicitly loads the file and reads the value when it
+   starts.
 
 Some values are sensitive. `.env.example` documents names and safe defaults;
 it must not contain your private key or a provider credential.

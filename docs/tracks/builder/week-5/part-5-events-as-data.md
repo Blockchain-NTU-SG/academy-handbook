@@ -88,11 +88,14 @@ Two details matter for the code you will write:
   empty value as "cleared", not as "set to nothing".
 
 An event is returned as a log with a block number, transaction hash and
-**log index**. The log index is the position of that log among the other logs
-in the same transaction, so it helps preserve order when several events share
-one block. The `account` field is **indexed**: the node stores it in a
-filterable topic so a query can find logs for one account efficiently. `value`
-is not indexed, so it is decoded from the log data after the match is found.
+**`logIndex`**. `logIndex` is the position of a log within its block. Because
+it is block-wide, sorting logs by `blockNumber` and then `logIndex` preserves
+their chain order even when several transactions in the same block emitted
+logs. If you see **`transactionIndex`**, that is the transaction's position
+within the block; it does not replace `logIndex`. The `account` field is
+**indexed**: the node stores it in a filterable topic so a query can find logs
+for one account efficiently. `value` is not indexed, so it is decoded from the
+log data after the match is found.
 
 The core distinction is:
 

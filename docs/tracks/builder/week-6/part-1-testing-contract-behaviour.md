@@ -185,11 +185,23 @@ nothing checks them yet. That is your task.
 | `vm.expectEmit(...)` | The next call **must** emit an event matching the one you emit after it |
 
 The `selector` in `Registry.EmptyRecord.selector` is the first four bytes of
-the encoded error signature. Matching it means the test expects this particular
-failure, not merely any revert. For `vm.expectEmit(true, false, false, true,
-address(registry))`, the booleans check the first indexed topic, ignore the
-second and third topic slots, check the non-indexed event data, and the final
-argument checks the emitting contract.
+the Keccak-256 hash of the error's canonical signature. Conceptually:
+
+```text
+EmptyRecord()
+      ↓
+keccak256(...)
+      ↓
+first 4 bytes
+      ↓
+error selector
+```
+
+Matching it means the test expected this specific custom error, not merely any
+revert. For `vm.expectEmit(true, false, false, true, address(registry))`, the
+booleans check the first indexed topic, ignore the second and third topic
+slots, check the non-indexed event data, and the final argument checks the
+emitting contract.
 
 ### The four kinds of test
 
