@@ -209,9 +209,10 @@ The failure path, step by step:
    SequencerInbox. That second Ethereum transaction fixes its place in the
    order for good.
 
-**Conclusion:** your funds are safe from permanent censorship, but you pay
-for two Ethereum transactions and wait up to a day. Anything time-sensitive
-can still fail.
+**Conclusion:** Against sequencer-only censorship, the user still has an L1
+forced-inclusion route. It is slow and costs Ethereum gas, so time-sensitive
+actions can still fail. This does not remove the separate upgrade and Security
+Council assumptions described elsewhere on this page.
 
 Notice the method: actor → power → recourse → time → limit. You do the same
 for the rest of the system.

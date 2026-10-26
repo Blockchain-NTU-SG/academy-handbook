@@ -27,7 +27,7 @@ sources:
 
 # Week 6 · Part 6 — Independent investigation brief
 
-> **Core question — can you make a defensible claim about an unfamiliar case and show what could overturn it?**
+> **Core question — can you make a careful claim about an unfamiliar case and show what could overturn it?**
 
 You can now reconstruct a system, interpret execution records, trace flows,
 measure activity and test economic/risk claims. This Part combines those skills
@@ -118,9 +118,9 @@ result.
 **Non-token alternative:** investigate an unfamiliar protocol/system, including
 a tokenised-Treasury product or **real-world asset (RWA)**, governance execution
 or infrastructure dependency.
-Ask a comparably falsifiable question and combine a primary source with direct
-chain evidence and a meaningful measurement. Researcher is cross-domain, not
-investment-only.
+Ask a similarly testable question and combine a primary source with direct
+chain evidence and one calculation that helps answer the question. Researcher
+is cross-domain, not investment-only.
 
 ### Worked example: testing “freely usable”
 
@@ -146,8 +146,8 @@ Use the following as one-page headings, not eleven separate assignments:
 |---|---|
 | Question / thesis | A bounded claim, case, date and falsification condition |
 | System | Mechanism summary and relevant actors/dependencies |
-| Evidence | Relevant case records plus a meaningful quantitative/economic measurement, with units and provenance; direct chain evidence is required when the case is real |
-| Challenge | Strongest support, strongest counter-evidence/alternative, and one material causal risk |
+| Evidence | Relevant case records plus one calculation that helps answer your question, with units and provenance; direct chain evidence is required when the case is real |
+| Challenge | Strongest support, strongest counter-evidence/alternative, and one risk that could change the conclusion, traced to who is affected |
 | Judgment | Confidence with reason, what would change it, and one concrete next check |
 
 Tag statements **observed / inferred / unknown**. Classify sources as primary
@@ -173,10 +173,10 @@ The brief must contain:
    record IDs and label them as invented observations; for a real case, include
    a direct chain record relevant to the question, with chain, full hash/address,
    block/date, result and link;
-4. at least one meaningful quantitative/economic measurement with unit,
+4. at least one calculation that helps answer the question, with unit,
    window, source and working;
 5. strongest supporting evidence and strongest counter-evidence/alternative;
-6. one material risk traced to an exposed party;
+6. one risk that could change the conclusion, traced to who is affected;
 7. confidence, evidence that would change the conclusion, and one concrete next check.
 
 For the synthetic case, label dossier records synthetic and keep conclusions
@@ -198,11 +198,11 @@ incomplete or materially incorrect work is returned for revision. There is no
 partial-score rubric or separate weekly submission.
 
 Complete means the question is falsifiable, system and risk are causal,
-source observations and derived evidence are distinguishable, the measurement
+source observations and derived evidence are distinguishable, the calculation
 is reproducible, and the strongest alternative is engaged rather than
 dismissed. For a real case, include relevant direct chain evidence. Confidence
-must fit the weakest material link. A carefully justified unknown is preferable
-to an unsupported accusation.
+should be no stronger than the weakest important evidence it depends on. A
+carefully justified unknown is preferable to an unsupported accusation.
 
 ::: details Further Exploration — optional, not assessed
 Repeat one calculation with a different definition or seek evidence that would

@@ -343,7 +343,6 @@ Your work is complete when:
 
 ::: details Sources and attribution
 - [Aave DAO — Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) — Official source for the unmodified local reading copy; design reference, not a current deployment specification
-- [Aave DAO — repository licence](https://github.com/aave-dao/aave-v3-origin/blob/main/LICENSE) — Business Source License 1.1 identifies the Licensed Work as Aave v3.7; the PDF has no separate file-level licence notice.
 - [Aave — Health factor and liquidations](https://aave.com/help/borrowing/liquidations) — Link, referenced only
 - [Chainlink — Price feeds](https://docs.chain.link/data-feeds/price-feeds) — Link, referenced only
 - [Aave V3 — Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) — Link, protocol documentation

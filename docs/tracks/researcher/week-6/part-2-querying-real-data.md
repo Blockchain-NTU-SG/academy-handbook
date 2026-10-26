@@ -36,27 +36,25 @@ Reviewer solutions remain outside the public Handbook. -->
 
 > **Core question — which explanation fits these flows, and what could distinguish it from the alternatives?**
 
-A large address splits tokens among new wallets. It could be distribution,
-treasury operations, a market maker, coordinated selling or obfuscation. A
-flow diagram alone cannot decide. Part 1 taught what the records mean; now
-combine signals into a hypothesis without inventing an identity.
+A large address splits tokens among new wallets. The flow alone cannot show
+whether this is routine or coordinated—or who controls the recipients.
 
-An **address** is an on-chain identifier, not a person's name. An **entity**
-is the organisation, service or person someone thinks may control or use an
-address; **attribution** is the evidence-based link supporting that label.
-A **cluster** is a tentative group of addresses linked by observations, not a
-proven entity. A **counterparty** is the other address or contract in a
-recorded interaction. A **first funder** here means the earliest funder seen
-in the queried records—not necessarily the address's first-ever source of
-funds.
+| Term | What it means here |
+|---|---|
+| **Address** | On-chain identifier; not necessarily a person. |
+| **Entity** | Person, organisation or service believed to use/control addresses. |
+| **Attribution** | Evidence linking an address to an entity. |
+| **Cluster** | Addresses grouped by patterns; shared ownership is unproven. |
+| **Counterparty** | Other address or contract in a record. |
+| **First funder** | Earliest funder seen in checked records—not necessarily first-ever. |
 
 ## The hard skill
 
 **Reconstruct a fund-flow hypothesis, state a competing explanation and
 choose the next check that would separate them.**
 
-Work read-only with free explorers and the supplied synthetic case. No paid
-forensic platform, account, wallet connection or personal data is required.
+Use free explorers read-only; no paid account, wallet connection or personal
+data is needed.
 
 ## Core / reference material
 
@@ -65,18 +63,17 @@ forensic platform, account, wallet connection or personal data is required.
 ```mermaid
 flowchart TB
   accTitle: Investigation workflow
-  accDescr: Observe and classify records, trace bounded flows, form a hypothesis and alternative, state confidence, then identify a next check.
-  O["Observe<br/>record fields + source"] --> C["Classify<br/>record type / unknown"] --> T["Trace<br/>bounded window"] --> H["Hypothesis<br/>combine signals"] --> A["Alternative<br/>what else fits?"] --> F["Confidence<br/>state why"] --> N["Next check<br/>separate explanations"]
+  accDescr: Observe and classify records, trace a defined window, compare an explanation with an alternative, then state confidence and the next check.
+  O["Observe<br/>record fields + source"] --> C["Classify<br/>record type / unknown"] --> T["Trace<br/>defined window"] --> H["Hypothesis<br/>combine signals"] --> A["Alternative<br/>what else fits?"] --> F["Confidence<br/>state why"] --> N["Next check<br/>separate explanations"]
 ```
 
-**Academy investigation-method schematic.** Keep chain, asset/contract,
-block/time, amount, sender, recipient and a row ID or transaction hash. Separate
-the transaction envelope from token logs and internal ETH movements; do not
-count one event seen in multiple explorer tabs as extra activity. Combine
-independent clues, then name an alternative and evidence that could distinguish
-it before calibrating confidence.
+**Academy investigation-method schematic.** Record chain, asset/contract,
+block/time, amount, sender, recipient and row ID/hash. Separate the transaction
+envelope, token logs and internal ETH movements; the same event across tabs is
+still one event. Compare clues, alternatives and the next check before stating
+confidence.
 
-### Whale-sized is not human; repetitive is not proven bot ownership
+### Large or repetitive activity does not identify who is behind it
 
 | Signal family | Inspect | Alternative explanation |
 |---|---|---|
@@ -84,59 +81,52 @@ it before calibrating confidence.
 | Flow / holding | Same-sized repeated flows, high transaction count with short holding periods | Market making, reward claims or arbitrage |
 | Funding / counterparties | Common first ETH funder, repeated recipients, common deposit paths | Shared exchange, relayer, distributor or gas sponsor |
 
-Use **at least two independent signal families** for a tentative activity
-classification. Timing and a count of those same timed transactions are
-weakly independent at best. A large **externally owned account (EOA)**—an
-address controlled by a signing key—can be automated; a contract can serve
-many humans. **Address ≠ person.**
+Use at least two signal families. Ten-minute timing plus a high count of those
+same events is one clue; pair it with funding or counterparties. An
+**externally owned account (EOA)** is controlled by a signing key but may be
+automated; one contract can serve many people.
 
 ### Investigating a large allocation split
 
-Check source, timing, recipient count, amount distribution and recipient
-histories. Was there a claim call or known vesting/distributor contract? What
-happened next: **decentralised exchange (DEX)** swaps, service deposits,
-bridging or holding? A transfer to a router is not proof of a sale without
-the execution and assets received. A service label is a provider's
-attribution claim, not ground truth; check who supplied it and what supports it.
+Check source, timing, recipient count/history and claim or vesting calls. Follow
+recipients into **decentralised exchange (DEX)** swaps, service deposits,
+bridges or holding. A router transfer alone does not prove a sale; inspect
+execution and returned asset. Provider labels are leads, not facts. An absence
+of direct holder transfers proves neither coordination nor independence;
+compare funding, timing, approvals and downstream flows.
 
-No direct transfers between top holders does **not** rule out coordination.
-Check common first/gas funding, near-synchronous activation, coordinated
-interactions, approvals, counterparties and downstream convergence. Common
-funding can reflect shared infrastructure. **Correlation ≠ common control;
-cluster evidence ≠ proven identity.** Do not publish accusations.
+### Know where a cross-chain trace stops
 
-### Cross-chain continuity has gaps
-
-Connect a source lock/burn/message to a destination mint/release using a
-message ID or documented bridge evidence, not amount and time alone. Record
-both chains, hashes and token representations; addresses may stay the same
-or change. Liquidity-network bridges need not expose a neat one-to-one mint.
-A custodial exchange may pool many customers' deposits at a shared address;
-the public chain may show funds reaching that endpoint without revealing which
-internal customer account received credit. Mark that attribution boundary
-rather than guessing the next owner.
+Link a source lock, burn or message to destination mint/release by message ID
+or bridge evidence, not amount/time alone. Record both chains, hashes and
+token representations; addresses may change, and some liquidity-network
+bridges have no one-to-one mint. A custodial deposit cannot reveal which
+customer received internal credit: stop there and write **unknown**.
 
 ### A “locked liquidity” badge is a question
 
-Identify the pool and liquidity-position token first: a v2 **liquidity
-provider (LP) token** represents a share of pool positions, while a v3
-position **non-fungible token (NFT)** represents a specific range and has
-different ownership rules.
-Inspect owner, locker, unlock time, beneficiary, withdrawal rights and
-upgrade/admin power. Sending LP tokens to an inaccessible address (often
-called burned liquidity) differs from a
-releasable lock. Do not confuse it with the pool's burn operation that redeems
-LP tokens for underlying assets. Neither control proves all liquidity or
-every project power is locked. A
-project-controlled upgradeable locker may not constrain the project as a badge implies.
+Identify the pool and position token: a v2 **liquidity provider (LP) token**
+represents a pool share; a v3 **non-fungible token (NFT)** represents a price
+range. Check owner, locker, beneficiary, unlock, withdrawal rights and
+admin/upgrade powers. LP tokens sent to an inaccessible address (sometimes
+called burned liquidity) differ from a releasable lock; neither is the pool's
+burn operation, which redeems LP tokens for assets. A project-controlled,
+upgradeable locker may still leave control with the project.
+
+**A locked LP position tells you about that position—not all liquidity or
+whether the rest of the project can change.**
+
+::: tip Rules to keep while tracing
+- **Address ≠ person.**
+- **Shared patterns or funding ≠ proven common control.**
+- **A missing link stays unknown.**
+:::
 
 ### Map the supplied observations
 
-The following is an **Academy schematic of the synthetic case records**
-F01–F18. Case-L1 and Case-L2 are invented names for the two networks in this
-case. Edges identify what each supplied record says; they do not imply
-shared control, identity, intent or wrongdoing. The dashed website claim and
-provider label are not on-chain facts.
+**Academy schematic:** synthetic F01–F18 observations on invented Case-L1/2.
+Edges show records, not identity or intent; dashed website/provider labels are
+not on-chain facts.
 
 ```mermaid
 flowchart TB
@@ -161,32 +151,23 @@ flowchart TB
   end
 ```
 
-Read the labels literally: the bridge message links the supplied lock and
-release records, while the later service deposit does not reveal who controls
-the recipient. F15 records a beneficiary and proxy-admin field, but F16 leaves
-signer and emergency constraints unknown. Those are observations and gaps;
-whether they support a hypothesis is for your table to argue.
-
-Check deployer, treasury and market-maker funding before treating repetitive
-small transfers or volume as independent retail demand. Farming, incentives,
-bots or wash-like activity are competing hypotheses, not automatic findings.
+F11/F12 share a message ID; F13 does not identify who controls its recipient.
+F15 gives beneficiary/admin fields; F16 leaves signer/emergency limits unknown.
+Check deployer/treasury funding before calling repeated transfers retail
+demand; incentive farming, bots and activity-inflating trades remain
+hypotheses.
 
 ### Worked observation: first funder
 
-“A and B received their first gas funding from F” is observed in two records.
-“A and B share control” is inferred. “F was an exchange withdrawal service”
-is an alternative requiring label provenance or service evidence. Medium or
-low confidence may be the strongest defensible result.
+Records show A and B first received gas from F. Shared control is an inference;
+F could be an exchange withdrawal service. Check the label source. Result:
+**shared funding pattern; control unknown.**
 
 ::: details Landscape — sandwich patterns and mixers
-A possible sandwich places a trade before a victim's swap and an offsetting
-trade after it, potentially worsening execution. Ordering alone is insufficient:
-inspect pool, direction, quantities and effects. This is a recognition pattern,
-not instructions to carry it out.
-
-Mixers weaken simple deterministic attribution. A mixer or bridge interaction
-does not establish malicious intent. Do not identify private people or
-provide evasion methods.
+A sandwich may bracket a swap and worsen execution; compare pool, direction,
+amounts and effects, since ordering alone is insufficient. Mixers weaken
+attribution but do not prove intent. Do not identify private people or give
+evasion methods.
 :::
 
 ## Hands-on task
@@ -195,17 +176,17 @@ Use **one compact investigation table**, not a report:
 
 1. **Real explorer check (about 5 minutes).** Reopen
    [Part 1's USDC transaction](./part-1-on-chain-data-as-evidence.md#worked-example-the-receipt-is-not-the-instruction).
-   Link the initiating address, token/proxy Code page and Transfer log.
-   Classify those records; flag an unknown rather than forcing an account
-   classification from a label. No new tracing or wallet connection is required.
+   Link the initiating address, token/proxy Code page and Transfer log;
+   classify them and mark unsupported attribution unknown. No new tracing is
+   required.
 2. **Case pack (about 20 minutes).** Open the
    <a :href="$withBase('/files/researcher/W6.2-fund-flow-case.csv')" download>synthetic observations CSV</a>
    and <a :href="$withBase('/files/researcher/W6.2-case-notes.md')" download>case notes</a>.
    Aliases and record IDs are invented, not live addresses/transactions.
    Investigate allocation splitting, possible coordination and the LP-lock
-   claim. Write **four rows**: observed records, interpretation, alternative,
-   confidence with reason, next evidence/check. Use two independent signal
-   families in your activity/cluster hypothesis.
+   claim. Write **four rows**: records, interpretation, alternative,
+   confidence/reason and next check. Use two independent signal families for
+   the activity/cluster hypothesis.
 3. Include the cross-chain break in one row: distinguish a linked bridge
    message from a later custodial endpoint. Say what remains unknown.
 
@@ -224,9 +205,9 @@ This Part is worth **100 points**. Completed / approved earns full points;
 incomplete or materially incorrect work is returned for revision. There is no
 partial-score rubric or separate weekly submission.
 
-Complete means every inference names evidence and an alternative, the cluster
-claim uses two independent signal families, and lock/cross-chain limitations
-remain visible. An honestly bounded conclusion can pass with identity and intent unknown.
+To complete, cite records, include an alternative and two signal families, and
+state where the evidence stops. You need not identify anyone or prove motive;
+**unknown** is acceptable when records do not support more.
 
 ::: details Further Exploration — optional, not assessed
 Compare two free explorer labels for a public service contract. Who supplied

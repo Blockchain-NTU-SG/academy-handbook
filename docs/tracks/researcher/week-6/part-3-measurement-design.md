@@ -45,8 +45,8 @@ are parts of one analysis, not separate reports.
 (SQL) to compare consistent windows, and test whether the headline survives
 alternative measurements.**
 
-The question is bounded: **DefiLlama-reported Uniswap daily decentralised
-exchange (DEX) volume on Ethereum, in USD, across the last 90 complete
+The question is deliberately narrow: **DefiLlama-reported Uniswap daily
+decentralised exchange (DEX) volume on Ethereum, in USD, across the last 90 complete
 Coordinated Universal Time (UTC) days**. It is not a count of trades, wallets
 or people. No account, application programming interface (API) key or wallet
 is needed.
@@ -58,8 +58,8 @@ is needed.
 ```mermaid
 flowchart TB
   accTitle: Measurement workflow
-  accDescr: A research question moves through retrieval, provenance, coverage validation, querying, cross-checking and metric stress-testing to a bounded claim.
-  Q["Question"] --> R["Retrieve"] --> P["Preserve provenance"] --> V["Validate coverage"] --> SQL["Query"] --> X["Cross-check"] --> S["Stress-test metric"] --> I["Interpret"] --> C["Bounded claim"]
+  accDescr: A research question moves through retrieval, provenance, coverage validation, querying, cross-checking and metric stress-testing to a conclusion limited to the source and window.
+  Q["Question"] --> R["Retrieve"] --> P["Preserve provenance"] --> V["Validate coverage"] --> SQL["Query"] --> X["Cross-check"] --> S["Stress-test metric"] --> I["Interpret"] --> C["Conclusion limited to<br/>this source and window"]
 ```
 
 **Academy workflow schematic:** each step constrains the next. A query cannot
@@ -281,8 +281,9 @@ incomplete or materially incorrect work is returned for revision. There is no
 partial-score rubric or separate weekly submission.
 
 Complete means 90 complete UTC dates, 30 per group, reproducible SQL and
-source checks, consistent units, and a conclusion bounded by what USD volume
-can show. Mean/median agreement is a check, not a required research result.
+source checks, consistent units, and a conclusion that does not claim more
+than USD volume can show. Mean/median agreement is a check, not a required
+research result.
 
 ::: details Further Exploration — optional, not assessed
 Chart the daily series with source and dates. Retrieve the all-chain series

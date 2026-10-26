@@ -72,8 +72,8 @@ value, not cash held by the protocol.
 
 ## The hard skill
 
-**Choose a defensible valuation denominator and interpret relative value
-alongside token structure, executable liquidity and competing explanations.**
+**Choose a valuation denominator that fits the question and interpret relative
+value alongside token structure, executable liquidity and other explanations.**
 
 This is economic research methodology. No trade, wallet connection, price
 target, portfolio decision or real-money activity is required.
@@ -118,7 +118,7 @@ flowchart LR
   C[Catalysts]
   R[Risks]
   N[Narrative / attention]
-  B[Bounded conclusion]
+  B[Conclusion limited to evidence]
   SYS -. informs .-> V
   TOK -. informs .-> V
   C -. may change .-> SYS
@@ -128,8 +128,8 @@ flowchart LR
 ```
 
 **Academy schematic — a way to organise the lenses, not a fixed research
-sequence.** The conclusion should connect relevant evidence and state what
-remains unknown.
+sequence.** Bring together the evidence that answers the question and state
+what remains unknown.
 
 ### 1. Fundamentals — what economic system exists underneath the token?
 
@@ -140,8 +140,8 @@ results.
 For a decentralised exchange (DEX), start with a trade: a trader swaps, pays a
 fee, and the protocol's rules allocate that fee. Some may go to liquidity
 providers (LPs); some protocol designs may retain a portion. Retained
-economics may enter a treasury or support other costs, and only a separate,
-credible mechanism might connect them to token holders.
+economics may enter a treasury or support other costs. Only a documented rule
+or mechanism might connect them to token holders.
 
 ```mermaid
 flowchart LR
@@ -259,8 +259,8 @@ not interchangeable without explaining the time basis.
 ### 4. Tokenomics — if the protocol succeeds, why should the token benefit?
 
 This lens tests the connection between protocol outcomes and the token. A
-protocol can become more useful without its token benefiting unless a
-credible mechanism links the two.
+protocol can become more useful without its token benefiting unless a clear
+mechanism links the two.
 
 | Supply / availability | Demand / rights |
 |---|---|
@@ -271,7 +271,7 @@ credible mechanism links the two.
 
 Governance can matter, but it does not automatically create a cash-flow claim
 or continuous demand. Check token and governing documents, then connect to
-W5P5: **protocol success ≠ token success unless a credible mechanism links
+W5P5: **protocol success ≠ token success unless a clear mechanism links
 them.**
 
 ### 5. Unlocks — what new transferable supply is becoming available?
@@ -339,7 +339,7 @@ context, not economic proof. This is not a trading-entry or exit method.
 
 ### Use the lenses together
 
-Relate relevant evidence to one question, state what remains unknown and
+Use evidence that speaks to one question, state what remains unknown and
 identify what could disprove your explanation. No single metric or story
 should dominate the conclusion.
 
@@ -360,8 +360,8 @@ because a lens is a question, not a protocol category.
 | **Risks** | [Aave with wstETH collateral](part-5-dependency-governance-and-risk.md#case-wsteth-collateral-in-aave-v3-on-ethereum) | Trace market/oracle trigger → collateral value and health factor → liquidation demand → exposed party. W6P5 develops the full causal method. |
 | **Narrative** | [RWA / Aave Horizon](https://governance.aave.com/t/horizon-technical-maintenance-updates/25408) | AaveLabs described Horizon's tokenized-asset context on **31 July 2026**. Verify assets, users, borrowing and fees; sector attention is not proof of stronger fundamentals. |
 
-Real examples show where to look; Alder removes live-data noise for practising
-a bounded, combined thesis.
+Real examples show where to look; Alder removes live-data noise so you can
+combine evidence into one conclusion limited by the case.
 
 ### Worked example: eight lenses on fictional AMM Alder
 
@@ -381,7 +381,7 @@ This fictional case is illustrative, not live data or a recommendation.
 **Now combine the lenses.** Alder has stated retained economics but no evidence
 that holders receive them. Its 10× multiple is below Birch's reference, but
 rights, comparability, the unlock and shallow liquidity remain unresolved; the
-integration is not yet a demonstrated economic change. A bounded next check is
+integration is not yet a demonstrated economic change. A useful next check is
 to verify token rights and unlock recipients, then compare post-launch retained
 economics and executable depth with a dated baseline. Use the lenses to build
 one explanation and identify what could disprove it—not to collect eight facts.
@@ -420,10 +420,10 @@ Produce **one calculation/interpretation table**:
 3. Give **two explanations** for the apparent valuation difference and the
    evidence needed to discriminate. Connect token rights, unlock/liquidity or
    activity quality to at least one explanation.
-4. In **up to 100 words**, state the bounded conclusion, one potential
-   fundamental catalyst, a plausible narrative-only explanation, and evidence
-   that would invalidate your conclusion. An unknown rights comparison can
-   justify withholding a value judgment.
+4. In **up to 100 words**, state a conclusion limited to the evidence, one
+   potential fundamental catalyst, a plausible narrative-only explanation,
+   and evidence that would invalidate your conclusion. An unknown rights
+   comparison can justify withholding a value judgment.
 
 **Out of scope:** price targets, position sizing, trade recommendations,
 repeating constant-product maths or pretending these are real protocols.

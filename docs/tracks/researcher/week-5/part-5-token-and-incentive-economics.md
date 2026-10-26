@@ -137,7 +137,7 @@ flowchart TB
   F -->|"some fees paid out"| P["Payments to liquidity providers,<br/>suppliers, validators<br/>or incentives"]
   F -->|"amount retained"| R["Protocol revenue"]
   R -->|"after costs / policy"| T["Treasury or earnings"]
-  T -.->|"only with a credible mechanism / right"| H["Possible token-holder accrual"]
+  T -.->|"only with a documented right or mechanism"| H["Possible token-holder accrual"]
 ```
 
 The dotted final arrow is not automatic. Activity may be free or subsidised;

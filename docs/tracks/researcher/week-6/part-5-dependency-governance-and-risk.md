@@ -5,7 +5,7 @@ day: 5
 title: "Dependency, governance and risk"
 status: drafting
 owner: "Education Team"
-reading_time: "40 min"
+reading_time: "50 min hands-on"
 points: 100
 sources:
   - name: "Aave — Health Factor & Liquidations"

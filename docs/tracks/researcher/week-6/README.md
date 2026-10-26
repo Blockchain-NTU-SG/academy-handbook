@@ -14,9 +14,10 @@ querying/measurement → token/liquidity/valuation → dependency risk →
 independent investigation brief.
 
 Each Part has one lightweight, reviewable hands-on task worth **100 points**.
-Every tool used is free and needs no account: block explorers, DefiLlama's
-public application programming interface (API), a short Python script,
-DuckDB in the browser and a spreadsheet.
+All required Core tools are free and need no account: block explorers,
+DefiLlama's public application programming interface (API), a short Python
+script, DuckDB in the browser and a spreadsheet. Optional industry-data paths
+may require separate access.
 
 **There is no separate weekly submission.** These six Part tasks are the
 assessed progress evidence for this week.
@@ -27,10 +28,10 @@ assessed progress evidence for this week.
 | 2 | [Entity and Fund-Flow Investigation](./part-2-querying-real-data.md) | 40 min | Drafting |
 | 3 | [Querying and Measurement Design](./part-3-measurement-design.md) | 65 min hands-on | Drafting |
 | 4 | [Token, Liquidity and Valuation Evidence](./part-4-token-and-market-evidence.md) | 60 min hands-on | Drafting |
-| 5 | [Dependency, Governance and Risk](./part-5-dependency-governance-and-risk.md) | 40 min | Drafting |
+| 5 | [Dependency, Governance and Risk](./part-5-dependency-governance-and-risk.md) | 50 min hands-on | Drafting |
 | 6 | [Independent Investigation Brief](./part-6-evidence-to-claim.md) | 50 min | Drafting |
 
-**Required estimate: 290 minutes (4 h 50 min)**, including hands-on work.
+**Required estimate: 300 minutes (5 h)**, including hands-on work.
 These are authoring estimates to test in the pilot, not completion deadlines.
 Optional exploration is not assessed. Existing page URLs are retained.
 

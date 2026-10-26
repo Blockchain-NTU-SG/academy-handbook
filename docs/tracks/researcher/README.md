@@ -9,7 +9,7 @@ title: "Researcher Deep Dive"
 
 Researcher learners develop the transferable skill of **decomposing unfamiliar
 Web3 systems**: reconstructing how a system works, measuring it with evidence,
-and making a defensible claim about its risks and behaviour. The connected
+and making an evidence-based claim about its risks and behaviour. The connected
 capabilities are system research (how it works), on-chain investigation (what
 happened), and economic research (what the evidence means).
 
@@ -34,5 +34,8 @@ incomplete or materially incorrect.
 
 > **Status: curriculum / pilot review.** All twelve Parts are authored and
 > remain drafts for review. The progression is system reconstruction →
-> investigation → measurement → economic/risk interpretation → defensible claim.
-> Allow about 4–4.5 hours per week; optional exploration is not assessed.
+> investigation → measurement → economic/risk interpretation → a conclusion
+> supported by evidence.
+> Allow about 4–5 hours per week. Current estimates are 4 h 15 min for W5
+> and 5 h for W6; replace these estimates with pilot data. Optional
+> exploration is not assessed.
