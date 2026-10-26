@@ -26,6 +26,33 @@ sources:
   - name: "Arkham — Token pages"
     url: "https://codex.arkm.com/the-intelligence-platform/token-pages"
     label: "Link"
+  - name: "Aave — Market operations"
+    url: "https://www.aave.com/docs/aave-v3/markets/operations"
+    label: "Link"
+  - name: "Aave — FAQ and reserve factor"
+    url: "https://aave.com/faq"
+    label: "Link"
+  - name: "Aave — Governance"
+    url: "https://aave.com/docs/ecosystem/governance"
+    label: "Link"
+  - name: "Ethereum.org — Gas and fees"
+    url: "https://ethereum.org/developers/docs/gas/"
+    label: "Link"
+  - name: "Ethereum.org — Staking"
+    url: "https://ethereum.org/staking/"
+    label: "Link"
+  - name: "Ethereum.org — ETH issuance and burn"
+    url: "https://ethereum.org/roadmap/merge/issuance/"
+    label: "Link"
+  - name: "Arbitrum DAO — Token supply and vesting"
+    url: "https://docs.arbitrum.foundation/token-supply"
+    label: "Link"
+  - name: "Aave Governance — Aave V4 on Arc activation (16 September 2026)"
+    url: "https://governance.aave.com/t/arfc-deploy-aave-v4-on-arc/25170/9"
+    label: "Link"
+  - name: "Aave Governance — Horizon RWA update (31 July 2026)"
+    url: "https://governance.aave.com/t/horizon-technical-maintenance-updates/25408"
+    label: "Link"
 ---
 
 <!-- Original synthetic data, not live valuations or recommendations.
@@ -315,6 +342,26 @@ context, not economic proof. This is not a trading-entry or exit method.
 Relate relevant evidence to one question, state what remains unknown and
 identify what could disprove your explanation. No single metric or story
 should dominate the conclusion.
+
+### What the framework looks like in real research
+
+These real-world examples show the **research move**, not an investment
+conclusion; re-check live state. A protocol can appear under several lenses
+because a lens is a question, not a protocol category.
+
+| Lens | Real example | How a researcher uses the lens |
+|---|---|---|
+| **Fundamentals** | [Aave lending](https://www.aave.com/docs/aave-v3/markets/operations) and [reserve FAQ](https://aave.com/faq) | Trace suppliers, borrowers, interest flows and reserve-factor allocation. Gross borrower interest does not automatically accrue to token holders. |
+| **Flows** | [Aave reserves](https://aave.com/faq) | Compare supply, withdrawals, borrowing and repayment for one reserve/period. Fundamentals maps mechanics; flows tracks capital movement. |
+| **Valuation** | [AAVE](https://aave.com/docs/ecosystem/governance) | Separate supplier economics, treasury allocation, costs and documented AAVE rights before choosing a multiple; gross interest is not holder earnings. |
+| **Tokenomics** | ETH: [gas](https://ethereum.org/developers/docs/gas/), [staking](https://ethereum.org/staking/), [issuance and burn](https://ethereum.org/roadmap/merge/issuance/) | Study gas use, staking, issuance and base-fee burn together; activity alone does not reveal net supply or demand. |
+| **Unlocks** | [ARB](https://docs.arbitrum.foundation/token-supply) | Compare scheduled team/investor transfers with circulation, float and liquidity. The page's supply examples are dated 2024; recheck current state. |
+| **Catalysts** | [Aave V4 on Arc](https://governance.aave.com/t/arfc-deploy-aave-v4-on-arc/25170/9) | Governance reported activation on **16 September 2026**: implementation evidence. Measure adoption and economic effects against a baseline before calling it a catalyst. |
+| **Risks** | [Aave with wstETH collateral](part-5-dependency-governance-and-risk.md#case-wsteth-collateral-in-aave-v3-on-ethereum) | Trace market/oracle trigger → collateral value and health factor → liquidation demand → exposed party. W6P5 develops the full causal method. |
+| **Narrative** | [RWA / Aave Horizon](https://governance.aave.com/t/horizon-technical-maintenance-updates/25408) | AaveLabs described Horizon's tokenized-asset context on **31 July 2026**. Verify assets, users, borrowing and fees; sector attention is not proof of stronger fundamentals. |
+
+Real examples show where to look; Alder removes live-data noise for practising
+a bounded, combined thesis.
 
 ### Worked example: eight lenses on fictional AMM Alder
 
