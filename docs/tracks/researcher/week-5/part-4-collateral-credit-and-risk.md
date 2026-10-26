@@ -9,7 +9,7 @@ reading_time: "40 min"
 points: 100
 sources:
   - name: "Aave V3 Technical Paper"
-    url: "https://github.com/aave/aave-v3-core/blob/master/techpaper/Aave_V3_Technical_Paper.pdf"
+    url: "https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf"
     label: "Link"
   - name: "Aave — Health factor and liquidations"
     url: "https://aave.com/help/borrowing/liquidations"
@@ -19,6 +19,12 @@ sources:
     label: "Link"
   - name: "Aave V3 — Interest rate strategy"
     url: "https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy"
+    label: "Link"
+  - name: "Aave — Reserve parameters"
+    url: "https://www.aave.com/docs/aave-v3/concepts/reserve"
+    label: "Link"
+  - name: "Aave — Efficiency Mode"
+    url: "https://aave.com/help/borrowing/e-mode"
     label: "Link"
   - name: "Pendle — Principal token"
     url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT"
@@ -75,14 +81,23 @@ After this Part you can:
 
 ### Primary source — Aave V3 Technical Paper
 
-The paper describes the V3 design and architecture; it is useful for seeing
-the protocol team's original reasoning. Read the sections on liquidation and
-interest-rate design alongside the model below. It is a 2022 design reference,
-not a specification of every current deployment or parameter—use [Aave's
-current liquidation documentation](https://aave.com/help/borrowing/liquidations)
-for live behaviour.
+The paper explains Aave V3's design reasoning and architecture. Read the
+sections on health factors, liquidations and interest-rate design alongside
+the model below. It is a design paper, not a current runtime specification:
+deployments and parameters can change. For present behaviour, check Aave's
+current documentation on [health factors and
+liquidations](https://aave.com/help/borrowing/liquidations), [interest-rate
+strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy),
+[reserve parameters](https://www.aave.com/docs/aave-v3/concepts/reserve) and
+[E-mode](https://aave.com/help/borrowing/e-mode).
 
-- [Open the Aave V3 Technical Paper on GitHub](https://github.com/aave/aave-v3-core/blob/master/techpaper/Aave_V3_Technical_Paper.pdf) (opens/downloads the PDF; the repository does not serve it as an inline PDF).
+- [Download the Aave V3 Technical Paper (official PDF)](https://raw.githubusercontent.com/aave-dao/aave-v3-origin/main/docs/Aave_V3_Technical_Paper.pdf)
+- [View the PDF in the official Aave DAO repository](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf).
+
+The official raw PDF response uses a sandboxed content policy and
+`X-Frame-Options: deny`, so browsers refuse to display it inside the Handbook.
+Open the direct PDF or repository link above; the current Aave documentation
+links remain the reference for live behaviour.
 
 ### The health factor
 
@@ -129,9 +144,13 @@ the borrower. It reads an on-chain price feed, often from an oracle network
 such as Chainlink.
 
 If that price is stale, delayed or wrong, the health factor is wrong too. A
-price that is too high delays liquidation and raises the chance of bad debt.
-A price that is too low makes a healthy position look weak. Protocols watch
-how fresh the feed is and build in safeguards.
+price that is too high delays liquidation and can increase the chance of
+**bad debt**: a loan balance that remains unpaid because available collateral
+is worth too little, cannot be sold for enough, or cannot be realised in
+time. A liquidation may repay a loan in full; the borrower's loss of
+collateral is not itself protocol or supplier bad debt. A price that is too
+low makes a healthy position look weak. Protocols watch how fresh the feed
+is and build in safeguards.
 
 ### Worked example: 10 ETH backing a 12,000 USD loan
 
@@ -152,9 +171,9 @@ debt. The protocol acts early on purpose.
 
 The **break-even price** is 12,000 ÷ 10 = **1,200 USD**. There the collateral
 is worth exactly the debt. Below it, selling all the collateral would not
-repay the loan. If the market falls through 1,200 before a liquidation goes
-through, because the price moved too fast, the oracle lagged or the network
-was congested, the protocol is left with **bad debt**.
+repay the loan. If the market falls through 1,200 before a liquidation
+completes—for example, because the price moves too fast, the oracle lags or
+the network is congested—unpaid debt may remain.
 
 | ETH price | Collateral value | Health factor | What it means |
 |---:|---:|---:|---|
@@ -321,10 +340,11 @@ Your work is complete when:
 :::
 
 ::: details Sources and attribution
-- [Aave V3 Technical Paper](https://github.com/aave/aave-v3-core/blob/master/techpaper/Aave_V3_Technical_Paper.pdf) — Link, protocol-authored 2022 design reference; not a current deployment specification
+- [Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) — Link, protocol-authored design reference; not a current deployment specification
 - [Aave — Health factor and liquidations](https://aave.com/help/borrowing/liquidations) — Link, referenced only
 - [Chainlink — Price feeds](https://docs.chain.link/data-feeds/price-feeds) — Link, referenced only
 - [Aave V3 — Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) — Link, protocol documentation
+- [Aave — Reserve parameters](https://www.aave.com/docs/aave-v3/concepts/reserve) and [Efficiency Mode](https://aave.com/help/borrowing/e-mode) — Link, current protocol documentation; verify the selected market and date
 - [Pendle — Principal token](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT) — Link, protocol documentation
 - [Pendle — Glossary](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary) — Link, protocol documentation
 :::

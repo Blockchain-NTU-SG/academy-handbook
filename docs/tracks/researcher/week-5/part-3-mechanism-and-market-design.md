@@ -135,6 +135,10 @@ Read **§2.1, “Constant Product Market Maker”** for the reserve rule. Sectio
 - [Open the Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf)
 - For protocol-authored pool and swap diagrams, see [Uniswap's “How Uniswap Works”](https://developers.uniswap.org/docs/get-started/concepts/how-uniswap-works).
 
+::: details Read the Uniswap v2 Core whitepaper inside the Academy
+@[pdf 1 height="620px" zoom="90"](https://app.uniswap.org/whitepaper.pdf)
+:::
+
 ### Worked example: selling 10 ETH
 
 A pool holds **100 ETH** and **200,000 USDC**, with a **0.3%** fee.

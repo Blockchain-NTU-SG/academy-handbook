@@ -176,10 +176,10 @@ example's dates into a new download.
 | Median | Middle of the ordered daily values, USD/day | A typical day, less dominated by spikes |
 | Top-three share | Sum of busiest three days / window total, % | Concentration in outliers |
 
-For example, daily volumes of **$2m, $2m, $2m, $2m and $12m** have a mean
-of **$4m** and a median of **$2m**. The one large day pulls the mean up; the
-median is the middle observation in this small ordered set. Neither alone
-explains why the spike occurred.
+For example, daily volumes of **USD 2m, USD 2m, USD 2m, USD 2m and USD 12m**
+have a mean of **USD 4m** and a median of **USD 2m**. The one large day pulls
+the mean up; the median is the middle observation in this small ordered set.
+Neither alone explains why the spike occurred.
 
 For two consistent windows, percentage change in a metric is:
 
@@ -216,10 +216,10 @@ Adjust argument separators for your spreadsheet locale. Zero window total
 makes concentration undefined; zero first mean makes percentage change
 undefined. Report either honestly.
 
-**Synthetic interpretation example:** mean rises from $8m to $10.4m (+30%);
-median from $7.5m to $7.875m (+5%); top-three share rises from 18% to 42%
-(+24 percentage points). The average rose, but the typical day changed far
-less. This does not establish broader adoption.
+**Synthetic interpretation example:** mean rises from USD 8m to USD 10.4m
+(+30%); median from USD 7.5m to USD 7.875m (+5%); top-three share rises from
+18% to 42% (+24 percentage points). The average rose, but the typical day
+changed far less. This does not establish broader adoption.
 
 Choose an interpretation rule **before reading results**: for example,
 describe mean growth separately from whether median and concentration agree.
