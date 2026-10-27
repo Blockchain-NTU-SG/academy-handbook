@@ -83,8 +83,9 @@ After this Part you can:
    even if it is ugly, before you add checks and polish.
 5. **Break it on purpose.** Try every failure you can think of, then make
    sure each one fails clearly.
-6. **Ship and explain.** Deploy as in [Part 5](./part-5-deployment-and-reproducibility.md),
-   then write down what you built and what it does not do.
+6. **Ship and explain.** Ship the new slice through the existing workflow from
+   [Part 5](./part-5-deployment-and-reproducibility.md), then write down what
+   you built and what it does not do.
 
 ### You already have most of the pieces
 
@@ -101,9 +102,11 @@ After this Part you can:
 
 ### The new piece: approve, then pull
 
-ETH can travel with a function call. ERC-20 tokens such as USDC cannot. When a
-contract needs to take tokens from a user, the usual pattern has two
-transactions:
+Native ETH can be attached directly to a contract call as transaction `value`.
+ERC-20 balances live inside the token contract's state, so tokens are not
+attached to another contract call in the same way. To let another contract
+move ERC-20 tokens on the user's behalf, the token owner usually grants an
+allowance first. The usual pattern has two transactions:
 
 1. The user calls **`approve`** on the token, giving a spender (your contract)
    permission to take up to a set amount.
@@ -118,6 +121,47 @@ builder, you now decide how much your app asks for.
 The functions involved are described in the
 [ERC-20 interface reference](https://docs.openzeppelin.com/contracts/5.x/api/token/erc20#IERC20).
 The rest is up to you.
+
+```mermaid
+flowchart TD
+  accTitle: ERC-20 approval and transfer flow
+  accDescr: Two labeled phases show the user first granting permission to the USDC contract and later using that permission through TipContract. The USDC contract stores the allowance and performs the balance updates. The link between the phases shows time sequence, not allowance or token transfers between the boxes.
+  subgraph phase1["PHASE 1 — GRANT PERMISSION"]
+    direction TB
+    U1["User"] -->|"approve(TipContract,<br/>amount)"| T1["USDC<br/>contract"]
+    T1 --> S1["Records allowance<br/>owner: User<br/>spender: TipContract<br/>amount: X"]
+  end
+  subgraph phase2["PHASE 2 — USE PERMISSION"]
+    direction TB
+    U2["User"] -->|"tip(...)"| C2["TipContract"]
+    C2 -->|"transferFrom(User,<br/>Author, amount)"| T2["USDC<br/>contract"]
+    T2 --> S2["Updates state<br/>User balance ↓<br/>Author balance ↑<br/>Allowance ↓"]
+  end
+  phase1 -->|"later"| phase2
+```
+
+The **approval** is the user's instruction to the token contract to grant a
+spender permission. The **allowance** is state stored by the token contract
+describing how much `spender` may still move from `owner`; conceptually, it is
+`allowance[owner][spender]`, without implying that every token uses this exact
+storage layout. In this flow the tip contract is the spender: it calls
+**`transferFrom`** to use the allowance on the user's behalf, while the USDC
+contract performs the balance update. The TipContract does not custody the
+USDC in this design.
+
+Approve only the exact amount needed for this tip. That is an intentionally
+conservative Academy requirement. Production apps may use different allowance
+strategies, permit-based approvals or carefully bounded reusable allowances;
+this exercise uses exact approval so the remaining permission is easy to
+reason about.
+
+Reuse the public repository, contract deployment, verification and Pages setup
+you completed in Part 5. This challenge still requires a deployed and usable
+result, but it is not a second deployment engineering assignment: extend the
+existing pipeline and provide fresh evidence for the new contract and app
+through it. Do not redesign or re-document the Pages workflow, repeat the
+fresh-clone shipping proof, or create a second workflow when the Part 5 setup
+is unchanged.
 
 ## Hands-on task
 
@@ -160,12 +204,14 @@ The rest is up to you.
 
 12. One real tip on Sepolia between two of your own test accounts. The
     author account needs a record first, and a little Sepolia ETH to set it.
-13. A short **architecture note** (one page at most): the pieces, the flow of
-    one tip from click to confirmed transfer, and the known limitations.
+13. A short **architecture note** (one diagram plus approximately 100–150
+    words): the pieces, the flow of one tip from click to confirmed transfer,
+    and the known limitations.
 
 **Given:** Sepolia USDC comes from
 [Circle's faucet](https://faucet.circle.com/) (20 USDC every two hours per
-address). Finding the token's address and units is part of the task.
+address and per blockchain). Finding the token's address and units is part of
+the task.
 
 **Out of scope:** other tokens, refunds or withdrawals, signature-based
 approvals (EIP-2612 permit), mainnet, and a backend.
@@ -186,12 +232,16 @@ not finished.
 
 ## Evidence required
 
-- Your repository link, with the tests.
-- Your verified contract link.
+- Your repository link, with the tests. Point to the Part 5 repository and
+  shipping evidence where it is unchanged; make the new integration changes
+  clear.
+- Your verified contract link for the new contract, using the existing Part 5
+  verification workflow.
 - A link to your real Sepolia tip transaction.
 - A link to your live frontend (as in Part 5), or a demo clip of two minutes
   or less showing one tip and one handled failure.
-- Your architecture note.
+- Your architecture note. Do not repeat the Part 5 fresh-clone or Pages
+  workflow proof when that infrastructure is unchanged.
 
 ## Completion and revision
 

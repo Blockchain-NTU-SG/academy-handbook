@@ -5,7 +5,7 @@ day: 2
 title: "Contract engineering"
 status: drafting
 owner: "Education Team"
-reading_time: "50 min hands-on"
+reading_time: "45 min hands-on"
 points: 100
 sources:
   - name: "Solidity docs — Mapping types"
@@ -50,9 +50,11 @@ someone tries something they should not.
 Adding a room is not just putting up walls. You connect it to the wiring and
 plumbing, decide who gets a key, and make sure the old rooms still work.
 
-Where the picture stops: builders can inspect a house after the work is done.
-A deployed contract cannot be changed, so you design the rules before it goes
-live, not after.
+Where the picture stops: builders can sometimes remodel a house after it is
+finished. The bytecode of a normal non-upgradeable contract cannot simply be
+edited in place after deployment. Upgradeable architectures can change
+behaviour through separate mechanisms such as proxies, but that is a deliberate
+architectural choice rather than ordinary editing.
 :::
 
 ## The hard skill
@@ -85,21 +87,23 @@ so they must still pass when you finish.
 
 ### The tools for this Part
 
-Week 3 skipped these on purpose. Each solves one specific problem.
+Week 3 skipped these on purpose. Each solves one specific problem. Learn the
+problem first, then keep the professional term beside it:
 
 | Tool | What it solves | Example |
 |---|---|---|
-| `mapping` | Look up a value by key | `mapping(address => string) public records;` |
-| Nested `mapping` | Store a fact about a *pair* of keys | `mapping(address => mapping(address => bool)) public follows;` |
-| `struct` | Group several values under one key | `struct Profile { string name; uint64 updatedAt; }` |
-| `modifier` | Reuse a check across functions | `modifier onlyOwner() { if (msg.sender != owner) revert NotOwner(); _; }` |
-| Custom `error` | Name a failure, cheaply | `error NotOwner();` then `revert NotOwner();` |
-| `event` | Tell apps what changed | `event RecordUpdated(address indexed account, string value);` |
-| `interface` | Call another contract by its function signatures | `interface IRegistry { function records(address) external view returns (string memory); }` |
+| `mapping` | A contract-side lookup table: give it a key and it returns the value stored for that key. A missing key returns the type's default (`false`, `0` or `""`). | `mapping(address => string) public records;` |
+| Nested `mapping` | A lookup table with two keys, useful for a relationship such as who endorsed whom. | `mapping(address => mapping(address => bool)) public follows;` |
+| `struct` | A named bundle of related values stored together. | `struct Profile { string name; uint64 updatedAt; }` |
+| `modifier` | A reusable gate or check wrapped around one or more functions. `_` marks where the function body continues. | `modifier onlyOwner() { if (msg.sender != owner) revert NotOwner(); _; }` |
+| Custom `error` | A named failure that makes revert reasons machine-readable and is cheaper than a long revert string in many cases. | `error NotOwner();` then `revert NotOwner();` |
+| `event` | A structured log emitted during execution so off-chain software can discover what happened. | `event RecordUpdated(address indexed account, string value);` |
+| `interface` | A description of functions another contract exposes. It tells Solidity how to call that contract but contains none of its implementation. | `interface IRegistry { function records(address) external view returns (string memory); }` |
 
-Two things worth knowing about mappings: every key exists and starts at zero
-(`false`, `0`, `""`), and you cannot loop over a mapping. If you need a list
-or a count, you store it yourself.
+Every mapping key behaves as if it exists and starts at its type's default, and
+you cannot loop over a mapping. If you need a list or a count, you store it
+yourself. A nested mapping is still a lookup table: the first key selects an
+inner table and the second key selects a value inside it.
 
 ### Design before you code
 
@@ -112,7 +116,8 @@ For any feature, answer four questions on paper first:
 4. **Failure.** What should be rejected, and with which error?
 
 Then write one sentence that must always be true afterwards, called an
-**invariant**. For example: *a record is never empty unless the owner cleared
+**invariant**: a statement that should remain true across all valid
+executions. For example: *a record is never empty unless the owner cleared
 it.* Invariants are what you will test in Week 6.
 
 ### Worked example: endorsements

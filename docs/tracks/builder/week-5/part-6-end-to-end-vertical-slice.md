@@ -5,7 +5,7 @@ day: 6
 title: "End-to-end vertical slice"
 status: drafting
 owner: "Education Team"
-reading_time: "90 min hands-on"
+reading_time: "75 min hands-on"
 points: 100
 sources:
   - name: "Ethereum JSON-RPC API"
@@ -66,14 +66,16 @@ After this Part you can:
 
 ```mermaid
 flowchart TD
+  accTitle: End-to-end vertical slice
+  accDescr: A user click travels through the frontend, wallet, viem, RPC and contract, which changes state and emits events; the page then reads the result back into application state.
   U["<b>User</b><br/><i>clicks Save</i>"]
-  F["<b>Frontend</b><br/><i>React state, inputs, messages</i>"]
-  W["<b>Wallet</b><br/><i>account, network, signature</i>"]
-  V["<b>viem</b><br/><i>address, ABI, chain</i>"]
-  R["<b>RPC</b><br/><i>the node your app talks to</i>"]
-  C["<b>Contract</b><br/><i>rules, state, events</i>"]
-  S["<b>State and events</b><br/><i>what is stored and announced</i>"]
-  A["<b>Application state</b><br/><i>what the page shows next</i>"]
+  F["<b>Frontend</b><br/><i>inputs and state</i>"]
+  W["<b>Wallet</b><br/><i>account and signature</i>"]
+  V["<b>viem</b><br/><i>address and ABI</i>"]
+  R["<b>RPC</b><br/><i>node</i>"]
+  C["<b>Contract</b><br/><i>rules and events</i>"]
+  S["<b>State and events</b>"]
+  A["<b>Page state</b>"]
   U --> F --> W --> V --> R --> C --> S --> A
   A -.->|"read again, reload events"| F
 ```
@@ -101,20 +103,51 @@ and after, the transaction stages and the activity list.
 
 One complete slice is better than three features that only half work.
 
+### Selectors, calldata and RPC method names
+
+A **function selector** is the first four bytes of the Keccak-256 hash of a
+function's canonical signature. Ethereum uses it to identify which function
+is being called; the rest of the **calldata** carries the encoded arguments.
+You do not need to calculate Keccak manually:
+
+```text
+setRecord(string)
+      ↓
+keccak256(...)
+      ↓
+first 4 bytes
+      ↓
+0x3e0a0099
+```
+
+`cast sig "setRecord(string)"` computes this selector for you.
+
+The request table below uses **JSON-RPC method names**: standard strings
+spoken between wallets, libraries, RPC providers and nodes. For example,
+`eth_call` asks a node to execute a read-only call, `eth_sendTransaction`
+submits a transaction request for signing/sending, and `eth_getLogs` asks for
+matching event logs. These names identify the protocol message; they do not by
+themselves prove that the operation succeeded.
+
 ### Worked example: trace one click
 
 We took a working Week 5 app (the starter with Parts 4 and 5 completed),
 connected a test wallet, typed `one click, traced` and pressed **Save
 record**. Then we recorded every request the page sent, in order. Repeated polling requests are grouped into one row:
 
-| # | Sent to | Request | Why |
-|---:|---|---|---|
-| 1 | RPC | `eth_call` with selector `0x3e0a0099` | `simulateContract`: would `setRecord` succeed? |
-| 2 | Wallet | `eth_chainId` | viem checks the wallet is on Sepolia before asking it to sign |
-| 3 | Wallet | `eth_sendTransaction` | The wallet pops up, the user signs, the wallet sends |
-| 4 | RPC | `eth_getTransactionReceipt`, `eth_blockNumber`, `eth_getTransactionByHash` | `waitForTransactionReceipt` polling until the transaction is mined |
-| 5 | RPC | `eth_call` with selector `0x469e9067` | Read `records(account)` again |
-| 6 | RPC | `eth_blockNumber`, then `eth_getLogs` | Reload the activity list from events |
+1. **RPC — `eth_call` with selector `0x3e0a0099`.**
+   `simulateContract` asks whether `setRecord` would succeed.
+2. **Wallet — `eth_chainId`.** viem checks that the wallet is on Sepolia
+   before asking it to sign.
+3. **Wallet — `eth_sendTransaction`.** The wallet opens, the user signs, and
+   the wallet sends the transaction request.
+4. **RPC — `eth_getTransactionReceipt`, `eth_blockNumber` and
+   `eth_getTransactionByHash`.** `waitForTransactionReceipt` polls until the
+   transaction is mined.
+5. **RPC — `eth_call` with selector `0x469e9067`.** The page reads
+   `records(account)` again.
+6. **RPC — `eth_blockNumber`, then `eth_getLogs`.** The page reloads the
+   activity list from events.
 
 You can confirm what the selectors mean yourself:
 

@@ -5,7 +5,7 @@ day: 5
 title: "Events as data"
 status: drafting
 owner: "Education Team"
-reading_time: "45 min hands-on"
+reading_time: "40 min hands-on"
 points: 100
 sources:
   - name: "viem — getContractEvents"
@@ -87,12 +87,42 @@ Two details matter for the code you will write:
   carries an **empty value** is when the owner called `clearRecord`. Treat an
   empty value as "cleared", not as "set to nothing".
 
+An event is returned as a log with a block number, transaction hash and
+**`logIndex`**. `logIndex` is the position of a log within its block. Because
+it is block-wide, sorting logs by `blockNumber` and then `logIndex` preserves
+their chain order even when several transactions in the same block emitted
+logs. If you see **`transactionIndex`**, that is the transaction's position
+within the block; it does not replace `logIndex`. The `account` field is
+**indexed**: the node stores it in a filterable topic so a query can find logs
+for one account efficiently. `value` is not indexed, so it is decoded from the
+log data after the match is found.
+
+The core distinction is:
+
+```mermaid
+flowchart TD
+  accTitle: Current state and event history
+  accDescr: Three blocks record a value changing from hello to gm to cleared; the contract's current state is empty while the event history preserves all three announcements.
+  A["Block A<br/>record = hello<br/>event"] --> B["Block B<br/>record = gm<br/>event"] --> C["Block C<br/>record cleared<br/>event"]
+  C --> D["Current state<br/>records(account) = empty"]
+```
+
+State answers **what is true now?** Events answer **what did the contract
+announce happened over time?** Events are useful history, not a substitute for
+reading the current state.
+
 If you changed the event in Part 2, use your version. Everything below works
 the same way.
 
 You read events from outside the chain with
 [`getContractEvents`](https://viem.sh/docs/contract/getContractEvents). Under
-the hood it is one `eth_getLogs` request to your RPC.
+the hood it is an `eth_getLogs` request to your RPC. **JSON-RPC** is the
+request/response protocol used between Ethereum software; `eth_getLogs` is the
+standard method for asking a node for matching event logs.
+
+`bigint` is JavaScript's integer type for exact whole numbers larger than the
+safe range of `Number`. viem uses it for block numbers and token-like values,
+so render it with `.toString()` instead of converting it through `Number`.
 
 ### Where to start: the deployment block
 
@@ -108,11 +138,21 @@ address. If you are still on the shared Registry, the file holds its block,
 | Scanning from block 0 is slow or rejected | The contract did not exist before its deployment block | Start at `blockNumber` from `deployments/sepolia.json` |
 | The RPC rejects a wide range | Free RPCs cap how many blocks one `eth_getLogs` call may cover, and the cap differs by provider. On 21 October 2026, one allowed under 10,000 blocks per call, another only 50 | Read in windows of a fixed size. If a window is rejected, halve it and retry from the same start |
 | `pruned history unavailable` | Some free RPCs keep only recent logs, sometimes just the last day or two. Smaller windows do not help | Stop shrinking at a floor and show the error. Then switch to an RPC that keeps history (below) |
-| The list looks shuffled | Logs come back oldest first, and several can share a block | Sort by `blockNumber`, then `logIndex`, newest first |
+| The list looks shuffled | Provider response order is not the ordering your UI needs, and several logs can share a block | Sort by `blockNumber`, then `logIndex`, newest first |
 | No timestamps | A log has a block number, not a time | Fetch each distinct block once with `getBlock`, only for the rows you show |
 
 Recent blocks can also be reorganised, so the newest few rows are the least
 settled part of the list. For an activity list that is usually fine.
+
+### Provider-specific history behaviour
+
+The table above describes provider behaviour, not a protocol guarantee. In a
+current provider example checked on **21 October 2026**, the starter's
+PublicNode endpoint returned `pruned history unavailable` for logs about
+108,000 blocks old, dRPC rejected a 10,000-block range, and Tenderly's public
+gateway served the full range. These observations can change. The durable
+lesson is that RPC providers may limit block ranges and historical retention,
+so the code must handle those limits rather than depend on one endpoint.
 
 ### An RPC that keeps history
 
@@ -126,9 +166,10 @@ RPC_URL=https://sepolia.gateway.tenderly.co
 VITE_RPC_URL=https://sepolia.gateway.tenderly.co
 ```
 
-Restart `npm run dev` afterwards. Tenderly's public gateway is free, needs no
-account and served every block from the shared Registry's deployment onwards
-when we tested it. Any Sepolia provider that keeps full history works as well.
+Restart `npm run dev` afterwards. At the time of that check, Tenderly's public
+gateway was free, needed no account and served every block from the shared
+Registry's deployment onwards. Any Sepolia provider that keeps full history
+works as well; verify the current limits before relying on it.
 
 ### Worked example: your first look
 

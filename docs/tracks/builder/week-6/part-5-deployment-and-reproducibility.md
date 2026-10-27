@@ -5,7 +5,7 @@ day: 5
 title: "Deployment and reproducibility"
 status: drafting
 owner: "Education Team"
-reading_time: "60 min hands-on"
+reading_time: "75 min hands-on"
 points: 100
 sources:
   - name: "Foundry Book — forge verify-contract"
@@ -81,17 +81,35 @@ A reviewer should be able to do four things without contacting you:
 |---|---|
 | Run it | A README that works from a fresh clone |
 | Find it | The deployed contract address and network |
-| Trust it | Verified source code on an explorer |
+| Inspect what was deployed | A verified/source-matched contract |
 | Use it | A live frontend they can open in a browser |
 
 Each section below covers one row.
 
+```mermaid
+flowchart TD
+  accTitle: Shipping and reproducibility pipeline
+  accDescr: A project moves from local tests and build through contract deployment and verification, frontend build and Pages deployment, then a fresh-clone test that checks the whole project can be reproduced.
+  A["Local project"] --> B["Tests and build"] --> C["Deploy contract"]
+  C --> D["Verify source"] --> E["Build frontend"] --> F["Deploy Pages"]
+  F --> G["Fresh-clone test"] --> H["Reproducible project"]
+```
+
+This is a handoff pipeline, not a promise that one command performs every
+step. Each arrow produces evidence for the next person: a passing build, a
+contract address, a source match, a generated frontend artifact, a live URL,
+and finally a clean-room run from the README.
+
 ### Verify the contract
 
-On-chain, a contract is only bytecode. **Verification** publishes your source
-code and compiler settings so an explorer can compile it again and confirm it
-produces exactly the bytecode at your address. After that, anyone can read the
+On-chain, a contract is only **bytecode**: the machine-level code produced by
+the compiler and stored at the deployed address. **Verification** publishes
+your source code and compiler settings so a service can compile it again and
+confirm it produces exactly that bytecode. After that, anyone can read the
 code and call functions from the explorer.
+
+Verification proves source correspondence for that address and build settings;
+it does not prove that the code is safe, useful or free of economic bugs.
 
 Foundry reads your compiler settings from `foundry.toml`, so one command is
 enough. There are two common verifiers:
@@ -130,15 +148,24 @@ The rule to remember: **anything that starts with `VITE_` is public.** Vite
 pastes it into the JavaScript it sends to every visitor. If a value must stay
 private, it cannot be in the frontend at all.
 
-You can check this yourself. Build the site, then search the output for
-anything that should not be there:
+You can check this yourself. Put an obvious dummy value in your local `.env`
+only—never use a real private key:
+
+```text
+PRIVATE_KEY=academy_secret_must_not_ship
+```
+
+Build the site, then search the output for that value:
 
 ```bash
 npm run build
-grep -rn "PRIVATE_KEY" dist/
+grep -R "academy_secret_must_not_ship" dist/
 ```
 
-No output means nothing matched.
+Expected result: no matches. You search for the secret's value because that
+is what would be dangerous if it appeared in the frontend bundle. This is one
+practical check, not a formal proof that the bundle contains no sensitive
+information.
 
 ### Put the frontend on GitHub Pages
 
@@ -252,14 +279,20 @@ path from the base:
 After rebuilding, the logo loads from `/academy-builder-starter/brand/…`, and
 it still works from `/` when you run `npm run dev` locally.
 
-**4. Check for secrets.** `.env` is already in `.gitignore`. With a dummy
-`PRIVATE_KEY` in `.env`, `npm run build` followed by
-`grep -rn "PRIVATE_KEY" dist/` prints nothing, because the key has no `VITE_`
-prefix and the frontend never reads it.
+**4. Check for secrets.** `.env` is already in `.gitignore`. Put the dummy
+`PRIVATE_KEY=academy_secret_must_not_ship` in `.env`, then run `npm run build`
+and `grep -R "academy_secret_must_not_ship" dist/`. It should print no
+matches because the key has no `VITE_` prefix and the frontend never reads it.
+This is a useful sanity check, not a formal proof that the bundle contains no
+sensitive information; understand which values the frontend reads and what
+Vite exposes.
 
-**5. Add the workflow.** `.github/workflows/pages.yml`, based on the workflow
-in Vite's GitHub Pages guide:
+**5. Add the workflow.** A **workflow** is an automated sequence GitHub runs
+after an event such as a push. The build output passed to the Pages action is
+an **artifact**: generated files, not source code. `.github/workflows/pages.yml`
+below is based on the workflow in Vite's GitHub Pages guide:
 
+::: details Full GitHub Pages workflow
 ```yaml
 # Builds the frontend and publishes it to GitHub Pages on every push to main.
 name: Deploy frontend to Pages
@@ -311,6 +344,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 ```
+:::
 
 Delete the `VITE_RPC_URL` line if your frontend does not read any `VITE_`
 values. Once Pages is set to **GitHub Actions**, every push to `main` shows a

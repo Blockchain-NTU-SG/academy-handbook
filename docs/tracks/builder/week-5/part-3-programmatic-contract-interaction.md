@@ -5,7 +5,7 @@ day: 3
 title: "Programmatic contract interaction"
 status: drafting
 owner: "Education Team"
-reading_time: "50 min hands-on"
+reading_time: "45 min hands-on"
 points: 100
 sources:
   - name: "viem — readContract"
@@ -76,11 +76,22 @@ After this Part you can:
 ### Three things make a contract callable
 
 To call any contract from code you need its **address**, its **chain** and its
-**ABI**. In the starter, all three come from `shared/contract.ts`, which
-`npm run compile` and `npm run deploy` generate for you. If any one is wrong,
-calls fail in confusing ways, as you will see in Week 6.
+**Application Binary Interface (ABI)**. The ABI is the machine-readable
+description that tells viem which functions and events exist and how their
+arguments and results are encoded. In the starter, all three come from
+`shared/contract.ts`, which `npm run compile` and `npm run deploy` generate for
+you. If any one is wrong, calls fail in confusing ways, as you will see in Week
+6.
+
+The arguments and function name are packed into **calldata**, the encoded input
+carried by a contract call. You do not hand-encode it here: viem uses the ABI
+to build it, which is why the address, chain and ABI must agree.
 
 ### Two clients
+
+A **client** is the code object that knows how to talk to a chain. The public
+client asks questions and simulates; the wallet client uses an account to
+authorise writes.
 
 | Client | What it does | Needs a key? |
 |---|---|---|
@@ -99,6 +110,23 @@ and never commit `.env`.
 
 ### The five steps
 
+The same write has a lifecycle. The visual is a compact map; the table below
+names the viem function and the evidence produced at each stage.
+
+```mermaid
+flowchart TD
+  accTitle: Contract write lifecycle
+  accDescr: A program reads current state, simulates a write, sends it for signing, receives a transaction hash, waits for a mined receipt, checks its status, and reads state again.
+  A["Read state"] --> B["Simulate write"] --> C["Send transaction"]
+  C --> D["Transaction hash"] --> E["Wait for mining"] --> F["Receipt"]
+  F --> G["Check status"] --> H["Read state again"]
+```
+
+Simulation is a read-only rehearsal against the state visible at that moment;
+the transaction is the later state-changing action. The receipt is the
+execution result recorded after inclusion in a block, including its status,
+block number and logs.
+
 | Step | viem function | What you get back |
 |---|---|---|
 | 1. Read | `readContract` | The current value |
@@ -109,12 +137,15 @@ and never commit `.env`.
 
 Two details that catch people out:
 
-- **A hash is not success.** `writeContract` returns as soon as the network
-  accepts the transaction. It can still revert when mined. Only the receipt's
-  `status` tells you.
-- **Simulate first.** If the contract would reject the call, the simulation
-  fails with the error's name and no gas is spent. Passing its `request` to
-  `writeContract` also means you send exactly what you simulated.
+- **A transaction hash is only an identifier, not success.**
+  `writeContract` returns the hash as soon as the wallet submits the
+  transaction. It can still revert when mined. Only the receipt's `status`
+  tells you what happened on-chain.
+- **Simulate first.** If the contract would reject the call at the state used
+  for simulation, the simulation fails with the error's name. No on-chain
+  transaction is sent and no on-chain gas is paid. Your RPC service may still
+  count or limit the simulation request. Passing its `request` to
+  `writeContract` also means you send the call you just simulated.
 
 ### Errors by name
 

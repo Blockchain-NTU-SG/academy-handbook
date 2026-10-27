@@ -5,7 +5,7 @@ day: 1
 title: "Run the stack"
 status: drafting
 owner: "Education Team"
-reading_time: "40 min hands-on"
+reading_time: "35 min hands-on"
 points: 100
 sources:
   - name: "Foundry Book — Projects"
@@ -65,6 +65,45 @@ After this Part you can:
 
 ## Core / reference material
 
+### Before you run the stack
+
+These names identify the stations you are about to connect. This is an
+orientation, not a second installation guide.
+
+- **Foundry** — a Solidity development toolkit.
+- **`forge`** — Foundry's command-line tool for compiling and testing
+  contracts.
+- **viem** — a TypeScript library used by scripts and frontends to read and
+  write Ethereum data.
+- **RPC endpoint** — the network address your program uses to ask a blockchain
+  node for data or submit a request.
+- **Application Binary Interface (ABI)** — the machine-readable description of
+  the functions and events a contract exposes, including how arguments and
+  results are encoded.
+- **Vite** — the frontend development and build tool used by the starter app.
+
+The same action crosses several of these stations. The visual below is an
+explanatory map of the path; the later file trace gives the exact code.
+
+```mermaid
+flowchart TD
+  accTitle: Stack execution path
+  accDescr: A terminal command starts a TypeScript script, which uses viem to ask an Ethereum Sepolia RPC node for contract state and prints the response.
+  A["Terminal command<br/>npm run read"] --> B["npm / tsx<br/>run TypeScript"]
+  B --> C["TypeScript script<br/>scripts/read.ts"]
+  C --> D["viem<br/>public client"]
+  D --> E["RPC endpoint<br/>network request"]
+  E --> F["Sepolia node<br/>Ethereum state"]
+  F --> G["Contract state<br/>Registry"]
+  G --> H["Response<br/>printed value"]
+```
+
+In plain English: npm finds the shortcut, `tsx` starts the script, the script
+uses viem to form a request, the RPC endpoint carries it to a Sepolia node, and
+the node answers from the contract's current state. The response then travels
+back through the same client and is printed by the script. A failure at any
+station is useful evidence about which layer to inspect next.
+
 ### The starter, folder by folder
 
 The [Builder starter](https://github.com/Blockchain-NTU-SG/academy-builder-starter)
@@ -96,13 +135,24 @@ the first place to look.
 
 ### Settings live in `.env`
 
-An RPC address can contain a private API key, and different people use
-different providers. So it is never written into the code. Instead:
+`.env` is configuration, not magic. When `scripts/client.ts` starts, it
+explicitly calls `process.loadEnvFile('.env')`. Node then loads the file's
+`NAME=value` entries into the process environment, and the script reads
+`process.env.RPC_URL`. Node does not automatically load `.env` in every
+project; this starter chooses to load it explicitly. An RPC address can
+contain a private API key, and different people use different providers, so it
+is never written into the code. Instead:
 
 1. `.env.example` is committed and shows which settings exist.
 2. You copy it to `.env` and fill in your own values.
-3. `.gitignore` stops `.env` from ever being committed.
-4. A script reads the value when it starts.
+3. `.gitignore` helps prevent an **untracked** `.env` from being added through
+   normal Git workflows. It does not erase a secret that was already
+   committed, and a file can still be force-added.
+4. `scripts/client.ts` explicitly loads the file and reads the value when it
+   starts.
+
+Some values are sensitive. `.env.example` documents names and safe defaults;
+it must not contain your private key or a provider credential.
 
 ### Just enough TypeScript
 
@@ -128,6 +178,10 @@ Contract: 0xf3eea9aa5a43846490a638f1b2bebb29ac2938b1
 Owner: 0xE234F67EaB4638Cb6C7f93D1bfcD0bb9DCE09252
 Record read from Sepolia: Hello from NTU Blockchain Builder Lab
 ```
+
+This is illustrative output from a checked run, not a permanent promise about
+the owner's record. The contract address and network are the useful fixed
+context; live state can change.
 
 Now follow it through the files.
 

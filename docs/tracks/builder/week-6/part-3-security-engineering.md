@@ -5,7 +5,7 @@ day: 3
 title: "Security engineering"
 status: drafting
 owner: "Education Team"
-reading_time: "50 min hands-on"
+reading_time: "45 min hands-on"
 points: 100
 sources:
   - name: "Solidity documentation — Security considerations"
@@ -99,6 +99,25 @@ Most beginner-level weaknesses fail one of these questions.
 | Missing input validation | Zero amounts, empty values, the zero address or huge numbers are accepted | Reject bad input at the top of the function |
 | Over-powered admin functions | The owner can do far more than users expect, such as move everyone's funds | Keep admin powers small, visible and documented |
 
+### Reentrancy and execution order
+
+**Reentrancy** happens when a contract calls external code before finishing its
+own state update, and that external code calls back into the original function
+while the old state is still visible. The callback can repeat an action that
+the first invocation has not yet marked as complete.
+
+```mermaid
+flowchart LR
+  accTitle: Checks-effects-interactions and reentrancy
+  accDescr: The unsafe order makes an external callback see old state and repeat an action; the safer order checks inputs, updates state, and only then calls external code.
+  subgraph U["Unsafe order"]
+    U1["check"] --> U2["external call"] --> U3["callback re-enters"] --> U4["old state still valid"] --> U5["repeated action"] --> U6["state update too late"]
+  end
+  subgraph S["Safer pattern"]
+    S1["checks"] --> S2["effects"] --> S3["interactions"]
+  end
+```
+
 ### Checks, effects, interactions
 
 A function that sends ETH or calls another contract should do things in this
@@ -110,7 +129,9 @@ order:
 
 Why the order matters: sending ETH to a contract runs that contract's code.
 If your state is not updated yet, that code can call your function again, and
-your function still sees the old state. This is called **reentrancy**.
+your function still sees the old state. Checks-effects-interactions reduces
+this class of reentrancy risk; it does not solve every reentrancy or external-
+call risk automatically.
 
 Picture a cash machine that hands out the money first and only then updates
 your balance. If you could press "withdraw" again while the notes are still
@@ -135,11 +156,13 @@ that describes the **safe** behaviour, so it fails while the weakness exists:
 - For a weakness involving ETH: use `vm.deal(addr, amount)` to give accounts
   test ETH, then check balances afterwards.
 - For reentrancy: write a small attacker contract inside your test file. Its
-  `receive()` function runs whenever it is sent ETH, which is where a callback
-  would happen.
+  **`receive()` function** is a special Solidity function that can run when a
+  contract receives ETH without calldata. That is where a callback would
+  happen in this local test.
 
-Once the patch is in, the same test passes. You keep it, and it becomes the
-**regression test**: if anyone undoes the fix later, it fails again.
+Once the patch is in, the same test passes. You keep it as a **regression
+test**: a test kept after fixing a bug so the same bug cannot silently return
+later.
 
 ### Worked example
 
