@@ -210,7 +210,8 @@ is unchanged.
 
 **Given:** Sepolia USDC comes from
 [Circle's faucet](https://faucet.circle.com/) (20 USDC every two hours per
-address). Finding the token's address and units is part of the task.
+address and per blockchain). Finding the token's address and units is part of
+the task.
 
 **Out of scope:** other tokens, refunds or withdrawals, signature-based
 approvals (EIP-2612 permit), mainnet, and a backend.

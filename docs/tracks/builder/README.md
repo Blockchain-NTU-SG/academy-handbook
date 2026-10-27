@@ -27,6 +27,11 @@ Each week contains six Part tasks. Every Part task is worth **100 points** and
 is assessed by completion and understanding, with revision when the work is
 incomplete or materially incorrect.
 
+> **Workload for pilot review:** Allow roughly 5–6.5 hours per week. Current
+> authoring estimates are 4 h 50 min for W5 and 6 h 30 min for W6; replace
+> these estimates with pilot data. They are not completion deadlines, and
+> optional exploration is not assessed.
+
 > **Status: curriculum / pilot review.** Both Deep Dive weeks have authored
 > Parts. Individual lessons retain their draft/review status; learner timing
 > and starter-repository continuity still need pilot verification.

@@ -5,7 +5,7 @@ day: 4
 title: "Docs-driven integration"
 status: drafting
 owner: "Education Team"
-reading_time: "45 min hands-on"
+reading_time: "60 min hands-on"
 points: 100
 sources:
   - name: "Chainlink — Data Feeds"
@@ -88,7 +88,7 @@ Whatever the tool is, you need the same five answers before you write code.
 | 1. Which network and address? | The wrong network or address gives "returned no data" (you met this in [Part 2](./part-2-simulation-debugging-and-tracing.md)) | An "addresses" or "deployments" page, often with a network selector |
 | 2. Which functions do I need? | You need the ABI for those functions, and nothing else | An API reference, an interface file or a code example |
 | 3. What units come back? | A number without its units is meaningless | `decimals()` or a note in the reference |
-| 4. How fresh is the data? | Some data updates on a schedule, not on every block | Update rules, timestamps returned with the data |
+| 4. How fresh is the data? | External data may update only when its update rules trigger, not on every block | Update rules, timestamps returned with the data |
 | 5. What can go wrong? | Every tool has limits and failure cases | Warnings, "best practices" or "risks" pages |
 
 Write the answers down as you find them. That list becomes your **docs log**,
