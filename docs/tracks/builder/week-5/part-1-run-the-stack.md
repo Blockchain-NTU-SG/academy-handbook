@@ -103,6 +103,9 @@ cd academy-builder-starter # move into the project folder
 cd ..                     # move up one folder
 ```
 
+The first command assumes you kept Git's default clone-folder name. If you
+chose a different name when cloning, move into that folder instead.
+
 If a command starts a server and keeps the terminal occupied, press **Ctrl+C**
 to stop that process. On Windows, use [Microsoft's official WSL installation
 guide](https://learn.microsoft.com/en-us/windows/wsl/install) to set up the

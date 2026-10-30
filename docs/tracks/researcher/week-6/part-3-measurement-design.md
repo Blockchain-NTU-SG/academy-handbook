@@ -157,27 +157,80 @@ in your finding.
 
 SQL is a language for selecting and summarising rows in a table. DuckDB's
 browser shell can query the CSV you add to the current session; this does not
-upload it to a database service or write anything to a blockchain.
+write anything to a blockchain.
 
-Open [DuckDB's free web shell](https://shell.duckdb.org/). Your CSV is read in
-the browser, without uploading it to a database service. Run `.files add` and
-select the CSV, then:
+Downloading the CSV to your computer is not enough. DuckDB Web Shell runs
+inside the browser and has its own session files, so register the CSV there
+before querying it.
+
+Open [DuckDB's free web shell](https://shell.duckdb.org/), then follow these
+steps in order. The live script output and the dated fallback have different
+filenames, but after registration both use the same SQL below.
+
+#### 1. Add the CSV to the browser session
+
+Click **Import** at the top of the shell, or run `.pick`, then choose the live
+`uniswap_ethereum_90days.csv` or the downloaded dated fallback CSV. The shell
+should register the selected file in its current session.
+
+#### 2. Confirm DuckDB sees exactly one matching CSV
+
+Run this shell command, then the SQL check:
+
+```text
+.files list
+```
 
 ```sql
-CREATE TABLE uni AS SELECT * FROM 'uniswap_ethereum_90days.csv';
+SELECT file FROM glob('*uniswap*ethereum*.csv');
+```
+
+Continue only when the SQL query returns exactly one row for the CSV you
+intend to analyse. Zero rows means the file is not registered under a matching
+name. More than one means multiple copies are registered; do not load them
+together. Click **New** at the top to start a fresh Web Shell session, import
+only one CSV, and repeat this check. The registered name shown by DuckDB, not
+Finder or Explorer, is the source of truth.
+
+#### 3. Load the one matching file
+
+Only after the check returns exactly one file, run:
+
+```sql
+DROP TABLE IF EXISTS uni;
+CREATE TABLE uni AS SELECT * FROM read_csv('*uniswap*ethereum*.csv');
 DESCRIBE uni;
 ```
 
-Read the first line in three parts:
+If `CREATE TABLE` reports an error, stop here. The table was not created, so
+do not continue to `DESCRIBE uni` or the later queries. Return to steps 1 and
+2 and check the registered filename.
 
-- `CREATE TABLE uni` makes a table named `uni` for this analysis;
-- `SELECT *` takes every column;
-- `FROM 'uniswap_ethereum_90days.csv'` reads the rows from the named file.
+#### 4. Check the loaded window
 
-This converts the CSV into a table SQL can query; it does not upload, modify
-or write anything to the blockchain. `DESCRIBE uni` lists the table's column
-names and data types; `DATE` is a calendar date and a numeric volume column can
-be used in calculations. SQL pieces you need:
+Run this before the measurement queries:
+
+```sql
+SELECT COUNT(*) AS rows, MIN(day_utc) AS first_day, MAX(day_utc) AS last_day
+FROM uni;
+```
+
+Expect 90 rows. The first and last dates should match the 90-day window shown
+by the live script, or the dates stated for the dated fallback.
+
+::: details If DuckDB says it cannot find the CSV
+For an error such as `IO Error: No files found that match the pattern ...`,
+DuckDB cannot currently see a registered file matching that name or pattern.
+Run `.files list` and repeat the `glob` check above, then import the CSV again
+if needed. Renaming a file in Finder or Explorer after it was imported does
+not rename the copy already registered in this Web Shell session. Start a
+fresh session with **New** and import the renamed file.
+:::
+
+The SQL reads the registered CSV into a table named `uni`; it does not upload
+the file to a database service or modify the source file. `DESCRIBE uni` lists
+the table's column names and data types; `DATE` is a calendar date and a
+numeric volume column can be used in calculations. SQL pieces you need:
 
 | Piece | Cognitive job | Example |
 |---|---|---|
@@ -266,9 +319,11 @@ reasonable way to see whether the conclusion still holds. Mean, median and
 top-three concentration all summarise this same volume series. If only the
 mean rises because of a few spike days, the headline may need to be narrower.
 
-Open the CSV in Calc and confirm that the date column and `volume_usd` column
-loaded correctly. Put the required formulas in empty cells or a small separate
-calculation area. You do not need prior spreadsheet-modelling experience.
+Open the CSV in Calc. The header row should show `day_utc` in column A and
+`volume_usd` in column B, with the first data row in row 2. If the import dialog
+appears, keep the comma delimiter so the two fields load into separate columns.
+Put the required formulas in empty cells or a small separate calculation area.
+You do not need prior spreadsheet-modelling experience.
 
 In Calc, with CSV headers in row 1 and sorted dates, use:
 

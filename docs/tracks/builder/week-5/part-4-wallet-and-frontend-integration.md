@@ -52,6 +52,13 @@ the frontend behaviour in those sections. This Part focuses on connecting a
 wallet, reading from the contract, writing to it, and keeping the user informed
 while they wait.
 
+The code below shows additions to the existing scaffold, not a replacement
+`App.tsx`. Keep its current imports and merge the new import names into them;
+add the state and effect inside the existing `App()` function, and replace the
+section 2 placeholder rather than adding a second component or duplicate
+section. The existing `src/vite-env.d.ts` already has the Vite reference line;
+keep it and add the `ImportMetaEnv` interface below it.
+
 ::: tip Picture a card terminal at a café
 The café's till builds the bill. The customer's own card and PIN approve it.
 The till never sees the PIN, and the customer can always say no.

@@ -158,18 +158,21 @@ so the code must handle those limits rather than depend on one endpoint.
 
 The starter's default RPC, `https://ethereum-sepolia-rpc.publicnode.com`, is
 quick for reads and writes but keeps only recent logs. If your contract is
-more than a day or two old, you will hit `pruned history unavailable`. Switch
-both lines in `.env`:
+more than a day or two old, you will hit `pruned history unavailable`. For
+the event script, change `RPC_URL` in `.env`; that is the setting read by
+`scripts/client.ts`. `VITE_RPC_URL` is the frontend setting introduced in
+Part 4. Change both only if you also want the frontend to use the same
+provider; after changing `VITE_RPC_URL`, restart `npm run dev`.
 
 ```bash
 RPC_URL=https://sepolia.gateway.tenderly.co
 VITE_RPC_URL=https://sepolia.gateway.tenderly.co
 ```
 
-Restart `npm run dev` afterwards. At the time of that check, Tenderly's public
-gateway was free, needed no account and served every block from the shared
-Registry's deployment onwards. Any Sepolia provider that keeps full history
-works as well; verify the current limits before relying on it.
+At the time of that check, Tenderly's public gateway was free, needed no
+account and served every block from the shared Registry's deployment onwards.
+Any Sepolia provider that keeps full history works as well; verify the current
+limits before relying on it.
 
 ### Worked helper pattern: read bounded block windows
 
@@ -281,7 +284,8 @@ current contract state.
 
 ### Worked example: your first look
 
-Read one window of events, starting at the deployment block. Save this as
+Run these commands from the starter repository root. Read one window of
+events, starting at the deployment block. Save the script as
 `scripts/events-first-look.ts`:
 
 ```ts
@@ -337,6 +341,10 @@ Why each part is there:
 
 Complete section **4. Events** in `src/App.tsx`, for the contract
 `shared/contract.ts` points at (your own, after Part 3).
+
+Add the helper functions from the worked pattern above in `src/App.tsx`,
+outside the existing `App()` component. Add the query in the existing
+section 4 TODO; do not create a second `App()` component.
 
 1. **Load the history.** Use the provided worked helper pattern with a
    `getContractEvents` query for `RecordUpdated`, from the deployment block to
