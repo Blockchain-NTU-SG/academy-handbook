@@ -298,10 +298,12 @@ the YT claim can also be small or zero.
 
 Pendle uses two APY ideas that are easy to mix up:
 
-| Term | Beginner meaning |
-|---|---|
-| **Underlying APY** | Pendle's recent-yield indicator for the underlying asset. Its glossary defines this as a 7-day moving average, so it describes recent yield, not exactly what the asset will earn through maturity. |
-| **Implied APY** | The future average yield rate currently priced by the PT/YT market. Pendle derives it from the relative YT and PT prices; it reflects current market pricing, not a rate Pendle guarantees. |
+- **Underlying APY:** Pendle's recent-yield indicator for the underlying asset.
+  Its glossary defines this as a 7-day moving average, so it describes recent
+  yield, not exactly what the asset will earn through maturity.
+- **Implied APY:** the future average yield rate currently priced by the PT/YT
+  market. Pendle derives it from the relative YT and PT prices; it reflects
+  current market pricing, not a rate Pendle guarantees.
 
 If the market displays an 8% Implied APY, it does not mean the asset will
 definitely earn 8%. The relative PT/YT prices currently reflect a market-priced
