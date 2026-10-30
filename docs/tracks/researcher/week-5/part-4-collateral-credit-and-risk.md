@@ -29,6 +29,9 @@ sources:
   - name: "Pendle — Principal token"
     url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT"
     label: "Link"
+  - name: "Pendle Academy: Yield Tokenization Basics"
+    url: "https://docs.pendle.finance/pendle-academy/pendle-101/chapter-2-yield-tokenization-basics"
+    label: "Link"
   - name: "Pendle — Yield tokenization architecture"
     url: "https://docs.pendle.finance/pendle-v2-dev/Contracts/YieldTokenization"
     label: "Link"
@@ -253,13 +256,38 @@ together while initial equity does not. Yield exposure, borrowing cost and
 liquidation exposure all grow; a subsidy can disappear before the debt does.
 The same HF model still asks what collateral and debt the protocol actually values.
 
-::: details Landscape — Pendle: composing principal, yield and credit
-An asset that earns yield bundles two exposures: the underlying principal and
-the variable yield it may generate. Pendle separates those exposures. Its
-**Standardized Yield (SY)** token is the protocol's common representation of a
-yield-bearing asset; a **Principal Token (PT)** represents the principal-side
-claim associated with maturity; and a **Yield Token (YT)** represents variable
-yield exposure up to maturity.
+::: details Landscape: Pendle, separating principal and yield
+A yield-bearing asset is a crypto position that can generate yield over time,
+such as a staking or lending position. Pendle separates two parts of it: the
+principal and the yield it may produce before a fixed end date. Pendle calls
+that end date **maturity**.
+
+Pendle Academy compares this idea to a rental property. One claim represents
+the property itself; another represents rent earned for a limited time. This
+is an analogy for understanding the split, not a claim that a Pendle token
+gives legal ownership of property. In Pendle, the tokens are claims tied to a
+yield-bearing crypto position.
+
+**Standardized Yield (SY)** is a wrapper that gives Pendle a consistent way to
+handle different yield-bearing assets. It is mostly a behind-the-scenes
+building block. For a learner, the key distinction is between these two
+claims:
+
+**PT, the principal side.** PT can be redeemed at maturity for the accounting
+asset specified by its market. The PT holder does not receive the yield
+generated during that term.
+
+**YT, the yield side.** YT gives its holder the yield the position actually
+generates before maturity. Accrued yield can be claimed as it appears, but the
+amount varies and may be zero. YT does not promise a fixed rate of return.
+
+Before maturity, matching PT and YT can be combined to recover the
+corresponding yield-bearing position. At maturity, the yield period ends. PT
+can be redeemed without YT, and YT stops accruing new yield.
+
+The **accounting asset** is the unit a market uses to state PT's redemption
+value. It may differ from the raw yield-bearing token, so check the market
+label instead of assuming every PT redeems for one whole unit of that token.
 
 ```mermaid
 flowchart TB
@@ -272,18 +300,20 @@ flowchart TB
   D --> M
 ```
 
-**Academy schematic — simplified tokenisation flow, not Pendle contract
+**Academy schematic: simplified tokenisation flow, not Pendle contract
 architecture.** For the protocol's own [PT/YT yield-stream diagram and
 architecture](https://docs.pendle.finance/pendle-v2-dev/Contracts/YieldTokenization),
-see its official documentation. This sketch only orients the learner to the
-token split; consult the protocol's current terms for exact settlement.
+see its official documentation. For Pendle's beginner-friendly explanation,
+see [Yield Tokenization Basics](https://docs.pendle.finance/pendle-academy/pendle-101/chapter-2-yield-tokenization-basics).
+This sketch only orients the learner to the token split; consult the market's
+current documentation for exact settlement.
 
-PT's maturity claim is denominated in its **accounting asset**, which can
-differ from the yield-bearing token delivered through redemption. Buying PT
-below that maturity value gives a fixed-return interpretation in that unit
-if held to maturity and redemption works. YT exposes the holder to realised
-variable yield up to expiry, not a guaranteed return. Contract, liquidity,
-oracle and underlying-asset risks remain.
+PT may trade below its maturity redemption value because its holder waits for
+the redemption date and gives up yield during that period. The difference can
+be described as an implied fixed yield if PT is held to maturity and
+redemption works. YT's value depends on the yield the underlying position
+actually produces. Neither token removes contract, liquidity, oracle or
+underlying-asset risk.
 
 If a lender accepts PT as collateral, it composes another dependency chain:
 underlying asset → yield protocol → SY/PT settlement → lender's valuation and
@@ -348,5 +378,6 @@ Your work is complete when:
 - [Aave V3 — Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) — Link, protocol documentation
 - [Aave — Reserve parameters](https://www.aave.com/docs/aave-v3/concepts/reserve) and [Efficiency Mode](https://aave.com/help/borrowing/e-mode) — Link, current protocol documentation; verify the selected market and date
 - [Pendle — Principal token](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT) — Link, protocol documentation
+- [Pendle Academy: Yield Tokenization Basics](https://docs.pendle.finance/pendle-academy/pendle-101/chapter-2-yield-tokenization-basics) (Link, beginner-level conceptual reference)
 - [Pendle — Glossary](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary) — Link, protocol documentation
 :::
