@@ -234,10 +234,10 @@ rates, utilisation and the protocol's retained share. Extra token rewards are
 a separate subsidy.
 
 Aave V3's [official interest-rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy)
-uses two slopes around an optimal-usage point. The **kink** is where the
-slope changes; beyond it, borrowing becomes more expensive more quickly. This
-can encourage repayment and new supply, but cannot guarantee either during
-stress. The target and slopes vary by reserve and deployment.
+models the variable borrow rate as two linear regions around an
+**optimal-utilisation level**. The target and rate parameters are set per
+reserve, so the historical figure below illustrates the shape rather than
+today's settings for a particular market.
 
 <figure class="academy-reference-visual academy-reference-visual--wide">
   <div class="academy-visual-scroll" role="region" aria-label="Scrollable historical Aave utilisation and interest-rate curve" tabindex="0">
@@ -247,10 +247,48 @@ stress. The target and slopes vary by reserve and deployment.
 </figure>
 
 The horizontal axis is reserve utilisation; the vertical axis is borrower
-interest rate. Before $U_{\text{optimal}}$, the first slope raises the rate
-gradually. After the kink, the steeper second slope makes borrowing more
-expensive faster as available liquidity gets scarcer. The curve illustrates a
-mechanism, not a live quote or guarantee of repayment or new supply.
+interest rate. Aave's current V3 documentation describes this as a
+piecewise two-slope model. In these simplified formulas, $R$ is the variable
+borrow rate; $U$ is utilisation as a fraction; $U_{\text{optimal}}$ is the
+target level; $R_{\text{base}}$ is the starting rate; and the slope terms
+describe how much the rate rises in each region. Rates and parameters are
+configured separately for each reserve.
+
+**At or below optimal utilisation:**
+
+$$
+R = R_{\text{base}} + R_{\text{slope1}}\frac{U}{U_{\text{optimal}}}
+$$
+
+Before the target, the borrow rate rises gradually as more supplied liquidity
+is borrowed. At the target, this first region has added the full
+$R_{\text{slope1}}$ contribution.
+
+**Above optimal utilisation:**
+
+$$
+R = R_{\text{base}} + R_{\text{slope1}} +
+R_{\text{slope2}}\frac{U-U_{\text{optimal}}}{1-U_{\text{optimal}}}
+$$
+
+After the target, the model adds the steeper second slope. As utilisation
+approaches 100%, borrowing becomes more expensive much faster because less
+liquidity is immediately available. These formulas explain the graph; they
+are not parameters to memorise or a live rate quote.
+
+The intended feedback is:
+
+> More borrowing → higher utilisation → less immediately available liquidity
+> → higher borrow rates, especially beyond the target → stronger incentives
+> to reduce debt and provide liquidity → utilisation may move back toward the
+> target.
+
+Higher rates create incentives for borrowers to repay or reduce borrowing,
+and higher supplier returns may attract new liquidity after the protocol's
+share. These are not guaranteed responses: borrowers and suppliers may react
+differently depending on market conditions, alternatives and their
+sensitivity to rates. A mechanism is designed to influence behaviour, not
+control it.
 
 Recursive borrowing means borrowing against collateral and redepositing or
 buying more collateral to borrow again. Gross supplied assets and debt grow

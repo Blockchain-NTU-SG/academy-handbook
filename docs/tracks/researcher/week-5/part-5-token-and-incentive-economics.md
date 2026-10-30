@@ -200,18 +200,38 @@ year after launch, then monthly unlocks for the remaining three years. So for
 most of ARB's life, the supply allocated was far larger than the supply
 circulating.
 
-### Linked historical visual case: PYTH liquid supply
+### Reading a real token-unlock chart
 
 Messari's [*State of Pyth Network Q1 2024* report](https://messari.io/report/state-of-pyth-network-q1-2024)
 (published 23 May 2024) includes a liquid-supply curve by allocation bucket.
 The chart reports data as of **31 March 2024** and illustrates the schedule as
-understood then; it is a historical research example, not current PYTH
-tokenomics. Notice how liquid supply changes over time, scheduled unlocks
-appear as steps, and recipient categories show who receives newly transferable
-supply. A scheduled unlock does not show that recipients sold.
+understood then. It is a historical research example, not current PYTH
+tokenomics. Open the report's **Token Unlocks** section and read the figure in
+this order:
 
-Open the report's **Token Unlocks** section to view the original figure; this
-Handbook links to the historical source rather than reproducing the chart.
+1. **Read the axes.** Time runs horizontally; PYTH liquid supply runs
+   vertically. First ask: when does the supply counted as liquid increase?
+   The report's liquid-supply measure need not match every provider's
+   circulating-supply definition.
+2. **Read the stacked categories.** Each coloured layer is an allocation
+   bucket, such as Community & Launch, Publisher Rewards, Ecosystem Growth,
+   Protocol Development or Private Sales. The full stack shows total liquid
+   supply; its layers show how that supply is allocated.
+3. **Look for steps.** A jump represents tokens scheduled to become liquid or
+   transferable. To judge its scale, compare the unlock amount with the
+   circulating supply already counted, as in the NOVA calculation above. Ask
+   how much new supply is being added relative to what is already circulating.
+4. **Ask who receives it.** The same headline amount can go to different
+   stakeholder groups and be subject to different conditions. Ask who receives
+   the tokens and what incentives or restrictions apply; do not assume a
+   recipient's intent from the category alone.
+5. **Separate observation from interpretation.** The chart supports a claim
+   about when more supply is scheduled to become liquid. It cannot by itself
+   show that recipients transferred or sold those tokens. **Unlock ≠ sale.**
+
+The chart is an example of the reading path **time → amount → recipient →
+interpretation → limitation**. This Handbook links to the original figure
+rather than reproducing it.
 
 ## Hands-on task
 

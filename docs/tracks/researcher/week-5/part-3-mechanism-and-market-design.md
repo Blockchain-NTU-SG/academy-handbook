@@ -84,13 +84,27 @@ xy = k
 $$
 
 The product $k$ is the reserve-product invariant used in the payout
-calculation. To see why the reserve ratio gives a price, imagine a pool with
-100 ETH and 200,000 USDC: it holds 2,000 USDC for every 1 ETH. Before a very
-small trade moves the reserves, that ratio is the pool's starting marginal
-price. In other words, it is the price for an infinitesimally small trade.
-Because the pool follows
-$xy\approx k$, adding a tiny amount of X must be matched by a small decrease
-in Y; the local change is about $y/x$ units of Y for each unit of X:
+calculation. Rearranging the same relationship gives:
+
+$$
+y = \frac{k}{x}
+$$
+
+As the X reserve $x$ increases, the Y reserve $y$ must fall to keep the
+product at $k$. The relationship is not a straight line: doubling $x$ halves
+$y$, while equal additions to $x$ do not produce equal changes in $y$. The
+curve bends toward the axes. When a trade takes out a token, that reserve
+becomes scarcer, so each extra unit of output requires more of the other
+token. In this X/Y view, that appears steep near low $x$ and flatter near low
+$y$; both shapes mean the trade is getting more costly in the direction of
+the scarce output. A large trade moves farther along the curve and has more
+price impact.
+
+The reserve ratio gives the starting marginal price. Imagine a pool with 100
+ETH and 200,000 USDC: it holds 2,000 USDC for every 1 ETH. Before a very small
+trade moves the reserves, that ratio is the price for an infinitesimally
+small trade. Because the pool follows $xy\approx k$, the local change is about
+$y/x$ units of Y for each unit of X:
 
 $$
 P_X \approx \frac{y}{x}
@@ -100,6 +114,11 @@ Here $P_X$ is measured in units of Y per unit of X. A finite trade changes
 both reserves, so its average execution price differs from the starting spot
 price. This is the simplified constant-product v2 model, not a formula for
 every AMM or DEX design.
+
+The mental model is **trade → reserves change → reserve ratio changes →
+marginal price changes**. For pools starting at the same price, a deeper pool
+has larger reserves, so the same trade changes them by a smaller proportion
+and moves less far along the curve. That usually means less price impact.
 
 <figure class="academy-reference-visual academy-reference-visual--wide">
   <img src="/images/researcher/uniswap-constant-product-curve-cropped.png" alt="Constant-product AMM curve labelled X times Y equals K. The axes show quantities of tokens A and B in the pool; a swap moves the pool from its old reserve position to a new one while the trader spends A and gains B." />
