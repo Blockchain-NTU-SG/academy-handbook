@@ -150,16 +150,18 @@ Two details that catch people out:
 ### Errors by name
 
 When a contract reverts with a custom error, viem decodes it using the ABI. The
-error arrives wrapped inside other errors. The starter provides
-`contractErrorName` in `scripts/contract-error-name.ts` to find the decoded
-contract error without making you invent viem's nested error traversal. Use the
-returned name to identify the failure your feature is expected to produce; a
-missing name still needs a useful fallback message.
+revert can arrive wrapped inside a larger viem error. This pattern searches
+inside that error for the decoded contract revert:
 
 ```ts
-const name = contractErrorName(error)
-// name might be "EmptyRecord" when the ABI decodes that custom error
+if (error instanceof BaseError) {
+  const revert = error.walk((item) => item instanceof ContractFunctionRevertedError)
+  // revert.data?.errorName might be "EmptyRecord"
+}
 ```
+
+You may copy and adapt this pattern. Understand which failure it detects; you
+do not need to memorise viem's nested error syntax.
 
 This is why custom errors from Part 2 matter: your script can react to
 `AlreadyEndorsed` differently from `RecordNotFound`.
@@ -188,11 +190,10 @@ particular, `main().catch(...)` makes failures from the asynchronous workflow
 reach the final error handler instead of disappearing.
 
 ```ts
-import { BaseError, createWalletClient, isHex } from 'viem'
+import { BaseError, ContractFunctionRevertedError, createWalletClient, isHex } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
 import { address, abi, chain } from '../shared/contract.js'
 import { client, transport, requireSepolia } from './client.js'
-import { contractErrorName } from './contract-error-name.js'
 
 // Usage: npx tsx scripts/write.ts "your new record"
 const value = process.argv[2] ?? ''
@@ -232,11 +233,13 @@ async function main() {
 
 main().catch((error: unknown) => {
   // 6. Handle the expected failure: a revert from the contract, by name
-  const name = contractErrorName(error)
-  if (name) {
-    console.error(`Rejected by the contract: ${name}`)
-  } else if (error instanceof BaseError) {
-    console.error(error.shortMessage)
+  if (error instanceof BaseError) {
+    const revert = error.walk((item) => item instanceof ContractFunctionRevertedError)
+    if (revert instanceof ContractFunctionRevertedError) {
+      console.error(`Rejected by the contract: ${revert.data?.errorName ?? revert.reason}`)
+    } else {
+      console.error(error.shortMessage)
+    }
   } else {
     console.error(error instanceof Error ? error.message : error)
   }
@@ -245,7 +248,9 @@ main().catch((error: unknown) => {
 ```
 
 Create a **new disposable Sepolia-only account** for this script. From the
-starter folder, run Foundry's key generator in your local terminal:
+starter folder, run Foundry's key generator in your local terminal. `cast` is
+Foundry's command-line tool for wallet and blockchain operations. It is
+installed together with Foundry.
 
 ```bash
 cast wallet new
@@ -255,8 +260,8 @@ It prints a new address and private key locally. Copy that private key directly
 into `.env` as `PRIVATE_KEY`; do not use a wallet that has ever held real
 assets, share the key, include it in a screenshot, commit `.env`, or place it
 in a `VITE_` variable. This account is only for free Sepolia test ETH and must
-never be reused for real funds. The command creates a key; it does not send a
-transaction.
+never be reused for real funds. Keep the private key only in your local `.env`.
+The command creates a key; it does not send a transaction.
 
 Make sure the disposable account has a little Sepolia ETH, then run it. The
 output below is from a test run; your

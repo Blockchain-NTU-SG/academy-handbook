@@ -1,0 +1,7 @@
+Source: https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false
+Retrieved at (UTC): 2026-10-30T08:52:42+00:00
+Metric: DefiLlama reported daily Uniswap Ethereum DEX volume in USD
+Window: 2026-08-01 through 2026-10-29, inclusive (90 full UTC days)
+Rows: 90
+Method: select Ethereum entries from totalDataChartBreakdown and sum the reported Uniswap versions for each UTC date; do not use the all-chain total.
+Notes: Provider-derived USD estimate; not transactions, unique wallets or users. Historical figures may be revised.

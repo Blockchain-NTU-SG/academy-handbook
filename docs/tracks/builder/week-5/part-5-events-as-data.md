@@ -171,15 +171,113 @@ gateway was free, needed no account and served every block from the shared
 Registry's deployment onwards. Any Sepolia provider that keeps full history
 works as well; verify the current limits before relying on it.
 
-### Reuse the range-reading helper
+### Worked helper pattern: read bounded block windows
 
-The starter includes `src/lib/readEventRange.ts`. It repeatedly calls a
-query function over bounded block windows. Open the file: the comments show
-why it begins at the deployment block, halves a rejected range, stops at a
-minimum window, and surfaces a pruned-history error instead of retrying it.
-The helper handles provider-window mechanics; your app still chooses the
-contract and event, maps and sorts rows, shows loading/empty/error states, and
-verifies the history against current contract state.
+An RPC may reject a request that covers too many blocks. This helper accepts
+your event-query function, starts at the deployment block you provide, and
+shrinks the window only for a recognised block-range limit. It stops at a
+minimum size, reports pruned history separately, and lets unrelated errors
+surface unchanged.
+
+```ts
+type BlockQuery<T> = (fromBlock: bigint, toBlock: bigint) => Promise<T[]>
+
+function errorText(error: unknown): string {
+  const messages: string[] = []
+  const seen = new Set<Error>()
+  let current: unknown = error
+
+  while (current instanceof Error && !seen.has(current)) {
+    seen.add(current)
+    messages.push(current.message)
+    current = (current as Error & { cause?: unknown }).cause
+  }
+
+  return (messages.join(' ') || String(current ?? error)).toLowerCase()
+}
+
+function isPrunedHistory(message: string): boolean {
+  return /prun|missing trie|historical.*(?:unavailable|not available)/.test(message)
+}
+
+function isBlockRangeLimit(message: string): boolean {
+  const knownPatterns = [
+    /(?:block|log) range.*(?:limit|too (?:wide|large)|exceed|maximum)/,
+    /(?:max|maximum|limit|limited).{0,40}(?:block|log|range|blocks?)/,
+    /(?:too many|more than \d+) logs?/,
+  ]
+  return knownPatterns.some((pattern) => pattern.test(message))
+}
+
+async function readInWindows<T>(
+  query: BlockQuery<T>,
+  deploymentBlock: bigint,
+  latestBlock: bigint,
+  initialWindow = 2_000n,
+  minimumWindow = 100n,
+): Promise<T[]> {
+  if (minimumWindow < 1n || initialWindow < minimumWindow) {
+    throw new Error('The minimum window must be positive and no larger than the initial window.')
+  }
+  if (deploymentBlock > latestBlock) return []
+
+  const rows: T[] = []
+  let fromBlock = deploymentBlock
+  let windowSize = initialWindow
+
+  while (fromBlock <= latestBlock) {
+    const windowEnd = fromBlock + windowSize - 1n
+    const toBlock = windowEnd < latestBlock ? windowEnd : latestBlock
+
+    try {
+      const page = await query(fromBlock, toBlock)
+      for (const row of page) rows.push(row)
+      fromBlock = toBlock + 1n
+    } catch (error) {
+      const message = errorText(error)
+      if (isPrunedHistory(message)) {
+        throw new Error(
+          `This RPC has pruned the requested history. Use a provider that retains older logs. Original error: ${message}`,
+        )
+      }
+      if (!isBlockRangeLimit(message)) throw error
+      if (windowSize === minimumWindow) {
+        throw new Error(
+          `The RPC rejected the minimum ${minimumWindow}-block range. Original error: ${message}`,
+        )
+      }
+      const half = windowSize / 2n
+      windowSize = half < minimumWindow ? minimumWindow : half
+    }
+  }
+
+  return rows
+}
+```
+
+Use the query callback to select the event and contract you need:
+
+```ts
+const latestBlock = await client.getBlockNumber()
+const logs = await readInWindows(
+  (fromBlock, toBlock) => client.getContractEvents({
+    address: address!,
+    abi,
+    eventName: 'RecordUpdated',
+    fromBlock,
+    toBlock,
+  }),
+  BigInt(deployment.blockNumber),
+  latestBlock,
+)
+```
+
+This is generic provider plumbing. You may copy and adapt the pattern in your
+own project. You should be able to explain why it chunks requests and retries
+only a known range-limit error, but inventing the retry algorithm is not the
+Web3 skill being assessed. Your app still maps the decoded events into rows,
+sorts them, shows loading/empty/error states, and verifies history against
+current contract state.
 
 ### Worked example: your first look
 
@@ -240,12 +338,13 @@ Why each part is there:
 Complete section **4. Events** in `src/App.tsx`, for the contract
 `shared/contract.ts` points at (your own, after Part 3).
 
-1. **Load the history.** Use the starter's `readEventRange` helper with a
+1. **Load the history.** Use the provided worked helper pattern with a
    `getContractEvents` query for `RecordUpdated`, from the deployment block to
-   the latest block. Map the decoded events into typed rows (account, value,
-   kind `set` or `cleared`, block number, log index and transaction hash), then
-   sort newest first. Inspect the helper and explain why a rejected wide range
-   shrinks, why it stops at a floor, and why pruned history needs another RPC.
+   the latest block. Copy the pattern into your working project if useful. Map
+   the decoded events into typed rows (account, value, kind `set` or `cleared`,
+   block number, log index and transaction hash), then sort newest first.
+   Explain why a rejected wide range shrinks, why it stops at a floor, and why
+   pruned history needs another RPC.
 2. **Show it.** Render the newest 25 rows: the account shortened, what happened
    (set to a value, or cleared), the block and its time, and a link to the
    transaction on Sepolia Etherscan. Show clear **loading**, **empty** and
@@ -273,8 +372,9 @@ run your verification step.
 - A screenshot of the Events section showing your list (or the empty state).
 - Your verification output: the account, its newest event value, and
   `records(account)`.
-- Two or three sentences: what does the helper do when the RPC rejects a range,
-  what does it do when history is pruned, and what does a "cleared" row mean?
+- Two or three sentences: what does the provided worked helper pattern do when
+  the RPC rejects a range, what happens when history is pruned, and what does a
+  "cleared" row mean?
 
 ## Completion and revision
 
@@ -285,7 +385,7 @@ revision. There is no partial-score rubric.
 Your work is complete when:
 
 - [ ] events are read from the deployment block to the latest block, not from 0;
-- [ ] the helper shrinks a rejected range and stops at its configured floor;
+- [ ] the provided helper pattern shrinks a rejected range and stops at its configured floor;
 - [ ] rows are typed, sorted newest first, and an empty value shows as "cleared";
 - [ ] the Events section shows loading, empty and error states;
 - [ ] your verification shows the newest event matches `records(account)`;

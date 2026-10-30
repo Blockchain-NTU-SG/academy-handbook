@@ -72,6 +72,10 @@ After this Part you can:
 These names identify the stations you are about to connect. This is an
 orientation, not a second installation guide.
 
+**Time note:** The 35-minute Part estimate assumes the required tools are
+already installed. First-time Node.js, Foundry or Windows/WSL setup may take
+additional time. It is one-time setup, not Academy task work.
+
 | Tool or file | What it does here |
 |---|---|
 | **Terminal** | Runs text commands inside a current folder on your laptop. A command is what you type; output is what the tool prints back. |
@@ -100,9 +104,9 @@ cd ..                     # move up one folder
 ```
 
 If a command starts a server and keeps the terminal occupied, press **Ctrl+C**
-to stop that process. On Windows, use the WSL2 path in the
-[starter README](https://github.com/Blockchain-NTU-SG/academy-builder-starter#1-install-the-pinned-tools),
-which provides the Linux-compatible terminal environment these tools expect.
+to stop that process. On Windows, use [Microsoft's official WSL installation
+guide](https://learn.microsoft.com/en-us/windows/wsl/install) to set up the
+Linux-compatible terminal environment these tools expect.
 
 #### Git CLI: the terminal form of GitHub collaboration
 

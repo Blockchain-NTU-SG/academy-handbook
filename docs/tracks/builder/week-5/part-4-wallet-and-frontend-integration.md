@@ -47,10 +47,10 @@ Your script from [Part 3](./part-3-programmatic-contract-interaction.md)
 signed with a key from `.env`. A real user will never give you their key.
 Instead, their wallet signs, and your page asks it to.
 
-This Part fills in the starter frontend's wallet and contract behaviour:
-connect a wallet, read from the contract, write to it, and keep the user
-informed while they wait. Ordinary input and display-state wiring is already
-scaffolded so you can focus on the Web3 integration.
+The starter has four learner TODO sections. Across W5P4 and W5P5, you implement
+the frontend behaviour in those sections. This Part focuses on connecting a
+wallet, reading from the contract, writing to it, and keeping the user informed
+while they wait.
 
 ::: tip Picture a card terminal at a café
 The café's till builds the bill. The customer's own card and PIN approve it.
@@ -205,8 +205,8 @@ function ConnectionLabel() {
 - An **effect** (`useEffect`) runs code after the page draws, often to load data
   or subscribe to wallet changes. Return a cleanup function to stop listening
   when the component goes away.
-- An array's `.map()` can turn each item into a row of JSX; the starter uses
-  this ordinary pattern for lists.
+- An array's `.map()` can turn each item into a row of JSX. You may see it
+  when a page needs to display a list.
 
 The mental model is:
 

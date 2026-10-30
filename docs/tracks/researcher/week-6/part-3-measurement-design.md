@@ -99,7 +99,7 @@ python --version
 A version number such as `Python 3.x.x` means the command is available. If the
 command is not recognised, do not edit the retrieval utility or install a
 third-party package for this task; ask the Education Team for help with the
-approved environment or a clearly dated source snapshot.
+approved environment or use the clearly dated fallback snapshot below.
 
 Download <a :href="$withBase('/files/researcher/W6.3-free-public-data.py')" download>W6.3-free-public-data.py</a>
 into that empty folder. It uses Python 3's standard library. In the same
@@ -130,15 +130,28 @@ The outputs are:
 - `uniswap_ethereum_90days.csv`: a comma-separated values (CSV) file with 90
   ascending dates, `day_utc` and `volume_usd`;
 - `W6.3-source-snapshot.json`: a JavaScript Object Notation (JSON) file with
-  the selected Ethereum version values and totals, endpoint, retrieval time
-  and inclusive dates;
+  the selected Ethereum version values and totals, endpoint, retrieval time,
+  chain, unit, method and inclusive dates;
 - `W6.3-data-provenance.txt`: the scope, unit, dates and method.
 
 The window ends yesterday UTC. The script rejects missing/duplicate days,
 ambiguous chain data and invalid amounts rather than replacing gaps with zero.
 Provider revisions can change past values; keep your original snapshot.
 If the API is unavailable, record the error and retry; an error alone is not a
-completed measurement. Ask for a dated source snapshot rather than inventing values.
+completed measurement. The primary task is live retrieval. Use the dated
+snapshot below only if the approved environment or public endpoint is
+unavailable, and state clearly that you used it.
+
+::: important Dated fallback snapshot, not live data
+This fallback was retrieved on **30 October 2026** and covers **1 August to
+29 October 2026 UTC**, inclusive. It is a reproducible teaching fallback, not
+current live data. Use it only when live retrieval is unavailable, and say so
+in your finding.
+
+- <a :href="$withBase('/files/researcher/W6.3-uniswap-ethereum-volume-2026-10-30.csv')" download>Download the 90-day Ethereum volume CSV</a>
+- <a :href="$withBase('/files/researcher/W6.3-source-snapshot-2026-10-30.json')" download>Download the selected source snapshot JSON</a>
+- <a :href="$withBase('/files/researcher/W6.3-data-provenance-2026-10-30.txt')" download>Download the provenance record</a>
+:::
 
 ### Just enough SQL
 
@@ -252,6 +265,10 @@ A **sensitivity check** means measuring the same question in another
 reasonable way to see whether the conclusion still holds. Mean, median and
 top-three concentration all summarise this same volume series. If only the
 mean rises because of a few spike days, the headline may need to be narrower.
+
+Open the CSV in Calc and confirm that the date column and `volume_usd` column
+loaded correctly. Put the required formulas in empty cells or a small separate
+calculation area. You do not need prior spreadsheet-modelling experience.
 
 In Calc, with CSV headers in row 1 and sorted dates, use:
 

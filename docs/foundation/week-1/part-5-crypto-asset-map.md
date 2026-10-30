@@ -123,10 +123,12 @@ Stablecoins give a stable unit that still moves at blockchain speed. Most
 real-world payment usage runs through them.
 
 **And the trade-off.** A dollar-backed stablecoin is a *claim on an issuer*:
-you rely on the issuer to exchange it for the represented dollars under its
-terms. **Reserves** are assets held to support that exchange; **redemption** is
-exchanging the token back for those dollars. An **attestation** is an outside
-report checking stated information at a point in time, not a guarantee.
+you rely on the issuer's reserves and redemption mechanism to support
+conversion back to dollars under its terms. Direct redemption access may
+depend on eligibility or intermediaries. **Reserves** are assets held to
+support that exchange; **redemption** is exchanging the token back for those
+dollars. An **attestation** is an outside report checking stated information
+at a point in time, not a guarantee.
 Holding USDC means trusting the blockchain, the token contract, **and Circle** —
 that reserves exist and redemption is honoured.
 
