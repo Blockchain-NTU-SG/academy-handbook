@@ -8,17 +8,20 @@ owner: "Education Team"
 reading_time: "45 min"
 points: 100
 sources:
-  - name: "CoinGecko — Supply methodology"
+  - name: "CoinGecko: Supply methodology"
     url: "https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology"
     label: "Link"
-  - name: "Arbitrum DAO — Airdrop eligibility and distribution"
+  - name: "Arbitrum DAO: Airdrop eligibility and distribution"
     url: "https://docs.arbitrum.foundation/airdrop-eligibility-distribution"
     label: "Link"
-  - name: "Arbitrum DAO — Token circulating supply"
+  - name: "Arbitrum DAO: Token circulating supply"
     url: "https://docs.arbitrum.foundation/token-supply"
     label: "Link"
-  - name: "DefiLlama — Data definitions"
+  - name: "DefiLlama: Data definitions"
     url: "https://docs.llama.fi/analysts/data-definitions"
+    label: "Link"
+  - name: "Messari: State of Pyth Network Q1 2024"
+    url: "https://messari.io/report/state-of-pyth-network-q1-2024"
     label: "Link"
 ---
 
@@ -31,7 +34,7 @@ answer is kept outside the public handbook.
 
 # Week 5 · Part 5 — Token and incentive economics
 
-> **Core question — how much of a token is really in circulation, what does
+> **Core question: how much of a token is really in circulation, what does
 > the next unlock change, and who gets the new tokens?**
 
 Token pages quote several supply numbers side by side, and they answer
@@ -119,7 +122,7 @@ supply and what they are paid to want.
 
 ==Protocol usage ≠ fees ≠ revenue ≠ earnings ≠ token-holder value accrual.==
 **Value accrual** asks whether protocol success creates a credible economic
-benefit for token holders—for example, a distribution, buyback or burn,
+benefit for token holders, such as a distribution, buyback or burn,
 required utility, or another enforceable mechanism. Governance rights alone
 do not automatically create that benefit. Map the path instead of assuming
 that an active protocol makes its token valuable. The diagram is an Academy
@@ -148,7 +151,7 @@ keeps the definitions and questions precise.
 | Flow | Research question |
 |---|---|
 | Supply sources and sinks | What mints/emits/unlocks tokens? What permanently burns them? Staking or a lock restricts liquidity but is not necessarily a permanent sink. |
-| Demand drivers | A demand driver is a reason someone needs or wants the token. Is it required for a service, collateral, security, governance or another use—and who needs it, and why? |
+| Demand drivers | A demand driver is a reason someone needs or wants the token. Is it required for a service, collateral, security, governance or another use? Who needs it, and why? |
 | Usage → fees | Which activity pays a charge, rather than just moving assets? |
 | Fees → revenue | What goes to suppliers or liquidity providers, and what is retained by the protocol or distributed to holders? |
 | Revenue → earnings / treasury | What remains after the stated costs or incentives? Is the figure cash flow, an accounting estimate or token emissions? |
@@ -196,6 +199,19 @@ Team and investor allocations vest over four years: the first unlock came a
 year after launch, then monthly unlocks for the remaining three years. So for
 most of ARB's life, the supply allocated was far larger than the supply
 circulating.
+
+### Linked historical visual case: PYTH liquid supply
+
+Messari's [*State of Pyth Network Q1 2024* report](https://messari.io/report/state-of-pyth-network-q1-2024)
+(published 23 May 2024) includes a liquid-supply curve by allocation bucket.
+The chart reports data as of **31 March 2024** and illustrates the schedule as
+understood then; it is a historical research example, not current PYTH
+tokenomics. Notice how liquid supply changes over time, scheduled unlocks
+appear as steps, and recipient categories show who receives newly transferable
+supply. A scheduled unlock does not show that recipients sold.
+
+Open the report's **Token Unlocks** section to view the original figure; this
+Handbook links to the historical source rather than reproducing the chart.
 
 ## Hands-on task
 
@@ -248,7 +264,7 @@ Your work is complete when:
 - [ ] the unlock answer separates "transferable" from "sold";
 - [ ] the value answer says what the path depends on, rather than assuming growth helps holders.
 
-::: details Further exploration — optional, not assessed
+::: details Further exploration: optional, not assessed
 - Look up ARB's circulating supply today on a data site, and compare it with
   the [Arbitrum DAO's own figure](https://docs.arbitrum.foundation/token-supply).
   Why might they differ?
@@ -258,8 +274,9 @@ Your work is complete when:
 :::
 
 ::: details Sources and attribution
-- [CoinGecko — Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) — Link, referenced only
-- [Arbitrum DAO — Airdrop eligibility and distribution](https://docs.arbitrum.foundation/airdrop-eligibility-distribution) — Link, allocation and vesting figures (checked 21 October 2026)
-- [Arbitrum DAO — Token circulating supply](https://docs.arbitrum.foundation/token-supply) — Link, referenced only
-- [DefiLlama — Data definitions](https://docs.llama.fi/analysts/data-definitions) — Link, data-provider methodology; checked 26 October 2026
+- [CoinGecko: Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) (Link, referenced only)
+- [Arbitrum DAO: Airdrop eligibility and distribution](https://docs.arbitrum.foundation/airdrop-eligibility-distribution) (allocation and vesting figures, checked 21 October 2026)
+- [Arbitrum DAO: Token circulating supply](https://docs.arbitrum.foundation/token-supply) (Link, referenced only)
+- [DefiLlama: Data definitions](https://docs.llama.fi/analysts/data-definitions) (data-provider methodology, checked 26 October 2026)
+- [Messari: State of Pyth Network Q1 2024](https://messari.io/report/state-of-pyth-network-q1-2024) (historical liquid-supply research example, data as of 31 March 2024; chart not reproduced under the report's redistribution terms)
 :::
