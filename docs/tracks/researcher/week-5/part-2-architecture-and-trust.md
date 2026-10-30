@@ -160,19 +160,27 @@ is who can upgrade, and with what delay.
   upgrade **instantly**. A **multisig** is a wallet that requires a specified
   number of separate signers; here, 9 of 12 must approve.
 
-What matters is the **exit window**:
+What matters is the **exit window**, which depends on two clocks:
 
-An exit window is the usable warning time left after subtracting how long a
-user needs to leave. If it is zero or less, there is no usable time buffer.
+- **Upgrade clock:** how much time remains before the change can execute.
+- **Exit clock:** how long the user's relevant withdrawal path takes to
+  complete.
+
+`upgrade queued → user starts exit → withdrawal completes → upgrade executes`
+
+The usable window is not the full upgrade delay. It is the time left after the
+user can actually finish leaving. If the exit takes as long as, or longer than,
+the remaining delay, there is no usable exit window.
 
 $$
 W_{\text{exit}} = T_{\text{upgrade}} - T_{\text{leave}}
 $$
 
 Here $T_{\text{upgrade}}$ is the remaining time before the change can go live,
-and $T_{\text{leave}}$ is the time the user's withdrawal path requires. A long
-delay only protects a user if they can finish leaving before the upgrade lands.
-A delay of zero means a window of zero.
+and $T_{\text{leave}}$ is the time the user's withdrawal path requires. For
+example, if an upgrade can execute in 7 days and leaving takes 2 days, the
+usable window is 5 days. This describes the specific exit path being analysed;
+protocols can use different paths. A delay of zero means a window of zero.
 
 ### Reading stages carefully
 

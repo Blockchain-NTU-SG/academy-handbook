@@ -68,12 +68,24 @@ After this Part you can:
 
 ### Three supply numbers
 
-- **Max supply:** the most tokens that can ever exist, if there is a fixed
-  cap.
-- **Total supply:** tokens that exist now, after any permanent burns.
-- **Circulating supply:** tokens actually available to the public market.
-  Locked or vesting tokens are left out, and data providers may also leave
-  out project-controlled allocations not meant for trading yet.
+For a token with a fixed cap, picture the supplies as nested sets:
+
+- **Maximum supply:** the outer limit on how many tokens can ever exist.
+  - **Total supply:** the tokens that exist now, after any permanent burns.
+    - **Circulating supply:** the subset a provider classifies as available
+      to the market.
+
+In this simplified capped-token model:
+
+$$
+S_{\text{circ}} \le S_{\text{total}} \le S_{\text{max}}
+$$
+
+Not every token has a fixed maximum. Providers may classify treasury, insider
+and other allocations differently. Reported circulating supply is a
+classification, not a guarantee that every counted token can be traded at the
+quoted price; it is not the same as **executable liquidity** or necessarily
+the analyst's estimated **real float**.
 
 For this Part, use the simplified relationship, with all supply values in
 the same token units:
@@ -89,9 +101,11 @@ methodology before comparing reported supply.
 
 ### What an unlock is, and is not
 
-An unlock is when a vesting or lock-up restriction ends and tokens become
-transferable. Unlock schedules are common for team members, investors,
-contributors and ecosystem funds.
+An unlock lifts a vesting or lock-up restriction, so previously restricted
+tokens become transferable. A provider may then count them as circulating,
+depending on its methodology. An unlock does not usually create new tokens.
+Unlock schedules are common for team members, investors, contributors and
+ecosystem funds.
 
 An unlock is **not** a sale. A recipient can hold, delegate, stake, spend or
 sell the tokens. An unlock also does not always add the full amount to

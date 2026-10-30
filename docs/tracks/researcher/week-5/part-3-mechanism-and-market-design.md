@@ -92,13 +92,13 @@ $$
 
 As the X reserve $x$ increases, the Y reserve $y$ must fall to keep the
 product at $k$. The relationship is not a straight line: doubling $x$ halves
-$y$, while equal additions to $x$ do not produce equal changes in $y$. The
-curve bends toward the axes. When a trade takes out a token, that reserve
-becomes scarcer, so each extra unit of output requires more of the other
-token. In this X/Y view, that appears steep near low $x$ and flatter near low
-$y$; both shapes mean the trade is getting more costly in the direction of
-the scarce output. A large trade moves farther along the curve and has more
-price impact.
+$y$, while equal additions to $x$ do not produce equal changes in $y$.
+
+Suppose a trader sells X to receive Y. X enters the pool, so its X reserve
+increases; Y leaves, so its Y reserve decreases. As Y becomes scarcer, each
+additional unit of X buys less Y than the previous one. The execution rate
+worsens as the trade grows: this is the intuition behind **price impact**.
+A larger trade moves farther along the curve and has more price impact.
 
 The reserve ratio gives the starting marginal price. Imagine a pool with 100
 ETH and 200,000 USDC: it holds 2,000 USDC for every 1 ETH. Before a very small

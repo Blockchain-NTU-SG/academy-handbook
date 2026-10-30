@@ -110,6 +110,23 @@ strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy),
 The embedded PDF is an unmodified reading copy of the official paper. Use the
 current Aave documentation linked above for present behaviour.
 
+### Borrowing limit and liquidation boundary are different
+
+**Loan-to-Value (LTV)** and **Liquidation Threshold (LT)** serve different
+roles. Aave reserve settings vary by asset and market; these terms are a
+conceptual guide, not a live borrowing recommendation.
+
+- **LTV — borrowing-capacity limit:** how much debt the collateral can support
+  when a learner borrows or increases a position.
+- **Liquidation Threshold (LT) — liquidation boundary:** the parameter used
+  to determine when a position may become eligible for liquidation.
+
+For a simplified single-asset example, $100 of collateral with 75% LTV may
+support roughly $75 of borrowing. That does not mean liquidation starts at
+$75: a separate 80% LT sets the health-factor boundary. Actual limits depend
+on current reserve settings, and multi-asset positions use weighted values
+and protocol-specific configuration.
+
 ### The health factor
 
 A common measure is the **health factor (HF)**. Read it as **safety-adjusted
@@ -128,7 +145,7 @@ threshold**, a fraction (80% is $0.80$); and $D$ is debt value in the same
 currency. Thus $HF$ is unitless. A higher HF means more buffer. $HF=1$ is the
 simplified boundary; under Aave's model, a position may become eligible for
 liquidation below 1. Real multi-asset positions use protocol-specific
-valuation and threshold rules.
+valuation and threshold rules. This health-factor formula uses LT, not LTV.
 
 ### Solve for a single-asset liquidation price
 

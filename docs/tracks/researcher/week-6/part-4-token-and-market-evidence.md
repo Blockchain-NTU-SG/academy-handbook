@@ -99,12 +99,17 @@ distinction when deciding what a volume, fee or liquidity number represents.
 The first seven lenses focus mainly on observable system and economic evidence;
 **Narrative** asks how market participants interpret it and where attention is
 focused. None is perfectly objective: definitions, coverage and interpretation
-still require judgment. Not every question needs all eight.
+still require judgment.
+
+**Start with the research question, not the eight lenses.** Use only the lenses
+that could materially change your answer. If a lens does not help test the
+question, explain a mechanism, challenge the thesis or distinguish
+alternatives, do not force it into the analysis.
 
 ### How the lenses relate
 
 The groups below help organise a question; they are not a mandatory order or a
-checklist. Select the lenses that can actually inform the case.
+checklist.
 
 ```mermaid
 flowchart LR
