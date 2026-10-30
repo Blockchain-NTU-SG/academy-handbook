@@ -40,6 +40,12 @@ not distinguish these two explanations yet”.
 case evidence, quantitative/economic evidence and counter-evidence. For a real
 case, include direct chain evidence relevant to the question.**
 
+A **research thesis** here means your current best answer to the research
+question, expressed as a claim that evidence can support, weaken or change. It
+is not a graduation thesis or automatically an investment recommendation. The
+working path is **question → current thesis → supporting evidence →
+counter-evidence → confidence → next check**.
+
 A **bounded claim** states which case, evidence and time window it covers. A
 **falsifiable claim** names what observation would weaken or contradict it.
 **Counter-evidence** weighs against your claim; an **alternative hypothesis**
@@ -108,6 +114,28 @@ or person. No separate real-chain field check is required for this default
 exercise. A learner choosing a real case instead must use direct chain
 evidence relevant to that case's question.
 :::
+
+### A small claim-calibration example
+
+**Too broad / unsupported:** “NOVEL is insider-controlled and the team is
+dumping.” This asserts identity, control and motive that the supplied records
+do not establish, and it names no evidence window or observation that could
+change the claim.
+
+**Better bounded claim:** “Within the 1–8 September 2026 case window,
+Sponsor-S funds gas for A–C within two minutes, and A–C each sell 0.5m NOVEL
+on launch day and again on day 3. This pattern is consistent with coordinated
+activity, but does not establish common control, recipient identity or
+motive.”
+
+Verified evidence of independent recipient arrangements could weaken that
+interpretation; direct evidence linking address control could strengthen a
+common-control hypothesis. The example shows how evidence can update a claim,
+not which conclusion to reach.
+
+**Bounded** means stating the case, time window and evidence your conclusion
+covers. **Falsifiable** means naming what new evidence could weaken, overturn
+or materially change it.
 
 For the default dossier, use its records to test competing explanations; do
 not add an unrelated real transaction just to satisfy a checklist. If you

@@ -1125,6 +1125,10 @@ textarea {
   max-width: 520px;
 }
 
+.academy-reference-visual--wide {
+  max-width: 1040px;
+}
+
 .academy-reference-visual img {
   display: block;
   width: 100%;
@@ -1132,6 +1136,25 @@ textarea {
   border: 1px solid var(--academy-border);
   border-radius: 10px;
   box-shadow: 0 8px 22px rgb(43 45 57 / 7%);
+}
+
+/* Preserve labels in a wide source figure on small screens without widening
+ * the document. The figure scrolls locally and remains keyboard focusable. */
+.academy-visual-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  border: 1px solid var(--academy-border);
+  border-radius: 10px;
+  background: var(--academy-surface);
+  -webkit-overflow-scrolling: touch;
+}
+
+.academy-visual-scroll img {
+  width: 100%;
+  min-width: 624px;
+  max-width: none;
+  margin: 0;
 }
 
 .academy-reference-visual figcaption {

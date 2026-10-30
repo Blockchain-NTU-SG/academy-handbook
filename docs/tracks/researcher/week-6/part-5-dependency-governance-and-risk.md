@@ -46,8 +46,15 @@ model answer and reviewer notes are kept outside the public handbook.
 
 In Week 5 Part 6 you identified protocol risks. Now go one level deeper: build a
 **causal risk model**. Rather than writing “oracle risk” or “liquidation risk”
-as labels, follow a shock through the protocol's dependencies until you can
-name *who loses*, *what would be observable* and *where the chain might stop*.
+as labels, follow a hypothetical sudden change through the protocol's
+dependencies until you can name *who loses*, *what would be observable* and
+*where the chain might stop*.
+
+A **stress test** is a “what if?” exercise: change an important input by a
+hypothetical amount, then recalculate what happens to the system or position.
+Here, a **shock** is the hypothetical sudden change, such as a fall in
+collateral price. A stress test shows what could happen under that scenario;
+it does not predict that the scenario will occur.
 
 Why it matters: a protocol may function as designed and still transmit losses
 from another protocol, a market or an oracle. A risk model shows the path,

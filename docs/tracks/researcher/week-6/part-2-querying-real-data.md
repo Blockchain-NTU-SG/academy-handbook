@@ -79,7 +79,19 @@ confidence.
 |---|---|---|
 | Timing / execution | Regular intervals, repeated methods, similar gas/execution patterns | Scheduled treasury service or exchange batching |
 | Flow / holding | Same-sized repeated flows, high transaction count with short holding periods | Market making, reward claims or arbitrage |
-| Funding / counterparties | Common first ETH funder, repeated recipients, common deposit paths | Shared exchange, relayer, distributor or gas sponsor |
+| Funding / counterparties | Common first ETH funder, repeated recipients, common deposit paths | A shared exchange, relayer, distributor or gas sponsor |
+
+**Market making** means a trader or service regularly buys and sells assets so
+other people can trade more easily. This is one way to provide liquidity. A
+market maker may earn from the gap between its buy and sell prices or receive
+other incentives; different market makers can use different strategies. A
+**relayer** forwards a transaction or request for another user; a **gas
+sponsor** pays transaction fees for someone else's action. A **distributor**
+is a wallet or contract that sends assets to many recipients, for example for
+rewards or grants.
+Shared funding can therefore come from infrastructure, not shared ownership.
+**Exchange batching** groups multiple customer operations into fewer
+blockchain transactions instead of sending one for every customer action.
 
 Use at least two signal families. Ten-minute timing plus a high count of those
 same events is one clue; pair it with funding or counterparties. An
@@ -100,8 +112,11 @@ compare funding, timing, approvals and downstream flows.
 Link a source lock, burn or message to destination mint/release by message ID
 or bridge evidence, not amount/time alone. Record both chains, hashes and
 token representations; addresses may change, and some liquidity-network
-bridges have no one-to-one mint. A custodial deposit cannot reveal which
-customer received internal credit: stop there and write **unknown**.
+bridges have no one-to-one mint. A **custodial service** holds assets for users
+and records each customer's balance in its own system. After a deposit reaches
+its address, public chain records usually cannot show which customer received
+the internal credit. Stop there and write **unknown** unless another reliable
+source establishes the next owner or beneficiary.
 
 ### A “locked liquidity” badge is a question
 

@@ -11,28 +11,37 @@ sources:
   - name: "Aave V3 Technical Paper"
     url: "https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf"
     label: "Link"
-  - name: "Aave — Health factor and liquidations"
+  - name: "Aave: Health factor and liquidations"
     url: "https://aave.com/help/borrowing/liquidations"
     label: "Link"
-  - name: "Chainlink — Price feeds"
+  - name: "Chainlink: Price feeds"
     url: "https://docs.chain.link/data-feeds/price-feeds"
     label: "Link"
-  - name: "Aave V3 — Interest rate strategy"
+  - name: "Aave V3: Interest rate strategy"
     url: "https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy"
     label: "Link"
-  - name: "Aave — Reserve parameters"
+  - name: "Gauntlet: Extending support for Interest Rate Curves (Aave Governance)"
+    url: "https://governance.aave.com/t/gauntlet-extending-support-for-interest-rate-curves/10391"
+    label: "Link"
+  - name: "Aave: Reserve parameters"
     url: "https://www.aave.com/docs/aave-v3/concepts/reserve"
     label: "Link"
-  - name: "Aave — Efficiency Mode"
+  - name: "Aave: Efficiency Mode"
     url: "https://aave.com/help/borrowing/e-mode"
     label: "Link"
-  - name: "Pendle — Principal token"
+  - name: "Pendle: Principal token"
     url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT"
     label: "Link"
-  - name: "Pendle — Yield tokenization architecture"
+  - name: "Pendle: Yield tokenization architecture"
     url: "https://docs.pendle.finance/pendle-v2-dev/Contracts/YieldTokenization"
     label: "Link"
-  - name: "Pendle — Glossary"
+  - name: "Pendle Academy: Yield Tokenization Basics"
+    url: "https://docs.pendle.finance/pendle-academy/pendle-101/chapter-2-yield-tokenization-basics"
+    label: "Link"
+  - name: "Pendle: Minting"
+    url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/Minting"
+    label: "Link"
+  - name: "Pendle: Glossary"
     url: "https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary"
     label: "Link"
 ---
@@ -45,7 +54,7 @@ answer is kept outside the public handbook.
 
 # Week 5 · Part 4 — Collateral, credit and DeFi economics
 
-> **Core question — at what price does a crypto loan get liquidated, and
+> **Core question: at what price does a crypto loan get liquidated, and
 > what happens to the lender if the market moves faster than that?**
 
 A lending protocol is one kind of decentralised finance (DeFi) system: it lends
@@ -53,6 +62,21 @@ to users without a conventional credit check. All it has is the
 collateral they deposit and a rule for when to sell it. In this Part you turn
 that rule into numbers: how safe a loan is now, the price where it gets
 liquidated, and how a wrong price feed can leave the protocol with a loss.
+A **lending pool** is the shared supply of assets users put in so other users
+can borrow them.
+
+- **Collateral:** An asset you put up as backing for a loan.
+- **Debt:** What the borrower currently owes, including any interest due
+  under the protocol's rules.
+- **Borrower:** A user who takes assets from the lending pool and must repay
+  them under the protocol's rules.
+- **Supplier:** A user who puts assets into the lending pool so others can
+  borrow; the supplier may receive part of the interest.
+- **Liquidation:** A protocol process that lets part of the borrower's
+  collateral be used to repay some debt after a position crosses a risk
+  boundary.
+- **Liquidator:** A user or bot that carries out this process under the
+  protocol's rules.
 
 ::: tip Picture a pawn shop
 You leave a watch and borrow less than it is worth. If the watch's value
@@ -79,7 +103,7 @@ After this Part you can:
 
 ## Core / reference material
 
-### Primary source — Aave V3 Technical Paper
+### Primary source: Aave V3 Technical Paper
 
 The paper explains Aave V3's design reasoning and architecture. Read the
 sections on health factors, liquidations and interest-rate design alongside
@@ -101,6 +125,23 @@ strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy),
 The embedded PDF is an unmodified reading copy of the official paper. Use the
 current Aave documentation linked above for present behaviour.
 
+### Borrowing limit and liquidation boundary are different
+
+**Loan-to-Value (LTV)** and **Liquidation Threshold (LT)** serve different
+roles. Aave reserve settings vary by asset and market; these terms are a
+conceptual guide, not a live borrowing recommendation.
+
+- **LTV — borrowing-capacity limit:** how much debt the collateral can support
+  when a learner borrows or increases a position.
+- **Liquidation Threshold (LT) — liquidation boundary:** the parameter used
+  to determine when a position may become eligible for liquidation.
+
+For a simplified single-asset example, $100 of collateral with 75% LTV may
+support roughly $75 of borrowing. That does not mean liquidation starts at
+$75: a separate 80% LT sets the health-factor boundary. Actual limits depend
+on current reserve settings, and multi-asset positions use weighted values
+and protocol-specific configuration.
+
 ### The health factor
 
 A common measure is the **health factor (HF)**. Read it as **safety-adjusted
@@ -119,7 +160,7 @@ threshold**, a fraction (80% is $0.80$); and $D$ is debt value in the same
 currency. Thus $HF$ is unitless. A higher HF means more buffer. $HF=1$ is the
 simplified boundary; under Aave's model, a position may become eligible for
 liquidation below 1. Real multi-asset positions use protocol-specific
-valuation and threshold rules.
+valuation and threshold rules. This health-factor formula uses LT, not LTV.
 
 ### Solve for a single-asset liquidation price
 
@@ -174,8 +215,8 @@ debt. The protocol acts early on purpose.
 The **break-even price** is 12,000 ÷ 10 = **1,200 USD**. There the collateral
 is worth exactly the debt. Below it, selling all the collateral would not
 repay the loan. If the market falls through 1,200 before a liquidation
-completes—for example, because the price moves too fast, the oracle lags or
-the network is congested—unpaid debt may remain.
+completes, for example because the price moves too fast, the oracle lags or
+the network is congested, unpaid debt may remain.
 
 | ETH price | Collateral value | Health factor | What it means |
 |---:|---:|---:|---|
@@ -184,7 +225,7 @@ the network is congested—unpaid debt may remain.
 | 1,200 | 12,000 | 0.80 | Collateral = debt |
 | 1,100 | 11,000 | 0.73 | Collateral < debt |
 
-**Academy schematic — a conditional lending failure path, not a claim that
+**Academy schematic: a conditional lending failure path, not a claim that
 every liquidation produces bad debt:**
 
 ```mermaid
@@ -221,31 +262,67 @@ shown as a percentage. If 80 of 100 units supplied are borrowed, $U=0.80$ and
 20 units remain as the simple withdrawal buffer. High utilisation means less
 immediately available liquidity relative to supplied assets; borrowers pay
 for access to scarcer liquidity. Supplier yield generally depends on borrow
-rates, utilisation and the protocol's retained share. Extra token rewards are
-a separate subsidy.
+rates, utilisation and the protocol's retained share. Some protocols give
+suppliers extra tokens to encourage them to provide assets. This extra reward
+is a **subsidy**. It is separate from interest generated by borrowers, and it
+can stop even while a loan remains.
 
 Aave V3's [official interest-rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy)
-uses two slopes around an optimal-usage point. The **kink** is the point where
-the curve's slope changes; above it, borrowing becomes more expensive more
-quickly. This can encourage repayment and new
-supply; it cannot guarantee either during stress.
-The target and slopes depend on the reserve and deployment. The chart is a
-conceptual Academy schematic, not a live Aave curve or parameter quote:
+models the variable borrow rate as two linear regions around an
+**optimal-utilisation level**. The target and rate parameters are set per
+reserve, so the historical figure below illustrates the shape rather than
+today's settings for a particular market.
 
-```mermaid
-xychart-beta
-  accTitle: Conceptual utilisation and borrow-rate curve
-  accDescr: Borrow rate rises gradually before optimal utilisation and more steeply after the kink; the chart is illustrative, not scaled or a live quote.
-  x-axis "Reserve utilisation (% of supplied)" 0 --> 100
-  y-axis "Borrow rate (illustrative %; not to scale)" 0 --> 50
-  line [3, 4, 5, 6, 7, 8, 9, 10, 12, 28, 45]
-```
+<figure class="academy-reference-visual academy-reference-visual--wide">
+  <div class="academy-visual-scroll" role="region" aria-label="Scrollable historical Aave utilisation and interest-rate curve" tabindex="0">
+    <img src="/images/researcher/aave-utilisation-interest-rate-curve.png" alt="Historical curve with utilisation on the horizontal axis and borrower interest rate on the vertical axis: the rate begins at base rate R zero, rises along slope one until U optimal, then rises more steeply along slope two." />
+  </div>
+  <figcaption>Historical mechanism illustration from <a href="https://governance.aave.com/t/gauntlet-extending-support-for-interest-rate-curves/10391">Gauntlet's Aave Governance discussion, “Gauntlet extending support for Interest Rate Curves”</a> (25 October 2022). It shows the base rate, utilisation, the optimal-utilisation kink and two slopes; it is not a current Aave parameter chart.</figcaption>
+</figure>
 
-**How to read it:** the horizontal axis is the share of supplied reserve
-currently borrowed; the vertical axis is the illustrative borrowing rate.
-Before the optimal-use kink the rate rises gradually; beyond it the steeper
-slope makes borrowing rise faster, attempting to preserve liquidity. The
-shape does not guarantee repayment, new supply or a particular rate.
+The horizontal axis is reserve utilisation; the vertical axis is borrower
+interest rate. Aave's current V3 documentation describes this as a
+piecewise two-slope model. In these simplified formulas, $R$ is the variable
+borrow rate; $U$ is utilisation as a fraction; $U_{\text{optimal}}$ is the
+target level; $R_{\text{base}}$ is the starting rate; and the slope terms
+describe how much the rate rises in each region. Rates and parameters are
+configured separately for each reserve.
+
+**At or below optimal utilisation:**
+
+$$
+R = R_{\text{base}} + R_{\text{slope1}}\frac{U}{U_{\text{optimal}}}
+$$
+
+Before the target, the borrow rate rises gradually as more supplied liquidity
+is borrowed. At the target, this first region has added the full
+$R_{\text{slope1}}$ contribution.
+
+**Above optimal utilisation:**
+
+$$
+R = R_{\text{base}} + R_{\text{slope1}} +
+R_{\text{slope2}}\frac{U-U_{\text{optimal}}}{1-U_{\text{optimal}}}
+$$
+
+After the target, the model adds the steeper second slope. As utilisation
+approaches 100%, borrowing becomes more expensive much faster because less
+liquidity is immediately available. These formulas explain the graph; they
+are not parameters to memorise or a live rate quote.
+
+The intended feedback is:
+
+> More borrowing → higher utilisation → less immediately available liquidity
+> → higher borrow rates, especially beyond the target → stronger incentives
+> to reduce debt and provide liquidity → utilisation may move back toward the
+> target.
+
+Higher rates create incentives for borrowers to repay or reduce borrowing,
+and higher supplier returns may attract new liquidity after the protocol's
+share. These are not guaranteed responses: borrowers and suppliers may react
+differently depending on market conditions, alternatives and their
+sensitivity to rates. A mechanism is designed to influence behaviour, not
+control it.
 
 Recursive borrowing means borrowing against collateral and redepositing or
 buying more collateral to borrow again. Gross supplied assets and debt grow
@@ -253,13 +330,84 @@ together while initial equity does not. Yield exposure, borrowing cost and
 liquidation exposure all grow; a subsidy can disappear before the debt does.
 The same HF model still asks what collateral and debt the protocol actually values.
 
-::: details Landscape — Pendle: composing principal, yield and credit
-An asset that earns yield bundles two exposures: the underlying principal and
-the variable yield it may generate. Pendle separates those exposures. Its
-**Standardized Yield (SY)** token is the protocol's common representation of a
-yield-bearing asset; a **Principal Token (PT)** represents the principal-side
-claim associated with maturity; and a **Yield Token (YT)** represents variable
-yield exposure up to maturity.
+::: details Landscape: Pendle, separating principal and future yield
+**Principal** is the original amount or claim. **Yield** is the additional
+value that amount may produce over time. Pendle represents these two ideas with
+PT, the principal-side claim, and YT, the yield-side claim up to maturity.
+
+A **yield-bearing asset** is a position that may earn extra value over time,
+for example staking rewards or lending interest. Pendle splits the position
+into two claims that end on a set date, called **maturity**. Think of a rental
+property: one claim is to the property later, and another is to rent produced
+up to a stated date. This is only an analogy; PT and YT are crypto-token claims,
+not legal ownership of a house.
+
+Pendle's **Standardized Yield (SY)** is a behind-the-scenes wrapper for handling
+different yield-bearing assets. The useful distinction is what the two tokens
+let their holder claim.
+
+### PT: principal later, with no payments along the way
+
+A **Principal Token (PT)** can be redeemed at maturity in the market's named
+**accounting asset**. This is the unit Pendle uses to state what the PT claim
+represents and what it redeems into. Check the market label: it may not be the
+same as one whole yield-bearing token. PT holders do not receive the yield
+earned during the term.
+
+Pendle compares PT to a **zero-coupon bond**. A bond is an IOU that can be
+bought and sold; a zero-coupon bond pays no regular interest, and if it is
+repaid as promised, the holder gets a stated amount at the end. Suppose a
+Pendle market says one PT can be redeemed for one unit of its accounting asset,
+and the PT costs 0.95 units today. If you
+hold it until maturity and redemption works, the 0.05 difference is the
+possible gain before costs. Nothing is paid while you wait. This is an analogy,
+not a guarantee or a claim that PT is a government or company bond: its market
+price can move, and redemption still depends on the protocol and asset.
+PT can also be sold before maturity, but its market price may be different
+from both the price you paid and the later redemption amount.
+
+### YT: whatever yield is actually produced before the date
+
+A **Yield Token (YT)** gives its holder the yield that one unit of the market's
+accounting asset actually produces before maturity. Using the rental analogy,
+YT is a claim to the rent that really arrives, not a promise that the property
+will earn a particular amount. If the yield source produces little or no yield,
+the YT claim can also be small or zero.
+
+**APY**, or Annual Percentage Yield, expresses a yield as a one-year percentage
+rate so rates can be compared more easily. An 8% APY does not guarantee that
+the asset will earn exactly 8% over the next year.
+
+Pendle uses two APY ideas that are easy to mix up:
+
+- **Underlying APY:** Pendle's recent-yield indicator for the underlying asset.
+  Its glossary defines this as a 7-day moving average, so it describes recent
+  yield, not exactly what the asset will earn through maturity.
+- **Implied APY:** the future average yield rate currently priced by the PT/YT
+  market. Pendle derives it from the relative YT and PT prices; it reflects
+  current market pricing, not a rate Pendle guarantees.
+
+If the market displays an 8% Implied APY, it does not mean the asset will
+definitely earn 8%. The relative PT/YT prices currently reflect a market-priced
+view around that future average rate. The actual yield through maturity may be
+higher, lower or zero. A YT holder receives only the yield actually produced;
+whether the position works out better or worse than its current price suggests
+also depends on the purchase cost and time remaining. YT is exposure to
+uncertain future yield, not fixed interest.
+
+### The four basic actions
+
+Pendle's linked [beginner guide](https://docs.pendle.finance/pendle-academy/pendle-101/chapter-2-yield-tokenization-basics)
+and [minting guide](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/Minting)
+show the protocol's own lifecycle illustrations. In plain language:
+
+1. **Mint before maturity:** deposit a yield-bearing asset to create PT and YT.
+2. **Redeem before maturity:** combine matching PT and YT to recover the
+   associated yield-bearing asset.
+3. **Claim yield before maturity:** YT holders can claim yield that has
+   already accrued; future yield is still uncertain.
+4. **Redeem PT after maturity:** PT can be redeemed without YT for the
+   accounting asset stated by that market. YT no longer earns new yield.
 
 ```mermaid
 flowchart TB
@@ -272,24 +420,24 @@ flowchart TB
   D --> M
 ```
 
-**Academy schematic — simplified tokenisation flow, not Pendle contract
-architecture.** For the protocol's own [PT/YT yield-stream diagram and
-architecture](https://docs.pendle.finance/pendle-v2-dev/Contracts/YieldTokenization),
-see its official documentation. This sketch only orients the learner to the
-token split; consult the protocol's current terms for exact settlement.
-
-PT's maturity claim is denominated in its **accounting asset**, which can
-differ from the yield-bearing token delivered through redemption. Buying PT
-below that maturity value gives a fixed-return interpretation in that unit
-if held to maturity and redemption works. YT exposes the holder to realised
-variable yield up to expiry, not a guaranteed return. Contract, liquidity,
-oracle and underlying-asset risks remain.
+**Academy schematic: simplified tokenisation flow, not Pendle contract
+architecture.** For Pendle's own illustrated beginner explanation, see the
+[Pendle Academy chapter on yield tokenization](https://docs.pendle.finance/pendle-academy/pendle-101/chapter-2-yield-tokenization-basics)
+and the protocol's [minting documentation](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/Minting).
+These explain the protocol's lifecycle; the schematic above is only an
+orientation aid. Neither PT nor YT removes contract, liquidity, oracle,
+maturity or underlying-asset risk.
 
 If a lender accepts PT as collateral, it composes another dependency chain:
 underlying asset → yield protocol → SY/PT settlement → lender's valuation and
 liquidation rules. Maturity does not remove contract, liquidity, oracle or
 underlying-asset risk. This is recognition material, not a borrowing strategy
 or a second assessed task.
+
+**Researcher takeaway:** identify which token represents principal and which
+represents yield, what changes at maturity, and what extra protocol, liquidity,
+oracle and maturity dependencies appear if a yield-derived asset is accepted
+as collateral.
 :::
 
 ## Hands-on task
@@ -329,7 +477,7 @@ Your work is complete when:
 - [ ] both health factors in step 5 are correct, and you say which one the protocol acts on;
 - [ ] the failure path runs from the price move to a named party bearing the loss.
 
-::: details Further exploration — optional, not assessed
+::: details Further exploration: optional, not assessed
 - The borrower adds 1 ETH of collateral at 2,500 USD. What is the new
   liquidation price?
 - Look up how often the [Chainlink ETH/USD feed](https://docs.chain.link/data-feeds/price-feeds)
@@ -342,11 +490,14 @@ Your work is complete when:
 :::
 
 ::: details Sources and attribution
-- [Aave DAO — Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) — Official source for the unmodified local reading copy; design reference, not a current deployment specification
-- [Aave — Health factor and liquidations](https://aave.com/help/borrowing/liquidations) — Link, referenced only
-- [Chainlink — Price feeds](https://docs.chain.link/data-feeds/price-feeds) — Link, referenced only
-- [Aave V3 — Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) — Link, protocol documentation
-- [Aave — Reserve parameters](https://www.aave.com/docs/aave-v3/concepts/reserve) and [Efficiency Mode](https://aave.com/help/borrowing/e-mode) — Link, current protocol documentation; verify the selected market and date
-- [Pendle — Principal token](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT) — Link, protocol documentation
-- [Pendle — Glossary](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary) — Link, protocol documentation
+- [Aave DAO: Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) (official source for the unmodified local reading copy; design reference, not a current deployment specification)
+- [Gauntlet: Extending support for Interest Rate Curves](https://governance.aave.com/t/gauntlet-extending-support-for-interest-rate-curves/10391) (attributed third-party figure; original ownership remains with its rights holder and it is not covered by the Academy content licence; unmodified historical Aave governance illustration, 25 October 2022, not current reserve parameters)
+- [Aave: Health factor and liquidations](https://aave.com/help/borrowing/liquidations) (Link, referenced only)
+- [Chainlink: Price feeds](https://docs.chain.link/data-feeds/price-feeds) (Link, referenced only)
+- [Aave V3: Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) (protocol documentation)
+- [Aave: Reserve parameters](https://www.aave.com/docs/aave-v3/concepts/reserve) and [Efficiency Mode](https://aave.com/help/borrowing/e-mode) (current protocol documentation; verify the selected market and date)
+- [Pendle: Principal token](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT) (Link, protocol documentation)
+- [Pendle Academy: Yield Tokenization Basics](https://docs.pendle.finance/pendle-academy/pendle-101/chapter-2-yield-tokenization-basics) and [Pendle: Minting](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/Minting) (official lifecycle references; illustrations are linked, not reproduced)
+- [Pendle: Yield tokenization architecture](https://docs.pendle.finance/pendle-v2-dev/Contracts/YieldTokenization) (protocol reference; the linked Pendle Academy illustrations are not copied)
+- [Pendle: Glossary](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary) (Link, protocol documentation)
 :::

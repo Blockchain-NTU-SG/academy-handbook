@@ -8,17 +8,20 @@ owner: "Education Team"
 reading_time: "45 min"
 points: 100
 sources:
-  - name: "CoinGecko — Supply methodology"
+  - name: "CoinGecko: Supply methodology"
     url: "https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology"
     label: "Link"
-  - name: "Arbitrum DAO — Airdrop eligibility and distribution"
+  - name: "Arbitrum DAO: Airdrop eligibility and distribution"
     url: "https://docs.arbitrum.foundation/airdrop-eligibility-distribution"
     label: "Link"
-  - name: "Arbitrum DAO — Token circulating supply"
+  - name: "Arbitrum DAO: Token circulating supply"
     url: "https://docs.arbitrum.foundation/token-supply"
     label: "Link"
-  - name: "DefiLlama — Data definitions"
+  - name: "DefiLlama: Data definitions"
     url: "https://docs.llama.fi/analysts/data-definitions"
+    label: "Link"
+  - name: "Messari: State of Pyth Network Q1 2024"
+    url: "https://messari.io/report/state-of-pyth-network-q1-2024"
     label: "Link"
 ---
 
@@ -31,7 +34,7 @@ answer is kept outside the public handbook.
 
 # Week 5 · Part 5 — Token and incentive economics
 
-> **Core question — how much of a token is really in circulation, what does
+> **Core question: how much of a token is really in circulation, what does
 > the next unlock change, and who gets the new tokens?**
 
 Token pages quote several supply numbers side by side, and they answer
@@ -65,12 +68,25 @@ After this Part you can:
 
 ### Three supply numbers
 
-- **Max supply:** the most tokens that can ever exist, if there is a fixed
-  cap.
-- **Total supply:** tokens that exist now, after any permanent burns.
-- **Circulating supply:** tokens actually available to the public market.
-  Locked or vesting tokens are left out, and data providers may also leave
-  out project-controlled allocations not meant for trading yet.
+For a token with a fixed cap, picture the supplies as nested sets:
+
+- **Maximum supply:** the outer limit on how many tokens can ever exist.
+  - **Total supply:** the tokens that exist now, after any permanent burns.
+    - **Circulating supply:** the subset a provider classifies as available
+      to the market.
+
+In this simplified capped-token model:
+
+$$
+S_{\text{circ}} \le S_{\text{total}} \le S_{\text{max}}
+$$
+
+Not every token has a fixed maximum. Providers may classify treasury, insider
+and other allocations differently. Reported circulating supply is a
+classification. It does not guarantee that every counted token is realistically
+available to trade soon or that all of it could be sold near the quoted price.
+Researchers later examine parts of this question using terms such as estimated
+**real float** and **executable liquidity**; see [W6P4](../week-6/part-4-token-and-market-evidence.md).
 
 For this Part, use the simplified relationship, with all supply values in
 the same token units:
@@ -86,9 +102,12 @@ methodology before comparing reported supply.
 
 ### What an unlock is, and is not
 
-An unlock is when a vesting or lock-up restriction ends and tokens become
-transferable. Unlock schedules are common for team members, investors,
-contributors and ecosystem funds.
+An unlock lifts a vesting or lock-up restriction, so previously restricted
+tokens become transferable. A provider may then count them as circulating,
+depending on its method. An unlock does not usually create new tokens and does
+not prove that recipients sold them.
+Unlock schedules are common for team members, investors, contributors and
+ecosystem funds.
 
 An unlock is **not** a sale. A recipient can hold, delegate, stake, spend or
 sell the tokens. An unlock also does not always add the full amount to
@@ -118,13 +137,24 @@ supply and what they are paid to want.
 ### Follow the economics as well as the supply
 
 ==Protocol usage ≠ fees ≠ revenue ≠ earnings ≠ token-holder value accrual.==
-**Value accrual** asks whether protocol success creates a credible economic
-benefit for token holders—for example, a distribution, buyback or burn,
-required utility, or another enforceable mechanism. Governance rights alone
-do not automatically create that benefit. Map the path instead of assuming
-that an active protocol makes its token valuable. The diagram is an Academy
-economic-flow schematic: each arrow is a question to verify, and the final
-link is conditional.
+**Value accrual** means an economic benefit reaches token holders through a
+documented mechanism, such as a distribution, buyback or burn, required token
+use, or another enforceable right. Governance rights alone do not guarantee
+that benefit. Map the path instead of assuming that an active protocol makes
+its token valuable.
+
+Imagine a user pays a simplified **$10 fee**. That $10 is a fee, but it is not
+all automatically protocol revenue. The rules may send some to service
+providers, such as liquidity providers or suppliers. The amount kept, if any,
+may be called protocol revenue under a stated reporting method.
+A **treasury** is a pool of assets controlled by a protocol, foundation or DAO
+for uses such as operations, grants or incentives. After spending on costs,
+some providers report what remains as **earnings**, but each provider must say
+which costs it counted. Token holders benefit only if a documented right or
+mechanism connects the protocol's economics to the token.
+
+The diagram is an Academy economic-flow schematic: each arrow is a question to
+verify, and the final link is conditional.
 
 **Liquidity providers** supply assets to a pool and may receive some trading
 fees; protocols can also pay suppliers, validators or incentive recipients.
@@ -148,7 +178,7 @@ keeps the definitions and questions precise.
 | Flow | Research question |
 |---|---|
 | Supply sources and sinks | What mints/emits/unlocks tokens? What permanently burns them? Staking or a lock restricts liquidity but is not necessarily a permanent sink. |
-| Demand drivers | A demand driver is a reason someone needs or wants the token. Is it required for a service, collateral, security, governance or another use—and who needs it, and why? |
+| Demand drivers | A demand driver is a reason someone needs or wants the token. Is it required for a service, collateral, security, governance or another use? Who needs it, and why? |
 | Usage → fees | Which activity pays a charge, rather than just moving assets? |
 | Fees → revenue | What goes to suppliers or liquidity providers, and what is retained by the protocol or distributed to holders? |
 | Revenue → earnings / treasury | What remains after the stated costs or incentives? Is the figure cash flow, an accounting estimate or token emissions? |
@@ -196,6 +226,39 @@ Team and investor allocations vest over four years: the first unlock came a
 year after launch, then monthly unlocks for the remaining three years. So for
 most of ARB's life, the supply allocated was far larger than the supply
 circulating.
+
+### Reading a real token-unlock chart
+
+Messari's [*State of Pyth Network Q1 2024* report](https://messari.io/report/state-of-pyth-network-q1-2024)
+(published 23 May 2024) includes a liquid-supply curve by allocation bucket.
+The chart reports data as of **31 March 2024** and illustrates the schedule as
+understood then. It is a historical research example, not current PYTH
+tokenomics. Open the report's **Token Unlocks** section and read the figure in
+this order:
+
+1. **Read the axes.** Time runs horizontally; PYTH liquid supply runs
+   vertically. First ask: when does the supply counted as liquid increase?
+   The report's liquid-supply measure need not match every provider's
+   circulating-supply definition.
+2. **Read the stacked categories.** Each coloured layer is an allocation
+   bucket, such as Community & Launch, Publisher Rewards, Ecosystem Growth,
+   Protocol Development or Private Sales. The full stack shows total liquid
+   supply; its layers show how that supply is allocated.
+3. **Look for steps.** A jump represents tokens scheduled to become liquid or
+   transferable. To judge its scale, compare the unlock amount with the
+   circulating supply already counted, as in the NOVA calculation above. Ask
+   how much new supply is being added relative to what is already circulating.
+4. **Ask who receives it.** The same headline amount can go to different
+   stakeholder groups and be subject to different conditions. Ask who receives
+   the tokens and what incentives or restrictions apply; do not assume a
+   recipient's intent from the category alone.
+5. **Separate observation from interpretation.** The chart supports a claim
+   about when more supply is scheduled to become liquid. It cannot by itself
+   show that recipients transferred or sold those tokens. **Unlock ≠ sale.**
+
+The chart is an example of the reading path **time → amount → recipient →
+interpretation → limitation**. This Handbook links to the original figure
+rather than reproducing it.
 
 ## Hands-on task
 
@@ -248,7 +311,7 @@ Your work is complete when:
 - [ ] the unlock answer separates "transferable" from "sold";
 - [ ] the value answer says what the path depends on, rather than assuming growth helps holders.
 
-::: details Further exploration — optional, not assessed
+::: details Further exploration: optional, not assessed
 - Look up ARB's circulating supply today on a data site, and compare it with
   the [Arbitrum DAO's own figure](https://docs.arbitrum.foundation/token-supply).
   Why might they differ?
@@ -258,8 +321,9 @@ Your work is complete when:
 :::
 
 ::: details Sources and attribution
-- [CoinGecko — Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) — Link, referenced only
-- [Arbitrum DAO — Airdrop eligibility and distribution](https://docs.arbitrum.foundation/airdrop-eligibility-distribution) — Link, allocation and vesting figures (checked 21 October 2026)
-- [Arbitrum DAO — Token circulating supply](https://docs.arbitrum.foundation/token-supply) — Link, referenced only
-- [DefiLlama — Data definitions](https://docs.llama.fi/analysts/data-definitions) — Link, data-provider methodology; checked 26 October 2026
+- [CoinGecko: Supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) (Link, referenced only)
+- [Arbitrum DAO: Airdrop eligibility and distribution](https://docs.arbitrum.foundation/airdrop-eligibility-distribution) (allocation and vesting figures, checked 21 October 2026)
+- [Arbitrum DAO: Token circulating supply](https://docs.arbitrum.foundation/token-supply) (Link, referenced only)
+- [DefiLlama: Data definitions](https://docs.llama.fi/analysts/data-definitions) (data-provider methodology, checked 26 October 2026)
+- [Messari: State of Pyth Network Q1 2024](https://messari.io/report/state-of-pyth-network-q1-2024) (historical liquid-supply research example, data as of 31 March 2024; chart not reproduced under the report's redistribution terms)
 :::

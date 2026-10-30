@@ -11,16 +11,19 @@ sources:
   - name: "Uniswap v2 Core whitepaper"
     url: "https://app.uniswap.org/whitepaper.pdf"
     label: "Link"
-  - name: "Uniswap — How Uniswap Works"
+  - name: "Uniswap: How Uniswap Works"
     url: "https://developers.uniswap.org/docs/get-started/concepts/how-uniswap-works"
     label: "Link"
-  - name: "Uniswap docs — v2 pricing"
+  - name: "Uniswap: What is an Automated Market Maker?"
+    url: "https://blog.uniswap.org/what-is-an-automated-market-maker"
+    label: "Link"
+  - name: "Uniswap docs: v2 pricing"
     url: "https://developers.uniswap.org/docs/protocols/v2/concepts/pricing"
     label: "Link"
-  - name: "Uniswap — Concentrated liquidity"
+  - name: "Uniswap: Concentrated liquidity"
     url: "https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity"
     label: "Link"
-  - name: "Uniswap v2 — Understanding returns"
+  - name: "Uniswap v2: Understanding returns"
     url: "https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns"
     label: "Link"
 ---
@@ -33,7 +36,7 @@ model answer is kept outside the public handbook.
 
 # Week 5 · Part 3 — Mechanism and market design
 
-> **Core question — what does a swap actually do to a Uniswap-style pool,
+> **Core question: what does a swap actually do to a Uniswap-style pool,
 > and why does the size of the pool change the price you get?**
 
 An **automated market maker (AMM)** is a contract that calculates a swap from
@@ -50,8 +53,11 @@ pays you out of the other, keeping the two in balance by its rule. The more
 you pour in, the more the balance tilts against you.
 
 Where the picture stops: a see-saw tilts back by itself. A pool does not. It
-only moves back when someone trades the other way, usually an arbitrageur who
-profits from the gap.
+only moves back when someone trades the other way. An **arbitrageur** buys an
+asset where it is cheaper and sells it where it is more expensive, trying to
+earn the difference. If ETH is cheaper in the pool than elsewhere, an
+arbitrageur can buy ETH from the pool and sell it elsewhere. That trade changes
+the reserves and can move the pool price toward the wider market.
 :::
 
 ## The hard skill
@@ -81,12 +87,40 @@ xy = k
 $$
 
 The product $k$ is the reserve-product invariant used in the payout
-calculation. To see why the reserve ratio gives a price, imagine a pool with
-100 ETH and 200,000 USDC: it holds 2,000 USDC for every 1 ETH. Before a very
-small trade moves the reserves, that ratio is the pool's starting marginal
-price—its price for an infinitesimally small trade. Because the pool follows
-$xy\approx k$, adding a tiny amount of X must be matched by a small decrease
-in Y; the local change is about $y/x$ units of Y for each unit of X:
+calculation. Rearranging the same relationship gives:
+
+$$
+y = \frac{k}{x}
+$$
+
+As the X reserve $x$ increases, the Y reserve $y$ must fall to keep the
+product at $k$. The relationship is not a straight line: doubling $x$ halves
+$y$, while equal additions to $x$ do not produce equal changes in $y$.
+
+These price terms describe different things in this simplified pool:
+
+- **Starting spot / marginal price:** The pool's price for the next very
+  small trade, before that trade meaningfully changes the reserves.
+- **Average execution price:** The average price for the whole trade, total Y
+  received divided by total X sent.
+- **Price impact:** The price change caused by the trade itself changing the
+  pool's reserves.
+
+For a very small trade, the average execution price can be close to the
+starting marginal price. A larger trade changes the reserves more, so its
+average execution price becomes worse.
+
+Suppose a trader sells X to receive Y. X enters the pool, so its X reserve
+increases; Y leaves, so its Y reserve decreases. As Y becomes scarcer, each
+additional unit of X buys less Y than the previous one. The execution rate
+worsens as the trade grows: this is the intuition behind **price impact**.
+A larger trade moves farther along the curve and has more price impact.
+
+The reserve ratio gives the starting marginal price. Imagine a pool with 100
+ETH and 200,000 USDC: it holds 2,000 USDC for every 1 ETH. Before a very small
+trade moves the reserves, that ratio is the price for a very small trade.
+Because the pool follows $xy\approx k$, the local change is about
+$y/x$ units of Y for each unit of X:
 
 $$
 P_X \approx \frac{y}{x}
@@ -96,6 +130,16 @@ Here $P_X$ is measured in units of Y per unit of X. A finite trade changes
 both reserves, so its average execution price differs from the starting spot
 price. This is the simplified constant-product v2 model, not a formula for
 every AMM or DEX design.
+
+The mental model is **trade → reserves change → reserve ratio changes →
+marginal price changes**. For pools starting at the same price, a deeper pool
+has larger reserves, so the same trade changes them by a smaller proportion
+and moves less far along the curve. That usually means less price impact.
+
+<figure class="academy-reference-visual academy-reference-visual--wide">
+  <img src="/images/researcher/uniswap-constant-product-curve-cropped.png" alt="Constant-product AMM curve labelled X times Y equals K. The axes show quantities of tokens A and B in the pool; a swap moves the pool from its old reserve position to a new one while the trader spends A and gains B." />
+  <figcaption><strong>What to notice:</strong> a trade moves the pool from one reserve position to another along the constant-product curve. The reserve ratio changes, so the marginal price changes too. Only the blank left margin was cropped; the labels and axes remain. Source: <a href="https://blog.uniswap.org/what-is-an-automated-market-maker">Uniswap, “What is an Automated Market Maker?”</a> (1 May 2025).</figcaption>
+</figure>
 
 For an input of $\Delta x$ X (measured in token X units) and fee rate $f$
 (a fraction, such as $0.003$ for 0.3%), the fee-adjusted amount used in the
@@ -189,7 +233,7 @@ USDC. The starting price is still 2,000 USDC per ETH.
 | 100 ETH / 200,000 USDC | 18,132.22 | 1,813.22 | 9.34% |
 | 200 ETH / 400,000 USDC | 18,993.19 | 1,899.32 | 5.03% |
 
-**Academy schematic — same initial price and 10 ETH trade; illustrative
+**Academy schematic: same initial price and 10 ETH trade; illustrative
 comparison, not a live quote:**
 
 ```mermaid
@@ -261,7 +305,7 @@ Your work is complete when:
 - [ ] the arbitrage answer names the direction of the next trade and its effect;
 - [ ] the depth explanation refers to the reserve ratio, not just "more money".
 
-::: details Further exploration — optional, not assessed
+::: details Further exploration: optional, not assessed
 - How large a trade, in ETH, would move the 150 ETH pool's spot price by 1%?
   Why do aggregators split big trades across pools?
 - A liquidity provider owns 10% of the pool. How much of this trade's fee is
@@ -273,8 +317,9 @@ Your work is complete when:
 :::
 
 ::: details Sources and attribution
-- [Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf) — Link, referenced only
-- [Uniswap docs — v2 pricing](https://developers.uniswap.org/docs/protocols/v2/concepts/pricing) — Link, referenced only
-- [Uniswap — Concentrated liquidity](https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity) — Link, protocol documentation; checked 26 October 2026
-- [Uniswap v2 — Understanding returns](https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns) — Link, protocol documentation
+- [Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf) (Link, referenced only)
+- [Uniswap: What is an Automated Market Maker?](https://blog.uniswap.org/what-is-an-automated-market-maker) (source for an attributed third-party teaching figure; original ownership remains with its rights holder and it is not covered by the Academy content licence; only blank left margin cropped, labels and axes retained)
+- [Uniswap docs: v2 pricing](https://developers.uniswap.org/docs/protocols/v2/concepts/pricing) (Link, referenced only)
+- [Uniswap: Concentrated liquidity](https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity) (protocol documentation, checked 26 October 2026)
+- [Uniswap v2: Understanding returns](https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns) (protocol documentation)
 :::
