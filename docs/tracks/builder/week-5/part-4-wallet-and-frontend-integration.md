@@ -47,9 +47,17 @@ Your script from [Part 3](./part-3-programmatic-contract-interaction.md)
 signed with a key from `.env`. A real user will never give you their key.
 Instead, their wallet signs, and your page asks it to.
 
-This Part fills in the starter frontend's empty sections: connect a wallet,
-read from the contract, write to it, and keep the user informed while they
-wait.
+The starter has four learner TODO sections. Across W5P4 and W5P5, you implement
+the frontend behaviour in those sections. This Part focuses on connecting a
+wallet, reading from the contract, writing to it, and keeping the user informed
+while they wait.
+
+The code below shows additions to the existing scaffold, not a replacement
+`App.tsx`. Keep its current imports and merge the new import names into them;
+add the state and effect inside the existing `App()` function, and replace the
+section 2 placeholder rather than adding a second component or duplicate
+section. The existing `src/vite-env.d.ts` already has the Vite reference line;
+keep it and add the `ImportMetaEnv` interface below it.
 
 ::: tip Picture a card terminal at a café
 The café's till builds the bill. The customer's own card and PIN approve it.
@@ -175,13 +183,64 @@ user reloading.
 
 ### Just enough React
 
-Two React tools cover everything here:
+React lets a page be described as small reusable **components**. In a `.tsx`
+file, JSX/TSX is the HTML-like structure returned by a component function.
+
+This tiny example is not Web3 code:
+
+```tsx
+import { useState } from 'react'
+
+function ConnectionLabel() {
+  const [message, setMessage] = useState('Not connected')
+
+  return (
+    <>
+      <button onClick={() => setMessage('Connected')}>Connect</button>
+      <p>{message}</p>
+      {message === 'Connected' && <small>Ready</small>}
+    </>
+  )
+}
+```
+
+- **State** (`message`) is a value the page remembers. Updating it redraws the
+  component.
+- An **event handler** (`onClick`) runs after a user action.
+- **Conditional rendering** (`condition && ...`) shows an element only when its
+  condition is true.
+- An **effect** (`useEffect`) runs code after the page draws, often to load data
+  or subscribe to wallet changes. Return a cleanup function to stop listening
+  when the component goes away.
+- An array's `.map()` can turn each item into a row of JSX. You may see it
+  when a page needs to display a list.
+
+The mental model is:
+
+```text
+user action → event handler runs → state changes → React redraws the relevant UI
+```
+
+For a contract write, that becomes:
+
+```text
+wallet request → pending state → receipt → success/error state → UI redraw
+```
+
+Two React tools appear throughout this Part:
 
 - `useState` holds a value the page shows, such as the account or the current
   stage. Changing it redraws the page.
 - `useEffect` runs code after the page draws, such as loading data or
   subscribing to wallet events. Return a clean-up function to stop listening
   when the page goes away.
+
+### Browser DevTools: where errors and requests appear
+
+Open the browser's developer tools by right-clicking the page and choosing
+**Inspect** (or **Inspect Element**). The **Console** shows runtime errors and
+logs. The **Network** tab shows requests the page sends, including its RPC
+requests. You will use these again in [W6 Part 2](../week-6/part-2-simulation-debugging-and-tracing.md).
 
 ### Worked example: a read with loading and error states
 

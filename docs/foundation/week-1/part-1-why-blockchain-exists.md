@@ -125,8 +125,8 @@ accepted? Blockchain is one answer to that problem.
 ### Operator → problem → answer
 
 ::: steps
-1. **Operator** — When you send money through a bank app, you ask the bank to update its ledger. That is efficient, reversible and usually useful, but everyone relies on the operator to stay solvent, honest and available.
-2. **Problem** — If many independent parties keep a shared record with no single controller, whose copy is right when they disagree? Without an operator checking its records, even double-spending becomes a hard coordination problem.
+1. **Operator** — When you send money through a bank app, you ask the bank to update its ledger. That is efficient, reversible and usually useful, but everyone relies on the operator to stay solvent (able to pay what it owes), honest and available.
+2. **Problem** — If many independent parties keep a shared record with no single controller, whose copy is right when they disagree? Without an operator checking its records, even double-spending (trying to spend the same digital value twice) becomes a hard coordination problem.
 3. **Answer** — ==A blockchain is a shared record that many independent computers maintain together, with rules that let them agree on what is true without any of them being in charge.==
 :::
 

@@ -184,6 +184,11 @@ nothing checks them yet. That is your task.
 | `vm.expectRevert(...)` | The next call **must** fail, with this error |
 | `vm.expectEmit(...)` | The next call **must** emit an event matching the one you emit after it |
 
+The boolean positions in `vm.expectEmit`, custom-error selectors and cheatcode
+syntax can be reused from this demonstrated pattern. You do not need to
+memorise the selector calculation; you do need to explain what the test proves
+and what behaviour would make it fail.
+
 The `selector` in `Registry.EmptyRecord.selector` is the first four bytes of
 the Keccak-256 hash of the error's canonical signature. Conceptually:
 

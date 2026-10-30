@@ -137,18 +137,26 @@ changing code.
 
 **The browser's developer tools.** The Console tab shows errors. The Network
 tab shows every request your page sends to the RPC, including the address and
-method in the request body.
+method in the request body. [W5 Part 4](../week-5/part-4-wallet-and-frontend-integration.md)
+shows how to open these tabs and what each one contains.
 
 **A block explorer.** Paste an address into
 [Sepolia Etherscan](https://sepolia.etherscan.io/) to see whether it is a
 contract, which transactions it received and which events it emitted.
 
 **`cast`, Foundry's command-line tool.** You installed it with Foundry in
-Week 5. It talks to the chain directly, with no app in between, which makes it
+[W5 Part 1](../week-5/part-1-run-the-stack.md), which also introduces the Git
+CLI you'll use to inspect or change the project. `cast` talks to the chain
+directly, with no app in between, which makes it
 ideal for checking one layer at a time. These commands are run against the
 starter's Registry, so you can try them yourself:
 
+Run these commands from the starter repository root in Bash, zsh or WSL. Load
+the starter's `.env` in that same shell before using `$RPC_URL`:
+
 ```bash
+source .env
+
 # Which chain is this RPC on? Sepolia is 11155111.
 cast chain-id --rpc-url $RPC_URL
 
@@ -165,8 +173,7 @@ cast sig-event "RecordUpdated(address,string)"
 
 *Expected results:* `11155111`; a long string of bytecode starting with
 `0x6080…`; `"Hello from NTU Blockchain Builder Lab"`; and
-`0xcbb1b4c2…` as the event topic. Run `source .env` first so `$RPC_URL` is
-set.
+`0xcbb1b4c2…` as the event topic.
 
 **Simulation.** Before sending a write, the starter-style code calls
 `simulateContract`. It runs the call against the current visible state without
@@ -238,13 +245,15 @@ places.
 
 1. **Get the lab and run it.** Commit and preserve your existing W5 work
    first. Create your own working branch from the shared remote lab branch
-   (replace `yourname` with your identifier):
+   (replace `yourname` with your identifier). Run these commands from the
+   starter repository root in Bash, zsh or WSL. If `.env` already exists,
+   keep it and add only any missing lab settings rather than overwriting it:
 
    ```bash
    git fetch origin
    git switch -c w6-2-yourname origin/w6-2-broken-dapp
    npm ci
-   cp .env.example .env
+   if [ ! -f .env ]; then cp .env.example .env; fi
    npm run dev
    ```
 

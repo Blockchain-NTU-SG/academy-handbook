@@ -1,0 +1,1184 @@
+{
+  "source_url": "https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false",
+  "retrieved_utc": "2026-10-30T08:52:42+00:00",
+  "metric": "DefiLlama reported daily Uniswap DEX volume",
+  "chain": "Ethereum",
+  "unit": "USD",
+  "dates_inclusive": [
+    "2026-08-01",
+    "2026-10-29"
+  ],
+  "method": "Select Ethereum entries from totalDataChartBreakdown and sum the reported Uniswap versions for each UTC date; exclude the all-chain total.",
+  "daily_chain_breakdown": [
+    {
+      "day_utc": "2026-08-01",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 16061,
+          "Uniswap V2": 2020598,
+          "Uniswap V3": 147700591,
+          "Uniswap V4": 160045896,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 309783146.0
+      }
+    },
+    {
+      "day_utc": "2026-08-02",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 11791,
+          "Uniswap V2": 808377,
+          "Uniswap V3": 153535886,
+          "Uniswap V4": 213565173,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 367921227.0
+      }
+    },
+    {
+      "day_utc": "2026-08-03",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 15911,
+          "Uniswap V2": 667230,
+          "Uniswap V3": 211063173,
+          "Uniswap V4": 256256335,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 468002649.0
+      }
+    },
+    {
+      "day_utc": "2026-08-04",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 21023,
+          "Uniswap V2": 2354541,
+          "Uniswap V3": 231640189,
+          "Uniswap V4": 313322285,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 547338038.0
+      }
+    },
+    {
+      "day_utc": "2026-08-05",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 53776,
+          "Uniswap V2": 1439343,
+          "Uniswap V3": 310683328,
+          "Uniswap V4": 311556814,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 623733261.0
+      }
+    },
+    {
+      "day_utc": "2026-08-06",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 43758,
+          "Uniswap V2": 1322135,
+          "Uniswap V3": 269983178,
+          "Uniswap V4": 411331960,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 682681031.0
+      }
+    },
+    {
+      "day_utc": "2026-08-07",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 17501,
+          "Uniswap V2": 739711,
+          "Uniswap V3": 261465553,
+          "Uniswap V4": 402532039,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 664754804.0
+      }
+    },
+    {
+      "day_utc": "2026-08-08",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 18946,
+          "Uniswap V2": 344639,
+          "Uniswap V3": 123642081,
+          "Uniswap V4": 174933027,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 298938693.0
+      }
+    },
+    {
+      "day_utc": "2026-08-09",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 16149,
+          "Uniswap V2": 319738,
+          "Uniswap V3": 118899694,
+          "Uniswap V4": 127868344,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 247103925.0
+      }
+    },
+    {
+      "day_utc": "2026-08-10",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 11866,
+          "Uniswap V2": 862793,
+          "Uniswap V3": 263164846,
+          "Uniswap V4": 369858199,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 633897704.0
+      }
+    },
+    {
+      "day_utc": "2026-08-11",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 17019,
+          "Uniswap V2": 708969,
+          "Uniswap V3": 190618706,
+          "Uniswap V4": 360014318,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 551359012.0
+      }
+    },
+    {
+      "day_utc": "2026-08-12",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 9757,
+          "Uniswap V2": 961986,
+          "Uniswap V3": 265422538,
+          "Uniswap V4": 330044675,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 596438956.0
+      }
+    },
+    {
+      "day_utc": "2026-08-13",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 12098,
+          "Uniswap V2": 883778,
+          "Uniswap V3": 203107397,
+          "Uniswap V4": 388936788,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 592940061.0
+      }
+    },
+    {
+      "day_utc": "2026-08-14",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 5168,
+          "Uniswap V2": 378109,
+          "Uniswap V3": 227325844,
+          "Uniswap V4": 375666906,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 603376027.0
+      }
+    },
+    {
+      "day_utc": "2026-08-15",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 4276,
+          "Uniswap V2": 532727,
+          "Uniswap V3": 86335700,
+          "Uniswap V4": 127678913,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 214551616.0
+      }
+    },
+    {
+      "day_utc": "2026-08-16",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 3806,
+          "Uniswap V2": 456771,
+          "Uniswap V3": 95342726,
+          "Uniswap V4": 146520777,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 242324080.0
+      }
+    },
+    {
+      "day_utc": "2026-08-17",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 10010,
+          "Uniswap V2": 1399174,
+          "Uniswap V3": 233817229,
+          "Uniswap V4": 282959874,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 518186287.0
+      }
+    },
+    {
+      "day_utc": "2026-08-18",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 13081,
+          "Uniswap V2": 1330153,
+          "Uniswap V3": 214401912,
+          "Uniswap V4": 259620900,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 475366046.0
+      }
+    },
+    {
+      "day_utc": "2026-08-19",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 75716,
+          "Uniswap V2": 11262554,
+          "Uniswap V3": 874135169,
+          "Uniswap V4": 533557017,
+          "Uniswap Auctions": 532307
+        },
+        "ethereum_total_usd": 1419562763.0
+      }
+    },
+    {
+      "day_utc": "2026-08-20",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 55469,
+          "Uniswap V2": 6086154,
+          "Uniswap V3": 605852991,
+          "Uniswap V4": 689760087,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1301754701.0
+      }
+    },
+    {
+      "day_utc": "2026-08-21",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 58690,
+          "Uniswap V2": 3464848,
+          "Uniswap V3": 872805468,
+          "Uniswap V4": 777816094,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1654145100.0
+      }
+    },
+    {
+      "day_utc": "2026-08-22",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 485500,
+          "Uniswap V2": 3156380,
+          "Uniswap V3": 498129100,
+          "Uniswap V4": 426546680,
+          "Uniswap Auctions": 3133
+        },
+        "ethereum_total_usd": 928320793.0
+      }
+    },
+    {
+      "day_utc": "2026-08-23",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 38266,
+          "Uniswap V2": 2536985,
+          "Uniswap V3": 424086205,
+          "Uniswap V4": 365148846,
+          "Uniswap Auctions": 366
+        },
+        "ethereum_total_usd": 791810668.0
+      }
+    },
+    {
+      "day_utc": "2026-08-24",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 41906,
+          "Uniswap V2": 2016759,
+          "Uniswap V3": 468152081,
+          "Uniswap V4": 482541798,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 952752544.0
+      }
+    },
+    {
+      "day_utc": "2026-08-25",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 27090,
+          "Uniswap V2": 1651773,
+          "Uniswap V3": 397048374,
+          "Uniswap V4": 600053339,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 998780576.0
+      }
+    },
+    {
+      "day_utc": "2026-08-26",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 21454,
+          "Uniswap V2": 1313572,
+          "Uniswap V3": 288708090,
+          "Uniswap V4": 356184007,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 646227123.0
+      }
+    },
+    {
+      "day_utc": "2026-08-27",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 20037,
+          "Uniswap V2": 2323999,
+          "Uniswap V3": 365263874,
+          "Uniswap V4": 773975995,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1141583905.0
+      }
+    },
+    {
+      "day_utc": "2026-08-28",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 34129,
+          "Uniswap V2": 1724657,
+          "Uniswap V3": 386416392,
+          "Uniswap V4": 754375108,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1142550286.0
+      }
+    },
+    {
+      "day_utc": "2026-08-29",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 8655,
+          "Uniswap V2": 1067798,
+          "Uniswap V3": 126522352,
+          "Uniswap V4": 370554302,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 498153107.0
+      }
+    },
+    {
+      "day_utc": "2026-08-30",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 27281,
+          "Uniswap V2": 2021045,
+          "Uniswap V3": 259101826,
+          "Uniswap V4": 193028545,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 454178697.0
+      }
+    },
+    {
+      "day_utc": "2026-08-31",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 18722,
+          "Uniswap V2": 1468397,
+          "Uniswap V3": 284063406,
+          "Uniswap V4": 385691532,
+          "Uniswap Auctions": 0.4
+        },
+        "ethereum_total_usd": 671242057.4
+      }
+    },
+    {
+      "day_utc": "2026-09-01",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 37464,
+          "Uniswap V2": 1645392,
+          "Uniswap V3": 343697329,
+          "Uniswap V4": 424322525,
+          "Uniswap Auctions": 3183
+        },
+        "ethereum_total_usd": 769705893.0
+      }
+    },
+    {
+      "day_utc": "2026-09-02",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 35119,
+          "Uniswap V2": 2800307,
+          "Uniswap V3": 326147489,
+          "Uniswap V4": 466348937,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 795331852.0
+      }
+    },
+    {
+      "day_utc": "2026-09-03",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 28592,
+          "Uniswap V2": 7215669,
+          "Uniswap V3": 477564118,
+          "Uniswap V4": 411198805,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 896007184.0
+      }
+    },
+    {
+      "day_utc": "2026-09-04",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 615894,
+          "Uniswap V2": 7966635,
+          "Uniswap V3": 383834161,
+          "Uniswap V4": 471318272,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 863734962.0
+      }
+    },
+    {
+      "day_utc": "2026-09-05",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 26413,
+          "Uniswap V2": 6543673,
+          "Uniswap V3": 139225935,
+          "Uniswap V4": 231719776,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 377515797.0
+      }
+    },
+    {
+      "day_utc": "2026-09-06",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 28181,
+          "Uniswap V2": 10440766,
+          "Uniswap V3": 228757938,
+          "Uniswap V4": 200678372,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 439905257.0
+      }
+    },
+    {
+      "day_utc": "2026-09-07",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 130310,
+          "Uniswap V2": 4540857,
+          "Uniswap V3": 254397231,
+          "Uniswap V4": 325012022,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 584080420.0
+      }
+    },
+    {
+      "day_utc": "2026-09-08",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 24303,
+          "Uniswap V2": 3586176,
+          "Uniswap V3": 273583841,
+          "Uniswap V4": 452807752,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 730002072.0
+      }
+    },
+    {
+      "day_utc": "2026-09-09",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 28100,
+          "Uniswap V2": 3267489,
+          "Uniswap V3": 327546332,
+          "Uniswap V4": 412189759,
+          "Uniswap Auctions": 174
+        },
+        "ethereum_total_usd": 743031854.0
+      }
+    },
+    {
+      "day_utc": "2026-09-10",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 21535,
+          "Uniswap V2": 10208292,
+          "Uniswap V3": 272256496,
+          "Uniswap V4": 558474994,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 840961317.0
+      }
+    },
+    {
+      "day_utc": "2026-09-11",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 38858,
+          "Uniswap V2": 15503147,
+          "Uniswap V3": 528484171,
+          "Uniswap V4": 511787014,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1055813190.0
+      }
+    },
+    {
+      "day_utc": "2026-09-12",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 6751,
+          "Uniswap V2": 9885045,
+          "Uniswap V3": 108524333,
+          "Uniswap V4": 169473854,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 287889983.0
+      }
+    },
+    {
+      "day_utc": "2026-09-13",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 37753,
+          "Uniswap V2": 8375698,
+          "Uniswap V3": 165541376,
+          "Uniswap V4": 232334506,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 406289333.0
+      }
+    },
+    {
+      "day_utc": "2026-09-14",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 51640,
+          "Uniswap V2": 5875840,
+          "Uniswap V3": 359820850,
+          "Uniswap V4": 439236818,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 804985148.0
+      }
+    },
+    {
+      "day_utc": "2026-09-15",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 34295,
+          "Uniswap V2": 3055888,
+          "Uniswap V3": 463852541,
+          "Uniswap V4": 705393317,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1172336041.0
+      }
+    },
+    {
+      "day_utc": "2026-09-16",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 28915,
+          "Uniswap V2": 6082359,
+          "Uniswap V3": 401251929,
+          "Uniswap V4": 645499730,
+          "Uniswap Auctions": 293
+        },
+        "ethereum_total_usd": 1052863226.0
+      }
+    },
+    {
+      "day_utc": "2026-09-17",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 28083,
+          "Uniswap V2": 2721050,
+          "Uniswap V3": 314426362,
+          "Uniswap V4": 516594778,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 833770273.0
+      }
+    },
+    {
+      "day_utc": "2026-09-18",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 105347,
+          "Uniswap V2": 4927996,
+          "Uniswap V3": 498904772,
+          "Uniswap V4": 591358214,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1095296329.0
+      }
+    },
+    {
+      "day_utc": "2026-09-19",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 28091,
+          "Uniswap V2": 4470447,
+          "Uniswap V3": 312502134,
+          "Uniswap V4": 380112720,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 697113392.0
+      }
+    },
+    {
+      "day_utc": "2026-09-20",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 658369,
+          "Uniswap V2": 1614731,
+          "Uniswap V3": 288072754,
+          "Uniswap V4": 364506123,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 654851977.0
+      }
+    },
+    {
+      "day_utc": "2026-09-21",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 52001,
+          "Uniswap V2": 7197526,
+          "Uniswap V3": 687290555,
+          "Uniswap V4": 689382343,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1383922425.0
+      }
+    },
+    {
+      "day_utc": "2026-09-22",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 27693,
+          "Uniswap V2": 4757730,
+          "Uniswap V3": 439380862,
+          "Uniswap V4": 651080294,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1095246579.0
+      }
+    },
+    {
+      "day_utc": "2026-09-23",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 51362,
+          "Uniswap V2": 1368097,
+          "Uniswap V3": 426155262,
+          "Uniswap V4": 527877586,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 955452307.0
+      }
+    },
+    {
+      "day_utc": "2026-09-24",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 27202,
+          "Uniswap V2": 2453205,
+          "Uniswap V3": 464527918,
+          "Uniswap V4": 659407439,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1126415764.0
+      }
+    },
+    {
+      "day_utc": "2026-09-25",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 47635,
+          "Uniswap V2": 6041022,
+          "Uniswap V3": 417976751,
+          "Uniswap V4": 520309615,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 944375023.0
+      }
+    },
+    {
+      "day_utc": "2026-09-26",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 18350,
+          "Uniswap V2": 7755472,
+          "Uniswap V3": 174838385,
+          "Uniswap V4": 365821417,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 548433624.0
+      }
+    },
+    {
+      "day_utc": "2026-09-27",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 175331,
+          "Uniswap V2": 9493582,
+          "Uniswap V3": 242789860,
+          "Uniswap V4": 324200053,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 576658826.0
+      }
+    },
+    {
+      "day_utc": "2026-09-28",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 89677,
+          "Uniswap V2": 3717459,
+          "Uniswap V3": 509242005,
+          "Uniswap V4": 663562994,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1176612135.0
+      }
+    },
+    {
+      "day_utc": "2026-09-29",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 72994,
+          "Uniswap V2": 926904,
+          "Uniswap V3": 456561717,
+          "Uniswap V4": 545485294,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1003046909.0
+      }
+    },
+    {
+      "day_utc": "2026-09-30",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 35504,
+          "Uniswap V2": 12739936,
+          "Uniswap V3": 367162658,
+          "Uniswap V4": 551144768,
+          "Uniswap Auctions": 37666
+        },
+        "ethereum_total_usd": 931120532.0
+      }
+    },
+    {
+      "day_utc": "2026-10-01",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 25139,
+          "Uniswap V2": 12914871,
+          "Uniswap V3": 326081064,
+          "Uniswap V4": 493453407,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 832474481.0
+      }
+    },
+    {
+      "day_utc": "2026-10-02",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 193460,
+          "Uniswap V2": 19702576,
+          "Uniswap V3": 323473403,
+          "Uniswap V4": 684434108,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1027803547.0
+      }
+    },
+    {
+      "day_utc": "2026-10-03",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 152346,
+          "Uniswap V2": 9294877,
+          "Uniswap V3": 131727949,
+          "Uniswap V4": 215525980,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 356701152.0
+      }
+    },
+    {
+      "day_utc": "2026-10-04",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 34459,
+          "Uniswap V2": 14404974,
+          "Uniswap V3": 162640169,
+          "Uniswap V4": 219870155,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 396949757.0
+      }
+    },
+    {
+      "day_utc": "2026-10-05",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 41761,
+          "Uniswap V2": 14981212,
+          "Uniswap V3": 254580554,
+          "Uniswap V4": 457983908,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 727587435.0
+      }
+    },
+    {
+      "day_utc": "2026-10-06",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 184175,
+          "Uniswap V2": 12214667,
+          "Uniswap V3": 216204983,
+          "Uniswap V4": 456549747,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 685153572.0
+      }
+    },
+    {
+      "day_utc": "2026-10-07",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 51269,
+          "Uniswap V2": 13109545,
+          "Uniswap V3": 346333820,
+          "Uniswap V4": 709749199,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1069243833.0
+      }
+    },
+    {
+      "day_utc": "2026-10-08",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 170227,
+          "Uniswap V2": 15382605,
+          "Uniswap V3": 588792242,
+          "Uniswap V4": 583039136,
+          "Uniswap Auctions": 148
+        },
+        "ethereum_total_usd": 1187384358.0
+      }
+    },
+    {
+      "day_utc": "2026-10-09",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 17582,
+          "Uniswap V2": 9558008,
+          "Uniswap V3": 230297794,
+          "Uniswap V4": 433511276,
+          "Uniswap Auctions": 0.09
+        },
+        "ethereum_total_usd": 673384660.09
+      }
+    },
+    {
+      "day_utc": "2026-10-10",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 17087,
+          "Uniswap V2": 6001543,
+          "Uniswap V3": 138462370,
+          "Uniswap V4": 199173345,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 343654345.0
+      }
+    },
+    {
+      "day_utc": "2026-10-11",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 21342,
+          "Uniswap V2": 8520897,
+          "Uniswap V3": 173701960,
+          "Uniswap V4": 300106781,
+          "Uniswap Auctions": 854
+        },
+        "ethereum_total_usd": 482351834.0
+      }
+    },
+    {
+      "day_utc": "2026-10-12",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 26090,
+          "Uniswap V2": 10159081,
+          "Uniswap V3": 316991458,
+          "Uniswap V4": 436917688,
+          "Uniswap Auctions": 2
+        },
+        "ethereum_total_usd": 764094319.0
+      }
+    },
+    {
+      "day_utc": "2026-10-13",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 38074,
+          "Uniswap V2": 10806890,
+          "Uniswap V3": 455012393,
+          "Uniswap V4": 549742176,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 1015599533.0
+      }
+    },
+    {
+      "day_utc": "2026-10-14",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 627958,
+          "Uniswap V2": 10466437,
+          "Uniswap V3": 387058605,
+          "Uniswap V4": 544517997,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 942670997.0
+      }
+    },
+    {
+      "day_utc": "2026-10-15",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 61291,
+          "Uniswap V2": 13801871,
+          "Uniswap V3": 490912557,
+          "Uniswap V4": 591782889,
+          "Uniswap Auctions": 2.1
+        },
+        "ethereum_total_usd": 1096558610.1
+      }
+    },
+    {
+      "day_utc": "2026-10-16",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 28782,
+          "Uniswap V2": 9715661,
+          "Uniswap V3": 218564290,
+          "Uniswap V4": 429448268,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 657757001.0
+      }
+    },
+    {
+      "day_utc": "2026-10-17",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 30043,
+          "Uniswap V2": 7126799,
+          "Uniswap V3": 140456421,
+          "Uniswap V4": 177012218,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 324625481.0
+      }
+    },
+    {
+      "day_utc": "2026-10-18",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 24732,
+          "Uniswap V2": 24800696,
+          "Uniswap V3": 216937961,
+          "Uniswap V4": 183209033,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 424972422.0
+      }
+    },
+    {
+      "day_utc": "2026-10-19",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 105510,
+          "Uniswap V2": 8670476,
+          "Uniswap V3": 274731953,
+          "Uniswap V4": 376056426,
+          "Uniswap Auctions": 3.5
+        },
+        "ethereum_total_usd": 659564368.5
+      }
+    },
+    {
+      "day_utc": "2026-10-20",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 30503,
+          "Uniswap V2": 12822880,
+          "Uniswap V3": 316398258,
+          "Uniswap V4": 435093910,
+          "Uniswap Auctions": 2.5
+        },
+        "ethereum_total_usd": 764345553.5
+      }
+    },
+    {
+      "day_utc": "2026-10-21",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 22566,
+          "Uniswap V2": 9967263,
+          "Uniswap V3": 264528060,
+          "Uniswap V4": 495543328,
+          "Uniswap Auctions": 137749
+        },
+        "ethereum_total_usd": 770198966.0
+      }
+    },
+    {
+      "day_utc": "2026-10-22",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 25087,
+          "Uniswap V2": 8348717,
+          "Uniswap V3": 291271241,
+          "Uniswap V4": 438461094,
+          "Uniswap Auctions": 1217
+        },
+        "ethereum_total_usd": 738107356.0
+      }
+    },
+    {
+      "day_utc": "2026-10-23",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 16955,
+          "Uniswap V2": 12453655,
+          "Uniswap V3": 267561897,
+          "Uniswap V4": 409526992,
+          "Uniswap Auctions": 1217
+        },
+        "ethereum_total_usd": 689560716.0
+      }
+    },
+    {
+      "day_utc": "2026-10-24",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 19541,
+          "Uniswap V2": 9020450,
+          "Uniswap V3": 252422012,
+          "Uniswap V4": 268705141,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 530167144.0
+      }
+    },
+    {
+      "day_utc": "2026-10-25",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 19502,
+          "Uniswap V2": 7654123,
+          "Uniswap V3": 181970431,
+          "Uniswap V4": 355762753,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 545406809.0
+      }
+    },
+    {
+      "day_utc": "2026-10-26",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 20777,
+          "Uniswap V2": 9421974,
+          "Uniswap V3": 313022769,
+          "Uniswap V4": 475664840,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 798130360.0
+      }
+    },
+    {
+      "day_utc": "2026-10-27",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 404017,
+          "Uniswap V2": 8225751,
+          "Uniswap V3": 243804636,
+          "Uniswap V4": 408493145,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 660927549.0
+      }
+    },
+    {
+      "day_utc": "2026-10-28",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 20027,
+          "Uniswap V2": 11689347,
+          "Uniswap V3": 274667071,
+          "Uniswap V4": 613437595,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 899814040.0
+      }
+    },
+    {
+      "day_utc": "2026-10-29",
+      "chain_breakdown": {
+        "Ethereum": {
+          "Uniswap V1": 187909,
+          "Uniswap V2": 169993075,
+          "Uniswap V3": 2620506294,
+          "Uniswap V4": 1425161092,
+          "Uniswap Auctions": 0
+        },
+        "ethereum_total_usd": 4215848370.0
+      }
+    }
+  ]
+}

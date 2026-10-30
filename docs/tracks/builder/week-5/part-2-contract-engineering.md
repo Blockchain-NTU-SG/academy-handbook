@@ -164,6 +164,10 @@ it.* Invariants are what you will test in Week 6.
 Notice the order inside `endorse`: all the checks first, then the state
 changes, then the event. If any check fails, nothing changes.
 
+Use this feature as a pattern: you are not expected to recall unfamiliar
+Solidity syntax from memory; you are expected to explain the state, rule, event
+and failure you add.
+
 **Compile and check nothing broke:**
 
 ```bash

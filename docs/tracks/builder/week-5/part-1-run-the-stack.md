@@ -37,9 +37,11 @@ In [Week 3](../../../foundation/week-3/part-3-remix-lab.md) you wrote,
 deployed and called a contract inside Remix. Remix did a lot for you: it held
 the code, compiled it, picked a network and showed you buttons.
 
-From now on you work the way builders do: code in a folder on your laptop,
-tools in a terminal, and scripts that talk to the chain. This Part gets that
-setup running and shows you how its pieces connect.
+**No programming background beyond Foundation is assumed.** From now on you
+will work with code in a folder on your laptop, tools in a terminal and scripts
+that talk to the chain. This Part introduces those tools and shows how their
+pieces connect; you do not need to arrive comfortable with a terminal or
+JavaScript.
 
 ::: tip Picture a restaurant kitchen
 Remix is a meal kit: everything arrives measured and boxed. A real kitchen
@@ -70,17 +72,59 @@ After this Part you can:
 These names identify the stations you are about to connect. This is an
 orientation, not a second installation guide.
 
-- **Foundry** — a Solidity development toolkit.
-- **`forge`** — Foundry's command-line tool for compiling and testing
-  contracts.
-- **viem** — a TypeScript library used by scripts and frontends to read and
-  write Ethereum data.
-- **RPC endpoint** — the network address your program uses to ask a blockchain
-  node for data or submit a request.
-- **Application Binary Interface (ABI)** — the machine-readable description of
-  the functions and events a contract exposes, including how arguments and
-  results are encoded.
-- **Vite** — the frontend development and build tool used by the starter app.
+**Time note:** The 35-minute Part estimate assumes the required tools are
+already installed. First-time Node.js, Foundry or Windows/WSL setup may take
+additional time. It is one-time setup, not Academy task work.
+
+| Tool or file | What it does here |
+|---|---|
+| **Terminal** | Runs text commands inside a current folder on your laptop. A command is what you type; output is what the tool prints back. |
+| **Git** | Tracks project changes and shares them through GitHub. The Git CLI is its terminal-based form. |
+| **Node.js** | Runs JavaScript and TypeScript tools on your laptop. |
+| **npm** | Installs JavaScript packages and runs project shortcuts. |
+| **`package.json`** | Lists project packages and the shortcuts available through `npm run`. |
+| **TypeScript** | JavaScript with optional type labels that help tools catch mistakes. |
+| **Foundry / `forge`** | Foundry is the Solidity toolkit; `forge` compiles and tests contracts. |
+| **viem** | A TypeScript library that talks to Ethereum through an RPC endpoint. |
+| **Vite** | Runs and builds the React frontend. |
+| **`.env`** | A local file for settings such as an RPC URL; it is not committed. |
+| **RPC endpoint** | The network address a program uses to ask a blockchain node for data or submit a request. |
+| **Application Binary Interface (ABI)** | The machine-readable description of a contract's functions and events, including how inputs and results are encoded. |
+
+#### Terminal: command, folder, output
+
+Commands act in the **current folder**, the directory your terminal is
+currently working in. Use these to check or move between folders:
+
+```bash
+pwd                       # show the current folder
+ls                        # list its files
+cd academy-builder-starter # move into the project folder
+cd ..                     # move up one folder
+```
+
+The first command assumes you kept Git's default clone-folder name. If you
+chose a different name when cloning, move into that folder instead.
+
+If a command starts a server and keeps the terminal occupied, press **Ctrl+C**
+to stop that process. On Windows, use [Microsoft's official WSL installation
+guide](https://learn.microsoft.com/en-us/windows/wsl/install) to set up the
+Linux-compatible terminal environment these tools expect.
+
+#### Git CLI: the terminal form of GitHub collaboration
+
+These commands cover the operations used in Builder; you do not need advanced
+Git:
+
+| Command | Meaning |
+|---|---|
+| `git clone --recurse-submodules <url>` | Copy the project and its test-library submodule to your laptop. |
+| `git status` | Show which files changed. |
+| `git switch -c <name>` | Create and move to your own branch. |
+| `git fetch` | Download the latest remote history without merging it into your branch. |
+| `git add <file>` | Select a changed file for the next saved change. |
+| `git commit -m "message"` | Save the selected change in your local history. |
+| `git push -u origin <name>` | Upload your branch to GitHub. |
 
 The same action crosses several of these stations. The visual below is an
 explanatory map of the path; the later file trace gives the exact code.
@@ -154,15 +198,41 @@ is never written into the code. Instead:
 Some values are sensitive. `.env.example` documents names and safe defaults;
 it must not contain your private key or a provider credential.
 
-### Just enough TypeScript
+### Programming survival kit
 
-You do not need to be a TypeScript developer for this track. Three things are
-enough to read the starter's scripts:
+You do not need to memorise syntax or become a TypeScript developer. You need
+to follow where data comes from, which function is called, what goes in, what
+comes back and where an error is handled. For example:
 
-- `import { x } from './file.js'` pulls in something another file exports.
-- `await` waits for a slow operation, such as a network request, to finish.
-- `try … catch`, or `.catch(…)` on a promise, handles an error instead of
-  crashing.
+```ts
+const learner = { name: 'Ari' }
+
+function greeting(name: string): string {
+  if (!name) return 'Hello'
+  return `Hello, ${name}`
+}
+
+const message = greeting(learner.name)
+console.log(message)
+```
+
+- A **variable** (`learner`) stores a value. An **object** groups named values;
+  `learner.name` reads its `name` property.
+- A **function** is reusable behaviour. Calling `greeting(...)` passes an
+  **argument** (`learner.name`) into its parameter (`name`); the **return
+  value** is the result it gives back. `if` chooses what to do when a condition
+  is true.
+- `: string` is a TypeScript type label saying this value should be text.
+- An **array** is an ordered list. `.map()` is a common way to turn each item
+  into a displayed row; you will recognise it in the frontend Parts.
+- `import` uses code another file exports. `async` marks a function that can
+  wait for a slow operation; `await` waits for it. `try … catch` handles an
+  error rather than letting it stop the whole script.
+
+You only need to read and adapt these patterns. For `npm run read`, for
+example, follow the address and RPC into the function, see what it returns and
+notice which `catch` reports a failure. Ask AI to explain unfamiliar syntax,
+then run and verify the result.
 
 ### Worked example: trace `npm run read`
 

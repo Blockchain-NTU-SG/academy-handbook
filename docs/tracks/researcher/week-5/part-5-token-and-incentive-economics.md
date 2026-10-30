@@ -139,9 +139,10 @@ supply and what they are paid to want.
 ==Protocol usage ≠ fees ≠ revenue ≠ earnings ≠ token-holder value accrual.==
 **Value accrual** means an economic benefit reaches token holders through a
 documented mechanism, such as a distribution, buyback or burn, required token
-use, or another enforceable right. Governance rights alone do not guarantee
-that benefit. Map the path instead of assuming that an active protocol makes
-its token valuable.
+use, or another enforceable right. A **buyback** uses protocol-controlled
+assets to purchase the token from the market. Governance rights alone do not
+guarantee that benefit. Map the path instead of assuming that an active
+protocol makes its token valuable.
 
 Imagine a user pays a simplified **$10 fee**. That $10 is a fee, but it is not
 all automatically protocol revenue. The rules may send some to service
@@ -181,14 +182,14 @@ keeps the definitions and questions precise.
 | Demand drivers | A demand driver is a reason someone needs or wants the token. Is it required for a service, collateral, security, governance or another use? Who needs it, and why? |
 | Usage → fees | Which activity pays a charge, rather than just moving assets? |
 | Fees → revenue | What goes to suppliers or liquidity providers, and what is retained by the protocol or distributed to holders? |
-| Revenue → earnings / treasury | What remains after the stated costs or incentives? Is the figure cash flow, an accounting estimate or token emissions? |
+| Revenue → earnings / treasury | What remains after the stated costs or incentives? Does the figure represent assets actually received or spent, an accounting estimate, or newly issued token rewards? |
 | Token-holder accrual | Is there an enforceable distribution, buyback/burn or another credible economic link? Who can change it? |
 
 Providers use different definitions; DefiLlama separates supply-side payments,
 protocol revenue and token-holder revenue. Name your convention and period
 before comparing figures. Governance rights establish decision power, not by
-themselves a claim on cash flow or automatic demand. An unlock percentage is
-context, not a universal danger threshold.
+themselves a claim on retained revenue or automatic token demand. An unlock
+percentage is context, not a universal danger threshold.
 
 ### Worked example: NOVA
 

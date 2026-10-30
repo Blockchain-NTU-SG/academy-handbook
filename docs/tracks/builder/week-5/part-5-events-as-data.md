@@ -158,22 +158,134 @@ so the code must handle those limits rather than depend on one endpoint.
 
 The starter's default RPC, `https://ethereum-sepolia-rpc.publicnode.com`, is
 quick for reads and writes but keeps only recent logs. If your contract is
-more than a day or two old, you will hit `pruned history unavailable`. Switch
-both lines in `.env`:
+more than a day or two old, you will hit `pruned history unavailable`. For
+the event script, change `RPC_URL` in `.env`; that is the setting read by
+`scripts/client.ts`. `VITE_RPC_URL` is the frontend setting introduced in
+Part 4. Change both only if you also want the frontend to use the same
+provider; after changing `VITE_RPC_URL`, restart `npm run dev`.
 
 ```bash
 RPC_URL=https://sepolia.gateway.tenderly.co
 VITE_RPC_URL=https://sepolia.gateway.tenderly.co
 ```
 
-Restart `npm run dev` afterwards. At the time of that check, Tenderly's public
-gateway was free, needed no account and served every block from the shared
-Registry's deployment onwards. Any Sepolia provider that keeps full history
-works as well; verify the current limits before relying on it.
+At the time of that check, Tenderly's public gateway was free, needed no
+account and served every block from the shared Registry's deployment onwards.
+Any Sepolia provider that keeps full history works as well; verify the current
+limits before relying on it.
+
+### Worked helper pattern: read bounded block windows
+
+An RPC may reject a request that covers too many blocks. This helper accepts
+your event-query function, starts at the deployment block you provide, and
+shrinks the window only for a recognised block-range limit. It stops at a
+minimum size, reports pruned history separately, and lets unrelated errors
+surface unchanged.
+
+```ts
+type BlockQuery<T> = (fromBlock: bigint, toBlock: bigint) => Promise<T[]>
+
+function errorText(error: unknown): string {
+  const messages: string[] = []
+  const seen = new Set<Error>()
+  let current: unknown = error
+
+  while (current instanceof Error && !seen.has(current)) {
+    seen.add(current)
+    messages.push(current.message)
+    current = (current as Error & { cause?: unknown }).cause
+  }
+
+  return (messages.join(' ') || String(current ?? error)).toLowerCase()
+}
+
+function isPrunedHistory(message: string): boolean {
+  return /prun|missing trie|historical.*(?:unavailable|not available)/.test(message)
+}
+
+function isBlockRangeLimit(message: string): boolean {
+  const knownPatterns = [
+    /(?:block|log) range.*(?:limit|too (?:wide|large)|exceed|maximum)/,
+    /(?:max|maximum|limit|limited).{0,40}(?:block|log|range|blocks?)/,
+    /(?:too many|more than \d+) logs?/,
+  ]
+  return knownPatterns.some((pattern) => pattern.test(message))
+}
+
+async function readInWindows<T>(
+  query: BlockQuery<T>,
+  deploymentBlock: bigint,
+  latestBlock: bigint,
+  initialWindow = 2_000n,
+  minimumWindow = 100n,
+): Promise<T[]> {
+  if (minimumWindow < 1n || initialWindow < minimumWindow) {
+    throw new Error('The minimum window must be positive and no larger than the initial window.')
+  }
+  if (deploymentBlock > latestBlock) return []
+
+  const rows: T[] = []
+  let fromBlock = deploymentBlock
+  let windowSize = initialWindow
+
+  while (fromBlock <= latestBlock) {
+    const windowEnd = fromBlock + windowSize - 1n
+    const toBlock = windowEnd < latestBlock ? windowEnd : latestBlock
+
+    try {
+      const page = await query(fromBlock, toBlock)
+      for (const row of page) rows.push(row)
+      fromBlock = toBlock + 1n
+    } catch (error) {
+      const message = errorText(error)
+      if (isPrunedHistory(message)) {
+        throw new Error(
+          `This RPC has pruned the requested history. Use a provider that retains older logs. Original error: ${message}`,
+        )
+      }
+      if (!isBlockRangeLimit(message)) throw error
+      if (windowSize === minimumWindow) {
+        throw new Error(
+          `The RPC rejected the minimum ${minimumWindow}-block range. Original error: ${message}`,
+        )
+      }
+      const half = windowSize / 2n
+      windowSize = half < minimumWindow ? minimumWindow : half
+    }
+  }
+
+  return rows
+}
+```
+
+Use the query callback to select the event and contract you need:
+
+```ts
+const latestBlock = await client.getBlockNumber()
+const logs = await readInWindows(
+  (fromBlock, toBlock) => client.getContractEvents({
+    address: address!,
+    abi,
+    eventName: 'RecordUpdated',
+    fromBlock,
+    toBlock,
+  }),
+  BigInt(deployment.blockNumber),
+  latestBlock,
+)
+```
+
+This is generic provider plumbing. You may copy and adapt the pattern in your
+own project. You should be able to explain why it chunks requests and retries
+only a known range-limit error, but inventing the retry algorithm is not the
+Web3 skill being assessed. Your app still maps the decoded events into rows,
+sorts them, shows loading/empty/error states, and verifies history against
+current contract state.
 
 ### Worked example: your first look
 
-Read one window of events, starting at the deployment block. Save this as
+Run these commands from the starter repository root. Read one window of
+events, starting at the deployment block. Save the script as
 `scripts/events-first-look.ts`:
 
 ```ts
@@ -230,12 +342,17 @@ Why each part is there:
 Complete section **4. Events** in `src/App.tsx`, for the contract
 `shared/contract.ts` points at (your own, after Part 3).
 
-1. **Load the history.** Write a function that returns every `RecordUpdated`
-   event from the deployment block to the latest block, as typed rows
-   (account, value, kind `set` or `cleared`, block number, log index,
-   transaction hash), newest first. It must read in windows, and halve the
-   window when the RPC rejects one. Below a floor (for example 50 blocks), stop
-   and report the error instead of retrying forever.
+Add the helper functions from the worked pattern above in `src/App.tsx`,
+outside the existing `App()` component. Add the query in the existing
+section 4 TODO; do not create a second `App()` component.
+
+1. **Load the history.** Use the provided worked helper pattern with a
+   `getContractEvents` query for `RecordUpdated`, from the deployment block to
+   the latest block. Copy the pattern into your working project if useful. Map
+   the decoded events into typed rows (account, value, kind `set` or `cleared`,
+   block number, log index and transaction hash), then sort newest first.
+   Explain why a rejected wide range shrinks, why it stops at a floor, and why
+   pruned history needs another RPC.
 2. **Show it.** Render the newest 25 rows: the account shortened, what happened
    (set to a value, or cleared), the block and its time, and a link to the
    transaction on Sepolia Etherscan. Show clear **loading**, **empty** and
@@ -263,8 +380,9 @@ run your verification step.
 - A screenshot of the Events section showing your list (or the empty state).
 - Your verification output: the account, its newest event value, and
   `records(account)`.
-- Two or three sentences: what does your code do when the RPC rejects a range,
-  what does it do when history is pruned, and what does a "cleared" row mean?
+- Two or three sentences: what does the provided worked helper pattern do when
+  the RPC rejects a range, what happens when history is pruned, and what does a
+  "cleared" row mean?
 
 ## Completion and revision
 
@@ -275,7 +393,7 @@ revision. There is no partial-score rubric.
 Your work is complete when:
 
 - [ ] events are read from the deployment block to the latest block, not from 0;
-- [ ] a rejected range shrinks the window, and a floor stops endless retries;
+- [ ] the provided helper pattern shrinks a rejected range and stops at its configured floor;
 - [ ] rows are typed, sorted newest first, and an empty value shows as "cleared";
 - [ ] the Events section shows loading, empty and error states;
 - [ ] your verification shows the newest event matches `records(account)`;
