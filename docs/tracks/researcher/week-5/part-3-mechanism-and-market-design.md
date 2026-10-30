@@ -53,8 +53,11 @@ pays you out of the other, keeping the two in balance by its rule. The more
 you pour in, the more the balance tilts against you.
 
 Where the picture stops: a see-saw tilts back by itself. A pool does not. It
-only moves back when someone trades the other way, usually an arbitrageur who
-profits from the gap.
+only moves back when someone trades the other way. An **arbitrageur** buys an
+asset where it is cheaper and sells it where it is more expensive, trying to
+earn the difference. If ETH is cheaper in the pool than elsewhere, an
+arbitrageur can buy ETH from the pool and sell it elsewhere. That trade changes
+the reserves and can move the pool price toward the wider market.
 :::
 
 ## The hard skill
@@ -94,6 +97,18 @@ As the X reserve $x$ increases, the Y reserve $y$ must fall to keep the
 product at $k$. The relationship is not a straight line: doubling $x$ halves
 $y$, while equal additions to $x$ do not produce equal changes in $y$.
 
+These price terms describe different things in this simplified pool:
+
+| Term | Plain-English meaning |
+|---|---|
+| **Starting spot / marginal price** | The pool's price for the next very small trade, before that trade meaningfully changes the reserves. |
+| **Average execution price** | The average price for the whole trade: total Y received divided by total X sent. |
+| **Price impact** | The price change caused by the trade itself changing the pool's reserves. |
+
+For a very small trade, the average execution price can be close to the
+starting marginal price. A larger trade changes the reserves more, so its
+average execution price becomes worse.
+
 Suppose a trader sells X to receive Y. X enters the pool, so its X reserve
 increases; Y leaves, so its Y reserve decreases. As Y becomes scarcer, each
 additional unit of X buys less Y than the previous one. The execution rate
@@ -102,8 +117,8 @@ A larger trade moves farther along the curve and has more price impact.
 
 The reserve ratio gives the starting marginal price. Imagine a pool with 100
 ETH and 200,000 USDC: it holds 2,000 USDC for every 1 ETH. Before a very small
-trade moves the reserves, that ratio is the price for an infinitesimally
-small trade. Because the pool follows $xy\approx k$, the local change is about
+trade moves the reserves, that ratio is the price for a very small trade.
+Because the pool follows $xy\approx k$, the local change is about
 $y/x$ units of Y for each unit of X:
 
 $$

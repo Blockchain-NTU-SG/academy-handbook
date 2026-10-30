@@ -101,8 +101,12 @@ so we use it to show the format.
 |---|---|
 | **Mechanism** | 1. A pool holds reserves of two tokens. 2. A trader sends in one token and takes out the other, so the product of reserves does not fall. 3. A small fee stays in the pool. 4. Liquidity providers deposit both tokens and receive pool shares. |
 | **Incentives** | Liquidity providers earn fees on volume. Arbitrageurs trade the pool back to the market price and keep the gap, which keeps the pool's price honest. Traders pay for instant swaps. |
-| **Risks** | *Impermanent loss:* when the price moves, a provider's shares are worth less than simply holding → **providers lose**. Evidence: follows from the pricing rule. Mitigation: the fee income offsets some of it. Residual risk: in a fast-moving market, fees may not cover the loss. |
+| **Risks** | *Impermanent loss:* when the price moves, a provider's shares are worth less than simply holding → **providers lose**. Evidence: follows from the pricing rule. Fee income may offset some loss, but does not prevent it. |
 | **Open question** | How much do providers in a given pool earn after that loss? Needs real data, which Week 6 teaches you to query. |
+
+**Mitigation** means something that reduces a risk or its damage. **Residual
+risk** is what can still go wrong after a protection; in a fast-moving market,
+fees may not cover the loss.
 
 Note the shape: short steps, a reason for each actor, a risk with a named
 loser and what still remains after the protection, and an open question you

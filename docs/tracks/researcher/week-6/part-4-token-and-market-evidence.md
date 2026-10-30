@@ -62,13 +62,21 @@ No reviewer solution is published here. Existing route retained. -->
 
 > **Core question — what makes a valuation comparison meaningful, and what could explain an apparent discount?**
 
-A low multiple can reflect overlooked economics, weak value capture, low float,
-fragile liquidity or a bad comparison. Use W5.5 and W6 Parts 2–3 to test what
-it means before making a claim.
+One token can look cheaper than another when you compare each market value
+with protocol activity or revenue. That alone does not show it is
+undervalued. The difference may reflect stronger or weaker activity,
+different token rights, future token supply, poor trading liquidity,
+different risks or an invalid comparison. This Part teaches you to separate
+those explanations before making a valuation claim.
 
-**Market capitalisation (market cap)** is a token's quoted price multiplied
-by a provider's reported circulating supply. It is an estimate of market
-value, not cash held by the protocol.
+**Valuation** means the market value assigned to an asset under a stated
+measure; there is not one objectively correct number. **Market
+capitalisation (market cap)** is token price multiplied by reported
+circulating supply. It estimates the value of those reported circulating
+tokens; it is not cash held by the protocol. In a comparison ratio, the
+**denominator** is the bottom number, the economic quantity chosen for
+comparison. A **multiple** tells you how many units of market value correspond
+to one unit of that quantity.
 
 ## The hard skill
 
@@ -91,7 +99,7 @@ distinction when deciding what a volume, fee or liquidity number represents.
 | **Flows** | What capital, tokens or liquidity entered or left, and where did it go? | Dated bridge flows, issuance/redemption, treasury or exchange movements and liquidity changes | Treating a transfer or unlock as organic demand or a sale |
 | **Valuation** | Does the chosen value measure match the economic denominator and period? | Comparable market value, supply basis, fee/revenue definitions and time window | Dividing by TVL or volume as if either were retained earnings |
 | **Tokenomics** | How are supply, utility, security, governance and holder rights connected? | Token contracts, protocol terms, fee destinations and enforceable rights | Assuming governance power creates a claim on cash flow |
-| **Unlocks** | Who receives newly transferable tokens, when, and relative to float and liquidity? An unlock is the end of a transfer restriction, not proof of a sale. | Dated vesting schedule, recipient, circulating-supply method and market depth | Treating every unlocked token as immediately sold or fully liquid |
+| **Unlocks** | Who receives newly transferable tokens, when, and relative to supply realistically available to trade? An unlock is the end of a transfer restriction, not proof of a sale. | Dated vesting schedule, recipient, circulating-supply method and available market liquidity | Treating every unlocked token as immediately sold or fully liquid |
 | **Catalysts** | What observable change could alter use, cost, value capture or risk? | A defined before/after measure and a dated launch or parameter change | Treating an announcement as evidence that the change worked |
 | **Risks** | Which failure could break the thesis, who is exposed, and what signal would show it? | Dependency, permissions, liquidity, oracle and incident evidence | Listing generic risks without a causal path or exposed party |
 | **Narrative** | What story attracts attention, and what evidence supports it? | Dated communications, attention measures and independently checked outcomes | Treating attention or a compelling story as economic proof |
@@ -203,11 +211,11 @@ $$
 \frac{\text{Valuation}}{\text{Chosen Economic Denominator}}
 $$
 
-The numerator is what is being valued; the denominator is the quantity used
-for comparison. For example, **USD 100 million market cap ÷ USD 10 million
-comparable annual retained revenue = 10×**: ten units of value per unit of
-annual retained revenue. Match currency, period, scope and definitions. This
-is a comparison, not a return forecast.
+The value on top is what is being valued; the bottom number is the chosen
+economic measure. For example, **USD 100 million market cap ÷ USD 10 million
+comparable annual retained revenue = 10×**: ten units of market value for
+each unit of annual retained revenue. Match currency, period, scope and
+definitions. This is a comparison, not a return forecast.
 
 | Comparison | Question it can help ask | Why it is not interchangeable |
 |---|---|---|
@@ -231,22 +239,32 @@ for all maximum supply does not mean all tokens could be sold at that price.
 Market cap and FDV answer different supply questions; neither is universally
 right.
 
-**Estimated real float** is an analyst's assumption about supply plausibly
-tradable soon, not a universal standard; state adjustments and avoid
-double-subtraction. Top-holder **addresses** may represent exchanges, bridges,
-LPs or many users, so do not assume one address is one person (W6P2).
+**Estimated real float** is an analyst's estimate of how much reported
+circulating supply is realistically available to trade in the near term.
+Treasury-controlled or strategic holdings, delayed withdrawals and other
+restricted or practically inactive supply may make the reported figure larger
+than the amount readily available. Real float is an analyst assumption, not a
+standard on-chain field. State what you subtract and why, and avoid subtracting
+the same tokens twice. Top-holder **addresses** may represent exchanges,
+bridges, LPs or many users, so do not assume one address is one person (W6P2).
 
-Executable liquidity asks what a stated-size trade could get now; quote size,
-direction, venue, fees and time matter. Daily volume is turnover, not depth.
-[W5P3](../week-5/part-3-mechanism-and-market-design.md) teaches the AMM
-calculation; here we interpret quotes.
+**Trading volume** asks how much value traded over a period, such as one day.
+**Market depth / executable liquidity** asks how much you could trade now
+before the execution price becomes meaningfully worse. A market might report
+USD 50 million of daily volume but still give a poor price for one USD 1
+million sale if little liquidity is available near the current price. See
+[W5P3](../week-5/part-3-mechanism-and-market-design.md) for how trade size
+causes price impact. Historical volume does not guarantee good execution now.
 
-A **premium** is a higher multiple than a valid comparison set; a **discount**
-is a lower one. **Premium ≠ automatically expensive; discount ≠ automatically
-cheap.** Growth, competitive position, value capture, treasury, liquidity,
-incentives, rights, risk and expectations may explain a difference. If
-mechanisms or definitions are not comparable, correct arithmetic can still
-support a weak conclusion.
+If two genuinely comparable protocols use the same valuation measure, the one
+with the higher multiple may be described as trading at a **premium** and the
+one with the lower multiple at a **discount** relative to that comparison.
+These are relative descriptions, not conclusions that either is expensive or
+cheap. **Premium ≠ automatically expensive; discount ≠ automatically cheap.**
+Growth, competitive position, value capture, treasury, liquidity, incentives,
+rights, risk and expectations may explain a difference. If mechanisms or
+definitions are not comparable, correct arithmetic can still support a weak
+conclusion.
 
 | Economic denominator | What it measures | Main boundary |
 |---|---|---|
@@ -257,9 +275,13 @@ support a weak conclusion.
 | Economic volume | Activity for comparable business models | Incentivised or wash-like flow can inflate it |
 
 Compare like mechanisms, fee recipients, token rights, periods and
-definitions. A rollup's transaction fees and a DEX's trading volume are not the
-same revenue measure; trailing-12-month and annualised-last-month figures are
-not interchangeable without explaining the time basis.
+definitions. A rollup's transaction fees and a DEX's trading volume are not
+the same revenue measure. **Trailing 12 months (TTM)** adds what actually
+happened over the most recent 12 months. **Annualised last month** takes one
+recent month and scales that pace to a year. For example, USD 1 million last
+month becomes roughly USD 12 million per year if that same pace continued.
+TTM uses 12 months of actual history; annualising one month projects a short
+period forward. They can differ greatly when activity is changing or uneven.
 
 ### 4. Tokenomics — if the protocol succeeds, why should the token benefit?
 
@@ -291,8 +313,8 @@ intent. Check four things:
 | **When?** | A cliff releases at a point; linear vesting releases over time. Check the dated schedule. |
 | **Absorbable?** | Liquidity, turnover, holder concentration and recipient behaviour; historical volume does not guarantee execution. |
 
-There is no universal “large unlock” threshold. Any heuristic depends on the
-token's float and market structure. Treat an unlock as a supply event to
+There is no universal “large unlock” threshold. Any rule of thumb depends on
+the token's float and market structure. Treat an unlock as a supply event to
 investigate, not proof of selling pressure.
 
 ### 6. Catalysts — what observable change could materially alter the thesis?

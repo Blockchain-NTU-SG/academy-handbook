@@ -83,9 +83,10 @@ $$
 
 Not every token has a fixed maximum. Providers may classify treasury, insider
 and other allocations differently. Reported circulating supply is a
-classification, not a guarantee that every counted token can be traded at the
-quoted price; it is not the same as **executable liquidity** or necessarily
-the analyst's estimated **real float**.
+classification. It does not guarantee that every counted token is realistically
+available to trade soon or that all of it could be sold near the quoted price.
+Researchers later examine parts of this question using terms such as estimated
+**real float** and **executable liquidity**; see [W6P4](../week-6/part-4-token-and-market-evidence.md).
 
 For this Part, use the simplified relationship, with all supply values in
 the same token units:
@@ -103,7 +104,8 @@ methodology before comparing reported supply.
 
 An unlock lifts a vesting or lock-up restriction, so previously restricted
 tokens become transferable. A provider may then count them as circulating,
-depending on its methodology. An unlock does not usually create new tokens.
+depending on its method. An unlock does not usually create new tokens and does
+not prove that recipients sold them.
 Unlock schedules are common for team members, investors, contributors and
 ecosystem funds.
 
@@ -135,13 +137,24 @@ supply and what they are paid to want.
 ### Follow the economics as well as the supply
 
 ==Protocol usage ≠ fees ≠ revenue ≠ earnings ≠ token-holder value accrual.==
-**Value accrual** asks whether protocol success creates a credible economic
-benefit for token holders, such as a distribution, buyback or burn,
-required utility, or another enforceable mechanism. Governance rights alone
-do not automatically create that benefit. Map the path instead of assuming
-that an active protocol makes its token valuable. The diagram is an Academy
-economic-flow schematic: each arrow is a question to verify, and the final
-link is conditional.
+**Value accrual** means an economic benefit reaches token holders through a
+documented mechanism, such as a distribution, buyback or burn, required token
+use, or another enforceable right. Governance rights alone do not guarantee
+that benefit. Map the path instead of assuming that an active protocol makes
+its token valuable.
+
+Imagine a user pays a simplified **$10 fee**. That $10 is a fee, but it is not
+all automatically protocol revenue. The rules may send some to service
+providers, such as liquidity providers or suppliers. The amount kept, if any,
+may be called protocol revenue under a stated reporting method.
+A **treasury** is a pool of assets controlled by a protocol, foundation or DAO
+for uses such as operations, grants or incentives. After spending on costs,
+some providers report what remains as **earnings**, but each provider must say
+which costs it counted. Token holders benefit only if a documented right or
+mechanism connects the protocol's economics to the token.
+
+The diagram is an Academy economic-flow schematic: each arrow is a question to
+verify, and the final link is conditional.
 
 **Liquidity providers** supply assets to a pool and may receive some trading
 fees; protocols can also pay suppliers, validators or incentive recipients.

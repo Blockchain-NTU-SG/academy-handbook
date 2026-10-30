@@ -66,6 +66,12 @@ flowchart TB
 repair a missing date, and a calculated metric cannot support a broader claim
 than its source, unit, window and coverage allow.
 
+**Data provenance** is the record of where data came from, when it was
+retrieved, what period and scope it covers, and what was done to it before
+analysis. Here that includes the endpoint, retrieval time, chain, date range,
+and how the data was combined or summarised. Without those details, another
+researcher cannot reproduce or challenge the number.
+
 ### Retrieve once; preserve the source
 
 Download <a :href="$withBase('/files/researcher/W6.3-free-public-data.py')" download>W6.3-free-public-data.py</a>
@@ -204,6 +210,11 @@ ratio by 100 to report a percentage. If the window total is zero, the share is
 undefined. A high $C_3$ means the period's total depends heavily on three
 spike days; it does not by itself show manipulation or wash trading.
 
+A **sensitivity check** means measuring the same question in another
+reasonable way to see whether the conclusion still holds. Mean, median and
+top-three concentration all summarise this same volume series. If only the
+mean rises because of a few spike days, the headline may need to be narrower.
+
 In Calc, with CSV headers in row 1 and sorted dates, use:
 
 | Quantity | First 30 (rows 2–31) | Last 30 (rows 62–91) |
@@ -218,21 +229,26 @@ undefined. Report either honestly.
 
 **Synthetic interpretation example:** mean rises from USD 8m to USD 10.4m
 (+30%); median from USD 7.5m to USD 7.875m (+5%); top-three share rises from
-18% to 42% (+24 percentage points). The average rose, but the typical day
+18% to 42% (+24 percentage points). Percentage points are the direct
+difference between two percentages: 42% minus 18% is 24 percentage points.
+That is not a 24% relative increase. The average rose, but the typical day
 changed far less. This does not establish broader adoption.
 
 Choose an interpretation rule **before reading results**: for example,
 describe mean growth separately from whether median and concentration agree.
-A chosen 10% threshold would be an analytical convention, not a significance
-test or a universal adoption threshold.
+A 10% threshold is a rule you chose for interpreting the result. It is not
+statistical proof and it is not a universal industry threshold.
 
 ### Confounders that remain
 
-Price changes, larger trades, automation/incentives, chain migration and
-provider coverage can all change USD volume. Mean, median and concentration
-come from the same series: they are sensitivity checks, not independent
-verification of users. Record **source / unit / chain / dates / retrieval
-time**, then name which extra data could separate the explanations.
+A **confounder** is another factor that could produce the same observed change,
+giving you an alternative explanation. If reported DEX volume rises 30%, more
+trading may be one explanation. But if token prices also rise, the same number
+of tokens traded can produce a higher USD volume; price change is a possible
+confounder. Larger trades, incentives, chain migration and provider coverage
+can also affect the result. These checks use the same series, so they are not
+independent verification of users. Record **source / unit / chain / dates /
+retrieval time**, then name what extra data could separate the explanations.
 
 ::: details Optional industry-data path — Allium academic access
 Allium offers an Explorer for querying on-chain data with SQL and an academic

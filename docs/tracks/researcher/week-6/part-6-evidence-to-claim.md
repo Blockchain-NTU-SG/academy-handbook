@@ -40,6 +40,12 @@ not distinguish these two explanations yet”.
 case evidence, quantitative/economic evidence and counter-evidence. For a real
 case, include direct chain evidence relevant to the question.**
 
+A **research thesis** here means your current best answer to the research
+question, expressed as a claim that evidence can support, weaken or change. It
+is not a graduation thesis or automatically an investment recommendation. The
+working path is **question → current thesis → supporting evidence →
+counter-evidence → confidence → next check**.
+
 A **bounded claim** states which case, evidence and time window it covers. A
 **falsifiable claim** names what observation would weaken or contradict it.
 **Counter-evidence** weighs against your claim; an **alternative hypothesis**
