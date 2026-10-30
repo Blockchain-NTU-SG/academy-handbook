@@ -74,13 +74,51 @@ researcher cannot reproduce or challenge the number.
 
 ### Retrieve once; preserve the source
 
+The Python file below is a **provided retrieval utility, not a coding
+exercise**. It requests the public data, checks that the 90-day series is
+complete, and saves the CSV, source snapshot and provenance record for you; you
+do not need to edit the file or learn Python.
+
+First check whether Python is available. Open a terminal (a text app for
+running commands) or, on Windows, PowerShell / Command Prompt. A command is what
+you type; its output is what the computer prints back. Commands run in the
+**current folder** — the folder shown by your terminal. After downloading the
+script, use `cd` to move into the folder where it was saved. To see the current
+folder path, use `pwd` on macOS/Linux or `Get-Location` in PowerShell.
+
+```bash
+python3 --version
+```
+
+On Windows, use:
+
+```powershell
+python --version
+```
+
+A version number such as `Python 3.x.x` means the command is available. If the
+command is not recognised, do not edit the retrieval utility or install a
+third-party package for this task; ask the Education Team for help with the
+approved environment or a clearly dated source snapshot.
+
 Download <a :href="$withBase('/files/researcher/W6.3-free-public-data.py')" download>W6.3-free-public-data.py</a>
-into an empty folder. It uses Python 3's standard library. From that folder run:
+into that empty folder. It uses Python 3's standard library. In the same
+terminal, after moving into that folder, run:
 
 ```bash
 python3 W6.3-free-public-data.py
-# Windows: python W6.3-free-public-data.py
 ```
+
+On Windows, run:
+
+```powershell
+python W6.3-free-public-data.py
+```
+
+The terminal should print a `Saved uniswap_ethereum_90days.csv: 90 dates...`
+line and a second line naming the provenance and source-snapshot files. You
+should see all three files in that folder. If an error appears instead, keep
+the message and report it; do not replace missing values with guesses.
 
 It requests data from DefiLlama's free [Uniswap volume endpoint](https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false),
 part of its application programming interface (API).

@@ -122,7 +122,11 @@ money — nobody wants to be paid in something worth 20% less by Friday.
 Stablecoins give a stable unit that still moves at blockchain speed. Most
 real-world payment usage runs through them.
 
-**And the trade-off.** A dollar-backed stablecoin is a *claim on an issuer*.
+**And the trade-off.** A dollar-backed stablecoin is a *claim on an issuer*:
+you rely on the issuer to exchange it for the represented dollars under its
+terms. **Reserves** are assets held to support that exchange; **redemption** is
+exchanging the token back for those dollars. An **attestation** is an outside
+report checking stated information at a point in time, not a guarantee.
 Holding USDC means trusting the blockchain, the token contract, **and Circle** —
 that reserves exist and redemption is honoured.
 
@@ -193,7 +197,7 @@ Cutting across the categories above: **who holds the keys?**
 | Who holds the keys | An exchange or company | You |
 | What you have | An account balance and a claim | The asset itself |
 | Lose access / forget local wallet password | Account/support recovery may help | A recovery phrase or valid key backup can restore access; without a valid backup, no support desk can restore it |
-| Custodian / exchange fails | You depend on that custodian and may become a creditor | Not directly exposed to that custodian; issuer/token risks may still remain |
+| Custodian / exchange fails | You depend on that custodian and may become a creditor (someone the failed company still owes) | Not directly exposed to that custodian; issuer/token risks may still remain |
 | Token-level controls | The platform may freeze its account | An issuer may still freeze its token |
 
 If you buy ETH on an exchange and leave it there, you do not directly control

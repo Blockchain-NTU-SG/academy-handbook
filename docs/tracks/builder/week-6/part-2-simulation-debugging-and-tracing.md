@@ -137,14 +137,17 @@ changing code.
 
 **The browser's developer tools.** The Console tab shows errors. The Network
 tab shows every request your page sends to the RPC, including the address and
-method in the request body.
+method in the request body. [W5 Part 4](../week-5/part-4-wallet-and-frontend-integration.md)
+shows how to open these tabs and what each one contains.
 
 **A block explorer.** Paste an address into
 [Sepolia Etherscan](https://sepolia.etherscan.io/) to see whether it is a
 contract, which transactions it received and which events it emitted.
 
 **`cast`, Foundry's command-line tool.** You installed it with Foundry in
-Week 5. It talks to the chain directly, with no app in between, which makes it
+[W5 Part 1](../week-5/part-1-run-the-stack.md), which also introduces the Git
+CLI you'll use to inspect or change the project. `cast` talks to the chain
+directly, with no app in between, which makes it
 ideal for checking one layer at a time. These commands are run against the
 starter's Registry, so you can try them yourself:
 

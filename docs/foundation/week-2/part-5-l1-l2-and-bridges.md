@@ -76,7 +76,8 @@ has to process dramatically more work, the hardware and bandwidth needed to
 verify the chain can rise too. If independent verification becomes expensive,
 fewer people may be able to participate. One scaling approach is therefore to
 move much of the everyday activity elsewhere while keeping Ethereum as an
-important settlement and security base.
+important settlement (where a transaction's result is treated as final) and
+security base.
 
 Picture Ethereum L1 as a very secure but crowded main road. An L2 is like an
 elevated expressway handling much of the everyday traffic separately. The
@@ -190,7 +191,8 @@ remains the referee.**
 
 **Many L2 transactions can be batched into L1 postings, so the L1 cost is shared
 across them.** That is where the cost reduction comes from — not from cutting
-corners on verification, but from amortising it.
+corners on verification, but from spreading one L1 cost across many
+transactions.
 
 ::: important What a mature rollup is designed to do
 **A mature rollup is designed so you do not have to trust one operator forever.**
@@ -269,7 +271,7 @@ They move value. The usual mechanism is lock-and-mint:
 
 ```mermaid
 flowchart LR
-  A["<b>Chain A</b><br/>10 ETH locked<br/>in a contract"] -->|"bridge observes<br/>and attests"| B["<b>Chain B</b><br/>10 wrapped ETH<br/>minted"]
+  A["<b>Chain A</b><br/>10 ETH locked<br/>in a contract"] -->|"bridge checks evidence<br/>the lock happened"| B["<b>Chain B</b><br/>10 wrapped ETH<br/>minted"]
   B -->|"burn to<br/>redeem"| A
 ```
 
@@ -295,13 +297,13 @@ structural reason is not bad luck.
 | Point | Why it matters |
 |---|---|
 | **1** | A bridge holds a large pool of locked assets — an unusually concentrated target |
-| **2** | Something must attest that the lock really happened. **That attestation is the weak point.** Forge it and unlimited wrapped assets can be minted with nothing backing them |
+| **2** | Something must provide evidence that the lock really happened. **That check is the weak point.** Forge it and unlimited wrapped assets can be minted with nothing backing them |
 | **3** | You inherit three risk surfaces at once — source chain, destination chain, and the bridge between |
 
-Who performs that attestation varies enormously — a small multisig, a validator
-set, a light client, a cryptographic proof — and the differences are the
-difference between "reasonably safe" and "one compromised key away from
-catastrophe".
+Who checks and provides evidence (sometimes called an **attestation**) varies
+enormously — a small multisig, a validator set, a light client or a cryptographic
+proof — and the differences are the difference between "reasonably safe" and
+"one compromised key away from catastrophe".
 
 ::: important Evaluating those mechanisms is deliberately Further Exploration
 For Foundation, hold this:

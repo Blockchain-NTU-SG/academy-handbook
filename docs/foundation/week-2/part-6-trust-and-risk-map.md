@@ -66,6 +66,13 @@ which.**==
 Each row highlights the main assumptions worth checking first. It is not an
 exhaustive dependency graph; real systems can add more dependencies.
 
+In the lending example, **collateral** is an asset pledged to support a loan.
+**Liquidation** means selling some of it under the protocol's rules when the
+debt is no longer sufficiently covered. A **depeg** is when a token designed to
+track a value, such as one US dollar, trades away from it. **Bad debt** is debt
+left unpaid because the available collateral cannot repay it; it is a possible
+outcome, not an automatic result of every liquidation.
+
 <figure class="academy-shot">
 <svg viewBox="0 0 640 316" width="100%" role="img" aria-labelledby="trustmap-title trustmap-desc" style="max-width:640px;margin:0 auto;display:block;overflow:visible">
   <title id="trustmap-title">The trust and risk map</title>

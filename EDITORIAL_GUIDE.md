@@ -134,6 +134,23 @@ when learners do not need them for the Foundation mental model.
 Adding context, caveats or industry examples does not automatically create a new
 learner requirement. Assessment changes require explicit curriculum approval.
 
+## Prerequisite contract
+
+- **Foundation** assumes no prior Web3 knowledge and may not assume finance,
+  coding, Git, blockchain or technical experience. Define a term briefly when
+  Core reasoning first depends on it; do not turn Landscape into a glossary.
+- **Builder** assumes completed Foundation, including its wallet, transaction,
+  Solidity, state/function/event, ABI, RPC, Remix and GitHub concepts. It must
+  not silently assume terminal, Git CLI, Node/npm, JavaScript/TypeScript, React,
+  frontend, testing or deployment experience. Teach new tools just in time, only
+  as deeply as needed to understand and verify the Web3 work.
+- **Researcher** assumes completed Foundation, but not prior finance, economics,
+  DeFi, statistics, SQL, Python, terminal use or professional research.
+
+AI may reduce syntax burden, but must not hide a missing prerequisite. Learners
+should be able to identify the important parts, explain the workflow, inspect
+evidence, test the result and locate a failure.
+
 ## Designing one page
 
 Before writing, identify the dominant learner question, its prerequisites, the

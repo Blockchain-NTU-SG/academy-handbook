@@ -171,6 +171,16 @@ gateway was free, needed no account and served every block from the shared
 Registry's deployment onwards. Any Sepolia provider that keeps full history
 works as well; verify the current limits before relying on it.
 
+### Reuse the range-reading helper
+
+The starter includes `src/lib/readEventRange.ts`. It repeatedly calls a
+query function over bounded block windows. Open the file: the comments show
+why it begins at the deployment block, halves a rejected range, stops at a
+minimum window, and surfaces a pruned-history error instead of retrying it.
+The helper handles provider-window mechanics; your app still chooses the
+contract and event, maps and sorts rows, shows loading/empty/error states, and
+verifies the history against current contract state.
+
 ### Worked example: your first look
 
 Read one window of events, starting at the deployment block. Save this as
@@ -230,12 +240,12 @@ Why each part is there:
 Complete section **4. Events** in `src/App.tsx`, for the contract
 `shared/contract.ts` points at (your own, after Part 3).
 
-1. **Load the history.** Write a function that returns every `RecordUpdated`
-   event from the deployment block to the latest block, as typed rows
-   (account, value, kind `set` or `cleared`, block number, log index,
-   transaction hash), newest first. It must read in windows, and halve the
-   window when the RPC rejects one. Below a floor (for example 50 blocks), stop
-   and report the error instead of retrying forever.
+1. **Load the history.** Use the starter's `readEventRange` helper with a
+   `getContractEvents` query for `RecordUpdated`, from the deployment block to
+   the latest block. Map the decoded events into typed rows (account, value,
+   kind `set` or `cleared`, block number, log index and transaction hash), then
+   sort newest first. Inspect the helper and explain why a rejected wide range
+   shrinks, why it stops at a floor, and why pruned history needs another RPC.
 2. **Show it.** Render the newest 25 rows: the account shortened, what happened
    (set to a value, or cleared), the block and its time, and a link to the
    transaction on Sepolia Etherscan. Show clear **loading**, **empty** and
@@ -263,7 +273,7 @@ run your verification step.
 - A screenshot of the Events section showing your list (or the empty state).
 - Your verification output: the account, its newest event value, and
   `records(account)`.
-- Two or three sentences: what does your code do when the RPC rejects a range,
+- Two or three sentences: what does the helper do when the RPC rejects a range,
   what does it do when history is pruned, and what does a "cleared" row mean?
 
 ## Completion and revision
@@ -275,7 +285,7 @@ revision. There is no partial-score rubric.
 Your work is complete when:
 
 - [ ] events are read from the deployment block to the latest block, not from 0;
-- [ ] a rejected range shrinks the window, and a floor stops endless retries;
+- [ ] the helper shrinks a rejected range and stops at its configured floor;
 - [ ] rows are typed, sorted newest first, and an empty value shows as "cleared";
 - [ ] the Events section shows loading, empty and error states;
 - [ ] your verification shows the newest event matches `records(account)`;
