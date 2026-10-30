@@ -283,7 +283,7 @@ Your work is complete when:
 
 ::: details Sources and attribution
 - [Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf) (Link, referenced only)
-- [Uniswap: What is an Automated Market Maker?](https://blog.uniswap.org/what-is-an-automated-market-maker) (source for the attributed constant-product curve figure; blank left margin cropped, labels and axes retained)
+- [Uniswap: What is an Automated Market Maker?](https://blog.uniswap.org/what-is-an-automated-market-maker) (source for an attributed third-party teaching figure; original ownership remains with its rights holder and it is not covered by the Academy content licence; only blank left margin cropped, labels and axes retained)
 - [Uniswap docs: v2 pricing](https://developers.uniswap.org/docs/protocols/v2/concepts/pricing) (Link, referenced only)
 - [Uniswap: Concentrated liquidity](https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity) (protocol documentation, checked 26 October 2026)
 - [Uniswap v2: Understanding returns](https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns) (protocol documentation)

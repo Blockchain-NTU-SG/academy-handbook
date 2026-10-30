@@ -85,15 +85,14 @@ Director.
 
 ### Researcher Deep Dive references
 
-The entries below remain **Link** references, not blanket reuse permissions.
-The Academy explanations, synthetic case packs and calculation exercises are
-original; no private deck prose, charts or figures are reproduced. Two
-task-supplied public figures are shown with adjacent attribution in W5.3 and
-W5.4; the Uniswap figure has only its blank left margin cropped, with axes and
-labels retained. No open licence is asserted. Other figures remain link-only
-when their source terms prohibit copying. Technical mechanics were checked
-against public references on 26 October 2026; live observations retain their
-own check dates.
+The entries below are **Link** references, not blanket reuse permissions.
+Specific embedded third-party figures are recorded separately under
+**Attributed third-party teaching figures**; that category is not `Reuse` and
+does not assert an open licence. Academy explanations, synthetic case packs
+and calculation exercises are original; no private deck prose, charts or
+figures are reproduced. Other figures remain link-only when their source terms
+prohibit copying. Technical mechanics were checked against public references
+on 26 October 2026; live observations retain their own check dates.
 
 | Source / type | Used for |
 |---|---|
@@ -103,9 +102,9 @@ own check dates.
 | [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) — Ethereum Improvement Proposal | W6.1 note that blob transactions have a separate blob-gas fee component |
 | [Etherscan transaction guide](https://info.etherscan.com/understanding-an-ethereum-transaction/), [proxy types](https://info.etherscan.com/types-of-proxy-contracts-detected-by-etherscan/), [token pages](https://info.etherscan.com/understanding-token-page/) — explorer | Record views and label limitations; older consensus wording is not used |
 | [L2BEAT](https://l2beat.com/scaling/projects/arbitrum), [Arbitrum docs](https://docs.arbitrum.io/), [DAO supply docs](https://docs.arbitrum.foundation/token-supply) — independent risk analysis / primary protocol | W5.2 trust powers and delays; W5.5 supply schedule; W6.4 unlock lens. Date live facts; the DAO supply page includes 2024 circulating estimates |
-| [Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf) (primary mechanism document); [Uniswap v2 pricing](https://developers.uniswap.org/docs/protocols/v2/concepts/pricing), [returns](https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns), [concentrated liquidity](https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity) and [AMM explainer](https://blog.uniswap.org/what-is-an-automated-market-maker) (protocol sources) | W5.3 original AMM calculations, range and LP opportunity-cost intuition; the task-supplied constant-product curve is displayed with page-level attribution after cropping only blank left margin; axes and labels retained |
+| [Uniswap v2 Core whitepaper](https://app.uniswap.org/whitepaper.pdf) (primary mechanism document); [Uniswap v2 pricing](https://developers.uniswap.org/docs/protocols/v2/concepts/pricing), [returns](https://developers.uniswap.org/docs/protocols/v2/concepts/understanding-returns), [concentrated liquidity](https://developers.uniswap.org/docs/get-started/concepts/liquidity-providers/concentrated-liquidity) and [AMM explainer](https://blog.uniswap.org/what-is-an-automated-market-maker) (protocol sources) | W5.3 original AMM calculations, range and LP opportunity-cost intuition; the constant-product curve is separately recorded below as an attributed third-party figure; only blank left margin is cropped, with axes and labels retained |
 | [Uniswap v2 pools](https://developers.uniswap.org/docs/protocols/v2/concepts/pools), [v3 position manager](https://docs.uniswap.org/contracts/v3/reference/periphery/NonfungiblePositionManager) — protocol | W6.2 LP ownership, redemption and liquidity-lock evidence boundaries |
-| [Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) (protocol-authored design reference, not a current deployment specification); [market operations](https://www.aave.com/docs/aave-v3/markets/operations), [FAQ / reserve factor](https://aave.com/faq), [governance](https://aave.com/docs/ecosystem/governance), [interest rates](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy), [liquidations](https://aave.com/help/borrowing/liquidations), [reserve parameters](https://www.aave.com/docs/aave-v3/concepts/reserve), [Efficiency Mode](https://aave.com/help/borrowing/e-mode), [Chainlink feeds](https://docs.chain.link/data-feeds/price-feeds), [Lido docs](https://docs.lido.fi/) and [Gauntlet's historical rate-curve discussion](https://governance.aave.com/t/gauntlet-extending-support-for-interest-rate-curves/10391) (protocol and governance sources) | W5.4/6 and W6.5 collateral economics and causal risk; W6.4 fundamentals, flows and AAVE rights; the task-supplied historical curve is displayed unmodified with page-level attribution |
+| [Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) (protocol-authored design reference, not a current deployment specification); [market operations](https://www.aave.com/docs/aave-v3/markets/operations), [FAQ / reserve factor](https://aave.com/faq), [governance](https://aave.com/docs/ecosystem/governance), [interest rates](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy), [liquidations](https://aave.com/help/borrowing/liquidations), [reserve parameters](https://www.aave.com/docs/aave-v3/concepts/reserve), [Efficiency Mode](https://aave.com/help/borrowing/e-mode), [Chainlink feeds](https://docs.chain.link/data-feeds/price-feeds), [Lido docs](https://docs.lido.fi/) and [Gauntlet's historical rate-curve discussion](https://governance.aave.com/t/gauntlet-extending-support-for-interest-rate-curves/10391) (protocol and governance sources) | W5.4/6 and W6.5 collateral economics and causal risk; W6.4 fundamentals, flows and AAVE rights; the historical curve is separately recorded below as an attributed third-party figure and is not a current parameter chart |
 | [Aave V4 on Arc activation](https://governance.aave.com/t/arfc-deploy-aave-v4-on-arc/25170/9) and [Horizon technical update](https://governance.aave.com/t/horizon-technical-maintenance-updates/25408) — official Aave Governance posts | W6.4 dated catalyst and RWA narrative examples; checked 27 October 2026 |
 | [Pendle SY](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/SY), [PT](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/PT), [YT](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/YT), [glossary](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/Glossary), [Pendle Academy: Yield Tokenization Basics](https://docs.pendle.finance/pendle-academy/pendle-101/chapter-2-yield-tokenization-basics) and [Minting](https://docs.pendle.finance/pendle-v2/ProtocolMechanics/YieldTokenization/Minting) (protocol sources) | Optional W5.4 yield/principal/composability recognition; linked lifecycle illustrations are not reproduced because Pendle's terms restrict copying content |
 | [Messari: State of Pyth Network Q1 2024](https://messari.io/report/state-of-pyth-network-q1-2024) (research report, published 23 May 2024) | W5.5 historical liquid-supply example (data as of 31 March 2024); chart linked only because the report prohibits copying or redistribution without prior written consent |
@@ -114,6 +113,18 @@ own check dates.
 | [Allium academic access](https://www.allium.so/use-case/academia) — optional independent-data-provider path; subject to institutional application and access approval | W6.3 optional comparison only; not assumed or required |
 | [Arkham token pages](https://codex.arkm.com/the-intelligence-platform/token-pages) — commercial intelligence provider | Optional W6.4 source reference only; no subscription or labels required for tasks |
 | [RWA.xyz](https://app.rwa-xyz.com/treasuries) — independent data; [Franklin prospectus](https://www.franklintempleton.com/forms-literature/download-preview/9001-P) — primary issuer; [SEC Commissioner statement](https://www.sec.gov/newsroom/speeches-statements/peirce-statement-tokenized-securities-070925) — regulator commentary | W6.6 alternate non-token investigation; commentary is not binding law |
+
+### Attributed third-party teaching figures (not Reuse)
+
+These entries record specific figures used in a cited teaching context. Their
+original owners retain their rights; the figures are not covered by the
+Academy's CC BY-NC licence. This category does not assert an open licence or
+grant blanket permission. See `CONTENT-LICENSE.md` before adding another figure.
+
+| Figure | Source | Use and handling |
+|---|---|---|
+| Constant-product AMM curve | [Uniswap: What is an Automated Market Maker?](https://blog.uniswap.org/what-is-an-automated-market-maker) | W5.3; attributed beside the figure; only blank left margin cropped |
+| Utilisation / interest-rate curve | [Gauntlet: Extending support for Interest Rate Curves](https://governance.aave.com/t/gauntlet-extending-support-for-interest-rate-curves/10391) | W5.4; attributed beside the figure; shown unmodified as a historical mechanism illustration |
 
 ## Avoid
 
@@ -127,12 +138,12 @@ own check dates.
 ShareAlike term would force any page adapting it onto the same licence. Using it
 as further reading avoids that.
 
-**Visual attributions do not imply an open licence.** The Uniswap and Gauntlet
-figures in W5.3–W5.4 were supplied for this task and carry source attribution;
-only blank left margin is cropped from the Uniswap figure. The [Messari report terms](https://messari.s3.amazonaws.com/termsofuse.html)
-and [Pendle documentation terms](https://docs.pendle.finance/pendle-v2/TermsOfUse)
-restrict copying/republication; their figures are linked, not copied. Do not
-reuse other third-party visuals without checking the source's current terms.
+**Attribution is not a licence.** Inclusion of a third-party figure does not
+make it Academy-owned or covered by the Academy content licence. The [Messari
+report terms](https://messari.s3.amazonaws.com/termsofuse.html) and [Pendle
+documentation terms](https://docs.pendle.finance/pendle-v2/TermsOfUse) restrict
+copying or republication; their figures remain linked, not copied. Check source
+terms before any additional third-party figure use.
 
 **Watch the code/content split.** Both ethereum.org and GitHub Docs license their
 site code under MIT and their written content under CC BY 4.0. A repository badge

@@ -300,17 +300,16 @@ Pendle uses two APY ideas that are easy to mix up:
 
 | Term | Beginner meaning |
 |---|---|
-| **Underlying APY** | The yield source's current annualised rate. It can change, so it is not a promise about the whole period. |
-| **Implied APY** | The annualised future yield rate suggested by the current YT market price. It describes what the price is assuming, not a rate Pendle guarantees. |
+| **Underlying APY** | Pendle's recent-yield indicator for the underlying asset. Its glossary defines this as a 7-day moving average, so it describes recent yield, not exactly what the asset will earn through maturity. |
+| **Implied APY** | The future average yield rate currently priced by the PT/YT market. Pendle derives it from the relative YT and PT prices; it reflects current market pricing, not a rate Pendle guarantees. |
 
-For example, if a YT price implies an 8% average rate until maturity, that
-does not lock in 8%. The asset might produce more, less or no yield. The holder
-receives what is actually generated; whether that is worth more than the price
-paid depends on the realised yield, time remaining and costs. Think of the
-implied rate as a hurdle built into today's YT price: if the average actual
-rate beats it, the yield received may be worth more than the purchase price;
-if it falls short, it may be worth less. In short, YT is exposure to uncertain
-future yield, not a fixed interest payment.
+If the market displays an 8% Implied APY, it does not mean the asset will
+definitely earn 8%. The relative PT/YT prices currently reflect a market-priced
+view around that future average rate. The actual yield through maturity may be
+higher, lower or zero. A YT holder receives only the yield actually produced;
+whether the position works out better or worse than its current price suggests
+also depends on the purchase cost and time remaining. YT is exposure to
+uncertain future yield, not fixed interest.
 
 ### The four basic actions
 
@@ -408,7 +407,7 @@ Your work is complete when:
 
 ::: details Sources and attribution
 - [Aave DAO: Aave V3 Technical Paper](https://github.com/aave-dao/aave-v3-origin/blob/main/docs/Aave_V3_Technical_Paper.pdf) (official source for the unmodified local reading copy; design reference, not a current deployment specification)
-- [Gauntlet: Extending support for Interest Rate Curves](https://governance.aave.com/t/gauntlet-extending-support-for-interest-rate-curves/10391) (historical Aave governance mechanism illustration, 25 October 2022; not current reserve parameters)
+- [Gauntlet: Extending support for Interest Rate Curves](https://governance.aave.com/t/gauntlet-extending-support-for-interest-rate-curves/10391) (attributed third-party figure; original ownership remains with its rights holder and it is not covered by the Academy content licence; unmodified historical Aave governance illustration, 25 October 2022, not current reserve parameters)
 - [Aave: Health factor and liquidations](https://aave.com/help/borrowing/liquidations) (Link, referenced only)
 - [Chainlink: Price feeds](https://docs.chain.link/data-feeds/price-feeds) (Link, referenced only)
 - [Aave V3: Interest rate strategy](https://aave.com/docs/aave-v3/smart-contracts/interest-rate-strategy) (protocol documentation)
