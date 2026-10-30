@@ -99,11 +99,12 @@ $y$, while equal additions to $x$ do not produce equal changes in $y$.
 
 These price terms describe different things in this simplified pool:
 
-| Term | Plain-English meaning |
-|---|---|
-| **Starting spot / marginal price** | The pool's price for the next very small trade, before that trade meaningfully changes the reserves. |
-| **Average execution price** | The average price for the whole trade: total Y received divided by total X sent. |
-| **Price impact** | The price change caused by the trade itself changing the pool's reserves. |
+- **Starting spot / marginal price:** The pool's price for the next very
+  small trade, before that trade meaningfully changes the reserves.
+- **Average execution price:** The average price for the whole trade, total Y
+  received divided by total X sent.
+- **Price impact:** The price change caused by the trade itself changing the
+  pool's reserves.
 
 For a very small trade, the average execution price can be close to the
 starting marginal price. A larger trade changes the reserves more, so its

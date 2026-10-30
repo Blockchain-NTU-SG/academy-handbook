@@ -62,15 +62,21 @@ to users without a conventional credit check. All it has is the
 collateral they deposit and a rule for when to sell it. In this Part you turn
 that rule into numbers: how safe a loan is now, the price where it gets
 liquidated, and how a wrong price feed can leave the protocol with a loss.
+A **lending pool** is the shared supply of assets users put in so other users
+can borrow them.
 
-| Term | Plain-English meaning |
-|---|---|
-| **Collateral** | An asset put up as backing for a loan. |
-| **Debt** | The amount borrowed and still owed, including any interest due under the protocol's rules. |
-| **Borrower** | A user who takes assets from the lending pool and must repay them under the protocol's rules. |
-| **Supplier** | A user who puts assets into the lending pool so others can borrow; the supplier may receive part of the interest. |
-| **Liquidation** | A process that lets an eligible participant repay some debt and receive part of the borrower's collateral once the position crosses a risk boundary. |
-| **Liquidator** | A user or bot that carries out an eligible liquidation under the protocol's rules. |
+- **Collateral:** An asset you put up as backing for a loan.
+- **Debt:** What the borrower currently owes, including any interest due
+  under the protocol's rules.
+- **Borrower:** A user who takes assets from the lending pool and must repay
+  them under the protocol's rules.
+- **Supplier:** A user who puts assets into the lending pool so others can
+  borrow; the supplier may receive part of the interest.
+- **Liquidation:** A protocol process that lets part of the borrower's
+  collateral be used to repay some debt after a position crosses a risk
+  boundary.
+- **Liquidator:** A user or bot that carries out this process under the
+  protocol's rules.
 
 ::: tip Picture a pawn shop
 You leave a watch and borrow less than it is worth. If the watch's value
