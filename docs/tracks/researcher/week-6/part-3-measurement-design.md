@@ -408,6 +408,29 @@ appears, keep the comma delimiter so the two fields load into separate columns.
 Put the required formulas in empty cells or a small separate calculation area.
 You do not need prior spreadsheet-modelling experience.
 
+Before calculating, select the header and all 90 observations (`A1:B91`), then
+choose **Insert → Chart**. In the Chart Wizard, choose **Line**. On its data
+range step, use data series in columns and confirm the first row and first
+column are labels. Use `day_utc` for the horizontal-axis labels and `volume_usd`
+for the vertical axis. Label the axes **Day (UTC)** and **Daily volume (USD)**.
+Give the chart a title such as **Uniswap Ethereum daily volume (USD), [actual
+first date] to [actual last date]**, using the dates from your loaded 90-day
+window. Keep the DefiLlama source and date window visible in the title or
+nearby. Do not add extra chart features.
+
+::: details What success looks like
+One line covers all 90 dates in date order from left to right, with USD volume
+on the vertical axis. Larger observations appear as peaks relative to other
+days. Use the shape to describe whether activity looks broad or concentrated;
+the chart does not explain why a change happened.
+:::
+
+**A summary statistic tells you the level; the raw series shows the shape that
+produced it.** Never interpret an average before checking the observations it
+summarises. Read the evidence in this order: inspect the series, compare the
+mean, check whether the median moves in the same direction, measure the
+top-three share, then decide whether those views support the same story.
+
 In Calc, with CSV headers in row 1 and sorted dates, use:
 
 | Quantity | First 30 (rows 2–31) | Last 30 (rows 62–91) |
@@ -468,26 +491,31 @@ access](https://www.allium.so/use-case/academia).
 ## Hands-on task
 
 Aim for 60–75 minutes total, including reading. Produce one reproducible
-analysis, without an additional report or mandatory chart:
+analysis, with one simple line chart as part of the analysis and no additional
+report:
 
 1. Retrieve and validate the 90-day CSV; keep snapshot/provenance. Run the
    coverage query and spot-check two dates, including one version-sum check.
 2. Write one `CASE WHEN` / `GROUP BY` query for the first, middle and last
    30 days, returning `COUNT`, `AVG` and `MEDIAN`.
-3. Cross-check first/last means in Calc and calculate top-three share for
+3. Plot all 90 daily observations in one line chart in Calc.
+4. Cross-check first/last means in Calc and calculate top-three share for
    those windows. Calculate the percentage change in mean and median; use
    percentage points when comparing concentration.
-4. State your interpretation rule, then give a **90-word finding**: numbers,
-   scope, whether the typical day agrees, two confounders, and one next check.
-   Do not call dollar volume people, demand or independent users.
+5. State your interpretation rule, then give a **90-word finding**. Say what
+   story the mean alone suggests, what the chart's shape suggests, whether the
+   median agrees, and whether concentration strengthens or weakens that story.
+   Include the direction and size of the change, two plausible confounders and
+   one next check, all within the stated source and window. Do not call dollar
+   volume people, demand or independent users.
 
 **Out of scope:** advanced SQL, transaction decoding, price prediction and
 requiring both a full measurement memo and a second query assignment.
 
 ## Evidence required
 
-- The three data files, SQL with outputs, two source spot-checks and the small
-  first/last metric table.
+- The three data files, SQL with outputs, two source spot-checks, the line chart
+  with its source/date window and the small first/last metric table.
 - One finding containing the rule, source, timeframe, units and limitations.
 
 ## Completion and revision
@@ -497,20 +525,22 @@ incomplete or materially incorrect work is returned for revision. There is no
 partial-score rubric or separate weekly submission.
 
 Complete means 90 complete UTC dates, 30 per group, reproducible SQL and
-source checks, consistent units, and a conclusion that does not claim more
-than USD volume can show. Mean/median agreement is a check, not a required
-research result.
+source checks, consistent units, and a line chart covering the same series. The
+finding explains whether the observed change looks broad or spike-driven using
+the chart, mean, median and concentration, without claiming more than reported
+USD volume can show. The measures need not agree, and no one conclusion is
+prescribed.
 
 ::: details Further Exploration — optional, not assessed
-Chart the daily series with source and dates. Retrieve the all-chain series
-separately or calculate concentration in SQL with a ranking window function.
-Neither is required; a JOIN is unnecessary for this single-table question.
+Retrieve the all-chain series separately or calculate concentration in SQL
+with a ranking window function. Neither is required; a JOIN is unnecessary for
+this single-table question.
 :::
 
 ::: details Sources and attribution
 - [DefiLlama — Public API](https://api-docs.defillama.com/) and [methodology](https://docs.llama.fi/) — Link, independent data provider; derived estimates, not raw chain records
 - [Uniswap volume endpoint](https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false) — Link, live data; preserve the retrieval snapshot
 - [DuckDB — Web shell](https://shell.duckdb.org/), [SQL](https://duckdb.org/docs/stable/sql/introduction) and [CSV import](https://duckdb.org/docs/stable/data/csv/overview) — Link, tool documentation
-- [LibreOffice — Calc](https://books.libreoffice.org/en/) — Link, tool documentation
+- [LibreOffice — Calc](https://books.libreoffice.org/en/) and [Chart Wizard — Data Range](https://help.libreoffice.org/latest/en-US/text/schart/01/wiz_data_range.html) — Link, tool documentation
 - [Allium — Academic access](https://www.allium.so/use-case/academia) — Link, optional industry-data path; subject to institutional application and access approval
 :::

@@ -131,6 +131,10 @@ when learners do not need them for the Foundation mental model.
 > **Foundation: richer content, lighter assessment.** Deep Dive keeps assessment
 > embedded in the learning through focused Part tasks rather than extra homework.
 
+In Deep Dive, connect each technique to the question it answers, the evidence it
+produces, how that evidence informs a decision or conclusion, and one important
+limit on what it proves.
+
 Adding context, caveats or industry examples does not automatically create a new
 learner requirement. Assessment changes require explicit curriculum approval.
 
