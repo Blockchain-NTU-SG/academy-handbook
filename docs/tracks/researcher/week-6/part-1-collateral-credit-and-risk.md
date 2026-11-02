@@ -1,7 +1,7 @@
 ---
 track: researcher
-week: 5
-day: 4
+week: 6
+day: 1
 title: "Collateral, credit and DeFi economics"
 status: drafting
 owner: "Education Team"
@@ -52,7 +52,7 @@ table and the model answer was recalculated on 21 October 2026. The model
 answer is kept outside the public handbook.
 -->
 
-# Week 5 · Part 4 — Collateral, credit and DeFi economics
+# Week 6 · Part 1 — Collateral, credit and DeFi economics
 
 > **Core question: at what price does a crypto loan get liquidated, and
 > what happens to the lender if the market moves faster than that?**

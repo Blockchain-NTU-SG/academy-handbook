@@ -1,7 +1,7 @@
 ---
 track: researcher
-week: 6
-day: 4
+week: 8
+day: 1
 title: "Token, liquidity and valuation evidence"
 status: drafting
 owner: "Education Team"
@@ -58,7 +58,7 @@ sources:
 <!-- Original synthetic data, not live valuations or recommendations.
 No reviewer solution is published here. Existing route retained. -->
 
-# Week 6 · Part 4 — Token, liquidity and valuation evidence
+# Week 8 · Part 1 — Token, liquidity and valuation evidence
 
 > **Core question: what makes a valuation comparison meaningful, and why might one token appear cheaper than another?**
 
@@ -179,14 +179,14 @@ fee-allocation architecture.** The important distinction is:
 | What remains after payments and costs? | Defined retained revenue, treasury and distribution rules | TVL is deposited assets under a provider's method, not revenue. |
 | Is growth economically meaningful? | Activity definitions and incentive context | Subsidised activity may not persist when incentives change. |
 
-Use [W5P5](../week-5/part-5-token-and-incentive-economics.md) for the full
+Use [W6P2](../week-6/part-2-token-and-incentive-economics.md) for the full
 fee-flow and value-accrual model; here, test whether that chain exists in the
 case rather than repeating it.
 
 ### 2. Flows — where is capital actually moving?
 
 Fundamentals describe the economic machine; **flows describe where capital,
-tokens or liquidity moved during a stated period**. W6P2 traces individual
+tokens or liquidity moved during a stated period**. W7P2 traces individual
 records; this lens asks what a set of records means at system level.
 
 | Ecosystem / market flows | Protocol / token flows |
@@ -246,7 +246,7 @@ restricted or practically inactive supply may make the reported figure larger
 than the amount readily available. Real float is an analyst assumption, not a
 standard on-chain field. State what you subtract and why, and avoid subtracting
 the same tokens twice. Top-holder **addresses** may represent exchanges,
-bridges, LPs or many users, so do not assume one address is one person (W6P2).
+bridges, LPs or many users, so do not assume one address is one person (W7P2).
 
 **Trading volume** asks how much value traded over a period, such as one day.
 **Market depth / executable liquidity** asks how much you could trade now
@@ -298,7 +298,7 @@ mechanism links the two.
 
 Governance can matter, but it does not automatically create a claim on retained
 revenue or distributions, or continuous demand. Check token and governing
-documents, then connect to W5P5: **protocol success ≠ token success unless a clear mechanism links
+documents, then connect to W6P2: **protocol success ≠ token success unless a clear mechanism links
 them.**
 
 ### 5. Unlocks — what new transferable supply is becoming available?
@@ -343,7 +343,7 @@ observable evidence.**
 For example: an oracle stops updating → collateral may be mispriced → borrowers,
 liquidators or suppliers may be exposed. Check update freshness, market depth,
 position health and pause/fallback rules. This is a scenario, not a forecast.
-W6P5 teaches the full dependency and stress-test method. Here, identify
+W8P2 teaches the full dependency and stress-test method. Here, identify
 evidence that would make you reduce confidence in the valuation or value-
 accrual thesis.
 
@@ -384,7 +384,7 @@ because a lens is a question, not a protocol category.
 | **Tokenomics** | ETH: [gas](https://ethereum.org/developers/docs/gas/), [staking](https://ethereum.org/staking/), [issuance and burn](https://ethereum.org/roadmap/merge/issuance/) | Study gas use, staking, issuance and base-fee burn together; activity alone does not reveal net supply or demand. |
 | **Unlocks** | [ARB](https://docs.arbitrum.foundation/token-supply) | Compare scheduled team/investor transfers with circulation, float and liquidity. The page's supply examples are dated 2024; recheck current state. |
 | **Catalysts** | [Aave V4 on Arc](https://governance.aave.com/t/arfc-deploy-aave-v4-on-arc/25170/9) | Governance reported activation on **16 September 2026**: implementation evidence. Measure adoption and economic effects against a baseline before calling it a catalyst. |
-| **Risks** | [Aave with wstETH collateral](part-5-dependency-governance-and-risk.md#case-wsteth-collateral-in-aave-v3-on-ethereum) | Trace market/oracle trigger → collateral value and health factor → liquidation demand → exposed party. W6P5 develops the full causal method. |
+| **Risks** | [Aave with wstETH collateral](./part-2-dependency-governance-and-risk.md#case-wsteth-collateral-in-aave-v3-on-ethereum) | Trace market/oracle trigger → collateral value and health factor → liquidation demand → exposed party. W8P2 develops the full causal method. |
 | **Narrative** | [RWA / Aave Horizon](https://governance.aave.com/t/horizon-technical-maintenance-updates/25408) | AaveLabs described Horizon's tokenized-asset context on **31 July 2026**. Verify assets, users, borrowing and fees; sector attention is not proof of stronger fundamentals. |
 
 Real examples show where to look; Alder removes live-data noise so you can

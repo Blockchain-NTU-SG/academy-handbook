@@ -1,6 +1,6 @@
 ---
 track: builder
-week: 6
+week: 7
 day: 2
 title: "Simulation, debugging and tracing"
 status: drafting
@@ -27,18 +27,19 @@ sources:
 
 <!--
 Author note (Education team): the lab app lives on the w6-2-broken-dapp branch
-of the Builder starter repository. It is a finished W5-level app with planted
-faults, one per layer, described to learners only as user bug reports in
-LAB-W6-2.md. Do not name the faults or their fixes on this page. The model
+of the Builder starter repository. It is a finished app with planted faults,
+one per layer, described to learners only as user bug reports in LAB-W6-2.md.
+The branch and file identifiers retain their existing starter names for
+compatibility; this is Academy W7P2. Do not name the faults or their fixes on this page. The model
 answer and reviewer notes are kept outside the public handbook.
 -->
 
-# Week 6 · Part 2 — Simulation, debugging and tracing
+# Week 7 · Part 2 — Simulation, debugging and tracing
 
 > **Core question — when a Web3 app breaks, how do I find the layer that broke
 > instead of guessing?**
 
-In Week 5 you built an app where a click travels through many pieces before
+Across W5 and W6 you built an app where a click travels through many pieces before
 anything happens on-chain. When it fails, the error usually shows up in the
 browser, but the cause can be anywhere along that path: a setting, an
 address, the wallet, the RPC, the contract or the page itself.
@@ -137,7 +138,7 @@ changing code.
 
 **The browser's developer tools.** The Console tab shows errors. The Network
 tab shows every request your page sends to the RPC, including the address and
-method in the request body. [W5 Part 4](../week-5/part-4-wallet-and-frontend-integration.md)
+method in the request body. [W6 Part 1](../week-6/part-1-wallet-and-frontend-integration.md)
 shows how to open these tabs and what each one contains.
 
 **A block explorer.** Paste an address into
@@ -249,7 +250,8 @@ Part. They become useful when contracts call other contracts.
 
 ## Hands-on task
 
-The lab is on the `w6-2-broken-dapp` branch of your starter repository. It is
+The lab is on the `w6-2-broken-dapp` branch of your starter repository. This
+existing branch name is kept for starter compatibility. It is
 a finished version of the Registry app, with a wallet connection, your record,
 a form to update it and an activity list, and it has been broken in several
 places.

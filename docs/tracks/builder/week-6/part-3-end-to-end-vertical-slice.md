@@ -1,7 +1,7 @@
 ---
 track: builder
-week: 5
-day: 6
+week: 6
+day: 3
 title: "End-to-end vertical slice"
 status: drafting
 owner: "Education Team"
@@ -24,12 +24,13 @@ sources:
 
 <!--
 Author note (Education team): the request trace in the worked example was
-captured from a working Week 5 app on a local fork of Sepolia, by recording
+captured from a working app after its W6 wallet and event sections were
+completed, on a local fork of Sepolia, by recording
 every request the page sent during one save. The model answer and reviewer
 notes are kept outside the public handbook.
 -->
 
-# Week 5 · Part 6 — End-to-end vertical slice
+# Week 6 · Part 3 — End-to-end vertical slice
 
 > **Core question — can I put every piece together into one small app that
 > works from click to chain and back?**
@@ -92,7 +93,7 @@ not your page. The page only changes when you read again.
 | Wallet → transaction | Hash treated as success | Wait for the receipt and check `status` |
 | Chain → page | Page shows the old value after success | Read again and reload events after the receipt |
 | Events → page | Activity list empty or very slow | Query from your deployment block, not from block 0 |
-| RPC → events | `pruned history unavailable` | Use an RPC that keeps old logs, as in Part 5 |
+| RPC → events | `pruned history unavailable` | Use an RPC that keeps old logs, as in W6P2 |
 
 ### What "one slice" means
 
@@ -131,7 +132,7 @@ themselves prove that the operation succeeded.
 
 ### Worked example: trace one click
 
-We took a working Week 5 app (the starter with Parts 4 and 5 completed),
+We took a working app after completing the W6 wallet and event Parts,
 connected a test wallet, typed `one click, traced` and pressed **Save
 record**. Then we recorded every request the page sent, in order. Repeated polling requests are grouped into one row:
 
@@ -167,12 +168,12 @@ one click, traced
 ```
 
 Every layer in the diagram appears in that list. Request 1 is the simulation
-from Part 3. Requests 2 and 3 are the wallet from Part 4. Request 4 is the wait
+from W5P3. Requests 2 and 3 are the wallet from W6P1. Request 4 is the wait
 for the receipt. Requests 5 and 6 are the dotted line coming back: without
 them, the page would still show the old record.
 
 You can record the same list in your own app: open the browser's developer
-tools (introduced in [Part 4](./part-4-wallet-and-frontend-integration.md)), go
+tools (introduced in [W6P1](./part-1-wallet-and-frontend-integration.md)), go
 to the **Network** tab, filter by your RPC's address, and click Save.
 Requests to the wallet do not appear there, because MetaMask handles them
 itself.
@@ -189,23 +190,23 @@ Your README needs only five short parts:
 
 ## Hands-on task
 
-Build your **Week 5 mini dApp**: one working slice of your own contract from
-Part 3. It must have:
+Build your **Week 6 mini dApp**: one working slice of your own contract from
+W5P3. It must have:
 
 - wallet connection, with the account and network shown;
 - at least one contract read;
 - your contract's main write, with pending, success and failure states;
 - the page updating after success, without a reload;
-- an activity list built from your contract's events (Part 5);
-- your contract deployed on Sepolia (from Part 3);
+- an activity list built from your contract's events (W6P2);
+- your contract deployed on Sepolia (from W5P3);
 - a README with the five parts above.
 
 Then **trace one click** in your own app, as in the worked example, using the
 Network tab. List the requests in order and say which layer each one belongs
 to.
 
-**Out of scope:** extra features, styling, putting the app online (Week 6
-Part 5 does that) and writing tests (Week 6 Part 1).
+**Out of scope:** extra features, styling, putting the app online (W8P2 does
+that) and writing tests (W7P1).
 
 ## Evidence required
 

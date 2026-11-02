@@ -12,9 +12,9 @@ order:
 
 The Foundation is one continuous arc. The current Foundation Pilot ends here
 after the Week 4 Anchor Mission. In the full programme, the Week 4 Track
-Selection Card fixes the Builder or Researcher capability path for W5–W8. It is
-not a final Proof of Work commitment: the domain, question and deliverable may
-evolve until W7.
+Selection Card fixes the Builder or Researcher capability path through W10. It is
+not a final project commitment: the domain, question and deliverable may
+evolve through W8. W9 is when the learner scopes a Project Brief after feedback.
 
 Each page separates **Core**, **Landscape** and **Further Exploration** so
 breadth does not become heavier assessment.

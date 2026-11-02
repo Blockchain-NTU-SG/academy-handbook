@@ -1,7 +1,7 @@
 ---
 track: builder
-week: 6
-day: 6
+week: 8
+day: 3
 title: "Independent builder challenge"
 status: drafting
 owner: "Education Team"
@@ -33,7 +33,7 @@ fork with real USDC) and the reviewer notes are kept outside the public
 handbook.
 -->
 
-# Week 6 · Part 6 — Independent builder challenge
+# Week 8 · Part 3 — Independent builder challenge
 
 > **Core question — given a spec and no tutorial, can I build, test, ship and
 > explain a working feature on my own?**
@@ -42,8 +42,10 @@ Every Part so far taught you something and then asked you to use it. This one
 only gives you a spec. You decide the design, find what you do not know, and
 put the pieces together yourself.
 
-It is also the readiness check for Weeks 7 and 8, where you choose and build
-your own project. If you can finish this, you are ready for that.
+It is also a readiness check for the W9 Project Brief and W10 Project
+Submission, where you scope and deliver a project of your own. Completing it
+shows you have practised combining the skills; it does not guarantee that a
+later project will be straightforward.
 
 ::: tip Picture a driving test
 Your lessons taught you to steer, brake and check mirrors. On the test, the
@@ -75,7 +77,7 @@ After this Part you can:
 1. **List what "done" means.** Turn each requirement into a check you could
    tick. If you cannot tell when it is met, ask before you build.
 2. **Find the unknowns.** Mark anything you have not used before, then answer
-   the five questions from [Part 4](./part-4-docs-driven-integration.md) for
+   the five questions from [W8P1](./part-1-docs-driven-integration.md) for
    each one.
 3. **Sketch the flow.** Draw the boxes (wallet, app, your contract, other
    contracts) and the calls between them for one complete action.
@@ -84,21 +86,21 @@ After this Part you can:
 5. **Break it on purpose.** Try every failure you can think of, then make
    sure each one fails clearly.
 6. **Ship and explain.** Ship the new slice through the existing workflow from
-   [Part 5](./part-5-deployment-and-reproducibility.md), then write down what
+   [W8P2](./part-2-deployment-and-reproducibility.md), then write down what
    you built and what it does not do.
 
 ### You already have most of the pieces
 
 | You need to… | You learned it in… |
 |---|---|
-| Add state, a rule, an event and a failure case to a contract | Week 5 Part 2 |
-| Read and write from TypeScript and a frontend | Week 5 Parts 3 and 4 |
-| List past events | Week 5 Part 5 |
-| Prove behaviour with Foundry tests | Week 6 Part 1 |
-| Find a fault layer by layer | Week 6 Part 2 |
-| Order checks, effects and interactions safely | Week 6 Part 3 |
-| Handle token units and check docs against the chain | Week 6 Part 4 |
-| Verify, deploy and document | Week 6 Part 5 |
+| Add state, a rule, an event and a failure case to a contract | W5P2 |
+| Read and write from TypeScript and a frontend | W5P3 and W6P1 |
+| List past events | W6P2 |
+| Prove behaviour with Foundry tests | W7P1 |
+| Find a fault layer by layer | W7P2 |
+| Order checks, effects and interactions safely | W7P3 |
+| Handle token units and check docs against the chain | W8P1 |
+| Verify, deploy and document | W8P2 |
 
 ### The new piece: approve, then pull
 
@@ -156,11 +158,11 @@ this exercise uses exact approval so the remaining permission is easy to
 reason about.
 
 Reuse the public repository, contract deployment, verification and Pages setup
-you completed in Part 5. This challenge still requires a deployed and usable
+you completed in W8P2. This challenge still requires a deployed and usable
 result, but it is not a second deployment engineering assignment: extend the
 existing pipeline and provide fresh evidence for the new contract and app
 through it. Do not redesign or re-document the Pages workflow, repeat the
-fresh-clone shipping proof, or create a second workflow when the Part 5 setup
+fresh-clone shipping proof, or create a second workflow when the W8P2 setup
 is unchanged.
 
 ## Hands-on task
@@ -232,15 +234,15 @@ not finished.
 
 ## Evidence required
 
-- Your repository link, with the tests. Point to the Part 5 repository and
+- Your repository link, with the tests. Point to the W8P2 repository and
   shipping evidence where it is unchanged; make the new integration changes
   clear.
-- Your verified contract link for the new contract, using the existing Part 5
+- Your verified contract link for the new contract, using the existing W8P2
   verification workflow.
 - A link to your real Sepolia tip transaction.
-- A link to your live frontend (as in Part 5), or a demo clip of two minutes
+- A link to your live frontend (as in W8P2), or a demo clip of two minutes
   or less showing one tip and one handled failure.
-- Your architecture note. Do not repeat the Part 5 fresh-clone or Pages
+- Your architecture note. Do not repeat the W8P2 fresh-clone or Pages
   workflow proof when that infrastructure is unchanged.
 
 ## Completion and revision

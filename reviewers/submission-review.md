@@ -7,7 +7,8 @@
 
 Not academic grading. Not deadline enforcement. Verification of learning.
 The same two-outcome standard applies to Foundation Anchor Missions, Deep Dive
-Part tasks, and the W7/W8 Proof of Work milestones.
+Part tasks, the W9 Project Brief + Feedback Session and the W10 Project
+Submission.
 
 ## Two outcomes
 

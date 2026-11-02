@@ -3,36 +3,26 @@ track: builder
 week: 6
 status: drafting
 owner: "Education Team"
-title: "Builder W6 — Reliable Web3 Engineering"
+title: "Builder W6 — Web3 App Integration"
 ---
 
-# Builder Week 6 — Reliable Web3 Engineering
+# Builder Week 6 — Web3 App Integration
 
-Week 5 got your app working. This week makes it reliable: you test what the
-contract does, debug failures layer by layer, find and fix a weakness, add a
-tool nobody taught you, ship the app so others can run it, and finish with an
-independent challenge built from a spec alone.
+Extend the programmatic contract work into a browser application: connect a
+wallet, present event history, then bring contract, script and interface
+together in one vertical slice.
 
-Each Part has one lightweight, reviewable hands-on task worth **100 points**.
-Every Part builds on the
-[Builder starter](https://github.com/Blockchain-NTU-SG/academy-builder-starter)
-and the app you made in Week 5.
+Each Part has one reviewable task worth **100 points**. There is no separate
+weekly submission.
 
-**There is no separate weekly submission.** These six Part tasks are the
-assessed progress evidence for this week.
-
-| Part | Planned title | Estimated total | Task status |
+| Part | Title | Estimated total | Task status |
 |---:|---|---|---|
-| 1 | [Testing Contract Behaviour](./part-1-testing-contract-behaviour.md) | 40 min hands-on | Drafting |
-| 2 | [Simulation, Debugging and Tracing](./part-2-simulation-debugging-and-tracing.md) | 50 min hands-on | Drafting |
-| 3 | [Security Engineering](./part-3-security-engineering.md) | 45 min hands-on | Drafting |
-| 4 | [Docs-Driven Integration](./part-4-docs-driven-integration.md) | 60 min hands-on | Drafting |
-| 5 | [Deployment and Reproducibility](./part-5-deployment-and-reproducibility.md) | 75 min hands-on | Drafting |
-| 6 | [Independent Builder Challenge](./part-6-independent-builder-challenge.md) | 120 min hands-on | Drafting |
+| 1 | [Wallet and Frontend Integration](./part-1-wallet-and-frontend-integration.md) | 50 min hands-on | Drafting |
+| 2 | [Events as Data](./part-2-events-as-data.md) | 40 min hands-on | Drafting |
+| 3 | [End-to-End Vertical Slice](./part-3-end-to-end-vertical-slice.md) | 75 min hands-on | Drafting |
 
-**Required estimate: 390 minutes (6 h 30 min)**, including hands-on work.
-These are authoring estimates to test in the pilot, not completion deadlines.
-Optional exploration is not assessed.
+**Required estimate: 165 minutes (2 h 45 min).** These are authoring estimates
+for pilot review, not deadlines. Optional exploration is outside the estimate.
 
-**Assessment:** 6 Part tasks × 100 points = **600 points**. Completion is
+**Assessment:** 3 Part tasks × 100 points = **300 points**. Completion is
 binary; incomplete or materially incorrect work is returned for revision.

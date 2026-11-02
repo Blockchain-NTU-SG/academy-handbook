@@ -75,7 +75,7 @@ repository should make the actual output clear.
 `fix stuff` tells a future reader nothing. `fix: handle empty response from
 faucet API` tells them what changed and why.
 
-You will read your own history in Week 8 when writing up your Proof of Work.
+You will read your own history in Week 10 when preparing your Project Submission.
 Write for that person.
 :::
 
@@ -433,7 +433,7 @@ If it happens: rotate the key immediately. Treat it as compromised, because it i
 
 ## Worked example
 
-Two repositories from the same Proof of Work milestone sequence. Same amount of work.
+Two repositories from the same Project Work milestone sequence. Same amount of work.
 
 :::: tabs
 @tab The one nobody can use
@@ -480,7 +480,8 @@ And it is the difference between something that counts as Proof of Work and
 something that does not.
 
 Your GitHub profile is the most durable thing you take out of this programme.
-Week 8 will ask you to ship the second version — start building the habits now.
+Week 10 will ask you to ship the final reviewable version. Start building the
+habits now.
 :::
 
 ::: details Further exploration — optional, not assessed

@@ -1,6 +1,6 @@
 ---
 track: researcher
-week: 6
+week: 7
 day: 1
 title: "On-chain evidence and trace semantics"
 status: drafting
@@ -47,12 +47,12 @@ gas price). The model answer and reviewer notes are kept outside the public
 handbook.
 -->
 
-# Week 6 · Part 1 — On-chain evidence and trace semantics
+# Week 7 · Part 1 — On-chain evidence and trace semantics
 
 > **Core question — what can you prove happened in one transaction, without trusting its sender's story?**
 
-In Week 5 you mapped how systems *should* work. In Week 6 you gather evidence of
-what actually happened. A transaction's page may say “Send 6 USDC”, but a
+In W5–W6 you mapped how systems are designed and how their economics work. In
+Week 7 you gather evidence of what actually happened. A transaction's page may say “Send 6 USDC”, but a
 researcher separates the **request**, the **executed result**, and the **claim
 that is not supported by the chain**.
 

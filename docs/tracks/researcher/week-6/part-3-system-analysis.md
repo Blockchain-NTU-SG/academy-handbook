@@ -1,7 +1,7 @@
 ---
 track: researcher
-week: 5
-day: 6
+week: 6
+day: 3
 title: "Independent system analysis"
 status: drafting
 owner: "Education Team"
@@ -32,12 +32,13 @@ reviewers against Lido's own documentation. The model answer is kept outside
 the public handbook.
 -->
 
-# Week 5 · Part 6 — Independent system analysis
+# Week 6 · Part 3 — Independent system analysis
 
 > **Core question — how does this system work, why do its participants
 > behave the way it hopes, and where could it fail?**
 
-Parts 1 to 5 each took one system apart. This Part asks you to do it without
+W5P1 through W6P2 examined a system or one of its core economic layers. This
+Part asks you to analyse an unfamiliar protocol without
 a guide, on a protocol you have not studied, and to be honest about what you
 could and could not confirm.
 
@@ -94,7 +95,7 @@ open questions.
 
 ### Worked example: Uniswap v2, on one card
 
-You met this mechanism in [Part 3](./part-3-mechanism-and-market-design.md),
+You met this mechanism in [Part 3](../week-5/part-3-mechanism-and-market-design.md),
 so we use it to show the format.
 
 | Lens | Card |
@@ -102,7 +103,7 @@ so we use it to show the format.
 | **Mechanism** | 1. A pool holds reserves of two tokens. 2. A trader sends in one token and takes out the other, so the product of reserves does not fall. 3. A small fee stays in the pool. 4. Liquidity providers deposit both tokens and receive pool shares. |
 | **Incentives** | Liquidity providers earn fees on volume. Arbitrageurs trade the pool back to the market price and keep the gap, which keeps the pool's price honest. Traders pay for instant swaps. |
 | **Risks** | *Impermanent loss:* when the price moves, a provider's shares are worth less than simply holding → **providers lose**. Evidence: follows from the pricing rule. Fee income may offset some loss, but does not prevent it. |
-| **Open question** | How much do providers in a given pool earn after that loss? Needs real data, which Week 6 teaches you to query. |
+| **Open question** | How much do providers in a given pool earn after that loss? Needs real data, which W7P3 teaches you to query. |
 
 **Mitigation** means something that reduces a risk or its damage. **Residual
 risk** is what can still go wrong after a protection; in a fast-moving market,
@@ -168,7 +169,7 @@ Your work is complete when:
 - Find an independent assessment of stETH risk (an auditor's or rating
   agency's report) and compare its risk list with yours.
 - Pick one open question from your note and sketch the query or dashboard
-  that would answer it. You will build queries like this in Week 6.
+  that would answer it. You will build queries like this in W7P3.
 :::
 
 ::: details Sources and attribution

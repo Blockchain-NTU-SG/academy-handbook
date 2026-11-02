@@ -1,7 +1,7 @@
 ---
 track: researcher
-week: 6
-day: 5
+week: 8
+day: 2
 title: "Dependency, governance and risk"
 status: drafting
 owner: "Education Team"
@@ -40,11 +40,12 @@ live Aave parameters; the arithmetic was rechecked on 21 October 2026. The
 model answer and reviewer notes are kept outside the public handbook.
 -->
 
-# Week 6 · Part 5 — Dependency, governance and risk
+# Week 8 · Part 2 — Dependency, governance and risk
 
 > **Core question — if one dependency fails, how does the damage reach real users?**
 
-In Week 5 Part 6 you identified protocol risks. Now go one level deeper: build a
+In [W6P3](../week-6/part-3-system-analysis.md) you identified protocol risks.
+Now go one level deeper: build a
 **causal risk model**. Rather than writing “oracle risk” or “liquidation risk”
 as labels, follow a hypothetical sudden change through the protocol's
 dependencies until you can name *who loses*, *what would be observable* and
@@ -88,7 +89,7 @@ After this Part you can:
 
 Aave lending depends on prices, collateral, loan parameters, liquidators and
 market liquidity. An **oracle** is the service or mechanism that supplies the
-prices the protocol uses for valuation. As a connection back to Week 5 Part 6,
+prices the protocol uses for valuation. As a connection back to W6P3,
 take Lido's **staked ETH (stETH)** and **wrapped staked ETH (wstETH)**: stETH
 balances can update as staking rewards or penalties are reflected, while a
 wstETH balance stays fixed and its conversion value in stETH changes. That

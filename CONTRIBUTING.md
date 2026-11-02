@@ -53,6 +53,7 @@ Use Node.js 22.18 or newer. The production check is:
 npm run docs:check-marks
 npm run docs:build
 npm run docs:check-times
+npm run docs:check-links
 npm run docs:check-payload
 ```
 
@@ -84,7 +85,8 @@ history remains concise.
 
 Pull requests targeting `main` automatically run `npm ci`,
 `npm run docs:check-marks`, `npm run docs:build`,
-`npm run docs:check-times` and `npm run docs:check-payload` on Node.js 22 through
+`npm run docs:check-times`, `npm run docs:check-links` and
+`npm run docs:check-payload` on Node.js 22 through
 the documentation build check. These checks validate the handbook only; they do
 not deploy Pages.
 
@@ -107,7 +109,8 @@ Please describe:
 - whether the change is original, adapted, or link-only material;
 - source and attribution updates;
 - validation performed, including `npm run docs:check-marks`,
-  `npm run docs:build`, `npm run docs:check-times` and
+  `npm run docs:build`, `npm run docs:check-times`,
+  `npm run docs:check-links` and
   `npm run docs:check-payload` for relevant changes.
 
 Curriculum changes should involve Education leadership or the relevant

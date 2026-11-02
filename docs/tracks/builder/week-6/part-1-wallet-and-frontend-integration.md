@@ -1,7 +1,7 @@
 ---
 track: builder
-week: 5
-day: 4
+week: 6
+day: 1
 title: "Wallet and frontend integration"
 status: drafting
 owner: "Education Team"
@@ -38,16 +38,16 @@ error state with a broken RPC URL. The task's model answer is the working app
 kept with the private reviewer notes, outside the public handbook.
 -->
 
-# Week 5 · Part 4 — Wallet and frontend integration
+# Week 6 · Part 1 — Wallet and frontend integration
 
 > **Core question — how do I let a real person, with their own wallet, use my
 > contract from a web page?**
 
-Your script from [Part 3](./part-3-programmatic-contract-interaction.md)
+Your script from [Part 3](../week-5/part-3-programmatic-contract-interaction.md)
 signed with a key from `.env`. A real user will never give you their key.
 Instead, their wallet signs, and your page asks it to.
 
-The starter has four learner TODO sections. Across W5P4 and W5P5, you implement
+The starter has four learner TODO sections. Across W6P1 and W6P2, you implement
 the frontend behaviour in those sections. This Part focuses on connecting a
 wallet, reading from the contract, writing to it, and keeping the user informed
 while they wait.
@@ -240,7 +240,7 @@ Two React tools appear throughout this Part:
 Open the browser's developer tools by right-clicking the page and choosing
 **Inspect** (or **Inspect Element**). The **Console** shows runtime errors and
 logs. The **Network** tab shows requests the page sends, including its RPC
-requests. You will use these again in [W6 Part 2](../week-6/part-2-simulation-debugging-and-tracing.md).
+requests. You will use these again in [W7 Part 2](../week-7/part-2-simulation-debugging-and-tracing.md).
 
 ### Worked example: a read with loading and error states
 
@@ -352,7 +352,7 @@ Finish the starter frontend against your own contract from Part 3
    or a contract error such as `EmptyRecord`). After success, section 2 shows
    the new value without a reload.
 
-Leave section 4 for Part 5.
+Leave section 4 for W6P2.
 
 ::: details What success looks like
 - The connected account and selected network are visible. A wrong-network

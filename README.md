@@ -55,9 +55,9 @@ By the end of the shared Foundation, a learner should be able to:
 |---|---|
 | Week 0 | Enter Web3 safely and learn the basic tools and risks. |
 | Weeks 1–4 | Shared Foundation: blockchains, Ethereum, wallets, contracts, industry and research; 4 Anchor Missions × 100 = 400 points. |
-| Weeks 5–6 | Deep Dive: follow the selected Builder or Researcher track and complete six reviewable Part tasks each week. |
-| Week 7 | Scope + MVP / V1: define the PoW while producing its first meaningful version; 200 points. |
-| Week 8 | Refine + Final Proof of Work: improve, validate and ship or publish the final artefact; 200 points. |
+| Weeks 5–8 | Deep Dive: follow the selected Builder or Researcher track, with three reviewable Part tasks each week. |
+| Week 9 | Project Brief + Feedback Session: scope a sponsor-agnostic project and revise the brief after feedback; 200 points. |
+| Week 10 | Project Submission: ship or publish the final reviewable artefact; 200 points. |
 | Full programme | 2,000 completion-based points; W0 remains onboarding. |
 
 The Foundation uses **Core**, **Landscape** and **Further Exploration** to make
@@ -81,7 +81,7 @@ See the full writing and review standard in [EDITORIAL_GUIDE.md](./EDITORIAL_GUI
 1. Start with the [programme overview](./docs/getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./docs/getting-started/).
 3. Follow the [Foundation](./docs/foundation/) from Week 1 through Week 4.
-4. Continue into the [Deep Dive tracks](./docs/tracks/), then complete the [Proof of Work milestones](./docs/proof-of-work/) when your cohort reaches them.
+4. Continue into the [Deep Dive tracks](./docs/tracks/) for Weeks 5–8, then complete the [Project Brief and Project Submission](./docs/proof-of-work/) in Weeks 9–10.
 
 Anyone can use the Handbook at their own pace. Cohort members follow the same
 learning path with a weekly rhythm, missions, peer learning, feedback and review
@@ -94,7 +94,7 @@ docs/                 Learner-facing handbook and VuePress source
   getting-started/    Week 0 onboarding
   foundation/         Weeks 1–4 shared Foundation
   tracks/             Builder and Researcher Deep Dive scaffold
-  proof-of-work/      W7 Scope + MVP / V1 and W8 Final PoW scaffold
+  proof-of-work/      W9 Project Brief and W10 Project Submission scaffold
 templates/            Page and Anchor Mission authoring formats
 reviewers/            Submission and beginner content-review guidance
 .github/              CI, CODEOWNERS, PR and Issue templates
@@ -167,6 +167,7 @@ Build and consistency-check the static site with:
 npm run docs:check-marks
 npm run docs:build
 npm run docs:check-times
+npm run docs:check-links
 npm run docs:check-payload
 ```
 

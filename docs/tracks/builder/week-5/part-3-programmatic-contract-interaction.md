@@ -99,7 +99,7 @@ authorise writes.
 | **Wallet client** (`createWalletClient`) | Signs and sends transactions | Yes, an account |
 
 In a script, the account comes from a private key in `.env`, through
-`privateKeyToAccount`. In Part 4, the browser wallet signs instead, and your
+`privateKeyToAccount`. In W6P1, the browser wallet signs instead, and your
 code never sees a key.
 
 ::: warning Use a disposable test account
@@ -327,8 +327,8 @@ TypeScript is not the skill being assessed.
 If your feature needs a second account (for example, someone else's record),
 make a second test account in MetaMask and send it a little Sepolia ETH.
 
-**Out of scope:** the frontend (Part 4), events beyond what Etherscan shows
-(Part 5), and verifying source code on Etherscan (Week 6).
+**Out of scope:** the frontend (W6P1), event history beyond what Etherscan
+shows (W6P2), and verifying source code on Etherscan (W8P2).
 
 ## Evidence required
 

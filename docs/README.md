@@ -41,7 +41,7 @@ config:
     hero:
       name: Blockchain@NTU Academy
       tagline: Learn → Build → Prove
-      text: From zero Web3 knowledge to your first Proof of Work.
+      text: From zero Web3 knowledge to a reviewable Web3 project.
       actions:
         - theme: brand
           text: Apply to the Academy
@@ -92,18 +92,18 @@ config:
           Ethereum, wallets, contracts and the wider ecosystem.
         link: ./getting-started/
         linkText: Start with Week 0
-      - title: Weeks 5–6 Deep Dive
+      - title: Weeks 5–8 Deep Dive
         icon: 🚀
         details: >-
-          Build transferable hard skills through six lightweight, reviewable
+          Build transferable hard skills through three focused, reviewable
           tasks each week in the selected Builder or Researcher track.
         link: ./tracks/
         linkText: Explore the Deep Dive
-      - title: Weeks 7–8 Proof of Work
+      - title: Weeks 9–10 Project Work
         icon: 🧭
         details: >-
-          Define the PoW while producing an MVP / V1 in Week 7, then refine,
-          validate and ship or publish the final artefact in Week 8.
+          Scope a project brief and incorporate feedback in Week 9, then ship
+          or publish the final reviewable artefact in Week 10.
         link: ./proof-of-work/
         linkText: See the milestones
   - type: custom
@@ -135,15 +135,15 @@ The week's learning turned into a small, practical action.
 1. [Read the programme overview](./getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./getting-started/).
 3. Follow the [Foundation](./foundation/) from Week 1 through Week 4.
-4. Continue into the [Deep Dive](./tracks/) and then the [Proof of Work milestones](./proof-of-work/) when your cohort reaches them.
+4. Continue into the [Deep Dive](./tracks/) and then the [Project Work milestones](./proof-of-work/) when your cohort reaches them.
 ::::
 
 The Handbook contains the full learning material, Foundation Anchor Mission
-requirements, Deep Dive task requirements and Proof of Work milestone
+requirements, Deep Dive task requirements and Project Work milestone
 requirements. Cohort operations such as application, progress, submission and
 review are handled through the Academy programme platform.
 
-The **September–October 2026 Foundation Pilot** ends after Week 4. Weeks 5–8
+The **September–October 2026 Foundation Pilot** ends after Week 4. Weeks 5–10
 are the next full-programme stage, in development for **Cohort 1 · January
 2027**.
 

@@ -1,6 +1,6 @@
 ---
 track: builder
-week: 6
+week: 7
 day: 1
 title: "Testing contract behaviour"
 status: drafting
@@ -35,7 +35,7 @@ this task in step if either changes. The model answer and reviewer notes are
 kept outside the public handbook.
 -->
 
-# Week 6 · Part 1 — Testing contract behaviour
+# Week 7 · Part 1 — Testing contract behaviour
 
 > **Core question — how do I prove my contract does what I think it does, every
 > time, without clicking through it by hand?**
@@ -163,7 +163,7 @@ check:
 | The owner clears a record | The record is deleted, and `RecordUpdated` is emitted with an empty value |
 
 Your own copy also has the feature you added in
-[Week 5 Part 2](../week-5/README.md). That feature has promises of its own, and
+[W5P2](../week-5/part-2-contract-engineering.md). That feature has promises of its own, and
 nothing checks them yet. That is your task.
 
 ### How a Foundry test is laid out
@@ -218,7 +218,7 @@ emitting contract.
 | Edge case | Does it behave correctly right at a boundary? | A focused boundary test |
 
 Event tests matter more than they look. In
-[Week 5](../week-5/README.md) your app read history from `RecordUpdated`
+[W6P2](../week-6/part-2-events-as-data.md) your app read history from `RecordUpdated`
 events. If an event silently stops firing, the contract still "works", but
 every app built on it shows the wrong history.
 
@@ -350,7 +350,7 @@ required for this Part. See the
 ## Hands-on task
 
 The starter's six tests cover the original Registry. Nothing yet covers the
-feature **you** added in Week 5 Part 2. Write those tests.
+feature **you** added in W5P2. Write those tests.
 
 Create a new file in `contracts/test/` (for example
 `contracts/test/MyFeature.t.sol`) and build a suite for your feature that
@@ -379,7 +379,7 @@ purpose" check above to confirm it really guards that rule.
 
 ## Evidence required
 
-- One line naming the feature you added in Week 5 Part 2.
+- One line naming the feature you added in W5P2.
 - Your new test file (a link to the commit, or the file itself).
 - The output of `forge test` showing every test passing.
 - One sentence per new test: the behaviour it protects, and the bug it would

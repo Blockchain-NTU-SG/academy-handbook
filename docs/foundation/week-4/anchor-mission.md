@@ -20,19 +20,19 @@ Dive belongs to the full Cohort 1 programme beginning in January 2027.
 
 Two short pieces on one page: a **Track Selection Card**, recording a selected
 Builder or Researcher path, and a **Mini Project Map**, showing that you can
-place and investigate a real Web3 project. This is not a final PoW proposal.
-Your domain, question and final PoW idea may evolve through W5–W6; W7 combines
-scope definition with MVP / V1.
+place and investigate a real Web3 project. This is not a final Project Brief.
+Your domain, question and project idea may evolve during W5–W8; W9 is where you
+scope the project after feedback.
 
 For Foundation Pilot learners, this is the final required Foundation output and
 a map of what they could build or investigate next. For full-programme learners,
-it starts the selected Deep Dive capability path; the PoW topic remains flexible.
+it starts the selected Deep Dive capability path; the project topic remains flexible.
 
 ::: important This mission is the bridge
 Every other Foundation Anchor Mission looked backwards at what you learned. This
 one looks forward by asking what kind of work you want to practise and what you
-still need to learn. Once selected, the track remains fixed through W8; your
-domain or topic may evolve during the Deep Dive.
+still need to learn. Once selected, the track remains fixed through W10; your
+domain or topic may evolve during the Deep Dive before the W9 Project Brief.
 :::
 
 ## What to submit
@@ -42,7 +42,7 @@ domain or topic may evolve during the Deep Dive.
 A table is fine. One or two lines each.
 
 :::: steps
-1. **Selected track** — Builder or Researcher. This remains your Academy path through W8.
+1. **Selected track** — Builder or Researcher. This remains your Academy path through W10.
 
 2. **Topics or domains currently interesting to you** — name the areas, systems
    or questions that caught your attention in Foundation
@@ -79,7 +79,7 @@ answers:
 
 ::: tip Expected length
 **Roughly 250–350 words total.** This is an exploration note, not a report and
-not a final PoW scope.
+not a final project scope.
 
 Optional: up to eight image or PDF uploads.
 :::

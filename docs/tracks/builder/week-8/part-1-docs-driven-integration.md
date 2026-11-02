@@ -1,7 +1,7 @@
 ---
 track: builder
-week: 6
-day: 4
+week: 8
+day: 1
 title: "Docs-driven integration"
 status: drafting
 owner: "Education Team"
@@ -43,7 +43,7 @@ heartbeat to this page. The model answer and reviewer notes are kept outside
 the public handbook.
 -->
 
-# Week 6 · Part 4 — Docs-driven integration
+# Week 8 · Part 1 — Docs-driven integration
 
 > **Core question — how do I add a tool nobody taught me, using only its
 > documentation, without trusting anything I have not checked?**
@@ -85,7 +85,7 @@ Whatever the tool is, you need the same five answers before you write code.
 
 | Question | Why it matters | Where it usually is |
 |---|---|---|
-| 1. Which network and address? | The wrong network or address gives "returned no data" (you met this in [Part 2](./part-2-simulation-debugging-and-tracing.md)) | An "addresses" or "deployments" page, often with a network selector |
+| 1. Which network and address? | The wrong network or address gives "returned no data" (you met this in [W7P2](../week-7/part-2-simulation-debugging-and-tracing.md)) | An "addresses" or "deployments" page, often with a network selector |
 | 2. Which functions do I need? | You need the ABI for those functions, and nothing else | An API reference, an interface file or a code example |
 | 3. What units come back? | A number without its units is meaningless | `decimals()` or a note in the reference |
 | 4. How fresh is the data? | External data may update only when its update rules trigger, not on every block | Update rules, timestamps returned with the data |
@@ -283,7 +283,8 @@ works for both. Only the answers to the five questions change.
 
 ## Hands-on task
 
-Add a live **ETH / USD price from Chainlink Data Feeds** to your Week 5 app on
+Add a live **ETH / USD price from Chainlink Data Feeds** to the app you built
+in Week 6 on
 Ethereum Sepolia. Work only from
 [Chainlink's official docs](https://docs.chain.link/data-feeds) and the viem
 docs. There is no Academy walkthrough for this one.

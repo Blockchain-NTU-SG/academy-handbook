@@ -16,24 +16,27 @@ introduction. It is not another smart-contract introduction. No programming
 background beyond Foundation is assumed; Week 5 Part 1 introduces the local
 development tools and terminal workflow before the later Parts use them.
 
-Once selected at the end of Week 4, Builder remains the learner's Academy path
-through W8. The application domain and eventual Proof of Work can still evolve
-until W7.
+The track selected at the end of Week 4 remains the learner's capability path
+through W10. The application domain and project idea can evolve through W5–W8;
+W9 is when the learner scopes a realistic Project Brief and receives feedback.
 
 ## Weeks
 
 - [Week 5 · Programmatic Web3 Development](./week-5/)
-- [Week 6 · Reliable Web3 Engineering](./week-6/)
+- [Week 6 · Web3 App Integration](./week-6/)
+- [Week 7 · Reliable Web3 Engineering](./week-7/)
+- [Week 8 · Integration, Shipping and Independence](./week-8/)
 
-Each week contains six Part tasks. Every Part task is worth **100 points** and
-is assessed by completion and understanding, with revision when the work is
-incomplete or materially incorrect.
+Each week contains three Part tasks. Every Part task is worth **100 points**
+(300 per week) and is assessed by completion and understanding, with revision
+when the work is incomplete or materially incorrect. There is no separate
+weekly submission.
 
-> **Workload for pilot review:** Allow roughly 5–6.5 hours per week. Current
-> authoring estimates are 4 h 50 min for W5 and 6 h 30 min for W6; replace
-> these estimates with pilot data. They are not completion deadlines, and
-> optional exploration is not assessed.
+> **Workload for pilot review:** Current required authoring estimates are W5
+> 2 h 5 min, W6 2 h 45 min, W7 2 h 15 min and W8 4 h 15 min. They are not
+> completion deadlines; replace them with pilot data. Optional exploration is
+> not assessed, and the weeks are not expected to take equal time.
 
-> **Status: curriculum / pilot review.** Both Deep Dive weeks have authored
-> Parts. Individual lessons retain their draft/review status; learner timing
-> and starter-repository continuity still need pilot verification.
+> **Status: curriculum / pilot review.** All twelve Deep Dive Parts are
+> organised across W5–W8. Individual lessons retain their draft/review status;
+> learner timing and starter-repository continuity still need pilot verification.

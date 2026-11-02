@@ -14,7 +14,7 @@ sources:
 ---
 
 <!--
-Use for one W5 or W6 Deep Dive Part.
+Use for one W5–W8 Deep Dive Part.
 Each Part teaches one transferable hard skill and contains one lightweight,
 reviewable hands-on task worth 100 points. Detailed content belongs to the
 Education team; do not use this template to create a generic placeholder lesson.

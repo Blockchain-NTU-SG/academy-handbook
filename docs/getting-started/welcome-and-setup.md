@@ -25,10 +25,10 @@ losing money to something avoidable. This programme is built to prevent both.
 
 ::: important Foundation Pilot · Sep–Oct 2026
 The current pilot covers **Week 0 through Week 4 only**. The Week 4 Track
-Selection Card is the final pilot output. Weeks 5–8 are shown in the Handbook as the next
+Selection Card is the final pilot output. Weeks 5–10 are shown in the Handbook as the next
 stage of the Academy, but they are not required for Foundation Pilot
-participants. The full Week 0–8 programme begins with **Cohort 1 in January
-2027**. The W5–W6 Deep Dive and W7–W8 Proof of Work milestones are in
+participants. The full Week 0–10 programme begins with **Cohort 1 in January
+2027**. The W5–W8 Deep Dive and W9–W10 project milestones are in
 development for Cohort 1 · January 2027.
 :::
 
@@ -50,9 +50,9 @@ you the most time later.
 ```mermaid
 flowchart TD
   W0["<b>Week 0</b><br/>Entering Web3 safely"] --> F["<b>Weeks 1–4</b><br/>Shared Foundation"]
-  F --> D["<b>Weeks 5–6</b><br/>Builder or Researcher Deep Dive"]
-  D --> P["<b>Week 7</b><br/>Scope + MVP / V1"]
-  P --> Q["<b>Week 8</b><br/>Refine + Final PoW"]
+  F --> D["<b>Weeks 5–8</b><br/>Three Parts per week"]
+  D --> P["<b>Week 9</b><br/>Project Brief + Feedback"]
+  P --> Q["<b>Week 10</b><br/>Project Submission"]
   Q --> O["<b>A reviewable artefact</b><br/>you can show"]
 ```
 
@@ -61,26 +61,26 @@ wallets, Ethereum, smart contracts and the wider industry. You do not choose a
 specialism yet, because you cannot sensibly choose one before you know what is
 out there.
 
-**For the full programme, Weeks 5–6 are the Deep Dive.** At the end of Week 4,
-you select Builder or Researcher and stay on that capability path through W8,
-then build transferable skills through reviewable Part tasks. Your domain and
-eventual PoW topic can still evolve; W7 combines scope definition with producing
-an MVP / V1. Foundation Pilot learners stop after Week 4; the Deep Dive and
-later Proof of Work milestones are shown here as the next stages of the full
-Academy.
+**For the full programme, Weeks 5–8 are the Deep Dive.** At the end of Week 4,
+you select Builder or Researcher and stay on that capability path through W10,
+building transferable skills through three reviewable Part tasks each week.
+Your domain, research question or project idea can evolve during W5–W8. In W9,
+you scope the Project Brief and receive feedback; in W10, you submit the final
+reviewable project. Foundation Pilot learners stop after Week 4.
 
 ### The weekly rhythm
 
 Each Foundation week has a handful of short pages and **one Anchor Mission**.
-The full programme then adds six 100-point Deep Dive tasks in Week 5, six more
-in Week 6, and the W7–W8 Proof of Work milestones. There is no separate W5 or
-W6 weekly submission: each Part task is that week's progress evidence.
+The full programme then adds three 100-point Deep Dive tasks per week in W5–W8,
+followed by the W9 Project Brief + Feedback Session and W10 Project Submission.
+There is no separate weekly Deep Dive submission: each Part task is that week's
+progress evidence.
 
 | Item | Details |
 |---|---|
 | Anchor Missions | One per Foundation week, Weeks 1–4; 100 points each |
-| Deep Dive tasks | Six Part tasks in W5 and six in W6; 100 points each |
-| PoW checkpoints | W7 Scope + MVP / V1 200, W8 Refine + Final PoW 200 |
+| Deep Dive tasks | Three Part tasks per week in W5–W8; 100 points each |
+| Project checkpoints | W9 Project Brief + Feedback Session 200, W10 Project Submission 200 |
 | Total | **2,000 points** for the full programme |
 | Week 0 | No mission, no points |
 | Review outcomes | **Completed** or **Rejected** — nothing in between |
@@ -96,8 +96,8 @@ again.
 ::: tip Foundation Pilot completion
 For Foundation Pilot participants, the four Foundation Anchor Missions are the
 relevant missions. Week 4 is the final required week: complete the Track
-Selection Card / Anchor Mission, then stop here. The W5–W6 Deep Dive and
-W7–W8 Proof of Work milestones belong to the full Cohort 1 programme.
+Selection Card / Anchor Mission, then stop here. The W5–W8 Deep Dive and
+W9–W10 project milestones belong to the full Cohort 1 programme.
 :::
 
 The Foundation pages are longer than their missions require. That is on purpose:
@@ -140,7 +140,7 @@ The handbook and the platform have a clean division of labour:
 | Learning material | ✅ canonical | short operational copy |
 | Foundation Anchor Mission instructions | ✅ canonical | short operational copy |
 | Deep Dive Part-task requirements | ✅ canonical | short operational copy |
-| Proof of Work milestone requirements | ✅ canonical | short operational copy |
+| Project milestone requirements | ✅ canonical | short operational copy |
 | Submitting work | — | ✅ |
 | Review and feedback | — | ✅ |
 | Points, progress, leaderboard | — | ✅ |

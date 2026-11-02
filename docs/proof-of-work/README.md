@@ -1,29 +1,31 @@
 ---
 status: stub
 owner: "Education Team"
-title: "Proof of Work"
+title: "Project Work"
 ---
 
-# Proof of Work
+# Project Work
 
-Proof of Work begins after the selected Builder or Researcher Deep Dive. It is
-the reviewable project layer of the full Academy.
+The project stage follows the selected Builder or Researcher Deep Dive. The
+topic is sponsor-agnostic: learners may build or investigate a question that
+fits their interests, available evidence and chosen track.
 
-::: important In development for Cohort 1 · January 2027
-The September–October 2026 Foundation Pilot ends after Week 4. The full Cohort 1
-programme continues through the selected Deep Dive track and these W7–W8
-milestones.
+::: important Foundation Pilot · Sep–Oct 2026
+The current Foundation Pilot ends after Week 4. Weeks 9 and 10 belong to the
+full Academy programme.
 :::
 
 | Stage | Purpose | Points |
 |---|---|---:|
-| [W7 · Scope + MVP / V1](./week-7-mvp.md) | Define a realistic PoW while producing the smallest meaningful version | 200 |
-| [W8 · Refine + Final PoW](./week-8-final.md) | Improve, validate and ship or publish a reviewable final artefact | 200 |
+| [W9 · Project Brief + Feedback Session](./week-9-project-brief.md) | Define a bounded project, receive feedback and record any resulting changes | 200 |
+| [W10 · Project Submission](./week-10-project-submission.md) | Submit a final reviewable project with evidence and limitations | 200 |
 
-By the end of W7, the PoW scope should be stable enough for W8 to focus on
-refinement rather than another major rescope. Small changes from testing,
-evidence or feedback remain part of the normal refinement process.
+The learner may refine the domain, research question or deliverable during
+W5–W8. W9 is where the scope is made explicit; feedback can refine it without
+requiring the learner to defend an unrealistic initial idea. W10 focuses on a
+reviewable final artefact.
 
-The exact task requirements will be authored by the Education team. The
-reviewer model remains completion-based: work is completed or returned for
-revision, without fractional rubric scores.
+The Education team will maintain detailed operational instructions here. The
+review model remains completion-based: completed / approved earns the full
+points; work that is incomplete or materially incorrect is returned for
+revision, without fractional scores.
