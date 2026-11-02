@@ -140,7 +140,8 @@ patterns, but their definitions and queries still need checking.
 flows, protocol comparisons and dashboards.
 
 **Cannot tell you:** a definition-free version of the truth. Check the query,
-schema, labels and methodology behind the number.
+schema (the table's fields and their meanings), labels and methodology (how the
+number was measured).
 
 @tab Structured research
 

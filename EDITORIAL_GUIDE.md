@@ -131,8 +131,29 @@ when learners do not need them for the Foundation mental model.
 > **Foundation: richer content, lighter assessment.** Deep Dive keeps assessment
 > embedded in the learning through focused Part tasks rather than extra homework.
 
+In Deep Dive, connect each technique to the question it answers, the evidence it
+produces, how that evidence informs a decision or conclusion, and one important
+limit on what it proves.
+
 Adding context, caveats or industry examples does not automatically create a new
 learner requirement. Assessment changes require explicit curriculum approval.
+
+## Prerequisite contract
+
+- **Foundation** assumes no prior Web3 knowledge and may not assume finance,
+  coding, Git, blockchain or technical experience. Define a term briefly when
+  Core reasoning first depends on it; do not turn Landscape into a glossary.
+- **Builder** assumes completed Foundation, including its wallet, transaction,
+  Solidity, state/function/event, ABI, RPC, Remix and GitHub concepts. It must
+  not silently assume terminal, Git CLI, Node/npm, JavaScript/TypeScript, React,
+  frontend, testing or deployment experience. Teach new tools just in time, only
+  as deeply as needed to understand and verify the Web3 work.
+- **Researcher** assumes completed Foundation, but not prior finance, economics,
+  DeFi, statistics, SQL, Python, terminal use or professional research.
+
+AI may reduce syntax burden, but must not hide a missing prerequisite. Learners
+should be able to identify the important parts, explain the workflow, inspect
+evidence, test the result and locate a failure.
 
 ## Designing one page
 
@@ -225,6 +246,10 @@ A guided walkthrough is for a learner who is actually performing an action. Each
 step should state the action and the observable result. Keep required activities
 testnet-only, explain ordinary safety checks, and do not turn optional
 troubleshooting into an assessment requirement.
+
+When a required action produces a result that a beginner may not recognise,
+provide a short observable success condition. Use a collapsed `Expected result`
+example when full output would interrupt the lesson.
 
 ## Screenshots and visuals
 

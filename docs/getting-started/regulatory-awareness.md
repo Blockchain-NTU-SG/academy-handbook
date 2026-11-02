@@ -45,8 +45,10 @@ licensed, it is therefore safe.
 **A licensed platform is not an endorsed token.**
 
 When MAS licenses a service provider, it regulates **that business** — conduct,
-custody, AML controls. It does not review, approve or vouch for the individual
-tokens available on it.
+custody (holding or controlling customer assets), and anti-money-laundering
+(AML) checks intended to stop financial services being used to hide criminal
+proceeds. It does not review, approve or vouch for the individual tokens
+available on it.
 :::
 
 You are studying in Singapore, so MAS is the local context. Other jurisdictions
@@ -76,7 +78,7 @@ done, where, and for whom. Use this sequence before looking for a rule:
 
 ::: steps
 1. **Activity** — What is actually happening? Holding customer assets, running an exchange, issuing a payment token or moving value are different activities.
-2. **Jurisdiction** — Where is it happening, and who is it for? The same activity can be treated differently in Singapore, the EU or the US.
+2. **Jurisdiction** — the place whose laws may apply. Where is it happening, and who is it for? The same activity can be treated differently in Singapore, the EU or the US.
 3. **Official source** — Which regulator, law or official framework explains the current position?
 4. **Obligations** — What duties, protections or restrictions follow for this activity and audience?
 :::
@@ -95,7 +97,7 @@ Recognition level. Not a compliance checklist.
 
 | Activity | Why it attracts attention |
 |---|---|
-| **Custody** — holding assets for someone else | You have other people's money |
+| **Custody** — holding or controlling assets for someone else | You have other people's money |
 | **Exchange** — matching buyers and sellers | Market conduct, consumer protection |
 | **Transmission** — moving value between parties or borders | Money laundering, sanctions |
 | **Token issuance and fundraising** | May look like a securities offering |
@@ -119,8 +121,8 @@ were sold.
 ### KYC is normal
 
 When a centralised exchange asks for identity documents, that is standard
-anti-money-laundering practice applied to a regulated financial business. The
-same reason a bank asks.
+**Know Your Customer (KYC)** practice, one part of those checks at a regulated
+financial business. It is the same reason a bank asks.
 
 You will meet a cultural argument that KYC is contrary to the spirit of crypto.
 Whatever you make of it, it does not change the legal position for a regulated
@@ -192,9 +194,10 @@ European Union. Helps you orient around issuing crypto-assets and providing
 related services within the EU framework.
 :::
 ::: card title="GENIUS Act" icon="material-symbols:account-balance-wallet"
-United States. Helps you orient around payment-stablecoin issuers, reserves and
-compliance; implementation details and effective dates still require current
-Treasury guidance.
+United States. Helps you orient around payment-stablecoin issuers (the
+organisations that create and issue those tokens), reserves and compliance;
+implementation details and effective dates still require current Treasury
+guidance.
 :::
 ::::
 
@@ -216,7 +219,7 @@ one framework as universal.
 | **Payment Services Act (PSA)** | The main Singapore framework for payment and DPT services |
 | **DPT** | Digital Payment Token — the PSA's term for a cryptocurrency |
 | **DTSP** | Digital Token Service Provider — the category clarified by MAS in 2025 |
-| **AML / CFT** | Anti-money-laundering and countering the financing of terrorism |
+| **AML / CFT** | Checks intended to prevent money laundering and the financing of terrorism |
 | **Travel Rule** | Passing originator and beneficiary information alongside certain transfers |
 | **Securities treatment** | Some tokens may be regulated as capital markets products |
 

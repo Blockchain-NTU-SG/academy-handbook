@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">Uniswap Ethereum daily volume (USD), 1 Aug 2026 to 29 Oct 2026</title>
+<desc id="chart-desc">One line plots 90 daily DefiLlama-reported USD volume observations in chronological order. Values fluctuate across the window, with a large spike near the end and the final observation above four billion dollars.</desc>
+<style>
+  text { font-family: Arial, Helvetica, sans-serif; fill: #1f2937; }
+  .title { font-size: 22px; font-weight: 600; }
+  .tick { font-size: 17px; }
+  .axis-label { font-size: 19px; font-weight: 500; }
+  .source { font-size: 14px; fill: #4b5563; }
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text class="title" x="82" y="31">Uniswap Ethereum daily volume (USD)</text>
+<text class="title" x="82" y="57">1 Aug to 29 Oct 2026</text>
+<line x1="82" y1="346" x2="702" y2="346" stroke="#d9dee5" stroke-width="1"/><text x="72" y="352" text-anchor="end" class="tick">$0B</text>
+  <line x1="82" y1="286" x2="702" y2="286" stroke="#d9dee5" stroke-width="1"/><text x="72" y="292" text-anchor="end" class="tick">$1B</text>
+  <line x1="82" y1="226" x2="702" y2="226" stroke="#d9dee5" stroke-width="1"/><text x="72" y="232" text-anchor="end" class="tick">$2B</text>
+  <line x1="82" y1="166" x2="702" y2="166" stroke="#d9dee5" stroke-width="1"/><text x="72" y="172" text-anchor="end" class="tick">$3B</text>
+  <line x1="82" y1="106" x2="702" y2="106" stroke="#d9dee5" stroke-width="1"/><text x="72" y="112" text-anchor="end" class="tick">$4B</text>
+<line x1="82" y1="90" x2="82" y2="346" stroke="#344054" stroke-width="1.5"/>
+<line x1="82" y1="346" x2="702" y2="346" stroke="#344054" stroke-width="1.5"/>
+<line x1="82" y1="346" x2="82" y2="353" stroke="#344054"/><text x="82" y="372" text-anchor="middle" class="tick">1 Aug</text>
+  <line x1="290.9887640449438" y1="346" x2="290.9887640449438" y2="353" stroke="#344054"/><text x="290.9887640449438" y="372" text-anchor="middle" class="tick">31 Aug</text>
+  <line x1="499.97752808988764" y1="346" x2="499.97752808988764" y2="353" stroke="#344054"/><text x="499.97752808988764" y="372" text-anchor="middle" class="tick">30 Sep</text>
+  <line x1="702" y1="346" x2="702" y2="353" stroke="#344054"/><text x="702" y="372" text-anchor="end" class="tick">29 Oct</text>
+<polyline points="82.00,327.41 88.97,323.92 95.93,317.92 102.90,313.16 109.87,308.58 116.83,305.04 123.80,306.11 130.76,328.06 137.73,331.17 144.70,307.97 151.66,312.92 158.63,310.21 165.60,310.42 172.56,309.80 179.53,333.13 186.49,331.46 193.46,314.91 200.43,317.48 207.39,260.83 214.36,267.89 221.33,246.75 228.29,290.30 235.26,298.49 242.22,288.83 249.19,286.07 256.16,307.23 263.12,277.50 270.09,277.45 277.06,316.11 284.02,318.75 290.99,305.73 297.96,299.82 304.92,298.28 311.89,292.24 318.85,294.18 325.82,323.35 332.79,319.61 339.75,310.96 346.72,302.20 353.69,301.42 360.65,295.54 367.62,282.65 374.58,328.73 381.55,321.62 388.52,297.70 395.48,275.66 402.45,282.83 409.42,295.97 416.38,280.28 423.35,304.17 430.31,306.71 437.28,262.96 444.25,280.29 451.21,288.67 458.18,278.42 465.15,289.34 472.11,313.09 479.08,311.40 486.04,275.40 493.01,285.82 499.98,290.13 506.94,296.05 513.91,284.33 520.88,324.60 527.84,322.18 534.81,302.34 541.78,304.89 548.74,281.85 555.71,274.76 562.67,305.60 569.64,325.38 576.61,317.06 583.57,300.15 590.54,285.06 597.51,289.44 604.47,280.21 611.44,306.53 618.40,326.52 625.37,320.50 632.34,306.43 639.30,300.14 646.27,299.79 653.24,301.71 660.20,304.63 667.17,314.19 674.13,313.28 681.10,298.11 688.07,306.34 695.03,292.01 702.00,93.05" fill="none" stroke="#3478a8" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text class="axis-label" x="392" y="399" text-anchor="middle">Day (UTC)</text>
+<text class="axis-label" x="25" y="211" text-anchor="middle" transform="rotate(-90 25 211)">Daily volume (USD)</text>
+<text class="source" x="82" y="440">Source: DefiLlama · fallback retrieved 30 Oct 2026</text>
+</svg>

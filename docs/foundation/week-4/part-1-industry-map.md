@@ -183,9 +183,9 @@ interfaces and other controls.
 **Examples:** <span class="academy-brand-label"><Icon name="token-branded:uniswap" /><strong>Uniswap (DEX)</strong></span>, <span class="academy-brand-label"><Icon name="token-branded:aave" /><strong>Aave (lending)</strong></span>
 
 **Limitation:** composability spreads failure, oracles can be manipulated, and
-much of the yield historically came from token emissions rather than genuine
-economic activity. "Permissionless" also means no recourse when something goes
-wrong.
+much of the yield (return earned by a depositor) historically came from token
+emissions (new tokens distributed as rewards) rather than genuine economic
+activity. "Permissionless" also means no recourse when something goes wrong.
 
 @tab RWA
 

@@ -91,7 +91,11 @@ def main():
         json.dumps({
             "source_url": URL,
             "retrieved_utc": retrieved_at.isoformat(timespec="seconds"),
+            "metric": "DefiLlama reported daily Uniswap DEX volume",
+            "chain": "Ethereum",
+            "unit": "USD",
             "dates_inclusive": [str(first_day), str(last_day)],
+            "method": "Select Ethereum entries from totalDataChartBreakdown and sum the reported Uniswap versions for each UTC date; exclude the all-chain total.",
             "daily_chain_breakdown": snapshot,
         }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8",
     )
@@ -102,6 +106,7 @@ def main():
         f"Metric: DefiLlama reported daily Uniswap Ethereum DEX volume in USD\n"
         f"Window: {first_day} through {last_day}, inclusive (90 full UTC days)\n"
         f"Rows: {len(rows)}\n"
+        "Method: select Ethereum entries from totalDataChartBreakdown and sum the reported Uniswap versions for each UTC date; do not use the all-chain total.\n"
         f"Notes: Provider-derived USD estimate; not transactions, unique wallets or users. "
         f"Historical figures may be revised.\n",
         encoding="utf-8",

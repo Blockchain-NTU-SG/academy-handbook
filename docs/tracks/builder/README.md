@@ -12,7 +12,9 @@ systems**: turning a clear behaviour into contracts, programmatic interactions,
 interfaces and reliable evidence.
 
 This Deep Dive begins after Foundation's Solidity, Remix, ABI and RPC
-introduction. It is not another smart-contract introduction.
+introduction. It is not another smart-contract introduction. No programming
+background beyond Foundation is assumed; Week 5 Part 1 introduces the local
+development tools and terminal workflow before the later Parts use them.
 
 Once selected at the end of Week 4, Builder remains the learner's Academy path
 through W8. The application domain and eventual Proof of Work can still evolve

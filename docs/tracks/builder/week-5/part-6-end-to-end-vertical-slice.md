@@ -172,7 +172,8 @@ for the receipt. Requests 5 and 6 are the dotted line coming back: without
 them, the page would still show the old record.
 
 You can record the same list in your own app: open the browser's developer
-tools, go to the **Network** tab, filter by your RPC's address, and click Save.
+tools (introduced in [Part 4](./part-4-wallet-and-frontend-integration.md)), go
+to the **Network** tab, filter by your RPC's address, and click Save.
 Requests to the wallet do not appear there, because MetaMask handles them
 itself.
 

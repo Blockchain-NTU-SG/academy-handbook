@@ -60,7 +60,7 @@ No reviewer solution is published here. Existing route retained. -->
 
 # Week 6 · Part 4 — Token, liquidity and valuation evidence
 
-> **Core question — what makes a valuation comparison meaningful, and what could explain an apparent discount?**
+> **Core question: what makes a valuation comparison meaningful, and why might one token appear cheaper than another?**
 
 One token can look cheaper than another when you compare each market value
 with protocol activity or revenue. That alone does not show it is
@@ -97,8 +97,8 @@ distinction when deciding what a volume, fee or liquidity number represents.
 |---|---|---|---|
 | **Fundamentals** | What does it do, who uses it, what activity is charged for, and who receives the fees? | Protocol docs, activity, fees and retained revenue under stated definitions | Treating usage or total value locked (TVL)—assets a provider counts as deposited—as revenue |
 | **Flows** | What capital, tokens or liquidity entered or left, and where did it go? | Dated bridge flows, issuance/redemption, treasury or exchange movements and liquidity changes | Treating a transfer or unlock as organic demand or a sale |
-| **Valuation** | Does the chosen value measure match the economic denominator and period? | Comparable market value, supply basis, fee/revenue definitions and time window | Dividing by TVL or volume as if either were retained earnings |
-| **Tokenomics** | How are supply, utility, security, governance and holder rights connected? | Token contracts, protocol terms, fee destinations and enforceable rights | Assuming governance power creates a claim on cash flow |
+| **Valuation** | Does the chosen value measure match the economic denominator and period? | Comparable market value, supply basis, fee/revenue definitions and time window | Dividing by TVL or volume as if either were retained revenue or earnings |
+| **Tokenomics** | How are supply, utility, security, governance and holder rights connected? | Token contracts, protocol terms, fee destinations and enforceable rights | Assuming governance power creates a claim on retained revenue or distributions |
 | **Unlocks** | Who receives newly transferable tokens, when, and relative to supply realistically available to trade? An unlock is the end of a transfer restriction, not proof of a sale. | Dated vesting schedule, recipient, circulating-supply method and available market liquidity | Treating every unlocked token as immediately sold or fully liquid |
 | **Catalysts** | What observable change could alter use, cost, value capture or risk? | A defined before/after measure and a dated launch or parameter change | Treating an announcement as evidence that the change worked |
 | **Risks** | Which failure could break the thesis, who is exposed, and what signal would show it? | Dependency, permissions, liquidity, oracle and incident evidence | Listing generic risks without a causal path or exposed party |
@@ -296,9 +296,9 @@ mechanism links the two.
 | Staking or locking; treasury inventory | Fee discounts and enforceable distributions |
 | Provider classifications and their date | Governance and other documented rights |
 
-Governance can matter, but it does not automatically create a cash-flow claim
-or continuous demand. Check token and governing documents, then connect to
-W5P5: **protocol success ≠ token success unless a clear mechanism links
+Governance can matter, but it does not automatically create a claim on retained
+revenue or distributions, or continuous demand. Check token and governing
+documents, then connect to W5P5: **protocol success ≠ token success unless a clear mechanism links
 them.**
 
 ### 5. Unlocks — what new transferable supply is becoming available?

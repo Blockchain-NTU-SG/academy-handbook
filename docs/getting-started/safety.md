@@ -119,12 +119,14 @@ code on a block explorer is one check — it is not proof of good intent.
 
 **This is the one beginners never see coming.**
 
-You can lose assets ==**without sending a transaction**==. Some signature requests
-are not payments — they are permissions. Sign the wrong one and you have
-authorised someone to move your tokens later, at a time of their choosing.
+You can lose assets ==**without sending a transaction**==. A wallet signature is
+your digital approval of a request; some signature requests are not payments but
+permissions. Sign the wrong one and you may have authorised someone to move your
+tokens later, at a time of their choosing. Week 3 covers the mechanics; for now,
+read each request and do not approve one you do not understand.
 
-There is no visible loss at the moment you sign. Week 3 covers the mechanics;
-for now, know that "just signing a message" is not automatically safe.
+Nothing may appear to happen when you sign. That does not make "just signing a
+message" automatically safe.
 
 @tab Approvals and malware
 

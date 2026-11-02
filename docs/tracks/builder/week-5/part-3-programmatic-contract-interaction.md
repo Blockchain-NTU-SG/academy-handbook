@@ -150,12 +150,18 @@ Two details that catch people out:
 ### Errors by name
 
 When a contract reverts with a custom error, viem decodes it using the ABI. The
-error arrives wrapped inside other errors, so you search for it:
+revert can arrive wrapped inside a larger viem error. This pattern searches
+inside that error for the decoded contract revert:
 
 ```ts
-const revert = error.walk((e) => e instanceof ContractFunctionRevertedError)
-// revert.data?.errorName is, for example, "EmptyRecord"
+if (error instanceof BaseError) {
+  const revert = error.walk((item) => item instanceof ContractFunctionRevertedError)
+  // revert.data?.errorName might be "EmptyRecord"
+}
 ```
+
+You may copy and adapt this pattern. Understand which failure it detects; you
+do not need to memorise viem's nested error syntax.
 
 This is why custom errors from Part 2 matter: your script can react to
 `AlreadyEndorsed` differently from `RecordNotFound`.
@@ -165,6 +171,23 @@ This is why custom errors from Part 2 matter: your script can react to
 The starter Registry lets any account set its own record. Save this as
 `scripts/write.ts`. It reads, simulates, sends, waits, verifies and handles a
 contract error:
+
+Read the script by its stages rather than as one block of code:
+
+| Stage | What to look for |
+|---|---|
+| 1. Imports | Names this file reuses from other files or viem. |
+| 2. Input/configuration | `process.argv[2]` reads the text after the command; `?? ''` uses an empty string only when no value was supplied. |
+| 3. Account/client setup | Checks Sepolia and creates the account and wallet client. |
+| 4. Read | Captures the current record before the change. |
+| 5. Simulate | Checks whether the contract accepts the request before sending it. |
+| 6. Send and wait | Sends the transaction, then waits for the mined receipt. |
+| 7. Verify | Reads the record again and prints an explorer link. |
+| 8. Handle failure | `catch` reports a rejected request; `instanceof` checks its type, and `?.` reads a field only if it exists. |
+
+The syntax is a pattern to inspect and adapt, not a memorisation test. In
+particular, `main().catch(...)` makes failures from the asynchronous workflow
+reach the final error handler instead of disappearing.
 
 ```ts
 import { BaseError, ContractFunctionRevertedError, createWalletClient, isHex } from 'viem'
@@ -211,7 +234,7 @@ async function main() {
 main().catch((error: unknown) => {
   // 6. Handle the expected failure: a revert from the contract, by name
   if (error instanceof BaseError) {
-    const revert = error.walk((e) => e instanceof ContractFunctionRevertedError)
+    const revert = error.walk((item) => item instanceof ContractFunctionRevertedError)
     if (revert instanceof ContractFunctionRevertedError) {
       console.error(`Rejected by the contract: ${revert.data?.errorName ?? revert.reason}`)
     } else {
@@ -224,8 +247,24 @@ main().catch((error: unknown) => {
 })
 ```
 
-Put your test account's key in `.env` as `PRIVATE_KEY`, make sure it has a
-little Sepolia ETH, then run it. The output below is from a test run; your
+Create a **new disposable Sepolia-only account** for this script. From the
+starter folder, run Foundry's key generator in your local terminal. `cast` is
+Foundry's command-line tool for wallet and blockchain operations. It is
+installed together with Foundry.
+
+```bash
+cast wallet new
+```
+
+It prints a new address and private key locally. Copy that private key directly
+into `.env` as `PRIVATE_KEY`; do not use a wallet that has ever held real
+assets, share the key, include it in a screenshot, commit `.env`, or place it
+in a `VITE_` variable. This account is only for free Sepolia test ETH and must
+never be reused for real funds. Keep the private key only in your local `.env`.
+The command creates a key; it does not send a transaction.
+
+Make sure the disposable account has a little Sepolia ETH, then run it. The
+output below is from a test run; your
 account, hash and block number will be different.
 
 ```bash
@@ -266,6 +305,9 @@ own record of what happened, independent of your script.
 ## Hands-on task
 
 Operate **your own** contract from a script.
+
+Adapt the working script pattern to your own contract function. Blank-page
+TypeScript is not the skill being assessed.
 
 1. **Deploy your Part 2 contract.** With your test key in `.env`, run
    `npm run deploy`. It compiles, deploys to Sepolia, waits for two
@@ -317,5 +359,6 @@ revision. There is no partial-score rubric.
 - [viem — waitForTransactionReceipt](https://viem.sh/docs/actions/public/waitForTransactionReceipt) — Link, referenced only
 - [viem — Error handling](https://viem.sh/docs/error-handling) — Link, referenced only
 - [viem — privateKeyToAccount](https://viem.sh/docs/accounts/local/privateKeyToAccount) — Link, referenced only
+- [Foundry — Cast wallet operations](https://www.getfoundry.sh/cast/wallet-operations) — Link, referenced only
 - [Blockchain@NTU Academy Builder starter](https://github.com/Blockchain-NTU-SG/academy-builder-starter) — Reuse (MIT), `scripts/client.ts` and the `Registry` used in the worked example
 :::
