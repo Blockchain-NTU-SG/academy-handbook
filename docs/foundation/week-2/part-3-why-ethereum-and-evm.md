@@ -3,7 +3,7 @@ week: 2
 day: 3
 title: "Why we start with Ethereum and the EVM"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — Intro to Ethereum"

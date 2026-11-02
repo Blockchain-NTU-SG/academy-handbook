@@ -3,7 +3,7 @@ week: 2
 day: 4
 title: "Transactions, state, gas and RPC"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Transactions"

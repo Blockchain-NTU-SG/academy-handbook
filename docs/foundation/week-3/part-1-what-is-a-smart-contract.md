@@ -3,7 +3,7 @@ week: 3
 day: 1
 title: "What a smart contract actually is"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "30 min"
 sources:
   - name: "ethereum.org — Introduction to smart contracts"

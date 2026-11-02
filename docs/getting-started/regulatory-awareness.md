@@ -3,7 +3,7 @@ week: 0
 day: 5
 title: "Regulatory awareness: Singapore and global orientation"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "20 min"
 sources:
   - name: "MAS — Guidelines on Licensing for Digital Token Service Providers"

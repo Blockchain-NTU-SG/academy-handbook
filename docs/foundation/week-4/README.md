@@ -10,12 +10,6 @@
 
 <Badge type="info" text="6 parts" /> <Badge type="tip" text="100 points" /> <Badge type="warning" text="No wallet work" />
 
-::: important Foundation Pilot · Sep–Oct 2026
-The current Foundation Pilot ends after Week 4. The Week 4 Track Selection
-Card is the final pilot output; the Builder and Researcher Deep Dive is the next
-stage of the full Academy and is in development for **Cohort 1 · January 2027**.
-:::
-
 > **Core question — what does the Web3 world actually look like, and how do I
 > investigate something I do not understand?**
 
@@ -58,11 +52,10 @@ solve — without knowing anything specific about it.
 
 **Track selection.** Part 6 and the mission help you choose Builder or Researcher,
 record the domains that interest you and identify your gaps. Once selected, the
- track remains your Academy path through W10. For Foundation Pilot learners,
-the Track Selection Card is the final required Foundation output. In the full
-programme, it starts the selected W5–W8 Deep Dive; the domain, question and
-project idea may evolve during that work. W9 is where the learner scopes the
-Project Brief after feedback.
+track remains your learning path through W10. The Track Selection Card
+transitions into the selected W5–W8 Deep Dive; the domain, question and project
+idea may evolve during that work. W9 is where the learner scopes the Project
+Brief after feedback.
 
 ::: important The most transferable page in the handbook
 [Part 3](./part-3-research-tool-map.md) teaches which source answers which kind of

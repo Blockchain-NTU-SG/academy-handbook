@@ -3,7 +3,7 @@ week: 3
 day: 5
 title: "Security, approvals and permissions"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Smart contract security"

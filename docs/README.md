@@ -41,44 +41,26 @@ config:
     hero:
       name: Blockchain@NTU Academy
       tagline: Learn → Build → Prove
-      text: From zero Web3 knowledge to a reviewable Web3 project.
+      text: A public, self-paced Web3 curriculum from first principles to a reviewable project.
       actions:
         - theme: brand
-          text: Apply to the Academy
-          link: https://web3career.build/en/programs/blockchain-ntu-academy
-          icon: material-symbols:school-outline
-        - theme: alt
           text: Start Learning
-          link: ./getting-started/programme.md
+          link: ./getting-started/
           icon: material-symbols:menu-book-outline
+        - theme: alt
+          text: Explore the Curriculum
+          link: ./getting-started/programme.md
+          icon: material-symbols:map-outline
   - type: image-text
-    title: How the Academy works
+    title: A complete public learning path
     image:
       src: /brand/blockchain-ntu-logo-horizontal-light.png
       alt: Blockchain@NTU
     description: >-
-      Blockchain@NTU Academy combines a public learning handbook with a
-      structured cohort experience.
+      Follow the complete curriculum independently, from safe Web3 basics
+      through a Builder or Researcher Deep Dive and a final reviewable project.
     list:
-      - Anyone can use the Handbook at their own pace. Cohort members follow the same learning path with a weekly rhythm, missions, peer learning, feedback and review through the programme platform.
-  - type: features
-    title: Why join the cohort?
-    description: >-
-      The cohort adds the structure, feedback, peers and accountability to turn
-      open learning into Proof of Work.
-    features:
-      - title: Learn with structure
-        icon: 🗺️
-        details: Follow a clear weekly rhythm instead of figuring out what to study next.
-      - title: Get feedback
-        icon: 🔄
-        details: Submit missions, receive review, and improve your work instead of learning in isolation.
-      - title: Build with others
-        icon: 🤝
-        details: Learn alongside other NTU students and take part in the Blockchain@NTU community.
-      - title: Build reviewable work
-        icon: 🧩
-        details: Turn each Foundation week into a small reviewable output; the full Academy continues toward a final Proof of Work.
+      - The Handbook contains the complete learning material, task instructions, completion criteria and project milestones for an independent learner.
   - type: features
     title: A clear path through Web3
     description: >-
@@ -135,17 +117,12 @@ The week's learning turned into a small, practical action.
 1. [Read the programme overview](./getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./getting-started/).
 3. Follow the [Foundation](./foundation/) from Week 1 through Week 4.
-4. Continue into the [Deep Dive](./tracks/) and then the [Project Work milestones](./proof-of-work/) when your cohort reaches them.
+4. Choose [Builder or Researcher](./tracks/) for Weeks 5–8, then follow the [Project Work milestones](./proof-of-work/) in Weeks 9–10.
 ::::
 
-The Handbook contains the full learning material, Foundation Anchor Mission
-requirements, Deep Dive task requirements and Project Work milestone
-requirements. Cohort operations such as application, progress, submission and
-review are handled through the Academy programme platform.
-
-The **September–October 2026 Foundation Pilot** ends after Week 4. Weeks 5–10
-are the next full-programme stage, in development for **Cohort 1 · January
-2027**.
+The curriculum is complete from W0 through W10. Follow the recommended order
+at your own pace. Use the completion criteria to self-check, or invite a peer,
+mentor or educator to review your work.
 
 ## Stay connected with Blockchain@NTU
 
@@ -157,9 +134,6 @@ Follow the community for updates, events and opportunities to keep learning with
 other builders.
 
 <div class="academy-social-links" aria-label="Blockchain@NTU community links">
-  <a class="academy-social-link" href="https://t.me/+9GVwf652dM4zYzQ1" aria-label="Join Blockchain@NTU on Telegram" target="_blank" rel="noopener">
-    <Icon name="simple-icons:telegram" aria-hidden="true" size="18" />
-  </a>
   <a class="academy-social-link" href="https://www.instagram.com/blockchain.ntusg/" aria-label="Follow Blockchain@NTU on Instagram" target="_blank" rel="noopener">
     <Icon name="simple-icons:instagram" aria-hidden="true" size="18" />
   </a>

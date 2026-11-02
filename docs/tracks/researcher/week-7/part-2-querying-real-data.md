@@ -4,7 +4,7 @@ week: 7
 day: 2
 title: "Entity and fund-flow investigation"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "40 min"
 points: 100
 sources:
@@ -216,9 +216,7 @@ or tracing around privacy protections. **Transfer ≠ economic demand; volume
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric or separate weekly submission.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric. There is no separate weekly submission.
 
 To complete, cite records, include an alternative and two signal families, and
 state where the evidence stops. You need not identify anyone or prove motive;

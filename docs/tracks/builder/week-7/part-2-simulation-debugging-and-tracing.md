@@ -4,7 +4,7 @@ week: 7
 day: 2
 title: "Simulation, debugging and tracing"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "50 min hands-on"
 points: 100
 sources:
@@ -26,7 +26,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the lab app lives on the w6-2-broken-dapp branch
+Author note: the lab app lives on the w6-2-broken-dapp branch
 of the Builder starter repository. It is a finished app with planted faults,
 one per layer, described to learners only as user bug reports in LAB-W6-2.md.
 The branch and file identifiers retain their existing starter names for
@@ -305,9 +305,7 @@ code. A fix you cannot explain is not a finished fix.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Make the app tell the user *which* setting is wrong when the RPC is on the

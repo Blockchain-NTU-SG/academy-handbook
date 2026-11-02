@@ -4,7 +4,7 @@ week: 5
 day: 3
 title: "Mechanism and market design"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "40 min"
 points: 100
 sources:
@@ -29,7 +29,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): every figure in the worked example, the deeper
+Author note: every figure in the worked example, the deeper
 pool comparison and the model answer was recalculated on 21 October 2026. The
 model answer is kept outside the public handbook.
 -->
@@ -293,9 +293,7 @@ gas costs and multi-hop routes.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 Your work is complete when:
 

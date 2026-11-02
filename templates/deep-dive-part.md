@@ -4,7 +4,7 @@ week: 5
 day: 1
 title: ""
 status: stub
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: ""
 points: 100
 sources:
@@ -17,7 +17,7 @@ sources:
 Use for one W5–W8 Deep Dive Part.
 Each Part teaches one transferable hard skill and contains one lightweight,
 reviewable hands-on task worth 100 points. Detailed content belongs to the
-Education team; do not use this template to create a generic placeholder lesson.
+curriculum maintainers; do not use this template to create a generic placeholder lesson.
 
 The Part task is part of the lesson, not extra homework. Keep it focused on the
 one hard skill taught here; do not turn every Part into a standalone project,
@@ -54,9 +54,9 @@ long explanations or repetitive reflection unless the task genuinely needs them.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to
+self-check. Complete earns the full points; otherwise, revise the missing or
+materially incorrect parts. There is no partial-score rubric.
 
 ## Sources and attribution
 

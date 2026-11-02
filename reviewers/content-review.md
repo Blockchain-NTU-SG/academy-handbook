@@ -2,7 +2,7 @@
 
 > **Read as a learner, not as an editor.**
 
-This guide is for Education subcommittee read-throughs of the Foundation. The
+This guide is for learner read-throughs of the Foundation. The
 goal is to find where understanding breaks, not to make every sentence sound
 more polished.
 
@@ -15,7 +15,7 @@ more polished.
 5. Classify the friction below.
 6. Optionally say what might have helped; you do not need to propose a rewrite.
 
-Education leadership decides the actual fix. More content is not automatically
+Curriculum maintainers decide the actual fix. More content is not automatically
 better: the problem may be sequencing, a missing prerequisite, a misplaced
 example or an optional detail that should be easier to skip.
 
@@ -53,8 +53,8 @@ useful by itself.
 ## Where to record feedback
 
 Record meaningful confusion through the repository's [Content gap Issue
-Form](../.github/ISSUE_TEMPLATE/content-gap.yml). If Education leadership
-requests a batch review round instead, follow that review process. Prefer one
+Form](../.github/ISSUE_TEMPLATE/content-gap.yml). If maintainers request a batch
+review round instead, follow that review process. Prefer one
 issue per distinct **Blocker** or **Concept gap**; related minor friction from
 the same page or flow may be grouped.
 

@@ -4,7 +4,7 @@ week: 8
 day: 3
 title: "Independent investigation brief"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "50 min"
 points: 100
 sources:
@@ -222,9 +222,7 @@ from clusters, long reports, paid forensic tools, or a final project commitment.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric or separate weekly submission.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means the question is falsifiable, system and risk are causal,
 source observations and derived evidence are distinguishable, the calculation

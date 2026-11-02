@@ -3,7 +3,7 @@ week: 3
 title: "Deploy and explain your own contract"
 points: 100
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 ---
 
 # Week 3 — Anchor Mission
@@ -11,7 +11,7 @@ owner: "Director of Education"
 <Badge type="tip" text="100 points" /> <Badge type="info" text="Sepolia only" /> <Badge type="warning" text="No deadline" />
 
 ::: danger Sepolia only
-Deploy to Sepolia only. **Never deploy an Academy exercise to mainnet**,
+Deploy to Sepolia only. **Never deploy a course exercise to mainnet**,
 and never use a wallet holding real funds.
 :::
 
@@ -30,9 +30,9 @@ the difference between having followed instructions and having understood them.
 :::
 
 You may use the provided `Guestbook` unchanged, make a small modification
-yourself, or make one with AI assistance. None receives extra credit for more
-code. **AI assistance is allowed. Using AI is not a reason to send a submission
-back; being unable to explain the submitted contract is.**
+yourself, or make one with AI assistance. More code receives no extra credit.
+AI assistance is allowed; completion depends on whether you can explain your
+contract, not on how it was written.
 
 ## What to submit
 
@@ -62,9 +62,8 @@ back; being unable to explain the submitted contract is.**
 :::
 
 ::: tip Expected length
-**Roughly 200–300 words**, plus the three links and your source code. Optional:
-up to eight image or PDF uploads — a screenshot of your deployed contract in
-Remix is welcome, not required.
+**Roughly 200–300 words**, plus the three links and your source code. A
+screenshot of the deployed contract in Remix is optional.
 :::
 
 ::: warning On question 6c
@@ -79,7 +78,7 @@ You are not expected to find a clever exploit. You are expected to notice that
 **your contract has limits**, and to name one.
 :::
 
-## Submission checklist
+## Completion self-check
 
 - [ ] Contract address, deployment hash and write transaction hash are all included
 - [ ] All three open on the explorer and are on **Sepolia**
@@ -89,40 +88,41 @@ You are not expected to find a clever exploit. You are expected to notice that
 - [ ] If I used AI, I can explain what my contract does and what would break if it changed
 - [ ] **I have not included my recovery phrase or private key anywhere**
 
-:::: details For reviewers — what "completed" looks like
-Two or three minutes. Verify a real deployment and real understanding — **not
-code quality**, and not whether they extended the contract.
+:::: details Self-check: what Complete means
+Verify that the deployment and explanation match — **code quality and extra
+features are not part of this task**.
 
 | Item | Standard |
 |---|---|
 | 1–3 | All three open on **Sepolia**. The contract address matches the deployment transaction's created contract, and the write transaction targets that same address |
-| 4 | Source is included and is consistent with the submitted Guestbook and demonstrated behaviour. Exact source-to-bytecode verification is only expected if the learner verified the contract on Etherscan |
+| 4 | Source is included and is consistent with your Guestbook and demonstrated behaviour. Exact source-to-bytecode verification is only expected if you verified the contract on Etherscan |
 | 5 | Correctly identifies which is read, which is write, and names an event. A `public` state variable counts as a read function — that is correct, and worth acknowledging if they spot it |
 | 6a | Names the actual state — the message, and ideally the visitor and count |
 | 6b | Accurately describes the state change: `message` changes, `lastVisitor` changes, `visitCount` increments and the event is emitted where relevant. Gas and signature context is useful supporting understanding, but is not required unless the learner question asks for it |
 | 6c | **Any genuine limitation.** Missing access control, immutability, public data, gas cost. Accept anything real |
 
-**Send it back if:** any link is broken, points to mainnet, or the addresses do
+**Revise before marking Complete if:** any link is broken, points to mainnet, or the addresses do
 not correspond; the submitted source clearly does not correspond to the demonstrated contract; question 5 confuses
 read and write; or 6b describes the write without any sense that state changed.
 
-**Do not send it back for:** using the Part 3 contract unmodified, an unpolished
-answer that is correct, imperfect English, or not verifying the source on
-Etherscan — that was optional.
+**These are not reasons to mark it incomplete:** using the Part 3 contract
+unmodified, a correct but unpolished answer, imperfect English, or not verifying
+the source on Etherscan, which is optional.
 
 ::: danger If a recovery phrase or private key appears
-Reject immediately. Tell the member their wallet is compromised and to create a
-fresh one. **Do not repeat the phrase in your feedback.**
+Do not share the evidence. Treat the wallet as compromised and use a fresh
+wallet for future testnet work. **Do not repeat the phrase in notes or feedback.**
 :::
 ::::
 
-## If this gets rejected
+## If your self-check finds a gap
 
-::: tip Rejection means resubmit — it is not a fail
-No deadline, no penalty. You will be told the one thing to fix.
+::: tip A gap means revise, not fail
+There is no deadline. Use the checklist and table below to identify what to
+revisit, then check your work again.
 :::
 
-The three most common rejections at Week 3:
+Common gaps at Week 3:
 
 | What happened | The fix |
 |---|---|
@@ -131,5 +131,5 @@ The three most common rejections at Week 3:
 | 6c says "it is secure" or leaves it blank | Every contract has limits. Start with: who is allowed to call your write function? |
 
 Stuck on the deployment rather than the writing? [Part 3](./part-3-remix-lab.md)
-has a troubleshooting section, and the Telegram group has people who hit the same
-error last week.
+has a troubleshooting section. Check the error against the linked official
+documentation, and do not expose wallet secrets while seeking help elsewhere.

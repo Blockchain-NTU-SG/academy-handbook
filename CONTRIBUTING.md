@@ -113,16 +113,12 @@ Please describe:
   `npm run docs:check-links` and
   `npm run docs:check-payload` for relevant changes.
 
-Curriculum changes should involve Education leadership or the relevant
-maintainer as a reviewer. Decision ownership is defined in `GOVERNANCE.md`, and
+Curriculum changes should involve a relevant maintainer as a reviewer. Decision
+ownership is defined in `GOVERNANCE.md`, and
 the repository's CODEOWNERS file records the default maintainer group.
 
-## Operations boundary
-
-The handbook contains canonical learning and Anchor Mission instructions.
-Web3CareerBuild (WCB) handles applications, cohort operations, submissions,
-review, points, progress and leaderboard data. Do not add WCB API keys or private
-operational data to this repository.
+Do not commit credentials, private keys or personal learner data. Curriculum
+instructions and completion criteria belong in the Handbook itself.
 
 ## Upstream
 

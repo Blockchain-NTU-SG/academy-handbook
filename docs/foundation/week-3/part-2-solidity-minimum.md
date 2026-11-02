@@ -3,7 +3,7 @@ week: 3
 day: 2
 title: "The minimum Solidity you need"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "25 min"
 sources:
   - name: "Solidity documentation"

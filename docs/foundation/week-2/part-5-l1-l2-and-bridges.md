@@ -3,7 +3,7 @@ week: 2
 day: 5
 title: "L1, L2, sidechains and bridges"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "30 min"
 sources:
   - name: "ethereum.org — Layer 2"

@@ -4,7 +4,7 @@ week: 6
 day: 2
 title: "Token and incentive economics"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "45 min"
 points: 100
 sources:
@@ -26,7 +26,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): NOVA and ORBIT are made-up tokens. Their figures
+Author note: NOVA and ORBIT are made-up tokens. Their figures
 were recalculated on 21 October 2026. The Arbitrum allocation and vesting
 facts were checked against the Arbitrum DAO docs the same day. The model
 answer is kept outside the public handbook.
@@ -300,9 +300,7 @@ prices after an unlock.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 Your work is complete when:
 

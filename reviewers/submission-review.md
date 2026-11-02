@@ -1,57 +1,53 @@
-# Reviewing submissions
+# Reviewing learning evidence
+
+This optional guide can help a learner self-check or invite a peer, mentor or
+educator to review work. No particular reviewer or review channel is required
+to follow the curriculum.
 
 ## The standard
 
-> Can the member demonstrate that they genuinely completed the work and understand
-> the important parts of what they submitted?
+Can the learner show the work required by the task criteria and explain the
+important parts of what they produced?
 
-Not academic grading. Not deadline enforcement. Verification of learning.
-The same two-outcome standard applies to Foundation Anchor Missions, Deep Dive
-Part tasks, the W9 Project Brief + Feedback Session and the W10 Project
-Submission.
+This is not academic grading or deadline enforcement. It is a check that the
+published learning criteria are met. The same binary Complete / Revise model
+applies to Foundation Anchor Missions, Deep Dive Part tasks, W9 and W10.
 
 ## Two outcomes
 
 | Outcome | When |
 |---|---|
-| **Completed** | The deliverable is genuinely done and the member shows reasonable understanding. |
-| **Rejected** | Incomplete, invalid, or not yet demonstrating sufficient understanding. |
+| **Complete** | The deliverable meets the stated criteria and the learner can explain the important parts. |
+| **Revise** | Something is missing, invalid or not yet supported by the required evidence. |
 
-Nothing in between. A rejection always carries short, actionable feedback, and the
-member resubmits as many times as needed. No penalty for finishing late.
+There is no partial score. If work needs revision, identify the relevant
+criterion and give short, actionable feedback. The learner can revise and
+check again at their own pace.
 
 ## How to review one
 
-1. Check every numbered item in the mission's submission list is present.
-2. Open the links. Right network, and they resolve.
-3. Read the written answers. Own words, or copied?
-4. If something is missing, reject with one or two specific sentences saying what.
+1. Compare the work with each numbered task criterion.
+2. Open evidence links and check that they resolve and show the right network or source.
+3. Read explanations for understanding, not polished prose or agreement with your own opinion.
+4. If something is missing, name the specific criterion and one or two changes that would address it.
 
-Two or three minutes each. If you're spending longer, you're grading.
+## AI-assisted work
 
-## AI-assisted submissions
+Learners may use AI tools where the task allows it. The useful check is whether
+they can explain what a generated section does and what might fail if it changed.
+For security-critical logic such as wallet interactions, signatures, permissions,
+transactions, contract state changes and fund movement, the learner should also
+show what they inspected and tested.
 
-Members may use AI agents to produce substantial parts of their work. That is
-allowed and expected.
+## Feedback that helps
 
-The check that works: **can they say what a piece of their submission does, and
-what would break if it changed?** That surfaces understanding in a sentence or two
-without anyone auditing code.
+Avoid: “Incomplete, please revise.”
 
-For security-critical logic — wallet interactions, signatures, permissions,
-transactions, contract state changes, fund movement, network and address config,
-secrets — members are expected to have inspected and tested it.
+Prefer: “The transaction link is missing, and the example currently points to
+mainnet rather than Sepolia. Add a Sepolia link and confirm the status.”
 
-## Feedback that works
+Name what is missing and what would make the evidence clear. Do not ask for
+secrets or repeat sensitive values in feedback.
 
-Bad: "Incomplete, please resubmit."
-
-Good: "Transaction hash is missing, and the explorer link points to mainnet rather
-than Sepolia. Add both and this is done."
-
-Name what's missing and what fixes it. Members should never have to guess.
-
-## Conflicts
-
-Reviewers may participate in the Academy themselves, but never approve their own
-submissions.
+If you review your own work, apply the same criteria and label it as a
+self-review. A second perspective can help, but it is optional.

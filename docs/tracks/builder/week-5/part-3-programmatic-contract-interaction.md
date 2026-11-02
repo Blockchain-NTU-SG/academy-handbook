@@ -4,7 +4,7 @@ week: 5
 day: 3
 title: "Programmatic contract interaction"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "45 min hands-on"
 points: 100
 sources:
@@ -32,7 +32,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the worked-example script was tested against the
+Author note: the worked-example script was tested against the
 starter Registry on a local copy (fork) of Sepolia, so the outputs are real but
 the transaction hash is shown as a placeholder. The model answer and reviewer
 notes are kept outside the public handbook.
@@ -339,9 +339,7 @@ shows (W6P2), and verifying source code on Etherscan (W8P2).
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Send a transaction **without** simulating it first, using a value you know

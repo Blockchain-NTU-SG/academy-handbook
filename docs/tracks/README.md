@@ -1,6 +1,6 @@
 # Deep Dive tracks
 
-After the shared Foundation, the full Academy offers two Deep Dive tracks. At
+After the shared Foundation, the curriculum offers two Deep Dive tracks. At
 the end of Week 4, each learner selects Builder or Researcher. The selected
 track remains the learner's capability path through W10. The domain, project
 topic, research question and final deliverable can evolve during W5–W8; W9 is

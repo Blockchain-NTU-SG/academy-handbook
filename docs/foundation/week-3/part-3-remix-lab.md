@@ -3,7 +3,7 @@ week: 3
 day: 3
 title: "Remix lab: deploy your first contract"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "60 min hands-on"
 sources:
   - name: "Remix IDE"
@@ -131,7 +131,7 @@ Nothing is installed. Remix runs entirely in a browser tab.
    ::: tip Personalise it
    Change the message in the constructor to something of your own. It is your
    contract, it will be public forever, and a submission that says
-   `"Hello from Blockchain@NTU"` tells your reviewer nothing.
+   `"Hello from Blockchain@NTU"` tells someone inspecting your work nothing.
    :::
 
 3. **Compile**
@@ -301,8 +301,9 @@ Nothing is installed. Remix runs entirely in a browser tab.
   most common causes are a missing semicolon, a mismatched `pragma` version, or a
   stray character from pasting.
 
-  If you are stuck for more than ten minutes, paste the error into the Telegram
-  group. Someone will have seen it.
+  If you are stuck for more than ten minutes, search the exact error in the
+  official Remix or Solidity documentation. If you ask others for help, share
+  the error text only, never a private key, recovery phrase or `.env` file.
 
 - :- Optional — verify your source on Etherscan
 

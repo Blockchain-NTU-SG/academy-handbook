@@ -3,7 +3,7 @@ week: 4
 day: 4
 title: "GitHub in practice"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "30 min"
 sources:
   - name: "GitHub Docs — About repositories"
@@ -450,7 +450,7 @@ Two repositories from the same Project Work milestone sequence. Same amount of w
 - Licence: none
 - No indication of what it does or how to run it
 
-A reviewer cannot tell what it is, whether it works, or what the member learned.
+A reader cannot tell what it is, whether it works, or what the learner learned.
 **The work may be excellent — it is unreadable, so it cannot count for anything.**
 
 @tab The one that works

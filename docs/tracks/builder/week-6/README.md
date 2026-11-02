@@ -2,7 +2,7 @@
 track: builder
 week: 6
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 title: "Builder W6 — Web3 App Integration"
 ---
 
@@ -21,8 +21,7 @@ weekly submission.
 | 2 | [Events as Data](./part-2-events-as-data.md) | 40 min hands-on | Drafting |
 | 3 | [End-to-End Vertical Slice](./part-3-end-to-end-vertical-slice.md) | 75 min hands-on | Drafting |
 
-**Required estimate: 165 minutes (2 h 45 min).** These are authoring estimates
-for pilot review, not deadlines. Optional exploration is outside the estimate.
+**Required estimate: 165 minutes (2 h 45 min).** These are approximate learner-time estimates, not deadlines; revise them as learner evidence improves. Optional exploration is outside the estimate.
 
 **Assessment:** 3 Part tasks × 100 points = **300 points**. Completion is
-binary; incomplete or materially incorrect work is returned for revision.
+binary: use the Part completion criteria to self-check. Complete earns 100 points; otherwise revise incomplete or materially incorrect work. There are no partial scores.

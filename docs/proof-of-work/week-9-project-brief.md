@@ -1,7 +1,7 @@
 ---
 week: 9
 status: stub
-owner: "Education Team"
+owner: "Curriculum maintainers"
 title: "Week 9 — Project Brief + Feedback Session"
 ---
 
@@ -28,19 +28,23 @@ normally identify:
 These are scoping prompts, not a prescribed project type. A brief may change
 after feedback or as evidence becomes clearer.
 
-## Feedback Session
+## Feedback and revision
 
-Receive feedback in the format arranged by the cohort, which may be live,
-asynchronous, individual or group-based. Consider whether the feedback changes
-the scope, success criteria, evidence plan or risks. Record the resulting change
-in a short change note. Meeting minutes are not required.
+Ask a peer, mentor, educator, experienced Builder or Researcher, or relevant
+community member to challenge the brief. External feedback is useful because it
+can reveal assumptions you missed. If no reviewer is available, complete a
+structured self-review against the criteria below before locking the scope.
+Consider whether the feedback changes the scope, success criteria, evidence
+plan or risks. Record the main point and any resulting change in a short change
+note. Meeting minutes are not required.
 
 ## Completion
 
 This milestone is worth **200 points**. Complete means the brief is bounded,
-achievable and clear enough to proceed, and the learner has considered feedback
-and recorded any resulting change. Work that is incomplete or materially
-unclear is returned for revision under the Academy's binary review model.
+achievable and clear enough to proceed, and you have considered feedback or
+completed the self-review and recorded any resulting change. Work that is
+incomplete or materially unclear should be revised. The model is binary:
+Complete or Revise, with no partial score.
 
 This page describes the project shape, not a model answer. Choose a project
 whose scope can be supported by the time, tools and evidence available to you.

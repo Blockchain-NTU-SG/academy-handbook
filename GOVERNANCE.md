@@ -1,20 +1,21 @@
 # Governance
 
 This document records who decides what in the Blockchain@NTU Academy Handbook.
-It is intentionally lightweight: the aim is to make committee handovers and
+It is intentionally lightweight: the aim is to make maintainer continuity and
 contributor decisions clear, not to create a legal process.
 
 ## Decision ownership
 
 ### Curriculum architecture
 
-Blockchain@NTU Academy Education leadership owns:
+Curriculum maintainers are responsible for:
 
 - week structure and learning outcomes;
 - assessment and Anchor Mission architecture;
 - the shared Foundation and Deep Dive track structure.
 
-Changes to these areas require Education approval.
+Changes to these areas require maintainer approval through the repository's
+pull-request process.
 
 ### Ordinary content maintenance
 
@@ -25,7 +26,7 @@ does not materially change.
 ### New Core content or assessment
 
 New Core requirements, learning objectives or assessment expectations require
-explicit Education approval. A richer explanation or Landscape example does not
+explicit curriculum approval. A richer explanation or Landscape example does not
 automatically create a new requirement.
 
 ### Engineering and site changes
@@ -60,6 +61,5 @@ the intended scope, sources and validation visible. For curriculum changes,
 contributors should identify the concept owner and whether the change is Core,
 Landscape or Further Exploration.
 
-When a decision is not clear, pause the scope change and ask Education leadership
-or the relevant maintainer rather than inferring a new curriculum rule from one
-page.
+When a decision is not clear, pause the scope change and ask the relevant
+maintainer rather than inferring a new curriculum rule from one page.

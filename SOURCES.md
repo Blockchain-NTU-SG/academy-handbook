@@ -57,9 +57,8 @@ subject to the relevant owner's brand and usage terms.
 | WBTC | [Trust Wallet Ethereum asset registry](https://github.com/trustwallet/assets/tree/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599) | Week 1 Part 5 |
 
 **Permission record:** LXDAO reuse permission covering the Handbook and the
-MyFirst projects has been confirmed and should be retained in the committee's
-internal archive. Do not remove the “Permission granted” classification without
-checking that record.
+MyFirst projects has been confirmed. Do not remove the “Permission granted”
+classification without re-verifying the permission.
 
 ## Link
 
@@ -80,8 +79,7 @@ Faucet](https://portal.cdp.coinbase.com/products/faucet) and
 Internship Program](https://moledao.io/intern/) is reference-only and is not
 reused as handbook content.
 
-Full mapping is in the Academy Resource List maintained by the Education
-Director.
+This file is the public source and attribution map for the Handbook.
 
 ### Researcher Deep Dive references
 
@@ -110,7 +108,7 @@ on 26 October 2026; live observations retain their own check dates.
 | [Messari: State of Pyth Network Q1 2024](https://messari.io/report/state-of-pyth-network-q1-2024) (research report, published 23 May 2024) | W6P2 historical liquid-supply example (data as of 31 March 2024); chart linked only because the report prohibits copying or redistribution without prior written consent |
 | [DefiLlama API](https://api-docs.defillama.com/), [metric definitions](https://docs.llama.fi/analysts/data-definitions), [CoinGecko supply methodology](https://support.coingecko.com/articles/6758974979-coingecko-supply-methodology) — independent data providers | W6P2 token/economic-flow concepts, W7P3 reproducible measurement and W8P1 denominator definitions |
 | [DuckDB SQL](https://duckdb.org/docs/stable/sql/introduction), [CSV](https://duckdb.org/docs/stable/data/csv/overview), [web shell](https://shell.duckdb.org/), [LibreOffice](https://books.libreoffice.org/en/) — tool documentation | W7P3 local public-data analysis |
-| [Allium academic access](https://www.allium.so/use-case/academia) — optional independent-data-provider path; subject to institutional application and access approval | W7P3 optional comparison only; not assumed or required |
+| [Allium academic access](https://www.allium.so/use-case/academia) — optional independent-data-provider path; availability may be limited to approved institutions | W7P3 optional comparison only; not assumed or required |
 | [Arkham token pages](https://codex.arkm.com/the-intelligence-platform/token-pages) — commercial intelligence provider | Optional W8P1 source reference only; no subscription or labels required for tasks |
 | [RWA.xyz](https://app.rwa-xyz.com/treasuries) — independent data; [Franklin prospectus](https://www.franklintempleton.com/forms-literature/download-preview/9001-P) — primary issuer; [SEC Commissioner statement](https://www.sec.gov/newsroom/speeches-statements/peirce-statement-tokenized-securities-070925) — regulator commentary | W8P3 alternate non-token investigation; commentary is not binding law |
 

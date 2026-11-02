@@ -14,12 +14,12 @@
 Week 0 is setup and orientation. It gives you a safe vocabulary and a tool map
 before the Foundation asks you to reason about blockchains or touch a wallet.
 
-Nothing this week is assessed — but **Part 4 is the page that protects you for
-the rest of the programme**, and Part 1 sets up accounts you need from Week 1.
+Nothing this week is assessed — but **Part 4 is the page that protects you
+throughout the curriculum**, and Part 1 helps you prepare for later work.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [Welcome, GitHub and the platform](./welcome-and-setup.md) | 30 min hands-on |
+| 1 | [Welcome and setup](./welcome-and-setup.md) | 30 min hands-on |
 | 2 | [Web3 starter glossary](./glossary.md) | reference — skim now, return often |
 | 3 | [The Web3 tool map](./tools.md) | 20 min |
 | 4 | [Staying safe: what you can lose and how](./safety.md) | 25 min |
@@ -27,12 +27,13 @@ the rest of the programme**, and Part 1 sets up accounts you need from Week 1.
 
 ## What Week 0 is for
 
-By the end of the week you should have:
+By the end of the week you should be able to:
 
-- a GitHub account, an Academy platform account, and access to the Telegram group
+- find lessons, task instructions and completion criteria in this Handbook
+- use GitHub to read code and, if useful, store project evidence
 - a glossary you can search when a word stops you mid-sentence
 - a rough sense of which tool answers which kind of question
-- a working threat model — what you can lose, and how people actually lose it
+- a working threat model: what you can lose and how people lose it
 - enough regulatory awareness to know that "regulated" is not the same as "safe"
 
 ::: tip You are not expected to memorise anything
@@ -40,16 +41,16 @@ The glossary and the tool map exist so that Weeks 1–4 can move without stoppin
 to define every term. Recognition, not mastery.
 :::
 
-## Two rules that apply all semester
+## Two rules for the whole curriculum
 
-::: danger No exceptions, throughout the Academy
-**1. Everything required in this programme is testnet only.** Testnet coins have
-no monetary value. No Academy mission will ever ask you to spend real money or
-use a mainnet network.
+::: danger No exceptions for required actions
+**1. Required transactions and wallet actions are testnet only.** Testnet coins
+have no monetary value. No required task asks you to spend real money or use a
+mainnet network.
 
-**2. Nobody in the Academy will ever ask for your seed phrase or private key.**
-Not a reviewer, not an organiser, not a member of the committee. Anyone who does
-is not who they claim to be.
+**2. Never share your seed phrase or private key.** No person, website or
+support service should ask for them. Anyone who does is unsafe, regardless of
+their role or profile.
 :::
 
 Every page marks material as **Core**, **Landscape**, or **Further Exploration**.

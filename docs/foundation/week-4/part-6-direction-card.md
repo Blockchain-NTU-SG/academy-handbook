@@ -3,7 +3,7 @@ week: 4
 day: 6
 title: "Track Selection Card"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Developer resources"
@@ -22,15 +22,15 @@ sources:
 
 # Week 4 · Part 6 — Track Selection Card
 
-This is the last page of the Foundation. The full Academy continues into a
+This is the last page of the Foundation. The curriculum continues into a
 Builder or Researcher Deep Dive in Weeks 5–8. **This card is not your final
 Project Brief. Your track choice is fixed through W10, but you are not
 committing to a final topic yet.** Your domain, question and project idea may
 evolve during the Deep Dive; W9 is where you scope the brief after feedback.
 
-For Foundation Pilot learners, completing this card as part of the Week 4 Anchor
-Mission is the final required Foundation output. It remains a useful map of what
-you might build or investigate next.
+Completing this card as part of the Week 4 Anchor Mission is the final shared
+Foundation output. It is a useful map of what you might build or investigate
+next.
 
 ::: important The useful output is a better next question
 **==One small thing you may want to build or investigate.==** Not a startup, not a
@@ -136,8 +136,8 @@ question, scope or definition of done.
 ::: details Further exploration — optional, not assessed
 - Browse [Dune](https://dune.com/) or [DefiLlama](https://defillama.com/) and
   note one question you cannot answer yet.
-- Ask in the Telegram group what kinds of Builder or Researcher work other
-  learners are curious about.
+- Browse public Builder or Researcher project examples and note which kinds of
+  work interest you.
 :::
 
 ::: details Sources and attribution

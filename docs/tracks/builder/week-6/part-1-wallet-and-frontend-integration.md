@@ -4,7 +4,7 @@ week: 6
 day: 1
 title: "Wallet and frontend integration"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "50 min hands-on"
 points: 100
 sources:
@@ -32,7 +32,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the worked example (a read-only section with
+Author note: the worked example (a read-only section with
 loading and error states) was run in a browser against Sepolia, including the
 error state with a broken RPC URL. The task's model answer is the working app
 kept with the private reviewer notes, outside the public handbook.
@@ -384,9 +384,7 @@ empty record, switch MetaMask to another network.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Disable the Save button while the input is empty or longer than 140 bytes,

@@ -4,7 +4,7 @@ week: 6
 day: 2
 title: "Events as data"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "40 min hands-on"
 points: 100
 sources:
@@ -23,7 +23,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): this Part completes the "4. Events" section of
+Author note: this Part completes the "4. Events" section of
 src/App.tsx in the Builder starter. It assumes Parts 1 to 4 are done. The
 worked example was run on Sepolia on 21 October 2026 against the shared
 Registry. RPC behaviour in the table was tested the same day: the starter's
@@ -386,9 +386,7 @@ run your verification step.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 Your work is complete when:
 

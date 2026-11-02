@@ -4,7 +4,7 @@ week: 7
 day: 1
 title: "Testing contract behaviour"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "40 min hands-on"
 points: 100
 sources:
@@ -26,7 +26,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): this Part uses the Builder starter repository's
+Author note: this Part uses the Builder starter repository's
 Registry contract and its existing Foundry tests as the worked example, so W5
 and W6 stay in one codebase. The hands-on task asks learners to test the
 feature they added in W5 Part 2, which must include a state change, an
@@ -54,8 +54,8 @@ as specified. Those tests provide evidence about the behaviours they cover;
 they do not prove that the protocol is safe overall.
 
 ::: tip Picture a pre-flight checklist
-A pilot does not rely on remembering to check the fuel. The same list is run the
-same way before every flight. A test suite is that list for your contract.
+A pre-flight check does not rely on remembering to check the fuel. The same list
+is run the same way before every flight. A test suite is that list for your contract.
 
 Where the picture stops: a checklist only covers what someone wrote down. Tests
 prove the behaviours you wrote tests for, not that the contract is safe overall.
@@ -387,9 +387,7 @@ purpose" check above to confirm it really guards that rule.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Run `forge coverage` to see which lines your tests never reach. See the

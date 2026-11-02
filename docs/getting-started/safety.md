@@ -3,7 +3,7 @@ week: 0
 day: 4
 title: "Staying safe: what you can lose and how"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Security"
@@ -67,7 +67,7 @@ flowchart TD
 | **Compromised secret** — your seed phrase or private key was exposed | The secret cannot be made private again; move assets and usage to a fresh wallet |
 | **Funds** — assets in a wallet you control | **Never**, once a valid transaction confirms |
 | **Identity** — the reputation tied to your address | Hard. Your address history is permanent and public |
-| **Accounts and devices** — email, GitHub, Telegram, your machine | Usually, with effort. But they are the route to everything above |
+| **Accounts and devices** — email, GitHub and your machine | Usually, with effort. But they are the route to everything above |
 
 ::: important Two things follow from that table
 Your seed phrase is ==**not like a password**== — a password can be reset, and this
@@ -169,24 +169,24 @@ regardless of how convincing the profile picture is.
 | **Review approvals** | Periodically revoke old allowances at [revoke.cash](https://revoke.cash/) |
 | **Write the seed phrase on paper** | Offline. Not a screenshot, not a cloud note |
 
-### The Academy's rules
+### Rules for required learning actions
 
-::: danger These hold throughout the Academy and have no exceptions
-**1. Testnet only for transactions and wallet actions.** Any Academy activity
+::: danger These rules have no exceptions
+**1. Testnet only for transactions and wallet actions.** Any required activity
 that sends a transaction, deploys a contract, performs a state-changing wallet
 action, or otherwise requires funds or an on-chain signature must use testnet
 only. Some lessons may ask you to inspect public mainnet data in a block
 explorer without connecting a wallet or sending anything. Testnet coins are
-free and worth nothing. No Academy mission will ever require real money or a
-wallet holding real assets.
+free and worth nothing. No required task asks you to use real money or a wallet
+holding real assets.
 
-**2. Nobody asks for your keys.** No reviewer, organiser or committee member
-will ever ask for your seed phrase or private key. Anyone who asks is an
-impersonator, regardless of what their profile says.
+**2. Nobody asks for your keys.** Never share your seed phrase or private key
+with a person, website or support service. Anyone who asks is unsafe, regardless
+of what their profile says.
 :::
 
-If a submission ever seems to require real money, stop and ask. You are not
-missing something — either we made an error, or the instruction is not from us.
+If a task ever seems to require real money, do not proceed. Recheck the
+instruction against the Handbook and the cited official source.
 
 ## Landscape
 

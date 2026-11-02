@@ -4,7 +4,7 @@ week: 5
 day: 1
 title: "Run the stack"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "35 min hands-on"
 points: 100
 sources:
@@ -23,7 +23,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): every output on this page comes from a real run
+Author note: every output on this page comes from a real run
 of the public Builder starter. The model answer and reviewer notes are kept
 outside the public handbook.
 -->
@@ -349,9 +349,7 @@ Read the error first. Most first-run problems are the wrong Node version
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Open the browser developer tools while `npm run dev` is running and compare

@@ -4,7 +4,7 @@ week: 6
 day: 3
 title: "End-to-end vertical slice"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "75 min hands-on"
 points: 100
 sources:
@@ -23,7 +23,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the request trace in the worked example was
+Author note: the request trace in the worked example was
 captured from a working app after its W6 wallet and event sections were
 completed, on a local fork of Sepolia, by recording
 every request the page sent during one save. The model answer and reviewer
@@ -219,9 +219,7 @@ that) and writing tests (W7P1).
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Make the activity list update by itself when anyone writes, using viem's

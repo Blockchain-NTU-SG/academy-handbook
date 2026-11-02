@@ -26,11 +26,11 @@
 
 ## What this is
 
-The Blockchain@NTU Academy Handbook is a structured beginner-first Web3 learning
-path for students entering Web3, including learners with no technical background. It is
-the canonical source for the Academy's learning material, Foundation Anchor
-Mission instructions, Deep Dive Part-task requirements and Proof of Work
-milestone requirements; the public site is built from the same `docs/` source.
+The Blockchain@NTU Academy Handbook is a public, evergreen, beginner-first Web3
+curriculum that anyone can follow independently from W0 through W10. It is the
+canonical source for learning material, Foundation Anchor Missions, Deep Dive
+Part tasks and Project Work milestones; the public site is built from the same
+`docs/` source.
 
 The purpose is not to turn a beginner into a professional developer, smart-
 contract auditor, DeFi analyst, protocol researcher or investor. It is to build
@@ -58,7 +58,7 @@ By the end of the shared Foundation, a learner should be able to:
 | Weeks 5–8 | Deep Dive: follow the selected Builder or Researcher track, with three reviewable Part tasks each week. |
 | Week 9 | Project Brief + Feedback Session: scope a sponsor-agnostic project and revise the brief after feedback; 200 points. |
 | Week 10 | Project Submission: ship or publish the final reviewable artefact; 200 points. |
-| Full programme | 2,000 completion-based points; W0 remains onboarding. |
+| Full curriculum | 2,000 completion-based points; W0 remains onboarding. |
 
 The Foundation uses **Core**, **Landscape** and **Further Exploration** to make
 depth visible. Foundation follows **richer content, lighter assessment**: seeing
@@ -83,9 +83,8 @@ See the full writing and review standard in [EDITORIAL_GUIDE.md](./EDITORIAL_GUI
 3. Follow the [Foundation](./docs/foundation/) from Week 1 through Week 4.
 4. Continue into the [Deep Dive tracks](./docs/tracks/) for Weeks 5–8, then complete the [Project Brief and Project Submission](./docs/proof-of-work/) in Weeks 9–10.
 
-Anyone can use the Handbook at their own pace. Cohort members follow the same
-learning path with a weekly rhythm, missions, peer learning, feedback and review
-through the programme platform.
+Follow the complete sequence independently and at your own pace. The lessons,
+tasks, completion criteria and project milestones are all in this Handbook.
 
 ## Repository structure
 
@@ -117,14 +116,12 @@ review. Read [CONTRIBUTING.md](./CONTRIBUTING.md) before editing and use
 [GOVERNANCE.md](./GOVERNANCE.md) when a change may affect curriculum scope or
 decision ownership.
 
-## Programme operations boundary
+## Canonical curriculum
 
-The Handbook is the canonical home for learning material, Foundation Anchor
-Mission requirements, Deep Dive Part-task requirements and Proof of Work
-milestone requirements. Web3CareerBuild (WCB) handles applications, cohorts,
-submissions, review workflow, points, progress and leaderboard data. WCB may
-carry a shorter operational copy, but it does not replace the canonical Handbook
-page. Never add WCB API keys or private operational data here.
+The `docs/` tree is the single public source of truth for the curriculum,
+including task requirements, completion criteria and project milestones. The
+repository contains no private learner workflow. Do not commit credentials,
+private keys or personal learner data.
 
 ## Sources and attribution
 

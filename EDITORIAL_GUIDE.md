@@ -7,7 +7,7 @@ ownership.
 
 ## Who we write for
 
-The primary Foundation learner is a student with little or no prior Web3
+The primary Foundation learner has little or no prior Web3
 knowledge and potentially no technical background. Foundation should move that
 learner from outsider to a **Web3-literate beginner** capable of basic industry
 conversation, safe participation, first-principles reasoning and choosing a
@@ -251,6 +251,10 @@ When a required action produces a result that a beginner may not recognise,
 provide a short observable success condition. Use a collapsed `Expected result`
 example when full output would interrupt the lesson.
 
+Operational dates age the curriculum unnecessarily; evidentiary dates establish
+what the evidence represents. Retain dates for source publication, retrieval,
+observation windows and technically relevant history, but not time-bound rollout.
+
 ## Screenshots and visuals
 
 Use Mermaid, native diagrams or tables for structure, sequence and comparison.
@@ -284,7 +288,7 @@ automatically respond by adding more content.
 
 ## What requires curriculum approval
 
-Education leadership approves changes to week structure, learning outcomes,
+Curriculum maintainers approve changes to week structure, learning outcomes,
 assessment architecture, Anchor Missions, specialisation structure and new Core
 requirements. Maintainers may handle ordinary typos, broken links, clarity
 improvements, examples, factual updates, screenshots and source updates when

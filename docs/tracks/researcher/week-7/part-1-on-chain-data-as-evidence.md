@@ -4,7 +4,7 @@ week: 7
 day: 1
 title: "On-chain evidence and trace semantics"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "35 min"
 points: 100
 sources:
@@ -41,7 +41,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the case transaction was checked against a
+Author note: the case transaction was checked against a
 mainnet RPC receipt on 21 October 2026 (status, logs, gas used and effective
 gas price). The model answer and reviewer notes are kept outside the public
 handbook.
@@ -254,9 +254,7 @@ all transactions before or after the case.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 **Your work is complete when:**
 

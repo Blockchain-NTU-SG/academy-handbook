@@ -4,7 +4,7 @@ week: 8
 day: 3
 title: "Independent builder challenge"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "120 min hands-on"
 points: 100
 sources:
@@ -26,7 +26,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): this Part is a functional spec, not a tutorial.
+Author note: this Part is a functional spec, not a tutorial.
 Do not add contract code, frontend code or step-by-step instructions to this
 page. The model answer (contract, tests and app changes, verified on a Sepolia
 fork with real USDC) and the reviewer notes are kept outside the public
@@ -247,9 +247,7 @@ not finished.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Sepolia USDC supports signature-based approvals (EIP-2612 `permit`). Use one

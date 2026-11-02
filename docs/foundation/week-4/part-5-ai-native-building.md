@@ -3,7 +3,7 @@ week: 4
 day: 5
 title: "AI-native building"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — Smart contract security"
@@ -123,9 +123,6 @@ trivial once someone thought to run it.
 
 ### Where you must inspect and test
 
-The [submission review guide](https://github.com/Blockchain-NTU-SG/academy-handbook/blob/main/reviewers/submission-review.md)
-draws this line, and it is a good one.
-
 For most code, the standard is *"can you explain what it does?"*
 
 For **security-critical logic, do not use generated code blindly**:
@@ -146,7 +143,8 @@ contract address, do not use it blindly.==**
 1. Understand what that small section is supposed to do.
 2. Verify addresses and configuration against primary sources.
 3. Test it on testnet.
-4. Ask a reviewer or mentor when you cannot explain it.
+4. Ask a peer or mentor if available. If not, return to the source documentation
+   and test one small part at a time.
 
 Use established libraries instead of asking a beginner to audit cryptography.
 
@@ -168,14 +166,14 @@ verified against the official docs.
 ```
 :::
 
-That tells a reviewer what was generated, what was written, what was verified,
+That tells someone inspecting your work what was generated, what was written, what was verified,
 and what was tested. It takes a minute and it makes the rest of your work more
 credible, not less.
 
 ::: warning What does not work
-"Built with AI" tells a reviewer nothing.
+"Built with AI" tells a reader nothing.
 
-Neither does hiding it — reviewers ask you to explain your own submission, and
+Neither does hiding it: anyone reading your work may ask you to explain it, and
 [not being able to](../week-3/anchor-mission.md) is the actual failure, whether
 or not AI was involved.
 :::

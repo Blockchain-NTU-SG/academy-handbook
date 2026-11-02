@@ -3,7 +3,7 @@ week: 3
 day: 4
 title: "Tokens, standards and real applications"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — ERC-20 token standard"

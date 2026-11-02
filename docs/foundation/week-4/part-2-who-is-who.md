@@ -3,7 +3,7 @@ week: 4
 day: 2
 title: "Who is who, and what kind of thing is it"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Ethereum Foundation"

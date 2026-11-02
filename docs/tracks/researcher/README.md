@@ -1,7 +1,7 @@
 ---
 track: researcher
 status: review
-owner: "Education Team"
+owner: "Curriculum maintainers"
 title: "Researcher Deep Dive"
 ---
 
@@ -36,10 +36,12 @@ Each week contains three Part tasks. Every Part task is worth **100 points**
 when the work is incomplete or materially incorrect. There is no separate
 weekly submission.
 
-> **Status: curriculum / pilot review.** All twelve Parts are organised across
-> W5–W8 and retain their individual draft/review status. The progression is
-> system reconstruction → protocol economics → on-chain investigation and
-> measurement → valuation, risk and a bounded conclusion. Current required
-> authoring estimates are W5 2 h 5 min, W6 2 h 10 min, W7 2 h 20 min and W8
-> 2 h 40 min. Replace these estimates with pilot data; the weeks need not take
-> equal time. Optional exploration is not assessed.
+All twelve Parts are organised across W5–W8 and retain their individual
+repository authoring status. The progression is system reconstruction →
+protocol economics → on-chain investigation and measurement → valuation, risk
+and a bounded conclusion.
+
+> **Estimated learner workload:** W5 2 h 5 min, W6 2 h 10 min, W7 2 h 20 min
+> and W8 2 h 40 min. These are approximate times, not deadlines, and may be
+> revised as learner evidence improves. Weeks need not take equal time.
+> Optional exploration is not assessed.

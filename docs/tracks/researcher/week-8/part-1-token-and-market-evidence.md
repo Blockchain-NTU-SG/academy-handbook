@@ -4,7 +4,7 @@ week: 8
 day: 1
 title: "Token, liquidity and valuation evidence"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "60 min hands-on"
 points: 100
 sources:
@@ -462,9 +462,7 @@ repeating constant-product maths or pretending these are real protocols.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric or separate weekly submission.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means a justified denominator, reproducible relative calculations,
 labelled float/concentration assumptions, two explanations with discriminating

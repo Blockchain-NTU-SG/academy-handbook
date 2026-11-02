@@ -4,7 +4,7 @@ week: 7
 day: 3
 title: "Querying and measurement design"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "65 min hands-on"
 points: 100
 sources:
@@ -107,8 +107,8 @@ Your exact minor version may differ. The important part is that it begins with
 
 A version number such as `Python 3.x.x` means the command is available. If the
 command is not recognised, do not edit the retrieval utility or install a
-third-party package for this task; ask the Education Team for help with the
-approved environment or use the clearly dated fallback snapshot below.
+third-party package for this task. Use the clearly dated fallback snapshot
+below, or consult the linked Python documentation before retrying live retrieval.
 
 Download <a :href="$withBase('/files/researcher/W7.3-free-public-data.py')" download>W7.3-free-public-data.py</a>
 into that empty folder. It uses Python 3's standard library. In the same
@@ -483,9 +483,8 @@ independent verification of users. Record **source / unit / chain / dates /
 retrieval time**, then name what extra data could separate the explanations.
 
 ::: details Optional industry-data path — Allium academic access
-Allium offers an Explorer for querying on-chain data with SQL and an academic
-access programme. Access requires an institutional request and confirmation;
-do not assume your university or this cohort is already approved. This is an
+Allium offers an Explorer for querying on-chain data with SQL and may provide
+academic access to approved institutions. Availability varies. This is an
 optional alternative for learning how to query a provider's schema, not a
 replacement for the reproducible DefiLlama-to-CSV workflow or an added task.
 
@@ -529,9 +528,7 @@ requiring both a full measurement memo and a second query assignment.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric or separate weekly submission.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means 90 complete UTC dates, 30 per group, reproducible SQL and
 source checks, consistent units, and a line chart covering the same series. The
@@ -551,5 +548,5 @@ this single-table question.
 - [Uniswap volume endpoint](https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false) — Link, live data; preserve the retrieval snapshot
 - [DuckDB — Web shell](https://shell.duckdb.org/), [SQL](https://duckdb.org/docs/stable/sql/introduction) and [CSV import](https://duckdb.org/docs/stable/data/csv/overview) — Link, tool documentation
 - [LibreOffice — Calc](https://books.libreoffice.org/en/) and [Chart Wizard — Data Range](https://help.libreoffice.org/latest/en-US/text/schart/01/wiz_data_range.html) — Link, tool documentation
-- [Allium — Academic access](https://www.allium.so/use-case/academia) — Link, optional industry-data path; subject to institutional application and access approval
+- [Allium — Academic access](https://www.allium.so/use-case/academia) — Link, optional industry-data path; availability may be limited to approved institutions
 :::

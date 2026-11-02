@@ -2,7 +2,7 @@
 track: builder
 week: 7
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 title: "Builder W7 — Reliable Web3 Engineering"
 ---
 
@@ -20,8 +20,7 @@ weekly submission.
 | 2 | [Simulation, Debugging and Tracing](./part-2-simulation-debugging-and-tracing.md) | 50 min hands-on | Drafting |
 | 3 | [Security Engineering](./part-3-security-engineering.md) | 45 min hands-on | Drafting |
 
-**Required estimate: 135 minutes (2 h 15 min).** These are authoring estimates
-for pilot review, not deadlines. Optional exploration is outside the estimate.
+**Required estimate: 135 minutes (2 h 15 min).** These are approximate learner-time estimates, not deadlines; revise them as learner evidence improves. Optional exploration is outside the estimate.
 
 **Assessment:** 3 Part tasks × 100 points = **300 points**. Completion is
-binary; incomplete or materially incorrect work is returned for revision.
+binary: use the Part completion criteria to self-check. Complete earns 100 points; otherwise revise incomplete or materially incorrect work. There are no partial scores.

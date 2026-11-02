@@ -2,7 +2,7 @@
 track: builder
 week: 5
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 title: "Builder W5 — Programmatic Web3 Development"
 ---
 
@@ -21,8 +21,7 @@ weekly submission.
 | 2 | [Contract Engineering](./part-2-contract-engineering.md) | 45 min hands-on | Drafting |
 | 3 | [Programmatic Contract Interaction](./part-3-programmatic-contract-interaction.md) | 45 min hands-on | Drafting |
 
-**Required estimate: 125 minutes (2 h 5 min).** These are authoring estimates
-for pilot review, not deadlines. Optional exploration is outside the estimate.
+**Required estimate: 125 minutes (2 h 5 min).** These are approximate learner-time estimates, not deadlines; revise them as learner evidence improves. Optional exploration is outside the estimate.
 
 **Assessment:** 3 Part tasks × 100 points = **300 points**. Completion is
-binary; incomplete or materially incorrect work is returned for revision.
+binary: use the Part completion criteria to self-check. Complete earns 100 points; otherwise revise incomplete or materially incorrect work. There are no partial scores.

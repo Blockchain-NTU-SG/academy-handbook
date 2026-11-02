@@ -3,7 +3,7 @@ week: 0
 day: 3
 title: "The Web3 tool map"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — Wallets"
@@ -75,7 +75,6 @@ use.
 | **Governance forums** | Read proposals before anyone votes | Week 4 |
 | <span class="academy-brand-label"><Icon name="simple-icons:x" /><strong>X</strong></span> | Find out what is happening right now | Week 4 |
 | <span class="academy-brand-label"><Icon name="simple-icons:discord" /><strong>Discord</strong></span> | Find community discussion and support | Week 4 |
-| <span class="academy-brand-label"><Icon name="simple-icons:telegram" /><strong>Telegram</strong></span> | Find community announcements and discussion | Week 4 |
 
 ::: important The teaching idea is one arrow
 > ==**Question → Tool**==

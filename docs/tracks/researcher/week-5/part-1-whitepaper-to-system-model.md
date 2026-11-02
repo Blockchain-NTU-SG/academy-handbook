@@ -4,7 +4,7 @@ week: 5
 day: 1
 title: "Whitepaper → System Model"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "40 min"
 points: 100
 sources:
@@ -136,9 +136,7 @@ forecasts, or reproducing the paper's probability calculations.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric and no separate weekly submission.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means another learner can follow the actors and transition, every
 document claim is locatable, and assumptions/inferences are not presented as

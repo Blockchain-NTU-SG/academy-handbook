@@ -1,7 +1,7 @@
 ---
 track: builder
 status: review
-owner: "Education Team"
+owner: "Curriculum maintainers"
 title: "Builder Deep Dive"
 ---
 
@@ -32,11 +32,11 @@ Each week contains three Part tasks. Every Part task is worth **100 points**
 when the work is incomplete or materially incorrect. There is no separate
 weekly submission.
 
-> **Workload for pilot review:** Current required authoring estimates are W5
-> 2 h 5 min, W6 2 h 45 min, W7 2 h 15 min and W8 4 h 15 min. They are not
-> completion deadlines; replace them with pilot data. Optional exploration is
-> not assessed, and the weeks are not expected to take equal time.
+> **Estimated learner workload:** Required work is estimated at W5 2 h 5 min,
+> W6 2 h 45 min, W7 2 h 15 min and W8 4 h 15 min. These are approximate times,
+> not deadlines. Optional exploration is not assessed, and weeks are not
+> expected to take equal time. Estimates may be revised as learner evidence
+> improves.
 
-> **Status: curriculum / pilot review.** All twelve Deep Dive Parts are
-> organised across W5–W8. Individual lessons retain their draft/review status;
-> learner timing and starter-repository continuity still need pilot verification.
+All twelve Deep Dive Parts are organised across W5–W8. Individual lessons
+retain their repository authoring status; workload estimates are approximate.

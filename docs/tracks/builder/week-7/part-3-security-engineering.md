@@ -4,7 +4,7 @@ week: 7
 day: 3
 title: "Security engineering"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "45 min hands-on"
 points: 100
 sources:
@@ -26,7 +26,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the lab contract lives on the
+Author note: the lab contract lives on the
 w6-3-security-lab branch of the Builder starter repository. This existing
 branch name is kept for starter compatibility; this is Academy W7P3. It
 contains more than one planted weakness; learners only need to find, reproduce and fix one.
@@ -329,9 +329,7 @@ the passing test is your evidence that the fix works.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Find and fix a second weakness in `TipRegistry`, with its own regression

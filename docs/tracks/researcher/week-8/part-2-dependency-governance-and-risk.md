@@ -4,7 +4,7 @@ week: 8
 day: 2
 title: "Dependency, governance and risk"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "50 min hands-on"
 points: 100
 sources:
@@ -35,7 +35,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the stress-test inputs are hypothetical, not
+Author note: the stress-test inputs are hypothetical, not
 live Aave parameters; the arithmetic was rechecked on 21 October 2026. The
 model answer and reviewer notes are kept outside the public handbook.
 -->
@@ -232,9 +232,7 @@ exploit instructions, and claiming that a hypothetical cascade happened.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with feedback for revision.
-There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 **Your work is complete when:**
 

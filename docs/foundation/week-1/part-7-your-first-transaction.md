@@ -3,7 +3,7 @@ week: 1
 day: 7
 title: "Your first transaction"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "45 min hands-on"
 sources:
   - name: "ethereum.org — Networks"
@@ -87,9 +87,9 @@ Week 3.
 Take your time. Nothing here is timed, and the habits matter more than the speed.
 
 ::: tip Before you start
-You need about 30 minutes, a desktop browser, and nowhere to be. If a step does
-not look like the screenshot, stop and ask in the Telegram group rather than
-guessing — wallet interfaces change, and the group will know.
+You need about 30 minutes and a desktop browser. Wallet interfaces change; if a
+step differs from the screenshot, check MetaMask's official support guidance and
+do not guess at a transaction or signature.
 :::
 
 :::: steps
@@ -250,8 +250,8 @@ guessing — wallet interfaces change, and the group will know.
    1. Check you pasted the correct wallet address.
    2. Check your wallet is on **Sepolia**, not mainnet.
    3. Try the next faucet in the table.
-   4. If all of them fail, say so in the Telegram group — someone will know
-      which one is working today.
+   4. If all of them fail, stop and try again later. Faucet availability changes;
+      never pay for test ETH or use a wallet holding real assets.
    :::
 
    ::: danger Never pay for testnet ETH

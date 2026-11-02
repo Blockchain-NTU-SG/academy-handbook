@@ -3,7 +3,7 @@ week: 0
 day: 2
 title: "Web3 starter glossary"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "reference — skim now, return often"
 sources:
   - name: "ethereum.org — Glossary"

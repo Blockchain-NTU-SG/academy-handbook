@@ -3,7 +3,7 @@ week: 1
 day: 6
 title: "Wallets, accounts and keys"
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Ethereum accounts"
@@ -104,7 +104,7 @@ key.
 ::: danger The recovery phrase is strictly more powerful than any single key
 Anyone holding it holds **every account in that wallet, forever, from anywhere**.
 
-No website, DApp, support agent, reviewer or Academy organiser should ever ask
+No website, DApp, support agent or other person should ever ask
 for it. The normal exception is when **you deliberately restore or import your
 wallet into wallet software that you installed from a verified official source**.
 Never enter it because someone sent you a link, DMed you, or told you to

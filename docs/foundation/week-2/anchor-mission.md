@@ -3,7 +3,7 @@ week: 2
 title: "Read your own transaction, and compare two chains"
 points: 100
 status: drafting
-owner: "Director of Education"
+owner: "Curriculum maintainers"
 ---
 
 # Week 2 — Anchor Mission
@@ -27,7 +27,7 @@ considerably more — what gas actually pays for, why blockchains differ, what
 "settled" means. Going back to the same transaction with better eyes is the
 fastest way to feel that you learned something.
 
-The comparison is the skill that outlasts this programme. Chains you have never
+The comparison is a skill that remains useful beyond this curriculum. Chains you have never
 heard of will launch every month. Being able to say what one traded away, and
 for what, is how you evaluate any of them.
 :::
@@ -66,10 +66,10 @@ for what, is how you evaluate any of them.
 
 ::: tip Expected length
 **Roughly 250–350 words including the table.** No new on-chain activity, no
-essay. Optional: up to eight image or PDF uploads.
+essay. Add an image only if it helps show your evidence.
 :::
 
-## Submission checklist
+## Completion self-check
 
 - [ ] All six transaction fields in item 1 are reported
 - [ ] I explained what my gas number represents, in my own words
@@ -80,13 +80,13 @@ essay. Optional: up to eight image or PDF uploads.
 - [ ] If I used AI, I can explain what it produced and why I agree with it
 - [ ] I have not included my recovery phrase or private key anywhere
 
-:::: details For reviewers — what "completed" looks like
-Two or three minutes. You are checking comprehension, **not prose quality**, and
-not whether they picked the comparison you would have.
+:::: details Self-check: what Complete means
+Use these criteria to check the reasoning, **not prose quality**, and not
+whether you picked the comparison someone else would have.
 
 | Item | Standard |
 |---|---|
-| **1** | All six fields, matching a real Sepolia transaction from that member. The gas explanation should convey that gas measures *computational or execution work*, and that the fee is the monetary cost of that gas. Observing that more complex operations generally consume more gas is useful, but it is not required for completion |
+| **1** | All six fields, matching your real Sepolia transaction. The gas explanation should convey that gas measures *computational or execution work*, and that the fee is the monetary cost of that gas. Observing that more complex operations generally consume more gas is useful, but it is not required for completion |
 | **2** | Three genuine dimensions, with a stated trade-off in **both** directions |
 | **3** | Reaches the actual reason: **blockchains cannot see each other**. Each network only knows its own state, so there is no native way for one to observe or verify what happened on another. A bridge or cross-chain messaging mechanism provides or verifies evidence from one chain so another chain can act on it |
 
@@ -101,29 +101,29 @@ ones not listed here:
 **Item 3 extra credit** — not required — for noting that this is why bridging
 adds a trust assumption.
 
-**Send it back if:** transaction fields are missing or do not match a real
+**Revise before marking Complete if:** transaction fields are missing or do not match a real
 transaction; item 2 names a winner instead of a trade-off, or compares fewer
 than three dimensions; item 3 describes lock-and-mint mechanics without
 explaining why the problem exists; or the writing is clearly copied.
 
-**Do not send it back for:** choosing an unusual chain, a comparison you
-disagree with but which is defensible, short answers that are correct, or
-imperfect English.
+**These are not reasons to mark it incomplete:** choosing an unusual chain, a
+defensible comparison another person might disagree with, a short correct
+answer, or imperfect English.
 
 ::: danger If a recovery phrase or private key appears
-Reject immediately. Tell the member their wallet is compromised and to create a
-fresh one. **Do not repeat the phrase in your feedback.**
+Do not share the evidence. Treat the wallet as compromised and use a fresh
+wallet for future testnet work. **Do not repeat the phrase in notes or feedback.**
 :::
 ::::
 
-## If this gets rejected
+## If your self-check finds a gap
 
-::: tip Rejection means resubmit — it is not a fail
-There is no deadline and no penalty for taking longer. You will be told the one
-specific thing to fix.
+::: tip A gap means revise, not fail
+There is no deadline. Use the checklist and table below to identify what to
+revisit, then check your work again.
 :::
 
-The three most common rejections at Week 2:
+Common gaps at Week 2:
 
 | What happened | The fix |
 |---|---|
@@ -131,4 +131,5 @@ The three most common rejections at Week 2:
 | Item 3 explains *how* a bridge works instead of *why* one is needed | The question is about the problem, not the mechanism. [Part 5](./part-5-l1-l2-and-bridges.md), opening two paragraphs |
 | The gas explanation says gas is "the fee" | Gas measures *work*; the fee is what that work costs. [Part 4](./part-4-transactions-and-gas.md) separates them |
 
-All three are quick fixes. Stuck on any of it, ask in the Telegram group.
+All three are quick fixes. Recheck the linked Part if you are unsure, and keep
+any remaining uncertainty explicit in your answer.

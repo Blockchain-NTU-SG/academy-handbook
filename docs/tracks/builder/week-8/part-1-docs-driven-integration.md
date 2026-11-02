@@ -4,7 +4,7 @@ week: 8
 day: 1
 title: "Docs-driven integration"
 status: drafting
-owner: "Education Team"
+owner: "Curriculum maintainers"
 reading_time: "60 min hands-on"
 points: 100
 sources:
@@ -35,7 +35,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the task primitive is Chainlink Data Feeds
+Author note: the task primitive is Chainlink Data Feeds
 (ETH / USD on Ethereum Sepolia). The worked example deliberately uses a
 different primitive (Circle's USDC) so the page teaches the method without
 walking learners through the task. Do not add the feed address, ABI or
@@ -330,9 +330,7 @@ Every answer in your log must come from the docs or the chain.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Read the same feed inside a Solidity contract, and test it in Foundry with a
