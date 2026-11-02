@@ -1,6 +1,6 @@
 ---
 week: 10
-status: stub
+status: review
 owner: "Curriculum maintainers"
 title: "Week 10 — Project Submission"
 ---

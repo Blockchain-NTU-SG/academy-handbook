@@ -43,7 +43,7 @@ knowledge you need for the Deep Dive and later Proof of Work, where your work
 lives on GitHub.
 
 ::: important GitHub is not only for developers
-**==For the Academy, GitHub is the default home for your Proof of Work.==**
+**==In this curriculum, GitHub is the default home for reviewable project evidence.==**
 Builders can store code there, while Researchers can publish analysis and
 evidence. Data/querying and product thinking can support either track; the
 repository should make the actual output clear.
@@ -479,7 +479,8 @@ anyone else who finds it later.
 And it is the difference between something that counts as Proof of Work and
 something that does not.
 
-Your GitHub profile is the most durable thing you take out of this programme.
+Your GitHub profile can become a durable record of the work you produce through
+this learning path.
 Week 10 will ask you to ship the final reviewable version. Start building the
 habits now.
 :::

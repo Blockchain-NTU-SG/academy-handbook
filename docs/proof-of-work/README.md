@@ -1,5 +1,5 @@
 ---
-status: stub
+status: review
 owner: "Curriculum maintainers"
 title: "Project Work"
 ---

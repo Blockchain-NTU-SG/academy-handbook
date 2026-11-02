@@ -48,9 +48,9 @@ config:
           link: ./getting-started/
           icon: material-symbols:menu-book-outline
         - theme: alt
-          text: Explore the Curriculum
-          link: ./getting-started/programme.md
-          icon: material-symbols:map-outline
+          text: Join the Academy
+          link: ./getting-started/academy-participation.md
+          icon: material-symbols:groups-outline
   - type: image-text
     title: A complete public learning path
     image:
@@ -114,7 +114,7 @@ The week's learning turned into a small, practical action.
 ## Start here
 
 :::: steps
-1. [Read the programme overview](./getting-started/programme.md).
+1. [Read the curriculum overview](./getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./getting-started/).
 3. Follow the [Foundation](./foundation/) from Week 1 through Week 4.
 4. Choose [Builder or Researcher](./tracks/) for Weeks 5–8, then follow the [Project Work milestones](./proof-of-work/) in Weeks 9–10.

@@ -1,4 +1,4 @@
-# Programme overview
+# Curriculum overview
 
 Blockchain@NTU Academy follows one continuous story:
 
@@ -62,5 +62,5 @@ any learning activity.
 Begin with [Week 0](./), then continue through the shared [Foundation](../foundation/).
 After Week 4, choose Builder or Researcher, complete Weeks 5–8, and use the
 W9/W10 project criteria to scope and present a reviewable project. You can
-self-check each task or ask someone you trust to review it; no separate account
-or programme access is needed.
+self-check each task or ask someone you trust to review it. The Handbook remains
+the source of task and completion requirements in either case.

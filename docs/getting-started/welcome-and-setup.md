@@ -29,7 +29,7 @@ wallet.
 
 ## Learning objectives
 
-- Create a GitHub account and explain what a repository, commit and README are for
+- Create a GitHub account for hands-on work, and explain what a repository, commit and README are for
 - Find the learning material, tasks and completion criteria in this Handbook
 - Use completion criteria to self-check work or request feedback
 - Apply the testnet-only and no-keys safety rules
@@ -111,10 +111,10 @@ evidence.
 It is also, bluntly, a portfolio. A GitHub profile with real work on it is worth
 more to an employer in this industry than most certificates.
 
-::: tip GitHub is optional
-The Handbook contains the lessons, task instructions and completion criteria.
-GitHub is recommended for code and project evidence; the curriculum itself is
-available without a GitHub account.
+::: tip Public reading, hands-on work
+Anyone can read the Handbook without an account. The full hands-on path uses
+GitHub, so create a free account here for later GitHub workflow, Builder work
+and project evidence.
 :::
 ::::
 

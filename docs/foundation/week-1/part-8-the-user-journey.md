@@ -40,7 +40,7 @@ it."*
 :::
 
 ::: warning You will not do this journey
-It involves real money and real risk, and nothing in this programme requires
+It involves real money and real risk, and nothing in this curriculum requires
 either. It is here to show how the pieces fit — nothing more.
 :::
 

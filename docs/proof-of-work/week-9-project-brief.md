@@ -1,6 +1,6 @@
 ---
 week: 9
-status: stub
+status: review
 owner: "Curriculum maintainers"
 title: "Week 9 — Project Brief + Feedback Session"
 ---

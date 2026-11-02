@@ -51,7 +51,7 @@ and what each is for.
 - Name the right category of tool for a given question, without being told
 - Explain what a block explorer shows you and why that matters
 - Distinguish direct chain records from derived analytics
-- Recognise the tools this programme will actually put in your hands
+- Recognise the tools this curriculum will use
 
 ## Core
 
@@ -127,7 +127,7 @@ Week 1 covers this properly.
 
 | Wallet | Chains | Note |
 |---|---|---|
-| <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Ethereum and EVM chains | The default for this programme |
+| <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Ethereum and EVM chains | The default wallet for this curriculum |
 | <span class="academy-brand-label"><Icon name="token-branded:phantom" /><strong>Phantom</strong></span> | Solana, plus others | The Solana equivalent |
 | <span class="academy-brand-label"><Icon name="token-branded:rabby" /><strong>Rabby</strong></span> | Ethereum and EVM chains | Shows more clearly what you are about to sign |
 
@@ -211,7 +211,7 @@ last, for context rather than proof.
 :::
 
 Also notice what no tool told you: **whether Base is a good investment.** No tool
-on this page answers that, and nothing in this programme is financial advice.
+on this page answers that, and nothing in this curriculum is financial advice.
 
 ::: details Further exploration — optional, not assessed
 - [ethereum.org — Block explorers](https://ethereum.org/developers/docs/data-and-analytics/block-explorers/) — what explorers index and how

@@ -255,6 +255,11 @@ Operational dates age the curriculum unnecessarily; evidentiary dates establish
 what the evidence represents. Retain dates for source publication, retrieval,
 observation windows and technically relevant history, but not time-bound rollout.
 
+Curriculum content must remain usable without Academy participation
+infrastructure. Links to organised participation belong on dedicated meta pages;
+lessons, tasks and completion criteria must not depend on a cohort, platform or
+communication channel.
+
 ## Screenshots and visuals
 
 Use Mermaid, native diagrams or tables for structure, sequence and comparison.

@@ -6,7 +6,7 @@ const academyNote = defineNoteConfig({
   sidebar: [
     { text: 'Blockchain@NTU Academy', link: '/' },
     {
-      text: 'Getting started',
+      text: 'Curriculum overview',
       link: '/getting-started/programme.html',
       collapsed: false,
       items: [
@@ -21,6 +21,10 @@ const academyNote = defineNoteConfig({
             { text: 'Part 4 · Staying safe', link: '/getting-started/safety.html' },
             { text: 'Part 5 · Regulatory awareness', link: '/getting-started/regulatory-awareness.html' },
           ],
+        },
+        {
+          text: 'Academy participation (optional)',
+          link: '/getting-started/academy-participation.html',
         },
       ],
     },

@@ -119,7 +119,7 @@ export default defineUserConfig({
   base: '/academy-handbook/',
   lang: 'en-US',
   title: 'Blockchain@NTU Academy',
-  description: 'A beginner-friendly Web3 learning programme built around an open handbook, structured learning and Proof of Work.',
+  description: 'A public, evergreen, beginner-first Web3 curriculum anyone can follow independently from W0 through W10.',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/academy-handbook/favicon.png' }],
   ],
@@ -128,7 +128,7 @@ export default defineUserConfig({
     '/': {
       title: 'Blockchain@NTU Academy',
       lang: 'en-US',
-      description: 'A beginner-friendly Web3 learning programme built around an open handbook, structured learning and Proof of Work.',
+      description: 'A public, evergreen, beginner-first Web3 curriculum anyone can follow independently from W0 through W10.',
     },
   },
 

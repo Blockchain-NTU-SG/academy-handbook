@@ -20,7 +20,7 @@
 
 <p align="center">
   <a href="https://blockchain-ntu-sg.github.io/academy-handbook/">Read the Handbook</a>
-  · <a href="./docs/getting-started/programme.md">Curriculum</a>
+  · <a href="./docs/getting-started/programme.md">Curriculum overview</a>
   · <a href="./CONTRIBUTING.md">Contribute</a>
 </p>
 
@@ -78,13 +78,16 @@ See the full writing and review standard in [EDITORIAL_GUIDE.md](./EDITORIAL_GUI
 
 ## How to use the Handbook
 
-1. Start with the [programme overview](./docs/getting-started/programme.md).
+1. Start with the [curriculum overview](./docs/getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./docs/getting-started/).
 3. Follow the [Foundation](./docs/foundation/) from Week 1 through Week 4.
 4. Continue into the [Deep Dive tracks](./docs/tracks/) for Weeks 5–8, then complete the [Project Brief and Project Submission](./docs/proof-of-work/) in Weeks 9–10.
 
 Follow the complete sequence independently and at your own pace. The lessons,
 tasks, completion criteria and project milestones are all in this Handbook.
+Blockchain@NTU may also offer an organised Academy experience using the same
+curriculum. See [Academy participation](./docs/getting-started/academy-participation.md)
+for the optional WCB route; it is not required to use the Handbook.
 
 ## Repository structure
 

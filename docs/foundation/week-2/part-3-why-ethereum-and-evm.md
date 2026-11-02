@@ -27,7 +27,7 @@ sources:
 
 [Part 2](./part-2-comparing-blockchains.md) showed five chains making five
 different choices and deliberately did not crown a winner. So it is fair to ask
-why the rest of this programme is built on Ethereum.
+why the rest of this curriculum is built on Ethereum.
 
 ::: important The answer is not that Ethereum is best
 ==It is that the EVM is the most useful **first** environment to learn.== What you
