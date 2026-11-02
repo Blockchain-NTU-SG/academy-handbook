@@ -243,6 +243,10 @@ step should state the action and the observable result. Keep required activities
 testnet-only, explain ordinary safety checks, and do not turn optional
 troubleshooting into an assessment requirement.
 
+When a required action produces a result that a beginner may not recognise,
+provide a short observable success condition. Use a collapsed `Expected result`
+example when full output would interrupt the lesson.
+
 ## Screenshots and visuals
 
 Use Mermaid, native diagrams or tables for structure, sequence and comparison.

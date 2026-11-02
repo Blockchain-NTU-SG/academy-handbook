@@ -96,6 +96,15 @@ On Windows, use:
 python --version
 ```
 
+::: details Expected result
+```text
+Python 3.12.7
+```
+
+Your exact minor version may differ. The important part is that it begins with
+`Python 3`.
+:::
+
 A version number such as `Python 3.x.x` means the command is available. If the
 command is not recognised, do not edit the retrieval utility or install a
 third-party package for this task; ask the Education Team for help with the
@@ -115,10 +124,18 @@ On Windows, run:
 python W6.3-free-public-data.py
 ```
 
-The terminal should print a `Saved uniswap_ethereum_90days.csv: 90 dates...`
-line and a second line naming the provenance and source-snapshot files. You
-should see all three files in that folder. If an error appears instead, keep
-the message and report it; do not replace missing values with guesses.
+::: details Expected result
+```text
+Saved uniswap_ethereum_90days.csv: 90 dates, YYYY-MM-DD to YYYY-MM-DD (UTC)
+Saved W6.3-data-provenance.txt and W6.3-source-snapshot.json
+Open CSV in LibreOffice Calc to chart daily volume and compare the first and last 30 days.
+```
+
+The dates change with the retrieval date. The run creates exactly three files:
+the CSV, provenance text and source snapshot. The CSV should contain 90
+complete dates. If an error appears instead, keep the message and report it;
+do not replace missing values with guesses.
+:::
 
 It requests data from DefiLlama's free [Uniswap volume endpoint](https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false),
 part of its application programming interface (API).
@@ -185,12 +202,19 @@ Run this shell command, then the SQL check:
 SELECT file FROM glob('*uniswap*ethereum*.csv');
 ```
 
-Continue only when the SQL query returns exactly one row for the CSV you
-intend to analyse. Zero rows means the file is not registered under a matching
-name. More than one means multiple copies are registered; do not load them
-together. Click **New** at the top to start a fresh Web Shell session, import
-only one CSV, and repeat this check. The registered name shown by DuckDB, not
+::: details Expected result
+```text
+file
+uniswap_ethereum_90days.csv
+```
+
+The one row may instead be `W6.3-uniswap-ethereum-volume-2026-10-30.csv` or
+include a browser suffix such as `(1)`. Exactly one matching CSV should appear
+before you continue. Zero matches means it is not registered; more than one
+means the session is ambiguous. Start a fresh Web Shell session with **New**,
+import only one CSV, and repeat the check. DuckDB's registered filename, not
 Finder or Explorer, is the source of truth.
+:::
 
 #### 3. Load the one matching file
 
@@ -206,6 +230,19 @@ If `CREATE TABLE` reports an error, stop here. The table was not created, so
 do not continue to `DESCRIBE uni` or the later queries. Return to steps 1 and
 2 and check the registered filename.
 
+::: details Expected result
+`DESCRIBE uni` lists fields corresponding to:
+
+```text
+day_utc
+volume_usd
+```
+
+The first field should be date data and the second numeric volume data. DuckDB's
+inferred type labels can vary; the important check is that both columns exist
+and contain usable date and numeric values.
+:::
+
 #### 4. Check the loaded window
 
 Run this before the measurement queries:
@@ -215,8 +252,18 @@ SELECT COUNT(*) AS rows, MIN(day_utc) AS first_day, MAX(day_utc) AS last_day
 FROM uni;
 ```
 
-Expect 90 rows. The first and last dates should match the 90-day window shown
-by the live script, or the dates stated for the dated fallback.
+::: details Expected result
+For the bundled fallback:
+
+```text
+rows | first_day  | last_day
+90   | 2026-08-01 | 2026-10-29
+```
+
+With live retrieval, the dates will differ. The row count should still be 90,
+and the first and last dates should match the window printed by the retrieval
+utility.
+:::
 
 ::: details If DuckDB says it cannot find the CSV
 For an error such as `IO Error: No files found that match the pattern ...`,
@@ -250,8 +297,23 @@ SELECT COUNT(*) AS rows, COUNT(DISTINCT day_utc) AS dates,
 FROM uni;
 ```
 
-Both counts must be 90, dates must cover the stated complete window, and
-volumes must be non-negative. Spot-check two dates with `WHERE day_utc IN
+::: details Expected result
+For the bundled fallback:
+
+```text
+rows:        90
+dates:       90
+first_day:   2026-08-01
+last_day:    2026-10-29
+minimum_usd: 214551616.0
+```
+
+For live retrieval, both counts must be 90, the dates must match the live
+retrieval window, and minimum volume must be non-negative. Live volume values
+are not expected to match the dated fallback.
+:::
+
+Spot-check two dates with `WHERE day_utc IN
 (DATE 'YYYY-MM-DD', DATE 'YYYY-MM-DD')`, replacing the placeholders. Compare
 their values to the snapshot's `ethereum_total_usd`; hand-sum the Ethereum
 version entries for one date.
@@ -270,13 +332,34 @@ FROM uni
 GROUP BY kind;
 ```
 
-The day counts must sum to 90. A weekday/weekend difference describes
-reported dollar activity, not how many people trade.
+::: details Expected result
+For the bundled fallback, DuckDB 2.0.0 returns values that round to:
+
+```text
+kind     | days | mean_usd     | median_usd
+weekday  | 64   | 915890531.12 | 818729814.50
+weekend  | 26   | 451791272.50 | 415630877.50
+```
+
+Live values and weekday/weekend counts may differ with the rolling 90-day
+window. The two group counts together should still equal 90.
+:::
+
+A weekday/weekend difference describes reported dollar activity, not how many
+people trade.
 
 For your first/middle/last comparison, derive boundary dates from your CSV:
 first through first + 29 days, then +30 through +59, then +60 through +89.
 Use inclusive dates and confirm **30 rows per group**. Do not copy a historical
 example's dates into a new download.
+
+::: details Query sanity check
+Your result should have three groups: **first**, **middle** and **last**, with
+30 days in each group and 90 observations in total. Each group should have one
+mean and one median; volume values must be non-negative. If the three group
+counts do not add to 90, check your date boundaries before interpreting the
+results.
+:::
 
 ### Stress-test the headline
 
@@ -332,6 +415,13 @@ In Calc, with CSV headers in row 1 and sorted dates, use:
 | Mean | `=AVERAGE(B2:B31)` | `=AVERAGE(B62:B91)` |
 | Median | `=MEDIAN(B2:B31)` | `=MEDIAN(B62:B91)` |
 | Top-three share | `=(LARGE(B2:B31;1)+LARGE(B2:B31;2)+LARGE(B2:B31;3))/SUM(B2:B31)` | `=(LARGE(B62:B91;1)+LARGE(B62:B91;2)+LARGE(B62:B91;3))/SUM(B62:B91)` |
+
+::: details Expected result
+The mean and median cells should each show a numeric USD value. Top-three share
+should be between 0 and 1 when shown as a decimal, or between 0% and 100% when
+formatted as a percentage. Spreadsheet locale may change formula separators,
+but not these result types or bounds.
+:::
 
 Adjust argument separators for your spreadsheet locale. Zero window total
 makes concentration undefined; zero first mean makes percentage change

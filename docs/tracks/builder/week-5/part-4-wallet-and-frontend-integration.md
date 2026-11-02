@@ -354,6 +354,18 @@ Finish the starter frontend against your own contract from Part 3
 
 Leave section 4 for Part 5.
 
+::: details What success looks like
+- The connected account and selected network are visible. A wrong-network
+  warning appears when the wallet is not on Sepolia.
+- The connected account's record loads, with loading and error states.
+- A write shows wallet confirmation before signing, then a pending transaction
+  with an explorer link.
+- After mining, the success state appears and the displayed record updates
+  without reloading the page.
+- At least one deliberate failure, such as a cancelled signature or
+  `EmptyRecord`, is visible.
+:::
+
 **Out of scope:** UI libraries, wagmi, RainbowKit or other wallet kits,
 styling beyond what the starter has, and supporting more than one network.
 

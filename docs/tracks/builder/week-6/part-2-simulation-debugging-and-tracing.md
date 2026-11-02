@@ -171,9 +171,20 @@ cast call 0xf3eea9aa5a43846490a638f1b2bebb29ac2938b1 "records(address)(string)" 
 cast sig-event "RecordUpdated(address,string)"
 ```
 
-*Expected results:* `11155111`; a long string of bytecode starting with
-`0x6080…`; `"Hello from NTU Blockchain Builder Lab"`; and
-`0xcbb1b4c2…` as the event topic.
+::: details Expected result
+- `cast chain-id` prints `11155111`.
+- `cast code` prints a long bytecode value beginning with `0x` (the checked
+  deployment begins `0x6080...`). It should not return only `0x`, which means
+  no contract code was found at that address.
+- The Registry read may print `"Hello from NTU Blockchain Builder Lab"` for
+  this checked example. Contract state can change, so confirm the current value
+  with a fresh read before treating it as evidence.
+- `cast sig-event "RecordUpdated(address,string)"` prints:
+
+  ```text
+  0xcbb1b4c24d9260bba47f2146590804a946328be68decda465172d3750cbae46e
+  ```
+:::
 
 **Simulation.** Before sending a write, the starter-style code calls
 `simulateContract`. It runs the call against the current visible state without

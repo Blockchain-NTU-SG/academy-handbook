@@ -325,6 +325,12 @@ answer printed.
    file and line where `RPC_URL` enters, and say why it is in `.env` rather
    than in the code.
 
+::: details Expected result
+`forge test` compiles the Solidity contract and reports **6 passed, 0 failed**.
+These tests run locally on a throwaway chain; they do not send a Sepolia
+transaction or use test ETH. Timing and other terminal formatting may differ.
+:::
+
 **Out of scope:** deploying anything, changing the contract and changing the
 frontend. Those come in Parts 2 to 4.
 
