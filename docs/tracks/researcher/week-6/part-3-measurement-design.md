@@ -423,6 +423,15 @@ One line covers all 90 dates in date order from left to right, with USD volume
 on the vertical axis. Larger observations appear as peaks relative to other
 days. Use the shape to describe whether activity looks broad or concentrated;
 the chart does not explain why a change happened.
+
+The bundled fallback has a visible late-window spike. That is why the next step
+checks whether the mean, median and top-three concentration tell a similar
+story; the spike is a prompt to investigate, not a conclusion.
+
+<figure class="academy-reference-visual academy-reference-visual--wide">
+  <img src="/images/researcher/w6p3-uniswap-volume-reference.svg" alt="Line chart of 90 daily Uniswap Ethereum volumes reported by DefiLlama from 1 August to 29 October 2026, with daily fluctuations and a large spike near the end of the window." />
+  <figcaption>Reference chart using the bundled fallback snapshot retrieved on 30 October 2026, covering 1 August to 29 October 2026 UTC. Source: DefiLlama. If you retrieved live data, your dates, values and shape may differ. This shows the expected chart structure, not a required numerical result.</figcaption>
+</figure>
 :::
 
 **A summary statistic tells you the level; the raw series shows the shape that
