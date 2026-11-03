@@ -29,7 +29,7 @@ wallet.
 
 ## Learning objectives
 
-- Create a GitHub account for hands-on work, and explain what a repository, commit and README are for
+- Explain how GitHub is used in the learning path and when an account is needed
 - Find the learning material, tasks and completion criteria in this Handbook
 - Use completion criteria to self-check work or request feedback
 - Apply the testnet-only and no-keys safety rules
@@ -99,7 +99,7 @@ Part task is embedded in the learning rather than added as extra homework.
 
 If you are short on time, Core is the part that matters.
 
-### Your learning setup
+### Optional GitHub setup for hands-on learners
 
 :::: tabs
 @tab <Icon name="simple-icons:github" /> GitHub
@@ -108,13 +108,17 @@ Where developers and researchers keep work in public. Later lessons use it to
 read project code and documentation, and you can use it to publish project
 evidence.
 
-It is also, bluntly, a portfolio. A GitHub profile with real work on it is worth
-more to an employer in this industry than most certificates.
+For learners who choose to publish work, a GitHub profile can make projects and
+their history easy to inspect. It is one useful form of evidence, not a required
+format for every project.
 
-::: tip Public reading, hands-on work
-Anyone can read the Handbook without an account. The full hands-on path uses
-GitHub, so create a free account here for later GitHub workflow, Builder work
-and project evidence.
+::: tip Reading the Handbook does not require an account
+For hands-on work, you can start without an account, including cloning and
+running a public repository. Create a free account before a task asks you to
+create or push a repository, use a GitHub workflow, or publish code or evidence.
+Builder work uses these workflows. If you are only reading, skip this setup.
+Organised Academy participants also use GitHub to sign in to WCB; see
+[Academy participation](./academy-participation.md) for that separate setup.
 :::
 ::::
 
@@ -148,7 +152,11 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
 | **Pull request** | A proposed change, opened for review before it is merged. Reviewers can discuss and test it in one place |
 | **Fork** | Your own copy of somebody else's repository. It lets you experiment or propose changes without directly changing the original |
 
-## Guided walkthrough
+## Optional hands-on walkthrough: GitHub setup
+
+If you are only reading the Handbook, skip this walkthrough and continue to
+the next page. It prepares hands-on learners for GitHub exercises and project
+work; it is not required to access the curriculum.
 
 :::: steps
 1. **Create your GitHub account**
@@ -208,14 +216,14 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
 
 Here is what a good first week of setup looks like, and what it is worth.
 
-Someone joining with no technical background creates a GitHub account under a
-sensible username, turns on 2FA, and pushes one commit to a README. Total time:
-about fifteen minutes. Nothing about it is impressive.
+A hands-on learner with no technical background can create a GitHub account
+under a sensible username, turn on 2FA, and push one commit to a README. Total
+time: about fifteen minutes. Nothing about it is impressive.
 
-**By W10,** that same repository can hold a Week 3 contract, a Week 4 Track
-Selection Card, Deep Dive work and final project evidence, with a README
-explaining what was built and what remains to do. The commit history shows the
-work accumulating over time.
+**By W10,** if you choose a repository-based project, that repository can hold
+your code, reproducible work and project evidence, with a README explaining
+what was built and what remains to do. Its commit history shows how the work
+developed over time.
 
 ::: important The value is not any single commit
 It is that there is a visible, dated trail of someone learning in public — which

@@ -115,7 +115,7 @@ do not guess at a transaction or signature.
      <figcaption>Create a new wallet. Do not import one you already use.</figcaption>
    </figure>
 
-   ::: warning Create a wallet only for the Academy
+   ::: warning Keep this wallet for testnet practice
    This wallet will only ever hold worthless test assets. **Do not reuse a
    wallet that holds real funds** — Week 0's separate-wallets rule starts here.
    :::

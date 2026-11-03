@@ -37,16 +37,18 @@ sources:
 
 # Week 4 · Part 4 — GitHub in practice
 
-You made an account and pushed one commit in
-[Week 0 Part 1](../../getting-started/welcome-and-setup.md). This is the working
-knowledge you need for the Deep Dive and later Proof of Work, where your work
-lives on GitHub.
+If you completed the optional GitHub setup in
+[Week 0 Part 1](../../getting-started/welcome-and-setup.md), you already have
+an account and a first commit. If not, create a free account before doing the
+GitHub workflow exercises on this page. Reading along does not require one.
+This is working knowledge for the Deep Dive and later project work.
 
 ::: important GitHub is not only for developers
-**==In this curriculum, GitHub is the default home for reviewable project evidence.==**
-Builders can store code there, while Researchers can publish analysis and
-evidence. Data/querying and product thinking can support either track; the
-repository should make the actual output clear.
+**==GitHub is a recommended home for code, reproducible work and project evidence.==**
+Builder projects naturally use repositories. Researchers may use GitHub to
+preserve analysis, data or code, while a final Researcher deliverable may also
+be an article, report or another reviewable format. Choose a repository when it
+helps someone inspect or reproduce the work.
 :::
 
 ## Learning objectives

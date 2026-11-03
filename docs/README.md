@@ -67,11 +67,11 @@ config:
       A structured path that keeps the fundamentals clear, the risks visible,
       and the learning practical.
     features:
-      - title: Week 0–4 Foundation
+      - title: Weeks 0–4 · Start + Foundation
         icon: 🧱
         details: >-
-          Enter Web3 safely, then build a first-principles map of blockchains,
-          Ethereum, wallets, contracts and the wider ecosystem.
+          W0 prepares you safely for hands-on learning; W1–W4 build the shared
+          first-principles map of blockchains, Ethereum, wallets, contracts and the wider ecosystem.
         link: ./getting-started/
         linkText: Start with Week 0
       - title: Weeks 5–8 Deep Dive

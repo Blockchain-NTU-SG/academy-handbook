@@ -30,7 +30,7 @@ throughout the curriculum**, and Part 1 helps you prepare for later work.
 By the end of the week you should be able to:
 
 - find lessons, task instructions and completion criteria in this Handbook
-- create and use a free GitHub account for the hands-on path and later project evidence
+- explain how GitHub supports some hands-on tasks and project evidence, and when an account is needed
 - a glossary you can search when a word stops you mid-sentence
 - a rough sense of which tool answers which kind of question
 - a working threat model: what you can lose and how people lose it

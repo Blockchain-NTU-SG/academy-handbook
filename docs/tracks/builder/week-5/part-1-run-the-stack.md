@@ -74,7 +74,7 @@ orientation, not a second installation guide.
 
 **Time note:** The 35-minute Part estimate assumes the required tools are
 already installed. First-time Node.js, Foundry or Windows/WSL setup may take
-additional time. It is one-time setup, not Academy task work.
+additional time. It is one-time environment setup, not required task work.
 
 | Tool or file | What it does here |
 |---|---|
@@ -125,6 +125,11 @@ Git:
 | `git add <file>` | Select a changed file for the next saved change. |
 | `git commit -m "message"` | Save the selected change in your local history. |
 | `git push -u origin <name>` | Upload your branch to GitHub. |
+
+You can clone a public GitHub repository and run it locally without a GitHub
+account or WCB. Create an account when you need to push your own branch or
+repository, or publish project evidence. If you skipped the optional Week 0
+setup, set up an account before your first GitHub push.
 
 The same action crosses several of these stations. The visual below is an
 explanatory map of the path; the later file trace gives the exact code.
