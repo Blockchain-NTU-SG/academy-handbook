@@ -7,8 +7,8 @@
 <p align="center"><strong>Learn → Build → Prove.</strong></p>
 
 <p align="center">
-  Beginner-first, community-maintained Web3 curriculum from first principles to
-  safe onchain participation, smart contracts, research and specialisation.
+  Beginner-first Blockchain@NTU Academy programme, with a public canonical
+  Handbook from safe Web3 basics to a reviewable project.
 </p>
 
 <p align="center">
@@ -20,17 +20,18 @@
 
 <p align="center">
   <a href="https://blockchain-ntu-sg.github.io/academy-handbook/">Read the Handbook</a>
-  · <a href="./docs/getting-started/programme.md">Curriculum overview</a>
+  · <a href="./docs/getting-started/programme.md">Academy programme</a>
   · <a href="./CONTRIBUTING.md">Contribute</a>
 </p>
 
 ## What this is
 
-The Blockchain@NTU Academy Handbook is a public, evergreen, beginner-first Web3
-curriculum that anyone can follow independently from W0 through W10. It is the
-canonical source for learning material, Foundation Anchor Missions, Deep Dive
-Part tasks and Project Work milestones; the public site is built from the same
-`docs/` source.
+Blockchain@NTU Academy is a structured, beginner-first Web3 programme. This
+Handbook is its public, canonical learning source for the complete W0–W10 path,
+including Foundation Anchor Missions, Deep Dive Part tasks and Project Work
+milestones. Academy cohort participants use WCB for formal submissions,
+review, points and progress. Anyone is also welcome to read or follow the
+Handbook independently; the public site is built from the same `docs/` source.
 
 The purpose is not to turn a beginner into a professional developer, smart-
 contract auditor, DeFi analyst, protocol researcher or investor. It is to build
@@ -78,16 +79,16 @@ See the full writing and review standard in [EDITORIAL_GUIDE.md](./EDITORIAL_GUI
 
 ## How to use the Handbook
 
-1. Start with the [curriculum overview](./docs/getting-started/programme.md).
+1. Start with the [Academy programme overview](./docs/getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./docs/getting-started/).
 3. Follow the [Foundation](./docs/foundation/) from Week 1 through Week 4.
 4. Continue into the [Deep Dive tracks](./docs/tracks/) for Weeks 5–8, then complete the [Project Brief and Project Submission](./docs/proof-of-work/) in Weeks 9–10.
 
-Follow the complete sequence independently and at your own pace. The lessons,
-tasks, completion criteria and project milestones are all in this Handbook.
-Blockchain@NTU may also offer an organised Academy experience using the same
-curriculum. See [Academy participation](./docs/getting-started/academy-participation.md)
-for the optional WCB route; it is not required to use the Handbook.
+Academy cohort participants follow the recommended W0–W10 sequence, with
+formal submissions and feedback managed through WCB. The Handbook remains the
+canonical source for learning material, task requirements, completion criteria
+and project milestones. Readers outside the cohort may also use the public
+Handbook independently, without formal Academy tracking.
 
 ## Repository structure
 
@@ -119,12 +120,13 @@ review. Read [CONTRIBUTING.md](./CONTRIBUTING.md) before editing and use
 [GOVERNANCE.md](./GOVERNANCE.md) when a change may affect curriculum scope or
 decision ownership.
 
-## Canonical curriculum
+## Curriculum and cohort operations
 
-The `docs/` tree is the single public source of truth for the curriculum,
-including task requirements, completion criteria and project milestones. The
-repository contains no private learner workflow. Do not commit credentials,
-private keys or personal learner data.
+The `docs/` tree is the single public source of truth for learning content,
+task requirements, completion criteria and project milestones. WCB carries
+cohort operations such as applications, formal submissions, review feedback,
+points and progress; it does not replace the Handbook. Do not commit
+credentials, private keys or personal learner data.
 
 ## Sources and attribution
 

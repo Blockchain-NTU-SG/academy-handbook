@@ -78,7 +78,9 @@ not a final project scope.
 Optional: include an image if it helps explain your project map.
 :::
 
-## Completion self-check
+## Submission checklist
+
+Tick these items before submitting. Academy reviewers use the same criteria.
 
 - [ ] My selected track is Builder or Researcher
 - [ ] I recorded topics or domains that currently interest me
@@ -89,7 +91,7 @@ Optional: include an image if it helps explain your project map.
 - [ ] Part B is in my own words, not copied from the project's marketing
 - [ ] If I used AI, I can explain what it produced and why I agree with it
 
-:::: details Self-check: what Complete means
+:::: details For reviewers: what Complete looks like
 The standard is a clear selection and honest current interests, not a polished
 project plan.
 
@@ -111,19 +113,19 @@ project plan.
 | 4 | A **genuine primary source** — official docs, GitHub or governance forum |
 | 5 | A sensible data or research source, with a specific reason |
 
-**Revise before marking Complete if:** the track is missing, the idea is so
+**Return for revision if:** the track is missing, the idea is so
 broad that it gives no useful starting point, fields are blank, B4 cites a
 secondary source as primary, or Part B is copied from the project's description.
 
-**These are not reasons to mark it incomplete:** choosing a modest interest, a
+**Do not return for revision for:** choosing a modest interest, a
 domain that is not currently fashionable, or a well-known protocol.
 ::::
 
-## If your self-check finds a gap
+## If a reviewer requests revision
 
-::: tip A gap means revise, not fail
-There is no deadline. Use the checklist and table below to identify what to
-revisit, then check your work again.
+::: tip Revise means fix and resubmit, not fail
+Use the feedback and table below to address the missing criterion, then
+resubmit through the Academy workflow. There is no deadline.
 :::
 
 | What happened | The fix |

@@ -1,9 +1,11 @@
-# Curriculum overview
+# Blockchain@NTU Academy programme
 
-Blockchain@NTU Academy follows one continuous story:
+Blockchain@NTU Academy follows one continuous learning path:
 
-This public, self-paced curriculum is complete from Week 0 through Week 10.
-Follow it independently in order, or use the stage links to revisit a topic.
+The Handbook is the public, canonical source for the complete Week 0 through
+Week 10 curriculum. Academy cohort members follow it with structured pacing,
+formal submissions and review. Anyone may also read or follow the Handbook
+independently.
 
 | Stage | Focus | Output |
 |---|---|---|
@@ -36,12 +38,12 @@ separate tracks.
 | W10 Project Submission | **200** |
 | **Total** | **2,000** |
 
-W0 is onboarding and does not add points. Foundation keeps assessment light
-through one Anchor Mission per week. Deep Dive remains lightweight but becomes
-more hands-on: each Part contains one small completion-based task embedded
-directly in the learning, with no separate weekly submission. A task is
-completed or returned for revision; there is no partial-score rubric. If work
-does not yet meet the completion criteria, revise it and check again.
+Points are part of the organised Academy progression model and are formally
+tracked for cohort participants. Independent readers may follow the same tasks
+without formal points or progress tracking. W0 is onboarding and does not add
+points. Foundation uses one Anchor Mission per week. Deep Dive embeds one
+completion-based task in each Part, with no separate weekly deliverable. A task
+is Complete or returned for Revise; there is no partial-score rubric.
 
 ## How to read the handbook
 
@@ -57,10 +59,12 @@ otherwise requires funds or an on-chain signature is testnet-only; some lessons
 may ask you to inspect public mainnet data read-only. Never use real funds for
 any learning activity.
 
-## Start learning
+## Start with the Academy path
 
-Begin with [Week 0](./), then continue through the shared [Foundation](../foundation/).
-After Week 4, choose Builder or Researcher, complete Weeks 5–8, and use the
-W9/W10 project criteria to scope and present a reviewable project. You can
-self-check each task or ask someone you trust to review it. The Handbook remains
-the source of task and completion requirements in either case.
+Begin with [Week 0](./), then continue through the shared
+[Foundation](../foundation/). After Week 4, choose Builder or Researcher,
+complete Weeks 5–8, and use the W9/W10 criteria to scope and present a
+reviewable project. Academy participants submit work for formal review through
+the Academy workflow. Independent readers can use the same published criteria
+for self-review; the Handbook remains the source of task and completion
+requirements in either case.

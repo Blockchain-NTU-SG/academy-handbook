@@ -41,26 +41,44 @@ config:
     hero:
       name: Blockchain@NTU Academy
       tagline: Learn → Build → Prove
-      text: A public, self-paced Web3 curriculum from first principles to a reviewable project.
+      text: From zero Web3 knowledge to your first Proof of Work.
       actions:
         - theme: brand
-          text: Start Learning
-          link: ./getting-started/
-          icon: material-symbols:menu-book-outline
+          text: Apply to the Academy
+          link: https://web3career.build/en/programs/blockchain-ntu-academy
+          icon: material-symbols:school-outline
         - theme: alt
-          text: Join the Academy
-          link: ./getting-started/academy-participation.md
-          icon: material-symbols:groups-outline
+          text: Start Learning
+          link: ./getting-started/programme.md
+          icon: material-symbols:menu-book-outline
   - type: image-text
-    title: A complete public learning path
+    title: How the Academy works
     image:
       src: /brand/blockchain-ntu-logo-horizontal-light.png
       alt: Blockchain@NTU
     description: >-
-      Follow the complete curriculum independently, from safe Web3 basics
-      through a Builder or Researcher Deep Dive and a final reviewable project.
+      Blockchain@NTU Academy combines a public learning Handbook with a
+      structured cohort experience.
     list:
-      - The Handbook contains the complete learning material, task instructions, completion criteria and project milestones for an independent learner.
+      - Academy participants follow the W0–W10 path with a weekly rhythm, missions, peer learning, feedback and review through WCB. Anyone is also welcome to read or follow the same Handbook independently.
+  - type: features
+    title: Why join the cohort?
+    description: >-
+      Learn with structure, get useful feedback and build reviewable work
+      alongside other people following the same path.
+    features:
+      - title: Learn with structure
+        icon: 🗺️
+        details: Follow the recommended weekly rhythm from W0 through W10 instead of figuring out what to study next.
+      - title: Get feedback
+        icon: 🔄
+        details: Submit missions and project work for review, then use actionable feedback to improve it.
+      - title: Build with others
+        icon: 🤝
+        details: Learn alongside other Academy participants and take part in the Blockchain@NTU community.
+      - title: Build reviewable work
+        icon: 🧩
+        details: Turn Foundation missions and Deep Dive tasks into a final Proof of Work that others can inspect.
   - type: features
     title: A clear path through Web3
     description: >-
@@ -70,8 +88,8 @@ config:
       - title: Weeks 0–4 · Start + Foundation
         icon: 🧱
         details: >-
-          W0 prepares you safely for hands-on learning; W1–W4 build the shared
-          first-principles map of blockchains, Ethereum, wallets, contracts and the wider ecosystem.
+          W0 prepares you safely; W1–W4 build the shared first-principles map
+          of blockchains, Ethereum, wallets, contracts and the wider ecosystem.
         link: ./getting-started/
         linkText: Start with Week 0
       - title: Weeks 5–8 Deep Dive
@@ -114,15 +132,17 @@ The week's learning turned into a small, practical action.
 ## Start here
 
 :::: steps
-1. [Read the curriculum overview](./getting-started/programme.md).
+1. [Read the Academy programme overview](./getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./getting-started/).
 3. Follow the [Foundation](./foundation/) from Week 1 through Week 4.
 4. Choose [Builder or Researcher](./tracks/) for Weeks 5–8, then follow the [Project Work milestones](./proof-of-work/) in Weeks 9–10.
 ::::
 
-The curriculum is complete from W0 through W10. Follow the recommended order
-at your own pace. Use the completion criteria to self-check, or invite a peer,
-mentor or educator to review your work.
+The Academy follows one continuous path from W0 through W10. The Handbook is
+the public, canonical source for lessons, mission and task requirements,
+completion criteria and project milestones. Cohort participants use WCB for
+formal submissions, reviewer feedback, points and progress. Anyone may also
+read or follow the Handbook independently.
 
 ## Stay connected with Blockchain@NTU
 
@@ -134,6 +154,9 @@ Follow the community for updates, events and opportunities to keep learning with
 other builders.
 
 <div class="academy-social-links" aria-label="Blockchain@NTU community links">
+  <a class="academy-social-link" href="https://t.me/+9GVwf652dM4zYzQ1" aria-label="Join Blockchain@NTU on Telegram" target="_blank" rel="noopener">
+    <Icon name="simple-icons:telegram" aria-hidden="true" size="18" />
+  </a>
   <a class="academy-social-link" href="https://www.instagram.com/blockchain.ntusg/" aria-label="Follow Blockchain@NTU on Instagram" target="_blank" rel="noopener">
     <Icon name="simple-icons:instagram" aria-hidden="true" size="18" />
   </a>

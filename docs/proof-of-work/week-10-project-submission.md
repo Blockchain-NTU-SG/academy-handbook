@@ -24,6 +24,9 @@ success criteria and the evidence or implementation available.
 
 ## Final review
 
+Academy cohort participants submit the final artefact through WCB for formal
+review. The requirements on this page remain canonical.
+
 Present the artefact and the evidence needed to inspect it. Explain any material
 change from the W9 brief, what you verified, and what remains uncertain or out
 of scope. A polished appearance cannot replace a working verification path or

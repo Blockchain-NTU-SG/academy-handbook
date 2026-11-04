@@ -23,5 +23,4 @@ weekly submission.
 
 **Required estimate: 125 minutes (2 h 5 min).** These are approximate learner-time estimates, not deadlines; revise them as learner evidence improves. Optional exploration is outside the estimate.
 
-**Assessment:** 3 Part tasks × 100 points = **300 points**. Completion is
-binary: use the Part completion criteria to self-check. Complete earns 100 points; otherwise revise incomplete or materially incorrect work. There are no partial scores.
+**Assessment:** 3 Part tasks × 100 points = **300 points** in the Academy progression. Academy participants submit each Part for a **Complete** or **Revise** review. Independent readers may use the criteria to self-check without formal point tracking. There are no partial scores.

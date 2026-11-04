@@ -69,7 +69,9 @@ for what, is how you evaluate any of them.
 essay. Add an image only if it helps show your evidence.
 :::
 
-## Completion self-check
+## Submission checklist
+
+Tick these items before submitting. Academy reviewers use the same criteria.
 
 - [ ] All six transaction fields in item 1 are reported
 - [ ] I explained what my gas number represents, in my own words
@@ -80,9 +82,9 @@ essay. Add an image only if it helps show your evidence.
 - [ ] If I used AI, I can explain what it produced and why I agree with it
 - [ ] I have not included my recovery phrase or private key anywhere
 
-:::: details Self-check: what Complete means
-Use these criteria to check the reasoning, **not prose quality**, and not
-whether you picked the comparison someone else would have.
+:::: details For reviewers: what Complete looks like
+Check the reasoning, **not prose quality**, and do not require the learner to
+choose the comparison you would have chosen.
 
 | Item | Standard |
 |---|---|
@@ -101,12 +103,12 @@ ones not listed here:
 **Item 3 extra credit** — not required — for noting that this is why bridging
 adds a trust assumption.
 
-**Revise before marking Complete if:** transaction fields are missing or do not match a real
+**Return for revision if:** transaction fields are missing or do not match a real
 transaction; item 2 names a winner instead of a trade-off, or compares fewer
 than three dimensions; item 3 describes lock-and-mint mechanics without
 explaining why the problem exists; or the writing is clearly copied.
 
-**These are not reasons to mark it incomplete:** choosing an unusual chain, a
+**Do not return for revision for:** choosing an unusual chain, a
 defensible comparison another person might disagree with, a short correct
 answer, or imperfect English.
 
@@ -116,11 +118,11 @@ wallet for future testnet work. **Do not repeat the phrase in notes or feedback.
 :::
 ::::
 
-## If your self-check finds a gap
+## If a reviewer requests revision
 
-::: tip A gap means revise, not fail
-There is no deadline. Use the checklist and table below to identify what to
-revisit, then check your work again.
+::: tip Revise means fix and resubmit, not fail
+Use the feedback and table below to address the missing criterion, then
+resubmit through the Academy workflow. There is no deadline.
 :::
 
 Common gaps at Week 2:

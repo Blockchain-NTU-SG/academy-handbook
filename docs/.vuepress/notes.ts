@@ -6,25 +6,21 @@ const academyNote = defineNoteConfig({
   sidebar: [
     { text: 'Blockchain@NTU Academy', link: '/' },
     {
-      text: 'Curriculum overview',
+      text: 'Academy programme',
       link: '/getting-started/programme.html',
       collapsed: false,
       items: [
         {
-          text: 'Week 0 · Entering safely',
+          text: 'Week 0 · Academy onboarding',
           link: '/getting-started/',
           collapsed: true,
           items: [
-            { text: 'Part 1 · Welcome and setup', link: '/getting-started/welcome-and-setup.html' },
+            { text: 'Part 1 · Welcome to the Academy', link: '/getting-started/welcome-and-setup.html' },
             { text: 'Part 2 · Starter glossary', link: '/getting-started/glossary.html' },
             { text: 'Part 3 · Tool map', link: '/getting-started/tools.html' },
             { text: 'Part 4 · Staying safe', link: '/getting-started/safety.html' },
             { text: 'Part 5 · Regulatory awareness', link: '/getting-started/regulatory-awareness.html' },
           ],
-        },
-        {
-          text: 'Academy participation (optional)',
-          link: '/getting-started/academy-participation.html',
         },
       ],
     },

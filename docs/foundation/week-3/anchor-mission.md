@@ -78,7 +78,9 @@ You are not expected to find a clever exploit. You are expected to notice that
 **your contract has limits**, and to name one.
 :::
 
-## Completion self-check
+## Submission checklist
+
+Tick these items before submitting. Academy reviewers use the same criteria.
 
 - [ ] Contract address, deployment hash and write transaction hash are all included
 - [ ] All three open on the explorer and are on **Sepolia**
@@ -88,7 +90,7 @@ You are not expected to find a clever exploit. You are expected to notice that
 - [ ] If I used AI, I can explain what my contract does and what would break if it changed
 - [ ] **I have not included my recovery phrase or private key anywhere**
 
-:::: details Self-check: what Complete means
+:::: details For reviewers: what Complete looks like
 Verify that the deployment and explanation match — **code quality and extra
 features are not part of this task**.
 
@@ -101,11 +103,11 @@ features are not part of this task**.
 | 6b | Accurately describes the state change: `message` changes, `lastVisitor` changes, `visitCount` increments and the event is emitted where relevant. Gas and signature context is useful supporting understanding, but is not required unless the learner question asks for it |
 | 6c | **Any genuine limitation.** Missing access control, immutability, public data, gas cost. Accept anything real |
 
-**Revise before marking Complete if:** any link is broken, points to mainnet, or the addresses do
+**Return for revision if:** any link is broken, points to mainnet, or the addresses do
 not correspond; the submitted source clearly does not correspond to the demonstrated contract; question 5 confuses
 read and write; or 6b describes the write without any sense that state changed.
 
-**These are not reasons to mark it incomplete:** using the Part 3 contract
+**Do not return for revision for:** using the Part 3 contract
 unmodified, a correct but unpolished answer, imperfect English, or not verifying
 the source on Etherscan, which is optional.
 
@@ -115,11 +117,11 @@ wallet for future testnet work. **Do not repeat the phrase in notes or feedback.
 :::
 ::::
 
-## If your self-check finds a gap
+## If a reviewer requests revision
 
-::: tip A gap means revise, not fail
-There is no deadline. Use the checklist and table below to identify what to
-revisit, then check your work again.
+::: tip Revise means fix and resubmit, not fail
+Use the feedback and table below to address the missing criterion, then
+resubmit through the Academy workflow. There is no deadline.
 :::
 
 Common gaps at Week 3:

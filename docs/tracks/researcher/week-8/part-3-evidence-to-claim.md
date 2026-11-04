@@ -222,7 +222,7 @@ from clusters, long reports, paid forensic tools, or a final project commitment.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric. There is no separate weekly submission.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means the question is falsifiable, system and risk are causal,
 source observations and derived evidence are distinguishable, the calculation

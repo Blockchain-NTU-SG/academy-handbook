@@ -54,9 +54,10 @@ long explanations or repetitive reflection unless the task genuinely needs them.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Use the completion criteria above to
-self-check. Complete earns the full points; otherwise, revise the missing or
-materially incorrect parts. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Participants
+submit the task for a **Complete** or **Revise** outcome; give actionable
+feedback when it needs revision. There is no partial-score rubric. Independent
+readers may use the same criteria to self-check without formal point tracking.
 
 ## Sources and attribution
 

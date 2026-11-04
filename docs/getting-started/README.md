@@ -1,4 +1,4 @@
-# Week 0 — Entering Web3 safely
+# Week 0 — Blockchain@NTU Academy onboarding
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="56" height="56" class="academy-week-mark" role="img" aria-labelledby="t0 d0">
   <title id="t0">Shield with a keyhole</title><desc id="d0">A shield containing a keyhole, representing entering Web3 safely.</desc>
@@ -11,15 +11,19 @@
 
 <Badge type="info" text="5 parts" /> <Badge type="tip" text="No points" /> <Badge type="warning" text="No mission" />
 
-Week 0 is setup and orientation. It gives you a safe vocabulary and a tool map
-before the Foundation asks you to reason about blockchains or touch a wallet.
+Week 0 introduces Blockchain@NTU Academy, its public Handbook and the tools
+used across the learning path. Academy cohort participants use WCB and the
+relevant Telegram group for programme operations and communication. Anyone may
+read the Handbook independently; the same curriculum and published task
+criteria remain available.
 
-Nothing this week is assessed — but **Part 4 is the page that protects you
-throughout the curriculum**, and Part 1 helps you prepare for later work.
+Nothing this week is assessed, but **Part 4 is the page that protects you
+throughout the curriculum**, and Part 1 explains how Academy learning and
+review work.
 
 | Part | Page | Reading |
 |---|---|---|
-| 1 | [Welcome and setup](./welcome-and-setup.md) | 30 min hands-on |
+| 1 | [Welcome to the Academy](./welcome-and-setup.md) | 30 min hands-on |
 | 2 | [Web3 starter glossary](./glossary.md) | reference — skim now, return often |
 | 3 | [The Web3 tool map](./tools.md) | 20 min |
 | 4 | [Staying safe: what you can lose and how](./safety.md) | 25 min |
@@ -29,12 +33,12 @@ throughout the curriculum**, and Part 1 helps you prepare for later work.
 
 By the end of the week you should be able to:
 
+- explain the roles of GitHub, WCB and Telegram for Academy participants
 - find lessons, task instructions and completion criteria in this Handbook
-- explain how GitHub supports some hands-on tasks and project evidence, and when an account is needed
-- a glossary you can search when a word stops you mid-sentence
-- a rough sense of which tool answers which kind of question
-- a working threat model: what you can lose and how people lose it
-- enough regulatory awareness to know that "regulated" is not the same as "safe"
+- explain the Complete / Revise review process and how work can be revised
+- use the glossary and tool map as references when a term or tool is unfamiliar
+- recognise common safety threats and what assets or access they can put at risk
+- explain why regulatory status is not the same as a guarantee of safety
 
 ::: tip You are not expected to memorise anything
 The glossary and the tool map exist so that Weeks 1–4 can move without stopping

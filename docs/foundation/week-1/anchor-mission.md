@@ -68,9 +68,11 @@ you did it and understood it — not an essay.
 Optional: screenshots are welcome but not required. Items 1–3 are the evidence.
 :::
 
-## Completion self-check
+## Submission checklist
 
-Use this list to check whether the task is complete.
+Tick these items before submitting. Academy reviewers use the same criteria.
+
+Reviewers compare each item with the submitted evidence.
 
 - [ ] Sender address (Account 1), transaction hash and explorer link are all included
 - [ ] The explorer link opens and shows a **Sepolia** transaction with status Success
@@ -80,9 +82,9 @@ Use this list to check whether the task is complete.
 - [ ] If I used AI, I can explain what it produced and why I agree with it
 - [ ] **I have not included my recovery phrase or private key anywhere**
 
-:::: details Self-check: what Complete means
-A complete result connects a real transaction to your explanation — **the
-writing does not need to be polished**.
+:::: details For reviewers: what Complete looks like
+This is a two-outcome check. Verify that a real transaction happened and that
+the learner understands it; **do not grade writing style**.
 
 **Complete means:**
 
@@ -93,11 +95,11 @@ writing does not need to be polished**.
 | Q2 | Names real checks — network, recipient, amount, and what the wallet was asking them to authorise |
 | Q3 | Reaches the real distinction: everyone can check validity independently, but the network still needs a way to agree on **one shared history**. Without it, participants diverge and double-spending becomes possible |
 
-**Revise before marking Complete if:** the link is broken, points to mainnet,
+**Return for revision if:** the link is broken, points to mainnet,
 or shows a different address; Q1 is a paste of explorer fields; Q3 restates
 *validity* rather than explaining what consensus adds; or the writing is copied.
 
-**These are not reasons to mark it incomplete:** short but correct answers,
+**Do not return for revision for:** short but correct answers,
 imperfect English, an unpolished writing style, or AI assistance you understand.
 
 ::: danger If a recovery phrase or private key appears in a submission
@@ -106,11 +108,11 @@ wallet for future testnet work. **Do not repeat the phrase in notes or feedback.
 :::
 ::::
 
-## If your self-check finds a gap
+## If a reviewer requests revision
 
-::: tip A gap means revise, not fail
-There is no deadline. Use the checklist and table below to identify what to
-revisit, then check your work again.
+::: tip Revise means fix and resubmit, not fail
+Use the feedback and table below to address the missing criterion, then
+resubmit through the Academy workflow. There is no deadline.
 :::
 
 Common gaps at Week 1:
@@ -121,5 +123,5 @@ Common gaps at Week 1:
 | Q1 restates the explorer instead of explaining the process | Describe what *happened*, in order, not what the fields say |
 | Q3 answers "how do we know it was valid" instead of "why do we need agreement at all" | [Part 3](./part-3-consensus.md), first section |
 
-All three are quick fixes. If a faucet is unavailable, use another listed
+These are usually quick fixes. If a faucet is unavailable, use another listed
 faucet or return later. Do not pay for test ETH.

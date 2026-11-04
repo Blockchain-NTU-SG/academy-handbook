@@ -528,7 +528,7 @@ requiring both a full measurement memo and a second query assignment.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric. There is no separate weekly submission.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means 90 complete UTC dates, 30 per group, reproducible SQL and
 source checks, consistent units, and a line chart covering the same series. The

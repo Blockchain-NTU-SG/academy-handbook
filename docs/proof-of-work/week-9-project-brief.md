@@ -30,6 +30,10 @@ after feedback or as evidence becomes clearer.
 
 ## Feedback and revision
 
+Academy cohort participants submit the brief through WCB for formal review and
+feedback. The Handbook remains the canonical source for what the brief must
+contain.
+
 Ask a peer, mentor, educator, experienced Builder or Researcher, or relevant
 community member to challenge the brief. External feedback is useful because it
 can reveal assumptions you missed. If no reviewer is available, complete a

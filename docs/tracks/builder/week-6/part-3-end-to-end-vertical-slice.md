@@ -219,7 +219,7 @@ that) and writing tests (W7P1).
 
 ## Completion and revision
 
-This Part is worth **100 points**. Use the completion criteria above to self-check your work. Complete earns the full points; otherwise, revise the missing or materially incorrect parts. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Make the activity list update by itself when anyone writes, using viem's

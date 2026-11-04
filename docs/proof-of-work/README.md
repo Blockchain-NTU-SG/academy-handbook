@@ -23,3 +23,6 @@ W10 focuses on a reviewable final artefact.
 
 The completion model is binary: Complete earns the full points; work that is
 incomplete or materially incorrect is revised, without fractional scores.
+Academy cohort participants submit W9 and W10 work through WCB for formal
+review. Independent readers may use the published criteria without formal
+submission or points tracking.

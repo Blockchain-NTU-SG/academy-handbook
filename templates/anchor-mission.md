@@ -24,8 +24,8 @@ they can see why it exists.
 
 ## What to submit
 
-A numbered list of evidence or outputs the learner will produce. Make every
-item concrete and possible to prepare or link to directly.
+A numbered list of evidence or outputs the Academy participant submits. Make
+every item concrete and possible to prepare or link to directly.
 
 1. Your wallet address
 2. The transaction hash
@@ -33,27 +33,27 @@ item concrete and possible to prepare or link to directly.
 4. In two or three sentences: what happened when you sent it
 5. Screenshot of X
 
-Say which items are written answers, links, code or files, and give any
-necessary format limits in the task itself.
+Say which items are written answers, links, code or files, and describe the
+submission format and any limits in the task itself.
 
-## Completion self-check
+## Submission checklist
 
-Learners use this list to check their own work. It should match the task
-requirements above.
+Participants tick these before submitting. Reviewers check the same list; it
+must match the task requirements above.
 
 - [ ] Every numbered item above is included
 - [ ] Links open and point to the right network
 - [ ] Written answers are in your own words
 - [ ] If you used AI, you can explain what it produced and why
 
-## What Complete means
+## For reviewers: what Complete looks like
 
-Describe the standard, not a score: what complete work contains and what needs
-revision. Make the criteria usable for self-checking as well as feedback from
-another person.
+Describe the standard, not a score: what complete work contains and what would
+send it back for revision. Independent learners may use the same criteria as a
+self-check.
 
-## If work needs revision
+## If this is returned for revision
 
-Reassure and identify a useful next step. Revise means the work is not complete
-yet, not that the learner has failed. State any deadline only if one is part of
-the public curriculum; otherwise do not invent one.
+Reassure and give short, actionable feedback. Revise means the work is not
+complete yet, not that the learner has failed. The participant resubmits after
+addressing the feedback. Do not invent deadlines.
