@@ -60,7 +60,7 @@ the source that fits the question, then cross-check before concluding.
 | **Direct chain records** | Explorers, transactions and state | What happened on-chain | Usually cannot explain intent |
 | **Derived analytics** | Dune, DefiLlama | Interpreted activity and comparisons | Definitions, queries and labels shape the result |
 | **Independent research** | L2BEAT, Messari, audits | Risk analysis and comparison | Scope, authorship and incentives matter |
-| **Current discussion** | X, Discord, Telegram, news | Discovery and context | Useful leads, not final proof |
+| **Current discussion** | X, Discord, public forums, news | Discovery and context | Useful leads, not final proof |
 :::
 
 ::: warning Beginners often start with current discussion and stop there
@@ -156,7 +156,7 @@ are defined** — "TVL" means different things on different sites.
 
 @tab Current discussion
 
-**X, Discord, Telegram, news.**
+**X, Discord, public forums and news.**
 
 **Can tell you:** that something is happening, what the current narrative is,
 what critics are saying, where to look next.

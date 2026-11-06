@@ -1,6 +1,6 @@
 ---
 track: researcher
-week: 6
+week: 7
 day: 3
 title: "Querying and measurement design"
 status: drafting
@@ -31,7 +31,7 @@ sources:
     label: "Link"
 ---
 
-# Week 6 · Part 3 — Querying and measurement design
+# Week 7 · Part 3 — Querying and measurement design
 
 > **Core question — did reported trading volume rise, and was the rise typical or concentrated in a few days?**
 
@@ -107,27 +107,27 @@ Your exact minor version may differ. The important part is that it begins with
 
 A version number such as `Python 3.x.x` means the command is available. If the
 command is not recognised, do not edit the retrieval utility or install a
-third-party package for this task; ask the Education Team for help with the
-approved environment or use the clearly dated fallback snapshot below.
+third-party package for this task. Use the clearly dated fallback snapshot
+below, or consult the linked Python documentation before retrying live retrieval.
 
-Download <a :href="$withBase('/files/researcher/W6.3-free-public-data.py')" download>W6.3-free-public-data.py</a>
+Download <a :href="$withBase('/files/researcher/W7.3-free-public-data.py')" download>W7.3-free-public-data.py</a>
 into that empty folder. It uses Python 3's standard library. In the same
 terminal, after moving into that folder, run:
 
 ```bash
-python3 W6.3-free-public-data.py
+python3 W7.3-free-public-data.py
 ```
 
 On Windows, run:
 
 ```powershell
-python W6.3-free-public-data.py
+python W7.3-free-public-data.py
 ```
 
 ::: details Expected result
 ```text
 Saved uniswap_ethereum_90days.csv: 90 dates, YYYY-MM-DD to YYYY-MM-DD (UTC)
-Saved W6.3-data-provenance.txt and W6.3-source-snapshot.json
+Saved W7.3-data-provenance.txt and W7.3-source-snapshot.json
 Open CSV in LibreOffice Calc to chart daily volume and compare the first and last 30 days.
 ```
 
@@ -146,10 +146,10 @@ The outputs are:
 
 - `uniswap_ethereum_90days.csv`: a comma-separated values (CSV) file with 90
   ascending dates, `day_utc` and `volume_usd`;
-- `W6.3-source-snapshot.json`: a JavaScript Object Notation (JSON) file with
+- `W7.3-source-snapshot.json`: a JavaScript Object Notation (JSON) file with
   the selected Ethereum version values and totals, endpoint, retrieval time,
   chain, unit, method and inclusive dates;
-- `W6.3-data-provenance.txt`: the scope, unit, dates and method.
+- `W7.3-data-provenance.txt`: the scope, unit, dates and method.
 
 The window ends yesterday UTC. The script rejects missing/duplicate days,
 ambiguous chain data and invalid amounts rather than replacing gaps with zero.
@@ -165,9 +165,9 @@ This fallback was retrieved on **30 October 2026** and covers **1 August to
 current live data. Use it only when live retrieval is unavailable, and say so
 in your finding.
 
-- <a :href="$withBase('/files/researcher/W6.3-uniswap-ethereum-volume-2026-10-30.csv')" download>Download the 90-day Ethereum volume CSV</a>
-- <a :href="$withBase('/files/researcher/W6.3-source-snapshot-2026-10-30.json')" download>Download the selected source snapshot JSON</a>
-- <a :href="$withBase('/files/researcher/W6.3-data-provenance-2026-10-30.txt')" download>Download the provenance record</a>
+- <a :href="$withBase('/files/researcher/W7.3-uniswap-ethereum-volume-2026-10-30.csv')" download>Download the 90-day Ethereum volume CSV</a>
+- <a :href="$withBase('/files/researcher/W7.3-source-snapshot-2026-10-30.json')" download>Download the selected source snapshot JSON</a>
+- <a :href="$withBase('/files/researcher/W7.3-data-provenance-2026-10-30.txt')" download>Download the provenance record</a>
 :::
 
 ### Just enough SQL
@@ -208,7 +208,7 @@ file
 uniswap_ethereum_90days.csv
 ```
 
-The one row may instead be `W6.3-uniswap-ethereum-volume-2026-10-30.csv` or
+The one row may instead be `W7.3-uniswap-ethereum-volume-2026-10-30.csv` or
 include a browser suffix such as `(1)`. Exactly one matching CSV should appear
 before you continue. Zero matches means it is not registered; more than one
 means the session is ambiguous. Start a fresh Web Shell session with **New**,
@@ -429,7 +429,7 @@ checks whether the mean, median and top-three concentration tell a similar
 story; the spike is a prompt to investigate, not a conclusion.
 
 <figure class="academy-reference-visual academy-reference-visual--wide">
-  <img src="/images/researcher/w6p3-uniswap-volume-reference.svg" alt="Line chart of 90 daily Uniswap Ethereum volumes reported by DefiLlama from 1 August to 29 October 2026, with daily fluctuations and a large spike near the end of the window." />
+  <img src="/images/researcher/w7p3-uniswap-volume-reference.svg" alt="Line chart of 90 daily Uniswap Ethereum volumes reported by DefiLlama from 1 August to 29 October 2026, with daily fluctuations and a large spike near the end of the window." />
   <figcaption>Reference chart using the bundled fallback snapshot retrieved on 30 October 2026, covering 1 August to 29 October 2026 UTC. Source: DefiLlama. If you retrieved live data, your dates, values and shape may differ. This shows the expected chart structure, not a required numerical result.</figcaption>
 </figure>
 :::
@@ -483,9 +483,8 @@ independent verification of users. Record **source / unit / chain / dates /
 retrieval time**, then name what extra data could separate the explanations.
 
 ::: details Optional industry-data path — Allium academic access
-Allium offers an Explorer for querying on-chain data with SQL and an academic
-access programme. Access requires an institutional request and confirmation;
-do not assume your university or this cohort is already approved. This is an
+Allium offers an Explorer for querying on-chain data with SQL and may provide
+academic access to approved institutions. Availability varies. This is an
 optional alternative for learning how to query a provider's schema, not a
 replacement for the reproducible DefiLlama-to-CSV workflow or an added task.
 
@@ -529,9 +528,7 @@ requiring both a full measurement memo and a second query assignment.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric or separate weekly submission.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means 90 complete UTC dates, 30 per group, reproducible SQL and
 source checks, consistent units, and a line chart covering the same series. The
@@ -551,5 +548,5 @@ this single-table question.
 - [Uniswap volume endpoint](https://api.llama.fi/summary/dexs/uniswap?dataType=dailyVolume&excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false) — Link, live data; preserve the retrieval snapshot
 - [DuckDB — Web shell](https://shell.duckdb.org/), [SQL](https://duckdb.org/docs/stable/sql/introduction) and [CSV import](https://duckdb.org/docs/stable/data/csv/overview) — Link, tool documentation
 - [LibreOffice — Calc](https://books.libreoffice.org/en/) and [Chart Wizard — Data Range](https://help.libreoffice.org/latest/en-US/text/schart/01/wiz_data_range.html) — Link, tool documentation
-- [Allium — Academic access](https://www.allium.so/use-case/academia) — Link, optional industry-data path; subject to institutional application and access approval
+- [Allium — Academic access](https://www.allium.so/use-case/academia) — Link, optional industry-data path; availability may be limited to approved institutions
 :::

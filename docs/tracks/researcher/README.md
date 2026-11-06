@@ -19,23 +19,29 @@ methods learners can later apply to NFTs, stablecoins, real-world assets
 (RWA), prediction markets, DePIN, AI × Web3, infrastructure, governance or
 future domains.
 
-Once selected at the end of Week 4, Researcher remains the learner's Academy
-path through W8. The application domain, research question and eventual Proof of
-Work can still evolve until W7.
+Researcher is the selected capability path for W5–W8. W9–W10 Project Work
+applies the research capability developed in the Deep Dive. The application
+domain, research question and project idea can evolve through W5–W8; W9 is when
+the learner scopes a realistic Project Brief and receives feedback.
 
 ## Weeks
 
 - [Week 5 · Deconstruct Blockchain Systems](./week-5/)
-- [Week 6 · Measure and Verify Blockchain Systems](./week-6/)
+- [Week 6 · Protocol Economics and System Analysis](./week-6/)
+- [Week 7 · On-Chain Evidence and Measurement](./week-7/)
+- [Week 8 · Valuation, Risk and Investigation](./week-8/)
 
-Each week contains six Part tasks. Every Part task is worth **100 points** and
-is assessed by completion and understanding, with revision when the work is
-incomplete or materially incorrect.
+Each week contains three Part tasks. Every Part task is worth **100 points**
+(300 per week) and is assessed by completion and understanding, with revision
+when the work is incomplete or materially incorrect. There is no separate
+weekly submission.
 
-> **Status: curriculum / pilot review.** All twelve Parts are authored and
-> remain drafts for review. The progression is system reconstruction →
-> investigation → measurement → economic/risk interpretation → a conclusion
-> supported by evidence.
-> Allow about 4–5 hours per week. Current estimates are 4 h 15 min for W5
-> and 5 h for W6; replace these estimates with pilot data. Optional
-> exploration is not assessed.
+All twelve Parts are organised across W5–W8 and retain their individual
+repository authoring status. The progression is system reconstruction →
+protocol economics → on-chain investigation and measurement → valuation, risk
+and a bounded conclusion.
+
+> **Estimated learner workload:** W5 2 h 5 min, W6 2 h 10 min, W7 2 h 20 min
+> and W8 2 h 40 min. These are approximate times, not deadlines, and may be
+> revised as learner evidence improves. Weeks need not take equal time.
+> Optional exploration is not assessed.

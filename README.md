@@ -7,8 +7,8 @@
 <p align="center"><strong>Learn → Build → Prove.</strong></p>
 
 <p align="center">
-  Beginner-first, community-maintained Web3 curriculum from first principles to
-  safe onchain participation, smart contracts, research and specialisation.
+  Beginner-first Blockchain@NTU Academy programme, with a public canonical
+  Handbook from safe Web3 basics to a reviewable project.
 </p>
 
 <p align="center">
@@ -20,17 +20,18 @@
 
 <p align="center">
   <a href="https://blockchain-ntu-sg.github.io/academy-handbook/">Read the Handbook</a>
-  · <a href="./docs/getting-started/programme.md">Curriculum</a>
+  · <a href="./docs/getting-started/programme.md">Academy programme</a>
   · <a href="./CONTRIBUTING.md">Contribute</a>
 </p>
 
 ## What this is
 
-The Blockchain@NTU Academy Handbook is a structured beginner-first Web3 learning
-path for students entering Web3, including learners with no technical background. It is
-the canonical source for the Academy's learning material, Foundation Anchor
-Mission instructions, Deep Dive Part-task requirements and Proof of Work
-milestone requirements; the public site is built from the same `docs/` source.
+Blockchain@NTU Academy is a structured, beginner-first Web3 programme. This
+Handbook is its public, canonical learning source for the complete W0–W10 path,
+including Foundation Anchor Missions, Deep Dive Part tasks and Project Work
+milestones. Academy cohort participants use WCB for formal submissions,
+review, points and progress. Anyone is also welcome to read or follow the
+Handbook independently; the public site is built from the same `docs/` source.
 
 The purpose is not to turn a beginner into a professional developer, smart-
 contract auditor, DeFi analyst, protocol researcher or investor. It is to build
@@ -55,10 +56,10 @@ By the end of the shared Foundation, a learner should be able to:
 |---|---|
 | Week 0 | Enter Web3 safely and learn the basic tools and risks. |
 | Weeks 1–4 | Shared Foundation: blockchains, Ethereum, wallets, contracts, industry and research; 4 Anchor Missions × 100 = 400 points. |
-| Weeks 5–6 | Deep Dive: follow the selected Builder or Researcher track and complete six reviewable Part tasks each week. |
-| Week 7 | Scope + MVP / V1: define the PoW while producing its first meaningful version; 200 points. |
-| Week 8 | Refine + Final Proof of Work: improve, validate and ship or publish the final artefact; 200 points. |
-| Full programme | 2,000 completion-based points; W0 remains onboarding. |
+| Weeks 5–8 | Deep Dive: follow the selected Builder or Researcher track, with three reviewable Part tasks each week. |
+| Week 9 | Project Brief + Feedback Session: scope a sponsor-agnostic project and revise the brief after feedback; 200 points. |
+| Week 10 | Project Submission: ship or publish the final reviewable artefact; 200 points. |
+| Full curriculum | 2,000 completion-based points; W0 remains onboarding. |
 
 The Foundation uses **Core**, **Landscape** and **Further Exploration** to make
 depth visible. Foundation follows **richer content, lighter assessment**: seeing
@@ -78,14 +79,16 @@ See the full writing and review standard in [EDITORIAL_GUIDE.md](./EDITORIAL_GUI
 
 ## How to use the Handbook
 
-1. Start with the [programme overview](./docs/getting-started/programme.md).
+1. Start with the [Academy programme overview](./docs/getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./docs/getting-started/).
 3. Follow the [Foundation](./docs/foundation/) from Week 1 through Week 4.
-4. Continue into the [Deep Dive tracks](./docs/tracks/), then complete the [Proof of Work milestones](./docs/proof-of-work/) when your cohort reaches them.
+4. Continue into the [Deep Dive tracks](./docs/tracks/) for Weeks 5–8, then complete the [Project Brief and Project Submission](./docs/proof-of-work/) in Weeks 9–10.
 
-Anyone can use the Handbook at their own pace. Cohort members follow the same
-learning path with a weekly rhythm, missions, peer learning, feedback and review
-through the programme platform.
+Academy cohort participants follow the recommended W0–W10 sequence, with
+formal submissions and feedback managed through WCB. The Handbook remains the
+canonical source for learning material, task requirements, completion criteria
+and project milestones. Readers outside the cohort may also use the public
+Handbook independently, without formal Academy tracking.
 
 ## Repository structure
 
@@ -94,7 +97,7 @@ docs/                 Learner-facing handbook and VuePress source
   getting-started/    Week 0 onboarding
   foundation/         Weeks 1–4 shared Foundation
   tracks/             Builder and Researcher Deep Dive scaffold
-  proof-of-work/      W7 Scope + MVP / V1 and W8 Final PoW scaffold
+  proof-of-work/      W9 Project Brief and W10 Project Submission scaffold
 templates/            Page and Anchor Mission authoring formats
 reviewers/            Submission and beginner content-review guidance
 .github/              CI, CODEOWNERS, PR and Issue templates
@@ -117,14 +120,13 @@ review. Read [CONTRIBUTING.md](./CONTRIBUTING.md) before editing and use
 [GOVERNANCE.md](./GOVERNANCE.md) when a change may affect curriculum scope or
 decision ownership.
 
-## Programme operations boundary
+## Curriculum and cohort operations
 
-The Handbook is the canonical home for learning material, Foundation Anchor
-Mission requirements, Deep Dive Part-task requirements and Proof of Work
-milestone requirements. Web3CareerBuild (WCB) handles applications, cohorts,
-submissions, review workflow, points, progress and leaderboard data. WCB may
-carry a shorter operational copy, but it does not replace the canonical Handbook
-page. Never add WCB API keys or private operational data here.
+The `docs/` tree is the single public source of truth for learning content,
+task requirements, completion criteria and project milestones. WCB carries
+cohort operations such as applications, formal submissions, review feedback,
+points and progress; it does not replace the Handbook. Do not commit
+credentials, private keys or personal learner data.
 
 ## Sources and attribution
 
@@ -167,6 +169,7 @@ Build and consistency-check the static site with:
 npm run docs:check-marks
 npm run docs:build
 npm run docs:check-times
+npm run docs:check-links
 npm run docs:check-payload
 ```
 

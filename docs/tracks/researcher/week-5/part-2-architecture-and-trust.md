@@ -29,7 +29,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): case and figures from L2BEAT's Arbitrum One page,
+Author note: case and figures from L2BEAT's Arbitrum One page,
 checked 10 October 2026 and rechecked 21 October 2026 (Stage 1; 1d forced
 inclusion; 6d 8h challenge period; 8d L2 and 3d L1 timelocks, 17d 8h in
 total; 10d exit window on the regular path, none on the emergency path; 9/12
@@ -263,9 +263,7 @@ predicting governance votes.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 Your work is complete when:
 

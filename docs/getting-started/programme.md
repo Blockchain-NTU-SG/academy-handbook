@@ -1,16 +1,11 @@
-# Programme overview
+# Blockchain@NTU Academy programme
 
-Blockchain@NTU Academy follows one continuous story:
+Blockchain@NTU Academy follows one continuous learning path:
 
-::: important Foundation Pilot · Sep–Oct 2026
-The current Foundation Pilot covers **Week 0 through Week 4 only**.
-
-The Week 4 Track Selection Card is the final required Pilot output. Weeks 5–8 remain
-visible in this Handbook because they are the next stage of the full Academy,
-but they are not required for Foundation Pilot participants.
-
-The full Week 0–8 programme begins with **Cohort 1 in January 2027**.
-:::
+The Handbook is the public, canonical source for the complete Week 0 through
+Week 10 curriculum. Academy cohort members follow it with structured pacing,
+formal submissions and review. Anyone may also read or follow the Handbook
+independently.
 
 | Stage | Focus | Output |
 |---|---|---|
@@ -19,15 +14,16 @@ The full Week 0–8 programme begins with **Cohort 1 in January 2027**.
 | Week 2 | Blockchain architectures, Ethereum and interoperability | Architecture and risk map |
 | Week 3 | Smart contracts, tokens and DApps | Contract and application foundations |
 | Week 4 | Web3 industry, research and contribution | Track Selection Card |
-| Week 5 | Builder or Researcher Deep Dive | Six Part tasks × 100 points |
-| Week 6 | Builder or Researcher Deep Dive | Six Part tasks × 100 points |
-| Week 7 | Scope + Proof of Work MVP / V1 | 200 points |
-| Week 8 | Refine + Final Proof of Work | 200 points |
+| Weeks 5–8 | Builder or Researcher Deep Dive | 3 Part tasks per week × 100 points |
+| Week 9 | Project Brief + Feedback Session | Scoped, feedback-informed brief · 200 points |
+| Week 10 | Project Submission | Final reviewable project · 200 points |
 
-The Academy has two Deep Dive tracks: **Builder**, who learns to compose
+The curriculum has two Deep Dive tracks: **Builder**, who learns to compose
 unfamiliar Web3 systems, and **Researcher**, who learns to decompose them. At
-the end of Week 4, the learner selects one track and stays on that capability
-path through W5–W8. The domain and eventual PoW topic remain flexible.
+the end of Week 4, the learner selects Builder or Researcher for the W5–W8
+Deep Dive. W9–W10 Project Work applies the capability developed in that
+selected path. The domain, research question and project deliverable may evolve
+during W5–W8; in W9 the learner scopes the project brief after feedback.
 Domains such as DeFi, stablecoins, NFTs, RWA, prediction markets, DePIN,
 infrastructure, governance and AI × Web3 are cases and application lenses, not
 separate tracks.
@@ -37,18 +33,17 @@ separate tracks.
 | Stage | Completion-based points |
 |---|---:|
 | Foundation W1–W4 | 4 Anchor Missions × 100 = **400** |
-| W5 Deep Dive | 6 Part tasks × 100 = **600** |
-| W6 Deep Dive | 6 Part tasks × 100 = **600** |
-| W7 Scope + MVP / V1 | **200** |
-| W8 Refine + Final PoW | **200** |
-| **Total full programme** | **2,000** |
+| W5–W8 Deep Dive | 4 weeks × 3 Part tasks × 100 = **1,200** |
+| W9 Project Brief + Feedback Session | **200** |
+| W10 Project Submission | **200** |
+| **Total** | **2,000** |
 
-W0 is onboarding and does not add points. Foundation keeps assessment light
-through one Anchor Mission per week. Deep Dive remains lightweight but becomes
-more hands-on: each Part contains one small completion-based task embedded
-directly in the learning, with no separate weekly submission. A task is
-completed or returned for revision; there is no partial-score rubric.
-Resubmission follows the existing programme policy.
+Points are part of the organised Academy progression model and are formally
+tracked for cohort participants. Independent readers may follow the same tasks
+without formal points or progress tracking. W0 is onboarding and does not add
+points. Foundation uses one Anchor Mission per week. Deep Dive embeds one
+completion-based task in each Part, with no separate weekly deliverable. A task
+is Complete or returned for Revise; there is no partial-score rubric.
 
 ## How to read the handbook
 
@@ -58,30 +53,18 @@ Resubmission follows the existing programme policy.
 
 Foundation follows richer content, lighter assessment. Deep Dive keeps tasks
 embedded in the learning rather than adding extra homework. Weekly pacing is a
-recommended rhythm, not a deadline. Any Academy activity that sends a
+recommended rhythm, not a deadline. Any required activity that sends a
 transaction, deploys a contract, performs a state-changing wallet action, or
 otherwise requires funds or an on-chain signature is testnet-only; some lessons
 may ask you to inspect public mainnet data read-only. Never use real funds for
-an Academy requirement.
+any learning activity.
 
-## Operations boundary
+## Start with the Academy path
 
-The Handbook contains the canonical learning material, Foundation Anchor Mission
-requirements, Deep Dive Part-task requirements and Proof of Work milestone
-requirements.
-Web3CareerBuild (WCB) handles applications, cohort management, submissions,
-review, points, progress and leaderboards.
-
-## Apply
-
-The Academy Handbook is open to everyone, so you can start learning without
-joining a cohort.
-
-The Academy cohort adds structured pacing, peer learning, mission review,
-progress tracking and accountability. The current Foundation Pilot covers W0–W4.
-The full Cohort 1 programme adds the selected W5–W6 Builder or Researcher Deep
-Dive, then the W7 Scope + MVP / V1 and W8 Refine + Final Proof of Work
-milestones.
-
-Applications and cohort operations are managed through WCB.
-Apply through [Web3CareerBuild (WCB)](https://web3career.build/en/programs/blockchain-ntu-academy) when the next intake opens.
+Begin with [Week 0](./), then continue through the shared
+[Foundation](../foundation/). After Week 4, choose Builder or Researcher,
+complete Weeks 5–8, and use the W9/W10 criteria to scope and present a
+reviewable project. Academy participants submit work for formal review through
+the Academy workflow. Independent readers can use the same published criteria
+for self-review; the Handbook remains the source of task and completion
+requirements in either case.

@@ -38,7 +38,7 @@ By the end of this page you should be able to:
 - Objective two
 - Objective three
 
-Three or four. Each one starts with a verb the member can actually demonstrate —
+Three or four. Each one starts with a verb the learner can actually demonstrate —
 explain, send, deploy, compare — not "understand" or "be aware of".
 
 ## Core
@@ -55,7 +55,7 @@ perform one cognitive job.
 
 ## Landscape
 
-Should recognise and roughly explain. Things a member should be able to place
+Should recognise and roughly explain. Things a learner should be able to place
 in the map without being able to build or analyse them.
 
 Keep these short — a few lines each. Landscape is not assessed unless explicitly
@@ -70,7 +70,7 @@ steps should each be a single action and state the expected observable result.
 2. Step
 3. Step
 
-State what the member should see after each step, so they can tell when something
+State what the learner should see after each step, so they can tell when something
 has gone wrong rather than continuing with a broken setup.
 
 ## Worked example

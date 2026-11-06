@@ -7,7 +7,7 @@ ownership.
 
 ## Who we write for
 
-The primary Foundation learner is a student with little or no prior Web3
+The primary Foundation learner has little or no prior Web3
 knowledge and potentially no technical background. Foundation should move that
 learner from outsider to a **Web3-literate beginner** capable of basic industry
 conversation, safe participation, first-principles reasoning and choosing a
@@ -250,6 +250,17 @@ troubleshooting into an assessment requirement.
 When a required action produces a result that a beginner may not recognise,
 provide a short observable success condition. Use a collapsed `Expected result`
 example when full output would interrupt the lesson.
+
+Operational dates age the curriculum unnecessarily; evidentiary dates establish
+what the evidence represents. Retain dates for source publication, retrieval,
+observation windows and technically relevant history, but not time-bound rollout.
+
+The Handbook is the public, canonical learning source for Blockchain@NTU
+Academy. Academy participation may reference WCB, submission and review
+workflows, and cohort communication where operationally relevant. Independent
+readers should still be able to understand and use the learning material without
+formal Academy participation. Avoid embedding volatile cohort dates, intake
+status or private operational data in curriculum pages.
 
 ## Screenshots and visuals
 

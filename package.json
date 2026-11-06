@@ -13,6 +13,7 @@
     "docs:check-payload": "node scripts/check-payload.mjs",
     "docs:check-marks": "node scripts/check-mark-syntax.mjs",
     "docs:check-times": "node scripts/check-reading-times.mjs",
+    "docs:check-links": "node scripts/check-internal-links.mjs",
     "docs:preview": "http-server docs/.vuepress/dist",
     "vp-update": "npx vp-update"
   },

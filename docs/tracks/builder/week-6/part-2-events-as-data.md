@@ -1,7 +1,7 @@
 ---
 track: builder
-week: 5
-day: 5
+week: 6
+day: 2
 title: "Events as data"
 status: drafting
 owner: "Education Team"
@@ -23,7 +23,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): this Part completes the "4. Events" section of
+Author note: this Part completes the "4. Events" section of
 src/App.tsx in the Builder starter. It assumes Parts 1 to 4 are done. The
 worked example was run on Sepolia on 21 October 2026 against the shared
 Registry. RPC behaviour in the table was tested the same day: the starter's
@@ -33,7 +33,7 @@ Tenderly's public gateway served the full range. The model answer is kept
 outside the public handbook.
 -->
 
-# Week 5 · Part 5 — Events as data
+# Week 6 · Part 2 — Events as data
 
 > **Core question — how does an app show what already happened on a
 > contract, before the user even arrived?**
@@ -161,7 +161,7 @@ quick for reads and writes but keeps only recent logs. If your contract is
 more than a day or two old, you will hit `pruned history unavailable`. For
 the event script, change `RPC_URL` in `.env`; that is the setting read by
 `scripts/client.ts`. `VITE_RPC_URL` is the frontend setting introduced in
-Part 4. Change both only if you also want the frontend to use the same
+W6P1. Change both only if you also want the frontend to use the same
 provider; after changing `VITE_RPC_URL`, restart `npm run dev`.
 
 ```bash
@@ -361,7 +361,7 @@ section 4 TODO; do not create a second `App()` component.
    event equals what `records(account)` returns now. Then open one transaction
    from your list on Etherscan and confirm it matches the row.
 
-Reuse the public client from [Part 4](./part-4-wallet-and-frontend-integration.md).
+Reuse the public client from [W6P1](./part-1-wallet-and-frontend-integration.md).
 A public RPC address in a `VITE_` variable is fine. A private key never is.
 
 **Out of scope:** live updates, pagination controls, indexers and subgraphs,
@@ -386,9 +386,7 @@ run your verification step.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 Your work is complete when:
 

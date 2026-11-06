@@ -5,6 +5,7 @@ title: "Regulatory awareness: Singapore and global orientation"
 status: drafting
 owner: "Director of Education"
 reading_time: "20 min"
+next: /foundation/
 sources:
   - name: "MAS — Guidelines on Licensing for Digital Token Service Providers"
     url: "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-licensing-for-dtsps"

@@ -1,6 +1,6 @@
 ---
 track: builder
-week: 6
+week: 7
 day: 3
 title: "Security engineering"
 status: drafting
@@ -26,14 +26,15 @@ sources:
 ---
 
 <!--
-Author note (Education team): the lab contract lives on the
-w6-3-security-lab branch of the Builder starter repository. It contains more
-than one planted weakness; learners only need to find, reproduce and fix one.
+Author note: the lab contract lives on the
+w6-3-security-lab branch of the Builder starter repository. This existing
+branch name is kept for starter compatibility; this is Academy W7P3. It
+contains more than one planted weakness; learners only need to find, reproduce and fix one.
 Do not list the weaknesses on this page. The model answer and reviewer notes
 are kept outside the public handbook.
 -->
 
-# Week 6 · Part 3 — Security engineering
+# Week 7 · Part 3 — Security engineering
 
 > **Core question — my tests pass, so how do I find what they never checked,
 > and make sure it cannot come back?**
@@ -253,8 +254,9 @@ need to deploy anything or spend any test ETH.
 
 ## Hands-on task
 
-The lab is on the `w6-3-security-lab` branch of your starter repository. It
-adds `TipRegistry`: the Registry, plus tipping. Anyone can send test ETH to
+The lab is on the `w6-3-security-lab` branch of your starter repository. This
+existing branch name is kept for starter compatibility. It adds `TipRegistry`:
+the Registry, plus tipping. Anyone can send test ETH to
 thank the author of a record, and authors withdraw what they have received.
 
 ::: danger Local tests only
@@ -327,9 +329,7 @@ the passing test is your evidence that the fix works.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Find and fix a second weakness in `TipRegistry`, with its own regression

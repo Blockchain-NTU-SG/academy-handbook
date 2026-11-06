@@ -29,7 +29,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): every figure in the worked example, the deeper
+Author note: every figure in the worked example, the deeper
 pool comparison and the model answer was recalculated on 21 October 2026. The
 model answer is kept outside the public handbook.
 -->
@@ -293,9 +293,7 @@ gas costs and multi-hop routes.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 Your work is complete when:
 

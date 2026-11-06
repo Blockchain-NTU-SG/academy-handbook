@@ -37,16 +37,18 @@ sources:
 
 # Week 4 · Part 4 — GitHub in practice
 
-You made an account and pushed one commit in
-[Week 0 Part 1](../../getting-started/welcome-and-setup.md). This is the working
-knowledge you need for the Deep Dive and later Proof of Work, where your work
-lives on GitHub.
+If you completed the optional GitHub setup in
+[Week 0 Part 1](../../getting-started/welcome-and-setup.md), you already have
+an account and a first commit. If not, create a free account before doing the
+GitHub workflow exercises on this page. Reading along does not require one.
+This is working knowledge for the Deep Dive and later project work.
 
 ::: important GitHub is not only for developers
-**==For the Academy, GitHub is the default home for your Proof of Work.==**
-Builders can store code there, while Researchers can publish analysis and
-evidence. Data/querying and product thinking can support either track; the
-repository should make the actual output clear.
+**==GitHub is a recommended home for code, reproducible work and project evidence.==**
+Builder projects naturally use repositories. Researchers may use GitHub to
+preserve analysis, data or code, while a final Researcher deliverable may also
+be an article, report or another reviewable format. Choose a repository when it
+helps someone inspect or reproduce the work.
 :::
 
 ## Learning objectives
@@ -75,7 +77,7 @@ repository should make the actual output clear.
 `fix stuff` tells a future reader nothing. `fix: handle empty response from
 faucet API` tells them what changed and why.
 
-You will read your own history in Week 8 when writing up your Proof of Work.
+You will read your own history in Week 10 when preparing your Project Submission.
 Write for that person.
 :::
 
@@ -433,7 +435,7 @@ If it happens: rotate the key immediately. Treat it as compromised, because it i
 
 ## Worked example
 
-Two repositories from the same Proof of Work milestone sequence. Same amount of work.
+Two repositories from the same Project Work milestone sequence. Same amount of work.
 
 :::: tabs
 @tab The one nobody can use
@@ -450,7 +452,7 @@ Two repositories from the same Proof of Work milestone sequence. Same amount of 
 - Licence: none
 - No indication of what it does or how to run it
 
-A reviewer cannot tell what it is, whether it works, or what the member learned.
+A reader cannot tell what it is, whether it works, or what the learner learned.
 **The work may be excellent — it is unreadable, so it cannot count for anything.**
 
 @tab The one that works
@@ -479,8 +481,10 @@ anyone else who finds it later.
 And it is the difference between something that counts as Proof of Work and
 something that does not.
 
-Your GitHub profile is the most durable thing you take out of this programme.
-Week 8 will ask you to ship the second version — start building the habits now.
+Your GitHub profile can become a durable record of the work you produce through
+this learning path.
+Week 10 will ask you to ship the final reviewable version. Start building the
+habits now.
 :::
 
 ::: details Further exploration — optional, not assessed

@@ -1372,3 +1372,11 @@ textarea {
 [data-theme="dark"] .vp-doc h2#further-exploration + p {
   color: var(--academy-text-muted);
 }
+
+/* Keep the Plume hero's intrinsic max-content width inside narrow viewports. */
+@media (max-width: 639px) {
+  .vp-home-hero .hero-container .hero-content {
+    width: 100%;
+    padding-inline: 18px;
+  }
+}

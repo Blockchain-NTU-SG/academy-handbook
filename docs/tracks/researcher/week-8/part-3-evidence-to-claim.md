@@ -1,7 +1,7 @@
 ---
 track: researcher
-week: 6
-day: 6
+week: 8
+day: 3
 title: "Independent investigation brief"
 status: drafting
 owner: "Education Team"
@@ -25,7 +25,7 @@ sources:
     label: "Link"
 ---
 
-# Week 6 · Part 6 — Independent investigation brief
+# Week 8 · Part 3 — Independent investigation brief
 
 > **Core question — can you make a careful claim about an unfamiliar case and show what could overturn it?**
 
@@ -54,8 +54,9 @@ is another explanation that fits at least some of the same observations.
 reasons—not certainty. A **next check** is a specific observation that could
 distinguish the explanations.
 
-This is Researcher readiness for W7, not a project proposal, trading call or
-a new weekly submission. Work read-only with public data. AI can help draft
+This is Researcher readiness for the W9 Project Brief and W10 Project
+Submission, not a trading call or another weekly submission. Work read-only
+with public data. AI can help draft
 a query or challenge a claim; you must verify every cited result and explain
 the reasoning yourself.
 
@@ -212,7 +213,7 @@ within their bounded observation window. For a real case, the direct record
 must bear on the question, and missing attribution must stay unknown.
 
 **Out of scope:** price targets, investment recommendations, identity claims
-from clusters, long reports, paid forensic tools, or a final PoW commitment.
+from clusters, long reports, paid forensic tools, or a final project commitment.
 
 ## Evidence required
 
@@ -221,9 +222,7 @@ from clusters, long reports, paid forensic tools, or a final PoW commitment.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric or separate weekly submission.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means the question is falsifiable, system and risk are causal,
 source observations and derived evidence are distinguishable, the calculation

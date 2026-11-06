@@ -10,29 +10,24 @@ owner: "Director of Education"
 
 <Badge type="tip" text="100 points" /> <Badge type="info" text="No on-chain activity" /> <Badge type="warning" text="No deadline" />
 
-::: important Foundation Pilot completion · Sep–Oct 2026
-For Foundation Pilot participants, completing this Track Selection Card and
-Mini Project Map completes the required pilot curriculum. Stop here. The Deep
-Dive belongs to the full Cohort 1 programme beginning in January 2027.
-:::
-
 ## What you're doing
 
 Two short pieces on one page: a **Track Selection Card**, recording a selected
 Builder or Researcher path, and a **Mini Project Map**, showing that you can
-place and investigate a real Web3 project. This is not a final PoW proposal.
-Your domain, question and final PoW idea may evolve through W5–W6; W7 combines
-scope definition with MVP / V1.
+place and investigate a real Web3 project. This is not a final Project Brief.
+Your domain, question and project idea may evolve during W5–W8; W9 is where you
+scope the project after feedback.
 
-For Foundation Pilot learners, this is the final required Foundation output and
-a map of what they could build or investigate next. For full-programme learners,
-it starts the selected Deep Dive capability path; the PoW topic remains flexible.
+This is the final shared Foundation output and a map of what you could build or
+investigate next. It starts the selected Deep Dive capability path; the project
+topic remains flexible.
 
 ::: important This mission is the bridge
 Every other Foundation Anchor Mission looked backwards at what you learned. This
 one looks forward by asking what kind of work you want to practise and what you
-still need to learn. Once selected, the track remains fixed through W8; your
-domain or topic may evolve during the Deep Dive.
+still need to learn. The selected track guides the W5–W8 Deep Dive. W9–W10
+Project Work applies the capability you develop there; your domain or topic may
+evolve during the Deep Dive before the W9 Project Brief.
 :::
 
 ## What to submit
@@ -42,7 +37,8 @@ domain or topic may evolve during the Deep Dive.
 A table is fine. One or two lines each.
 
 :::: steps
-1. **Selected track** — Builder or Researcher. This remains your Academy path through W8.
+1. **Selected track** — Builder or Researcher for the W5–W8 Deep Dive. W9–W10
+   Project Work applies the capability developed in that path.
 
 2. **Topics or domains currently interesting to you** — name the areas, systems
    or questions that caught your attention in Foundation
@@ -79,12 +75,14 @@ answers:
 
 ::: tip Expected length
 **Roughly 250–350 words total.** This is an exploration note, not a report and
-not a final PoW scope.
+not a final project scope.
 
-Optional: up to eight image or PDF uploads.
+Optional: include an image if it helps explain your project map.
 :::
 
 ## Submission checklist
+
+Tick these items before submitting. Academy reviewers use the same criteria.
 
 - [ ] My selected track is Builder or Researcher
 - [ ] I recorded topics or domains that currently interest me
@@ -95,9 +93,9 @@ Optional: up to eight image or PDF uploads.
 - [ ] Part B is in my own words, not copied from the project's marketing
 - [ ] If I used AI, I can explain what it produced and why I agree with it
 
-:::: details For reviewers — what "completed" looks like
-This should take three or four minutes to review. The standard is a clear
-selection and honest current interests, not a polished project plan.
+:::: details For reviewers: what Complete looks like
+The standard is a clear selection and honest current interests, not a polished
+project plan.
 
 **Part A standard**
 
@@ -117,18 +115,19 @@ selection and honest current interests, not a polished project plan.
 | 4 | A **genuine primary source** — official docs, GitHub or governance forum |
 | 5 | A sensible data or research source, with a specific reason |
 
-**Send it back if:** the track is missing, the idea is so broad that it gives no
-useful starting point, fields are blank, B4 cites a secondary source as primary,
-or Part B is copied from the project's own description.
+**Return for revision if:** the track is missing, the idea is so
+broad that it gives no useful starting point, fields are blank, B4 cites a
+secondary source as primary, or Part B is copied from the project's description.
 
-**Do not send it back for:** choosing a modest interest, choosing a domain that
-is not currently fashionable, or mapping a well-known protocol.
+**Do not return for revision for:** choosing a modest interest, a
+domain that is not currently fashionable, or a well-known protocol.
 ::::
 
-## If this gets rejected
+## If a reviewer requests revision
 
-::: tip Rejection means resubmit — it is not a fail
-No deadline, no penalty. You will be told the one thing to fix.
+::: tip Revise means fix and resubmit, not fail
+Use the feedback and table below to address the missing criterion, then
+resubmit through the Academy workflow. There is no deadline.
 :::
 
 | What happened | The fix |
@@ -138,5 +137,5 @@ No deadline, no penalty. You will be told the one thing to fix.
 | B4 cites a news article or thread as a primary source | Use the project's own docs, code or governance source |
 | Part B is copied from marketing material | Rewrite the explanation in your own words |
 
-If you are unsure, describe the idea in the Telegram group. Saying it out loud is
-the fastest way to find out what you still need to learn.
+If you are unsure, write down the question you cannot yet answer and use it to
+guide your first Deep Dive explorations.

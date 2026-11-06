@@ -1,6 +1,6 @@
 ---
 track: researcher
-week: 6
+week: 7
 day: 2
 title: "Entity and fund-flow investigation"
 status: drafting
@@ -32,7 +32,7 @@ sources:
 Case observations are synthetic, not allegations about real entities.
 Reviewer solutions remain outside the public Handbook. -->
 
-# Week 6 · Part 2 — Entity and fund-flow investigation
+# Week 7 · Part 2 — Entity and fund-flow investigation
 
 > **Core question — which explanation fits these flows, and what could distinguish it from the alternatives?**
 
@@ -195,8 +195,8 @@ Use **one compact investigation table**, not a report:
    classify them and mark unsupported attribution unknown. No new tracing is
    required.
 2. **Case pack (about 20 minutes).** Open the
-   <a :href="$withBase('/files/researcher/W6.2-fund-flow-case.csv')" download>synthetic observations CSV</a>
-   and <a :href="$withBase('/files/researcher/W6.2-case-notes.md')" download>case notes</a>.
+   <a :href="$withBase('/files/researcher/W7.2-fund-flow-case.csv')" download>synthetic observations CSV</a>
+   and <a :href="$withBase('/files/researcher/W7.2-case-notes.md')" download>case notes</a>.
    Aliases and record IDs are invented, not live addresses/transactions.
    Investigate allocation splitting, possible coordination and the LP-lock
    claim. Write **four rows**: records, interpretation, alternative,
@@ -216,9 +216,7 @@ or tracing around privacy protections. **Transfer ≠ economic demand; volume
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric or separate weekly submission.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric. There is no separate weekly submission.
 
 To complete, cite records, include an alternative and two signal families, and
 state where the evidence stops. You need not identify anyone or prove motive;

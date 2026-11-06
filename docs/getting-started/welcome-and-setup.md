@@ -1,7 +1,7 @@
 ---
 week: 0
 day: 1
-title: "Welcome, GitHub and the platform"
+title: "Welcome to Blockchain@NTU Academy"
 status: drafting
 owner: "Director of Education"
 reading_time: "30 min hands-on"
@@ -17,31 +17,37 @@ sources:
     label: "Reuse"
 ---
 
-# Week 0 · Part 1 — Welcome, GitHub and the platform
+# Week 0 · Part 1 — Welcome to Blockchain@NTU Academy
 
-You are starting the Academy Foundation: a beginner-first path through a subject where the most common
-beginner experience is drowning in vocabulary, and the second most common is
-losing money to something avoidable. This programme is built to prevent both.
+Welcome to Blockchain@NTU Academy, a beginner-first path through Web3. New
+vocabulary can feel overwhelming and avoidable mistakes can be costly. This
+Handbook is the public, canonical source for the Academy's complete W0–W10
+learning path. You are welcome to read or follow it independently too.
 
-::: important Foundation Pilot · Sep–Oct 2026
-The current pilot covers **Week 0 through Week 4 only**. The Week 4 Track
-Selection Card is the final pilot output. Weeks 5–8 are shown in the Handbook as the next
-stage of the Academy, but they are not required for Foundation Pilot
-participants. The full Week 0–8 programme begins with **Cohort 1 in January
-2027**. The W5–W6 Deep Dive and W7–W8 Proof of Work milestones are in
-development for Cohort 1 · January 2027.
+Today is a short setup and orientation. It explains where Academy cohort
+participants access the programme, submit work and get updates, and gives every
+learner a safe vocabulary and tool map before the Foundation asks you to reason
+about blockchains or use a wallet.
+
+::: important Following the Academy or reading independently
+**If you are an Academy cohort participant**, complete the setup below and use
+the Academy platform for formal submissions, reviewer feedback, points and
+progress. The relevant Telegram group is used for cohort questions and
+announcements.
+
+**If you are reading independently**, the Handbook and its task criteria remain
+public. You can read every lesson and complete the same missions and projects,
+but WCB submissions, cohort review, formal points/progress tracking and access
+to a cohort Telegram group are not included. You can use the published criteria
+for self-review. The Handbook is canonical if any platform copy differs.
 :::
-
-Today is housekeeping — three accounts and a clear picture of how the Academy
-works. It is the least interesting page in the handbook and the one that saves
-you the most time later.
 
 ## Learning objectives
 
-- Create a GitHub account and explain what a repository, commit and README are for
-- Access the Academy platform and Telegram group, and say what each is used for
-- State how missions are reviewed and what happens when one is rejected
-- State the two rules that apply to every week of this programme
+- Explain how GitHub, WCB and Telegram are used by Academy participants
+- Find the learning material, task instructions and completion criteria in this Handbook
+- Explain how Academy submissions are reviewed and revised
+- Apply the testnet-only and no-keys safety rules
 
 ## Core
 
@@ -50,54 +56,50 @@ you the most time later.
 ```mermaid
 flowchart TD
   W0["<b>Week 0</b><br/>Entering Web3 safely"] --> F["<b>Weeks 1–4</b><br/>Shared Foundation"]
-  F --> D["<b>Weeks 5–6</b><br/>Builder or Researcher Deep Dive"]
-  D --> P["<b>Week 7</b><br/>Scope + MVP / V1"]
-  P --> Q["<b>Week 8</b><br/>Refine + Final PoW"]
+  F --> D["<b>Weeks 5–8</b><br/>Three Parts per week"]
+  D --> P["<b>Week 9</b><br/>Project Brief + Feedback"]
+  P --> Q["<b>Week 10</b><br/>Project Submission"]
   Q --> O["<b>A reviewable artefact</b><br/>you can show"]
 ```
 
-==**Weeks 1–4 are the same for everyone.**== They build a shared map of blockchains,
+==**Weeks 1–4 build a shared foundation.**== They build a shared map of blockchains,
 wallets, Ethereum, smart contracts and the wider industry. You do not choose a
 specialism yet, because you cannot sensibly choose one before you know what is
 out there.
 
-**For the full programme, Weeks 5–6 are the Deep Dive.** At the end of Week 4,
-you select Builder or Researcher and stay on that capability path through W8,
-then build transferable skills through reviewable Part tasks. Your domain and
-eventual PoW topic can still evolve; W7 combines scope definition with producing
-an MVP / V1. Foundation Pilot learners stop after Week 4; the Deep Dive and
-later Proof of Work milestones are shown here as the next stages of the full
-Academy.
+**Weeks 5–8 are the Deep Dive.** At the end of Week 4, you select Builder or
+Researcher for the Deep Dive and build transferable skills through three
+reviewable Part tasks each week. W9–W10 Project Work applies the capability
+developed in that selected path. Your domain, research question or project idea
+can evolve during W5–W8. In W9, you scope the Project Brief and seek feedback;
+in W10, you produce the final reviewable project.
 
 ### The weekly rhythm
 
 Each Foundation week has a handful of short pages and **one Anchor Mission**.
-The full programme then adds six 100-point Deep Dive tasks in Week 5, six more
-in Week 6, and the W7–W8 Proof of Work milestones. There is no separate W5 or
-W6 weekly submission: each Part task is that week's progress evidence.
+The Deep Dive then adds three 100-point tasks per week in W5–W8,
+followed by the W9 Project Brief + Feedback Session and W10 Project Submission.
+There is no extra weekly Deep Dive deliverable: the three Part tasks are the
+reviewable work for each week. Academy participants submit them through the
+official workflow.
 
 | Item | Details |
 |---|---|
 | Anchor Missions | One per Foundation week, Weeks 1–4; 100 points each |
-| Deep Dive tasks | Six Part tasks in W5 and six in W6; 100 points each |
-| PoW checkpoints | W7 Scope + MVP / V1 200, W8 Refine + Final PoW 200 |
-| Total | **2,000 points** for the full programme |
+| Deep Dive tasks | Three Part tasks per week in W5–W8; 100 points each |
+| Project checkpoints | W9 Project Brief + Feedback Session 200, W10 Project Submission 200 |
+| Total | **2,000 points** for the full curriculum |
 | Week 0 | No mission, no points |
-| Review outcomes | **Completed** or **Rejected** — nothing in between |
-| Rejected | Comes back with specific feedback. Resubmit as many times as you need |
+| Review outcome | Each task is either **Complete** or **Revise**; there is no partial-score rubric |
+| Revision | Reviewers give actionable feedback; revise the work and resubmit |
 | Deadlines | **None.** The weekly pace is a recommended rhythm |
 
-::: important Read that last row twice
-There is no penalty for taking longer. A rejection is **not a fail** — it means
-something specific is missing, you will be told exactly what, and you send it
-again.
-:::
-
-::: tip Foundation Pilot completion
-For Foundation Pilot participants, the four Foundation Anchor Missions are the
-relevant missions. Week 4 is the final required week: complete the Track
-Selection Card / Anchor Mission, then stop here. The W5–W6 Deep Dive and
-W7–W8 Proof of Work milestones belong to the full Cohort 1 programme.
+::: important How Academy review works
+The Handbook states what complete work demonstrates. Academy cohort
+participants submit work through WCB for a **Complete** or **Revise** outcome.
+Revise means actionable feedback and another submission, not failure. Readers
+outside the cohort may use the same criteria for self-review, but points and
+progress are formally tracked only through organised Academy participation.
 :::
 
 The Foundation pages are longer than their missions require. That is on purpose:
@@ -115,72 +117,64 @@ Part task is embedded in the learning rather than added as extra homework.
 
 If you are short on time, Core is the part that matters.
 
-### The three accounts you need
+### The three accounts and places
 
 :::: tabs
 @tab <Icon name="simple-icons:github" /> GitHub
 
-Where developers — and increasingly researchers, analysts and product people —
-keep their work in public. In this programme it serves two purposes: you will
-read project code and documentation on it from Week 2, and your final Proof of
-Work will live on it.
+GitHub is where developers share repositories, code and project history. The
+curriculum uses it for GitHub workflows and Builder work; it can also preserve
+reproducible Researcher work or project evidence. An account is needed to
+create or push your own repository, and Academy participants use GitHub to sign
+in to WCB. Not every Researcher final project needs to be a repository.
 
-It is also, bluntly, a portfolio. A GitHub profile with real work on it is worth
-more to an employer in this industry than most certificates.
+Reading the Handbook or cloning a public repository does not require an
+account. The walkthrough below is useful for Academy participants and
+hands-on learners; read-only learners may skip it.
 
-@tab The Academy platform
+@tab Academy platform / WCB
 
-Where cohort operations happen: your application, mission submissions, review
-feedback, points and progress.
+WCB sign-in uses GitHub. The platform supports Academy cohort operations,
+including application and access, formal task submissions, reviewer feedback,
+points and progress. The Handbook
+contains the canonical lessons, task instructions, completion criteria and
+project requirements. Use the [Blockchain@NTU Academy page on WCB](https://web3career.build/en/programs/blockchain-ntu-academy)
+for Academy access and participation information.
 
-The handbook and the platform have a clean division of labour:
-
-| Area | Handbook | Platform |
-|---|---|---|
-| Learning material | ✅ canonical | short operational copy |
-| Foundation Anchor Mission instructions | ✅ canonical | short operational copy |
-| Deep Dive Part-task requirements | ✅ canonical | short operational copy |
-| Proof of Work milestone requirements | ✅ canonical | short operational copy |
-| Submitting work | — | ✅ |
-| Review and feedback | — | ✅ |
-| Points, progress, leaderboard | — | ✅ |
-
-::: tip If the two ever disagree about what a mission requires
-==**The handbook is correct.**==
+::: tip If the Handbook and WCB differ
+The Handbook is the canonical source for what a task requires.
 :::
 
 @tab <Icon name="simple-icons:telegram" /> Telegram
 
-Where the cohort actually talks. Questions, stuck moments, announcements, and
-the informal help that makes the difference between giving up on a broken setup
-and fixing it in four minutes.
+Academy cohort participants use the relevant Telegram group for questions,
+stuck moments and announcements. Cohort members receive the appropriate group
+link through Academy onboarding. Community access may differ outside the
+cohort; Telegram is not needed to read the Handbook.
 
-Use it. The single strongest predictor of finishing a programme like this is
-whether you asked for help the first time you got stuck.
-
-::: danger Public Web3 chat groups attract impersonators
-Academy organisers will **never** DM you first asking for a seed phrase, a
-private key, a wallet connection, a payment, or an "urgent verification".
-
-Scammers copy real names and profile pictures. Verify in the main group before
-acting on any direct message. See [Part 4](./safety.md).
+::: danger Web3 chat groups attract impersonators
+Never share a seed phrase or private key, connect a wallet, pay money or follow
+an urgent verification link because of a direct message. Check announcements
+through an official Blockchain@NTU channel before acting. See
+[Part 4](./safety.md) for the general safety guidance.
 :::
 ::::
 
 ### The two rules
 
-::: danger These hold throughout the Academy and have no exceptions
-==**1. Testnet only for transactions and wallet actions.**== Any Academy
+::: danger These rules apply throughout Academy learning
+==**1. Testnet only for required transactions and wallet actions.**== Any required
 activity that sends a transaction, deploys a contract, performs a state-changing
 wallet action, or otherwise requires funds or an on-chain signature must use
 testnet only. Some lessons may ask you to inspect public mainnet data in a block
 explorer without connecting a wallet or sending anything. Testnet coins are free
-and worth nothing. No mission will ever require real money or a wallet holding
-real assets. If a mission appears to ask this, stop and ask in the group.
+and worth nothing. No learning task requires real money or a wallet holding
+real assets. If an instruction appears to ask this, do not proceed.
 
-==**2. Nobody asks for your keys.**== No reviewer, organiser or committee member
-will ever ask for your seed phrase or private key. Anyone who does is not who
-they claim to be, regardless of what their profile says.
+==**2. Nobody in the Academy should ask for your keys.**== Never share your
+seed phrase or private key with a person, website or support service. Anyone
+who asks is unsafe, regardless of their role or profile. Verify unexpected
+messages through a known official channel.
 :::
 
 ## Landscape
@@ -197,7 +191,13 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
 | **Pull request** | A proposed change, opened for review before it is merged. Reviewers can discuss and test it in one place |
 | **Fork** | Your own copy of somebody else's repository. It lets you experiment or propose changes without directly changing the original |
 
-## Guided walkthrough
+## GitHub setup for Academy and hands-on work
+
+If you are only reading, skip this walkthrough. Academy cohort participants
+need a GitHub account for WCB sign-in. Independent hands-on learners can create
+one now or wait until an exercise asks them to create or push a repository.
+Creating the practice repository below is useful, but is not required just to
+sign in to WCB.
 
 :::: steps
 1. **Create your GitHub account**
@@ -205,29 +205,27 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
    Go to [github.com](https://github.com) and choose **Sign up**. Use an email
    address you will still have after you graduate.
 
-   Pick a username you would be comfortable putting on a CV — it appears in
-   every URL of every project you touch, and changing it later breaks existing
-   links.
+   Pick a username you would be comfortable sharing: it appears in your
+   repository URLs.
 
    Verify your email. *You should now be able to reach your profile at
    `github.com/your-username`.*
 
 2. **Turn on two-factor authentication**
 
-   **Settings → Password and authentication → Two-factor authentication.** An
-   authenticator app is stronger than SMS. GitHub requires 2FA for accounts that
-   contribute code, so doing it now avoids being locked out later.
+   Open **Settings → Password and authentication → Two-factor authentication**.
+   An authenticator app is stronger than SMS. Two-factor authentication is
+   recommended for account security.
 
    ::: tip Students
    The [GitHub Student Developer Pack](https://education.github.com/pack) is
-   free with an NTU email and includes tools you will meet later. Optional, but
-   it costs five minutes.
+   optional and not needed for this curriculum.
    :::
 
-3. **Make your first repository**
+3. **Make a practice repository**
 
    From your profile choose **Repositories → New**. Name it
-   `blockchain-ntu-academy`, set it **Public**, tick **Add a README file**, and
+   `web3-learning-notes`, set it **Public**, tick **Add a README file**, and
    choose **Create repository**.
 
 4. **Edit the README and commit**
@@ -235,61 +233,73 @@ Terms you will see on GitHub this week. Week 4 covers GitHub properly.
    Open `README.md`, choose the pencil icon, and replace the contents:
 
    ```markdown
-   # Blockchain@NTU Academy
+   # My Web3 Learning Notes
 
-   Learning notes and progress for Blockchain@NTU Academy.
+   Notes and evidence from my Web3 learning.
 
-   ## What I want from this programme
+   ## What I want to learn
 
    - Understand how blockchains actually work
    - Build something small I can show
    ```
 
-   Choose **Commit changes**, write a short message like `docs: add README`, and
-   commit. *You should now see your text rendered as a formatted page, and a
-   commit count of 2.*
+   Choose **Commit changes**, write a short message such as `docs: add README`,
+   and commit. *You should now see the formatted text and a commit count of 2.*
 
-   That is the whole GitHub loop: **edit, describe the change, commit.**
-   Everything else is a variation on it.
+   That is the basic GitHub loop: **edit, describe the change, commit.**
 
-5. **Open your learning page on Web3CareerBuild (WCB)**
-
-   If your Academy application has been approved, open the **Learning** panel
-   in WCB.
-
-   You should see the Academy learning page with the **recommended reading
-   order, handbook links, and your current task**. Use this page as your
-   starting point each week. The handbook remains the source of truth for the
-   learning material and task requirements.
-
-6. **Join the Academy Telegram group**
-
-   Use the invite in your acceptance email, and post a one-line introduction:
-   what you study, and one thing you want to understand by the end of the
-   Foundation.
 ::::
+
+## Academy cohort onboarding
+
+The GitHub walkthrough above is Step 1. The following steps are for Academy
+cohort participants; independent readers can skip them and continue with the
+public Handbook.
+
+### Step 2 — Open the Academy on WCB
+
+Use the [Blockchain@NTU Academy page on WCB](https://web3career.build/en/programs/blockchain-ntu-academy)
+to check current participation details and access. WCB uses GitHub sign-in.
+Follow the access route shown there; if no organised offering is available,
+the public Handbook remains available for independent learning.
+
+### Step 3 — Open the Academy Learning area
+
+Once your Academy access is active, open the **Learning** panel in WCB and
+select the Academy learning page. It shows the recommended reading order,
+Handbook links and current task. Use the Handbook as the canonical source for
+what to learn and what each task requires.
 
 <figure class="academy-shot">
   <img src="/images/getting-started/02-platform-dashboard.png" alt="The Blockchain@NTU Academy learning page in WCB, showing the Learning panel with the recommended reading order, handbook links and current task." />
   <figcaption>Once approved, open the Learning panel to see what to read and work on next.</figcaption>
 </figure>
 
+### Step 4 — Join the relevant Academy Telegram group
+
+Use the group invitation provided through official Academy onboarding for
+questions, stuck moments and announcements. Verify unexpected messages through
+a known official channel. Never share a seed phrase or private key, connect a
+wallet or pay money because of a direct message.
+
 ## Worked example
 
 Here is what a good first week of setup looks like, and what it is worth.
 
-Someone joining with no technical background creates a GitHub account under a
-sensible username, turns on 2FA, and pushes one commit to a README. Total time:
-about fifteen minutes. Nothing about it is impressive.
+An Academy participant or hands-on learner can create a GitHub account, turn
+on 2FA and make a first commit to a README. The account supports WCB sign-in and
+later GitHub tasks; the practice repository is preparation, not an Academy
+submission requirement.
 
-**In the full programme, eight weeks later,** that same repository holds their
-Week 3 contract, their Week 4 Track Selection Card, Deep Dive work and final
-Proof of Work with a README explaining what they built and what they would do
-next. The commit history shows it accumulating week by week.
+**By W10,** if you choose a repository-based project, that repository can hold
+your code, reproducible work and project evidence, with a README explaining
+what was built and what remains to do. Its commit history shows how the work
+developed over time.
 
-::: important The value is not any single commit
-It is that there is a visible, dated trail of someone learning in public — which
-is the thing this industry actually reads.
+::: important GitHub is a tool, not the project format
+A repository is useful for Builder work and for Researcher work that benefits
+from reproducible code or data. A Researcher project may also be an article,
+report or another reviewable format.
 :::
 
 ::: details Further exploration — optional, not assessed
