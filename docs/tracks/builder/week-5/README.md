@@ -2,7 +2,7 @@
 track: builder
 week: 5
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Builder W5 — Programmatic Web3 Development"
 ---
 

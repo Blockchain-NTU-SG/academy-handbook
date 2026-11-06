@@ -3,7 +3,7 @@ week: 4
 day: 6
 title: "Track Selection Card"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Developer resources"
@@ -24,9 +24,10 @@ sources:
 
 This is the last page of the Foundation. The curriculum continues into a
 Builder or Researcher Deep Dive in Weeks 5–8. **This card is not your final
-Project Brief. Your track choice is fixed through W10, but you are not
-committing to a final topic yet.** Your domain, question and project idea may
-evolve during the Deep Dive; W9 is where you scope the brief after feedback.
+Project Brief. Your track choice guides the Deep Dive, while W9–W10 Project
+Work applies the capability you develop there.** You are not committing to a
+final topic yet. Your domain, question and project idea may evolve during the
+Deep Dive; W9 is where you scope the brief after feedback.
 
 Completing this card as part of the Week 4 Anchor Mission is the final shared
 Foundation output. It is a useful map of what you might build or investigate
@@ -41,7 +42,7 @@ you and what you still need to learn.
 ## Learning objectives
 
 - Distinguish the Builder and Researcher ways of working
-- Select a Builder or Researcher track for the W5–W10 capability path
+- Select a Builder or Researcher track for the W5–W8 Deep Dive
 - Identify current knowledge gaps and explain why the selected track fits the kind of work you want to practise
 
 ## Core
@@ -68,9 +69,11 @@ evidence-backed analysis, measurement or other defensible research artefact.
 Write one or two lines for each field. Keep the domain and final project topic open.
 
 :::: steps
-1. **Selected track** — Builder or Researcher. This selection remains your Academy path through W10.
+1. **Selected track** — Builder or Researcher for the W5–W8 Deep Dive. W9–W10
+   Project Work applies the capability developed in that path.
 
-   Choose the kind of work you want to practise through the Deep Dive and Proof of Work.
+   Choose the kind of work you want to practise through the Deep Dive and apply
+   in Project Work.
 
 2. **Topics or domains of interest** — what areas, systems or questions are
    currently catching your attention?
@@ -86,9 +89,10 @@ Write one or two lines for each field. Keep the domain and final project topic o
 ::::
 
 ::: tip This is not your Project Brief
-Your track is fixed through W10. Your domain, question and project deliverable
-may evolve during W5–W8. W9 is where you define the project scope and revise the
-brief after feedback.
+Your selected track defines the capability path for W5–W8. W9–W10 Project
+Work applies that capability. Your domain, question and project deliverable may
+evolve during the Deep Dive; W9 is where you define the project scope and revise
+the brief after feedback.
 :::
 
 ### What comes next

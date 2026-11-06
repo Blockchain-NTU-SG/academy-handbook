@@ -3,7 +3,7 @@ week: 1
 day: 6
 title: "Wallets, accounts and keys"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Ethereum accounts"

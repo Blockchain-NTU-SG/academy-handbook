@@ -4,7 +4,7 @@ week: 7
 day: 2
 title: "Simulation, debugging and tracing"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "50 min hands-on"
 points: 100
 sources:

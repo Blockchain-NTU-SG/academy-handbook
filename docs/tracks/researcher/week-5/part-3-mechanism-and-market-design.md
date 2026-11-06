@@ -4,7 +4,7 @@ week: 5
 day: 3
 title: "Mechanism and market design"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "40 min"
 points: 100
 sources:

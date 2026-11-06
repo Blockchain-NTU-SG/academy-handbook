@@ -4,7 +4,7 @@ week: 7
 day: 1
 title: "On-chain evidence and trace semantics"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "35 min"
 points: 100
 sources:

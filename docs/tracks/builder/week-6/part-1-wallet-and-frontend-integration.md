@@ -4,7 +4,7 @@ week: 6
 day: 1
 title: "Wallet and frontend integration"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "50 min hands-on"
 points: 100
 sources:

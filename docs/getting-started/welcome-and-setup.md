@@ -3,7 +3,7 @@ week: 0
 day: 1
 title: "Welcome to Blockchain@NTU Academy"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "30 min hands-on"
 sources:
   - name: "GitHub Docs — Creating an account"
@@ -67,12 +67,12 @@ wallets, Ethereum, smart contracts and the wider industry. You do not choose a
 specialism yet, because you cannot sensibly choose one before you know what is
 out there.
 
-**Weeks 5–8 are the Deep Dive.** At the end of Week 4,
-you select Builder or Researcher and stay on that capability path through W10,
-building transferable skills through three reviewable Part tasks each week.
-Your domain, research question or project idea can evolve during W5–W8. In W9,
-you scope the Project Brief and seek feedback; in W10, you produce the final
-reviewable project.
+**Weeks 5–8 are the Deep Dive.** At the end of Week 4, you select Builder or
+Researcher for the Deep Dive and build transferable skills through three
+reviewable Part tasks each week. W9–W10 Project Work applies the capability
+developed in that selected path. Your domain, research question or project idea
+can evolve during W5–W8. In W9, you scope the Project Brief and seek feedback;
+in W10, you produce the final reviewable project.
 
 ### The weekly rhythm
 
@@ -249,6 +249,38 @@ sign in to WCB.
    That is the basic GitHub loop: **edit, describe the change, commit.**
 
 ::::
+
+## Academy cohort onboarding
+
+The GitHub walkthrough above is Step 1. The following steps are for Academy
+cohort participants; independent readers can skip them and continue with the
+public Handbook.
+
+### Step 2 — Open the Academy on WCB
+
+Use the [Blockchain@NTU Academy page on WCB](https://web3career.build/en/programs/blockchain-ntu-academy)
+to check current participation details and access. WCB uses GitHub sign-in.
+Follow the access route shown there; if no organised offering is available,
+the public Handbook remains available for independent learning.
+
+### Step 3 — Open the Academy Learning area
+
+Once your Academy access is active, open the **Learning** panel in WCB and
+select the Academy learning page. It shows the recommended reading order,
+Handbook links and current task. Use the Handbook as the canonical source for
+what to learn and what each task requires.
+
+<figure class="academy-shot">
+  <img src="/images/getting-started/02-platform-dashboard.png" alt="The Blockchain@NTU Academy learning page in WCB, showing the Learning panel with the recommended reading order, handbook links and current task." />
+  <figcaption>Once approved, open the Learning panel to see what to read and work on next.</figcaption>
+</figure>
+
+### Step 4 — Join the relevant Academy Telegram group
+
+Use the group invitation provided through official Academy onboarding for
+questions, stuck moments and announcements. Verify unexpected messages through
+a known official channel. Never share a seed phrase or private key, connect a
+wallet or pay money because of a direct message.
 
 ## Worked example
 

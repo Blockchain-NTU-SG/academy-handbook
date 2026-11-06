@@ -4,7 +4,7 @@ week: 8
 day: 3
 title: "Independent builder challenge"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "120 min hands-on"
 points: 100
 sources:

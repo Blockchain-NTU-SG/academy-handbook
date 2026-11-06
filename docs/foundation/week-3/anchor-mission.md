@@ -3,7 +3,7 @@ week: 3
 title: "Deploy and explain your own contract"
 points: 100
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 ---
 
 # Week 3 — Anchor Mission

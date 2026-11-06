@@ -3,7 +3,7 @@ week: 2
 day: 2
 title: "Comparing blockchains and their trade-offs"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Consensus mechanisms"

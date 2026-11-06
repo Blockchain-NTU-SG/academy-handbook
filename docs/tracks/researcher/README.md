@@ -1,7 +1,7 @@
 ---
 track: researcher
 status: review
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Researcher Deep Dive"
 ---
 
@@ -19,10 +19,10 @@ methods learners can later apply to NFTs, stablecoins, real-world assets
 (RWA), prediction markets, DePIN, AI × Web3, infrastructure, governance or
 future domains.
 
-The track selected at the end of Week 4 remains the learner's capability path
-through W10. The application domain, research question and project idea can
-evolve through W5–W8; W9 is when the learner scopes a realistic Project Brief
-and receives feedback.
+Researcher is the selected capability path for W5–W8. W9–W10 Project Work
+applies the research capability developed in the Deep Dive. The application
+domain, research question and project idea can evolve through W5–W8; W9 is when
+the learner scopes a realistic Project Brief and receives feedback.
 
 ## Weeks
 

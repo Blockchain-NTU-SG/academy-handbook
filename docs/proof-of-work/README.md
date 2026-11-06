@@ -1,6 +1,6 @@
 ---
 status: review
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Project Work"
 ---
 

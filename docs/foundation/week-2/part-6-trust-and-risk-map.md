@@ -3,7 +3,7 @@ week: 2
 day: 6
 title: "The trust and risk map"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "15 min"
 sources:
   - name: "ethereum.org — Security"

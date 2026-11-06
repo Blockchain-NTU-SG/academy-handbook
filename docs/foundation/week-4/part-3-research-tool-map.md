@@ -3,7 +3,7 @@ week: 4
 day: 3
 title: "Which tool answers which question"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "25 min"
 sources:
   - name: "Messari Research"

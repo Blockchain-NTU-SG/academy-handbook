@@ -4,7 +4,7 @@ week: 6
 day: 1
 title: "Collateral, credit and DeFi economics"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "40 min"
 points: 100
 sources:

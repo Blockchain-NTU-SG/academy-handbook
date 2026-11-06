@@ -2,7 +2,7 @@
 track: builder
 week: 8
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Builder W8 — Integration, Shipping and Independence"
 ---
 

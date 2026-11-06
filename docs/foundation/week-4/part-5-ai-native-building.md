@@ -3,7 +3,7 @@ week: 4
 day: 5
 title: "AI-native building"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — Smart contract security"

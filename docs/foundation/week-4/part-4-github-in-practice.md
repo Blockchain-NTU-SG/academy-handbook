@@ -3,7 +3,7 @@ week: 4
 day: 4
 title: "GitHub in practice"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "30 min"
 sources:
   - name: "GitHub Docs — About repositories"

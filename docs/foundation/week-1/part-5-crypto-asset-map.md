@@ -3,7 +3,7 @@ week: 1
 day: 5
 title: "What crypto assets actually are"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Stablecoins"

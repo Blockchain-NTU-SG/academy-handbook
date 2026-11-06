@@ -3,7 +3,7 @@ week: 4
 title: "Track Selection Card and Mini Project Map"
 points: 100
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 ---
 
 # Week 4 — Anchor Mission
@@ -25,8 +25,9 @@ topic remains flexible.
 ::: important This mission is the bridge
 Every other Foundation Anchor Mission looked backwards at what you learned. This
 one looks forward by asking what kind of work you want to practise and what you
-still need to learn. Once selected, the track remains fixed through W10; your
-domain or topic may evolve during the Deep Dive before the W9 Project Brief.
+still need to learn. The selected track guides the W5–W8 Deep Dive. W9–W10
+Project Work applies the capability you develop there; your domain or topic may
+evolve during the Deep Dive before the W9 Project Brief.
 :::
 
 ## What to submit
@@ -36,7 +37,8 @@ domain or topic may evolve during the Deep Dive before the W9 Project Brief.
 A table is fine. One or two lines each.
 
 :::: steps
-1. **Selected track** — Builder or Researcher. This remains your learning path through W10.
+1. **Selected track** — Builder or Researcher for the W5–W8 Deep Dive. W9–W10
+   Project Work applies the capability developed in that path.
 
 2. **Topics or domains currently interesting to you** — name the areas, systems
    or questions that caught your attention in Foundation

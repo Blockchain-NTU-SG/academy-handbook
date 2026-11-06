@@ -2,7 +2,7 @@
 track: builder
 week: 7
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Builder W7 — Reliable Web3 Engineering"
 ---
 

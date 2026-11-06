@@ -4,7 +4,7 @@ week: 6
 day: 3
 title: "Independent system analysis"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "45 min"
 points: 100
 sources:

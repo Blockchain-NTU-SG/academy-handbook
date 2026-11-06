@@ -4,7 +4,7 @@ week: 6
 day: 3
 title: "End-to-end vertical slice"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "75 min hands-on"
 points: 100
 sources:

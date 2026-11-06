@@ -4,7 +4,7 @@ week: 5
 day: 1
 title: ""
 status: stub
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: ""
 points: 100
 sources:
@@ -17,7 +17,7 @@ sources:
 Use for one W5–W8 Deep Dive Part.
 Each Part teaches one transferable hard skill and contains one lightweight,
 reviewable hands-on task worth 100 points. Detailed content belongs to the
-curriculum maintainers; do not use this template to create a generic placeholder lesson.
+Education team; do not use this template to create a generic placeholder lesson.
 
 The Part task is part of the lesson, not extra homework. Keep it focused on the
 one hard skill taught here; do not turn every Part into a standalone project,

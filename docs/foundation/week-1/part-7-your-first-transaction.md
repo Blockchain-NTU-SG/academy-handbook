@@ -3,7 +3,7 @@ week: 1
 day: 7
 title: "Your first transaction"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "45 min hands-on"
 sources:
   - name: "ethereum.org — Networks"

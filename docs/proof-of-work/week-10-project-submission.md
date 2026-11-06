@@ -1,7 +1,7 @@
 ---
 week: 10
 status: review
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Week 10 — Project Submission"
 ---
 

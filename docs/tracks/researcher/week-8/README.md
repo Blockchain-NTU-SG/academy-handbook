@@ -2,7 +2,7 @@
 track: researcher
 week: 8
 status: review
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Researcher W8 — Valuation, Risk and Investigation"
 ---
 

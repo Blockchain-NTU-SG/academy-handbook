@@ -3,7 +3,7 @@ week: 3
 day: 3
 title: "Remix lab: deploy your first contract"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "60 min hands-on"
 sources:
   - name: "Remix IDE"

@@ -20,10 +20,10 @@ independently.
 
 The curriculum has two Deep Dive tracks: **Builder**, who learns to compose
 unfamiliar Web3 systems, and **Researcher**, who learns to decompose them. At
-the end of Week 4, the learner selects one track and stays on that capability
-path through W10. The domain, research question and project deliverable may
-evolve during W5–W8; W9 is where the learner scopes the project brief after
-feedback.
+the end of Week 4, the learner selects Builder or Researcher for the W5–W8
+Deep Dive. W9–W10 Project Work applies the capability developed in that
+selected path. The domain, research question and project deliverable may evolve
+during W5–W8; in W9 the learner scopes the project brief after feedback.
 Domains such as DeFi, stablecoins, NFTs, RWA, prediction markets, DePIN,
 infrastructure, governance and AI × Web3 are cases and application lenses, not
 separate tracks.

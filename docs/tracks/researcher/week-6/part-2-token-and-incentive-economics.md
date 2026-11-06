@@ -4,7 +4,7 @@ week: 6
 day: 2
 title: "Token and incentive economics"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "45 min"
 points: 100
 sources:

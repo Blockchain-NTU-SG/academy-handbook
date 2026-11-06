@@ -4,7 +4,7 @@ week: 8
 day: 2
 title: "Deployment and reproducibility"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "75 min hands-on"
 points: 100
 sources:

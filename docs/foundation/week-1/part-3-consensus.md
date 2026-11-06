@@ -3,7 +3,7 @@ week: 1
 day: 3
 title: "Consensus, and how chains agree"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Consensus mechanisms"

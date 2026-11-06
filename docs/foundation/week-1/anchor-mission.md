@@ -3,7 +3,7 @@ week: 1
 title: "Your first on-chain interaction"
 points: 100
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 ---
 
 # Week 1 — Anchor Mission

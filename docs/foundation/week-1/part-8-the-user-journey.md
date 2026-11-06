@@ -3,7 +3,7 @@ week: 1
 day: 8
 title: "How it all connects: one user journey"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — Stablecoins"

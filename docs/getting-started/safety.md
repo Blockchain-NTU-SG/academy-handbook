@@ -3,7 +3,7 @@ week: 0
 day: 4
 title: "Staying safe: what you can lose and how"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Security"

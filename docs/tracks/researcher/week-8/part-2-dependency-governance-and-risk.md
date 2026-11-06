@@ -4,7 +4,7 @@ week: 8
 day: 2
 title: "Dependency, governance and risk"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "50 min hands-on"
 points: 100
 sources:

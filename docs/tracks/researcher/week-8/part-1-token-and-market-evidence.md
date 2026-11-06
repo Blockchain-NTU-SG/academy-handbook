@@ -4,7 +4,7 @@ week: 8
 day: 1
 title: "Token, liquidity and valuation evidence"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "60 min hands-on"
 points: 100
 sources:

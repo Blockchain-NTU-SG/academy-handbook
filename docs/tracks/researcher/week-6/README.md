@@ -2,7 +2,7 @@
 track: researcher
 week: 6
 status: review
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Researcher W6 — Protocol Economics and System Analysis"
 ---
 

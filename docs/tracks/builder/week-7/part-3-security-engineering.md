@@ -4,7 +4,7 @@ week: 7
 day: 3
 title: "Security engineering"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "45 min hands-on"
 points: 100
 sources:

@@ -4,7 +4,7 @@ week: 7
 day: 3
 title: "Querying and measurement design"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "65 min hands-on"
 points: 100
 sources:

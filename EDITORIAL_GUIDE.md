@@ -255,10 +255,12 @@ Operational dates age the curriculum unnecessarily; evidentiary dates establish
 what the evidence represents. Retain dates for source publication, retrieval,
 observation windows and technically relevant history, but not time-bound rollout.
 
-Curriculum content must remain usable without Academy participation
-infrastructure. Links to organised participation belong on dedicated meta pages;
-lessons, tasks and completion criteria must not depend on a cohort, platform or
-communication channel.
+The Handbook is the public, canonical learning source for Blockchain@NTU
+Academy. Academy participation may reference WCB, submission and review
+workflows, and cohort communication where operationally relevant. Independent
+readers should still be able to understand and use the learning material without
+formal Academy participation. Avoid embedding volatile cohort dates, intake
+status or private operational data in curriculum pages.
 
 ## Screenshots and visuals
 
@@ -293,7 +295,7 @@ automatically respond by adding more content.
 
 ## What requires curriculum approval
 
-Curriculum maintainers approve changes to week structure, learning outcomes,
+Education leadership approves changes to week structure, learning outcomes,
 assessment architecture, Anchor Missions, specialisation structure and new Core
 requirements. Maintainers may handle ordinary typos, broken links, clarity
 improvements, examples, factual updates, screenshots and source updates when

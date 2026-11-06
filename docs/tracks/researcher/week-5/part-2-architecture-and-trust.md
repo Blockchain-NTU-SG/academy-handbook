@@ -4,7 +4,7 @@ week: 5
 day: 2
 title: "Architecture and trust reconstruction"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "45 min"
 points: 100
 sources:

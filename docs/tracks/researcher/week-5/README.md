@@ -2,7 +2,7 @@
 track: researcher
 week: 5
 status: review
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Researcher W5 — Deconstruct Blockchain Systems"
 ---
 

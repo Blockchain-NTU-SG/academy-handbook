@@ -4,7 +4,7 @@ week: 5
 day: 1
 title: "Run the stack"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "35 min hands-on"
 points: 100
 sources:

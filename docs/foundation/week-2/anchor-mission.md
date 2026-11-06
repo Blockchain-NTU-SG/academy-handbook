@@ -3,7 +3,7 @@ week: 2
 title: "Read your own transaction, and compare two chains"
 points: 100
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 ---
 
 # Week 2 — Anchor Mission

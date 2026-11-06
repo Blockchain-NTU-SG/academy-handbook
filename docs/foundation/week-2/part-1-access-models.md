@@ -3,7 +3,7 @@ week: 2
 day: 1
 title: "Public, private and consortium chains"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — Enterprise Ethereum"

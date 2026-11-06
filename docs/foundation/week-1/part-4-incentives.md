@@ -3,7 +3,7 @@ week: 1
 day: 4
 title: "Why anyone runs the network"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — Proof of stake rewards and penalties"

@@ -2,7 +2,7 @@
 track: researcher
 week: 7
 status: review
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Researcher W7 — On-Chain Evidence and Measurement"
 ---
 

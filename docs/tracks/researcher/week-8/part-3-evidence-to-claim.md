@@ -4,7 +4,7 @@ week: 8
 day: 3
 title: "Independent investigation brief"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "50 min"
 points: 100
 sources:

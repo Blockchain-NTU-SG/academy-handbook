@@ -2,7 +2,7 @@
 track: builder
 week: 6
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Builder W6 — Web3 App Integration"
 ---
 

@@ -3,7 +3,7 @@ week: 0
 day: 5
 title: "Regulatory awareness: Singapore and global orientation"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "20 min"
 next: /foundation/
 sources:

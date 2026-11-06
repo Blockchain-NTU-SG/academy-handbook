@@ -51,11 +51,11 @@ named and place it — what sector, what kind of entity, what problem it claims 
 solve — without knowing anything specific about it.
 
 **Track selection.** Part 6 and the mission help you choose Builder or Researcher,
-record the domains that interest you and identify your gaps. Once selected, the
-track remains your learning path through W10. The Track Selection Card
-transitions into the selected W5–W8 Deep Dive; the domain, question and project
-idea may evolve during that work. W9 is where the learner scopes the Project
-Brief after feedback.
+record the domains that interest you and identify your gaps. At the end of
+Week 4, learners select Builder or Researcher for the W5–W8 Deep Dive. W9–W10
+Project Work applies the capability developed in that path. The domain,
+question and project idea may evolve during the Deep Dive; W9 is where the
+learner scopes the Project Brief after feedback.
 
 ::: important The most transferable page in the handbook
 [Part 3](./part-3-research-tool-map.md) teaches which source answers which kind of

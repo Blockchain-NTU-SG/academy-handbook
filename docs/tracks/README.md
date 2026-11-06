@@ -1,10 +1,11 @@
 # Deep Dive tracks
 
 After the shared Foundation, the curriculum offers two Deep Dive tracks. At
-the end of Week 4, each learner selects Builder or Researcher. The selected
-track remains the learner's capability path through W10. The domain, project
-topic, research question and final deliverable can evolve during W5–W8; W9 is
-when the Project Brief and feedback session set a realistic final scope.
+the end of Week 4, each learner selects Builder or Researcher for the W5–W8
+Deep Dive. W9–W10 Project Work applies the capability developed in that
+selected path. The domain, project topic, research question and final deliverable
+can evolve during W5–W8; W9 is when the Project Brief and feedback session set a
+realistic final scope.
 
 | Track | Positioning | Deep Dive |
 |---|---|---|

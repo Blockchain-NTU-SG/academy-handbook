@@ -1,7 +1,7 @@
 ---
 week: 9
 status: review
-owner: "Curriculum maintainers"
+owner: "Education Team"
 title: "Week 9 — Project Brief + Feedback Session"
 ---
 

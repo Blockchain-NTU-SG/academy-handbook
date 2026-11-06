@@ -4,7 +4,7 @@ week: 7
 day: 2
 title: "Entity and fund-flow investigation"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "40 min"
 points: 100
 sources:

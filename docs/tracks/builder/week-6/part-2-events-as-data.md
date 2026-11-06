@@ -4,7 +4,7 @@ week: 6
 day: 2
 title: "Events as data"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "40 min hands-on"
 points: 100
 sources:

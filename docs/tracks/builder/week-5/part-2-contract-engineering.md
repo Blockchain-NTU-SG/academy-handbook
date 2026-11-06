@@ -4,7 +4,7 @@ week: 5
 day: 2
 title: "Contract engineering"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "45 min hands-on"
 points: 100
 sources:

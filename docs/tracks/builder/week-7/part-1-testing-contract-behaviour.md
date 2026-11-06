@@ -4,7 +4,7 @@ week: 7
 day: 1
 title: "Testing contract behaviour"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Education Team"
 reading_time: "40 min hands-on"
 points: 100
 sources:

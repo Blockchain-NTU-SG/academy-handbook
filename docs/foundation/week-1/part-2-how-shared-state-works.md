@@ -3,7 +3,7 @@ week: 1
 day: 2
 title: "How shared state works"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "20 min"
 sources:
   - name: "ethereum.org — Blocks"

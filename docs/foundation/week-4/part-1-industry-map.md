@@ -3,7 +3,7 @@ week: 4
 day: 1
 title: "The Web3 industry map"
 status: drafting
-owner: "Curriculum maintainers"
+owner: "Director of Education"
 reading_time: "25 min"
 sources:
   - name: "ethereum.org — Decentralized finance (DeFi)"
