@@ -22,26 +22,27 @@ sources:
 
 # Week 4 · Part 6 — Track Selection Card
 
-This is the last page of the Foundation. The full Academy continues into a
-Builder or Researcher Deep Dive in Weeks 5–6. **This card is not your final PoW
-proposal. Your track choice is fixed for W5–W8, but you are not committing to a
-final topic yet.** Your domain, question and final PoW idea may evolve through
-the Deep Dive and W7.
+This is the last page of the Foundation. The curriculum continues into a
+Builder or Researcher Deep Dive in Weeks 5–8. **This card is not your final
+Project Brief. Your track choice guides the Deep Dive, while W9–W10 Project
+Work applies the capability you develop there.** You are not committing to a
+final topic yet. Your domain, question and project idea may evolve during the
+Deep Dive; W9 is where you scope the brief after feedback.
 
-For Foundation Pilot learners, completing this card as part of the Week 4 Anchor
-Mission is the final required Foundation output. It remains a useful map of what
-you might build or investigate next.
+Completing this card as part of the Week 4 Anchor Mission is the final shared
+Foundation output. It is a useful map of what you might build or investigate
+next.
 
 ::: important The useful output is a better next question
 **==One small thing you may want to build or investigate.==** Not a startup, not a
-finished product and not a final PoW scope. Use the card to notice what interests
+finished product and not a final Project Brief. Use the card to notice what interests
 you and what you still need to learn.
 :::
 
 ## Learning objectives
 
 - Distinguish the Builder and Researcher ways of working
-- Select a Builder or Researcher track for the W5–W8 capability path
+- Select a Builder or Researcher track for the W5–W8 Deep Dive
 - Identify current knowledge gaps and explain why the selected track fits the kind of work you want to practise
 
 ## Core
@@ -65,12 +66,14 @@ evidence-backed analysis, measurement or other defensible research artefact.
 
 ### Your Track Selection Card
 
-Write one or two lines for each field. Keep the domain and final PoW topic open.
+Write one or two lines for each field. Keep the domain and final project topic open.
 
 :::: steps
-1. **Selected track** — Builder or Researcher. This selection remains your Academy path through W8.
+1. **Selected track** — Builder or Researcher for the W5–W8 Deep Dive. W9–W10
+   Project Work applies the capability developed in that path.
 
-   Choose the kind of work you want to practise through the Deep Dive and Proof of Work.
+   Choose the kind of work you want to practise through the Deep Dive and apply
+   in Project Work.
 
 2. **Topics or domains of interest** — what areas, systems or questions are
    currently catching your attention?
@@ -85,20 +88,20 @@ Write one or two lines for each field. Keep the domain and final PoW topic open.
    you want to practise, not to its prestige.
 ::::
 
-::: tip This is not your PoW proposal
-Your track is fixed for W5–W8. Your domain, question and final deliverable may
-evolve through Deep Dive; W7 combines deciding the scope with producing an MVP /
-V1.
+::: tip This is not your Project Brief
+Your selected track defines the capability path for W5–W8. W9–W10 Project
+Work applies that capability. Your domain, question and project deliverable may
+evolve during the Deep Dive; W9 is where you define the project scope and revise
+the brief after feedback.
 :::
 
 ### What comes next
 
 | Stage | What it does |
 |---|---|
-| W5 Deep Dive | Six Builder or Researcher Part tasks, each worth 100 points |
-| W6 Deep Dive | Six more Part tasks, each worth 100 points |
-| W7 | Scope + MVP / V1 · 200 points |
-| W8 | Refine + Final PoW · 200 points |
+| W5–W8 Deep Dive | Three Builder or Researcher Part tasks per week, each worth 100 points |
+| W9 | Project Brief + Feedback Session · 200 points |
+| W10 | Project Submission · 200 points |
 
 ## Landscape
 
@@ -106,13 +109,14 @@ V1.
 - **Researcher** — a track for learning to decompose unfamiliar Web3 systems
 - **Case or application domain** — an area such as stablecoins, DeFi, NFTs or
   governance; it is not a permanent Academy track
-- **PoW topic and domain** — flexible until W7, when scope definition and the
-  first meaningful version happen together
+- **Project topic and domain** — flexible during W5–W8, then scoped in the W9
+  Project Brief after feedback
 
 ::: tip Track kits
 The [Builder Deep Dive](../../tracks/builder/) and [Researcher Deep Dive](../../tracks/researcher/)
-pages are structural scaffolds. The Education team will add the detailed lessons
-and Part tasks later.
+pages contain the current track lessons. Project requirements are described in
+the [W9 Project Brief](../../proof-of-work/week-9-project-brief.md) and
+[W10 Project Submission](../../proof-of-work/week-10-project-submission.md).
 :::
 
 ## Worked example
@@ -130,14 +134,14 @@ yet.
 | **Knowledge gaps** | How attestations work; what freeze functions can and cannot do |
 | **Why it fits** | I want to practise tracing claims and evidence before deciding on a final deliverable |
 
-This is enough to guide Deep Dive learning. It does not decide the final PoW
+This is enough to guide Deep Dive learning. It does not decide the final project
 question, scope or definition of done.
 
 ::: details Further exploration — optional, not assessed
 - Browse [Dune](https://dune.com/) or [DefiLlama](https://defillama.com/) and
   note one question you cannot answer yet.
-- Ask in the Telegram group what kinds of Builder or Researcher work other
-  learners are curious about.
+- Browse public Builder or Researcher project examples and note which kinds of
+  work interest you.
 :::
 
 ::: details Sources and attribution

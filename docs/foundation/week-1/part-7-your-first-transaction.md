@@ -87,9 +87,9 @@ Week 3.
 Take your time. Nothing here is timed, and the habits matter more than the speed.
 
 ::: tip Before you start
-You need about 30 minutes, a desktop browser, and nowhere to be. If a step does
-not look like the screenshot, stop and ask in the Telegram group rather than
-guessing — wallet interfaces change, and the group will know.
+You need about 30 minutes and a desktop browser. Wallet interfaces change; if a
+step differs from the screenshot, check MetaMask's official support guidance and
+do not guess at a transaction or signature.
 :::
 
 :::: steps
@@ -115,7 +115,7 @@ guessing — wallet interfaces change, and the group will know.
      <figcaption>Create a new wallet. Do not import one you already use.</figcaption>
    </figure>
 
-   ::: warning Create a wallet only for the Academy
+   ::: warning Keep this wallet for testnet practice
    This wallet will only ever hold worthless test assets. **Do not reuse a
    wallet that holds real funds** — Week 0's separate-wallets rule starts here.
    :::
@@ -250,8 +250,8 @@ guessing — wallet interfaces change, and the group will know.
    1. Check you pasted the correct wallet address.
    2. Check your wallet is on **Sepolia**, not mainnet.
    3. Try the next faucet in the table.
-   4. If all of them fail, say so in the Telegram group — someone will know
-      which one is working today.
+   4. If all of them fail, stop and try again later. Faucet availability changes;
+      never pay for test ETH or use a wallet holding real assets.
    :::
 
    ::: danger Never pay for testnet ETH

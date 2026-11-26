@@ -1,56 +1,57 @@
-# Reviewing submissions
+# Reviewing Academy submissions
+
+This guide describes the review standard for Academy cohort submissions:
+Foundation Anchor Missions, Deep Dive Part tasks, W9 and W10. The Handbook
+defines the requirements; Academy reviewers assess submitted work against
+those criteria.
 
 ## The standard
 
-> Can the member demonstrate that they genuinely completed the work and understand
-> the important parts of what they submitted?
+Can the learner demonstrate that they completed the required work and
+understand the important parts of what they submitted?
 
-Not academic grading. Not deadline enforcement. Verification of learning.
-The same two-outcome standard applies to Foundation Anchor Missions, Deep Dive
-Part tasks, and the W7/W8 Proof of Work milestones.
+This is not academic grading or deadline enforcement. It is verification of
+learning against the published criteria. The same two-outcome standard applies
+throughout the Academy curriculum.
 
 ## Two outcomes
 
 | Outcome | When |
 |---|---|
-| **Completed** | The deliverable is genuinely done and the member shows reasonable understanding. |
-| **Rejected** | Incomplete, invalid, or not yet demonstrating sufficient understanding. |
+| **Complete** | The submission meets the stated criteria and the learner can explain the important parts. |
+| **Revise** | Work is incomplete, invalid or not yet supported by the required evidence. |
 
-Nothing in between. A rejection always carries short, actionable feedback, and the
-member resubmits as many times as needed. No penalty for finishing late.
+There is nothing in between and no fractional rubric. A Revise outcome carries
+short, actionable feedback. The learner addresses it and resubmits; they may
+revise as many times as needed.
 
 ## How to review one
 
-1. Check every numbered item in the mission's submission list is present.
-2. Open the links. Right network, and they resolve.
-3. Read the written answers. Own words, or copied?
-4. If something is missing, reject with one or two specific sentences saying what.
+1. Check that every required item in the submission checklist is present.
+2. Open evidence links and confirm they resolve and show the correct network or source.
+3. Read explanations for understanding, not polished prose or agreement with your own opinion.
+4. If something is missing, mark Revise and name the criterion and one or two specific changes needed.
 
-Two or three minutes each. If you're spending longer, you're grading.
+## AI-assisted work
 
-## AI-assisted submissions
+Learners may use AI tools where the task allows it. Check whether they can
+explain what generated work does and what might fail if it changed. For
+security-critical logic such as wallet interactions, signatures, permissions,
+transactions, contract state changes and fund movement, the learner should also
+show what they inspected and tested.
 
-Members may use AI agents to produce substantial parts of their work. That is
-allowed and expected.
+## Feedback that helps
 
-The check that works: **can they say what a piece of their submission does, and
-what would break if it changed?** That surfaces understanding in a sentence or two
-without anyone auditing code.
+Avoid: “Incomplete, please resubmit.”
 
-For security-critical logic — wallet interactions, signatures, permissions,
-transactions, contract state changes, fund movement, network and address config,
-secrets — members are expected to have inspected and tested it.
+Prefer: “The transaction link is missing, and the explorer currently points to
+mainnet rather than Sepolia. Add a Sepolia link and confirm the status.”
 
-## Feedback that works
+Name what is missing and what fixes it. The learner should not have to guess.
+Do not ask for secrets or repeat sensitive values in feedback.
 
-Bad: "Incomplete, please resubmit."
-
-Good: "Transaction hash is missing, and the explorer link points to mainnet rather
-than Sepolia. Add both and this is done."
-
-Name what's missing and what fixes it. Members should never have to guess.
-
-## Conflicts
-
-Reviewers may participate in the Academy themselves, but never approve their own
+Reviewers may participate in the Academy, but must not approve their own
 submissions.
+
+Independent readers may use the same published criteria for self-review. That
+does not create a formal Academy review or points record.

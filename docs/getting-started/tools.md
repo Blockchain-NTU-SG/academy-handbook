@@ -51,7 +51,7 @@ and what each is for.
 - Name the right category of tool for a given question, without being told
 - Explain what a block explorer shows you and why that matters
 - Distinguish direct chain records from derived analytics
-- Recognise the tools this programme will actually put in your hands
+- Recognise the tools this curriculum will use
 
 ## Core
 
@@ -65,7 +65,7 @@ use.
 | <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Create a wallet, sign and send transactions | Week 1 |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/etherscan.svg" alt="" aria-hidden="true" /><strong>Etherscan</strong></span> | Check what actually happened on Ethereum | Weeks 1–3 |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/solscan.png" alt="" aria-hidden="true" /><strong>Solscan</strong></span> | The same, for Solana | Landscape |
-| <span class="academy-brand-label"><Icon name="simple-icons:github" /><strong>GitHub</strong></span> | Read a protocol's code, and store Deep Dive or Proof of Work evidence | Weeks 0, 4–8 |
+| <span class="academy-brand-label"><Icon name="simple-icons:github" /><strong>GitHub</strong></span> | Read project code; preserve reproducible work or project evidence when useful. An account is needed to push | Weeks 0, 4–10 |
 | <span class="academy-brand-label"><Icon name="logos:remix-icon" /><strong>Remix</strong></span> | Write and deploy a simple smart contract | Week 3 |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/defillama.jpg" alt="" aria-hidden="true" /><strong>DefiLlama</strong></span> | Compare protocols and chains by size | Weeks 2, 4 |
 | <span class="academy-brand-label"><img class="academy-brand-icon" src="/brand/icons/dune.png" alt="" aria-hidden="true" /><strong>Dune</strong></span> | Explore on-chain data and dashboards | Week 4 |
@@ -75,7 +75,6 @@ use.
 | **Governance forums** | Read proposals before anyone votes | Week 4 |
 | <span class="academy-brand-label"><Icon name="simple-icons:x" /><strong>X</strong></span> | Find out what is happening right now | Week 4 |
 | <span class="academy-brand-label"><Icon name="simple-icons:discord" /><strong>Discord</strong></span> | Find community discussion and support | Week 4 |
-| <span class="academy-brand-label"><Icon name="simple-icons:telegram" /><strong>Telegram</strong></span> | Find community announcements and discussion | Week 4 |
 
 ::: important The teaching idea is one arrow
 > ==**Question → Tool**==
@@ -128,7 +127,7 @@ Week 1 covers this properly.
 
 | Wallet | Chains | Note |
 |---|---|---|
-| <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Ethereum and EVM chains | The default for this programme |
+| <span class="academy-brand-label"><Icon name="logos:metamask-icon" /><strong>MetaMask</strong></span> | Ethereum and EVM chains | The default wallet for this curriculum |
 | <span class="academy-brand-label"><Icon name="token-branded:phantom" /><strong>Phantom</strong></span> | Solana, plus others | The Solana equivalent |
 | <span class="academy-brand-label"><Icon name="token-branded:rabby" /><strong>Rabby</strong></span> | Ethereum and EVM chains | Shows more clearly what you are about to sign |
 
@@ -212,7 +211,7 @@ last, for context rather than proof.
 :::
 
 Also notice what no tool told you: **whether Base is a good investment.** No tool
-on this page answers that, and nothing in this programme is financial advice.
+on this page answers that, and nothing in this curriculum is financial advice.
 
 ::: details Further exploration — optional, not assessed
 - [ethereum.org — Block explorers](https://ethereum.org/developers/docs/data-and-analytics/block-explorers/) — what explorers index and how

@@ -10,7 +10,7 @@ owner: ""
 
 ## What you're doing
 
-One or two sentences. The member should know what they're producing before
+One or two sentences. The learner should know what they're producing before
 reading anything else.
 
 > Missions assess the week's Core learning, not every concept mentioned in
@@ -19,13 +19,13 @@ reading anything else.
 
 ## Why this is the mission
 
-One short paragraph connecting it to the week. Members put more into a task when
+One short paragraph connecting it to the week. Learners put more into a task when
 they can see why it exists.
 
 ## What to submit
 
-A numbered list. Every item is something the member pastes or uploads — nothing
-vague, nothing requiring interpretation.
+A numbered list of evidence or outputs the Academy participant submits. Make
+every item concrete and possible to prepare or link to directly.
 
 1. Your wallet address
 2. The transaction hash
@@ -33,25 +33,27 @@ vague, nothing requiring interpretation.
 4. In two or three sentences: what happened when you sent it
 5. Screenshot of X
 
-The platform accepts text plus up to eight image or PDF uploads. Say explicitly
-which items are text and which are screenshots.
+Say which items are written answers, links, code or files, and describe the
+submission format and any limits in the task itself.
 
 ## Submission checklist
 
-Members tick these before submitting. Reviewers check the same list — that
-symmetry is what makes two-outcome review fair.
+Participants tick these before submitting. Reviewers check the same list; it
+must match the task requirements above.
 
 - [ ] Every numbered item above is included
 - [ ] Links open and point to the right network
 - [ ] Written answers are in your own words
 - [ ] If you used AI, you can explain what it produced and why
 
-## What "completed" looks like
+## For reviewers: what Complete looks like
 
-Written for the reviewer as much as the member. Describes the standard, not a
-score: what a genuinely complete submission contains, and what would send it back.
+Describe the standard, not a score: what complete work contains and what would
+send it back for revision. Independent learners may use the same criteria as a
+self-check.
 
-## If this gets rejected
+## If this is returned for revision
 
-Reassure and direct. Rejection means resubmit, not fail. There is no deadline and
-no penalty for taking longer.
+Reassure and give short, actionable feedback. Revise means the work is not
+complete yet, not that the learner has failed. The participant resubmits after
+addressing the feedback. Do not invent deadlines.

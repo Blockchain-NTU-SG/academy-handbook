@@ -238,7 +238,7 @@ wrong.**
 **How oracle networks reach agreement.**
 
 These are genuinely interesting and they are Further Exploration or advanced
-study beyond the current programme.
+study beyond the current curriculum.
 You need to know what these things are *for* and what they add to your trust
 map. That is enough for Foundation.
 :::

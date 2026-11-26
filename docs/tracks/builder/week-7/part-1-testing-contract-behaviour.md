@@ -1,6 +1,6 @@
 ---
 track: builder
-week: 6
+week: 7
 day: 1
 title: "Testing contract behaviour"
 status: drafting
@@ -26,7 +26,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): this Part uses the Builder starter repository's
+Author note: this Part uses the Builder starter repository's
 Registry contract and its existing Foundry tests as the worked example, so W5
 and W6 stay in one codebase. The hands-on task asks learners to test the
 feature they added in W5 Part 2, which must include a state change, an
@@ -35,7 +35,7 @@ this task in step if either changes. The model answer and reviewer notes are
 kept outside the public handbook.
 -->
 
-# Week 6 · Part 1 — Testing contract behaviour
+# Week 7 · Part 1 — Testing contract behaviour
 
 > **Core question — how do I prove my contract does what I think it does, every
 > time, without clicking through it by hand?**
@@ -54,8 +54,8 @@ as specified. Those tests provide evidence about the behaviours they cover;
 they do not prove that the protocol is safe overall.
 
 ::: tip Picture a pre-flight checklist
-A pilot does not rely on remembering to check the fuel. The same list is run the
-same way before every flight. A test suite is that list for your contract.
+A pre-flight check does not rely on remembering to check the fuel. The same list
+is run the same way before every flight. A test suite is that list for your contract.
 
 Where the picture stops: a checklist only covers what someone wrote down. Tests
 prove the behaviours you wrote tests for, not that the contract is safe overall.
@@ -163,7 +163,7 @@ check:
 | The owner clears a record | The record is deleted, and `RecordUpdated` is emitted with an empty value |
 
 Your own copy also has the feature you added in
-[Week 5 Part 2](../week-5/README.md). That feature has promises of its own, and
+[W5P2](../week-5/part-2-contract-engineering.md). That feature has promises of its own, and
 nothing checks them yet. That is your task.
 
 ### How a Foundry test is laid out
@@ -218,7 +218,7 @@ emitting contract.
 | Edge case | Does it behave correctly right at a boundary? | A focused boundary test |
 
 Event tests matter more than they look. In
-[Week 5](../week-5/README.md) your app read history from `RecordUpdated`
+[W6P2](../week-6/part-2-events-as-data.md) your app read history from `RecordUpdated`
 events. If an event silently stops firing, the contract still "works", but
 every app built on it shows the wrong history.
 
@@ -350,7 +350,7 @@ required for this Part. See the
 ## Hands-on task
 
 The starter's six tests cover the original Registry. Nothing yet covers the
-feature **you** added in Week 5 Part 2. Write those tests.
+feature **you** added in W5P2. Write those tests.
 
 Create a new file in `contracts/test/` (for example
 `contracts/test/MyFeature.t.sol`) and build a suite for your feature that
@@ -379,7 +379,7 @@ purpose" check above to confirm it really guards that rule.
 
 ## Evidence required
 
-- One line naming the feature you added in Week 5 Part 2.
+- One line naming the feature you added in W5P2.
 - Your new test file (a link to the commit, or the file itself).
 - The output of `forge test` showing every test passing.
 - One sentence per new test: the behaviour it protects, and the bug it would
@@ -387,9 +387,7 @@ purpose" check above to confirm it really guards that rule.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Run `forge coverage` to see which lines your tests never reach. See the

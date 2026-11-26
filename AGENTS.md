@@ -21,8 +21,8 @@
 
 ## Validation and delivery
 
-- For documentation changes, run `npm ci`, `npm run docs:check-times` and
-  `npm run docs:build`; inspect rendered pages when layout changes.
+- For documentation changes, run `npm ci`, the docs checks in
+  `CONTRIBUTING.md` and inspect rendered pages when layout changes.
 - Use a scoped `type/short-description` branch and
   `type(scope): summary` commit/PR titles.
 - Keep one logical objective per PR, inspect the final diff for unrelated files,

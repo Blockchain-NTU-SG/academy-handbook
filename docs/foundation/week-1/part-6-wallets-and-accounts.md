@@ -38,7 +38,7 @@ Read [Week 0 Part 4](../../getting-started/safety.md) first if you have not.
 - Explain why a wallet does not contain your coins
 - Describe the relationship between private key, public key, address and recovery phrase
 - Explain the difference between signing and sending, and why signing can be dangerous
-- Explain what a testnet is and why this programme uses one
+- Explain what a testnet is and why this curriculum uses one
 
 ## Core
 
@@ -104,7 +104,7 @@ key.
 ::: danger The recovery phrase is strictly more powerful than any single key
 Anyone holding it holds **every account in that wallet, forever, from anywhere**.
 
-No website, DApp, support agent, reviewer or Academy organiser should ever ask
+No website, DApp, support agent or other person should ever ask
 for it. The normal exception is when **you deliberately restore or import your
 wallet into wallet software that you installed from a verified official source**.
 Never enter it because someone sent you a link, DMed you, or told you to
@@ -175,7 +175,8 @@ tell you plainly, reject it and find out why.
 | Mistakes cost | Real money | Nothing |
 | Used for | Real activity | Learning, building, testing |
 
-**Sepolia** is where everything in this programme happens. Sepolia ETH is free,
+**Sepolia** is where required on-chain practice in this curriculum happens.
+Sepolia ETH is free,
 has no value, and cannot be exchanged for anything. This is deliberate: you
 should build the habit of checking signatures where getting it wrong teaches you
 something and costs nothing.

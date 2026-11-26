@@ -57,53 +57,53 @@ config:
       src: /brand/blockchain-ntu-logo-horizontal-light.png
       alt: Blockchain@NTU
     description: >-
-      Blockchain@NTU Academy combines a public learning handbook with a
+      Blockchain@NTU Academy combines a public learning Handbook with a
       structured cohort experience.
     list:
-      - Anyone can use the Handbook at their own pace. Cohort members follow the same learning path with a weekly rhythm, missions, peer learning, feedback and review through the programme platform.
+      - Academy participants follow the W0–W10 path with a weekly rhythm, missions, peer learning, feedback and review through WCB. Anyone is also welcome to read or follow the same Handbook independently.
   - type: features
     title: Why join the cohort?
     description: >-
-      The cohort adds the structure, feedback, peers and accountability to turn
-      open learning into Proof of Work.
+      Learn with structure, get useful feedback and build reviewable work
+      alongside other people following the same path.
     features:
       - title: Learn with structure
         icon: 🗺️
-        details: Follow a clear weekly rhythm instead of figuring out what to study next.
+        details: Follow the recommended weekly rhythm from W0 through W10 instead of figuring out what to study next.
       - title: Get feedback
         icon: 🔄
-        details: Submit missions, receive review, and improve your work instead of learning in isolation.
+        details: Submit missions and project work for review, then use actionable feedback to improve it.
       - title: Build with others
         icon: 🤝
-        details: Learn alongside other NTU students and take part in the Blockchain@NTU community.
+        details: Learn alongside other Academy participants and take part in the Blockchain@NTU community.
       - title: Build reviewable work
         icon: 🧩
-        details: Turn each Foundation week into a small reviewable output; the full Academy continues toward a final Proof of Work.
+        details: Turn Foundation missions and Deep Dive tasks into a final Proof of Work that others can inspect.
   - type: features
     title: A clear path through Web3
     description: >-
       A structured path that keeps the fundamentals clear, the risks visible,
       and the learning practical.
     features:
-      - title: Week 0–4 Foundation
+      - title: Weeks 0–4 · Start + Foundation
         icon: 🧱
         details: >-
-          Enter Web3 safely, then build a first-principles map of blockchains,
-          Ethereum, wallets, contracts and the wider ecosystem.
+          W0 prepares you safely; W1–W4 build the shared first-principles map
+          of blockchains, Ethereum, wallets, contracts and the wider ecosystem.
         link: ./getting-started/
         linkText: Start with Week 0
-      - title: Weeks 5–6 Deep Dive
+      - title: Weeks 5–8 Deep Dive
         icon: 🚀
         details: >-
-          Build transferable hard skills through six lightweight, reviewable
+          Build transferable hard skills through three focused, reviewable
           tasks each week in the selected Builder or Researcher track.
         link: ./tracks/
         linkText: Explore the Deep Dive
-      - title: Weeks 7–8 Proof of Work
+      - title: Weeks 9–10 Project Work
         icon: 🧭
         details: >-
-          Define the PoW while producing an MVP / V1 in Week 7, then refine,
-          validate and ship or publish the final artefact in Week 8.
+          Scope a project brief and incorporate feedback in Week 9, then ship
+          or publish the final reviewable artefact in Week 10.
         link: ./proof-of-work/
         linkText: See the milestones
   - type: custom
@@ -132,20 +132,17 @@ The week's learning turned into a small, practical action.
 ## Start here
 
 :::: steps
-1. [Read the programme overview](./getting-started/programme.md).
+1. [Read the Academy programme overview](./getting-started/programme.md).
 2. Complete [Week 0: Entering Web3 safely](./getting-started/).
 3. Follow the [Foundation](./foundation/) from Week 1 through Week 4.
-4. Continue into the [Deep Dive](./tracks/) and then the [Proof of Work milestones](./proof-of-work/) when your cohort reaches them.
+4. Choose [Builder or Researcher](./tracks/) for Weeks 5–8, then follow the [Project Work milestones](./proof-of-work/) in Weeks 9–10.
 ::::
 
-The Handbook contains the full learning material, Foundation Anchor Mission
-requirements, Deep Dive task requirements and Proof of Work milestone
-requirements. Cohort operations such as application, progress, submission and
-review are handled through the Academy programme platform.
-
-The **September–October 2026 Foundation Pilot** ends after Week 4. Weeks 5–8
-are the next full-programme stage, in development for **Cohort 1 · January
-2027**.
+The Academy follows one continuous path from W0 through W10. The Handbook is
+the public, canonical source for lessons, mission and task requirements,
+completion criteria and project milestones. Cohort participants use WCB for
+formal submissions, reviewer feedback, points and progress. Anyone may also
+read or follow the Handbook independently.
 
 ## Stay connected with Blockchain@NTU
 

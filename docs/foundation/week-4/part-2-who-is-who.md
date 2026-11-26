@@ -262,7 +262,7 @@ And governance has real problems, named honestly in
 voting concentrates influence in the largest holders.
 
 Detailed DAO mechanism design belongs in Further Exploration or advanced study
-beyond the current programme.
+beyond the current curriculum.
 :::
 
 ### One last category mistake: address ≠ person

@@ -39,7 +39,7 @@ solve. If you don't understand that problem, everything afterwards — wallets,
 gas, contracts — is arbitrary rules to memorise.
 
 This is the only part of the week with no software to install. It's the one that
-makes the rest of the programme make sense.
+makes the rest of the curriculum make sense.
 
 ## Learning objectives
 

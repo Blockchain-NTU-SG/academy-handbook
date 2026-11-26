@@ -5,6 +5,7 @@ search: false
 title: "Legacy Week 7 PoW path"
 ---
 
-# This PoW page has moved
+# This legacy Week 7 PoW route has moved
 
-The current Week 7 milestone is [MVP / V1](../../proof-of-work/week-7-mvp.md).
+This old route is retained for compatibility. The current project brief is the
+[Week 9 Project Brief + Feedback Session](../../proof-of-work/week-9-project-brief.md).

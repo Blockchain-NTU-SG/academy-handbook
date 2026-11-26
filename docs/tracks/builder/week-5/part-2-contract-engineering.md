@@ -26,8 +26,8 @@ sources:
 ---
 
 <!--
-Author note (Education team): the feature learners add here is tested in
-Week 6 Part 1, so the four requirements (state relationship, rule, event,
+Author note: the feature learners add here is tested in
+Week 7 Part 1, so the four requirements (state relationship, rule, event,
 failure) must stay. The worked example (endorsements) was compiled and checked
 against the starter. The model answer and reviewer notes are kept outside the
 public handbook.
@@ -214,7 +214,7 @@ Keep two things unchanged so later Parts still work: the constructor takes
 when you are done.
 
 You will write proper tests for this feature in
-[Week 6 Part 1](../week-6/part-1-testing-contract-behaviour.md). For now, the
+[Week 7 Part 1](../week-7/part-1-testing-contract-behaviour.md). For now, the
 existing six tests must still pass.
 
 **Out of scope:** deploying (Part 3 does that), changing the frontend, and
@@ -234,9 +234,7 @@ say why each rule exists and what each error protects against.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Rewrite one of your checks as a modifier, or one modifier as an inline check,

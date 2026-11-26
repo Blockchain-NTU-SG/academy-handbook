@@ -35,5 +35,8 @@ jobs:
       - name: Check reading-time consistency
         run: npm run docs:check-times
 
+      - name: Check internal documentation links
+        run: npm run docs:check-links
+
       - name: Check initial JavaScript payload
         run: npm run docs:check-payload

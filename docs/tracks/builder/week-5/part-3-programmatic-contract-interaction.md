@@ -32,7 +32,7 @@ sources:
 ---
 
 <!--
-Author note (Education team): the worked-example script was tested against the
+Author note: the worked-example script was tested against the
 starter Registry on a local copy (fork) of Sepolia, so the outputs are real but
 the transaction hash is shown as a placeholder. The model answer and reviewer
 notes are kept outside the public handbook.
@@ -99,7 +99,7 @@ authorise writes.
 | **Wallet client** (`createWalletClient`) | Signs and sends transactions | Yes, an account |
 
 In a script, the account comes from a private key in `.env`, through
-`privateKeyToAccount`. In Part 4, the browser wallet signs instead, and your
+`privateKeyToAccount`. In W6P1, the browser wallet signs instead, and your
 code never sees a key.
 
 ::: warning Use a disposable test account
@@ -327,8 +327,8 @@ TypeScript is not the skill being assessed.
 If your feature needs a second account (for example, someone else's record),
 make a second test account in MetaMask and send it a little Sepolia ETH.
 
-**Out of scope:** the frontend (Part 4), events beyond what Etherscan shows
-(Part 5), and verifying source code on Etherscan (Week 6).
+**Out of scope:** the frontend (W6P1), event history beyond what Etherscan
+shows (W6P2), and verifying source code on Etherscan (W8P2).
 
 ## Evidence required
 
@@ -339,9 +339,7 @@ make a second test account in MetaMask and send it a little Sepolia ETH.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Send a transaction **without** simulating it first, using a value you know

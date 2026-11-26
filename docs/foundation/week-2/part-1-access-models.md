@@ -23,7 +23,7 @@ sources:
 # Week 2 · Part 1 — Public, private and consortium chains
 
 Week 1 described one kind of blockchain: anyone can read it, anyone can
-participate, nobody is in charge. That is the kind this programme mostly deals
+participate, nobody is in charge. That is the kind this curriculum mostly deals
 with, and it is not the only kind.
 
 Banks, shipping consortia, hospital networks and government agencies also run

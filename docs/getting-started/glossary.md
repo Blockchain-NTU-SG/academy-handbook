@@ -68,7 +68,7 @@ explanation lives.
 | **Node** | A computer running the network's software | Your wallet talks to one to read balances | Week 1 |
 | **Finality** | The point where a transaction won't be reversed | Ethereum: about 15 minutes. Solana: much faster | Week 2 |
 | **Mainnet** | The real network, with real value at stake | Ethereum Mainnet | Week 1 |
-| **Testnet** | A practice network with worthless coins | Sepolia — **everything in this programme** | Week 1 |
+| **Testnet** | A practice network with worthless coins | Sepolia — **required on-chain learning activities in this curriculum** | Week 1 |
 | **On-chain** | Recorded on the blockchain, public and permanent | A token transfer | Week 1 |
 | **Off-chain** | Happening outside the blockchain | A Discord vote | Week 2 |
 

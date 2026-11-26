@@ -3,37 +3,24 @@ track: researcher
 week: 6
 status: review
 owner: "Education Team"
-title: "Researcher W6 — Measure and Verify Blockchain Systems"
+title: "Researcher W6 — Protocol Economics and System Analysis"
 ---
 
-# Researcher Week 6 — Measure and Verify Blockchain Systems
+# Researcher Week 6 — Protocol Economics and System Analysis
 
-Week 5 taught you to take a system apart on paper. This week checks that
-picture against reality: chain semantics → entity/fund-flow investigation →
-querying/measurement → token/liquidity/valuation → dependency risk →
-independent investigation brief.
+Move from a reconstructed design to its credit, incentives and failure
+dependencies. Finish by independently decomposing a system using the earlier
+Researcher methods.
 
-Each Part has one lightweight, reviewable hands-on task worth **100 points**.
-All required Core tools are free and need no account: block explorers,
-DefiLlama's public application programming interface (API), a short Python
-script, DuckDB in the browser and a spreadsheet. Optional industry-data paths
-may require separate access.
-
-**There is no separate weekly submission.** These six Part tasks are the
-assessed progress evidence for this week.
+Each Part has one reviewable task worth **100 points**. There is no separate
+weekly submission.
 
 | Part | Title | Estimated total | Task status |
 |---:|---|---|---|
-| 1 | [On-chain Evidence and Trace Semantics](./part-1-on-chain-data-as-evidence.md) | 35 min | Drafting |
-| 2 | [Entity and Fund-Flow Investigation](./part-2-querying-real-data.md) | 40 min | Drafting |
-| 3 | [Querying and Measurement Design](./part-3-measurement-design.md) | 65 min hands-on | Drafting |
-| 4 | [Token, Liquidity and Valuation Evidence](./part-4-token-and-market-evidence.md) | 60 min hands-on | Drafting |
-| 5 | [Dependency, Governance and Risk](./part-5-dependency-governance-and-risk.md) | 50 min hands-on | Drafting |
-| 6 | [Independent Investigation Brief](./part-6-evidence-to-claim.md) | 50 min | Drafting |
+| 1 | [Collateral, Credit and DeFi Economics](./part-1-collateral-credit-and-risk.md) | 40 min | Drafting |
+| 2 | [Token and Incentive Economics](./part-2-token-and-incentive-economics.md) | 45 min | Drafting |
+| 3 | [Independent System Analysis](./part-3-system-analysis.md) | 45 min | Drafting |
 
-**Required estimate: 300 minutes (5 h)**, including hands-on work.
-These are authoring estimates to test in the pilot, not completion deadlines.
-Optional exploration is not assessed. Existing page URLs are retained.
+**Required estimate: 130 minutes (2 h 10 min).** These are approximate learner-time estimates, not deadlines; revise them as learner evidence improves. Optional exploration is outside the estimate.
 
-**Assessment:** 6 Part tasks × 100 points = **600 points**. Completion is
-binary; incomplete or materially incorrect work is returned for revision.
+**Assessment:** 3 Part tasks × 100 points = **300 points** in the Academy progression. Academy participants submit each Part for a **Complete** or **Revise** review. Independent readers may use the criteria to self-check without formal point tracking. There are no partial scores.

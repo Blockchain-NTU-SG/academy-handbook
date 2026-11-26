@@ -136,9 +136,7 @@ forecasts, or reproducing the paper's probability calculations.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned for revision. There is no
-partial-score rubric and no separate weekly submission.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric. There is no separate weekly submission.
 
 Complete means another learner can follow the actors and transition, every
 document claim is locatable, and assumptions/inferences are not presented as

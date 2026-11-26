@@ -1,6 +1,6 @@
 ---
 track: researcher
-week: 6
+week: 7
 day: 1
 title: "On-chain evidence and trace semantics"
 status: drafting
@@ -41,18 +41,18 @@ sources:
 ---
 
 <!--
-Author note (Education team): the case transaction was checked against a
+Author note: the case transaction was checked against a
 mainnet RPC receipt on 21 October 2026 (status, logs, gas used and effective
 gas price). The model answer and reviewer notes are kept outside the public
 handbook.
 -->
 
-# Week 6 · Part 1 — On-chain evidence and trace semantics
+# Week 7 · Part 1 — On-chain evidence and trace semantics
 
 > **Core question — what can you prove happened in one transaction, without trusting its sender's story?**
 
-In Week 5 you mapped how systems *should* work. In Week 6 you gather evidence of
-what actually happened. A transaction's page may say “Send 6 USDC”, but a
+In W5–W6 you mapped how systems are designed and how their economics work. In
+Week 7 you gather evidence of what actually happened. A transaction's page may say “Send 6 USDC”, but a
 researcher separates the **request**, the **executed result**, and the **claim
 that is not supported by the chain**.
 
@@ -254,9 +254,7 @@ all transactions before or after the case.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 **Your work is complete when:**
 

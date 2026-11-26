@@ -14,7 +14,7 @@ sources:
 ---
 
 <!--
-Use for one W5 or W6 Deep Dive Part.
+Use for one W5–W8 Deep Dive Part.
 Each Part teaches one transferable hard skill and contains one lightweight,
 reviewable hands-on task worth 100 points. Detailed content belongs to the
 Education team; do not use this template to create a generic placeholder lesson.
@@ -54,9 +54,10 @@ long explanations or repetitive reflection unless the task genuinely needs them.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Participants
+submit the task for a **Complete** or **Revise** outcome; give actionable
+feedback when it needs revision. There is no partial-score rubric. Independent
+readers may use the same criteria to self-check without formal point tracking.
 
 ## Sources and attribution
 

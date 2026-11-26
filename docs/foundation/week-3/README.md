@@ -42,7 +42,7 @@ flowchart TD
 ::: warning Part 3 is the heaviest page in the Foundation
 Budget up to an hour with nowhere to be. You will deploy a real contract to a test
 network. Nothing costs money, but the first deployment is the point at which the
-whole programme stops being abstract — give it proper time.
+whole curriculum stops being abstract — give it proper time.
 :::
 
 ## What this week is not
@@ -55,16 +55,16 @@ AI assistance is explicitly allowed: the goal is to understand what you deploy,
 not to type every line yourself.
 
 Deliberately **out of scope** and left to Further Exploration or advanced study
-beyond the current programme:
+beyond the current curriculum:
 
 | Not covered | Where it belongs |
 |---|---|
 | AMM maths | Further Exploration |
 | Liquidation mechanics | Further Exploration |
-| Advanced DeFi strategy | Advanced study beyond the current programme |
+| Advanced DeFi strategy | Advanced study beyond this curriculum |
 | Oracle architecture | Further Exploration |
 | Gas optimisation, assembly, proxies | Builder Deep Dive |
-| Formal verification, audit methodology | Advanced study beyond the current programme |
+| Formal verification, audit methodology | Advanced study beyond this curriculum |
 
 ::: tip Everything required is testnet only
 You will deploy to the same test network you used in

@@ -1,7 +1,7 @@
 ---
 track: builder
-week: 6
-day: 5
+week: 8
+day: 2
 title: "Deployment and reproducibility"
 status: drafting
 owner: "Education Team"
@@ -32,13 +32,13 @@ sources:
 ---
 
 <!--
-Author note (Education team): the worked example ships the public Builder
+Author note: the worked example ships the public Builder
 starter itself, so every output on this page comes from a real run against
 that repository. The model answer and reviewer notes are kept outside the
 public handbook.
 -->
 
-# Week 6 · Part 5 — Deployment and reproducibility
+# Week 8 · Part 2 — Deployment and reproducibility
 
 > **Core question — can someone who has never seen my project run it, find
 > the contract, and check that it does what I say?**
@@ -364,14 +364,14 @@ goes into the README or the project before you ship.
 
 ## Hands-on task
 
-Ship your Week 5 app, including anything you added to it this week.
+Ship the app you built across W5–W6, including anything you add to it in W8.
 
 1. **Public repository.** Your project is in a public GitHub repository. If
    you started from a clone of the starter, create your own repository and
    push to it, as in [Week 4 Part 4](../../../foundation/week-4/part-4-github-in-practice.md).
 2. **Deployed and verified contract.** Your contract is on Ethereum Sepolia
    and verified on Sourcify or Etherscan. If you changed the contract in
-   Week 5 Part 2, deploy your own copy first (the starter's `npm run deploy`
+   W5P2, deploy your own copy first (the starter's `npm run deploy`
    does this with a disposable test account).
 3. **Live frontend.** The app is on GitHub Pages, deployed by a workflow. A
    reviewer can open it, connect a wallet on Sepolia and do your app's main
@@ -401,9 +401,7 @@ new one. Then remove the key from your project.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 ::: details Further exploration — optional, not assessed
 - Add a second job to your workflow that runs `forge test` and blocks the

@@ -1,7 +1,7 @@
 ---
 track: researcher
-week: 5
-day: 5
+week: 6
+day: 2
 title: "Token and incentive economics"
 status: drafting
 owner: "Education Team"
@@ -26,13 +26,13 @@ sources:
 ---
 
 <!--
-Author note (Education team): NOVA and ORBIT are made-up tokens. Their figures
+Author note: NOVA and ORBIT are made-up tokens. Their figures
 were recalculated on 21 October 2026. The Arbitrum allocation and vesting
 facts were checked against the Arbitrum DAO docs the same day. The model
 answer is kept outside the public handbook.
 -->
 
-# Week 5 · Part 5 — Token and incentive economics
+# Week 6 · Part 2 — Token and incentive economics
 
 > **Core question: how much of a token is really in circulation, what does
 > the next unlock change, and who gets the new tokens?**
@@ -86,7 +86,7 @@ and other allocations differently. Reported circulating supply is a
 classification. It does not guarantee that every counted token is realistically
 available to trade soon or that all of it could be sold near the quoted price.
 Researchers later examine parts of this question using terms such as estimated
-**real float** and **executable liquidity**; see [W6P4](../week-6/part-4-token-and-market-evidence.md).
+**real float** and **executable liquidity**; see [W8P1](../week-8/part-1-token-and-market-evidence.md).
 
 For this Part, use the simplified relationship, with all supply values in
 the same token units:
@@ -300,9 +300,7 @@ prices after an unlock.
 
 ## Completion and revision
 
-This Part is worth **100 points**. Completed / approved earns the full points;
-incomplete or materially incorrect work is returned with specific feedback for
-revision. There is no partial-score rubric.
+This Part is worth **100 points** in the Academy progression. Academy participants submit it for a binary **Complete** or **Revise** review against the criteria above. Independent readers may use those criteria as a self-check; formal points are tracked through organised Academy participation. There is no partial-score rubric.
 
 Your work is complete when:
 
